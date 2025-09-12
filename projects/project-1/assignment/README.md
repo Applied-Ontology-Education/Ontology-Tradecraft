@@ -34,3 +34,4 @@ A passing grade requires all tests to succeed.
 - `tests/test_env.py` – Automated tests to verify your setup.  
 - `.github/workflows/autograde.yml` – GitHub Actions workflow for autograding.  
 - `requirements.txt` – Python dependencies.
+<!-- trigger -->
