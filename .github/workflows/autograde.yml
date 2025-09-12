@@ -104,6 +104,7 @@ jobs:
           fi
 
       - name: Execute env-report notebook (optional)
+        if: ${{ false }}
         run: |
           if [ -f notebooks/env-report.ipynb ]; then
             python - <<'PY'
