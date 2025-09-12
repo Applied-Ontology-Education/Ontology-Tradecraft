@@ -1,0 +1,69 @@
+## https://github.com/John-D-4/Ontology-Tradecraft/blob/main/projects/project-2/assignment/src/aircraft_data.xlsx
+
+
+@prefix : <http://purl.obolibrary.org/obo/bfo#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://purl.obolibrary.org/obo/bfo> .
+
+## BFO_0000178 is has-continuant-part. to-do: define aircraft as entity with properties below
+
+
+<http://nonsense.domain/John-D-4/Project-2/ICAO_Code> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000140> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                               owl:allValuesFrom <http://purl.obolibrary.org/obo/BFO_0000140>
+                                                             ] ;
+                                             dc11:identifier "033-BFO" ;
+                                             rdfs:label "ICAO_Code"@en ;
+                                             skos:definition "(Elucidation) A fiat surface is a two-dimensional continuant fiat boundary that is self-connected"@en ;
+                                             skos:example "The surface of the Earth; the plane separating the smoking from the non-smoking zone in a restaurant"@en .
+
+## ICAO_Code
+## FAA_Designator
+## Manufacturer
+## Model_FAA
+## Model_BADA
+## Physical_Class_Engine
+## Num_Engines
+## AAC
+## AAC_minimum
+## AAC_maximum
+## ADG
+## TDG
+## Approach_Speed_knot
+## Approach_Speed_minimum_knot
+## Approach_Speed_maximum_knot
+## Wingspan_ft_without_winglets_sharklets
+## Wingspan_ft_with_winglets_sharklets
+## Length_ft
+## Tail_Height_at_OEW_ft
+## Wheelbase_ft
+## Cockpit_to_Main_Gear_ft
+## Main_Gear_Width_ft
+## MTOW_lb
+## MALW_lb
+## Main_Gear_Config
+## ICAO_WTC
+## Parking_Area_ft2
+## Class
+## FAA_Weight
+## CWT
+## One_Half_Wake_Category
+## Two_Wake_Category_Appx_A
+## Two_Wake_Category_Appx_B
+## Rotor_Diameter_ft
+## SRS
+## LAHSO
+## FAA_Registry
+## Registration_Count
+## TMFS_Operations_FY24
+## Remarks
+## LastUpdate

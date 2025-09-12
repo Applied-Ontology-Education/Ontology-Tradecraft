@@ -40,11 +40,11 @@ Below are curated links to help you get started with the essential tools we use 
 
 ###  GitHub (Hosting & Collaboration)
 - [Hello World Guide](https://docs.github.com/en/get-started/quickstart/hello-world)  
-- [Interactive Tutorials via GitHub Learning Lab](https://lab.github.com/)
+- [Interactive Tutorials via GitHub Skills](https://learn.github.com/skills)
 
 ###  rdflib (Python RDF Library)
 - [Official rdflib Documentation](https://rdflib.readthedocs.io/)  
-- [rdflib Intro Tutorial](https://github.com/RDFLib/rdflib/blob/master/docs/intro.rst)  
+- [rdflib Intro Tutorial](https://github.com/RDFLib/rdflib/blob/main/docs/intro_to_creating_rdf.md)  
 
 
 
