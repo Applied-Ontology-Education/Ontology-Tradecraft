@@ -1,0 +1,97 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:   <http://example.org/aircraft#> .
+
+ex:Airbus a ex:Manufacturer ; rdfs:label "AIRBUS" .
+
+ex:Spec_A320Neo_1 a ex:JetSpecification ;
+  rdfs:label "A320 Neo spec 1" ;
+  ex:hasModelFAA "Airbus A320 Neo" ;
+  ex:hasModelBADA "Airbus A320-271N" ;
+  ex:hasEngineClass "Jet" ;
+  ex:hasNumEngines 2 ;
+  ex:hasAAC "C"  .
+
+ex:A320Neo_1 a ex:FixedWingAircraft ;
+  rdfs:label "Airbus A320 Neo (row A20N)" ;
+  ex:hasManufacturer ex:Airbus ;
+  ex:hasSpec ex:Spec_A320Neo_1 .
+
+ex:Spec_A321_111_1 a ex:JetSpecification ;
+  rdfs:label "A321-111 spec 1" ;
+  ex:hasModelFAA "Airbus A321" ;
+  ex:hasModelBADA "Airbus A321-111" ;
+  ex:hasEngineClass "Jet" ;
+  ex:hasNumEngines 2 ;
+  ex:hasAAC "D" ;
+  ex:hasAACMin "C" ;
+  ex:hasAACMax "D" ;
+  ex:hasDesignedApproachSpeedKt "142"^^xsd:decimal ;
+  ex:hasObservedAvgApproachSpeedKt "139"^^xsd:decimal ;
+  ex:hasNumApproaches 5  .
+
+ex:A321_111_1 a ex:FixedWingAircraft ;
+  rdfs:label "Airbus A321-111 (row A321)" ;
+  ex:hasManufacturer ex:Airbus ;
+  ex:hasSpec ex:Spec_A321_111_1 .
+
+ex:SOC_17_2010 a ex:SOCOccupation ;
+  ex:hasSOCCode "17-2010" ;
+  ex:hasSOCTitle ""  .
+
+ex:SOC_17_2011 a ex:SOCOccupation ;
+  ex:hasSOCCode "17-2011" ;
+  ex:hasSOCTitle ""  .
+
+ex:SOC_17_3021 a ex:SOCOccupation ;
+  ex:hasSOCCode "17-3021" ;
+  ex:hasSOCTitle ""  .
+
+ex:Area_99 a ex:Area ;
+  ex:hasAreaCode "99" ;
+  ex:hasAreaTitle "U.S." ;
+  ex:hasAreaType "1" ;
+  ex:hasPrimaryState "US"  .
+
+ex:WageObs_17_2010_99 a ex:WageObservation ;
+  ex:aboutOccupation ex:SOC_17_2010 ;
+  ex:inArea ex:Area_99 ;
+  ex:hasAsOf "May 2024" ;
+  ex:H_MEAN "67.88"^^xsd:decimal ;
+  ex:H_MEDIAN "64.82"^^xsd:decimal ;
+  ex:H_PCT75 "83.88"^^xsd:decimal ;
+  ex:H_PCT90 "98.97"^^xsd:decimal ;
+  ex:A_PCT10 85350 ;
+  ex:A_PCT25 104740 ;
+  ex:A_MEDIAN 134830 ;
+  ex:A_PCT75 174480 ;
+  ex:A_PCT90 205850  .
+
+ex:WageObs_17_2011_99 a ex:WageObservation ;
+  ex:aboutOccupation ex:SOC_17_2011 ;
+  ex:inArea ex:Area_99 ;
+  ex:hasAsOf "May 2024" ;
+  ex:H_MEAN "67.88"^^xsd:decimal ;
+  ex:H_MEDIAN "64.82"^^xsd:decimal ;
+  ex:H_PCT75 "83.88"^^xsd:decimal ;
+  ex:H_PCT90 "98.97"^^xsd:decimal ;
+  ex:A_PCT10 85350 ;
+  ex:A_PCT25 104740 ;
+  ex:A_MEDIAN 134830 ;
+  ex:A_PCT75 174480 ;
+  ex:A_PCT90 205850  .
+
+ex:WageObs_17_3021_99 a ex:WageObservation ;
+  ex:aboutOccupation ex:SOC_17_3021 ;
+  ex:inArea ex:Area_99 ;
+  ex:hasAsOf "May 2024" ;
+  ex:H_MEAN "41.5"^^xsd:decimal ;
+  ex:H_MEDIAN "38.38"^^xsd:decimal ;
+  ex:H_PCT75 "49.14"^^xsd:decimal ;
+  ex:H_PCT90 "57.91"^^xsd:decimal ;
+  ex:A_PCT10 53730 ;
+  ex:A_PCT25 64570 ;
+  ex:A_MEDIAN 79830 ;
+  ex:A_PCT75 102220 ;
+  ex:A_PCT90 120440  .
