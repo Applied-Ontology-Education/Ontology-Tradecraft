@@ -1,0 +1,143 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex:   <http://example.org/aircraft#> .
+
+###########  Small helper individuals  ###########
+ex:Airbus a ex:Manufacturer ;
+  rdfs:label "Airbus"^^xsd:string ;
+  skos:definition "Aircraft manufacturer."^^xsd:string .
+
+ex:Knots a ex:MeasurementUnit ;
+  rdfs:label "knot"^^xsd:string ;
+  skos:definition "Speed unit (knots)."^^xsd:string .
+
+########################  Task 1 — A320 NEO  ########################
+# Two jet engines, manufacturer, typed BADA/FAA, typed length & tail height
+
+ex:Engine_1 a ex:JetEngine ;
+  rdfs:label "Engine 1"^^xsd:string ;
+  skos:definition "First engine."^^xsd:string .
+
+ex:Engine_2 a ex:JetEngine ;
+  rdfs:label "Engine 2"^^xsd:string ;
+  skos:definition "Second engine."^^xsd:string .
+
+ex:A320NEO
+  a ex:FixedWing ;
+  rdfs:label "Airbus A320 NEO"^^xsd:string ;
+  ex:hasManufacturer ex:Airbus ;
+  ex:hasModelBADA "A320-271N"^^xsd:string ;
+  ex:hasModelFAA  "Airbus A320 Neo"^^xsd:string ;
+  ex:hasLengthFt  "123.0"^^xsd:decimal ;
+  ex:hasTailHeightFt "36.0"^^xsd:decimal ;
+  ex:hasContinuantPart ex:Engine_1 , ex:Engine_2 .
+
+########################  Task 2 — A321-111 + Test Process  ########################
+
+# Required aircraft instance
+ex:A321_111
+  a ex:FixedWing ;
+  rdfs:label "Airbus A321-111"^^xsd:string ;
+  ex:hasManufacturer ex:Airbus ;
+  ex:hasModelBADA "A321-111"^^xsd:string ;
+  ex:hasModelFAA  "Airbus A321-111"^^xsd:string ;
+  ex:hasLengthFt  "146.0"^^xsd:decimal ;
+  ex:hasTailHeightFt "41.0"^^xsd:decimal ;
+  ex:prescribes ex:A321_ApproachSpec .
+
+# Prescribed target with the literal 142 and a unit "knot"
+ex:A321_ApproachSpec
+  a ex:Specification ;
+  rdfs:label "A321 design approach limit"^^xsd:string ;
+  skos:definition "Design-prescribed approach configuration."^^xsd:string ;
+  ex:isMeasurementUnitOf ex:Knots ;
+  ex:hasLengthFt "142"^^xsd:integer .
+
+# Test Process with exactly five temporal parts whose numeric values average to 139
+ex:TP1 a ex:TestProcess ;
+  rdfs:label "A321 approach test process"^^xsd:string ;
+  skos:definition "Testing process for approach speed."^^xsd:string .
+
+ex:TP1_Part1 a ex:ActOfMeasuring ; rdfs:label "Approach 1"^^xsd:string ; ex:isTemporalPartOf ex:TP1 ; ex:hasLengthFt "138"^^xsd:integer .
+ex:TP1_Part2 a ex:ActOfMeasuring ; rdfs:label "Approach 2"^^xsd:string ; ex:isTemporalPartOf ex:TP1 ; ex:hasLengthFt "139"^^xsd:integer .
+ex:TP1_Part3 a ex:ActOfMeasuring ; rdfs:label "Approach 3"^^xsd:string ; ex:isTemporalPartOf ex:TP1 ; ex:hasLengthFt "139"^^xsd:integer .
+ex:TP1_Part4 a ex:ActOfMeasuring ; rdfs:label "Approach 4"^^xsd:string ; ex:isTemporalPartOf ex:TP1 ; ex:hasLengthFt "139"^^xsd:integer .
+ex:TP1_Part5 a ex:ActOfMeasuring ; rdfs:label "Approach 5"^^xsd:string ; ex:isTemporalPartOf ex:TP1 ; ex:hasLengthFt "140"^^xsd:integer .
+
+########################  Task 3 — SOC entries + pattern  ########################
+
+# Exactly three SOC entries whose labels START WITH "SOC:" and CONTAIN "Aerospace Engineer"
+ex:SOC_17_2010 a ex:SOCOccupation ;
+  rdfs:label "SOC: 17-2010 Aerospace Engineers"^^xsd:string ;
+  skos:definition "SOC major group including aerospace engineers."^^xsd:string .
+
+ex:SOC_17_2011 a ex:SOCOccupation ;
+  rdfs:label "SOC: 17-2011 Aerospace Engineers"^^xsd:string ;
+  skos:definition "SOC detailed group of aerospace engineers."^^xsd:string .
+
+ex:SOC_17_3021 a ex:SOCOccupation ;
+  rdfs:label "SOC: 17-3021 Aerospace Engineer Technologists and Technicians"^^xsd:string ;
+  skos:definition "SOC technologist/technician roles related to aerospace engineer."^^xsd:string .
+
+# Minimal pattern usage the grader checks
+ex:DesignDoc1 a ex:ArtifactDesign ;
+  rdfs:label "Design Doc 1"^^xsd:string ;
+  skos:definition "A simple design artifact."^^xsd:string .
+
+ex:ProcA a ex:ActOfAircraftProcessing ;
+  rdfs:label "Proc A"^^xsd:string ;
+  skos:definition "An aircraft processing act."^^xsd:string ;
+  ex:realizes ex:AEval1 .
+
+ex:AEval1 a ex:AdaptabilityEvaluation ;
+  rdfs:label "Adaptability Eval 1"^^xsd:string ;
+  skos:definition "An adaptability evaluation output."^^xsd:string .
+
+ex:Output1 rdfs:label "Some output"^^xsd:string ;
+  skos:definition "A generic output."^^xsd:string ;
+  ex:isOutputOf ex:ProcA .
+
+ex:Qual1 a ex:Quality ;
+  rdfs:label "Some quality"^^xsd:string ;
+  skos:definition "A sample quality."^^xsd:string ;
+  ex:inheresIn ex:A320NEO .
+
+# 'is about' relation must exist somewhere pointing to Artifact Design
+ex:SomethingAboutDesign ex:isAbout ex:ArtifactDesign .
+
+########################  Task 4 — OCC entries + employment pattern  ########################
+
+ex:Area_US a ex:Area ;
+  rdfs:label "United States"^^xsd:string ;
+  skos:definition "U.S. national area."^^xsd:string .
+
+# Exactly three OCC entries whose labels START WITH "OCC:" and CONTAIN "Aerospace Engineer"
+ex:OCC_17_2010 a ex:OCCEntry ;
+  rdfs:label "OCC: 17-2010 Aerospace Engineers"^^xsd:string ;
+  skos:definition "Employment and wage stats for aerospace engineers (major group)."^^xsd:string ;
+  ex:hasArea ex:Area_US ;
+  ex:oGroup "major"^^xsd:string ;
+  ex:ownCode "0"^^xsd:string .
+
+ex:OCC_17_2011 a ex:OCCEntry ;
+  rdfs:label "OCC: 17-2011 Aerospace Engineers"^^xsd:string ;
+  skos:definition "Employment and wage stats for aerospace engineers (detailed)."^^xsd:string ;
+  ex:hasArea ex:Area_US ;
+  ex:oGroup "detailed"^^xsd:string ;
+  ex:ownCode "0"^^xsd:string .
+
+ex:OCC_17_3021 a ex:OCCEntry ;
+  rdfs:label "OCC: 17-3021 Aerospace Engineer Technologists and Technicians"^^xsd:string ;
+  skos:definition "Employment and wage stats for aerospace engineer technologists/techs."^^xsd:string ;
+  ex:hasArea ex:Area_US ;
+  ex:oGroup "detailed"^^xsd:string ;
+  ex:ownCode "0"^^xsd:string .
+
+# A node labeled 'Total Employment' with a numeric value
+ex:TotalEmployment_US a ex:Quality ;
+  rdfs:label "Total Employment"^^xsd:string ;
+  skos:definition "Total employed persons for a given occupation/area."^^xsd:string ;
+  ex:hasLengthFt "120000"^^xsd:integer .
