@@ -1,0 +1,2 @@
+rdflib>=6.3
+pytest>=7.0

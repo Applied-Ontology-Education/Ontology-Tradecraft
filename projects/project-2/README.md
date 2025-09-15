@@ -2,74 +2,56 @@
 
 ## Learning Objectives
 By completing this project, you will:
-- Leverage **competency questions** to design a small RDF graph, **reusing** ontology elements where sensible.
-- Use **rdflib** to construct RDF from **raw data**.
+- Leverage **ontology modeling strategies** to design a small RDF graph, **reusing** ontology elements where sensible.
+- **Manually construct** RDF from **raw data** using basis design principles.
 - Follow **Linked Data best practices** (stable HTTP IRIs, labels, datatypes).
-- Validate your output via **automated tests**.
+- Pass an **autograder** that verifies your RDF **passes basic validation tests**.
 
 ## Project
 
-### A Competency Questions (provided)
-Model a small slice of the domain so that your RDF can answer these four questions:
+Use the data sets below to complete the modeling tasks in RDF listed below. You are expected to reuse ontology content from the web, though you must make sure it is conformant to Basic Formal Ontology (BFO).
 
-1. **Equipment assignment** — *Which equipment items are assigned to which personnel?*  
-2. **Training completion** — *Which training events has a given individual completed, and on what date?*  
-3. **Mission roles** — *Which roles are associated with each type of mission?*  
-4. **Data provenance & attributes** — *Which data sources record operational activities, and which attributes do they capture?*
+### aircraft_data.xlsx  
+- **TASK-1** - Provide a BFO-conformant model of all columns of the **Airbus A320 NEO** row 
+- **TASK-2** - The **Airbus A321-111** is designed to have a maximum knot approach speed of 142; after 5 approaches, an instance has obtained an average maximum knot approach speed of 139; provide a BFO-conformant model of this scenario. 
 
-> Your job is to: (i) model a tiny vocabulary, (ii) generate RDF instances, such that **SPARQL queries run by the autograder return non-empty results** for each question.
+### soc_structure_definitions.xlsx  
+- **TASK-3** - **Three SOC_TITLE entries** mention **“Aerospace Engineer”**; provide a BFO-conformant model of these entries and their respective SOC definitions.  
 
-### B Minimal Vocabulary (local names to use)
-You may choose any base IRI/namespace, but **use these local names** so the tests can find your terms (case-sensitive):
+### employment_wage_May_2024.xlsx  
+- **TASK-4** - **Three OCC_TITLE entries** mention **“Aerospace Engineer”**; provide a BFO-conformant model of all three entries and all columns associated with each. 
 
-**Classes:**  
-`Person`, `Equipment`, `TrainingEvent`, `MissionType`, `Role`, `OperationalActivity`, `DataSource`
+Your resulting RDF will be autograded using SPARQL, but you will not be required to create any SPARQL during this exercise.  
 
-**Properties:**  
-`assignedTo` (Equipment → Person)  
-`completedTraining` (Person → TrainingEvent)  
-`completionDate` (TrainingEvent → xsd:date or xsd:dateTime)  
-`hasRole` (MissionType → Role)  
-`recordedIn` (OperationalActivity → DataSource)  
-`capturesAttribute` (DataSource → literal attribute name; xsd:string)
-
-> You can define extra classes/properties as needed. You may also reuse external terms (FOAF, schema.org, etc.), in addition to these.
-
-### C Hub-and-Spoke 
-- Put your **“hub” vocabulary** (core class/property declarations) in `assignment/src/data/core.ttl`.  
-- Split sub-areas into **spokes** (e.g., `module-training.ttl`, `module-ops.ttl`).  
-- If you split modules, include `owl:imports` in `core.ttl`.
-
-### D Generate RDF instances with `rdflib`
-- Create a tiny CSV or define instances directly in code—notebook—your choice.
-- Build at least **20 triples** total.
-- Use **HTTP(S) IRIs** for most resources and include at least **one `rdfs:label`**.
-
-### E You do **not** write SPARQL for grading
-- The autograder will run SPARQL queries to verify that your data can answer the CQs.
-- Your task is to ensure your RDF uses the **local names above**, so the tests can match patterns regardless of your namespace.
+## Guidance 
+- **Feel the Pain** - For this project, you must **hand-author** the RDF; do *not* write a Python ETL script.  
+- **Required Files** - You must submit a `core.ttl` that defines classes and relations and `owl:imports` other ontologies which are stored in the `modules/` directory; you must submit an `instances.ttl` file for instances.
+- **Labels and Definitions** - All classes, relations, and instances must have at least one `rdfs:label` for human readability and one `skos:definition` for human comprehension. 
+- **Literals** - All literal values, and there will be many, must have an appropriate `xsd` datatypes. 
+- **Key Classes/Relations** - Your base IRI is your choice, but you must use these names somewhere in your vocabulary:
+  - **TASK-1** `Artifact Design`, `Jet Engine`, `Fixed Wing`, `has continuant part`, `has Model BADA`, `has Model FAA`, `has Length Ft`, `has Tail HeightFt`, `is about`
+  - **TASK-2** `Test Process`, `is temporal part of`, `is measurement unit of`, `prescribes`, `Measurement Unit`
+  - **TASK-3** `Act of Aircraft Processing`, `Adaptability Evaluation`, `is about`, `realizes`, `is output of`, `Artifact Design`, `inheres in`
+  - **TASK-4** `quality`, `Act of Measuring`, `Total Employment`, `has area`, `o group`, `own code`
+- **BFO Conformance** - You must leverage BFO classes and object properties correctly; for example, `Jet Engine` must be a subclass (directly or via intermediary classes) of `material entity`, `Test Process` must be a subclass (directly or via intermediary classes) of `Process`, `Act of Aircraft Design` must be a subclass (directly or via intermediary classes) of `generically dependent continuant`, and so on. 
 
 ## Automated Grading
-Grading is performed by `pytest` + SPARQL checks against your generated graph. You **don’t** need to write SPARQL; just follow the local-name contract and produce coherent RDF.
 
-What the grader does:
-1. Loads all `.ttl` files in `assignment/src/data/`.
-2. Verifies: parses, **≥20 triples**, majority subjects are **URIRefs**, at least one `rdfs:label`.
-3. Runs four internal SPARQL queries (one per CQ) that check for **non-empty results** using your classes/properties **by local name** (so any base IRI works).
-4. (Bonus) If your `core.ttl` contains **≥1 `owl:imports`**, you get credit for modularization.
+The autograder checks:
+- All `.ttl` files in `src/data/` parse.  
+- **Task 1**: A320 NEO spec has 2 engines, Airbus as manufacturer, BADA/FAA codes typed, length/tail height values typed.  
+- **Task 2**: A321-111 spec prescribes 142 knots; a test process with 5 approach part measurements averaging 139.  
+- **Task 3**: 3 SOC Aerospace Engineer roles, with activity/output patterns modeled.  
+- **Task 4**: 3 OCC Aerospace Engineer roles, with a population→measure→total employment pattern and at least one numeric total.  
 
----
-
-**Rubric:**
-- **CQ coverage via data (SPARQL returns non-empty)** — 40%  
-- **RDF quality & Linked Data** (parse OK, ≥20 triples, labels, URI subjects) — 25%  
-- **Vocabulary correctness** (required class/property local names present) — 20%  
-- **Modularity/reuse** (hub file present; bonus for `owl:imports` and any external reuse noted in README) — 10%  
-- **Repo hygiene** (runs locally and in CI without errors) — 5%
-
-*A passing grade requires all four CQs to return non-empty results.*
-
----
+Grading is all or nothing. For each, your submission must parse and pass the relevant tests for full credit; otherwise, you get nothing. Each task is worth **25% of the grade for this project, each**. 
 
 ## Files in the Repository
+- `project-2/README.md` – Project description and guidance.  
+- `project-2/notebooks` – Not needed for this project, but soon enough. 
+- `project-2/readings/` – Readings to delight, amuse, inform, and perhaps confuse.  
+- `project-2/assignment/src/` - Where you will locate the data files used for this project and `data` directory. 
+- `project-2/assignment/src/data/` – Where you will store `core.ttl`, `*.ttl` modules, and `instances.ttl`  
+- `project-2/assignment/tests/test_project2.py` – Autograder. Don't touch. 
+- `project-2/assignment/requirements.txt` – Dependencies (`rdflib`, `pytest`).  
 

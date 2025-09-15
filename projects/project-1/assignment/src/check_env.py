@@ -13,7 +13,7 @@ def main():
         alt = Path.cwd() / "notebooks" / "sample.ttl"
         ttl = alt if alt.exists() else ttl
 
-    g = rdflib.Graph()
+    g = rdflib.Graph() 
     g.parse(str(ttl), format="turtle")
 
     print(json.dumps({
