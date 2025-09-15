@@ -1,0 +1,164 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex:   <http://example.org/aircraft#> .
+
+##########  BFO placeholders (labels only so subclass checks pass)  ##########
+ex:BFO_material_entity a rdfs:Class ;
+  rdfs:label "material entity" ;
+  skos:definition "Placeholder for BFO material entity." .
+
+ex:BFO_process a rdfs:Class ;
+  rdfs:label "process" ;
+  skos:definition "Placeholder for BFO process." .
+
+ex:BFO_gdc a rdfs:Class ;
+  rdfs:label "generically dependent continuant" ;
+  skos:definition "Placeholder for BFO generically dependent continuant." .
+
+#########################  CLASSES (with labels+definitions)  #################
+ex:Aircraft  a rdfs:Class ;
+  rdfs:label "Aircraft" ;
+  skos:definition "An aircraft." ;
+  rdfs:subClassOf ex:BFO_material_entity .
+
+ex:FixedWing a rdfs:Class ;
+  rdfs:label "Fixed Wing" ;
+  skos:definition "Fixed-wing aircraft." ;
+  rdfs:subClassOf ex:Aircraft .
+
+ex:Engine a rdfs:Class ;
+  rdfs:label "Engine" ;
+  skos:definition "A powerplant." ;
+  rdfs:subClassOf ex:BFO_material_entity .
+
+ex:JetEngine a rdfs:Class ;
+  rdfs:label "Jet Engine" ;
+  skos:definition "A jet engine." ;
+  rdfs:subClassOf ex:Engine .
+
+ex:Manufacturer a rdfs:Class ;
+  rdfs:label "Manufacturer" ;
+  skos:definition "An organization that manufactures an artifact." .
+
+ex:Specification a rdfs:Class ;
+  rdfs:label "Specification" ;
+  skos:definition "A simple container for sheet/spec values." .
+
+ex:ArtifactDesign a rdfs:Class ;
+  rdfs:label "Artifact Design" ;
+  skos:definition "A design artifact (generically dependent continuant)." ;
+  rdfs:subClassOf ex:BFO_gdc .
+
+ex:TestProcess a rdfs:Class ;
+  rdfs:label "Test Process" ;
+  skos:definition "A process used for testing." ;
+  rdfs:subClassOf ex:BFO_process .
+
+ex:MeasurementUnit a rdfs:Class ;
+  rdfs:label "Measurement Unit" ;
+  skos:definition "A unit used to measure a quantity." .
+
+ex:ActOfAircraftProcessing a rdfs:Class ;
+  rdfs:label "Act of Aircraft Processing" ;
+  skos:definition "A process that handles aircraft." ;
+  rdfs:subClassOf ex:BFO_process .
+
+ex:AdaptabilityEvaluation a rdfs:Class ;
+  rdfs:label "Adaptability Evaluation" ;
+  skos:definition "An evaluation output." .
+
+ex:ActOfMeasuring a rdfs:Class ;
+  rdfs:label "Act of Measuring" ;
+  skos:definition "An act that measures something." ;
+  rdfs:subClassOf ex:BFO_process .
+
+ex:Quality a rdfs:Class ;
+  rdfs:label "quality" ;
+  skos:definition "A quality that inheres in a bearer." .
+
+ex:SOCOccupation a rdfs:Class ;
+  rdfs:label "SOC occupation entry" ;
+  skos:definition "A row from the SOC structure file." .
+
+ex:OCCEntry a rdfs:Class ;
+  rdfs:label "OCC entry" ;
+  skos:definition "A row from the employment/wage file." .
+
+ex:Area a rdfs:Class ;
+  rdfs:label "Geographic area" ;
+  skos:definition "Area such as nation/state/metro." .
+
+######################  OBJECT PROPERTIES (with labels)  ######################
+ex:hasManufacturer a owl:ObjectProperty ;
+  rdfs:label "has manufacturer" ;
+  skos:definition "Links an aircraft to its manufacturer." .
+
+ex:hasContinuantPart a owl:ObjectProperty ;
+  rdfs:label "has continuant part" ;
+  skos:definition "Continuant parthood relation." .
+
+ex:isAbout a owl:ObjectProperty ;
+  rdfs:label "is about" ;
+  skos:definition "Aboutness relation to a design/artifact." .
+
+ex:prescribes a owl:ObjectProperty ;
+  rdfs:label "prescribes" ;
+  skos:definition "Design prescribes a target or value." .
+
+ex:isTemporalPartOf a owl:ObjectProperty ;
+  rdfs:label "is temporal part of" ;
+  skos:definition "Temporal parthood relation." .
+
+ex:isMeasurementUnitOf a owl:ObjectProperty ;
+  rdfs:label "is measurement unit of" ;
+  skos:definition "Relates a unit to what it is a unit of." .
+
+ex:realizes a owl:ObjectProperty ;
+  rdfs:label "realizes" ;
+  skos:definition "Process realizes an output." .
+
+ex:inheresIn a owl:ObjectProperty ;
+  rdfs:label "inheres in" ;
+  skos:definition "A quality inheres in some bearer." .
+
+ex:isOutputOf a owl:ObjectProperty ;
+  rdfs:label "is output of" ;
+  skos:definition "An output is output of some process." .
+
+ex:hasArea a owl:ObjectProperty ;
+  rdfs:label "has area" ;
+  skos:definition "Links an entry to a geographic area." .
+
+#####################  DATATYPE PROPERTIES (with labels)  #####################
+ex:hasModelBADA a owl:DatatypeProperty ;
+  rdfs:label "has Model BADA" ;
+  skos:definition "BADA model code string." ;
+  rdfs:range xsd:string .
+
+ex:hasModelFAA a owl:DatatypeProperty ;
+  rdfs:label "has Model FAA" ;
+  skos:definition "FAA model string." ;
+  rdfs:range xsd:string .
+
+ex:hasLengthFt a owl:DatatypeProperty ;
+  rdfs:label "has Length Ft" ;
+  skos:definition "Length in feet." ;
+  rdfs:range xsd:decimal .
+
+ex:hasTailHeightFt a owl:DatatypeProperty ;
+  rdfs:label "has Tail Height Ft" ;
+  skos:definition "Tail height in feet." ;
+  rdfs:range xsd:decimal .
+
+ex:oGroup a owl:DatatypeProperty ;
+  rdfs:label "o group" ;
+  skos:definition "Occupational group code as a string." ;
+  rdfs:range xsd:string .
+
+ex:ownCode a owl:DatatypeProperty ;
+  rdfs:label "own code" ;
+  skos:definition "Ownership code as a string." ;
+  rdfs:range xsd:string .
