@@ -3,7 +3,7 @@
 ## Learning Objectives
 By completing this project, you will:
 - Leverage **ontology modeling strategies** to design a small RDF graph, **reusing** ontology elements where sensible.
-- **Manually construct** RDF from **raw data** using basis design principles.
+- **Manually construct** RDF from **raw data** using basic design principles.
 - Follow **Linked Data best practices** (stable HTTP IRIs, labels, datatypes).
 - Pass an **autograder** that verifies your RDF **passes basic validation tests**.
 

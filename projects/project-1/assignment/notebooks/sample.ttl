@@ -1,6 +1,5 @@
-@prefix ex: <http://example.org/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
-ex:AO634 rdf:type ex:Course .
-ex:AO634 ex:title "Ontology Tradecraft" .
+<http://example.org/AO634> rdf:type <http://example.org/Course> .
+<http://example.org/AO634> <http://example.org/title> "Ontology Tradecraft" .
 
