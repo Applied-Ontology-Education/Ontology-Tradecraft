@@ -37,22 +37,22 @@ By the end of this project, students will be able to:
     ```
     ```
     python compare_structures.py \
-    --bfo src/bfo-core.ttl \
-    --ies src/ies.ttl \
+    --left src/bfo-core.ttl \
+    --right src/ies.ttl \
     --outdir data/ \
     --shape coarse --presence-only --normalize families
     ```
     ```
     python compare_structures.py \
-    --ccom src/ccom.ttl \
-    --qudt src/qudt.ttl \
+    --left src/ccom.ttl \
+    --right src/qudt.ttl \
     --outdir data/ \
     --shape coarse --presence-only --normalize families
     ```
     ```
     python compare_structures.py \
-    --ccot src/ccot.ttl \
-    --to src/time.ttl \
+    --left src/ccot.ttl \
+    --right src/time.ttl \
     --outdir data/ \
     --shape coarse --presence-only --normalize families
     ```

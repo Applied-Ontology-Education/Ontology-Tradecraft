@@ -1,0 +1,91 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+
+cco:ont00000061 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Flow" .
+
+cco:ont00000074 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Acceleration" .
+
+cco:ont00000120 a rdfs:Class ;
+    rdfs:label "Measurement Unit" .
+
+cco:ont00000140 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Amount of Substance" .
+
+cco:ont00000198 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Sound Level" .
+
+cco:ont00000217 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Area" .
+
+cco:ont00000229 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Power" .
+
+cco:ont00000239 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Mass" .
+
+cco:ont00000374 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Volumetric Flow Rate" .
+
+cco:ont00000406 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Geocoordinate" .
+
+cco:ont00000444 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Energy" .
+
+cco:ont00000497 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Force" .
+
+cco:ont00000502 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Area Moment of Inertia" .
+
+cco:ont00000527 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Rotational Inertia" .
+
+cco:ont00000659 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Torque" .
+
+cco:ont00000707 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Angle" .
+
+cco:ont00000770 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Density" .
+
+cco:ont00000844 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Temperature" .
+
+cco:ont00000852 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Work" .
+
+cco:ont00000940 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Momentum" .
+
+cco:ont00000959 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Frequency" .
+
+cco:ont00000969 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Speed" .
+
+cco:ont00001004 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Electromagnetic Force" .
+
+cco:ont00001090 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Pressure" .
+
+cco:ont00001290 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Length" .
+
+cco:ont00001307 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Mass Flow Rate" .
+
+cco:ont00001317 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Volume" .
+
+cco:ont00001345 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Impulse" .
+
+cco:ont00001357 a rdfs:Class ;
+    rdfs:label "Measurement Unit of Time" .
+

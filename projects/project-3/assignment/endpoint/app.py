@@ -14,14 +14,15 @@ logging.basicConfig(
 log = logging.getLogger("endpoint")
 log.info("[BOOT] starting endpoint/app.py")
 
-# ---------- Config: set real paths here ----------
+# set the file paths for the ontology files
+ontology_path = Path(__file__).absolute().parent.parent / "src"
 ONTOLOGY_FILES = {
-    "bfo":  "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/bfo-core.ttl",   # BFO
-    "ies":  "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/ies.ttl",        # IES
-    "qudt": "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/qudt.ttl",       # QUDT  (update if different)
-    "ccom": "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/ccom.ttl",       # CCOM  (update if different)
-    "ccot": "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/ccot.ttl",      # CCO Time module
-    "to":   "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/time.ttl",      # W3C Time Ontology
+    "bfo":  ontology_path / "bfo-core.ttl",   # BFO
+    "ies":  ontology_path / "ies.ttl",        # IES
+    "qudt": ontology_path / "qudt.ttl",       # QUDT  (update if different)
+    "ccom": ontology_path / "ccom.ttl",       # CCOM  (update if different)
+    "ccot": ontology_path / "ccot.ttl",      # CCO Time module
+    "to":   ontology_path / "time.ttl",      # W3C Time Ontology
 }
 
 # ---------- App ----------
