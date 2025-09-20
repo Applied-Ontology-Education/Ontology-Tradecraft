@@ -2,7 +2,7 @@
  "cells": [
   {
    "cell_type": "code",
-   "execution_count": 1,
+   "execution_count": null,
    "id": "afeabb92",
    "metadata": {},
    "outputs": [
@@ -17,12 +17,21 @@
    ],
    "source": [
     "import sys\n",
-    "print(sys.version)"
+    "print(sys.version)\n",
+    "print(\"Environment report OK\")"
    ]
   },
   {
    "cell_type": "code",
-   "execution_count": 2,
+   "execution_count": null,
+   "id": "6bb3b148",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
    "id": "87611538",
    "metadata": {},
    "outputs": [
@@ -69,18 +78,12 @@
     "from pathlib import Path\n",
     "import rdflib\n",
     "\n",
-    "# Look in all sensible spots:\n",
-    "candidates = [\n",
-    "    Path.cwd() / \"sample.ttl\",                      # projects/project-1/assignment/sample.ttl\n",
-    "    Path.cwd() / \"notebooks\" / \"sample.ttl\",        # projects/project-1/assignment/notebooks/sample.ttl\n",
-    "    Path.cwd().parent / \"notebooks\" / \"sample.ttl\", # projects/project-1/notebooks/sample.ttl\n",
-    "]\n",
+    "ttl_path = Path(__file__).resolve().parents[1] / \"notebooks\" / \"sample.ttl\" if \"__file__\" in globals() else Path.cwd() / \"sample.ttl\"\n",
+    "if not ttl_path.exists():\n",
+    "    # if launched with a different working dir in Jupyter, also try parent\n",
+    "    alt = Path.cwd().parent / \"notebooks\" / \"sample.ttl\"\n",
+    "    ttl_path = alt if alt.exists() else ttl_path\n",
     "\n",
-    "ttl_path = next((p for p in candidates if p.exists()), None)\n",
-    "if ttl_path is None:\n",
-    "    raise FileNotFoundError(f\"sample.ttl not found in any of: {candidates}\")\n",
-    "\n",
-    "print(f\"Using TTL at: {ttl_path}\")\n",
     "g = rdflib.Graph()\n",
     "g.parse(str(ttl_path), format=\"turtle\")\n",
     "print(\"Triple count:\", len(g))\n"
