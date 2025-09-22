@@ -1,24 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Pair classes across two ontologies that share the SAME structural type of axioms.
-Writes ONLY the matches file: <left>-<right>-structural-matches.xlsx
-
-Structure = multiset of restriction tokens from SubClassOf / EquivalentClass:
-  R:some, R:only, R:has, R:(q)min(=n), R:(q)max(=n), R:(q)card(=n)
-Ignores properties, fillers, and boolean grouping (AND/OR flattened).
-
---shape exact|kind|coarse
-  exact  : keep numbers & qualifiedness (qmin vs min)
-  kind   : drop numbers, keep qualifiedness
-  coarse : drop numbers & collapse qualifiedness (qmin→min, qcard→card)
---normalize off|families|entailment
-  families   : collapse to {E,U,MIN,MAX,EXACT} families
-  entailment : tiny closure (card n ⇒ min n + max n; qcard n ⇒ qmin n + qmax n; min≥1/qmin≥1/has ⇒ some)
---presence-only : ignore multiplicities when comparing structures
---follow-imports / --imports-depth : pull in owl:imports
-"""
-
 import argparse
 from collections import Counter
 from pathlib import Path
