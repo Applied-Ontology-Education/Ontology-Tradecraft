@@ -1,2 +1,2 @@
-rdflib==6.2.0
-pytest
+rdflib>=6.3
+pytest>=7.0

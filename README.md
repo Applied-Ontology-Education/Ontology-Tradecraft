@@ -43,7 +43,6 @@ In person 1-3:50 on Mondays. Zoom for attending remotely is here (https://buffal
 ## Repository Content
 This repository contains the following directories: 
 
-* **lectures** - Slides for lectures given by the instructor of the course.
 * **presentations** - Slides for presentations given by participants in the course. 
 * **documentation** - Directory where etiquette and collaboration guidance is provided.
 * **projects** - Directory where course projects and supplementary material are described. 
