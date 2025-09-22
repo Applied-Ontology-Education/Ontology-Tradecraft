@@ -1,0 +1,23 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ccot: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<http://example.org/mappings/ccot-time> a owl:Ontology .
+
+# CCOT:Instant               ≡  TIME:Instant
+ccot:Instant owl:equivalentClass time:Instant .
+
+# CCOT:TemporalInterval      ≡  TIME:ProperInterval
+ccot:TemporalInterval owl:equivalentClass time:ProperInterval .
+
+# CCOT:TemporalPosition      ⊑  TIME:TemporalPosition     (conservative alignment)
+ccot:TemporalPosition rdfs:subClassOf time:TemporalPosition .
+
+# CCOT:Hour                  ⊑  TIME:TemporalUnit         (safe if your CCOT has Hour as a class)
+ccot:Hour rdfs:subClassOf time:TemporalUnit .
+
+# CCOT:Day                   ⊑  TIME:TemporalUnit
+ccot:Day rdfs:subClassOf time:TemporalUnit .

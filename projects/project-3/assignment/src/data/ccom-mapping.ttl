@@ -1,0 +1,26 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix ccom: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+
+<http://example.org/mappings/ccom-qudt> a owl:Ontology .
+
+# CCOM:Length                ≡  QUDT:Length
+ccom:Length owl:equivalentClass qudt:Length .
+
+# CCOM:Mass                  ≡  QUDT:Mass
+ccom:Mass owl:equivalentClass qudt:Mass .
+
+# CCOM:Time                  ≡  QUDT:Time
+ccom:Time owl:equivalentClass qudt:Time .
+
+# CCOM:Temperature           ≡  QUDT:ThermodynamicTemperature
+ccom:Temperature owl:equivalentClass qudt:ThermodynamicTemperature .
+
+# CCOM:ElectricCurrent       ≡  QUDT:ElectricCurrent
+ccom:ElectricCurrent owl:equivalentClass qudt:ElectricCurrent .
+
+# CCOM:LuminousIntensity     ≡  QUDT:LuminousIntensity
+ccom:LuminousIntensity owl:equivalentClass qudt:LuminousIntensity .

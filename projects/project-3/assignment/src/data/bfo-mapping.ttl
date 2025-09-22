@@ -1,0 +1,19 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix bfo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+
+<http://example.org/mappings/bfo-ies> a owl:Ontology .
+
+# BFO:Process  ≡  IES:Event               (both are happenings in time)
+bfo:BFO_0000015 owl:equivalentClass ies:Event .
+
+# BFO:Continuant  ≡  IES:Entity            (endurant entity)
+bfo:BFO_0000002 owl:equivalentClass ies:Entity .
+
+# IES:Event  ⊑  BFO:Occurrent             (sanity: events are occurrents)
+ies:Event rdfs:subClassOf bfo:BFO_0000003 .
+
+# BFO:Object  ⊑  IES:Object               (conservative: subclass if you’re unsure of exact equivalence)
+bfo:BFO_0000030 rdfs:subClassOf ies:Object .

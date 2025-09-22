@@ -1,0 +1,19 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+
+# Mappings: CCOM measurement-unit categories ⊑ QUDT Unit categories
+
+<https://www.commoncoreontologies.org/ont00000217> rdfs:subClassOf <http://qudt.org/schema/qudt#AreaUnit> .  # Measurement Unit of Area ⊑ Area Unit
+<https://www.commoncoreontologies.org/ont00000502> rdfs:subClassOf <http://qudt.org/schema/qudt#AreaUnit> .  # Measurement Unit of Area Moment of Inertia ⊑ Area Unit
+<https://www.commoncoreontologies.org/ont00000770> rdfs:subClassOf <http://qudt.org/schema/qudt#ElectricChargeAreaDensityUnit> .  # Measurement Unit of Density ⊑ Electric Charge Area Density Unit
+<https://www.commoncoreontologies.org/ont00001004> rdfs:subClassOf <http://qudt.org/schema/qudt#ForceUnit> .  # Measurement Unit of Electromagnetic Force ⊑ Force Unit
+<https://www.commoncoreontologies.org/ont00000444> rdfs:subClassOf <http://qudt.org/schema/qudt#EnergyAndWorkUnit> .  # Measurement Unit of Energy ⊑ Energy And Work Unit
+<https://www.commoncoreontologies.org/ont00000497> rdfs:subClassOf <http://qudt.org/schema/qudt#ForceUnit> .  # Measurement Unit of Force ⊑ Force Unit
+<https://www.commoncoreontologies.org/ont00000959> rdfs:subClassOf <http://qudt.org/schema/qudt#FrequencyUnit> .  # Measurement Unit of Frequency ⊑ Frequency Unit
+<https://www.commoncoreontologies.org/ont00001290> rdfs:subClassOf <http://qudt.org/schema/qudt#LengthUnit> .  # Measurement Unit of Length ⊑ Length Unit
+<https://www.commoncoreontologies.org/ont00000239> rdfs:subClassOf <http://qudt.org/schema/qudt#MassUnit> .  # Measurement Unit of Mass ⊑ Mass Unit
+<https://www.commoncoreontologies.org/ont00001307> rdfs:subClassOf <http://qudt.org/schema/qudt#MassUnit> .  # Measurement Unit of Mass Flow Rate ⊑ Mass Unit
+<https://www.commoncoreontologies.org/ont00000940> rdfs:subClassOf <http://qudt.org/schema/qudt#MomentumUnit> .  # Measurement Unit of Momentum ⊑ Momentum Unit

@@ -1,0 +1,12 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix ex:   <http://example.org/aircraft#> .
+
+@prefix time: <http://www.w3.org/2006/time#> .
+# Mappings: BFO ↔ IES (manual subclasses)
+<http://ies.data.gov.uk/ontology/ies4#HealthServiceIdentifier> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .  # Service ⊑ Process
+<http://ies.data.gov.uk/ontology/ies4#AccountAdminEvent> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .  # Event ⊑ Process
+<http://ies.data.gov.uk/ontology/ies4#BookingAgent> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .  # Agent ⊑ Material Entity
+<http://ies.data.gov.uk/ontology/ies4#AuthorisationDocument> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> .  # Information resource ⊑ GDC
