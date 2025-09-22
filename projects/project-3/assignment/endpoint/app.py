@@ -1,4 +1,4 @@
-# endpoint/app.py
+ # endpoint/app.py
 import os, sys, logging
 from flask import Flask, request, jsonify, Response
 from pathlib import Path
@@ -16,13 +16,16 @@ log.info("[BOOT] starting endpoint/app.py")
 
 # ---------- Config: set real paths here ----------
 ONTOLOGY_FILES = {
-    "bfo":  "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/bfo-core.ttl",   # BFO
-    "ies":  "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/ies.ttl",        # IES
-    "qudt": "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/qudt.ttl",       # QUDT  (update if different)
-    "ccom": "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/ccom.ttl",       # CCOM  (update if different)
-    "ccot": "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/ccot.ttl",      # CCO Time module
-    "to":   "/Users/john/Repos/Ontology-Tradecraft/projects/project-3/assignment/src/time.ttl",      # W3C Time Ontology
+    "bfo":  r"E:\OneDrive\Documents\Ontology-Tradecraft\projects\project-3\assignment\src\bfo-core.ttl",
+    "ies":  r"E:\OneDrive\Documents\Ontology-Tradecraft\projects\project-3\assignment\src\ies.ttl",
+    "ccom": r"E:\OneDrive\Documents\Ontology-Tradecraft\projects\project-3\assignment\src\ccom.ttl",
+    "qudt": r"E:\OneDrive\Documents\Ontology-Tradecraft\projects\project-3\assignment\src\qudt.ttl",
+    "ccot": r"E:\OneDrive\Documents\Ontology-Tradecraft\projects\project-3\assignment\src\ccot.ttl",
+    "to":   r"E:\OneDrive\Documents\Ontology-Tradecraft\projects\project-3\assignment\src\time.ttl",
+    "time": r"E:\OneDrive\Documents\Ontology-Tradecraft\projects\project-3\assignment\src\time.ttl",  # alias
 }
+
+
 
 # ---------- App ----------
 app = Flask(__name__)
