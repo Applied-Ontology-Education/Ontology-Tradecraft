@@ -20,6 +20,31 @@ By completing this project, you will:
 ## Automated Grading
 Your work will be graded automatically using **pytest** and GitHub Actions. Each push or pull request runs the tests, and results are shown in the **Checks** tab of your repo.
 
+## Testing your Work
+We will leverage GitHub Actions to automate the grading for projects. There will accordingly be `*-tests.yml` files under the `.github/workflows directory`. These files provide instructions for when tests within each project should run against your submissions. There is a trigger, for example, such that when you open a pull request to the class repository, tests will run againsts your pull request submission. The portion of the yml file that determines triggers for project 1 in `project1-tests.yml` looks like this: 
+```
+on:
+  pull_request:
+    paths:
+      - "projects/project-1/**"
+      - ".github/workflows/project1-tests.yml"
+```
+The block that starts with "pull_request" says on a pull request to my repository run the yml instructions that follow. 
+
+I suspect you will want to test your work before you submit it to me though. If that is the case, then you will want to include another trigger that runs when you push updates to your own repository. To make that happen, you will need to update the yml file you have on your repository so it looks like: 
+```
+on:
+  pull_request:
+    paths:
+      - "projects/project-1/**"
+      - ".github/workflows/project1-tests.yml"
+  push:
+    paths:
+      - "projects/project-1/**"
+      - ".github/workflows/project1-tests.yml"
+```
+This additional block that starts with "push" says that on a push to your repository, run the yml instructions that follow. 
+
 **Rubric:**
 - **Python environment** (Python ≥ 3.0)  
 - **Required libraries import successfully** 
