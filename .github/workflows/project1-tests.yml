@@ -1,0 +1,71 @@
+# .github/workflows/autograde-project-1.yml
+name: Autograde (Project 1 only)
+
+on:
+  push:
+    paths:
+      - "projects/project-1/**"
+      - ".github/workflows/autograde-project-1.yml"
+  pull_request:
+    paths:
+      - "projects/project-1/**"
+      - ".github/workflows/autograde-project-1.yml"
+  workflow_dispatch:
+
+jobs:
+  grade:
+    name: Grade project-1
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash
+        working-directory: projects/project-1/assignment
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Debug paths
+        run: |
+          echo "PWD=$(pwd)"
+          ls -la
+          echo "Repo root:"
+          ls -la "$GITHUB_WORKSPACE"
+          echo "Assignment dir contents:"
+          ls -la .
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          else
+            echo "No requirements.txt; installing minimal defaults"
+            pip install rdflib SPARQLWrapper pyshacl pytest nbclient nbformat ipykernel jupyter_client jupyter_core
+          fi
+
+      # Ensure a Jupyter kernelspec exists for THIS interpreter
+      - name: Ensure Jupyter kernel
+        run: |
+          python -m pip install --quiet ipykernel jupyter_client jupyter_core
+          python -m ipykernel install --user --name=python3 --display-name="Python 3 (Actions)"
+
+      - name: Execute env-report notebook (optional)
+        if: hashFiles('projects/project-1/assignment/notebooks/env-report.ipynb') != ''
+        run: |
+          python -m pip install --quiet nbclient nbformat
+          python - <<'PY'
+          import nbformat
+          from nbclient import NotebookClient
+          nb = nbformat.read('notebooks/env-report.ipynb', as_version=4)
+          NotebookClient(nb, timeout=300, kernel_name='python3').execute()
+          print("Notebook executed successfully.")
+          PY
+
+      - name: Run tests
+        run: pytest -q
