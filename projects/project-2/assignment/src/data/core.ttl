@@ -1,0 +1,253 @@
+@prefix :      <http://www.newfoundland.nl/otc/model/> .
+@prefix dc:    <http://purl.org/dc/elements/1.1/> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cco:   <https://www.commoncoreontologies.org/> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix bfo:   <http://purl.obolibrary.org/obo/> .
+@base <http://www.newfoundland.nl/otc/model/> .
+
+<http://www.newfoundland.nl/otc/model>
+    rdf:type    owl:Ontology ;
+    owl:imports <https://www.commoncoreontologies.org/2024-11-06/InformationEntityOntology>,
+                <https://www.commoncoreontologies.org/ArtifactOntology>,
+                <https://www.commoncoreontologies.org/ExtendedRelationOntology> .
+
+#################################################################
+#    Task 1
+#################################################################
+
+# Universals
+#################################################################
+
+:Fixed_Wing
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000040 ;
+    rdfs:label      "Fixed Wing" ;
+    skos:definition "A Fixed wing is a manufacture aircraft object." .
+
+:Jet_Engine
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000040 ;
+    rdfs:label      "Jet Engine" ;
+    skos:definition "A Jet Engine is a manufactured object." .
+
+:Model_BADA
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000031 ;
+    rdfs:label      "Model BADA" ;
+    skos:definition "Model BADA is the model type designator of an airplane according to BADA." .
+
+:Model_FAA
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000031 ;
+    rdfs:label      "Model FAA" ;
+    skos:definition "Model FAA is the model type designator of an airplane according to FAA." .
+
+# Object properties
+#################################################################
+
+:has_Manufacturer
+    rdf:type        owl:ObjectProperty ;
+    rdfs:label      "has Manufacturer" ;
+    skos:definition "Every artifact has a manufacturer." .
+
+# Data properties
+#################################################################
+
+:has_Length_Ft
+    rdf:type           owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:label         "has Length Ft" ;
+    skos:definition    "An fixed wing airplane has a determinable length." .
+
+:has_Tail_Height_Ft
+    rdf:type           owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:label         "has Tail Height Ft" ;
+    skos:definition    "An fixed wing airplane has a determinable tail height." .
+
+:has_Model_BADA
+    rdf:type           owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:label         "has Model BADA" ;
+    skos:definition    "An model of a fixed wing airplane is assigned a BADA code." .
+
+:has_Model_FAA
+    rdf:type        owl:DatatypeProperty ;
+    rdfs:label      "has Model FAA" ;
+    skos:definition "An model of a fixed wing airplane is assigned a FAA code." .
+
+#################################################################
+#    Task 2
+#################################################################
+
+# Universals
+#################################################################
+:Test_Process
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000015 ;
+    rdfs:label      "Test Process" ;
+    skos:definition "Test Process" .
+
+# Object properties
+#################################################################
+:is_temporal_part_of
+    rdf:type           owl:ObjectProperty ;
+    rdfs:subPropertyOf bfo:BFO_0000139 ;
+    rdfs:domain        :Test_Process ;
+    rdfs:range         :Test_Process ;
+    rdfs:label         "is temporal part of" ;
+    skos:definition    "is temporal part of is required instead of temporal part of." .
+
+# Data properties
+#################################################################
+:has_measurement_value
+    rdf:type           owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:label         "has measurement value" ;
+    skos:definition    "has measurement value" .
+
+:has_maximum_knot_approach_speed
+    rdf:type           owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:label         "has maximum knot approach speed" ;
+    skos:definition    "has maximum knot approach speed" .
+
+#################################################################
+#    Task 3
+#################################################################
+
+# Universals
+#################################################################
+
+:Adaptability_Evaluation
+    rdfs:subClassOf bfo:BFO_0000017 ;
+    rdfs:label      "Adaptability Evaluation" ;
+    skos:definition "Adaptability Evaluation" .
+
+:Adaptability_Evaluation_Result
+    rdfs:subClassOf cco:ont00001163 ;
+    rdfs:label      "Adapt. Eval. Result" ;
+    skos:definition "Def Adapt. Eval. Result" .
+
+:Act_of_Aircraft_Processing
+    rdfs:subClassOf bfo:BFO_0000015 ;
+    rdfs:label      "Act of Aircraft Processing" ;
+    skos:definition "Def Act of Aircraft Processing" .
+
+:SOC_Title
+    rdfs:subClassOf cco:ont00000853 ;
+    rdfs:label      "SOC Title" ;
+    skos:definition "SOC Title" .
+
+:SOC_Title_1
+    rdfs:subClassOf :SOC_Title ;
+    rdfs:label      "SOC:Aerospace Engineer" ;
+    skos:definition "Aerospace Engineer" .
+
+:SOC_Title_2
+    rdfs:subClassOf :SOC_Title ;
+    rdfs:label      "SOC:Aerospace Engineer" ;
+    skos:definition "Aerospace Engineer" .
+
+:SOC_Title_3
+    rdfs:subClassOf :SOC_Title ;
+    rdfs:label      "SOC:Aerospace Engineer" ;
+    skos:definition "Aerospace Engineer" .
+
+
+# Object properties
+#################################################################
+
+
+# Data properties
+#################################################################
+
+#################################################################
+#    Task 4
+#################################################################
+
+# Universals
+#################################################################
+
+:OCC_Title
+    rdf:type        owl:Class ;
+    rdfs:subClassOf cco:ont00000853 ;
+    rdfs:label      "OCC Title" ;
+    skos:definition "OCC Title" .
+
+:OCC_Title_1
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :OCC_Title ;
+    rdfs:label      "Aerospace Engineer" ;
+    skos:definition "Aerospace Engineer" .
+
+:OCC_Title_2
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :OCC_Title ;
+    rdfs:label      "Aerospace Engineer" ;
+    skos:definition "Aerospace Engineer" .
+
+:OCC_Title_3
+    rdf:type        owl:Class ;
+    rdfs:subClassOf :OCC_Title ;
+    rdfs:label      "Aerospace Engineer" ;
+    skos:definition "Aerospace Engineer" .
+
+:Total_Employment_Measurement
+    rdf:type        owl:Class ;
+    rdfs:subClassOf cco:ont00000958 ;
+    rdfs:label      "Total Employment Measurement" ;
+    skos:definition "Total Employment Measurement Survey." .
+
+:Act_of_Measuring
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000015 ;
+    rdfs:label      "Act of Measuring" ;
+    skos:definition "Act of Measuring" .
+
+:Labor_Market
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000015 ;
+    rdfs:label      "Labor Market" ;
+    skos:definition "Labor Market" .
+
+:Job_Market
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000015 ;
+    rdfs:label      "Job Market" ;
+    skos:definition "Job Market" .
+
+:Job_Role
+    rdf:type        owl:Class ;
+    rdfs:subClassOf bfo:BFO_0000023 ;
+    rdfs:label      "Job Role" ;
+    skos:definition "Job Role" .
+
+# Object properties
+#################################################################
+
+
+# Data properties
+#################################################################
+:has_area
+    rdf:type           owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:label         "has area" ;
+    skos:definition    "has area" .
+
+:own_code
+    rdf:type           owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:label         "own code" ;
+    skos:definition    "own code" .
+
+:o_group
+    rdf:type           owl:DatatypeProperty ;
+    rdfs:subPropertyOf owl:topDataProperty ;
+    rdfs:label         "o group" ;
+    skos:definition    "o group" .
