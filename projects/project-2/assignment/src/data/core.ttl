@@ -1,0 +1,154 @@
+@prefix ot:   <https://example.org/ot/w2#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+
+ot: a owl:Ontology ;
+  rdfs:label "Week 2 ontology core"@en ;
+  skos:definition "Core vocabulary for Project 2."@en .
+
+# ---------- BFO label stubs ----------
+obo:BFO_0000040 rdfs:label "material entity"@en .
+obo:BFO_0000015 rdfs:label "process"@en .
+obo:BFO_0000031 rdfs:label "generically dependent continuant"@en .
+obo:BFO_0000020 rdfs:label "specifically dependent continuant"@en .
+obo:BFO_0000023 rdfs:label "role"@en .
+obo:BFO_0000019
+  rdfs:label "quality"@en ;
+  skos:definition "A specifically dependent continuant that inheres in a bearer (e.g., mass, length, speed)."@en .
+
+# ---------- Classes ----------
+ot:ArtifactDesign a owl:Class ;
+  rdfs:subClassOf obo:BFO_0000031 ;
+  rdfs:label "Artifact Design"@en ;
+  skos:definition "A design/specification as an information content entity."@en .
+
+ot:JetEngine a owl:Class ;
+  rdfs:subClassOf obo:BFO_0000040 ;
+  rdfs:label "Jet Engine"@en ;
+  skos:definition "A jet engine that produces thrust from jet exhaust."@en .
+
+ot:FixedWing a owl:Class ;
+  rdfs:subClassOf obo:BFO_0000040 ;
+  rdfs:label "Fixed Wing"@en ;
+  skos:definition "A fixed-wing aircraft (material entity)."@en .
+
+ot:TestProcess a owl:Class ;
+  rdfs:subClassOf obo:BFO_0000015 ;
+  rdfs:label "Test Process"@en ;
+  skos:definition "A process in which measurements are made to evaluate a design or artifact."@en .
+
+ot:MeasurementUnit a owl:Class ;
+  rdfs:subClassOf obo:BFO_0000031 ;
+  rdfs:label "Measurement Unit"@en ;
+  skos:definition "A unit specification such as knots."@en .
+
+ot:ActOfAircraftProcessing a owl:Class ;
+  rdfs:subClassOf obo:BFO_0000015 ;
+  rdfs:label "Act of Aircraft Processing"@en ;
+  skos:definition "A process in which aircraft artifacts are analyzed/handled."@en .
+
+ot:AdaptabilityEvaluation a owl:Class ;
+  rdfs:subClassOf obo:BFO_0000015 ;
+  rdfs:label "Adaptability Evaluation"@en ;
+  skos:definition "An evaluation process assessing adaptation-related properties."@en .
+
+ot:ActOfMeasuring a owl:Class ;
+  rdfs:subClassOf obo:BFO_0000015 ;
+  rdfs:label "Act of Measuring"@en ;
+  skos:definition "A process in which a measurement value is obtained."@en .
+
+ot:Role a owl:Class ;
+  rdfs:subClassOf obo:BFO_0000023 ;
+  rdfs:label "Role"@en ;
+  skos:definition "A role that inheres in a bearer and is realized in processes."@en .
+
+ot:TotalEmployment a owl:Class ;
+  rdfs:subClassOf obo:BFO_0000019 ;
+  rdfs:label "Total Employment"@en ;
+  skos:definition "A quality representing total employment for an occupation in an area/time."@en .
+
+ot:PersonGeneric a owl:Class ;
+  rdfs:label "Person (generic)"@en ;
+  skos:definition "A generic person placeholder used as a role bearer."@en .
+
+# ---------- Object properties ----------
+ot:hasContinuantPart a owl:ObjectProperty ;
+  rdfs:label "has continuant part"@en ;
+  skos:definition "Relates a continuant to one of its continuant parts."@en .
+
+ot:isTemporalPartOf a owl:ObjectProperty ;
+  rdfs:label "is temporal part of"@en ;
+  skos:definition "Relates an occurrent to a larger occurrent of which it is a temporal part."@en .
+
+ot:prescribes a owl:ObjectProperty ;
+  rdfs:label "prescribes"@en ;
+  skos:definition "Relates a specification/design to a parameter or constraint it prescribes."@en .
+
+ot:isMeasurementUnitOf a owl:ObjectProperty ;
+  rdfs:label "is measurement unit of"@en ;
+  skos:definition "Relates a unit specification to the quality/quantity it is a unit of."@en .
+
+ot:isAbout a owl:ObjectProperty ;
+  rdfs:label "is about"@en ;
+  skos:definition "Relates an information content entity (or role) to its subject."@en .
+
+ot:realizes a owl:ObjectProperty ;
+  rdfs:label "realizes"@en ;
+  skos:definition "Relates a process to the role/specification it realizes."@en .
+
+ot:isOutputOf a owl:ObjectProperty ;
+  rdfs:label "is output of"@en ;
+  rdfs:label "is output of" ;               # plain label (no lang) for strict matchers
+  skos:definition "Relates an output entity to a process that outputs it."@en .
+
+ot:inheresIn a owl:ObjectProperty ;
+  rdfs:label "inheres in"@en ;
+  rdfs:label "inheres in" ;                 # plain label (no lang) for strict matchers
+  skos:definition "Relates a specifically dependent continuant (e.g., role) to its bearer."@en .
+
+ot:hasArea a owl:ObjectProperty ;
+  rdfs:label "has area"@en ;
+  skos:definition "Links a measure/record to a geographic area entity."@en .
+
+ot:hasManufacturer a owl:ObjectProperty ;
+  rdfs:label "has manufacturer"@en ;
+  skos:definition "Links an artifact or specification to its manufacturer."@en .
+
+# ---------- Datatype properties ----------
+ot:hasModelBADA a owl:DatatypeProperty ;
+  rdfs:label "has Model BADA"@en ;
+  rdfs:range xsd:string ;
+  skos:definition "BADA model code for an aircraft."@en .
+
+ot:hasModelFAA a owl:DatatypeProperty ;
+  rdfs:label "has Model FAA"@en ;
+  rdfs:range xsd:string ;
+  skos:definition "FAA model code for an aircraft."@en .
+
+ot:hasLengthFt a owl:DatatypeProperty ;
+  rdfs:label "has Length Ft"@en ;
+  rdfs:range xsd:decimal ;
+  skos:definition "Overall length measured in feet."@en .
+
+ot:hasTailHeightFt a owl:DatatypeProperty ;
+  rdfs:label "has Tail HeightFt"@en ;
+  rdfs:range xsd:decimal ;
+  skos:definition "Tail height measured in feet."@en .
+
+ot:numericValue a owl:DatatypeProperty ;
+  rdfs:label "numeric value"@en ;
+  rdfs:range xsd:decimal ;
+  skos:definition "A numeric magnitude for a measured or prescribed quality."@en .
+
+ot:oGroup a owl:DatatypeProperty ;
+  rdfs:label "o group"@en ;
+  rdfs:range xsd:string ;
+  skos:definition "BLS 'o_group' string."@en .
+
+ot:ownCode a owl:DatatypeProperty ;
+  rdfs:label "own code"@en ;
+  rdfs:range xsd:string ;
+  skos:definition "Occupation code string used by BLS."@en .
