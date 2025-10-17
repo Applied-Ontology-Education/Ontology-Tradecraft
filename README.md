@@ -50,7 +50,7 @@ In person 1-3:50 on Mondays. Zoom for attending remotely is here (https://buffal
 ## Extra Content
 
   - [MOWL Tutorial](https://github.com/bio-ontology-research-group/MOWL)
-  - [FAIR Cookbook – RDF Conversion](https://faircookbook.elixir-europe.org/content/recipes/interoperability/knowledge_representation/rdf-conversion.html)
+  - [FAIR Cookbook – RDF Conversion](https://faircookbook.elixir-europe.org/content/recipes/interoperability/rdf-conversion.html)
   - [SHACL by Example](https://labra.github.io/SHACL/)
 
 ## Repository Content
