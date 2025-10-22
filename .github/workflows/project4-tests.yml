@@ -37,7 +37,7 @@ jobs:
       # -------------------------------------------------------------
       # (1) ETL validation
       # -------------------------------------------------------------
-  
+
       - name: 🧪 Run ETL
         run: python src/scripts/normalize_readings.py
 
@@ -56,10 +56,10 @@ jobs:
           import pandas as pd
 
           CSV = Path("src/data/readings_normalized.csv")
-          assert CSV.exists(), "❌ Missing src/data/readings_normalized.csv"
+          assert CSV.exists(), "❌ Missing src/data/readings_normalized.csv" 
 
           # Schema check
-          df = pd.read_csv(CSV, dtype=str, keep_default_na=False)
+          df = pd.read_csv(CSV, dtype=str, keep_default_na=False) 
           exp_cols = ["artifact_id","sdc_kind","unit_label","value","timestamp"]
           assert list(df.columns) == exp_cols, f"❌ Bad header. Got {list(df.columns)}"
 
@@ -163,12 +163,12 @@ jobs:
           q_all_mice_ok = f"""
           SELECT (COUNT(*) AS ?n_bad)
           WHERE {{
-            ?m a <{IRI_MICE}> .
-            # Missing required links with the exact IRIs?
-            FILTER NOT EXISTS {{ ?m <{IRI_IS_MEASURE_OF}> ?sdc . ?sdc a <{IRI_SDC}> . }}
+            {{ ?m a <{IRI_MICE}> .
+               FILTER NOT EXISTS {{ ?m <{IRI_IS_MEASURE_OF}> ?sdc . ?sdc a <{IRI_SDC}> . }} }}
             UNION
             {{ ?m a <{IRI_MICE}> .
                FILTER NOT EXISTS {{ ?m <{IRI_USES_MU}> ?u . ?u a <{IRI_MU}> . }} }}
+            # Missing required links with the exact IRIs?
           }}
           """
           n_bad = int(list(g.query(q_all_mice_ok))[0][0])

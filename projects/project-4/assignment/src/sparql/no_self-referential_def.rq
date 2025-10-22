@@ -4,3 +4,19 @@
 #    No class definition should be self-referential. 
 # Severity:  
 #    Error
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?element ?definition ?term ?rest ?error
+WHERE {
+  ?element skos:definition ?definition .
+  FILTER regex(?definition, "^[An|A] (.+) is [a|an] (.+)$", "i")
+#  BIND(REPLACE(str(?definition), "^[An|A] (.+) is [a|an] (.+)$", "$1") AS ?term)
+#  BIND(REPLACE(str(?definition), "^[An|A] (.+) is [a|an] (.+)$", "$2") AS ?rest)
+#  FILTER(BOUND(?term) && STRLEN(STR(?term)) > 0)
+#  FILTER(CONTAINS(str(?rest), ?term))
+#  BIND (concat("Error: The following ontology element has a self-referential skos:definition ", str(?element)) AS ?error)
+}
+ORDER BY DESC(UCASE(str(?definition)))
+
+

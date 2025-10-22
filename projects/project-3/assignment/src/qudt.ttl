@@ -11,6 +11,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 dc:contributor
@@ -1790,3 +1791,19 @@ skos:closeMatch
 skos:exactMatch
   rdf:type rdf:Property ;
 .
+
+qudt-v1:AtomicPhysicsUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:PhysicalUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:ScienceAndEngineeringUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:ChemistryUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:ThermodynamicsUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:MechanicsUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:RadiologyUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:BiomedicalUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:CommunicationsUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:ElectricityAndMagnetismUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:SpaceAndTimeUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:CurrencyUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:HumanUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:FinancialUnit rdfs:subClassOf cco:ont00000853 .
+qudt-v1:ComputingUnit rdfs:subClassOf cco:ont00000853 .

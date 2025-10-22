@@ -8,7 +8,8 @@ import sys
 # The queries live at:   .../assignment/src/sparql/*.rq
 
 BASE_DIR = Path(__file__).resolve().parents[2]   # go up from /src/scripts → /src → /assignment
-DATA     = BASE_DIR / "src" / "measure_cco.ttl"
+print(BASE_DIR)
+DATA     = BASE_DIR / "src" / "measure_cco_inferred_merged.ttl"
 QUERIES  = BASE_DIR / "src" / "sparql"
 
 SHOW_LIMIT = 10
@@ -42,7 +43,7 @@ def main() -> int:
     print(f"[qc] triples loaded: {len(g)}")
 
     rq_files = sorted(QUERIES.glob("*.rq"))
-    print(f"[qc] found {len(rq_files)} query file(s):")
+    print(f"[q/home/sanne/Projects/Ontology-Tradecraftc] found {len(rq_files)} query file(s):")
     for p in rq_files:
         print("   -", p.name)
     print("-" * 60)

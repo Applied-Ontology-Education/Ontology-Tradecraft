@@ -1,0 +1,180 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix bfo:  <http://purl.obolibrary.org/obo/> .
+@prefix : <http://www.newfoundland.nl/otc/project-4/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix ex:   <http://www.newfoundland.nl/otc/project-4/shacl/> .
+
+#################################################################
+# 1) Artifact bears at least one SDC (cardinality);
+#################################################################
+ex:ArtifactHasSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ObservedEntity  ;
+  sh:property [
+    sh:path bfo:BFO_0000196 ;
+    sh:minCount 1 ;
+    sh:class bfo:BFO_0000020 ;
+    sh:message "Every Artifact must bear at least one SDC (Specifically Dependent Continuant)." ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 2) SDC is measured by at least one MICE (coverage via inverse)
+#################################################################
+ex:SdcIsMeasuredByAtLeastOneMice
+  a sh:NodeShape ;
+  sh:targetClass bfo:BFO_0000020 ;
+  sh:property [
+    sh:path [ sh:inversePath cco:ont00001966 ] ;
+    sh:minCount 1 ;
+    sh:class cco:ont00001163 ;
+    sh:message "SDC (Specifically Dependent Continuant) is measured by at least one MICE." ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 3) MICE measures exactly one SDC (functional)
+#################################################################
+ex:MiceMeasuresExactlyOneSDC
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001966 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class bfo:BFO_0000020 ;
+    sh:message "MICE measures exactly one SDC." ;
+    sh:severity sh:Violation
+  ] .
+
+##################################################################
+## 4) MICE must have one unit and one numeric value (completeness)
+##################################################################
+ex:MiceMustHaveOneUnitAndOneNumericValue
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001769 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:value  xsd:decimal ;
+    sh:message "MICE must have one numeric value (completeness)." ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path cco:ont00001863 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:value cco:ont00000120 ;
+    sh:message "MICE must have one unit." ;
+    sh:severity sh:Violation
+  ] .
+##################################################################
+# 5) No empty values in literals
+##################################################################
+ex:NoEmptyLiteralsShape a sh:NodeShape ;
+    sh:targetClass cco:ont00001364 ;
+    sh:property [
+        sh:path cco:ont00001769 ;
+        sh:minLength 1 ;
+        sh:message "Literal values cannot be empty"
+    ] .
+
+##################################################################
+## 6) Unit must match SDC being measured
+##################################################################
+ex:UnitMustMatchSDCMeasuredOhm a sh:NodeShape ;
+    sh:targetNode :ohm ;
+    sh:property [
+        sh:path ([ sh:inversePath cco:ont00001863 ] cco:ont00001966) ;
+        sh:class :ElectricalResistance ;
+        sh:minCount 1;
+        sh:message "Ohm unit must match resistance quality."
+    ] .
+
+ex:UnitMustMatchSDCMeasuredVolt a sh:NodeShape ;
+    sh:targetNode cco:ont00001450 ;
+    sh:property [
+        sh:path ([ sh:inversePath cco:ont00001863 ] cco:ont00001966) ;
+        sh:class :Voltage ;
+        sh:minCount 1;
+        sh:message "Volt unit must match voltage quality."
+    ] .
+
+ex:UnitMustMatchSDCMeasuredPa a sh:NodeShape ;
+    sh:targetNode cco:ont00001559 ;
+    sh:property [
+        sh:path ([ sh:inversePath cco:ont00001863 ] cco:ont00001966) ;
+        sh:class cco:ont00000380 ;
+        sh:minCount 1;
+        sh:message "Ohm unit must match resistance quality."
+    ] .
+
+ex:UnitMustMatchSDCMeasuredTemperature a sh:NodeShape ;
+    sh:targetNode cco:ont00001606 ;
+    sh:property [
+        sh:path ([ sh:inversePath cco:ont00001863 ] cco:ont00001966) ;
+        sh:class cco:ont00000441 ;
+        sh:minCount 1;
+        sh:message "Temperature unit must match temperature quality."
+    ] .
+
+#################################################################
+# 7) No duplicate MICE
+#################################################################
+ex:NoDuplicateMice a sh:NodeShape ;
+    sh:targetClass cco:ont00001163 ;
+    sh:sparql [
+        sh:message "The combination of instance, value, sdc and measurement unit must be unique" ;
+        sh:select """
+            PREFIX cco: <https://www.commoncoreontologies.org/>
+            PREFIX bfo: <http://purl.obolibrary.org/obo/>
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX : <http://www.newfoundland.nl/otc/project-4/>
+            PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+            SELECT $this ?other
+            WHERE {
+
+                ?this a cco:ont00001163;
+                      rdfs:label ?label;
+                      cco:ont00001769 ?value;
+                      cco:ont00001863 ?unit;
+                      cco:ont00001966 ?quality.
+
+                ?other a cco:ont00001163;
+                      rdfs:label ?label;
+                      cco:ont00001769 ?value;
+                      cco:ont00001863 ?unit;
+                      cco:ont00001966 ?quality.
+
+                FILTER($this != ?other)
+            }
+        """ ;
+    ] .
+#################################################################
+# 8) No dangling/mistyped nodes
+#################################################################
+ex:NoDanglingOrMistypedNodes a sh:NodeShape ;
+    sh:targetSubjectsOf rdf:type ;
+    sh:sparql [
+        sh:message "Instance '{$this}' uses undefined class '{?class}' (possible typo)" ;
+        sh:select """
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+            PREFIX owl: <http://www.w3.org/2002/07/owl#>
+            SELECT $this
+            WHERE {
+                $this a ?class1 .
+                FILTER (!STRSTARTS(STR(?class1), "http://www.w3.org/"))
+                FILTER NOT EXISTS{
+                    $this a [ rdfs:subClassOf ?class2].
+                }
+            }
+            ORDER BY ASC(UCASE(str($this)))
+        """ ;
+    ] .
