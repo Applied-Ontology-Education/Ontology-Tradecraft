@@ -1,11 +1,12 @@
-observation_id,observed_entity_id,quantity_kind,value,unit_code,timestamp,source
-A-000001,Boiler-07,temperature,212.0,F,2024-03-17 19:03:00+00:00,sensor_A
-A-000002,Boiler-07,pressure,14.7,psi,2024-03-17 19:04:00+00:00,sensor_A
-A-000003,Chiller-3,temperature,68.0,F,2024-03-18 08:01:00+00:00,sensor_A
-A-000004,Chiller-3,temperature,,F,2024-03-18 08:06:00+00:00,sensor_A
-A-000005,Pump-A1,pressure,101.325,kPa,2024-03-18 08:07:00+00:00,sensor_A
-A-000006,Pump-A1,pressure,,psi,2024-03-18 08:08:00+00:00,sensor_A
-B-000001,Boiler-07,temperature,100.0,C,2024-03-17 23:03:00+00:00,sensor_B
-B-000002,Boiler-07,pressure,101.325,kPa,2024-03-17 23:04:00+00:00,sensor_B
-B-000003,Chiller-3,temperature,19.5,C,2024-03-18 12:01:00+00:00,sensor_B
-B-000004,Chiller-3,temperature,,C,2024-03-18 12:06:00+00:00,sensor_B
+artifact_id,sdc_kind,unit_label,value,timestamp
+Boiler-07,temperature,F,212.0,2024-03-17T19:03:00Z
+Boiler-07,pressure,psi,14.7,2024-03-17T19:04:00Z
+Boiler-07,temperature,C,100.0,2024-03-17T23:03:00Z
+Boiler-07,pressure,kPa,101.325,2024-03-17T23:04:00Z
+Chiller-3,temperature,F,68.0,2024-03-18T08:01:00Z
+Chiller-3,temperature,C,19.5,2024-03-18T12:01:00Z
+Chiller-4,temperature,F,6.5,2024-03-18T12:01:00Z
+Chiller-4,temperature,F,19.5,2024-03-18T12:06:00Z
+Circuit-12,voltage,volt,2.0,2024-03-18T12:01:01Z
+Circuit-12,resistance,ohm,1.3,2024-03-18T12:06:00Z
+Pump-A1,pressure,kPa,101.325,2024-03-18T08:07:00Z
