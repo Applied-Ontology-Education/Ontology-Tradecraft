@@ -1,0 +1,38 @@
+flowchart LR
+    A{Airbus A320 Neo} -->|has Model BADA| B(Airbus A320-271)
+    A--->|has Model FAA|ii[Airbus A320 Neoc]
+    A ---> |Has RDF type|C([Jet])
+    A--->|Has Artifact Design|hh[Aircraft]
+    C--->|Is a subclass|W{Aircraft}
+    C--->G([Generally Independant Continuant])
+    A --->|Has an ICAO Code| D[A20N]
+    A --->|Has an FAA Designator| E[A20N]
+    A --->|Has an FAA Designator| F[A20N]
+    A --->|Has Manufacturer| H[Airbus]
+    A --->|Has continuant part| I[Jet Engine - x2]
+    I--->J([Generally Dependant Continuant])
+    A--->|Has approach speed|K[137 knots]
+    A--->|Has wing span|L[117.5 feet]
+    A--->|has Length Ft|M[123.3 feet]
+    A--->|has Tail HeightFt|N[39.6 feet]
+    A--->|Has wheel base|O[41.5 feet]
+    A--->|Has cockpit to main gear|P[50.2 feet]
+    A--->|Has main gear width|Q[29.4 feet]
+    A--->|Has MTOW|R[174,165 lbs]
+    A--->|Has MALW|S[148.591 lbs]
+    A--->|Has main gear configuration|T[D]
+    A--->|ICAO_WTC|U[Medium]
+    A--->|requires Parking_Area_ft2|V[16358.3]
+    A--->|Is subclass of|W[Fixed Wing Aircraft]
+    A--->|Has FAA weight|X[Large]
+    A--->|CWT|Y[F]
+    A--->|One_Half_Wake_Category|Z[D]
+    A--->|Two_Wake_Category_Appx_A|aa[D]
+    A--->|Two_Wake_Category_Appx_B|bb[C]
+    A--->|SRS|cc[III]
+    A--->|LAHSO|dd[7]
+    A--->|sFAA_Registry|ee[Yes]
+    A--->|Has Registration Count|ff[147]
+    A--->|TMFS_Operations_FY24|gg[540276]
+    jj[/Data/]--->|is about|A
+    A--->|Has remarks|hh[AAC validated by Flight Standardization Board FSB report]
