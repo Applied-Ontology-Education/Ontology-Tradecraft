@@ -1,0 +1,34 @@
+{
+  "site": "Buffaló-Center", 
+  "stream_id": "b-stream-22",
+  "readings": [
+    {
+      "entity_id": "Boiler-07",
+      "data": [
+        {"kind": "temp", "value": 100.0, "unit": "C", "time": "2024-03-17T23:03:00Z"},
+        {"kind": "pressure", "value": 101.325, "unit": "kPa", "time": "2024-03-17T23:04:00Z"}
+      ]
+    },
+    {
+      "entity_id": "Chiller-3",
+      "data": [
+        {"kind": "temp", "value": 19.5, "unit": "C", "time": "2024-03-18T12:01:00Z"},
+        {"kind": "temp", "value": null, "unit": "C", "time": "2024-03-18T12:06:00Z"}
+      ]
+    },
+    {
+      "entity_id": "Chiller-4",
+      "data": [
+        {"kind": "temp", "value": 6.5, "unit": "F", "time": "2024-03-18T12:01:00Z"},
+        {"kind": "temp", "value": 19.5, "unit": "F", "time": "2024-03-18T12:06:00Z"}
+      ]
+    },
+    {
+      "entity_id": "Circuit-12",
+      "data": [
+        {"kind": "voltage", "value": 2.0, "unit": "volt", "time": "2024-03-18T12:01:01Z"},
+        {"kind": "resistance", "value": 1.3, "unit": "ohm", "time": "2024-03-18T12:06:00Z"}
+      ]
+    }
+  ]
+}
