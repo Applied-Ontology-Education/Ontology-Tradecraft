@@ -23,6 +23,24 @@ NUMERIC_DT = {
 }
 
 def load_graph() -> Graph:
+    """
+    Loads and parses Turtle files into an RDF graph from a specified data directory.
+
+    The function searches for `.ttl` files in a given `DATA_DIR` and its `modules`
+    subdirectory (if it exists). All files found are parsed into a Graph object
+    using the Turtle format. If any `.ttl` files cannot be parsed, an error report
+    is compiled. The process ensures that at least one file is successfully parsed
+    and that there are no unresolved errors.
+
+    :raises AssertionError:
+        - If the data directory `DATA_DIR` does not exist.
+        - If no `.ttl` files are found in the specified locations.
+        - If parsing errors are encountered across all `.ttl` files.
+    :raises Exception: When unable to read specific `.ttl` files.
+
+    :return: An RDF graph containing parsed data from Turtle files.
+    :rtype: Graph
+    """
     assert DATA_DIR.exists(), f"Missing data dir: {DATA_DIR}"
     g = Graph()
     ttls = sorted(DATA_DIR.glob("*.ttl"))

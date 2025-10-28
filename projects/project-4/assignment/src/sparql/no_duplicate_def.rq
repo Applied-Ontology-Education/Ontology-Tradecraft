@@ -3,4 +3,18 @@
 # Constraint Description: 
 #    No two ontology elements may have the exact same definition.    
 # Severity:
-#     Error 
+#     Error
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?element ?element2 ?definition ?error
+WHERE {
+  ?element skos:definition ?definition .
+  ?element2 skos:definition ?definition .
+  FILTER (?element != ?element2)
+  FILTER (!isBlank(?element))
+  FILTER (!isBlank(?element2))
+  FILTER (str(?element1) < str(?element2))
+  BIND (concat("Error: The following ontology elements have the same skos:definition ", str(?element), " and ", str(?element2)) AS ?error)
+}
+ORDER BY DESC(UCASE(str(?definition)))

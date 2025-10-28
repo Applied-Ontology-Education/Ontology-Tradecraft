@@ -3,4 +3,24 @@
 # Constraint Description: 
 #    No annotation value may have leading or trailing whitespace.    
 # Severity:
-#    Error 
+#    Error
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?subject ?property ?value
+WHERE {
+  ?subject ?property ?value .
+  VALUES ?property {
+    rdfs:label
+    rdfs:comment
+    skos:definition
+    skos:altLabel
+    skos:prefLabel
+    skos:example
+    skos:editorialNote
+    owl:versionInfo
+  }
+  BIND(REPLACE(str(?value), "(^\\s+|\\s+$)", "") AS ?trimmedValue)
+  FILTER (str(?value) != ?trimmedValue)
+}

@@ -4,3 +4,27 @@
 #     All classes must have a BFO superclass.
 # Severity:
 #     Error
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT ?class ?error
+WHERE {
+    {
+        SELECT ?class
+        WHERE {
+          { ?class a rdfs:Class }
+          UNION
+          { ?class a owl:Class }
+        }
+    }
+    MINUS
+    {
+        SELECT ?class
+        WHERE {
+            ?class rdfs:subClassOf* obo:BFO_0000001 .
+        }
+    }
+    FILTER(!isBlank(?class))
+    BIND ("Error: Not all classes are BFO subclasses. " as ?error)
+}
