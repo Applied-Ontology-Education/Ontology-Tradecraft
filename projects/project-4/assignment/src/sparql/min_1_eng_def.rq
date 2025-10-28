@@ -5,3 +5,40 @@
 # Severity:
 #     Warning
 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+# Find all classes/entities that lack definitions
+SELECT DISTINCT ?entity ?type ?label
+WHERE {
+  # Get all classes and object properties
+  {
+    ?entity rdf:type owl:Class .
+    BIND("Class" AS ?type)
+  }
+  UNION
+  {
+    ?entity rdf:type owl:ObjectProperty .
+    BIND("ObjectProperty" AS ?type)
+  }
+  
+  # Filter out anonymous classes (blank nodes)
+  FILTER (!isBlank(?entity))
+  
+  # Also filter out OWL built-ins
+  FILTER (?entity != owl:Thing && ?entity != owl:Nothing)
+  
+  # Get label if exists
+  OPTIONAL { ?entity rdfs:label ?label }
+  
+  # Check that entity does NOT have a valid definition
+  FILTER NOT EXISTS {
+    ?entity skos:definition ?definition .
+    FILTER (STR(?definition) != "")
+  }
+}
+ORDER BY ?type ?entity
+
