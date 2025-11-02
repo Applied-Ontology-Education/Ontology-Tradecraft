@@ -4,3 +4,44 @@
 #    No class definition should be self-referential. 
 # Severity:  
 #    Error
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?class ?property ?issue
+WHERE {
+  ?class a ?classType .
+  FILTER (?classType IN (owl:Class, rdfs:Class))
+  
+  {
+    # Direct self-reference in subClassOf
+    ?class rdfs:subClassOf ?class .
+    BIND("direct subClassOf self-reference" AS ?issue)
+    BIND(rdfs:subClassOf AS ?property)
+  }
+  UNION
+  {
+    # Direct self-reference in equivalentClass
+    ?class owl:equivalentClass ?class .
+    BIND("direct equivalentClass self-reference" AS ?issue)
+    BIND(owl:equivalentClass AS ?property)
+  }
+  UNION
+  {
+    # Self-reference in restrictions
+    ?class rdfs:subClassOf|owl:equivalentClass ?restriction .
+    ?restriction a owl:Restriction ;
+                 owl:onProperty ?prop ;
+                 ?restrictionType ?class .
+    FILTER (?restrictionType IN (
+      owl:someValuesFrom,
+      owl:allValuesFrom,
+      owl:hasValue
+    ))
+    BIND("self-reference in restriction" AS ?issue)
+    BIND(?restrictionType AS ?property)
+  }
+}
+ORDER BY ?class ?issue
+
