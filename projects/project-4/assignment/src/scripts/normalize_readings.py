@@ -1,4 +1,5 @@
-import pandas as pd
+
+import pandas as pd # type: ignore
 import json
 from dateutil import parser as dateparser
 from pathlib import Path
