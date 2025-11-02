@@ -8,6 +8,7 @@ import datetime
 BASE_PATH = Path(r"C:\Users\crist\Documents\GitHub\Ontology-Tradecraft\Ontology-Tradecraft\projects\project-4\assignment")
 IN_A = BASE_PATH / "src" / "data" / "sensor_A.csv"
 IN_B = BASE_PATH / "src" / "data" / "sensor_B.json"
+IN_C = BASE_PATH / "src" / "data" / "sensor_C.csv"
 OUT  = BASE_PATH / "src" / "data" / "readings_normalized.csv"
 
 # Read CSV A
@@ -20,6 +21,17 @@ df_a = df_a.rename(columns={
     "Time (Local)": "timestamp",
 })
 df_a = df_a[[c for c in ["artifact_id","sdc_kind","unit_label","value","timestamp"] if c in df_a.columns]]
+
+# Read CSV C
+df_c = pd.read_csv(IN_C, dtype=str, keep_default_na=False, na_values=["", "NA", "NaN"])
+df_c = df_c.rename(columns={
+    "Device Name": "artifact_id",
+    "Reading Type": "sdc_kind",
+    "Units": "unit_label",
+    "Reading Value": "value",
+    "Time (Local)": "timestamp",
+})
+df_c = df_c[[c for c in ["artifact_id","sdc_kind","unit_label","value","timestamp"] if c in df_c.columns]]
 
 # Read JSON B
 raw_txt = Path(IN_B).read_text(encoding="utf-8").strip()
@@ -59,8 +71,13 @@ df_b = pd.DataFrame([{
     "timestamp":   r.get("ts") or r.get("time") or r.get("timestamp"),
 } for r in records])
 
+# PRINT STATEMENTS
+print(f"[normalize_readings] Input A rows: {len(df_a)}")
+print(f"[normalize_readings] Input B rows: {len(df_b)}")
+print(f"[normalize_readings] Input C rows: {len(df_c)}")
+
 # Combine
-df = pd.concat([df_a, df_b], ignore_index=True)
+df = pd.concat([df_a, df_b, df_c], ignore_index=True)
 
 # Clean strings
 for col in ["artifact_id","sdc_kind","unit_label"]:
@@ -103,6 +120,9 @@ UNIT_MAP = {
     "ohm": "Ω", "ohms": "Ω", "Ω": "Ω",
 }
 
+# FIXED: Apply unit normalization properly
+df["unit_label"] = df["unit_label"].str.lower().map(UNIT_MAP).fillna(df["unit_label"])
+
 # Normalize quantity kinds
 KIND_MAP = {
     "temp": "temperature",
@@ -126,5 +146,5 @@ df = df.sort_values(["artifact_id", "timestamp"]).reset_index(drop=True)
 # Save
 OUT.parent.mkdir(parents=True, exist_ok=True)
 df.to_csv(OUT, index=False)
-print(f"Wrote {OUT} with {len(df)} rows.")
+print(f"[normalize_readings] Wrote {OUT} with {len(df)} rows.")
 
