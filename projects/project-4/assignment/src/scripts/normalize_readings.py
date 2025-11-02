@@ -110,8 +110,8 @@ df["timestamp"] = df["timestamp"].apply(to_iso8601)
 # Normalize units
 UNIT_MAP = {
     # Temperature
-    "celsius": "C", "°c": "C", "c": "C", "degc": "C", "°C": "C",
-    "fahrenheit": "F", "f": "F", "degf": "F", "°f": "F", "°F": "F",
+    "celsius": "degC", "°c": "degC", "c": "degC", "degc": "degC", "°C": "degC",
+    "fahrenheit": "degF", "f": "degF", "degf": "degF", "°f": "degF", "°F": "degF",
     # Pressure
     "pounds per square inch": "psi", "psi": "psi", "PSI": "psi",
     "kilopascal": "kPa", "kpa": "kPa", "KPA": "kPa", "kPa": "kPa",
