@@ -160,7 +160,7 @@ jobs:
 
           # 3) Optional: verify every MICE uses the exact property IRIs (no alternative predicates)
           #    If you only need 'at least one' instance, comment this block out.
-          q_all_mice_ok = f"""
+          q1 = f"""
           SELECT (COUNT(*) AS ?n_bad)
           WHERE {{
               ?m a <{IRI_MICE}> .
@@ -169,7 +169,9 @@ jobs:
                   ?sdc a <{IRI_SDC}> .
               }}
           }}
-          UNION
+          """
+
+          q2 = f"""
           SELECT (COUNT(*) AS ?n_bad)
           WHERE {{
               ?m a <{IRI_MICE}> .
