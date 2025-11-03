@@ -160,7 +160,8 @@ jobs:
 
           # 3) Optional: verify every MICE uses the exact property IRIs (no alternative predicates)
           #    If you only need 'at least one' instance, comment this block out.
-          q1 = f"""
+          # Count MICE missing is_measure_of
+          q_missing_measure_of = f"""
           SELECT (COUNT(*) AS ?n_bad)
           WHERE {{
               ?m a <{IRI_MICE}> .
@@ -171,7 +172,8 @@ jobs:
           }}
           """
 
-          q2 = f"""
+          # Count MICE missing uses_mu
+          q_missing_uses_mu = f"""
           SELECT (COUNT(*) AS ?n_bad)
           WHERE {{
               ?m a <{IRI_MICE}> .
@@ -181,7 +183,8 @@ jobs:
               }}
           }}
           """
-          n_bad = int(list(g.query(q_all_mice_ok))[0][0])
+
+          n_bad = sum(int(row[0]) for q in [q_missing_measure_of, q_missing_uses_mu] for row in g.query(q))
           assert n_bad == 0, f"❌ Some MICE are missing required links with the exact IRIs (count={n_bad})."
           print("✅ All MICE use exact IRIs for 'is measure of' and 'uses measurement unit'.")
 
