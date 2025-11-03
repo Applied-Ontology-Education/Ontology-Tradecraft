@@ -1,9 +1,9 @@
 artifact_id,sdc_kind,unit_label,value,timestamp
 Boiler-07,temperature,degF,212.0,2024-03-17T19:03:00Z
-Boiler-07,pressure,psi,14.7,2024-03-17T19:04:00Z
+Boiler-07,pressure,PSI_gauge,14.7,2024-03-17T19:04:00Z
 Boiler-07,temperature,degC,100.0,2024-03-17T23:03:00Z
-Boiler-07,pressure,kPa,101.325,2024-03-17T23:04:00Z
-Boiler-09,pressure,psi,13.7,2024-03-18T19:06:00Z
+Boiler-07,pressure,kPa_gauge,101.325,2024-03-17T23:04:00Z
+Boiler-09,pressure,PSI_gauge,13.7,2024-03-18T19:06:00Z
 Chiller-3,temperature,degF,68.0,2024-03-18T08:01:00Z
 Chiller-3,temperature,degC,19.5,2024-03-18T12:01:00Z
 Chiller-3,temperature,degF,70.0,2024-03-19T09:01:00Z
@@ -12,5 +12,5 @@ Chiller-4,temperature,degF,19.5,2024-03-18T12:06:00Z
 Circuit-07,voltage,V,2.0,2024-03-18T19:05:00Z
 Circuit-12,voltage,V,2.0,2024-03-18T12:01:01Z
 Circuit-12,resistance,Ω,1.3,2024-03-18T12:06:00Z
-Pump-A1,pressure,kPa,101.325,2024-03-18T08:07:00Z
-Pump-A2,pressure,kPa,101.325,2024-03-19T09:07:00Z
+Pump-A1,pressure,kPa_gauge,101.325,2024-03-18T08:07:00Z
+Pump-A2,pressure,kPa_gauge,101.325,2024-03-19T09:07:00Z
