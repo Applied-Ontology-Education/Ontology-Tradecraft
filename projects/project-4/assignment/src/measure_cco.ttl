@@ -3,48 +3,48 @@
 @prefix ex: <http://example.org/measurement/> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 
-ex:length-measurement-001 a cco:ont00001163 ;
+ex:length-measurement-001 a cco:ont00001163, ex:MICE ;
     rdfs:label "Length Measurement: 1.5m" ;
     cco:ont00001863 ex:meter-unit ;
     cco:ont00001966 ex:length-sdc-001 .
 
-ex:mass-measurement-001 a cco:ont00001163 ;
+ex:mass-measurement-001 a cco:ont00001163, ex:MICE ;
     rdfs:label "Mass Measurement: 5.2kg" ;
     cco:ont00001863 ex:kilogram-unit ;
     cco:ont00001966 ex:mass-sdc-001 .
 
-ex:measuring-tape-001 a cco:ont00000995 ;
+ex:measuring-tape-001 a cco:ont00000995, ex:Artifact ;
     rdfs:label "Measuring Tape MT-5000" ;
     obo:obo_0000196 ex:length-sdc-001 .
 
-ex:scale-001 a cco:ont00000995 ;
+ex:scale-001 a cco:ont00000995, ex:Artifact ;
     rdfs:label "Digital Scale DS-100" ;
     obo:obo_0000196 ex:mass-sdc-001 .
 
-ex:temp-measurement-001 a cco:ont00001163 ;
+ex:temp-measurement-001 a cco:ont00001163, ex:MICE ;
     rdfs:label "Temperature Measurement: 22.5°C" ;
     cco:ont00001863 ex:celsius-unit ;
     cco:ont00001966 ex:temperature-sdc-001 .
 
-ex:thermometer-001 a cco:ont00000995 ;
+ex:thermometer-001 a cco:ont00000995, ex:Artifact ;
     rdfs:label "Digital Thermometer TH-200" ;
     obo:obo_0000196 ex:temperature-sdc-001 .
 
-ex:celsius-unit a cco:ont00000120 ;
+ex:celsius-unit a cco:ont00000120, ex:MU ;
     rdfs:label "Degree Celsius" .
 
-ex:kilogram-unit a cco:ont00000120 ;
+ex:kilogram-unit a cco:ont00000120, ex:MU ;
     rdfs:label "Kilogram" .
 
-ex:meter-unit a cco:ont00000120 ;
+ex:meter-unit a cco:ont00000120, ex:MU ;
     rdfs:label "Meter" .
 
-ex:length-sdc-001 a obo:obo_0000020 ;
+ex:length-sdc-001 a obo:obo_0000020, ex:SDC ;
     rdfs:label "Length of Table" .
 
-ex:mass-sdc-001 a obo:obo_0000020 ;
+ex:mass-sdc-001 a obo:obo_0000020, ex:SDC ;
     rdfs:label "Mass of Object" .
 
-ex:temperature-sdc-001 a obo:obo_0000020 ;
+ex:temperature-sdc-001 a obo:obo_0000020, ex:SDC ;
     rdfs:label "Temperature of Room A" .
 
