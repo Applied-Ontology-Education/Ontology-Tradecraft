@@ -221,7 +221,7 @@ jobs:
           from pathlib import Path
           from rdflib import Graph, Namespace, RDF
           SH = Namespace("http://www.w3.org/ns/shacl#")
-          shapes_file = Path("src/cco_shapes.ttl")
+          shapes_file = Path("src/shacl/cco_shapes.ttl")
           assert shapes_file.exists(), "❌ SHACL file missing: src/cco_shapes.ttl"
           g = Graph(); g.parse(shapes_file, format="turtle")
           nodes = set(g.subjects(RDF.type, SH.NodeShape))
