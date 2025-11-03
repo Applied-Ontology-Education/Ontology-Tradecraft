@@ -39,12 +39,12 @@ ex:kilogram-unit a cco:ont00000120, ex:MU ;
 ex:meter-unit a cco:ont00000120, ex:MU ;
     rdfs:label "Meter" .
 
-ex:length-sdc-001 a obo:obo_0000020, ex:SDC ;
+ex:length-sdc-001 a obo:BFO_0000020, ex:SDC ;
     rdfs:label "Length of Table" .
 
-ex:mass-sdc-001 a obo:obo_0000020, ex:SDC ;
+ex:mass-sdc-001 a obo:BFO_0000020, ex:SDC ;
     rdfs:label "Mass of Object" .
 
-ex:temperature-sdc-001 a obo:obo_0000020, ex:SDC ;
+ex:temperature-sdc-001 a obo:BFO_0000020, ex:SDC ;
     rdfs:label "Temperature of Room A" .
 
