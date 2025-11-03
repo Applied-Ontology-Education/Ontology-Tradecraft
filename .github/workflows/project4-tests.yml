@@ -162,14 +162,23 @@ jobs:
           #    If you only need 'at least one' instance, comment this block out.
           q_all_mice_ok = f"""
           SELECT (COUNT(*) AS ?n_bad)
-          WHERE {{
-            ?m a <{IRI_MICE}> .
-            # Missing required links with the exact IRIs?
-            FILTER NOT EXISTS {{ ?m <{IRI_IS_MEASURE_OF}> ?sdc . ?sdc a <{IRI_SDC}> . }}
+          WHERE {
+            {
+              ?m a <{IRI_MICE}> .
+              FILTER NOT EXISTS {
+                ?m <{IRI_IS_MEASURE_OF}> ?sdc .
+                ?sdc a <{IRI_SDC}> .
+              }
+            }
             UNION
-            {{ ?m a <{IRI_MICE}> .
-               FILTER NOT EXISTS {{ ?m <{IRI_USES_MU}> ?u . ?u a <{IRI_MU}> . }} }}
-          }}
+            {
+              ?m a <{IRI_MICE}> .
+              FILTER NOT EXISTS {
+                ?m <{IRI_USES_MU}> ?u .
+                ?u a <{IRI_MU}> .
+              }
+            }
+          }
           """
           n_bad = int(list(g.query(q_all_mice_ok))[0][0])
           assert n_bad == 0, f"❌ Some MICE are missing required links with the exact IRIs (count={n_bad})."
