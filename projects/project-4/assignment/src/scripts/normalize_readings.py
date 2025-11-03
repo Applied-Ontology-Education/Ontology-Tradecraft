@@ -1,15 +1,15 @@
-
-import pandas as pd # type: ignore
+import pandas as pd
 import json
 from dateutil import parser as dateparser
 from pathlib import Path
 import datetime
 
 # Paths
-IN_A = Path("src/data/sensor_A.csv")
-IN_B = Path("src/data/sensor_B.json")
-IN_C = Path("src/data/sensor_C.csv")
-OUT = Path("src/data/readings_normalized.csv")
+BASE_PATH = Path(r"C:\Users\crist\Documents\GitHub\Ontology-Tradecraft\Ontology-Tradecraft\projects\project-4\assignment")
+IN_A = BASE_PATH / "src" / "data" / "sensor_A.csv"
+IN_B = BASE_PATH / "src" / "data" / "sensor_B.json"
+IN_C = BASE_PATH / "src" / "data" / "sensor_C.csv"
+OUT  = BASE_PATH / "src" / "data" / "readings_normalized.csv"
 
 # Read CSV A
 df_a = pd.read_csv(IN_A, dtype=str, keep_default_na=False, na_values=["", "NA", "NaN"])
