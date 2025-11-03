@@ -13,7 +13,7 @@ SELECT ?class ?property ?issue
 WHERE {
   ?class a ?classType .
   FILTER (?classType IN (owl:Class, rdfs:Class))
-  
+ {
   {
     # Direct self-reference in subClassOf
     ?class rdfs:subClassOf ?class .
@@ -42,6 +42,7 @@ WHERE {
     BIND("self-reference in restriction" AS ?issue)
     BIND(?restrictionType AS ?property)
   }
+ }
 }
 ORDER BY ?class ?issue
 

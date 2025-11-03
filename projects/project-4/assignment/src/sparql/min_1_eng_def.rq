@@ -14,17 +14,14 @@ PREFIX obo: <http://purl.obolibrary.org/obo/>
 # Find all classes/entities that lack definitions
 SELECT DISTINCT ?entity ?type ?label
 WHERE {
+ {
   # Get all classes and object properties
-  {
-    ?entity rdf:type owl:Class .
-    BIND("Class" AS ?type)
-  }
+  { ?entity rdf:type owl:Class .
+    BIND("Class" AS ?type) }
   UNION
-  {
-    ?entity rdf:type owl:ObjectProperty .
-    BIND("ObjectProperty" AS ?type)
-  }
-  
+  { ?entity rdf:type owl:ObjectProperty .
+    BIND("ObjectProperty" AS ?type) }
+ }
   # Filter out anonymous classes (blank nodes)
   FILTER (!isBlank(?entity))
   
