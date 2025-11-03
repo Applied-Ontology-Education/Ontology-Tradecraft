@@ -15,11 +15,11 @@ ex:mass-measurement-001 a cco:ont00001163, ex:MICE ;
 
 ex:measuring-tape-001 a cco:ont00000995, ex:Artifact ;
     rdfs:label "Measuring Tape MT-5000" ;
-    obo:obo_0000196 ex:length-sdc-001 .
+    obo:BFO_0000196 ex:length-sdc-001 .
 
 ex:scale-001 a cco:ont00000995, ex:Artifact ;
     rdfs:label "Digital Scale DS-100" ;
-    obo:obo_0000196 ex:mass-sdc-001 .
+    obo:BFO_0000196 ex:mass-sdc-001 .
 
 ex:temp-measurement-001 a cco:ont00001163, ex:MICE ;
     rdfs:label "Temperature Measurement: 22.5°C" ;
@@ -28,7 +28,7 @@ ex:temp-measurement-001 a cco:ont00001163, ex:MICE ;
 
 ex:thermometer-001 a cco:ont00000995, ex:Artifact ;
     rdfs:label "Digital Thermometer TH-200" ;
-    obo:obo_0000196 ex:temperature-sdc-001 .
+    obo:BFO_0000196 ex:temperature-sdc-001 .
 
 ex:celsius-unit a cco:ont00000120, ex:MU ;
     rdfs:label "Degree Celsius" .
