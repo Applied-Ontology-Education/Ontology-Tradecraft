@@ -1,0 +1,6 @@
+@prefix ex: <http://example.org#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+
+# This should be *inferable* from the train axioms, but is NOT shown during training:
+ex:Dog a owl:Class ; rdfs:subClassOf ex:Animal .
