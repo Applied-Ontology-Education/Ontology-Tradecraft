@@ -47,10 +47,10 @@
 
 * **Week 13** Prompting for ontology building, SPARQL generation
   - [Lecture on LLMs in Ontology Engineering 1]() 
-  - [Due: Project 5 - ML + LLM Pipelines](projects/project-5/README.md)
-
+  
 * **Week 14** LLM risk analysis, evaluating logic and the boundaries of use
   - [Lecture on LLMs in Ontology Engineering 2]() 
+  - [Due: Project 5 - ML + LLM Pipelines](projects/project-5/README.md)
 
 * **Week 15** Student Presentations
   - [Student Presentation 1]()
