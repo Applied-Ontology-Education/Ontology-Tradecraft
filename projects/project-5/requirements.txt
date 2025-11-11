@@ -1,0 +1,6 @@
+# Core
+mowl==1.0.2
+JPype1==1.6.0
+torch>=2.2,<3
+rdflib==7.0.0
+pandas==2.2.2
