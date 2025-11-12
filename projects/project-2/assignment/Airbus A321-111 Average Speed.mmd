@@ -1,0 +1,19 @@
+flowchart LR
+    A{Airbus A321-111} -->|RDF type| B([Jet])
+    A --> |Has maximum approach speed|C{142 Knots}
+    A -->|Has Test Process| D[Test speed 1]
+    D-->|Temporal region|K([Test speed 1])
+    A -->|Has Test Process| E[Test speed 2]
+    E-->|Temporal region|L([Test speed 2])
+    A -->|Has Test Process| F[Test speed 3]
+    F-->|Temporal region|M([Test speed 3])
+    A -->|Has Test Process| G[Test speed 4]
+    G-->|Temporal region|N([Test speed 4])
+    A -->|Has Test Process| H[Test speed 5]
+    H-->|Temporal region|O([Test speed 5])
+    D--->|prescribes new average|I[139 Knots]
+    E--->|prescribes new average|I[139 Knots]
+    F--->|prescribes new average|I[139 Knots]
+    G--->|prescribes new average|I[139 Knots]
+    H--->|prescribes new average|I[139 Knots]
+    I--->|Is a measurement of|J[/speed/]
