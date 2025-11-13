@@ -7,7 +7,7 @@
 @prefix ex:   <http://example.org/shapes/> .
 
 #################################################################
-# 1) Artifact bears at least one SDC (cardinality); 
+# 1) Artifact bears at least one SDC (cardinality)
 #################################################################
 ex:ArtifactHasSDCShape
   a sh:NodeShape ;
@@ -21,30 +21,229 @@ ex:ArtifactHasSDCShape
   ] .
 
 #################################################################
-# 2) SDC is measured by at least one MICE (coverage via inverse) 
+# 2) SDC is measured by at least one MICE (coverage via inverse)
 #################################################################
+ex:SDCMeasuredByMICEShape
+  a sh:NodeShape ;
+  sh:targetClass bfo:SpecificallyDependentContinuant ;
+  sh:property [
+    sh:path [ sh:inversePath cco:measures ] ;
+    sh:minCount 1 ;
+    sh:class cco:MeasurementInformationContentEntity ;
+    sh:message "Every SDC must be measured by at least one MICE." ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 3) MICE measures exactly one SDC (functional)
 #################################################################
+ex:MICEMeasuresExactlyOneSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  sh:property [
+    sh:path cco:measures ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class bfo:SpecificallyDependentContinuant ;
+    sh:message "Every MICE must measure exactly one SDC." ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 4) MICE must have one unit and one numeric value (completeness)
 #################################################################
+ex:MICECompletenessShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  sh:property [
+    sh:path cco:has_measurement_unit ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:message "Every MICE must have exactly one measurement unit." ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path cco:has_numeric_value ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:decimal ;
+    sh:message "Every MICE must have exactly one numeric value." ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 5) No empty values in literals
 #################################################################
+ex:NoEmptyLiteralsShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  sh:property [
+    sh:path cco:has_numeric_value ;
+    sh:minLength 1 ;
+    sh:pattern "^\\S.*$" ;
+    sh:message "Numeric values cannot be empty or contain only whitespace." ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:minLength 1 ;
+    sh:pattern "^\\S.*$" ;
+    sh:message "Labels cannot be empty or contain only whitespace." ;
+    sh:severity sh:Warning
+  ] .
+
+# Additional shape for any literal properties
+ex:NoEmptyStringsGeneralShape
+  a sh:NodeShape ;
+  sh:targetNode sh:this ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Literal values must not be empty strings." ;
+    sh:select """
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      SELECT $this ?property ?value
+      WHERE {
+        $this ?property ?value .
+        FILTER (isLiteral(?value) && strlen(str(?value)) = 0)
+      }
+    """ ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 6) Unit must match SDC being measured
 #################################################################
+ex:UnitMatchesSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Measurement unit must be appropriate for the type of SDC being measured." ;
+    sh:select """
+      PREFIX cco: <http://www.ontologyrepository.com/CommonCoreOntologies/>
+      PREFIX bfo: <http://purl.obolibrary.org/obo/bfo.owl#>
+      SELECT $this ?sdc ?unit
+      WHERE {
+        $this cco:measures ?sdc ;
+              cco:has_measurement_unit ?unit .
+        
+        # Check for mismatched units (examples - extend as needed)
+        {
+          # Mass SDC should have mass units
+          ?sdc a cco:Mass .
+          FILTER (?unit NOT IN (cco:Kilogram, cco:Gram, cco:Pound))
+        }
+        UNION
+        {
+          # Length SDC should have length units  
+          ?sdc a cco:Length .
+          FILTER (?unit NOT IN (cco:Meter, cco:Centimeter, cco:Inch, cco:Foot))
+        }
+        UNION
+        {
+          # Temperature SDC should have temperature units
+          ?sdc a cco:Temperature .
+          FILTER (?unit NOT IN (cco:Celsius, cco:Fahrenheit, cco:Kelvin))
+        }
+      }
+    """ ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 7) No duplicate MICE
 #################################################################
+ex:NoDuplicateMICEShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "No duplicate MICE instances (same SDC, unit, and value)." ;
+    sh:select """
+      PREFIX cco: <http://www.ontologyrepository.com/CommonCoreOntologies/>
+      SELECT $this ?other ?sdc ?unit ?value
+      WHERE {
+        $this cco:measures ?sdc ;
+              cco:has_measurement_unit ?unit ;
+              cco:has_numeric_value ?value .
+        
+        ?other cco:measures ?sdc ;
+               cco:has_measurement_unit ?unit ;
+               cco:has_numeric_value ?value .
+        
+        FILTER (?other != $this)
+        FILTER (str($this) < str(?other))
+      }
+    """ ;
+    sh:severity sh:Warning
+  ] .
 
 #################################################################
-# 8) No dangling/mistyped nodes 
+# 8) No dangling/mistyped nodes
 #################################################################
+ex:NoDanglingNodesShape
+  a sh:NodeShape ;
+  sh:targetNode sh:this ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Node must have at least one rdf:type declaration." ;
+    sh:select """
+      PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX owl: <http://www.w3.org/2002/07/owl#>
+      SELECT $this
+      WHERE {
+        $this ?p ?o .
+        FILTER NOT EXISTS { 
+          $this rdf:type ?type .
+          FILTER (?type != owl:NamedIndividual)
+        }
+        FILTER (isIRI($this))
+        FILTER (!strstarts(str($this), str(rdf:)))
+        FILTER (!strstarts(str($this), str(owl:)))
+      }
+    """ ;
+    sh:severity sh:Warning
+  ] .
+
+# Check for mistyped properties
+ex:ValidPropertiesShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  sh:closed true ;
+  sh:ignoredProperties ( rdf:type ) ;
+  sh:property [
+    sh:path cco:measures ;
+    sh:class bfo:SpecificallyDependentContinuant
+  ] ;
+  sh:property [
+    sh:path cco:has_measurement_unit ;
+    sh:nodeKind sh:IRI
+  ] ;
+  sh:property [
+    sh:path cco:has_numeric_value ;
+    sh:datatype xsd:decimal
+  ] ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string
+  ] ;
+  sh:property [
+    sh:path rdfs:comment ;
+    sh:datatype xsd:string
+  ] ;
+  sh:message "MICE can only have recognized properties (no typos in property names)." ;
+  sh:severity sh:Violation .
+
+# Check for orphaned SDCs (not borne by any artifact)
+ex:SDCMustBeBorneShape
+  a sh:NodeShape ;
+  sh:targetClass bfo:SpecificallyDependentContinuant ;
+  sh:property [
+    sh:path [ sh:inversePath bfo:bearer_of ] ;
+    sh:minCount 1 ;
+    sh:class cco:Artifact ;
+    sh:message "Every SDC must be borne by at least one Artifact." ;
+    sh:severity sh:Warning
+  ] .
 

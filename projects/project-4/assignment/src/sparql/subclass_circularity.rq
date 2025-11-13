@@ -4,3 +4,18 @@
 #    No class should appear in a circular `subClassOf` hierarchy.
 # Severity:  
 #    Error
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?class ?circularWith
+WHERE {
+  ?class a ?classType .
+  FILTER (?classType IN (owl:Class, rdfs:Class))
+  
+  # Check if class has a path back to itself through subClassOf
+  ?class rdfs:subClassOf+ ?circularWith .
+  ?circularWith rdfs:subClassOf+ ?class .
+}
+ORDER BY ?class
+

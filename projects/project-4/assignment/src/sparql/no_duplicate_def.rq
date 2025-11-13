@@ -4,3 +4,48 @@
 #    No two ontology elements may have the exact same definition.    
 # Severity:
 #     Error 
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?element1 ?element2 ?definition
+WHERE {
+  # First element with a definition
+  ?element1 ?defProperty ?definition .
+  
+  # Second element with the same definition
+  ?element2 ?defProperty ?definition .
+  
+  # Definition property could be one of several common ones
+  FILTER (?defProperty IN (
+    rdfs:comment,
+    skos:definition,
+    <http://purl.org/dc/terms/description>
+  ))
+  
+  # Ensure we're comparing different elements
+  FILTER (?element1 != ?element2)
+  
+  # Order them to avoid duplicate pairs (a,b) and (b,a)
+  FILTER (STR(?element1) < STR(?element2))
+  
+  # Optional: ensure both are actual ontology elements (classes or properties)
+  FILTER (
+    EXISTS { ?element1 a owl:Class } ||
+    EXISTS { ?element1 a rdfs:Class } ||
+    EXISTS { ?element1 a owl:ObjectProperty } ||
+    EXISTS { ?element1 a owl:DatatypeProperty } ||
+    EXISTS { ?element1 a rdf:Property }
+  )
+  
+  FILTER (
+    EXISTS { ?element2 a owl:Class } ||
+    EXISTS { ?element2 a rdfs:Class } ||
+    EXISTS { ?element2 a owl:ObjectProperty } ||
+    EXISTS { ?element2 a owl:DatatypeProperty } ||
+    EXISTS { ?element2 a rdf:Property }
+  )
+}
+ORDER BY ?definition ?element1 ?element2
+

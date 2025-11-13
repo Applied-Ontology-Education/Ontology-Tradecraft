@@ -1,0 +1,12 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<https://www.commoncoreontologies.org/cco-to-time-mappings>
+    a owl:Ontology ;
+    rdfs:label "CCO to TIME Ontology Mappings"@en ;
+    rdfs:comment "Semantic alignments between Common Core Ontologies and W3C TIME ontology based on structural analysis"@en .
+
+# Single valid mapping: CCO Year is a subclass of TIME Year duration
+cco:ont00000832 rdfs:subClassOf time:Year .

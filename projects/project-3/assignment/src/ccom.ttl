@@ -9,6 +9,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @base <https://www.commoncoreontologies.org/UnitsOfMeasureOntology> .
 
 <https://www.commoncoreontologies.org/UnitsOfMeasureOntology> rdf:type owl:Ontology ;
@@ -64,6 +65,22 @@ cco:ont00001760 rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
+###  https://www.commoncoreontologies.org/ont00000827
+<https://www.commoncoreontologies.org/ont00000827> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000540>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+                                                                                                owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000223>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000540> ;
+                                                   rdfs:label "Time of Day Identifier"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Temporal Instant Identifier that designates some Time of Day."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+                                                
 ###  https://www.commoncoreontologies.org/ont00000061
 cco:ont00000061 rdf:type owl:Class ;
                  rdfs:subClassOf cco:ont00000120 ;
@@ -505,6 +522,9 @@ cco:ont00001444 rdf:type owl:NamedIndividual ,
                           cco:ont00001357 ;
                  rdfs:label "Year Measurement Unit"@en ;
                  skos:altLabel "yr"@en ;
+                 skos:closeMatch time:Year ;
+                 rdfs:seeAlso time:Year ;
+                 rdfs:comment "Related to W3C Time Ontology Year. Both represent year durations though with different measurement frameworks."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/UnitsOfMeasureOntology"^^xsd:anyURI .
 
 
@@ -1442,6 +1462,9 @@ cco:ont00001706 rdf:type owl:NamedIndividual ,
 cco:ont00001707 rdf:type owl:NamedIndividual ,
                           cco:ont00001357 ;
                  rdfs:label "Month Measurement Unit"@en ;
+                 skos:closeMatch time:MonthOfYear ;
+                 rdfs:seeAlso time:MonthOfYear ;
+                 rdfs:comment "Related to W3C Time Ontology MonthOfYear. Both represent calendar months though with different definitional approaches."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/UnitsOfMeasureOntology"^^xsd:anyURI .
 
 

@@ -1,0 +1,11 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<http://www.w3.org/2006/time/time-to-cco-mappings>
+    a owl:Ontology ;
+    rdfs:label "TIME to CCO Mappings"@en ;
+    rdfs:comment "Semantic alignments between W3C TIME ontology and Common Core Ontologies based on structural analysis"@en .
+
+

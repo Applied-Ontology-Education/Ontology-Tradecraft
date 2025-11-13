@@ -31,6 +31,8 @@
 @prefix sh:      <http://www.w3.org/ns/shacl#> .
 @prefix vann:    <http://purl.org/vocab/vann/> .
 @prefix ies:     <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 # Ontology Definition & Metadata
 ies: a owl:Ontology ;
@@ -1231,7 +1233,12 @@ ies:Entity a rdfs:Class ;
     dcterms:identifier "{F4EDE167-6F5A-417d-9984-0221CCDF752C}" ;
     rdfs:comment "An Entity typically represents a tangible thing like a Person, a Communications Device, or a Location." ;
     ies:powertype ies:ClassOfEntity ;
-    rdfs:subClassOf ies:Element .
+    rdfs:subClassOf ies:Element ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty ies:isPartOf ;
+        owl:minCardinality "0"^^xsd:nonNegativeInteger
+    ] .
 
 ies:EntityInTransit a rdfs:Class ;
     rdfs:label "Entity In Transit"^^xsd:string ;
@@ -1250,7 +1257,14 @@ ies:Event a rdfs:Class ;
     dcterms:identifier "{B376370E-F5E8-4287-A3EC-AC35532919B1}" ;
     rdfs:comment "An Event represents an activity or incident, involving one or more participating entities, that occurred/started at a specific point in time – e.g. a meeting, or a telephone call." ;
     ies:powertype ies:ClassOfEvent ;
-    rdfs:subClassOf ies:Element .
+    rdfs:subClassOf ies:Element ;
+    rdfs:seeAlso obo:BFO_0000003 ;
+    skos:relatedMatch obo:BFO_0000003 ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty ies:isPartOf ;
+        owl:minCardinality "0"^^xsd:nonNegativeInteger
+    ] .
 
 ies:EventParticipant a rdfs:Class ;
     rdfs:label "Event Participant"^^xsd:string ;
@@ -3031,13 +3045,18 @@ ies:StandardMeasureValue a rdfs:Class ;
 ies:State a rdfs:Class ;
     rdfs:label "State"^^xsd:string ;
     dcterms:identifier "{47301D66-CBD5-4d10-9481-B66966A3F3A2}" ;
-    rdfs:comment """A temporal state of an Element
+    rdfs:comment "A temporal state of an Element" ;
+    rdfs:subClassOf [
+        a owl:Restriction ;
+        owl:onProperty ies:isStateOf ;
+        owl:minCardinality "1"^^xsd:nonNegativeInteger
+    ] .
 
-Note: IES requires that any State must be related to its whole-life Element. In some cases, the identity of the whole-life element may be unknown (or of unknown type) but a whole-life element must still be created and related to the State.
+#Note: IES requires that any State must be related to its whole-life Element. In some cases, the identity of the whole-life element may be unknown (or of unknown type) but a whole-life element must still be created and related to the State.
 
-Note: When Events are decomposed into temporal parts, those parts are often Events themselves. The exception is when the temporal part is arbitrary (e.g. the 11th second of a meeting) when a State should be used. These are rare though.""" ;
-    ies:powertype ies:ClassOfState ;
-    rdfs:subClassOf ies:Element .
+#Note: When Events are decomposed into temporal parts, those parts are often Events themselves. The exception is when the temporal part is arbitrary (e.g. the 11th second of a meeting) when a State should be used. These are rare though.""" ;
+    #ies:powertype ies:ClassOfState ;
+   # rdfs:subClassOf ies:Element .
 
 ies:StoreCard a rdfs:Class ;
     rdfs:label "Store Card"^^xsd:string ;
