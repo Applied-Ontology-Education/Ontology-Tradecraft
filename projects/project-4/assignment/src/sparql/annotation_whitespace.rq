@@ -4,3 +4,12 @@
 #    No annotation value may have leading or trailing whitespace.    
 # Severity:
 #    Error 
+
+SELECT ?subject ?predicate ?value
+WHERE {
+  ?subject ?predicate ?value .
+  FILTER (isLiteral(?value))
+  FILTER (
+    REGEX(STR(?value), "^(\\s+|.*\\s+)$")
+  )
+}

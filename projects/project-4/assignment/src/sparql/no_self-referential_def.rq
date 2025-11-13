@@ -4,3 +4,77 @@
 #    No class definition should be self-referential. 
 # Severity:  
 #    Error
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX xsd:  <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?class ?label ?localName ?definition ?violationType
+WHERE {
+  # Consider classes; adjust if you only use owl:Class or rdfs:Class
+  ?class a ?t .
+  VALUES ?t { owl:Class rdfs:Class }
+
+  # The definition text to validate
+  ?class rdfs:comment ?definition .
+  # Uncomment if you only want English
+  # FILTER (lang(?definition) = "" || langMatches(lang(?definition), "en"))
+
+  # Optional label
+  OPTIONAL {
+    ?class rdfs:label ?label .
+    # FILTER (lang(?label) = "" || langMatches(lang(?label), "en"))
+  }
+
+  # Lowercased definition and a normalized copy (collapse whitespace)
+  BIND(LCASE(STR(?definition)) AS ?defLower)
+  BIND(REPLACE(?defLower, "\\s+", " ") AS ?defNorm)
+
+  # Extract IRI local name (e.g., ont00000120)
+  BIND(REPLACE(STR(?class), ".+[/#]", "") AS ?localNameRaw)
+  BIND(LCASE(?localNameRaw) AS ?localName)
+
+  # Ignore the head "A/An ...", keep the body after the first " is a " or " is an "
+  BIND(
+    IF(CONTAINS(?defNorm, " is a "),
+      STRAFTER(?defNorm, " is a "),
+      IF(CONTAINS(?defNorm, " is an "),
+        STRAFTER(?defNorm, " is an "),
+        ?defNorm
+      )
+    ) AS ?body
+  )
+
+  # Prepare escaped tokens for regex boundaries
+  BIND(REPLACE(?localName, "([\\\\.\\[\\]\\(\\)\\{\\}\\^\\$\\*\\+\\?\\|])", "\\\\$1") AS ?localEsc)
+
+  # Compute label-lower safely (only if a label exists)
+  BIND(LCASE(STR(?label)) AS ?labelLower)
+  BIND(REPLACE(?labelLower, "([\\\\.\\[\\]\\(\\)\\{\\}\\^\\$\\*\\+\\?\\|])", "\\\\$1") AS ?labelEsc)
+
+  # Word-like boundary patterns (avoid substrings like 'rat' in 'separate')
+  BIND(CONCAT("(^|[^A-Za-z0-9_])", ?localEsc, "([^A-Za-z0-9_]|$)") AS ?localPattern)
+
+  # Evaluate matches:
+  #   - hitsLocal: always checked
+  #   - hitsLabel: only if a non-empty label is actually bound
+  BIND(REGEX(?body, ?localPattern, "i") AS ?hitsLocal)
+
+  BIND(
+    IF(BOUND(?label) && STRLEN(STR(?label)) > 0,
+       REGEX(?body, CONCAT("(^|[^A-Za-z0-9_])", ?labelEsc, "([^A-Za-z0-9_]|$)"), "i"),
+       false
+    ) AS ?hitsLabel
+  )
+
+  # Only return violations if label or local name reappears in the body
+  FILTER (?hitsLocal || ?hitsLabel)
+
+  BIND(
+    IF(?hitsLabel && ?hitsLocal, "label+local",
+      IF(?hitsLabel, "label", "local")
+    ) AS ?violationType
+  )
+}
+ORDER BY ?class

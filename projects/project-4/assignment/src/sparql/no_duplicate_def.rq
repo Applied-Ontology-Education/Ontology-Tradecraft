@@ -4,3 +4,10 @@
 #    No two ontology elements may have the exact same definition.    
 # Severity:
 #     Error 
+
+SELECT ?definition (COUNT(?entity) AS ?count)
+WHERE {
+  ?entity rdfs:comment ?definition .
+}
+GROUP BY ?definition
+HAVING (COUNT(?entity) > 1)

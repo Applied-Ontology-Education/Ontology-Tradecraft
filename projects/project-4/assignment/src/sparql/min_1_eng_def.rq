@@ -5,3 +5,20 @@
 # Severity:
 #     Warning
 
+SELECT ?entity ?definition
+WHERE {
+  {
+    ?entity a owl:Class .
+  }
+  UNION
+  {
+    ?entity a owl:ObjectProperty .
+  }
+  OPTIONAL {
+    ?entity rdfs:comment ?definition .
+    FILTER (lang(?definition) = "en")
+  }
+  FILTER (
+    !BOUND(?definition) || STRLEN(STR(?definition)) = 0
+  )
+}

@@ -1,0 +1,360 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix ex: <http://example.org/instances#> .
+@prefix exc: <http://example.org/classes#> .
+@prefix exprop: <http://example.org/props#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/ontology> a owl:Ontology ;
+    rdfs:label "cco conformant measurements"@en .
+
+exprop:hasTimestamp a owl:DatatypeProperty ;
+    rdfs:label "has timestamp"@en ;
+    rdfs:comment "A has timestamp is a datatype property that has not yet had its differentiating factor specified ."@en .
+
+cco:ont00001769 a owl:DatatypeProperty ;
+    rdfs:label "has decimal value"@en ;
+    rdfs:comment "A has decimal value is a datatype property that associates a measurement information content entity with a numeric value literal ."@en .
+
+exc:resistance a owl:Class ;
+    rdfs:label "Resistance"@en ;
+    rdfs:comment "A Resistance is a Specifically Dependent Continuant quality that can inhere in a material entity and is typically subject to measurement."@en ;
+    rdfs:subClassOf obo:BFO_0000020 .
+
+ex:Boiler-07_pressure_2024-03-17T19-04-00-000000Z a exc:pressure,
+        obo:BFO_0000020 ;
+    rdfs:label "Boiler-07_Pressure @ 2024-03-17T19:04:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Boiler-07 ;
+    cco:ont00001863 cco:ont00001694 ;
+    cco:ont00001904 ex:MICE_Boiler-07_pressure_2024-03-17T19-04-00-000000Z .
+
+ex:Boiler-07_pressure_2024-03-17T23-04-00-000000Z a exc:pressure,
+        obo:BFO_0000020 ;
+    rdfs:label "Boiler-07_Pressure @ 2024-03-17T23:04:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Boiler-07 ;
+    cco:ont00001863 cco:ont00001559 ;
+    cco:ont00001904 ex:MICE_Boiler-07_pressure_2024-03-17T23-04-00-000000Z .
+
+ex:Boiler-07_temperature_2024-03-17T19-03-00-000000Z a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "Boiler-07_Temperature @ 2024-03-17T19:03:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Boiler-07 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001904 ex:MICE_Boiler-07_temperature_2024-03-17T19-03-00-000000Z .
+
+ex:Boiler-07_temperature_2024-03-17T23-03-00-000000Z a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "Boiler-07_Temperature @ 2024-03-17T23:03:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Boiler-07 ;
+    cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001904 ex:MICE_Boiler-07_temperature_2024-03-17T23-03-00-000000Z .
+
+ex:Boiler-09 a cco:ont00000995 ;
+    rdfs:label "Boiler-09"@en .
+
+ex:Boiler-09_pressure_2024-03-18T19-06-00-000000Z a exc:pressure,
+        obo:BFO_0000020 ;
+    rdfs:label "Boiler-09_Pressure @ 2024-03-18T19:06:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Boiler-09 ;
+    cco:ont00001863 cco:ont00001694 ;
+    cco:ont00001904 ex:MICE_Boiler-09_pressure_2024-03-18T19-06-00-000000Z .
+
+ex:Chiller-3_temperature_2024-03-18T08-01-00-000000Z a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "Chiller-3_Temperature @ 2024-03-18T08:01:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Chiller-3 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001904 ex:MICE_Chiller-3_temperature_2024-03-18T08-01-00-000000Z .
+
+ex:Chiller-3_temperature_2024-03-18T12-01-00-000000Z a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "Chiller-3_Temperature @ 2024-03-18T12:01:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Chiller-3 ;
+    cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001904 ex:MICE_Chiller-3_temperature_2024-03-18T12-01-00-000000Z .
+
+ex:Chiller-3_temperature_2024-03-19T09-01-00-000000Z a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "Chiller-3_Temperature @ 2024-03-19T09:01:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Chiller-3 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001904 ex:MICE_Chiller-3_temperature_2024-03-19T09-01-00-000000Z .
+
+ex:Chiller-4_temperature_2024-03-18T12-01-00-000000Z a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "Chiller-4_Temperature @ 2024-03-18T12:01:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Chiller-4 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001904 ex:MICE_Chiller-4_temperature_2024-03-18T12-01-00-000000Z .
+
+ex:Chiller-4_temperature_2024-03-18T12-06-00-000000Z a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "Chiller-4_Temperature @ 2024-03-18T12:06:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Chiller-4 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001904 ex:MICE_Chiller-4_temperature_2024-03-18T12-06-00-000000Z .
+
+ex:Circuit-07 a cco:ont00000995 ;
+    rdfs:label "Circuit-07"@en .
+
+ex:Circuit-07_voltage_2024-03-18T19-05-00-000000Z a exc:voltage,
+        obo:BFO_0000020 ;
+    rdfs:label "Circuit-07_Voltage @ 2024-03-18T19:05:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Circuit-07 ;
+    cco:ont00001863 cco:ont00001450 ;
+    cco:ont00001904 ex:MICE_Circuit-07_voltage_2024-03-18T19-05-00-000000Z .
+
+ex:Circuit-12_resistance_2024-03-18T12-06-00-000000Z a exc:resistance,
+        obo:BFO_0000020 ;
+    rdfs:label "Circuit-12_Resistance @ 2024-03-18T12:06:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Circuit-12 ;
+    cco:ont00001863 ex:ohm ;
+    cco:ont00001904 ex:MICE_Circuit-12_resistance_2024-03-18T12-06-00-000000Z .
+
+ex:Circuit-12_voltage_2024-03-18T12-01-01-000000Z a exc:voltage,
+        obo:BFO_0000020 ;
+    rdfs:label "Circuit-12_Voltage @ 2024-03-18T12:01:01.000000Z"@en ;
+    obo:BFO_0000197 ex:Circuit-12 ;
+    cco:ont00001863 cco:ont00001450 ;
+    cco:ont00001904 ex:MICE_Circuit-12_voltage_2024-03-18T12-01-01-000000Z .
+
+ex:MICE_Boiler-07_pressure_2024-03-17T19-04-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Boiler-07_Pressure @ 2024-03-17T19:04:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-17T19:04:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 14.7 ;
+    cco:ont00001863 cco:ont00001694 ;
+    cco:ont00001966 ex:Boiler-07_pressure_2024-03-17T19-04-00-000000Z .
+
+ex:MICE_Boiler-07_pressure_2024-03-17T23-04-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Boiler-07_Pressure @ 2024-03-17T23:04:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-17T23:04:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 101325.0 ;
+    cco:ont00001863 cco:ont00001559 ;
+    cco:ont00001966 ex:Boiler-07_pressure_2024-03-17T23-04-00-000000Z .
+
+ex:MICE_Boiler-07_temperature_2024-03-17T19-03-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Boiler-07_Temperature @ 2024-03-17T19:03:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-17T19:03:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 ex:Boiler-07_temperature_2024-03-17T19-03-00-000000Z .
+
+ex:MICE_Boiler-07_temperature_2024-03-17T23-03-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Boiler-07_Temperature @ 2024-03-17T23:03:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-17T23:03:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 100.0 ;
+    cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001966 ex:Boiler-07_temperature_2024-03-17T23-03-00-000000Z .
+
+ex:MICE_Boiler-09_pressure_2024-03-18T19-06-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Boiler-09_Pressure @ 2024-03-18T19:06:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-18T19:06:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 13.7 ;
+    cco:ont00001863 cco:ont00001694 ;
+    cco:ont00001966 ex:Boiler-09_pressure_2024-03-18T19-06-00-000000Z .
+
+ex:MICE_Chiller-3_temperature_2024-03-18T08-01-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Chiller-3_Temperature @ 2024-03-18T08:01:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-18T08:01:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 68.0 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 ex:Chiller-3_temperature_2024-03-18T08-01-00-000000Z .
+
+ex:MICE_Chiller-3_temperature_2024-03-18T12-01-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Chiller-3_Temperature @ 2024-03-18T12:01:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-18T12:01:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001966 ex:Chiller-3_temperature_2024-03-18T12-01-00-000000Z .
+
+ex:MICE_Chiller-3_temperature_2024-03-19T09-01-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Chiller-3_Temperature @ 2024-03-19T09:01:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-19T09:01:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 70.0 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 ex:Chiller-3_temperature_2024-03-19T09-01-00-000000Z .
+
+ex:MICE_Chiller-4_temperature_2024-03-18T12-01-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Chiller-4_Temperature @ 2024-03-18T12:01:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-18T12:01:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 6.5 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 ex:Chiller-4_temperature_2024-03-18T12-01-00-000000Z .
+
+ex:MICE_Chiller-4_temperature_2024-03-18T12-06-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Chiller-4_Temperature @ 2024-03-18T12:06:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-18T12:06:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 ex:Chiller-4_temperature_2024-03-18T12-06-00-000000Z .
+
+ex:MICE_Circuit-07_voltage_2024-03-18T19-05-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Circuit-07_Voltage @ 2024-03-18T19:05:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-18T19:05:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 cco:ont00001450 ;
+    cco:ont00001966 ex:Circuit-07_voltage_2024-03-18T19-05-00-000000Z .
+
+ex:MICE_Circuit-12_resistance_2024-03-18T12-06-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Circuit-12_Resistance @ 2024-03-18T12:06:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-18T12:06:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 1.3 ;
+    cco:ont00001863 ex:ohm ;
+    cco:ont00001966 ex:Circuit-12_resistance_2024-03-18T12-06-00-000000Z .
+
+ex:MICE_Circuit-12_voltage_2024-03-18T12-01-01-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Circuit-12_Voltage @ 2024-03-18T12:01:01.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-18T12:01:01+00:00"^^xsd:dateTime ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 cco:ont00001450 ;
+    cco:ont00001966 ex:Circuit-12_voltage_2024-03-18T12-01-01-000000Z .
+
+ex:MICE_Pump-A1_pressure_2024-03-18T08-07-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Pump-A1_Pressure @ 2024-03-18T08:07:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-18T08:07:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 101325.0 ;
+    cco:ont00001863 cco:ont00001559 ;
+    cco:ont00001966 ex:Pump-A1_pressure_2024-03-18T08-07-00-000000Z .
+
+ex:MICE_Pump-A2_pressure_2024-03-19T09-07-00-000000Z a cco:ont00001163 ;
+    rdfs:label "MICE for Pump-A2_Pressure @ 2024-03-19T09:07:00.000000Z"@en ;
+    exprop:hasTimestamp "2024-03-19T09:07:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 101325.0 ;
+    cco:ont00001863 cco:ont00001559 ;
+    cco:ont00001966 ex:Pump-A2_pressure_2024-03-19T09-07-00-000000Z .
+
+ex:Pump-A1 a cco:ont00000995 ;
+    rdfs:label "Pump-A1"@en .
+
+ex:Pump-A1_pressure_2024-03-18T08-07-00-000000Z a exc:pressure,
+        obo:BFO_0000020 ;
+    rdfs:label "Pump-A1_Pressure @ 2024-03-18T08:07:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Pump-A1 ;
+    cco:ont00001863 cco:ont00001559 ;
+    cco:ont00001904 ex:MICE_Pump-A1_pressure_2024-03-18T08-07-00-000000Z .
+
+ex:Pump-A2 a cco:ont00000995 ;
+    rdfs:label "Pump-A2"@en .
+
+ex:Pump-A2_pressure_2024-03-19T09-07-00-000000Z a exc:pressure,
+        obo:BFO_0000020 ;
+    rdfs:label "Pump-A2_Pressure @ 2024-03-19T09:07:00.000000Z"@en ;
+    obo:BFO_0000197 ex:Pump-A2 ;
+    cco:ont00001863 cco:ont00001559 ;
+    cco:ont00001904 ex:MICE_Pump-A2_pressure_2024-03-19T09-07-00-000000Z .
+
+obo:BFO_0000040 a owl:Class ;
+    rdfs:label "Material Entity"@en ;
+    rdfs:comment "A material entity is an independent continuant that has some portion of matter as proper or improper continuant part."@en .
+
+obo:BFO_0000196 a owl:ObjectProperty ;
+    rdfs:label "bearer of"@en ;
+    rdfs:comment "b bearer of c =Def c inheres in b"@en ;
+    owl:inverseOf obo:BFO_0000197 .
+
+obo:BFO_0000197 a owl:ObjectProperty ;
+    rdfs:label "inheres in"@en ;
+    rdfs:comment "An inheres in is an object property that relates a specifically dependent continuant to the independent continuant it inheres in ."@en ;
+    owl:inverseOf obo:BFO_0000196 .
+
+owl:Ontology rdfs:comment "An Ontology is a parent class (unspecified) that has not yet had its differentiating factor specified relative to parent class (unspecified)."@en .
+
+cco:ont00001863 a owl:ObjectProperty ;
+    rdfs:label "uses measurement unit"@en ;
+    rdfs:comment "An uses measurement unit is an object property that links a measurement information content entity or a specifically dependent continuant to the unit that qualifies its value ."@en ;
+    owl:inverseOf cco:ont00001961 .
+
+cco:ont00001904 a owl:ObjectProperty ;
+    rdfs:label "is measured by"@en ;
+    rdfs:comment "y is_measured_by x iff x is an instance of Information Content Entity and y is an instance of Entity, such that x describes some attribute of y relative to some scale or classification scheme."@en ;
+    owl:inverseOf cco:ont00001966 .
+
+cco:ont00001961 a owl:ObjectProperty ;
+    rdfs:label "is measurement unit of"@en ;
+    rdfs:comment "x is_measurement_unit_of y iff x is an instance of Measurement Unit and y is an instance of Measurement Information Content Entity or Specifically Dependent Continuant, such that x describes or qualifies the magnitude of the measured physical quantity referenced in y."@en ;
+    owl:inverseOf cco:ont00001863 .
+
+cco:ont00001966 a owl:ObjectProperty ;
+    rdfs:label "is a measurement of"@en ;
+    rdfs:comment "x is_a_measurement_of y iff x is an instance of Measurement Information Content Entity and y is an instance of Specifically Dependent Continuant (a reading), such that x specifies a value describing some attribute of y relative to some scale or classification scheme."@en ;
+    owl:inverseOf cco:ont00001904 .
+
+exc:voltage a owl:Class ;
+    rdfs:label "Voltage"@en ;
+    rdfs:comment "A Voltage is a Specifically Dependent Continuant quality that can inhere in a material entity and is typically subject to measurement."@en ;
+    rdfs:subClassOf obo:BFO_0000020 .
+
+ex:Chiller-4 a cco:ont00000995 ;
+    rdfs:label "Chiller-4"@en .
+
+ex:Circuit-12 a cco:ont00000995 ;
+    rdfs:label "Circuit-12"@en .
+
+ex:ohm a cco:ont00000120 ;
+    rdfs:label "ohm"@en .
+
+obo:BFO_0000031 a owl:Class ;
+    rdfs:label "Generically Dependent Continuant"@en ;
+    rdfs:comment "A generically dependent continuant is a continuant that g-depends_on one or more other entities."@en .
+
+owl:DatatypeProperty rdfs:comment "A DatatypeProperty is a parent class (unspecified) that has not yet had its differentiating factor specified relative to parent class (unspecified)."@en .
+
+ex:Chiller-3 a cco:ont00000995 ;
+    rdfs:label "Chiller-3"@en .
+
+ex:Boiler-07 a cco:ont00000995 ;
+    rdfs:label "Boiler-07"@en .
+
+cco:ont00001450 a cco:ont00000120 ;
+    rdfs:label "Volt Measurement Unit"@en .
+
+cco:ont00001606 a cco:ont00000120 ;
+    rdfs:label "Degree Celsius Measurement Unit"@en .
+
+cco:ont00001694 a cco:ont00000120 ;
+    rdfs:label "Pounds Per Square Inch Measurement Unit"@en .
+
+exc:pressure a owl:Class ;
+    rdfs:label "Pressure"@en ;
+    rdfs:comment "A Pressure is a Specifically Dependent Continuant quality that can inhere in a material entity and is typically subject to measurement."@en ;
+    rdfs:subClassOf obo:BFO_0000020 .
+
+owl:ObjectProperty rdfs:comment "An ObjectProperty is a parent class (unspecified) that has not yet had its differentiating factor specified relative to parent class (unspecified)."@en .
+
+cco:ont00000120 a owl:Class ;
+    rdfs:label "Measurement Unit"@en ;
+    rdfs:comment "A Measurement Unit is a Generically Dependent Continuant that serves to standardize quantities for measurement information content entities and specifically dependent continuants."@en ;
+    rdfs:subClassOf obo:BFO_0000031 .
+
+cco:ont00001559 a cco:ont00000120 ;
+    rdfs:label "Pascal Measurement Unit"@en .
+
+cco:ont00000441 a owl:Class ;
+    rdfs:label "Temperature"@en ;
+    rdfs:comment """Temperature is a specifically dependent continuant quality of a material entity that
+    quantifies the thermal state of that entity (often characterized as the average kinetic energy
+    of its constituent particles) and is assessed relative to a thermometric scale (e.g., Celsius,
+    Fahrenheit, Kelvin)."""@en ;
+    rdfs:subClassOf obo:BFO_0000020 .
+
+cco:ont00000995 a owl:Class ;
+    rdfs:label "Artifact"@en ;
+    rdfs:comment "An Artifact is a Material Entity that is intentionally produced to realize some function or purpose."@en ;
+    rdfs:subClassOf obo:BFO_0000040 .
+
+owl:Class rdfs:comment "A Class is a parent class (unspecified) that has not yet had its differentiating factor specified relative to parent class (unspecified)."@en .
+
+cco:ont00001724 a cco:ont00000120 ;
+    rdfs:label "Degree Fahrenheit Measurement Unit"@en .
+
+cco:ont00001163 a owl:Class ;
+    rdfs:label "Measurement Information Content Entity"@en ;
+    rdfs:comment "A Measurement Information Content Entity is a Generically Dependent Continuant that specifies a numeric measurement value together with its associated unit."@en ;
+    rdfs:subClassOf obo:BFO_0000031 .
+
+obo:BFO_0000020 a owl:Class ;
+    rdfs:label "Specifically Dependent Continuant"@en ;
+    rdfs:comment "A specifically dependent continuant is a continuant & there is some independent continuant c which is not a spatial region and which is such that b s-depends_on c at every time t during the course of b’s existence."@en .
+

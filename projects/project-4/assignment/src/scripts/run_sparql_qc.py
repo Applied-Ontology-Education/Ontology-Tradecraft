@@ -15,11 +15,15 @@ SHOW_LIMIT = 10
 
 def run_query(g: Graph, qpath: Path) -> int:
     q = qpath.read_text(encoding="utf-8")
-    rows = list(g.query(q))
+    try:
+        rows = list(g.query(q))
+    except Exception as e:
+        print(f"❌ {qpath.name}: parse/exec error: {e}")
+        return 1
     if rows:
         print(f"❌ {qpath.name}: {len(rows)} row(s)")
         for r in rows[:SHOW_LIMIT]:
-            print("   ", " | ".join(map(str, r)))
+            print("  ", " │ ".join(map(str, r)))
         return 1
     print(f"✅ {qpath.name}: 0 rows")
     return 0

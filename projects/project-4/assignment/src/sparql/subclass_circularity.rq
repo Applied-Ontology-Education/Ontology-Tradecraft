@@ -4,3 +4,10 @@
 #    No class should appear in a circular `subClassOf` hierarchy.
 # Severity:  
 #    Error
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?class
+WHERE {
+  ?class rdfs:subClassOf+ ?class .
+}

@@ -1,21 +1,24 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
-@prefix sh:   <http://www.w3.org/ns/shacl#> .
-@prefix bfo:  <http://purl.obolibrary.org/obo/bfo.owl#> .
-@prefix cco:  <http://www.ontologyrepository.com/CommonCoreOntologies/> .
-@prefix ex:   <http://example.org/shapes/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix exc: <http://example.org/classes#> .
+@prefix exprop: <http://example.org/props#> .
+@prefix ex: <http://example.org/instances#> .
+@prefix exs: <http://example.org/shapes#> .
 
 #################################################################
 # 1) Artifact bears at least one SDC (cardinality); 
 #################################################################
-ex:ArtifactHasSDCShape
-  a sh:NodeShape ;
-  sh:targetClass cco:Artifact ;
+exs:ArtifactHasSDCShape a sh:NodeShape ;
+  sh:targetClass cco:ont00000995 ;
   sh:property [
-    sh:path bfo:bearer_of ;
+    sh:path [ sh:inversePath obo:BFO_0000197 ] ;  # inverse of 'inheres in' == 'bearer of'
     sh:minCount 1 ;
-    sh:class bfo:SpecificallyDependentContinuant ;
+    sh:class obo:BFO_0000020 ;
     sh:message "Every Artifact must bear at least one SDC (Specifically Dependent Continuant)." ;
     sh:severity sh:Violation
   ] .
@@ -23,28 +26,217 @@ ex:ArtifactHasSDCShape
 #################################################################
 # 2) SDC is measured by at least one MICE (coverage via inverse) 
 #################################################################
+exs:PressureMeasuredBy a sh:NodeShape ;
+  sh:targetClass exc:pressure ;
+  sh:property [
+    sh:path [ sh:inversePath cco:ont00001966 ] ;
+    sh:minCount 1 ;
+    sh:message "Pressure must be measured by at least one MICE (via inverse of cco:ont00001966)." ;
+  ] .
 
+exs:TemperatureMeasuredBy a sh:NodeShape ;
+  sh:targetClass cco:ont00000441 ;
+  sh:property [
+    sh:path [ sh:inversePath cco:ont00001966 ] ;
+    sh:minCount 1 ;
+    sh:message "Temperature must be measured by at least one MICE (via inverse of cco:ont00001966)." ;
+  ] .
+
+exs:ResistanceMeasuredBy a sh:NodeShape ;
+  sh:targetClass exc:resistance ;
+  sh:property [
+    sh:path [ sh:inversePath cco:ont00001966 ] ;
+    sh:minCount 1 ;
+    sh:message "Resistance must be measured by at least one MICE (via inverse of cco:ont00001966)." ;
+  ] .
+
+exs:VoltageMeasuredBy a sh:NodeShape ;
+  sh:targetClass exc:voltage ;
+  sh:property [
+    sh:path [ sh:inversePath cco:ont00001966 ] ;
+    sh:minCount 1 ;
+    sh:message "Voltage must be measured by at least one MICE (via inverse of cco:ont00001966)." ;
+  ] .
 #################################################################
 # 3) MICE measures exactly one SDC (functional)
 #################################################################
-
+exs:MICE_MeasuresExactlyOneSDC a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001966 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class obo:BFO_0000020 ;
+    sh:message "Each MICE must be a measurement of exactly one SDC (obo:BFO_0000020)." ;
+  ] .
 #################################################################
 # 4) MICE must have one unit and one numeric value (completeness)
 #################################################################
-
+exs:MICE_UnitAndValueCompleteness a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001863 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class cco:ont00000120 ;
+    sh:message "Each MICE must use exactly one measurement unit (cco:ont00000120)." ;
+  ] ;
+  sh:property [
+    sh:path cco:ont00001769 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:decimal ;
+    sh:message "Each MICE must have exactly one decimal numeric value (cco:ont00001769)." ;
+  ] .
 #################################################################
 # 5) No empty values in literals
 #################################################################
+exs:MeasurementValueShape a sh:NodeShape ;
+    sh:targetClass cco:ont00001163 ;
+    sh:property [
+        sh:path cco:ont00001769 ;
+        sh:datatype xsd:decimal ;
+        sh:minCount 1 ;
+        sh:message "Measurement must have a non-empty decimal value." ;
+        sh:severity sh:Violation ;
+    ] ;
+    sh:property [
+        sh:path exprop:hasTimestamp ;
+        sh:datatype xsd:dateTime ;
+        sh:minCount 1 ;
+        sh:message "Measurement must have a non-empty timestamp." ;
+        sh:severity sh:Violation ;
+    ] .
 
+exs:LabelPresenceShape a sh:NodeShape ;
+    sh:targetSubjectsOf rdfs:label ;
+    sh:property [
+        sh:path rdfs:label ;
+        sh:datatype rdf:langString ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Resource must have a non-empty rdfs:label." ;
+        sh:severity sh:Violation ;
+    ] .
+
+exs:CommentPresenceShape a sh:NodeShape ;
+    sh:targetSubjectsOf rdfs:comment ;
+    sh:property [
+        sh:path rdfs:comment ;
+        sh:datatype rdf:langString ;
+        sh:minCount 1 ;
+        sh:minLength 1 ;
+        sh:message "Resource must have a non-empty rdfs:comment." ;
+        sh:severity sh:Violation ;
+    ] .
 #################################################################
 # 6) Unit must match SDC being measured
 #################################################################
+# Temperature SDCs must use only Fahrenheit or Celsius
+exs:TemperatureSDCShape a sh:NodeShape ;
+  sh:targetClass cco:ont00000441 ;  # Temperature
+  sh:property [
+    sh:path cco:ont00001863 ;       # uses measurement unit
+    sh:in ( cco:ont00001724         # Degree Fahrenheit
+            cco:ont00001606 ) ;     # Degree Celsius
+    sh:message "Temperature must use Fahrenheit or Celsius as the unit." ;
+  ] .
 
+# Pressure SDCs must use only PSI or Pascal
+exs:PressureSDCShape a sh:NodeShape ;
+  sh:targetClass exc:pressure ;
+  sh:property [
+    sh:path cco:ont00001863 ;
+    sh:in ( cco:ont00001694         # PSI
+            cco:ont00001559 ) ;     # Pascal
+    sh:message "Pressure must use PSI or Pascal as the unit." ;
+  ] .
+
+# Voltage SDCs must use only Volts
+exs:VoltageSDCShape a sh:NodeShape ;
+  sh:targetClass exc:voltage ;
+  sh:property [
+    sh:path cco:ont00001863 ;
+    sh:in ( cco:ont00001450 ) ;     # Volt
+    sh:message "Voltage must use Volt as the unit." ;
+  ] .
+
+# Resistance SDCs must use only Ohms
+exs:ResistanceSDCShape a sh:NodeShape ;
+  sh:targetClass exc:resistance ;
+  sh:property [
+    sh:path cco:ont00001863 ;
+    sh:in ( ex:ohm ) ;              # Ohm (as modeled in your data)
+    sh:message "Resistance must use Ohm as the unit." ;
+  ] .
+
+# Fahrenheit unit can only be a measurement unit of temperature 
+exs:FahrenheitSDCShape a sh:NodeShape ;
+  sh:targetClass cco:ont00001724 ;
+  sh:property [
+    sh:path cco:ont00001961 ;
+    sh:in (cco:ont00000441) ;
+    sh:message "Fahrenheit unit can only be a measurement unit of temperature." ;
+  ] .
 #################################################################
 # 7) No duplicate MICE
 #################################################################
-
+exs:NoDuplicateMICE a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:sparql [
+    sh:message "Duplicate MICE detected (same SDC, unit, value, and timestamp)." ;
+    sh:select """
+      PREFIX cco: <https://www.commoncoreontologies.org/>
+      PREFIX exprop: <http://example.org/props#>
+      SELECT $this WHERE {
+        $this a cco:ont00001163 ;
+              cco:ont00001966 ?sdc1 ;
+              cco:ont00001863 ?unit1 ;
+              cco:ont00001769 ?val1 .
+        OPTIONAL { $this exprop:hasTimestamp ?ts1 }
+        ?other a cco:ont00001163 ;
+               cco:ont00001966 ?sdc2 ;
+               cco:ont00001863 ?unit2 ;
+               cco:ont00001769 ?val2 .
+        OPTIONAL { ?other exprop:hasTimestamp ?ts2 }
+        FILTER($this != ?other)
+        FILTER(?sdc1 = ?sdc2 && ?unit1 = ?unit2 && ?val1 = ?val2 && COALESCE(STR(?ts1), "") = COALESCE(STR(?ts2), ""))
+        FILTER(STR($this) < STR(?other))
+      }
+    """ ;
+  ] .
 #################################################################
 # 8) No dangling/mistyped nodes 
 #################################################################
+exs:Range_SDC_for_measurementOf a sh:NodeShape ;
+  sh:targetObjectsOf cco:ont00001966 ;
+  sh:class obo:BFO_0000020 ;
+  sh:message "Objects of cco:ont00001966 must be SDC (obo:BFO_0000020)." .
 
+exs:Domain_MICE_for_measurementOf a sh:NodeShape ;
+  sh:targetSubjectsOf cco:ont00001966 ;
+  sh:class cco:ont00001163 ;
+  sh:message "Subjects of cco:ont00001966 must be MICE (cco:ont00001163)." .
+
+exs:Domain_UsersOfUnitTyped a sh:NodeShape ;
+  sh:targetSubjectsOf cco:ont00001863 ;
+  sh:or (
+    [ sh:class cco:ont00001163 ]
+    [ sh:class obo:BFO_0000020 ]
+  ) ;
+  sh:message "Subjects using cco:ont00001863 must be either MICE or SDC." .
+
+exs:Range_UnitsTyped a sh:NodeShape ;
+  sh:targetObjectsOf cco:ont00001863 ;
+  sh:class cco:ont00000120 ;
+  sh:message "Objects of cco:ont00001863 must be instances of cco:ont00000120 (Measurement Unit)." .
+
+exs:Domain_SDC_for_inheresIn a sh:NodeShape ;
+  sh:targetSubjectsOf obo:BFO_0000197 ;
+  sh:class obo:BFO_0000020 ;
+  sh:message "Subjects of obo:BFO_0000197 (inheres in) must be SDC (obo:BFO_0000020)." .
+
+exs:Range_MaterialEntity_for_inheresIn a sh:NodeShape ;
+  sh:targetObjectsOf obo:BFO_0000197 ;
+  sh:class cco:ont00000995 ;
+  sh:message "Objects of obo:BFO_0000197 (inheres in) must be Artifacts (cco:ont00000995)." .
