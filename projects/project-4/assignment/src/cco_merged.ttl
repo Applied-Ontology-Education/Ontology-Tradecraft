@@ -226,7 +226,7 @@ cco:ont00001754 rdf:type owl:AnnotationProperty ;
 ###  https://www.commoncoreontologies.org/ont00001756
 cco:ont00001756 rdf:type owl:AnnotationProperty ;
                  rdfs:label "interval measurement annotation"@en ;
-                 skos:definition "A interval measurement value of an instance of a quality, realizable or process profile "@en ;
+                 skos:definition "A interval measurement value of an instance of a quality, realizable or process profile"@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI ;
                  rdfs:subPropertyOf cco:ont00001746 .
 
@@ -865,7 +865,7 @@ cco:ont00001775 rdf:type owl:ObjectProperty ;
                  rdfs:domain obo:BFO_0000004 ;
                  rdfs:range obo:BFO_0000004 ;
                  rdfs:label "is successor of"@en ;
-                 skos:definition "A continuant c2 is a successor of some continuant c1 iff there is some process p1 and c1 is an input to p1 and c2 is an output of p1. Inverse of is predecessor. "@en ;
+                 skos:definition "A continuant c2 is a successor of some continuant c1 iff there is some process p1 and c1 is an input to p1 and c2 is an output of p1. Inverse of is predecessor."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
 
 
@@ -1158,7 +1158,7 @@ cco:ont00001805 rdf:type owl:ObjectProperty ;
                  dcterms:created "2022-12-30T21:32:27-05:00"^^xsd:dateTime ;
                  dcterms:creator "https://cubrc.org"^^xsd:anyURI ;
                  rdfs:label "is disrupted by"@en ;
-                 skos:definition "Inverse of disrupts." ;
+                 skos:definition "Inverse of disrupts."@en ;
                  skos:prefLabel "is disrupted by"@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
 
@@ -1262,7 +1262,7 @@ cco:ont00001815 rdf:type owl:ObjectProperty ;
                  rdfs:domain cco:ont00001180 ;
                  rdfs:range cco:ont00001180 ;
                  rdfs:label "is subsidiary of"@en ;
-                 skos:definition "An Organization o2 is_subsidiary_of Organization o1 iff o1 controls o2 by having the capacity to determine the outcome of decisions about o2's financial and operating policies. "@en ;
+                 skos:definition "An Organization o2 is_subsidiary_of Organization o1 iff o1 controls o2 by having the capacity to determine the outcome of decisions about o2's financial and operating policies."@en ;
                  cco:ont00001754 "http://www.austlii.edu.au/legis/cth/consol_act/ca2001172/s50aa.html)" ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
 
@@ -1772,7 +1772,7 @@ cco:ont00001866 rdf:type owl:ObjectProperty ;
                  dcterms:created "2022-12-30T21:32:27-05:00"^^xsd:dateTime ;
                  dcterms:creator "https://cubrc.org"^^xsd:anyURI ;
                  rdfs:label "is interest of"@en ;
-                 skos:definition "The inverse of has_interest_in. " ;
+                 skos:definition "The inverse of has_interest_in."@en ;
                  skos:prefLabel "is interest of"@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
 
@@ -2478,7 +2478,7 @@ cco:ont00001939 rdf:type owl:ObjectProperty ;
                                           )
                             ] ;
                  rdfs:label "is affiliated with"@en ;
-                 skos:definition "x is_affiliated_with y iff x and y are instances of Agent, such that they have any kind of social or business relationship."@en ;
+                 skos:definition "x is affiliated with y iff x and y are instances of Agent, such that they have any kind of social or business relationship."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
 
 
@@ -2829,7 +2829,7 @@ cco:ont00001977 rdf:type owl:ObjectProperty ;
                                           )
                             ] ;
                  rdfs:label "has affiliate"@en ;
-                 skos:definition "x is_affiliated_with y iff x and y are instances of Agent, such that they have any kind of social or business relationship."@en ;
+                 skos:definition "x has affiliate y iff x and y are instances of Agent, such that they have any kind of social or business relationship."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
 
 
@@ -5376,7 +5376,7 @@ cco:ont00000182 rdf:type owl:Class ;
                  rdfs:subClassOf cco:ont00000123 ;
                  rdfs:label "Act of Thanking"@en ;
                  skos:definition "An Act of Expressive Communication performed by expressing gratitude."@en ;
-                 cco:ont00001754 " http://www.merriam-webster.com/dictionary/thanks" ;
+                 cco:ont00001754 "http://www.merriam-webster.com/dictionary/thanks" ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
 
 
@@ -8346,7 +8346,7 @@ cco:ont00000497 rdf:type owl:Class ;
                  rdfs:subClassOf cco:ont00000120 ;
                  rdfs:label "Measurement Unit of Force"@en ;
                  skos:definition "A Measurement Unit that is used as a standard for measurement of interactions in which the Motion or Velocity of an object is changed, unless the interaction is opposed."@en ;
-                 skos:example "newton, dyne, pound force " ;
+                 skos:example "newton, dyne, pound force" ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/UnitsOfMeasureOntology"^^xsd:anyURI .
 
 
@@ -8840,7 +8840,7 @@ cco:ont00000547 rdf:type owl:Class ;
 ###  https://www.commoncoreontologies.org/ont00000548
 cco:ont00000548 rdf:type owl:Class ;
                  rdfs:subClassOf cco:ont00000997 ;
-                 dcterms:bibliographicCitation "Vulnerability | Definition of Vulnerability by Oxford Dictionary on Lexico.Com Also Meaning of Vulnerability. https://web.archive.org/web/20210118111731/https://www.lexico.com/en/definition/vulnerability. Accessed 19 Dec. 2022. " ;
+                 dcterms:bibliographicCitation "Vulnerability | Definition of Vulnerability by Oxford Dictionary on Lexico.Com Also Meaning of Vulnerability. https://web.archive.org/web/20210118111731/https://www.lexico.com/en/definition/vulnerability. Accessed 19 Dec. 2022." ;
                  dcterms:creator "https://cubrc.org"^^xsd:anyURI ;
                  rdfs:label "Vulnerability"@en ;
                  skos:definition "A Disrupting Disposition the realization of which would disrupt a process that the bearer of the Disrupting Disposition has an interest in."@en ;
@@ -15942,7 +15942,7 @@ cco:ont00001289 rdf:type owl:Class ;
                                "Damaged"@en ,
                                "Injured"@en ;
                  skos:definition "A Stasis of Specifically Dependent Continuant in which some Independent Continuant bears a Quality or Realizable Entity that has suffered impairment (i.e., a decrease or loss) due to a previous action or event such that the Independent Continuant is now of lesser value, usefulness, or functionality."@en ;
-                 skos:scopeNote "This class can be used to instantiate instances that might otherwise be treated by defined classes such as Damaged Vehicle or Wounded Person. The Independent Continuant and Quality or Realizable Entity are participants of the stasis which can in turn be related to the temporal interval via the occurs on property. "@en ;
+                 skos:scopeNote "This class can be used to instantiate instances that might otherwise be treated by defined classes such as Damaged Vehicle or Wounded Person. The Independent Continuant and Quality or Realizable Entity are participants of the stasis which can in turn be related to the temporal interval via the occurs on property."@en ;
                  cco:ont00001754 "http://www.thefreedictionary.com/damaged" ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
 

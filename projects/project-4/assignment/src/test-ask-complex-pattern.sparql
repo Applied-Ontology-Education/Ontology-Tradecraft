@@ -1,0 +1,46 @@
+#IRI_SDC   = "http://purl.obolibrary.org/obo/BFO_0000020"
+#IRI_ART   = "https://www.commoncoreontologies.org/ont00000995"
+#IRI_MU    = "https://www.commoncoreontologies.org/ont00000120"
+#IRI_MICE  = "https://www.commoncoreontologies.org/ont00001163"
+#
+#IRI_BEARER_OF   = "http://purl.obolibrary.org/obo/BFO_0000196"
+#IRI_IS_MEASURE_OF = "https://www.commoncoreontologies.org/ont00001966"
+#IRI_USES_MU       = "https://www.commoncoreontologies.org/ont00001863"
+
+#SELECT (COUNT(*) AS ?n_bad)
+#WHERE {
+#  { ?m a <{IRI_MICE}> .
+#     FILTER NOT EXISTS { ?m <{IRI_IS_MEASURE_OF}> ?sdc . ?sdc a <{IRI_SDC}> . } }
+#  UNION
+#  { ?m a <{IRI_MICE}> .
+#     FILTER NOT EXISTS { ?m <{IRI_USES_MU}> ?u . ?u a <{IRI_MU}> . } }
+#  # Missing required links with the exact IRIs?
+#}
+
+#SELECT (COUNT(*) AS ?n_bad)
+#WHERE {
+#  { ?m a <https://www.commoncoreontologies.org/ont00001163> .
+#     FILTER NOT EXISTS { ?m <https://www.commoncoreontologies.org/ont00001966> ?sdc . ?sdc a <http://purl.obolibrary.org/obo/BFO_0000020> . } }
+#  UNION
+#  { ?m a <https://www.commoncoreontologies.org/ont00001163> .
+#     FILTER NOT EXISTS { ?m <https://www.commoncoreontologies.org/ont00001863> ?u . ?u a <https://www.commoncoreontologies.org/ont00000120> . } }
+#  # Missing required links with the exact IRIs?
+#}
+
+SELECT (COUNT(*) AS ?n_bad)
+WHERE {
+  {
+     ?m a <https://www.commoncoreontologies.org/ont00001163> .
+     FILTER NOT EXISTS {
+      ?m <https://www.commoncoreontologies.org/ont00001966> ?sdc .
+      ?sdc a <http://purl.obolibrary.org/obo/BFO_0000020> .
+     }
+  }
+  UNION
+  {
+     ?m a <https://www.commoncoreontologies.org/ont00001163> .
+     FILTER NOT EXISTS { ?m <https://www.commoncoreontologies.org/ont00001863> ?u .
+     ?u a <https://www.commoncoreontologies.org/ont00000120> . }
+  }
+  # Missing required links with the exact IRIs?
+}

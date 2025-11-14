@@ -3,4 +3,41 @@
 # Constraint Description: 
 #    No annotation value may have leading or trailing whitespace.    
 # Severity:
-#    Error 
+#    Error
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+SELECT ?subject ?property ?error
+WHERE {
+    {
+        ?property a owl:AnnotationProperty .
+        ?subject ?property ?value .
+    }
+    UNION
+    {
+        ?subject ?property ?value .
+        VALUES ?property {
+            rdfs:label
+            rdfs:comment
+            skos:definition
+            skos:prefLabel
+            skos:altLabel
+            skos:hiddenLabel
+            skos:notation
+            skos:note
+            skos:scopeNote
+            skos:editorialNote
+            skos:example
+            dcterms:description
+            dcterms:title
+            dc:description
+            dc:title
+            owl:versionInfo
+        }
+    }
+    FILTER (isLiteral(?value))
+    FILTER (REGEX(STR(?value), "(^\\s|\\s$)"))
+    BIND (concat("Error: The following subject has an annotation property with leading or trailing whitespace: ", str(?subject), " and ", str(?property)) AS ?error)
+
+}
+ORDER BY ?subject ?property
