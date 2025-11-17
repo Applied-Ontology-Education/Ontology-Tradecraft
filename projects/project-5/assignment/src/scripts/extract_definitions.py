@@ -173,8 +173,9 @@ def main():
     
     Expected directory structure (based on your paths):
     src/
+    ├── scripts/
+    │   └── extract_definitions.py (this script)
     ├── FacilityOntology.ttl (input)
-    ├── extract_definitions.py (this script)
     └── data/
         └── definitions.csv (output will be created here)
     """
@@ -182,8 +183,9 @@ def main():
     # Define file paths
     script_path = Path(__file__).resolve()
     
-    # The script is in the same directory as FacilityOntology.ttl
-    src_dir = script_path.parent
+    # The script is in src/scripts/, need to go up one level to src/
+    scripts_dir = script_path.parent
+    src_dir = scripts_dir.parent
     
     # Define input and output paths
     input_file = src_dir / 'FacilityOntology.ttl'
