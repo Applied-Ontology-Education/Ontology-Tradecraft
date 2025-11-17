@@ -1,0 +1,950 @@
+@prefix : <https://www.commoncoreontologies.org/FacilityOntology/> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+cco:FacilityOntology a owl:Class ;
+    rdfs:label "Facility Ontology"@en ;
+    rdfs:subClassOf cco:ont00000192 ;
+    skos:definition "This ontology is designed to represent buildings and campuses that  are designed to serve some specific purpose and which are common to multiple domains."@en .
+
+:CandidateAxioms a owl:Ontology ;
+    rdfs:label "Facility Ontology Candidate Axioms"@en ;
+    dcterms:created "2025-11-17T13:42:37.035547" ;
+    rdfs:comment "OWL 2 EL-compliant candidate axioms generated from enriched definitions"@en .
+
+cco:ont00000032 a owl:Class ;
+    rdfs:label "Church"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:ReligiousActivity ],
+        cco:ont00000052 .
+
+cco:ont00000040 a owl:Class ;
+    rdfs:label "Grocery Store"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_sell_food ],
+        cco:ont00001102 .
+
+cco:ont00000041 a owl:Class ;
+    rdfs:label "Hostel"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_temporarily_lodge_guests ],
+        cco:ont00000410 .
+
+cco:ont00000045 a owl:Class ;
+    rdfs:label "Petroleum Depot"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_store_petroleum_oil ],
+        cco:ont00000881 .
+
+cco:ont00000060 a owl:Class ;
+    rdfs:label "Open Pit Mine"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_extraction_of ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_the_extraction ],
+        cco:ont00000639 .
+
+cco:ont00000094 a owl:Class ;
+    rdfs:label "Seat of National Government"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_the_administration_of ],
+        cco:ont00000946 .
+
+cco:ont00000104 a owl:Class ;
+    rdfs:label "Underwater Mine"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_the_extraction ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_extraction_of ],
+        cco:ont00000639 .
+
+cco:ont00000108 a owl:Class ;
+    rdfs:label "Rail Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_transferring_people_or ],
+        cco:ont00000226 .
+
+cco:ont00000172 a owl:Class ;
+    rdfs:label "Base of Operations"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_launch_and_support ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_largescale_operations_support ],
+        cco:ont00000192 .
+
+cco:ont00000180 a owl:Class ;
+    rdfs:label "Hotel"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_provide_lodging_that ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:provides ;
+            owl:someValuesFrom cco:Activity_lodging_that_is ],
+        cco:ont00000410 .
+
+cco:ont00000195 a owl:Class ;
+    rdfs:label "Heliport"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_launching_receiving_and ],
+        cco:ont00000192 .
+
+cco:ont00000220 a owl:Class ;
+    rdfs:label "Ammunition Depot"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_store_Portions_of ],
+        cco:ont00000881 .
+
+cco:ont00000232 a owl:Class ;
+    rdfs:label "Pumping Station"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_pump_fluids_from ],
+        cco:ont00000677 .
+
+cco:ont00000245 a owl:Class ;
+    rdfs:label "Petroleum Manufacturing Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_manufacture_petroleumbased_products ],
+        cco:ont00000782 .
+
+cco:ont00000248 a owl:Class ;
+    rdfs:label "Chemical Manufacturing Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_manufacture_or_process ],
+        cco:ont00000782 .
+
+cco:ont00000262 a owl:Class ;
+    rdfs:label "Shop"@en ;
+    rdfs:subClassOf cco:ont00000192 ;
+    skos:definition "A Commercial Facility designed to sell small lots of goods to consumers."@en .
+
+cco:ont00000270 a owl:Class ;
+    rdfs:label "Educational Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:EducationalActivity ],
+        cco:ont00000192 .
+
+cco:ont00000271 a owl:Class ;
+    rdfs:label "Underground Mine"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_extraction_of ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_the_extraction ],
+        cco:ont00000639 .
+
+cco:ont00000330 a owl:Class ;
+    rdfs:label "Thermal Power Plant"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_convert_heat_energy ],
+        cco:ont00001076 .
+
+cco:ont00000331 a owl:Class ;
+    rdfs:label "House"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_provide_a_selfstanding ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:provides ;
+            owl:someValuesFrom cco:Activity_a_selfstanding_permanent ],
+        cco:ont00000410 .
+
+cco:ont00000332 a owl:Class ;
+    rdfs:label "Training Camp"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_rigorous_and_focused ],
+        cco:ont00000192 .
+
+cco:ont00000336 a owl:Class ;
+    rdfs:label "Apartment Building"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_contain_multiple_permanent ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_part ;
+            owl:someValuesFrom cco:Activity_multiple_permanent_residences ],
+        cco:ont00000410 .
+
+cco:ont00000349 a owl:Class ;
+    rdfs:label "Police Station"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_the_professional_and ],
+        cco:ont00000479 .
+
+cco:ont00000375 a owl:Class ;
+    rdfs:label "Warehouse"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:CommercialActivity ],
+        cco:ont00000881 .
+
+cco:ont00000381 a owl:Class ;
+    rdfs:label "Weapon Manufacturing Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_produce_or_assemble ],
+        cco:ont00000782 .
+
+cco:ont00000421 a owl:Class ;
+    rdfs:label "Nuclear Power Plant"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_produce_heat_by ],
+        cco:ont00000192 .
+
+cco:ont00000423 a owl:Class ;
+    rdfs:label "Motor Vehicle Manufacturing Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_manufacture_automobiles ],
+        cco:ont00000782 .
+
+cco:ont00000432 a owl:Class ;
+    rdfs:label "Missile Launch Site"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_storing_and_launching ],
+        cco:ont00001052 .
+
+cco:ont00000468 a owl:Class ;
+    rdfs:label "Office Building"@en ;
+    rdfs:subClassOf cco:ont00001102 .
+
+cco:ont00000483 a owl:Class ;
+    rdfs:label "Military Base"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:MilitaryActivity ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:facilitates ;
+            owl:someValuesFrom cco:Activity_training_and_operations ],
+        cco:ont00001052 .
+
+cco:ont00000510 a owl:Class ;
+    rdfs:label "Mosque"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:ReligiousActivity ],
+        cco:ont00000052 .
+
+cco:ont00000545 a owl:Class ;
+    rdfs:label "Seat of Local Government"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_the_administration_of ],
+        cco:ont00000946 .
+
+cco:ont00000583 a owl:Class ;
+    rdfs:label "Motel"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_accommodate_motor_vehicles ],
+        cco:ont00000192 .
+
+cco:ont00000664 a owl:Class ;
+    rdfs:label "Radio Relay Station"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_the_receiving ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_receiving_and ],
+        cco:ont00000531 .
+
+cco:ont00000667 a owl:Class ;
+    rdfs:label "Combat Outpost"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_the_conduction ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_conduction_of ],
+        cco:ont00001052 .
+
+cco:ont00000670 a owl:Class ;
+    rdfs:label "Distribution Port"@en ;
+    rdfs:subClassOf cco:ont00000226 .
+
+cco:ont00000680 a owl:Class ;
+    rdfs:label "Medical Depot"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_store_medical_supplies ],
+        cco:ont00000881 .
+
+cco:ont00000705 a owl:Class ;
+    rdfs:label "Power Transmission Line"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_transmit_electricity_over ],
+        cco:ont00000677 .
+
+cco:ont00000708 a owl:Class ;
+    rdfs:label "Water Tower"@en ;
+    rdfs:subClassOf cco:ont00000192 .
+
+cco:ont00000710 a owl:Class ;
+    rdfs:label "Command Post Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:MilitaryActivity ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:MilitaryActivity ],
+        cco:ont00001052 .
+
+cco:ont00000717 a owl:Class ;
+    rdfs:label "Fossil Fuel Power Plant"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_convert_fossil_fuels ],
+        cco:ont00001076 .
+
+cco:ont00000737 a owl:Class ;
+    rdfs:label "Forward Operations Base"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_local_strategic_objectives ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_local_strategic ],
+        cco:ont00000192 .
+
+cco:ont00000757 a owl:Class ;
+    rdfs:label "Synagogue"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:ReligiousActivity ],
+        cco:ont00000052 .
+
+cco:ont00000761 a owl:Class ;
+    rdfs:label "Pier"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_partially_enclose_a ],
+        cco:ont00000226 .
+
+cco:ont00000778 a owl:Class ;
+    rdfs:label "Chemical Depot"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_store_chemicals ],
+        cco:ont00000881 .
+
+cco:ont00000802 a owl:Class ;
+    rdfs:label "Stage"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:provides ;
+            owl:someValuesFrom cco:Activity_a_space_upon ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_provide_a_space ],
+        cco:ont00000641 .
+
+cco:ont00000814 a owl:Class ;
+    rdfs:label "Water Treatment Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_making_water_more ],
+        cco:ont00000192 .
+
+cco:ont00000846 a owl:Class ;
+    rdfs:label "Hydroelectric Power Plant"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_convert_hydropower_into ],
+        cco:ont00001076 .
+
+cco:ont00000867 a owl:Class ;
+    rdfs:label "Pipeline"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_transport_goods_or ],
+        cco:ont00000677 .
+
+cco:ont00000882 a owl:Class ;
+    rdfs:label "Wind Farm"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_convert_the_winds ],
+        cco:ont00001076 .
+
+cco:ont00000901 a owl:Class ;
+    rdfs:label "Decontamination Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_wash_personnel_or ],
+        cco:ont00001375 .
+
+cco:ont00000905 a owl:Class ;
+    rdfs:label "Post Office"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_serving_customers_of ],
+        cco:ont00000655 .
+
+cco:ont00000957 a owl:Class ;
+    rdfs:label "Reservoir"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_store_water_in ],
+        cco:ont00000881 .
+
+cco:ont00001078 a owl:Class ;
+    rdfs:label "Airport"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_launching_receiving_and ],
+        cco:ont00000226 .
+
+cco:ont00001089 a owl:Class ;
+    rdfs:label "Petrochemical Refinery"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_refining_crude_oil ],
+        cco:ont00000192 .
+
+cco:ont00001091 a owl:Class ;
+    rdfs:label "Fort"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_defense_of ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_the_defense ],
+        cco:ont00001052 .
+
+cco:ont00001098 a owl:Class ;
+    rdfs:label "Hospital"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:MedicalTreatment ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:provides ;
+            owl:someValuesFrom cco:MedicalTreatment ],
+        cco:ont00000055 .
+
+cco:ont00001107 a owl:Class ;
+    rdfs:label "Landfill"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_disposing_of_waste ],
+        cco:ont00001315 .
+
+cco:ont00001165 a owl:Class ;
+    rdfs:label "Terrorist Training Camp"@en ;
+    rdfs:subClassOf cco:ont00000192 ;
+    skos:definition "A Training Camp designed to teach students methods of terrorism."@en .
+
+cco:ont00001257 a owl:Class ;
+    rdfs:label "Nuclear Storage Depot"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_store_nuclear_material ],
+        cco:ont00000881 .
+
+cco:ont00001258 a owl:Class ;
+    rdfs:label "Port"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_contain_harbors_for ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_part ;
+            owl:someValuesFrom cco:Activity_harbors_for_docking ],
+        cco:ont00000226 .
+
+cco:ont00001283 a owl:Class ;
+    rdfs:label "Refinery"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_refining_raw_materials ],
+        cco:ont00000782 .
+
+cco:ont00001287 a owl:Class ;
+    rdfs:label "Maintenance Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_purpose ;
+            owl:someValuesFrom cco:Activity_perform_actions_to ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_be_used_to ],
+        cco:ont00000192 .
+
+cco:ont00001295 a owl:Class ;
+    rdfs:label "Financial Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_the_management ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_management_of ],
+        cco:ont00000192 .
+
+cco:ont00001297 a owl:Class ;
+    rdfs:label "Military Headquarters Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:MilitaryActivity ],
+        cco:ont00001052 .
+
+cco:ont00001308 a owl:Class ;
+    rdfs:label "Sewage Treatment Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_removing_contaminants_from ],
+        cco:ont00001315 .
+
+cco:ont00001311 a owl:Class ;
+    rdfs:label "Aircraft Manufacturing Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_manufacture_Aircraft ],
+        cco:ont00000782 .
+
+cco:ont00001344 a owl:Class ;
+    rdfs:label "Biological Depot"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_store_biological_agents ],
+        cco:ont00000881 .
+
+cco:ont00001358 a owl:Class ;
+    rdfs:label "School"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:EducationalActivity ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:provides ;
+            owl:someValuesFrom cco:EducationalActivity ],
+        cco:ont00000192 .
+
+cco:ont00001362 a owl:Class ;
+    rdfs:label "Gas Processing Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_refining_natural_gas ],
+        cco:ont00000192 .
+
+cco:ont00001380 a owl:Class ;
+    rdfs:label "Farm"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_produce_food_and ],
+        cco:ont00000339 .
+
+cco:ont00001383 a owl:Class ;
+    rdfs:label "Fire Station"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:StorageFunction ],
+        cco:ont00000479 .
+
+cco:Activity_a_selfstanding_permanent a owl:Class ;
+    rdfs:label "a self-standing, permanent residence for an individual, family, household, multiple families, or similar-sized group"@en .
+
+cco:Activity_a_space_upon a owl:Class ;
+    rdfs:label "a space upon which entertaining performances or productions can occur"@en .
+
+cco:Activity_accommodate_motor_vehicles a owl:Class ;
+    rdfs:label "accommodate motor vehicles along with their occupants"@en .
+
+cco:Activity_be_used_to a owl:Class ;
+    rdfs:label "be used to perform actions to maintain or improve the state of some property or equipment"@en .
+
+cco:Activity_buying_and_selling a owl:Class ;
+    rdfs:label "buying and selling goods and services, especially on a large scale"@en .
+
+cco:Activity_contain_harbors_for a owl:Class ;
+    rdfs:label "contain harbors for docking Watercraft and for transfering people or cargo to and from land"@en .
+
+cco:Activity_contain_multiple_permanent a owl:Class ;
+    rdfs:label "contain multiple permanent residences comprised of a suite of rooms"@en .
+
+cco:Activity_convert_fossil_fuels a owl:Class ;
+    rdfs:label "convert fossil fuels into electrical energy"@en .
+
+cco:Activity_convert_heat_energy a owl:Class ;
+    rdfs:label "convert heat energy into electrical energy"@en .
+
+cco:Activity_convert_hydropower_into a owl:Class ;
+    rdfs:label "convert hydropower into electrical power"@en .
+
+cco:Activity_convert_the_winds a owl:Class ;
+    rdfs:label "convert the wind's kinetic energy into electrical power by means of wind turbines"@en .
+
+cco:Activity_disposing_of_waste a owl:Class ;
+    rdfs:label "disposing of waste by burial"@en .
+
+cco:Activity_generate_electrical_power a owl:Class ;
+    rdfs:label "generate electrical power"@en .
+
+cco:Activity_harbors_for_docking a owl:Class ;
+    rdfs:label "harbors for docking Watercraft and for transfering people or cargo to and from land"@en .
+
+cco:Activity_host_activities_that a owl:Class ;
+    rdfs:label "host activities that are intended to hold the interest of, or give pleasure or delight to, an audience"@en .
+
+cco:Activity_house_one_or a owl:Class ;
+    rdfs:label "house one or more Persons"@en .
+
+cco:Activity_largescale_operations_support a owl:Class ;
+    rdfs:label "large-scale operations, support smaller or less-permanent bases, and organize supply facilities"@en .
+
+cco:Activity_launch_and_support a owl:Class ;
+    rdfs:label "launch and support large-scale operations, support smaller or less-permanent bases, and organize supply facilities"@en .
+
+cco:Activity_local_strategic_objectives a owl:Class ;
+    rdfs:label "local strategic objectives and tactical operations"@en .
+
+cco:Activity_lodging_that_is a owl:Class ;
+    rdfs:label "lodging that is paid for on a short-term basis"@en .
+
+cco:Activity_making_water_more a owl:Class ;
+    rdfs:label "making water more acceptable for a specific end-use"@en .
+
+cco:Activity_managing_waste_for a owl:Class ;
+    rdfs:label "managing waste for some portion of the waste's existence"@en .
+
+cco:Activity_manufacture_Aircraft a owl:Class ;
+    rdfs:label "manufacture Aircraft"@en .
+
+cco:Activity_manufacture_automobiles a owl:Class ;
+    rdfs:label "manufacture automobiles"@en .
+
+cco:Activity_manufacture_or_process a owl:Class ;
+    rdfs:label "manufacture or process chemicals"@en .
+
+cco:Activity_manufacture_petroleumbased_products a owl:Class ;
+    rdfs:label "manufacture petroleum-based products"@en .
+
+cco:Activity_manufacturing_or_refining a owl:Class ;
+    rdfs:label "manufacturing or refining material products"@en .
+
+cco:Activity_multiple_permanent_residences a owl:Class ;
+    rdfs:label "multiple permanent residences comprised of a suite of rooms"@en .
+
+cco:Activity_partially_enclose_a a owl:Class ;
+    rdfs:label "partially enclose a harbor and form a landing place for Watercraft"@en .
+
+cco:Activity_perform_actions_to a owl:Class ;
+    rdfs:label "perform actions to maintain or improve the state of some property or equipment"@en .
+
+cco:Activity_processes_of_receiving a owl:Class ;
+    rdfs:label "processes of receiving or transmitting information"@en .
+
+cco:Activity_produce_food_and a owl:Class ;
+    rdfs:label "produce food and other crops"@en .
+
+cco:Activity_produce_heat_by a owl:Class ;
+    rdfs:label "produce heat by means of a nuclear reactor, which is then converted to electrical energy"@en .
+
+cco:Activity_produce_or_assemble a owl:Class ;
+    rdfs:label "produce or assemble weapons"@en .
+
+cco:Activity_provide_a_selfstanding a owl:Class ;
+    rdfs:label "provide a self-standing, permanent residence for an individual, family, household, multiple families, or similar-sized group"@en .
+
+cco:Activity_provide_a_space a owl:Class ;
+    rdfs:label "provide a space upon which entertaining performances or productions can occur"@en .
+
+cco:Activity_provide_lodging_that a owl:Class ;
+    rdfs:label "provide lodging that is paid for on a short-term basis"@en .
+
+cco:Activity_pump_fluids_from a owl:Class ;
+    rdfs:label "pump fluids from one place to another"@en .
+
+cco:Activity_refining_crude_oil a owl:Class ;
+    rdfs:label "refining crude oil, intermediate petroleum products, or synthetic petroleum into products of value"@en .
+
+cco:Activity_refining_natural_gas a owl:Class ;
+    rdfs:label "refining natural gas into products of value"@en .
+
+cco:Activity_refining_raw_materials a owl:Class ;
+    rdfs:label "refining raw materials into products of value"@en .
+
+cco:Activity_removing_contaminants_from a owl:Class ;
+    rdfs:label "removing contaminants from wastewater, especially sewage"@en .
+
+cco:Activity_rigorous_and_focused a owl:Class ;
+    rdfs:label "rigorous and focused training in order to learn or improve skills, usually involving physical actions"@en .
+
+cco:Activity_sell_food a owl:Class ;
+    rdfs:label "sell food"@en .
+
+cco:Activity_serving_customers_of a owl:Class ;
+    rdfs:label "serving customers of the national postal system"@en .
+
+cco:Activity_store_Portions_of a owl:Class ;
+    rdfs:label "store Portions of Ammunition"@en .
+
+cco:Activity_store_biological_agents a owl:Class ;
+    rdfs:label "store biological agents"@en .
+
+cco:Activity_store_chemicals a owl:Class ;
+    rdfs:label "store chemicals"@en .
+
+cco:Activity_store_materials_or a owl:Class ;
+    rdfs:label "store materials or goods"@en .
+
+cco:Activity_store_medical_supplies a owl:Class ;
+    rdfs:label "store medical supplies"@en .
+
+cco:Activity_store_nuclear_material a owl:Class ;
+    rdfs:label "store nuclear material"@en .
+
+cco:Activity_store_petroleum_oil a owl:Class ;
+    rdfs:label "store petroleum, oil, or lubricants"@en .
+
+cco:Activity_store_water_in a owl:Class ;
+    rdfs:label "store water in a man-made open enclosure or area"@en .
+
+cco:Activity_storing_and_launching a owl:Class ;
+    rdfs:label "storing and launching missiles"@en .
+
+cco:Activity_support_local_strategic a owl:Class ;
+    rdfs:label "support local strategic objectives and tactical operations"@en .
+
+cco:Activity_support_processes_of a owl:Class ;
+    rdfs:label "support processes of receiving or transmitting information"@en .
+
+cco:Activity_support_the_conduction a owl:Class ;
+    rdfs:label "support the conduction of combat operations of limited scope or size"@en .
+
+cco:Activity_support_the_defense a owl:Class ;
+    rdfs:label "support the defense of or solidification of rule over some Geospatial Region and its inhabitants"@en .
+
+cco:Activity_support_the_management a owl:Class ;
+    rdfs:label "support the management of money"@en .
+
+cco:Activity_support_the_receiving a owl:Class ;
+    rdfs:label "support the receiving and re-transmitting of radio signals"@en .
+
+cco:Activity_temporarily_lodge_guests a owl:Class ;
+    rdfs:label "temporarily lodge guests in a sociable environment for relatively low costs"@en .
+
+cco:Activity_the_conduction_of a owl:Class ;
+    rdfs:label "the conduction of combat operations of limited scope or size"@en .
+
+cco:Activity_the_defense_of a owl:Class ;
+    rdfs:label "the defense of or solidification of rule over some Geospatial Region and its inhabitants"@en .
+
+cco:Activity_the_management_of a owl:Class ;
+    rdfs:label "the management of money"@en .
+
+cco:Activity_the_prevention_of a owl:Class ;
+    rdfs:label "the prevention of and protection from events that could endanger, injure, or damage the general public"@en .
+
+cco:Activity_the_professional_and a owl:Class ;
+    rdfs:label "the professional and clerical processes of a local police force"@en .
+
+cco:Activity_the_receiving_and a owl:Class ;
+    rdfs:label "the receiving and re-transmitting of radio signals"@en .
+
+cco:Activity_training_and_operations a owl:Class ;
+    rdfs:label "training and operations"@en .
+
+cco:Activity_transferring_people_or a owl:Class ;
+    rdfs:label "transferring people or cargo to and from Trains"@en .
+
+cco:Activity_transmit_electricity_over a owl:Class ;
+    rdfs:label "transmit electricity over distance via a system of above ground wires including their supports"@en .
+
+cco:Activity_transport_goods_or a owl:Class ;
+    rdfs:label "transport goods or materials through a pipe"@en .
+
+cco:Activity_transport_some_product a owl:Class ;
+    rdfs:label "transport some product"@en .
+
+cco:ont00000055 a owl:Class ;
+    rdfs:label "Healthcare Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:MedicalTreatment ],
+        cco:ont00000192 .
+
+cco:ont00000339 a owl:Class ;
+    rdfs:label "Agricultural Facility"@en ;
+    rdfs:subClassOf cco:ont00000192 .
+
+cco:ont00000531 a owl:Class ;
+    rdfs:label "Communications Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_processes_of_receiving ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_processes_of ],
+        cco:ont00000192 .
+
+cco:ont00000641 a owl:Class ;
+    rdfs:label "Entertainment Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_host_activities_that ],
+        cco:ont00000192 .
+
+cco:ont00000655 a owl:Class ;
+    rdfs:label "Mailing Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:TransportationFunction ],
+        cco:ont00000192 .
+
+cco:ont00001375 a owl:Class ;
+    rdfs:label "Washing Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_wash_personnel_or ],
+        cco:ont00000192 .
+
+cco:Activity_launching_receiving_and a owl:Class ;
+    rdfs:label "launching, receiving, and housing Aircraft"@en,
+        "launching, receiving, and housing Rotorcraft"@en .
+
+cco:Activity_wash_personnel_or a owl:Class ;
+    rdfs:label "wash personnel or equipment"@en,
+        "wash personnel or equipment after contamination by radioactive, biological, or chemical material"@en .
+
+cco:ont00000479 a owl:Class ;
+    rdfs:label "Public Safety Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_the_prevention_of ],
+        cco:ont00000192 .
+
+cco:ont00000946 a owl:Class ;
+    rdfs:label "Government Building"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_the_administration_of ],
+        cco:ont00000192 .
+
+cco:ont00001102 a owl:Class ;
+    rdfs:label "Commercial Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_buying_and_selling ],
+        cco:ont00000192 .
+
+cco:ont00001315 a owl:Class ;
+    rdfs:label "Waste Management Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_managing_waste_for ],
+        cco:ont00000192 .
+
+cco:Activity_the_administration_of a owl:Class ;
+    rdfs:label "the administration of a community"@en,
+        "the administration of a local community"@en,
+        "the administration of a sovereign nation"@en .
+
+cco:ont00000052 a owl:Class ;
+    rdfs:label "Religious Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:ReligiousActivity ],
+        cco:ont00000192 .
+
+cco:ont00000639 a owl:Class ;
+    rdfs:label "Mine"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_extraction_of ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_the_extraction ],
+        cco:ont00000192 .
+
+cco:ont00000677 a owl:Class ;
+    rdfs:label "Product Transport Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_transport_some_product ],
+        cco:ont00000192 .
+
+cco:Activity_support_the_extraction a owl:Class ;
+    rdfs:label "support the extraction of materials from the ground directly without using tunnels"@en,
+        "support the extraction of materials from the ground using underground tunnels and shafts"@en,
+        "support the extraction of materials from the ocean floor"@en,
+        "support the extraction of minerals or other geological materials from an orebody, lode, vein, seam, reef, or placer deposit within the earth"@en .
+
+cco:Activity_the_extraction_of a owl:Class ;
+    rdfs:label "the extraction of materials from the ground directly without using tunnels"@en,
+        "the extraction of materials from the ground using underground tunnels and shafts"@en,
+        "the extraction of materials from the ocean floor"@en,
+        "the extraction of minerals or other geological materials from an orebody, lode, vein, seam, reef, or placer deposit within the earth"@en .
+
+cco:ont00000410 a owl:Class ;
+    rdfs:label "Residential Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_house_one_or ],
+        cco:ont00000192 .
+
+cco:ont00001076 a owl:Class ;
+    rdfs:label "Electric Power Station"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_generate_electrical_power ],
+        cco:ont00000192 .
+
+cco:ont00000226 a owl:Class ;
+    rdfs:label "Transportation Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:TransportationFunction ],
+        cco:ont00000192 .
+
+cco:ont00000782 a owl:Class ;
+    rdfs:label "Factory"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_manufacturing_or_refining ],
+        cco:ont00000192 .
+
+cco:ont00001052 a owl:Class ;
+    rdfs:label "Military Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:MilitaryActivity ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:MilitaryActivity ],
+        cco:ont00000192 .
+
+cco:ont00000881 a owl:Class ;
+    rdfs:label "Storage Facility"@en ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_store_materials_or ],
+        cco:ont00000192 .
+
+cco:ont00000192 a owl:Class ;
+    rdfs:label "ont00000192"@en ;
+    rdfs:subClassOf cco:ont00000192 ;
+    skos:definition "A facility-related concept associated with ont00000192."@en .
+
