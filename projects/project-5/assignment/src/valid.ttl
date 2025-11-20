@@ -1,0 +1,221 @@
+@prefix : <https://www.commoncoreontologies.org/FacilityOntologyValid/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@base <https://www.commoncoreontologies.org/FacilityOntologyValid> .
+
+<https://www.commoncoreontologies.org/FacilityOntologyValid> rdf:type owl:Ontology ;
+                                                                               owl:versionIRI <https://www.commoncoreontologies.org/2024-11-06/FacilityOntologyValid> ;
+                                                                               dcterms:license "BSD 3-Clause: https://github.com/CommonCoreOntology/CommonCoreOntologies/blob/master/LICENSE"@en ;
+                                                                               dcterms:rights "CUBRC Inc., see full license."@en ;
+                                                                               rdfs:comment "This ontology is designed to represent buildings and campuses that  are designed to serve some specific purpose and which are common to multiple domains."@en ;
+                                                                               rdfs:label "Facility Ontology"@en ;
+                                                                               owl:versionInfo "Version 2.0"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/rights
+dcterms:rights rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00000867
+cco:ont00000867 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000677 ;
+                 rdfs:label "Pipeline"@en ;
+                 skos:definition "A Product Transport Facility that is designed to transport goods or materials through a pipe."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Pipeline&oldid=1024308788"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000339
+cco:ont00000339 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000192 ;
+                 rdfs:label "Agricultural Facility"@en ;
+                 skos:definition "A Facility that is designed as a building or campus for agricultural processes with the aim of cultivating animals, plants, or fungi for food, fiber, biofuel, medicinal plants, or other products to sustain and enhance human life."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Agriculture&oldid=1063222666"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000332
+cco:ont00000332 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000192 ;
+                 rdfs:label "Training Camp"@en ;
+                 skos:definition "A Facility that is designed for rigorous and focused training in order to learn or improve skills, usually involving physical actions."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Training_camp&oldid=1059977631"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00001295
+cco:ont00001295 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000192 ;
+                 rdfs:label "Financial Facility"@en ;
+                 skos:definition "A Facility that is designed to support the management of money."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Finance&oldid=1062402926"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00001375
+cco:ont00001375 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000192 ;
+                 rdfs:label "Washing Facility"@en ;
+                 skos:definition "A Facility that is designed to wash personnel or equipment."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Washing&oldid=1035998791"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000040
+cco:ont00000040 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00001102 ;
+                 rdfs:label "Grocery Store"@en ;
+                 skos:definition "A Commercial Facility that is designed to sell food."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Grocery_store&oldid=1060022873"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000710
+cco:ont00000710 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00001052 ;
+                 rdfs:label "Command Post Facility"@en ;
+                 skos:definition "A Military Facility that is designed to support the command and control of Military Operations or Forces."@en ;
+                 cco:ont00001754 "http://www.dictionary.com/browse/command-post" ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00001091
+cco:ont00001091 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00001052 ;
+                 rdfs:label "Fort"@en ;
+                 skos:definition "A Military Facility that is designed to support the defense of or solidification of rule over some Geospatial Region and its inhabitants."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Fortification&oldid=1060156408"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000104
+cco:ont00000104 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000639 ;
+                 rdfs:label "Underwater Mine"@en ;
+                 skos:definition "A Mine that is designed to support the extraction of materials from the ocean floor."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Naval_mine&oldid=1062538523"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000946
+cco:ont00000946 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000192 ;
+                 rdfs:label "Government Building"@en ;
+                 skos:definition "A Facility that is designed for the administration of a community."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/wiki/Administration_(government)" ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00001308
+cco:ont00001308 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00001315 ;
+                 rdfs:label "Sewage Treatment Facility"@en ;
+                 skos:definition "A Waste Management Facility that is designed for removing contaminants from wastewater, especially sewage."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Sewage_treatment&oldid=1062966352"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000172
+cco:ont00000172 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000483 ;
+                 rdfs:label "Base of Operations"@en ;
+                 skos:altLabel "Main Operating Base"@en ;
+                 skos:definition "A Military Base with permanently stationed operating forces, robust Infrastructure, and strengthened force protection measures such that it is designed to launch and support large-scale operations, support smaller or less-permanent bases, and organize supply facilities."@en ;
+                 cco:ont00001753 "MOB" ;
+                 cco:ont00001754 "http://www.jcs.mil/Portals/36/Documents/Doctrine/pubs/dictionary.pdf?ver=2018-08-27-122235-653" ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000220
+cco:ont00000220 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000881 ;
+                 rdfs:label "Ammunition Depot"@en ;
+                 skos:definition "A Storage Facility that is designed to store Portions of Ammunition."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Ammunition_dump&oldid=1044466765"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000336
+cco:ont00000336 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000410 ;
+                 rdfs:label "Apartment Building"@en ;
+                 skos:definition "A Residential Facility that is designed to contain multiple permanent residences comprised of a suite of rooms."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Apartment&oldid=1064019048"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000375
+cco:ont00000375 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000881 ;
+                 rdfs:label "Warehouse"@en ;
+                 skos:definition "A Storage Facility that is designed to store commercial goods."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Warehouse&oldid=1063721454"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000423
+cco:ont00000423 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000782 ;
+                 rdfs:label "Motor Vehicle Manufacturing Facility"@en ;
+                 skos:definition "A Factory that is designed to manufacture automobiles."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Automotive_industry&oldid=1061661751"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000032
+cco:ont00000032 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000052 ;
+                 rdfs:label "Church"@en ;
+                 skos:definition "A Religious Facility that is designed for Christian worship and prayer."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/wiki/Church_(building)" ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00000180
+cco:ont00000180 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000410 ;
+                 rdfs:label "Hotel"@en ;
+                 skos:definition "A Residential Facility that is designed to provide lodging that is paid for on a short-term basis."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Hotel&oldid=1063583593"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  https://www.commoncoreontologies.org/ont00001258
+cco:ont00001258 rdf:type owl:Class ;
+                 rdfs:subClassOf cco:ont00000226 ;
+                 rdfs:label "Port"@en ;
+                 skos:definition "A Transportation Facility that is designed to contain harbors for docking Watercraft and for transfering people or cargo to and from land."@en ;
+                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Port&oldid=1064091505"^^xsd:anyURI ;
+                 cco:ont00001760 "https://www.commoncoreontologies.org/FacilityOntologyValid"^^xsd:anyURI .
+
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi
