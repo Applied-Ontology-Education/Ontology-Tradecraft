@@ -1,0 +1,30 @@
+# Ignore Python virtual environments
+projects/project-5/venv5/
+.env/
+.venv/
+ENV/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore build artifacts
+build/
+dist/
+*.egg-info/
+
+# Ignore common editor/project files
+*.swp
+*.swo
+*.DS_Store
+
+# VS Code settings (optional)
+.vscode/
+
+# BUT keep specific files even if inside ignored folders
+!**/A.json
+!**/B.csv
+C:\Users\Federico\Code-Projects\FedeDon-Github-Repos\Ontology-Tradecraft\projects\project-5\venv5
+projects\project-5\venv5
