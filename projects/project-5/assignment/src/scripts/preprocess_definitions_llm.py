@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Preprocess and enrich ontology definitions using an LLM.
+Preprocess and enrich ontology definitions using Qodo LLM.
 Normalizes definitions to canonical form and aligns with CCO style.
 """
 
@@ -12,44 +12,34 @@ import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
-# Try to import OpenAI, but provide alternatives if not available
+# Import OpenAI package (used for Qodo API)
 try:
-    import openai
-    OPENAI_AVAILABLE = True
+    from openai import OpenAI
+    QODO_AVAILABLE = True
 except ImportError:
-    OPENAI_AVAILABLE = False
-    print("Warning: openai package not installed. Install with: pip install openai")
-
-# Try to import Anthropic as an alternative
-try:
-    import anthropic
-    ANTHROPIC_AVAILABLE = True
-except ImportError:
-    ANTHROPIC_AVAILABLE = False
-    print("Warning: anthropic package not installed. Install with: pip install anthropic")
+    QODO_AVAILABLE = False
+    print("Error: openai package not installed. Install with: pip install openai")
+    sys.exit(1)
 
 
 class DefinitionEnricher:
-    """Enriches and normalizes ontology definitions using LLM."""
+    """Enriches and normalizes ontology definitions using Qodo LLM."""
     
-    def __init__(self, api_key: Optional[str] = None, provider: str = "openai"):
+    def __init__(self, api_key: Optional[str] = None):
         """
-        Initialize the enricher with API credentials.
+        Initialize the enricher with Qodo API credentials.
         
         Args:
-            api_key: API key for the LLM provider
-            provider: LLM provider to use ("openai" or "anthropic")
+            api_key: Qodo API key
         """
-        self.provider = provider.lower()
+        if not QODO_AVAILABLE:
+            raise ValueError("OpenAI package not installed. Install with: pip install openai")
         
-        if self.provider == "openai" and OPENAI_AVAILABLE:
-            self.client = openai.OpenAI(api_key=api_key or os.getenv("OPENAI_API_KEY"))
-            self.model = "gpt-4-turbo-preview"  # or "gpt-3.5-turbo" for lower cost
-        elif self.provider == "anthropic" and ANTHROPIC_AVAILABLE:
-            self.client = anthropic.Anthropic(api_key=api_key or os.getenv("ANTHROPIC_API_KEY"))
-            self.model = "claude-3-haiku-20240307"  # or "claude-3-sonnet-20240229" for better quality
-        else:
-            raise ValueError(f"Provider '{provider}' not available or not installed")
+        self.client = OpenAI(
+            api_key=api_key or os.getenv("QODO_API_KEY") or os.getenv("CODIUM_API_KEY"),
+            base_url="https://api.qodo.ai/v1"
+        )
+        self.model = "gpt-4o-mini"
     
     def create_prompt(self, label: str, definition: str, iri: str) -> str:
         """
@@ -88,7 +78,7 @@ Provide ONLY the improved definition text, nothing else. Do not include the enti
     
     def enrich_definition(self, label: str, definition: str, iri: str, max_retries: int = 3) -> str:
         """
-        Enrich a single definition using the LLM.
+        Enrich a single definition using Qodo LLM.
         
         Args:
             label: The entity label
@@ -103,30 +93,16 @@ Provide ONLY the improved definition text, nothing else. Do not include the enti
         
         for attempt in range(max_retries):
             try:
-                if self.provider == "openai" and OPENAI_AVAILABLE:
-                    response = self.client.chat.completions.create(
-                        model=self.model,
-                        messages=[
-                            {"role": "system", "content": "You are an expert in ontology engineering and the Common Core Ontologies."},
-                            {"role": "user", "content": prompt}
-                        ],
-                        temperature=0.3,  # Lower temperature for more consistent output
-                        max_tokens=200
-                    )
-                    enriched = response.choices[0].message.content.strip()
-                    
-                elif self.provider == "anthropic" and ANTHROPIC_AVAILABLE:
-                    response = self.client.messages.create(
-                        model=self.model,
-                        max_tokens=200,
-                        temperature=0.3,
-                        messages=[
-                            {"role": "user", "content": prompt}
-                        ]
-                    )
-                    enriched = response.content[0].text.strip()
-                else:
-                    return definition  # Fallback to original
+                response = self.client.chat.completions.create(
+                    model=self.model,
+                    messages=[
+                        {"role": "system", "content": "You are an expert in ontology engineering and the Common Core Ontologies."},
+                        {"role": "user", "content": prompt}
+                    ],
+                    temperature=0.3,  # Lower temperature for more consistent output
+                    max_tokens=200
+                )
+                enriched = response.choices[0].message.content.strip()
                 
                 # Validate the enriched definition
                 if enriched and len(enriched) > 10:
@@ -239,63 +215,23 @@ def main():
         print("Please run extract_definitions.py first to generate the definitions.csv file.")
         sys.exit(1)
     
-    # Check for API key
-    api_key = os.getenv("OPENAI_API_KEY") or os.getenv("ANTHROPIC_API_KEY")
-    if not api_key and (OPENAI_AVAILABLE or ANTHROPIC_AVAILABLE):
-        print("Warning: No API key found in environment variables.")
-        print("Set OPENAI_API_KEY or ANTHROPIC_API_KEY environment variable.")
-        print("\nUsing fallback mode - definitions will be minimally processed.")
-        
-        # Fallback processing without LLM
-        definitions = load_definitions(input_file)
-        enriched = []
-        
-        for defn in definitions:
-            enriched_def = defn['definition']
-            
-            # Basic normalization without LLM
-            if enriched_def:
-                # Expand common abbreviations
-                enriched_def = enriched_def.replace("govt.", "government")
-                enriched_def = enriched_def.replace("Govt.", "Government")
-                enriched_def = enriched_def.replace("dept.", "department")
-                enriched_def = enriched_def.replace("Dept.", "Department")
-                enriched_def = enriched_def.replace("org.", "organization")
-                enriched_def = enriched_def.replace("Org.", "Organization")
-                
-                # Ensure proper ending
-                if enriched_def and not enriched_def.endswith('.'):
-                    enriched_def += '.'
-                
-                # Ensure proper capitalization
-                if enriched_def and not enriched_def[0].isupper():
-                    enriched_def = enriched_def[0].upper() + enriched_def[1:]
-            else:
-                # Create basic definition from label
-                enriched_def = f"A facility-related concept associated with {defn['label'].replace('_', ' ').lower()}."
-            
-            enriched.append({
-                'IRI': defn['IRI'],
-                'label': defn['label'],
-                'original_definition': defn['definition'],
-                'enriched_definition': enriched_def,
-                'modified': enriched_def != defn['definition']
-            })
-        
-        save_enriched_definitions(output_file, enriched)
-        print(f"\nDefinitions processed (fallback mode) and saved to: {output_file}")
-        return
+    # Check for Qodo API key
+    api_key = os.getenv("QODO_API_KEY") or os.getenv("CODIUM_API_KEY")
     
-    # Determine which provider to use
-    provider = "openai" if OPENAI_AVAILABLE and os.getenv("OPENAI_API_KEY") else "anthropic"
+    if not api_key:
+        print("Error: No Qodo API key found!")
+        print("Set the environment variable:")
+        print("  PowerShell: $env:QODO_API_KEY = 'your-key-here'")
+        print("  Linux/Mac: export QODO_API_KEY='your-key-here'")
+        sys.exit(1)
     
-    print(f"Using {provider.upper()} for definition enrichment...")
+    print("Using Qodo AI for definition enrichment...")
     
     # Initialize enricher
     try:
-        enricher = DefinitionEnricher(api_key=api_key, provider=provider)
+        enricher = DefinitionEnricher(api_key=api_key)
     except Exception as e:
-        print(f"Error initializing LLM enricher: {e}")
+        print(f"Error initializing Qodo enricher: {e}")
         print("Please check your API key and internet connection.")
         sys.exit(1)
     
@@ -305,7 +241,7 @@ def main():
     print(f"Loaded {len(definitions)} definitions")
     
     # Process definitions
-    print("\nEnriching definitions with LLM...")
+    print("\nEnriching definitions with Qodo LLM...")
     enriched_definitions = enricher.process_definitions(definitions)
     
     # Save enriched definitions
@@ -323,3 +259,4 @@ def main():
 if __name__ == "__main__":
     main()
 
+    

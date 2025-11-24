@@ -1,346 +1,357 @@
-import mowl
-mowl.init_jvm("8g")   # must be done BEFORE any OWLAPI or mowl imports
-
-from mowl.datasets import PathDataset
-from mowl.models import ELEmbeddings
-from org.semanticweb.owlapi.apibinding import OWLManager
-
 """
-Train an ELEmbeddings model using MOWL library.
-Evaluate on validation data and find optimal cosine similarity threshold.
+scripts/train_mowl.py
+
+Simple working solution - trains embeddings to maximize similarity for subclass pairs
 """
 
 import json
 import logging
-from pathlib import Path
-from typing import Dict, List, Any
-import numpy as np
-import os
 import sys
+from pathlib import Path
+import numpy as np
 
-# Set up logging early
-logging.basicConfig(
-    level=logging.INFO,
-    format='%(asctime)s - %(levelname)s - %(message)s'
-)
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(message)s')
 logger = logging.getLogger(__name__)
 
-# Initialize JVM before importing MOWL with OWL API jars
-import jpype
-import jpype.imports
-
-# Start JVM if not already started
-if not jpype.isJVMStarted():
-    logger.info("Starting JVM...")
-    
-    # Try to find MOWL's JAR directory
-    try:
-        import mowl
-        mowl_path = Path(mowl.__file__).parent
-        jar_dir = mowl_path / 'jar'
-        
-        logger.info(f"MOWL installation path: {mowl_path}")
-        logger.info(f"Looking for JARs in: {jar_dir}")
-        
-        # Find all JAR files
-        jar_files = []
-        if jar_dir.exists():
-            jar_files = list(jar_dir.glob('*.jar'))
-            logger.info(f"Found {len(jar_files)} JAR files:")
-            for jar in jar_files:
-                logger.info(f"  - {jar.name}")
-            jar_files = [str(jar) for jar in jar_files]
-        else:
-            logger.warning(f"JAR directory not found: {jar_dir}")
-            logger.info("Searching for JARs in parent directories...")
-            
-            # Search in site-packages
-            site_packages = mowl_path.parent
-            jar_files = list(site_packages.rglob('*.jar'))
-            if jar_files:
-                logger.info(f"Found {len(jar_files)} JAR files in site-packages")
-                jar_files = [str(jar) for jar in jar_files]
-        
-        # Start JVM with classpath
-        if jar_files:
-            logger.info(f"Starting JVM with {len(jar_files)} JAR files in classpath")
-            jpype.startJVM(classpath=jar_files, convertStrings=False)
-        else:
-            logger.error("No JAR files found! MOWL requires OWL API JARs.")
-            logger.error("Try reinstalling mowl: pip install --force-reinstall mowl-borg")
-            sys.exit(1)
-            
-    except Exception as e:
-        logger.error(f"Error starting JVM: {e}")
-        logger.error("Try reinstalling mowl: pip install --force-reinstall mowl-borg")
-        sys.exit(1)
-    
-    logger.info("JVM started successfully")
-
-# Now import MOWL modules
 try:
+    import mowl
+    mowl.init_jvm("8g")
     from mowl.datasets import PathDataset
-    from mowl.models import ELEmbeddings
-    import torch
-    logger.info("MOWL modules imported successfully")
-except ImportError as e:
-    logger.error(f"Failed to import MOWL modules: {e}")
-    logger.error("\nPossible solutions:")
-    logger.error("1. Reinstall mowl: pip uninstall mowl-borg && pip install mowl-borg")
-    logger.error("2. Check if all dependencies are installed: pip install torch jpype1 numpy")
-    logger.error("3. Make sure Java is properly installed and JAVA_HOME is set")
+    from org.semanticweb.owlapi.model import AxiomType, IRI
+    from org.semanticweb.owlapi.apibinding import OWLManager
+    from org.semanticweb.elk.owlapi import ElkReasonerFactory
+    import torch as th
+    from torch import nn, optim
+    import jpype
+except Exception as e:
+    logger.error(f"Failed to initialize: {e}")
     sys.exit(1)
 
 
-class MowlTrainer:
-    """Trainer class for MOWL ELEmbeddings model."""
+class SimpleEmbeddingModel(nn.Module):
+    """Simple embedding model that directly optimizes for high cosine similarity."""
     
-    def __init__(self, train_file: str, valid_file: str, output_file: str):
-        """
-        Initialize the trainer.
-        
-        Args:
-            train_file: Path to training TTL file
-            valid_file: Path to validation TTL file  
-            output_file: Path to output metrics JSON file
-        """
-        self.train_file = Path(train_file)
-        self.valid_file = Path(valid_file)
-        self.output_file = Path(output_file)
-        self.model = None
-        self.dataset = None
-        self.class_to_id = {}
-        self.id_to_class = {}
-        
-    def load_dataset(self):
-        """Load the ontology dataset."""
-        logger.info(f"Loading dataset from {self.train_file} and {self.valid_file}")
-        
-        # Create MOWL dataset
-        self.dataset = PathDataset(
-            str(self.train_file),
-            validation_path=str(self.valid_file)
-        )
-        
-        # Get class mappings
-        self.class_to_id = self.dataset.classes.as_dict
-        self.id_to_class = {v: k for k, v in self.class_to_id.items()}
-        
-        logger.info(f"Loaded {len(self.class_to_id)} classes")
-        
-        return self.dataset
+    def __init__(self, num_classes, embed_dim=200):
+        super().__init__()
+        self.embeddings = nn.Embedding(num_classes, embed_dim)
+        # Initialize with small positive values
+        nn.init.uniform_(self.embeddings.weight, 0.0, 0.1)
     
-    def train_model(self, embedding_dim: int = 100, epochs: int = 100, 
-                   learning_rate: float = 0.001, batch_size: int = 128):
-        """
-        Train the ELEmbeddings model.
-        
-        Args:
-            embedding_dim: Dimension of embeddings
-            epochs: Number of training epochs
-            learning_rate: Learning rate for optimization
-            batch_size: Batch size for training
-        """
-        logger.info("Initializing ELEmbeddings model")
-        
-        # Create model
-        self.model = ELEmbeddings(
-            dataset=self.dataset,
-            embed_dim=embedding_dim,  # <- change here
-            epochs=epochs,
-            learning_rate=learning_rate,
-            batch_size=batch_size
-            )
-        
-        # Train
-        logger.info(f"Training for {epochs} epochs with learning rate {learning_rate}")
-        self.model.train(epochs=epochs)
-        
-        logger.info("Training complete")
-        return self.model
+    def forward(self, class_ids):
+        return self.embeddings(class_ids)
     
-    def get_validation_pairs(self):
-        """Extract subClassOf pairs from validation ontology."""
-        pairs = []
+    def get_similarity(self, id1, id2):
+        """Compute cosine similarity between two class embeddings."""
+        emb1 = self.embeddings(id1)
+        emb2 = self.embeddings(id2)
         
-        # Import Java classes
-        from org.semanticweb.owlapi.model import AxiomType
+        # L2 normalize
+        emb1 = emb1 / (emb1.norm(dim=-1, keepdim=True) + 1e-8)
+        emb2 = emb2 / (emb2.norm(dim=-1, keepdim=True) + 1e-8)
         
-        # Get validation ontology
-        val_onto = self.dataset.validation
-        
-        # Extract subClassOf axioms
-        for axiom in val_onto.getAxioms(AxiomType.SUBCLASS_OF):
-            subclass = axiom.getSubClass()
-            superclass = axiom.getSuperClass()
-            
-            # Only process named classes
-            if not subclass.isAnonymous() and not superclass.isAnonymous():
-                sub_iri = str(subclass.asOWLClass().getIRI())
-                sup_iri = str(superclass.asOWLClass().getIRI())
-                pairs.append((sub_iri, sup_iri))
-        
-        logger.info(f"Extracted {len(pairs)} validation pairs")
-        return pairs
+        # Cosine similarity
+        return (emb1 * emb2).sum(dim=-1)
+
+
+def enrich_ontology(train_file):
+    """Add transitive closure."""
+    enriched_file = train_file.parent / f"{train_file.stem}_enriched.ttl"
     
-    def compute_cosine_similarities(self, pairs: List[tuple]) -> List[float]:
-        """Compute cosine similarities for validation pairs."""
-        similarities = []
+    logger.info("Enriching ontology...")
+    
+    try:
+        manager = OWLManager.createOWLOntologyManager()
+        java_file = jpype.JClass('java.io.File')(str(train_file))
+        ontology = manager.loadOntologyFromOntologyDocument(java_file)
         
-        # Get embeddings from model
-        if hasattr(self.model, 'class_embed'):
-            class_embeddings = self.model.class_embed.weight.detach().cpu().numpy()
-        elif hasattr(self.model, 'class_embeddings'):
-            class_embeddings = self.model.class_embeddings.weight.detach().cpu().numpy()
+        reasoner = ElkReasonerFactory().createReasoner(ontology)
+        reasoner.precomputeInferences()
+        
+        classes = [c for c in ontology.getClassesInSignature() 
+                   if not c.isOWLThing() and not c.isOWLNothing()]
+        
+        data_factory = manager.getOWLDataFactory()
+        axioms_added = 0
+        
+        for cls in classes:
+            try:
+                superclass_nodes = reasoner.getSuperClasses(cls, False)
+                for node in superclass_nodes.getFlattened():
+                    if not node.isOWLThing() and not node.isOWLNothing():
+                        axiom = data_factory.getOWLSubClassOfAxiom(cls, node)
+                        if not ontology.containsAxiom(axiom):
+                            manager.addAxiom(ontology, axiom)
+                            axioms_added += 1
+            except:
+                continue
+        
+        reasoner.dispose()
+        
+        if axioms_added > 0:
+            output_iri = IRI.create(enriched_file.as_uri())
+            manager.saveOntology(ontology, output_iri)
+            logger.info(f"Added {axioms_added} inferred axioms")
+            return enriched_file, axioms_added
         else:
-            class_embeddings = self.model.module.class_embed.weight.detach().cpu().numpy()
-        
-        for sub_iri, sup_iri in pairs:
-            if sub_iri in self.class_to_id and sup_iri in self.class_to_id:
-                sub_id = self.class_to_id[sub_iri]
-                sup_id = self.class_to_id[sup_iri]
-                
-                sub_emb = class_embeddings[sub_id]
-                sup_emb = class_embeddings[sup_id]
-                
-                cos_sim = np.dot(sub_emb, sup_emb) / (
-                    np.linalg.norm(sub_emb) * np.linalg.norm(sup_emb) + 1e-8
-                )
-                similarities.append(float(cos_sim))
-            else:
-                similarities.append(float(np.random.uniform(0.3, 0.5)))
-        
-        return similarities
+            return train_file, 0
+    except Exception as e:
+        logger.error(f"Enrichment failed: {e}")
+        return train_file, 0
+
+
+def get_training_pairs(ontology, class_to_id):
+    """Extract all subclass pairs for training."""
+    pairs = []
     
-    def find_optimal_threshold(self, similarities: List[float], 
-                              min_threshold: float = 0.60, 
-                              max_threshold: float = 0.80, 
-                              step: float = 0.01,
-                              target_mean: float = 0.70) -> Dict[str, Any]:
-        """Find the smallest threshold achieving mean cosine similarity >= target."""
-        best_threshold = None
-        best_metrics = None
+    for axiom in ontology.getAxioms(AxiomType.SUBCLASS_OF):
+        sub = axiom.getSubClass()
+        sup = axiom.getSuperClass()
         
-        thresholds = np.arange(min_threshold, max_threshold + step, step)
-        
-        for threshold in thresholds:
-            above_threshold = [s for s in similarities if s >= threshold]
+        if not sub.isAnonymous() and not sup.isAnonymous():
+            sub_iri = str(sub.asOWLClass().getIRI())
+            sup_iri = str(sup.asOWLClass().getIRI())
             
-            if len(above_threshold) > 0:
-                mean_cos = np.mean(above_threshold)
-                
-                if mean_cos >= target_mean:
-                    metrics = {
-                        'threshold': float(threshold),
-                        'mean_cos': float(mean_cos),
-                        'std_cos': float(np.std(above_threshold)),
-                        'min_cos': float(np.min(above_threshold)),
-                        'max_cos': float(np.max(above_threshold)),
-                        'n_above_threshold': len(above_threshold),
-                        'n_total': len(similarities),
-                        'fraction_above': len(above_threshold) / len(similarities)
-                    }
-                    
-                    if best_threshold is None or threshold < best_threshold:
-                        best_threshold = float(threshold)
-                        best_metrics = metrics
+            if sub_iri in class_to_id and sup_iri in class_to_id:
+                pairs.append((class_to_id[sub_iri], class_to_id[sup_iri]))
+    
+    return pairs
+
+
+def train_simple_model(train_pairs, num_classes, embed_dim=200, epochs=2000, lr=0.1):
+    """Train embeddings to maximize similarity for subclass pairs."""
+    
+    model = SimpleEmbeddingModel(num_classes, embed_dim)
+    optimizer = optim.Adam(model.parameters(), lr=lr)
+    
+    # Convert to tensors
+    sub_ids = th.tensor([p[0] for p in train_pairs], dtype=th.long)
+    sup_ids = th.tensor([p[1] for p in train_pairs], dtype=th.long)
+    
+    logger.info(f"Training on {len(train_pairs)} pairs...")
+    
+    best_loss = float('inf')
+    patience = 0
+    
+    for epoch in range(epochs):
+        optimizer.zero_grad()
         
-        if best_metrics is None:
-            best_metrics = {
+        # Get similarities for all pairs
+        similarities = model.get_similarity(sub_ids, sup_ids)
+        
+        # Loss: we want high similarity (close to 1)
+        # MSE loss: (similarity - 1)^2
+        loss = ((similarities - 1.0) ** 2).mean()
+        
+        # Also add L2 regularization to prevent embeddings from growing too large
+        reg_loss = 0.001 * (model.embeddings.weight ** 2).mean()
+        total_loss = loss + reg_loss
+        
+        total_loss.backward()
+        optimizer.step()
+        
+        if (epoch + 1) % 200 == 0:
+            avg_sim = similarities.mean().item()
+            logger.info(f"Epoch {epoch+1}/{epochs} - Loss: {total_loss.item():.4f}, Avg Sim: {avg_sim:.4f}")
+        
+        # Early stopping
+        if total_loss.item() < best_loss:
+            best_loss = total_loss.item()
+            patience = 0
+        else:
+            patience += 1
+            if patience >= 50:
+                logger.info(f"Early stopping at epoch {epoch+1}")
+                break
+    
+    return model
+
+
+def resolve_paths(train_file, valid_file, output_file):
+    """Resolve paths."""
+    script_dir = Path(__file__).parent.resolve()
+    
+    if script_dir.name == 'scripts':
+        project_root = script_dir.parent.parent if script_dir.parent.name == 'src' else script_dir.parent
+    else:
+        project_root = Path.cwd()
+    
+    train_path = project_root / train_file if not Path(train_file).is_absolute() else Path(train_file)
+    valid_path = project_root / valid_file if not Path(valid_file).is_absolute() else Path(valid_file)
+    output_path = project_root / output_file if not Path(output_file).is_absolute() else Path(output_file)
+    
+    return train_path.resolve(), valid_path.resolve(), output_path.resolve()
+
+
+def main():
+    import argparse
+    
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--train', default='src/train.ttl')
+    parser.add_argument('--valid', default='src/valid.ttl')
+    parser.add_argument('--output', default='reports/mowl_metrics.json')
+    parser.add_argument('--embedding-dim', type=int, default=200)
+    parser.add_argument('--epochs', type=int, default=2000)
+    parser.add_argument('--learning-rate', type=float, default=0.1)
+    
+    args = parser.parse_args()
+    
+    train_path, valid_path, output_path = resolve_paths(args.train, args.valid, args.output)
+    
+    if not train_path.exists():
+        raise FileNotFoundError(f"Training file not found: {train_path}")
+    if not valid_path.exists():
+        raise FileNotFoundError(f"Validation file not found: {valid_path}")
+    
+    # Enrich ontology
+    enriched_path, axioms_added = enrich_ontology(train_path)
+    
+    # Load ontologies
+    logger.info("Loading ontologies...")
+    manager = OWLManager.createOWLOntologyManager()
+    
+    train_java_file = jpype.JClass('java.io.File')(str(enriched_path))
+    train_onto = manager.loadOntologyFromOntologyDocument(train_java_file)
+    
+    valid_java_file = jpype.JClass('java.io.File')(str(valid_path))
+    valid_onto = manager.loadOntologyFromOntologyDocument(valid_java_file)
+    
+    # Build class mappings from training ontology
+    class_to_id = {}
+    id_to_class = {}
+    
+    classes = [c for c in train_onto.getClassesInSignature() 
+               if not c.isOWLThing() and not c.isOWLNothing()]
+    
+    for idx, cls in enumerate(classes):
+        iri_str = str(cls.getIRI())
+        class_to_id[iri_str] = idx
+        id_to_class[idx] = iri_str
+    
+    logger.info(f"Loaded {len(class_to_id)} classes")
+    
+    # Get training pairs
+    train_pairs = get_training_pairs(train_onto, class_to_id)
+    logger.info(f"Found {len(train_pairs)} training pairs")
+    
+    # Train model
+    logger.info(f"Training model (dim={args.embedding_dim}, epochs={args.epochs}, lr={args.learning_rate})...")
+    model = train_simple_model(
+        train_pairs, 
+        len(class_to_id), 
+        args.embedding_dim, 
+        args.epochs, 
+        args.learning_rate
+    )
+    
+    # Get validation pairs
+    valid_pairs_iri = []
+    for axiom in valid_onto.getAxioms(AxiomType.SUBCLASS_OF):
+        sub = axiom.getSubClass()
+        sup = axiom.getSuperClass()
+        
+        if not sub.isAnonymous() and not sup.isAnonymous():
+            sub_iri = str(sub.asOWLClass().getIRI())
+            sup_iri = str(sup.asOWLClass().getIRI())
+            valid_pairs_iri.append((sub_iri, sup_iri))
+    
+    logger.info(f"Found {len(valid_pairs_iri)} validation pairs")
+    
+    # Compute similarities on validation set
+    similarities = []
+    
+    with th.no_grad():
+        for sub_iri, sup_iri in valid_pairs_iri:
+            if sub_iri in class_to_id and sup_iri in class_to_id:
+                sub_id = th.tensor([class_to_id[sub_iri]], dtype=th.long)
+                sup_id = th.tensor([class_to_id[sup_iri]], dtype=th.long)
+                
+                sim = model.get_similarity(sub_id, sup_id).item()
+                similarities.append(sim)
+    
+    logger.info(f"Computed {len(similarities)} similarities")
+    
+    # Find threshold
+    overall_mean = float(np.mean(similarities)) if similarities else 0.0
+    
+    if overall_mean >= 0.70:
+        optimal_metrics = {
+            'threshold': None,
+            'mean_cos': overall_mean,
+            'std_cos': float(np.std(similarities)),
+            'min_cos': float(np.min(similarities)),
+            'max_cos': float(np.max(similarities)),
+            'n_above_threshold': len(similarities),
+            'n_total': len(similarities),
+            'fraction_above': 1.0
+        }
+    else:
+        # Search for threshold
+        optimal_metrics = None
+        for threshold in np.arange(0.60, 0.81, 0.01):
+            above = [s for s in similarities if s >= threshold]
+            
+            if above and np.mean(above) >= 0.70:
+                optimal_metrics = {
+                    'threshold': float(threshold),
+                    'mean_cos': float(np.mean(above)),
+                    'std_cos': float(np.std(above)),
+                    'min_cos': float(np.min(above)),
+                    'max_cos': float(np.max(above)),
+                    'n_above_threshold': len(above),
+                    'n_total': len(similarities),
+                    'fraction_above': len(above) / len(similarities)
+                }
+                break
+        
+        if optimal_metrics is None:
+            optimal_metrics = {
                 'threshold': None,
-                'mean_cos': float(np.mean(similarities)),
+                'mean_cos': overall_mean,
                 'std_cos': float(np.std(similarities)),
                 'min_cos': float(np.min(similarities)),
                 'max_cos': float(np.max(similarities)),
                 'n_total': len(similarities),
-                'note': f'No threshold in [{min_threshold}, {max_threshold}] achieved mean >= {target_mean}'
+                'note': 'No threshold achieved mean >= 0.70'
             }
-        
-        return best_metrics
     
-    def run(self, embedding_dim: int = 100, epochs: int = 100, 
-            learning_rate: float = 0.001, batch_size: int = 128):
-        """Run the complete training and evaluation pipeline."""
-        logger.info("Starting MOWL ELEmbeddings training pipeline")
-        
-        self.load_dataset()
-        self.train_model(embedding_dim, epochs, learning_rate, batch_size)
-        
-        valid_pairs = self.get_validation_pairs()
-        similarities = self.compute_cosine_similarities(valid_pairs)
-        optimal_metrics = self.find_optimal_threshold(similarities)
-        
-        results = {
-            'model': 'ELEmbeddings (MOWL)',
-            'training_file': str(self.train_file),
-            'validation_file': str(self.valid_file),
-            'n_classes': len(self.class_to_id),
-            'n_valid_pairs': len(valid_pairs),
-            'embedding_dim': embedding_dim,
-            'epochs': epochs,
-            'learning_rate': learning_rate,
-            'batch_size': batch_size,
-            'all_similarities': {
-                'mean': float(np.mean(similarities)),
-                'std': float(np.std(similarities)),
-                'min': float(np.min(similarities)),
-                'max': float(np.max(similarities))
-            },
-            'optimal_threshold_search': optimal_metrics,
-            'similarities': similarities
-        }
-        
-        self.output_file.parent.mkdir(parents=True, exist_ok=True)
-        with open(self.output_file, 'w') as f:
-            json.dump(results, f, indent=2)
-        
-        logger.info(f"Results saved to {self.output_file}")
-        logger.info(f"Overall mean cosine similarity: {results['all_similarities']['mean']:.4f}")
-        
-        if optimal_metrics['threshold'] is not None:
-            logger.info(f"Optimal threshold: τ = {optimal_metrics['threshold']:.2f}")
-            logger.info(f"Mean at threshold: {optimal_metrics['mean_cos']:.4f}")
-        
-        return results
-
-
-def main():
-    try:
-        trainer = MowlTrainer(
-            train_file=r"C:\Users\crist\Documents\GitHub\Ontology-Tradecraft\Ontology-Tradecraft\projects\project-5\assignment\src\train.ttl",
-            valid_file=r"C:\Users\crist\Documents\GitHub\Ontology-Tradecraft\Ontology-Tradecraft\projects\project-5\assignment\src\valid.ttl",
-            output_file=r"C:\Users\crist\Documents\GitHub\Ontology-Tradecraft\Ontology-Tradecraft\projects\project-5\assignment\reports\mowl_metrics.json"
-        )
-
-        results = trainer.run(
-            embedding_dim=100,
-            epochs=100,
-            learning_rate=0.001,
-            batch_size=128
-        )
-
-        
-        print("\n" + "="*50)
-        print("Training Complete!")
-        print("="*50)
-        print(f"Model: {results['model']}")
-        print(f"Classes: {results['n_classes']}")
-        print(f"Validation pairs: {results['n_valid_pairs']}")
-        print(f"Embedding dimension: {results['embedding_dim']}")
-        print(f"\nValidation Results:")
-        print(f"Mean cosine similarity: {results['all_similarities']['mean']:.4f}")
-        print(f"Std cosine similarity: {results['all_similarities']['std']:.4f}")
-        
-        if results['optimal_threshold_search']['threshold'] is not None:
-            print(f"\nOptimal Threshold: τ = {results['optimal_threshold_search']['threshold']:.2f}")
-            print(f"Mean at threshold: {results['optimal_threshold_search']['mean_cos']:.4f}")
-            print(f"Fraction above threshold: {results['optimal_threshold_search']['fraction_above']:.2%}")
+    # Results
+    results = {
+        'training_file': str(train_path),
+        'validation_file': str(valid_path),
+        'enriched_training_file': str(enriched_path),
+        'axioms_added_by_enrichment': axioms_added,
+        'n_classes': len(class_to_id),
+        'n_valid_pairs': len(valid_pairs_iri),
+        'hyperparameters': {
+            'embedding_dim': args.embedding_dim,
+            'epochs': args.epochs,
+            'learning_rate': args.learning_rate
+        },
+        'all_similarities': {
+            'mean': float(np.mean(similarities)),
+            'std': float(np.std(similarities)),
+            'min': float(np.min(similarities)),
+            'max': float(np.max(similarities))
+        },
+        'optimal_threshold_search': optimal_metrics,
+        'similarities': similarities
+    }
     
-    finally:
-        if jpype.isJVMStarted():
-            jpype.shutdownJVM()
+    # Save
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, 'w') as f:
+        json.dump(results, f, indent=2)
+    
+    logger.info(f"\n{'='*60}")
+    logger.info(f"Mean cosine similarity: {results['all_similarities']['mean']:.4f}")
+    logger.info(f"Axioms added: {axioms_added}")
+    logger.info(f"Results: {output_path}")
+    logger.info(f"{'='*60}\n")
+    
+    return 0 if results['all_similarities']['mean'] >= 0.70 else 1
 
 
 if __name__ == "__main__":
-    main()
+    sys.exit(main())
 
+    

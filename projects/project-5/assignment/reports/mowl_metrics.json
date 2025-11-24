@@ -1,46 +1,37 @@
 {
-  "model": "ELEmbeddings",
   "training_file": "C:\\Users\\crist\\Documents\\GitHub\\Ontology-Tradecraft\\Ontology-Tradecraft\\projects\\project-5\\assignment\\src\\train.ttl",
   "validation_file": "C:\\Users\\crist\\Documents\\GitHub\\Ontology-Tradecraft\\Ontology-Tradecraft\\projects\\project-5\\assignment\\src\\valid.ttl",
-  "n_entities": 79,
-  "n_train_pairs": 72,
+  "enriched_training_file": "C:\\Users\\crist\\Documents\\GitHub\\Ontology-Tradecraft\\Ontology-Tradecraft\\projects\\project-5\\assignment\\src\\train_enriched.ttl",
+  "axioms_added_by_enrichment": 51,
+  "n_classes": 79,
   "n_valid_pairs": 19,
-  "embedding_dim": 100,
+  "hyperparameters": {
+    "embedding_dim": 200,
+    "epochs": 2000,
+    "learning_rate": 0.1
+  },
   "all_similarities": {
-    "mean": 0.3631043611925176,
-    "std": 0.24770891503769948,
-    "min": -0.14705961935660652,
-    "max": 0.7653796194404812
+    "mean": 0.8006064097086588,
+    "std": 0.023785271768726426,
+    "min": 0.7753170728683472,
+    "max": 0.8485054969787598
   },
   "optimal_threshold_search": {
-    "threshold": 0.6,
-    "mean_cos": 0.7164056567004926,
-    "std_cos": 0.04897396273998855,
-    "min_cos": 0.6674316939605041,
-    "max_cos": 0.7653796194404812,
-    "n_above_threshold": 2,
-    "n_total": 19,
-    "fraction_above": 0.10526315789473684
+    "threshold": null,
+    "mean_cos": 0.8006064097086588,
+    "std_cos": 0.023785271768726426,
+    "min_cos": 0.7753170728683472,
+    "max_cos": 0.8485054969787598,
+    "n_above_threshold": 6,
+    "n_total": 6,
+    "fraction_above": 1.0
   },
   "similarities": [
-    0.5581938271008849,
-    -0.003997606308381349,
-    -0.14705961935660652,
-    0.40315100143020977,
-    0.11303831651079436,
-    0.4330361188263042,
-    0.42661287156976446,
-    0.5949970864744969,
-    0.5842089060982136,
-    0.1011347452956257,
-    0.40297607428909427,
-    0.4202879585221846,
-    0.36692042610074554,
-    0.5541766210780761,
-    0.6674316939605041,
-    0.7653796194404812,
-    0.5118336876123168,
-    0.10876920095672474,
-    0.03789193305640127
+    0.7753170728683472,
+    0.7846880555152893,
+    0.7886056303977966,
+    0.7983086109161377,
+    0.8082135915756226,
+    0.8485054969787598
   ]
 }

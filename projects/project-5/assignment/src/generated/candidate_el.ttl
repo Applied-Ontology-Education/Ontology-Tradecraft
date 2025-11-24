@@ -12,7 +12,7 @@ cco:FacilityOntology a owl:Class ;
 
 :CandidateAxioms a owl:Ontology ;
     rdfs:label "Facility Ontology Candidate Axioms"@en ;
-    dcterms:created "2025-11-17T13:42:37.035547" ;
+    dcterms:created "2025-11-23T22:57:45.700387" ;
     rdfs:comment "OWL 2 EL-compliant candidate axioms generated from enriched definitions"@en .
 
 cco:ont00000032 a owl:Class ;
@@ -46,11 +46,11 @@ cco:ont00000045 a owl:Class ;
 cco:ont00000060 a owl:Class ;
     rdfs:label "Open Pit Mine"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:supports ;
-            owl:someValuesFrom cco:Activity_the_extraction_of ],
-        [ a owl:Restriction ;
             owl:onProperty cco:has_function ;
             owl:someValuesFrom cco:Activity_support_the_extraction ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_extraction_of ],
         cco:ont00000639 .
 
 cco:ont00000094 a owl:Class ;
@@ -80,11 +80,11 @@ cco:ont00000108 a owl:Class ;
 cco:ont00000172 a owl:Class ;
     rdfs:label "Base of Operations"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:has_function ;
-            owl:someValuesFrom cco:Activity_launch_and_support ],
-        [ a owl:Restriction ;
             owl:onProperty cco:supports ;
             owl:someValuesFrom cco:Activity_largescale_operations_support ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_launch_and_support ],
         cco:ont00000192 .
 
 cco:ont00000180 a owl:Class ;
@@ -164,11 +164,11 @@ cco:ont00000330 a owl:Class ;
 cco:ont00000331 a owl:Class ;
     rdfs:label "House"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:has_function ;
-            owl:someValuesFrom cco:Activity_provide_a_selfstanding ],
-        [ a owl:Restriction ;
             owl:onProperty cco:provides ;
             owl:someValuesFrom cco:Activity_a_selfstanding_permanent ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_provide_a_selfstanding ],
         cco:ont00000410 .
 
 cco:ont00000332 a owl:Class ;
@@ -181,11 +181,11 @@ cco:ont00000332 a owl:Class ;
 cco:ont00000336 a owl:Class ;
     rdfs:label "Apartment Building"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:has_function ;
-            owl:someValuesFrom cco:Activity_contain_multiple_permanent ],
-        [ a owl:Restriction ;
             owl:onProperty cco:has_part ;
             owl:someValuesFrom cco:Activity_multiple_permanent_residences ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_contain_multiple_permanent ],
         cco:ont00000410 .
 
 cco:ont00000349 a owl:Class ;
@@ -237,11 +237,11 @@ cco:ont00000468 a owl:Class ;
 cco:ont00000483 a owl:Class ;
     rdfs:label "Military Base"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:has_function ;
-            owl:someValuesFrom cco:MilitaryActivity ],
-        [ a owl:Restriction ;
             owl:onProperty cco:facilitates ;
             owl:someValuesFrom cco:Activity_training_and_operations ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:MilitaryActivity ],
         cco:ont00001052 .
 
 cco:ont00000510 a owl:Class ;
@@ -278,11 +278,11 @@ cco:ont00000664 a owl:Class ;
 cco:ont00000667 a owl:Class ;
     rdfs:label "Combat Outpost"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:has_function ;
-            owl:someValuesFrom cco:Activity_support_the_conduction ],
-        [ a owl:Restriction ;
             owl:onProperty cco:supports ;
             owl:someValuesFrom cco:Activity_the_conduction_of ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_the_conduction ],
         cco:ont00001052 .
 
 cco:ont00000670 a owl:Class ;
@@ -310,10 +310,10 @@ cco:ont00000708 a owl:Class ;
 cco:ont00000710 a owl:Class ;
     rdfs:label "Command Post Facility"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:supports ;
+            owl:onProperty cco:has_function ;
             owl:someValuesFrom cco:MilitaryActivity ],
         [ a owl:Restriction ;
-            owl:onProperty cco:has_function ;
+            owl:onProperty cco:supports ;
             owl:someValuesFrom cco:MilitaryActivity ],
         cco:ont00001052 .
 
@@ -327,11 +327,11 @@ cco:ont00000717 a owl:Class ;
 cco:ont00000737 a owl:Class ;
     rdfs:label "Forward Operations Base"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:supports ;
-            owl:someValuesFrom cco:Activity_local_strategic_objectives ],
-        [ a owl:Restriction ;
             owl:onProperty cco:has_function ;
             owl:someValuesFrom cco:Activity_support_local_strategic ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_local_strategic_objectives ],
         cco:ont00000192 .
 
 cco:ont00000757 a owl:Class ;
@@ -431,11 +431,11 @@ cco:ont00001089 a owl:Class ;
 cco:ont00001091 a owl:Class ;
     rdfs:label "Fort"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:supports ;
-            owl:someValuesFrom cco:Activity_the_defense_of ],
-        [ a owl:Restriction ;
             owl:onProperty cco:has_function ;
             owl:someValuesFrom cco:Activity_support_the_defense ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_defense_of ],
         cco:ont00001052 .
 
 cco:ont00001098 a owl:Class ;
@@ -497,11 +497,11 @@ cco:ont00001287 a owl:Class ;
 cco:ont00001295 a owl:Class ;
     rdfs:label "Financial Facility"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:has_function ;
-            owl:someValuesFrom cco:Activity_support_the_management ],
-        [ a owl:Restriction ;
             owl:onProperty cco:supports ;
             owl:someValuesFrom cco:Activity_the_management_of ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:has_function ;
+            owl:someValuesFrom cco:Activity_support_the_management ],
         cco:ont00000192 .
 
 cco:ont00001297 a owl:Class ;
@@ -535,10 +535,10 @@ cco:ont00001344 a owl:Class ;
 cco:ont00001358 a owl:Class ;
     rdfs:label "School"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:has_function ;
+            owl:onProperty cco:provides ;
             owl:someValuesFrom cco:EducationalActivity ],
         [ a owl:Restriction ;
-            owl:onProperty cco:provides ;
+            owl:onProperty cco:has_function ;
             owl:someValuesFrom cco:EducationalActivity ],
         cco:ont00000192 .
 
@@ -793,11 +793,11 @@ cco:ont00000339 a owl:Class ;
 cco:ont00000531 a owl:Class ;
     rdfs:label "Communications Facility"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:supports ;
-            owl:someValuesFrom cco:Activity_processes_of_receiving ],
-        [ a owl:Restriction ;
             owl:onProperty cco:has_function ;
             owl:someValuesFrom cco:Activity_support_processes_of ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_processes_of_receiving ],
         cco:ont00000192 .
 
 cco:ont00000641 a owl:Class ;
@@ -872,11 +872,11 @@ cco:ont00000052 a owl:Class ;
 cco:ont00000639 a owl:Class ;
     rdfs:label "Mine"@en ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:onProperty cco:supports ;
-            owl:someValuesFrom cco:Activity_the_extraction_of ],
-        [ a owl:Restriction ;
             owl:onProperty cco:has_function ;
             owl:someValuesFrom cco:Activity_support_the_extraction ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:supports ;
+            owl:someValuesFrom cco:Activity_the_extraction_of ],
         cco:ont00000192 .
 
 cco:ont00000677 a owl:Class ;
@@ -946,5 +946,5 @@ cco:ont00000881 a owl:Class ;
 cco:ont00000192 a owl:Class ;
     rdfs:label "ont00000192"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A facility-related concept associated with ont00000192."@en .
+    skos:definition "A concept in the facility domain related to ont00000192."@en .
 

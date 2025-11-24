@@ -413,7 +413,7 @@ def main():
         for warning in warnings:
             print(f"    - {warning}")
     else:
-        print("  All axioms are OWL 2 EL compliant ✓")
+        print("  All axioms are OWL 2 EL compliant [OK]")
     
     # Save the axioms
     print(f"\nSaving candidate axioms to {output_file}...")
