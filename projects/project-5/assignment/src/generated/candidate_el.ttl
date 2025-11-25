@@ -8,22 +8,22 @@
 cco:FacilityOntology a owl:Class ;
     rdfs:label "Facility Ontology"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "An ontology is a formal specification of concepts and relationships that represents buildings, campuses, and other constructed environments that are designed to serve specific purposes and which are common across multiple domains of application."@en .
+    skos:definition "An ontology is a formal representation of knowledge that specifies the classes, properties, and relationships of facilities including buildings and campuses that are designed to serve specific purposes and which are common to multiple domains."@en .
 
 :CandidateAxioms a owl:Ontology ;
     rdfs:label "Facility Ontology Candidate Axioms"@en ;
-    dcterms:created "2025-11-24T15:10:00.043914" ;
+    dcterms:created "2025-11-25T12:59:06.446625" ;
     rdfs:comment "OWL 2 EL-compliant candidate axioms generated from enriched definitions using Claude"@en .
 
 cco:ont00000032 a owl:Class ;
     rdfs:label "Church"@en ;
     rdfs:subClassOf cco:ont00000052 ;
-    skos:definition "A Religious Facility that is designed to bear the function of supporting Christian worship services and prayer activities."@en .
+    skos:definition "A Religious Facility that is designed to bear the function of facilitating Christian worship services and prayer activities."@en .
 
 cco:ont00000040 a owl:Class ;
     rdfs:label "Grocery Store"@en ;
     rdfs:subClassOf cco:ont00001102 ;
-    skos:definition "A commercial facility that is designed to sell food and household goods primarily to individual consumers for personal consumption."@en .
+    skos:definition "A commercial facility that is designed to sell food products and household consumables to individual consumers for personal or household use."@en .
 
 cco:ont00000041 a owl:Class ;
     rdfs:label "Hostel"@en ;
@@ -48,7 +48,7 @@ cco:ont00000094 a owl:Class ;
 cco:ont00000104 a owl:Class ;
     rdfs:label "Underwater Mine"@en ;
     rdfs:subClassOf cco:ont00000639 ;
-    skos:definition "A facility that is designed to support the extraction of materials from the ocean floor or other underwater locations."@en .
+    skos:definition "A facility that is designed to support the extraction of materials from beneath the ocean floor and is located underwater or on the seafloor."@en .
 
 cco:ont00000108 a owl:Class ;
     rdfs:label "Rail Facility"@en ;
@@ -93,12 +93,12 @@ cco:ont00000248 a owl:Class ;
 cco:ont00000262 a owl:Class ;
     rdfs:label "Shop"@en ;
     rdfs:subClassOf cco:ont00001102 ;
-    skos:definition "A Commercial Facility that is designed to sell small quantities of goods directly to individual consumers."@en .
+    skos:definition "A Commercial Facility that is designed to sell goods in small quantities directly to individual consumers."@en .
 
 cco:ont00000271 a owl:Class ;
     rdfs:label "Underground Mine"@en ;
     rdfs:subClassOf cco:ont00000639 ;
-    skos:definition "A mine that is designed to support the extraction of materials from beneath the surface of the ground by means of underground tunnels, shafts, and excavated chambers."@en .
+    skos:definition "A mine that is designed to support the extraction of materials from beneath the surface of the ground by means of subterranean tunnels and vertical shafts."@en .
 
 cco:ont00000330 a owl:Class ;
     rdfs:label "Thermal Power Plant"@en ;
@@ -108,7 +108,7 @@ cco:ont00000330 a owl:Class ;
 cco:ont00000331 a owl:Class ;
     rdfs:label "House"@en ;
     rdfs:subClassOf cco:ont00000410 ;
-    skos:definition "A Residential Facility that is designed to provide a self-standing, permanent residence for one or more persons and that is typically characterized by being a detached structure intended for occupancy by a single household or family unit."@en .
+    skos:definition "A Residential Facility that is designed to provide a self-standing, permanent residence for one or more persons and that consists of a single structural unit intended for occupancy by an individual, family, household, or similar-sized group."@en .
 
 cco:ont00000336 a owl:Class ;
     rdfs:label "Apartment Building"@en ;
@@ -123,32 +123,32 @@ cco:ont00000349 a owl:Class ;
 cco:ont00000375 a owl:Class ;
     rdfs:label "Warehouse"@en ;
     rdfs:subClassOf cco:ont00000881 ;
-    skos:definition "A storage facility that is designed to store commercial goods in large quantities for distribution or sale."@en .
+    skos:definition "A storage facility that is designed to store large quantities of commercial goods and materials for distribution or sale."@en .
 
 cco:ont00000381 a owl:Class ;
     rdfs:label "Weapon Manufacturing Facility"@en ;
     rdfs:subClassOf cco:ont00000782 ;
-    skos:definition "A manufacturing facility that is designed to produce or assemble weapons or weapon systems."@en .
+    skos:definition "A manufacturing facility that is designed to produce or assemble weapons."@en .
 
 cco:ont00000421 a owl:Class ;
     rdfs:label "Nuclear Power Plant"@en ;
     rdfs:subClassOf cco:ont00001076 ;
-    skos:definition "A Thermal Power Plant that is designed to generate heat through nuclear fission reactions within a nuclear reactor and convert that heat into electrical energy."@en .
+    skos:definition "A Thermal Power Plant that is designed to generate thermal energy by means of controlled nuclear fission reactions within a nuclear reactor and convert that thermal energy into electrical energy."@en .
 
 cco:ont00000423 a owl:Class ;
     rdfs:label "Motor Vehicle Manufacturing Facility"@en ;
     rdfs:subClassOf cco:ont00000782 ;
-    skos:definition "A Factory that is designed to manufacture motor vehicles such as automobiles, trucks, motorcycles, and other self-propelled wheeled conveyances."@en .
+    skos:definition "A Factory that is designed to manufacture motor vehicles such as automobiles, trucks, motorcycles, and other wheeled transportation devices."@en .
 
 cco:ont00000432 a owl:Class ;
     rdfs:label "Missile Launch Site"@en ;
     rdfs:subClassOf cco:ont00001052 ;
-    skos:definition "A military facility that is designed to store missiles and is equipped with the infrastructure necessary to launch missiles."@en .
+    skos:definition "A military facility that is designed to store missiles and has the capability to launch missiles from its location."@en .
 
 cco:ont00000468 a owl:Class ;
     rdfs:label "Office Building"@en ;
     rdfs:subClassOf cco:ont00001102 ;
-    skos:definition "A Commercial Facility that is designed to provide an environment for conducting office-based work activities including commercial, professional, or bureaucratic functions."@en .
+    skos:definition "A Commercial Facility that is designed to house offices and other spaces intended for the conduct of administrative, professional, or business activities."@en .
 
 cco:ont00000483 a owl:Class ;
     rdfs:label "Military Base"@en ;
@@ -178,7 +178,7 @@ cco:ont00000664 a owl:Class ;
 cco:ont00000667 a owl:Class ;
     rdfs:label "Combat Outpost"@en ;
     rdfs:subClassOf cco:ont00001052 ;
-    skos:definition "A military facility that is designed to house military personnel and equipment for the purpose of conducting combat operations of limited scope or duration in forward or remote locations."@en .
+    skos:definition "A military facility that is designed to house military personnel and equipment for the purpose of conducting combat operations of limited scope or duration in forward deployed locations."@en .
 
 cco:ont00000670 a owl:Class ;
     rdfs:label "Distribution Port"@en ;
@@ -188,7 +188,7 @@ cco:ont00000670 a owl:Class ;
 cco:ont00000680 a owl:Class ;
     rdfs:label "Medical Depot"@en ;
     rdfs:subClassOf cco:ont00000881 ;
-    skos:definition "A Storage Facility that is designed to store medical supplies, pharmaceuticals, and healthcare equipment for distribution to healthcare facilities or emergency response operations."@en .
+    skos:definition "A Storage Facility that is designed to store medical equipment, pharmaceuticals, and other healthcare-related supplies for distribution to healthcare facilities or medical personnel."@en .
 
 cco:ont00000705 a owl:Class ;
     rdfs:label "Power Transmission Line"@en ;
@@ -198,7 +198,7 @@ cco:ont00000705 a owl:Class ;
 cco:ont00000708 a owl:Class ;
     rdfs:label "Water Tower"@en ;
     rdfs:subClassOf cco:ont00000881 ;
-    skos:definition "A facility that is designed to store water in an elevated container and is the bearer of functions realized in processes of water storage and distribution through gravitational pressure."@en .
+    skos:definition "A Facility that is designed to store water in an elevated container and is the bearer of functions realized in processes of water storage and distribution through gravitational pressure."@en .
 
 cco:ont00000710 a owl:Class ;
     rdfs:label "Command Post Facility"@en ;
@@ -208,12 +208,12 @@ cco:ont00000710 a owl:Class ;
 cco:ont00000717 a owl:Class ;
     rdfs:label "Fossil Fuel Power Plant"@en ;
     rdfs:subClassOf cco:ont00001076 ;
-    skos:definition "A power plant that is designed to generate electrical energy by burning fossil fuels such as coal, natural gas, or petroleum products."@en .
+    skos:definition "A power plant that is designed to generate electrical energy by burning fossil fuels such as coal, natural gas, or petroleum products to produce heat that converts water into steam which drives turbines connected to electrical generators."@en .
 
 cco:ont00000737 a owl:Class ;
     rdfs:label "Forward Operations Base"@en ;
     rdfs:subClassOf cco:ont00001052 ;
-    skos:definition "A Military Base that is positioned in proximity to an Area of Operations to support tactical operations and local strategic objectives, and that receives logistical and operational support from a Base of Operations."@en .
+    skos:definition "A Military Base that is positioned in proximity to an Area of Operations to support offensive military activities, receives logistical and operational support from a primary Base of Operations, and is specifically designed to enable the execution of local strategic objectives and tactical military operations."@en .
 
 cco:ont00000757 a owl:Class ;
     rdfs:label "Synagogue"@en ;
@@ -223,27 +223,27 @@ cco:ont00000757 a owl:Class ;
 cco:ont00000761 a owl:Class ;
     rdfs:label "Pier"@en ;
     rdfs:subClassOf cco:ont00000226 ;
-    skos:definition "A Transportation Facility that is designed to extend from shore into a body of water and serves as a berthing place for watercraft."@en .
+    skos:definition "A Transportation Facility that is designed to extend from the shore into a body of water and provide a platform for the loading, unloading, mooring, or landing of watercraft."@en .
 
 cco:ont00000778 a owl:Class ;
     rdfs:label "Chemical Depot"@en ;
     rdfs:subClassOf cco:ont00000881 ;
-    skos:definition "A storage facility that is designed to store chemical substances and is typically used for the bulk storage and distribution of industrial chemicals, hazardous materials, or chemical products."@en .
+    skos:definition "A facility that is designed to store chemical substances and has the capability to safely contain, organize, and manage chemical materials for distribution or long-term storage purposes."@en .
 
 cco:ont00000802 a owl:Class ;
     rdfs:label "Stage"@en ;
     rdfs:subClassOf cco:ont00000641 ;
-    skos:definition "An Entertainment Facility that is designed to provide a designated performance area where actors, musicians, dancers, or other performers present live entertainment to an audience."@en .
+    skos:definition "An Entertainment Facility that is designed to provide a designated performance area where actors, musicians, speakers, or other performers present live entertainment to an audience."@en .
 
 cco:ont00000814 a owl:Class ;
     rdfs:label "Water Treatment Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to process water by removing contaminants, adjusting chemical composition, or modifying physical properties to make the water suitable for a specific intended use."@en .
+    skos:definition "A Facility that is designed to process water through physical, chemical, or biological methods to remove contaminants and improve water quality for a designated end-use purpose."@en .
 
 cco:ont00000846 a owl:Class ;
     rdfs:label "Hydroelectric Power Plant"@en ;
     rdfs:subClassOf cco:ont00001076 ;
-    skos:definition "A facility that is designed to generate electrical power by converting the kinetic energy of flowing or falling water into electrical energy through the use of turbines and generators."@en .
+    skos:definition "An electric power station that is designed to convert the kinetic energy of flowing or falling water into electrical energy through the use of turbines and generators."@en .
 
 cco:ont00000867 a owl:Class ;
     rdfs:label "Pipeline"@en ;
@@ -278,12 +278,12 @@ cco:ont00001078 a owl:Class ;
 cco:ont00001089 a owl:Class ;
     rdfs:label "Petrochemical Refinery"@en ;
     rdfs:subClassOf cco:ont00000782 ;
-    skos:definition "A refinery that is designed to process crude oil, intermediate petroleum products, or synthetic petroleum feedstocks into refined petroleum products such as gasoline, diesel fuel, heating oil, jet fuel, lubricants, and petrochemical feedstocks."@en .
+    skos:definition "A refinery that is designed to process crude oil, intermediate petroleum products, or synthetic petroleum through chemical and physical separation processes to produce refined petroleum products such as gasoline, diesel fuel, heating oil, and petrochemical feedstocks."@en .
 
 cco:ont00001091 a owl:Class ;
     rdfs:label "Fort"@en ;
     rdfs:subClassOf cco:ont00001052 ;
-    skos:definition "A military facility that is designed to support the defense of or control over some geospatial region and its inhabitants."@en .
+    skos:definition "A Military Facility that is designed to house military personnel and equipment for the purpose of defending a specified Geospatial Region or establishing military control over that region and its population."@en .
 
 cco:ont00001098 a owl:Class ;
     rdfs:label "Hospital"@en ;
@@ -293,17 +293,17 @@ cco:ont00001098 a owl:Class ;
 cco:ont00001107 a owl:Class ;
     rdfs:label "Landfill"@en ;
     rdfs:subClassOf cco:ont00001315 ;
-    skos:definition "A Waste Management Facility that is designed to dispose of solid waste materials by burial in excavated areas of land and subsequent covering with soil or other materials."@en .
+    skos:definition "A Waste Management Facility that is designed to dispose of solid waste materials by burial in excavated areas of land and that typically involves the systematic placement, compaction, and covering of waste materials with soil or other approved cover materials."@en .
 
 cco:ont00001165 a owl:Class ;
     rdfs:label "Terrorist Training Camp"@en ;
     rdfs:subClassOf cco:ont00000332 ;
-    skos:definition "A training camp that is designed to teach students methods of conducting terrorist activities."@en .
+    skos:definition "A training camp that is designed to teach students methods, techniques, and tactics for conducting acts of terrorism."@en .
 
 cco:ont00001257 a owl:Class ;
     rdfs:label "Nuclear Storage Depot"@en ;
     rdfs:subClassOf cco:ont00000881 ;
-    skos:definition "A storage facility that is designed to store nuclear materials such as enriched uranium, plutonium, radioactive waste, or other fissionable substances used in nuclear reactors or weapons programs."@en .
+    skos:definition "A storage facility that is designed to store nuclear materials such as enriched uranium, plutonium, radioactive waste, or other fissionable substances used in nuclear reactors or weapons production."@en .
 
 cco:ont00001258 a owl:Class ;
     rdfs:label "Port"@en ;
@@ -318,17 +318,17 @@ cco:ont00001283 a owl:Class ;
 cco:ont00001287 a owl:Class ;
     rdfs:label "Maintenance Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to support the performance of acts of artifact maintenance on equipment, vehicles, or other manufactured items."@en .
+    skos:definition "A Facility that is designed to support the performance of acts of artifact maintenance on equipment, vehicles, or other material artifacts."@en .
 
 cco:ont00001295 a owl:Class ;
     rdfs:label "Financial Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to support the management, storage, transfer, or exchange of monetary assets and financial instruments."@en .
+    skos:definition "A Facility that is designed to enable the processing, storage, transfer, or management of monetary assets and financial transactions."@en .
 
 cco:ont00001297 a owl:Class ;
     rdfs:label "Military Headquarters Facility"@en ;
     rdfs:subClassOf cco:ont00001052 ;
-    skos:definition "A military facility that is designed to house the administrative and operational command functions of a military organization and serves as the primary location from which military leaders direct, coordinate, and control military operations and activities."@en .
+    skos:definition "A military facility that is designed to bear the function of serving as a command center for military administration, strategic planning, and operational coordination activities."@en .
 
 cco:ont00001308 a owl:Class ;
     rdfs:label "Sewage Treatment Facility"@en ;
@@ -352,8 +352,8 @@ cco:ont00001358 a owl:Class ;
 
 cco:ont00001362 a owl:Class ;
     rdfs:label "Gas Processing Facility"@en ;
-    rdfs:subClassOf cco:ont00000782 ;
-    skos:definition "A facility that is designed to process natural gas by separating, purifying, and converting raw natural gas into marketable products such as methane, ethane, propane, butane, and natural gas liquids."@en .
+    rdfs:subClassOf cco:ont00000192 ;
+    skos:definition "A facility that is designed to process natural gas by separating, purifying, and refining it into marketable products such as methane, ethane, propane, butane, and natural gas liquids."@en .
 
 cco:ont00001380 a owl:Class ;
     rdfs:label "Farm"@en ;
@@ -368,12 +368,12 @@ cco:ont00001383 a owl:Class ;
 cco:ont00000055 a owl:Class ;
     rdfs:label "Healthcare Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to provide medical care services including the diagnosis, treatment, and prevention of disease or injury in humans."@en .
+    skos:definition "A Facility that is designed to support the diagnosis, treatment, and prevention of disease in humans."@en .
 
 cco:ont00000270 a owl:Class ;
     rdfs:label "Educational Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to enable the acquisition of knowledge, skills, or competencies through structured learning activities."@en .
+    skos:definition "A Facility that is designed to support educational processes through which knowledge, skills, values, beliefs, and habits are acquired by human beings."@en .
 
 cco:ont00000332 a owl:Class ;
     rdfs:label "Training Camp"@en ;
@@ -383,22 +383,22 @@ cco:ont00000332 a owl:Class ;
 cco:ont00000339 a owl:Class ;
     rdfs:label "Agricultural Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to house processes for the cultivation of animals, plants, or fungi for the production of food, fiber, biofuel, medicinal substances, or other products used to sustain or enhance human life."@en .
+    skos:definition "A Facility that is designed to support agricultural processes for the cultivation of animals, plants, or fungi to produce food, fiber, biofuel, medicinal plants, or other products intended to sustain and enhance human life."@en .
 
 cco:ont00000531 a owl:Class ;
     rdfs:label "Communications Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to enable the receiving, transmitting, or processing of information through electromagnetic signals, digital data, or other communication media."@en .
+    skos:definition "A Facility that is designed to support processes of receiving, transmitting, or relaying information through electromagnetic signals, digital data streams, or other communication media."@en .
 
 cco:ont00000641 a owl:Class ;
     rdfs:label "Entertainment Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to host activities that are intended to hold the interest of an audience or provide pleasure or delight to participants through performances, exhibitions, games, or other forms of amusement."@en .
+    skos:definition "A Facility that is designed to host activities that are intended to hold the interest of an audience or provide pleasure or delight to participants through recreational, artistic, or leisure pursuits."@en .
 
 cco:ont00000655 a owl:Class ;
     rdfs:label "Mailing Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to enable the systematic physical transportation and processing of mail items including letters, parcels, and packages between different geographic locations."@en .
+    skos:definition "A Facility that is designed to enable the systematic physical transportation and processing of postal mail, packages, and other deliverable items between geographic locations."@en .
 
 cco:ont00001375 a owl:Class ;
     rdfs:label "Washing Facility"@en ;
@@ -423,7 +423,7 @@ cco:ont00001315 a owl:Class ;
 cco:ont00000052 a owl:Class ;
     rdfs:label "Religious Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to enable the performance of religious worship activities and prayer."@en .
+    skos:definition "A Facility that is designed to enable the performance of religious worship activities and prayer practices."@en .
 
 cco:ont00000639 a owl:Class ;
     rdfs:label "Mine"@en ;
@@ -443,7 +443,7 @@ cco:ont00000410 a owl:Class ;
 cco:ont00001102 a owl:Class ;
     rdfs:label "Commercial Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to enable the buying and selling of goods and services for profit."@en .
+    skos:definition "A Facility that is designed to support commercial activities involving the exchange of goods or services for monetary compensation."@en .
 
 cco:ont00000226 a owl:Class ;
     rdfs:label "Transportation Facility"@en ;
@@ -453,12 +453,12 @@ cco:ont00000226 a owl:Class ;
 cco:ont00001076 a owl:Class ;
     rdfs:label "Electric Power Station"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to convert various forms of energy into electrical energy for distribution to consumers through an electrical power grid."@en .
+    skos:definition "A facility that is designed to convert various forms of energy into electrical energy for distribution to consumers."@en .
 
 cco:ont00000782 a owl:Class ;
     rdfs:label "Factory"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to house processes and equipment for the manufacturing or refining of material products."@en .
+    skos:definition "A Facility that is designed to have the function of manufacturing or refining material products through systematic industrial processes."@en .
 
 cco:ont00001052 a owl:Class ;
     rdfs:label "Military Facility"@en ;
@@ -468,7 +468,7 @@ cco:ont00001052 a owl:Class ;
 cco:ont00000881 a owl:Class ;
     rdfs:label "Storage Facility"@en ;
     rdfs:subClassOf cco:ont00000192 ;
-    skos:definition "A Facility that is designed to house, contain, and preserve materials, goods, or other physical objects for future use or distribution."@en .
+    skos:definition "A Facility that is designed to house, contain, and preserve materials, goods, or equipment for future use or distribution."@en .
 
 cco:ont00000192 a owl:Class ;
     rdfs:label "ont00000192"@en ;

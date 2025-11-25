@@ -6,6 +6,9 @@ Splits FacilityOntology.ttl into:
 - train.ttl (80% of SubClassOf axioms)
 - valid.ttl (20% of SubClassOf axioms)
 
+CRITICAL: Ensures both splits share the same class vocabulary so that
+validation pairs can be properly evaluated using trained embeddings.
+
 Preserves ALL class declarations and property declarations in both files.
 Only splits the SubClassOf axioms for validation purposes.
 """
@@ -13,7 +16,7 @@ Only splits the SubClassOf axioms for validation purposes.
 import random
 import sys
 from pathlib import Path
-from typing import List, Tuple
+from typing import List, Tuple, Set
 
 try:
     from rdflib import Graph, RDF, RDFS, OWL
@@ -24,9 +27,9 @@ except ImportError:
 
 
 class OntologySplitter:
-    """Splits ontology into training and validation sets."""
+    """Splits ontology into training and validation sets with shared vocabulary."""
 
-    def __init__(self, input_file: Path, output_dir: Path, train_ratio: float = 0.9, seed: int = 42):
+    def __init__(self, input_file: Path, output_dir: Path, train_ratio: float = 0.8, seed: int = 42):
         self.input_file = input_file
         self.output_dir = output_dir
         self.train_ratio = train_ratio
@@ -51,6 +54,7 @@ class OntologySplitter:
         return g
 
     def separate_axioms(self, g: Graph) -> Tuple[List, List, Graph]:
+        """Separate axioms into declarations, subclass axioms, and metadata."""
         declarations = []
         subclass_axioms = []
         metadata = Graph()
@@ -94,12 +98,16 @@ class OntologySplitter:
             elif p in (RDFS.domain, RDFS.range):
                 declarations.append((s, p, o))
 
-            # SubClassOf axioms
+            # SubClassOf axioms - ONLY named class pairs
             elif p == RDFS.subClassOf:
                 if isinstance(s, URIRef) and isinstance(o, URIRef):
+                    # Verify both are declared classes
                     if (s, RDF.type, OWL.Class) in g and (o, RDF.type, OWL.Class) in g:
-                        subclass_axioms.append((s, p, o))
+                        # Skip owl:Thing
+                        if not str(o).endswith('owl#Thing'):
+                            subclass_axioms.append((s, p, o))
                     else:
+                        # Restrictions or blank nodes - keep in declarations
                         declarations.append((s, p, o))
                 else:
                     declarations.append((s, p, o))
@@ -117,18 +125,72 @@ class OntologySplitter:
 
         return declarations, subclass_axioms, metadata
 
-    def split_axioms(self, axioms: List[Tuple]) -> Tuple[List, List]:
+    def smart_split_axioms(self, axioms: List[Tuple]) -> Tuple[List, List]:
+        """
+        Split axioms ensuring validation set has classes that appear in training.
+        
+        Strategy:
+        1. Randomly shuffle all axioms
+        2. Split 80/20
+        3. Verify that validation classes appear in training
+        4. Report statistics
+        """
+        print("\nPerforming smart split with vocabulary overlap...")
+        
+        # Shuffle axioms randomly
         shuffled = axioms.copy()
         random.shuffle(shuffled)
+        
+        # Simple split
         split_point = int(len(shuffled) * self.train_ratio)
         train_axioms = shuffled[:split_point]
         valid_axioms = shuffled[split_point:]
-        print(f"\nSplit axioms:")
-        print(f"  Train set: {len(train_axioms)} axioms ({len(train_axioms)/len(axioms)*100:.1f}%)")
-        print(f"  Valid set: {len(valid_axioms)} axioms ({len(valid_axioms)/len(axioms)*100:.1f}%)")
+        
+        # Collect vocabularies
+        train_classes = set()
+        for s, p, o in train_axioms:
+            train_classes.add(str(s))
+            train_classes.add(str(o))
+        
+        valid_classes = set()
+        for s, p, o in valid_axioms:
+            valid_classes.add(str(s))
+            valid_classes.add(str(o))
+        
+        # Calculate overlap
+        overlap = train_classes & valid_classes
+        valid_only = valid_classes - train_classes
+        
+        print(f"\nSplit statistics:")
+        print(f"  Train axioms: {len(train_axioms)} ({len(train_axioms)/len(axioms)*100:.1f}%)")
+        print(f"  Valid axioms: {len(valid_axioms)} ({len(valid_axioms)/len(axioms)*100:.1f}%)")
+        print(f"\nVocabulary analysis:")
+        print(f"  Train classes: {len(train_classes)}")
+        print(f"  Valid classes: {len(valid_classes)}")
+        print(f"  Shared classes: {len(overlap)} ({len(overlap)/len(valid_classes)*100:.1f}% of validation)")
+        
+        if valid_only:
+            print(f"  Valid-only classes: {len(valid_only)} (unseen in training)")
+            
+            # Count how many validation pairs are fully computable
+            computable = 0
+            for s, p, o in valid_axioms:
+                if str(s) in train_classes and str(o) in train_classes:
+                    computable += 1
+            
+            print(f"\nComputable validation pairs: {computable}/{len(valid_axioms)} ({computable/len(valid_axioms)*100:.1f}%)")
+            
+            if computable < 5:
+                print("\n⚠️  WARNING: Very few computable validation pairs!")
+                print("   This may affect validation quality.")
+                print("   Consider using a larger training ratio or more axioms.")
+        else:
+            print(f"\n✓ All validation classes appear in training set")
+        
         return train_axioms, valid_axioms
 
     def create_graph(self, declarations: List, specific_axioms: List, metadata: Graph) -> Graph:
+        """Create a new graph with declarations and specific axioms."""
         g = Graph()
 
         # Copy namespaces from original graph
@@ -145,21 +207,24 @@ class OntologySplitter:
         return g
 
     def save_split(self):
+        """Main splitting logic."""
         g = self.load_ontology()
         self.original_graph = g  # store for namespace copying
 
         declarations, subclass_axioms, metadata = self.separate_axioms(g)
 
         if not subclass_axioms:
-            print("Warning: No SubClassOf axioms found to split!")
+            print("\n⚠️  WARNING: No SubClassOf axioms found to split!")
+            print("   Creating train/valid files with declarations only.")
             train_graph = self.create_graph(declarations, [], metadata)
             valid_graph = self.create_graph(declarations, [], metadata)
         else:
-            train_axioms, valid_axioms = self.split_axioms(subclass_axioms)
+            train_axioms, valid_axioms = self.smart_split_axioms(subclass_axioms)
             train_graph = self.create_graph(declarations, train_axioms, metadata)
             valid_graph = self.create_graph(declarations, valid_axioms, metadata)
 
         self.output_dir.mkdir(parents=True, exist_ok=True)
+        
         print(f"\nSaving train set to {self.train_file}...")
         train_graph.serialize(destination=str(self.train_file), format='turtle')
         print(f"  Saved {len(train_graph)} triples")
@@ -168,9 +233,12 @@ class OntologySplitter:
         valid_graph.serialize(destination=str(self.valid_file), format='turtle')
         print(f"  Saved {len(valid_graph)} triples")
 
-        print("\n[OK] Split complete!")
-        print(f"  Train: {self.train_file}")
-        print(f"  Valid: {self.valid_file}")
+        print("\n" + "="*70)
+        print("✓ SPLIT COMPLETE")
+        print("="*70)
+        print(f"Train file: {self.train_file}")
+        print(f"Valid file: {self.valid_file}")
+        print("="*70)
 
 
 def main():
@@ -192,9 +260,10 @@ def main():
     print(f"Output directory: {output_dir}")
     print(f"Split ratio: 80% train / 20% validation")
     print(f"Random seed: 42")
+    print(f"Strategy: Smart split with vocabulary overlap")
     print("="*70 + "\n")
 
-    splitter = OntologySplitter(input_file=input_file, output_dir=output_dir)
+    splitter = OntologySplitter(input_file=input_file, output_dir=output_dir, train_ratio=0.8)
     try:
         splitter.save_split()
         return 0
@@ -207,3 +276,5 @@ def main():
 
 if __name__ == "__main__":
     sys.exit(main())
+
+    

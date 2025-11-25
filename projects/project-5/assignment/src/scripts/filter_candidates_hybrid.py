@@ -38,52 +38,101 @@ import os
 
 
 def resolve_paths(candidates_file, metrics_file, output_file):
-    """Resolve file paths relative to current directory."""
+    """Resolve file paths relative to script location."""
     
-    # Simply resolve relative to current working directory
-    candidates_path = Path(candidates_file).resolve()
-    metrics_path = Path(metrics_file).resolve()
-    output_path = Path(output_file).resolve()
+    # Get script directory
+    script_dir = Path(__file__).resolve().parent
+    
+    # Determine project structure
+    if script_dir.name == 'scripts':
+        if script_dir.parent.name == 'src':
+            # Structure: project_root/src/scripts/
+            project_root = script_dir.parent.parent
+            src_dir = script_dir.parent
+        else:
+            # Structure: project_root/scripts/
+            project_root = script_dir.parent
+            src_dir = project_root / 'src'
+    else:
+        project_root = script_dir
+        src_dir = project_root / 'src'
+    
+    # Resolve paths relative to project structure
+    def resolve_path(path_str):
+        p = Path(path_str)
+        if p.is_absolute():
+            return p.resolve()
+        else:
+            # Try relative to script directory first
+            rel_to_script = (script_dir / p).resolve()
+            if rel_to_script.exists():
+                return rel_to_script
+            # Try relative to project root
+            rel_to_root = (project_root / p).resolve()
+            return rel_to_root
+    
+    candidates_path = resolve_path(candidates_file)
+    metrics_path = resolve_path(metrics_file)
+    output_path = resolve_path(output_file)
     
     return candidates_path, metrics_path, output_path
 
 
 def load_candidates(candidates_file: Path) -> List[Tuple[str, str]]:
-    """Load candidate axioms from TTL file, handling multi-line class definitions."""
+    """Load candidate axioms from TTL file."""
     logger.info(f"Loading candidates from: {candidates_file}")
+    
     candidates = []
-
+    
     with open(candidates_file, 'r', encoding='utf-8') as f:
-        current_subclass = None
-        for line_num, line in enumerate(f, 1):
-            line = line.strip()
-
-            # Detect start of a class definition
-            if line.startswith('cco:ont') and 'a owl:Class' in line:
-                current_subclass = line.split()[0]
-                if current_subclass.startswith('cco:'):
-                    current_subclass = f"https://www.commoncoreontologies.org/{current_subclass.split(':')[1]}"
-            
-            # Look for rdfs:subClassOf inside the block
-            elif current_subclass and line.startswith('rdfs:subClassOf'):
-                parts = line.split()
-                if len(parts) >= 2:
-                    superclass = parts[1].rstrip(';').rstrip('.')
-                    if superclass.startswith('cco:'):
-                        superclass = f"https://www.commoncoreontologies.org/{superclass.split(':')[1]}"
-                    candidates.append((current_subclass, superclass))
-                    logger.debug(f"Added candidate: {current_subclass} ⊑ {superclass}")
-            
-            # End of block (semicolon or period)
-            if line.endswith('.'):
-                current_subclass = None
-
+        content = f.read()
+        lines = content.split('\n')
+    
+    current_subject = None
+    
+    for line_num, line in enumerate(lines, 1):
+        line = line.strip()
+        
+        # Skip comments and empty lines
+        if not line or line.startswith('#'):
+            continue
+        
+        # Match class declaration: cco:ont00000XXX a owl:Class
+        if ' a owl:Class' in line or 'rdf:type owl:Class' in line:
+            parts = line.split()
+            if parts and parts[0].startswith('cco:ont'):
+                current_subject = parts[0]
+                logger.debug(f"Line {line_num}: Found class {current_subject}")
+        
+        # Match SubClassOf within class definition
+        elif current_subject and 'rdfs:subClassOf' in line:
+            # Extract superclass
+            # Line format: "rdfs:subClassOf cco:ont00000YYY ;" or "rdfs:subClassOf cco:ont00000YYY ."
+            parts = line.split('rdfs:subClassOf')
+            if len(parts) > 1:
+                superclass_part = parts[1].strip()
+                # Remove trailing punctuation (; or .)
+                superclass = superclass_part.split()[0].rstrip(';').rstrip('.')
+                
+                if superclass.startswith('cco:ont'):
+                    # Convert to full URIs
+                    subclass_iri = f"https://www.commoncoreontologies.org/{current_subject.split(':')[1]}"
+                    superclass_iri = f"https://www.commoncoreontologies.org/{superclass.split(':')[1]}"
+                    
+                    candidates.append((subclass_iri, superclass_iri))
+                    logger.debug(f"Line {line_num}: Added {current_subject} → {superclass}")
+        
+        # Reset current subject on period (end of class definition)
+        if line.endswith('.') and not 'rdfs:subClassOf' in line:
+            current_subject = None
+    
     logger.info(f"Loaded {len(candidates)} candidate axioms")
+    
     if len(candidates) == 0:
-        logger.warning("No candidates found in file! Make sure rdfs:subClassOf is present.")
+        logger.warning("No candidates found in file!")
+        logger.warning("File may be in wrong format or empty")
     
     return candidates
-
 
 
 def load_mowl_metrics(metrics_file: Path) -> Dict:
@@ -351,13 +400,42 @@ def main():
     parser = argparse.ArgumentParser(
         description='Hybrid filtering: MOWL cosine + LLM semantic plausibility'
     )
-    parser.add_argument('--candidates', default='../generated/candidate_el.ttl',
+    
+    # Determine default paths based on script location
+    script_dir = Path(__file__).resolve().parent
+    if script_dir.name == 'scripts':
+        if script_dir.parent.name == 'src':
+            # project_root/src/scripts/
+            src_dir = script_dir.parent
+            project_root = src_dir.parent
+        else:
+            # project_root/scripts/
+            project_root = script_dir.parent
+            src_dir = project_root / 'src'
+    else:
+        project_root = script_dir
+        src_dir = project_root / 'src'
+    
+    # Set default paths
+    default_generated = src_dir / 'generated'
+    if not default_generated.exists():
+        default_generated = project_root / 'generated'
+    
+    default_reports = project_root / 'reports'
+    if not default_reports.exists():
+        default_reports = src_dir / 'reports'
+    
+    parser.add_argument('--candidates', 
+                        default=str(default_generated / 'candidate_el.ttl'),
                         help='Input candidate axioms file')
-    parser.add_argument('--metrics', default='../../reports/mowl_metrics.json',
+    parser.add_argument('--metrics', 
+                        default=str(default_reports / 'mowl_metrics.json'),
                         help='MOWL training metrics file')
-    parser.add_argument('--train', default='../train.ttl',
+    parser.add_argument('--train', 
+                        default=str(src_dir / 'train.ttl'),
                         help='Training ontology (for class labels)')
-    parser.add_argument('--output', default='../generated/accepted_el.ttl',
+    parser.add_argument('--output', 
+                        default=str(default_generated / 'accepted_el.ttl'),
                         help='Output accepted axioms file')
     parser.add_argument('--cosine-weight', type=float, default=0.7,
                         help='Weight for cosine similarity (default: 0.7)')
@@ -468,3 +546,4 @@ def main():
 if __name__ == "__main__":
     sys.exit(main())
 
+    
