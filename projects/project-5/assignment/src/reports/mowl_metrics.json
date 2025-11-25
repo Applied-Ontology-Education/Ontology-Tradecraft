@@ -1,6 +1,6 @@
 {
-  "mean_cosine_similarity": -0.11052588373422623,
-  "training_similarity": 0.9943007230758667,
+  "mean_cosine_similarity": 0.09417302906513214,
+  "training_similarity": 0.9963521957397461,
   "threshold": 0.6,
   "passed": true,
   "training_pairs": 72,
@@ -18,5 +18,5 @@
     "regularization": 0.01,
     "patience": 50
   },
-  "timestamp": "2025-11-25T14:02:54.004907"
+  "timestamp": "2025-11-25T14:08:00.629457"
 }

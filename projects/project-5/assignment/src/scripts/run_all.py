@@ -224,15 +224,28 @@ def main():
         print("⚠️  MOWL metrics not found")
     
     
-    # Count accepted axioms
+    # Count accepted axioms and calculate LLM contribution
     accepted_file = generated_dir / 'accepted_el.ttl'
+    candidates_file = generated_dir / 'candidate_el.ttl'
     n_accepted = 0
+    n_candidates = 0
+    llm_contribution = 0.0
+    
     if accepted_file.exists():
         with open(accepted_file) as f:
             n_accepted = f.read().count('rdfs:subClassOf')
     
-    print(f"accepted axioms: {n_accepted}")
-    print(f"LLM contribution: preprocessing + generation + plausibility scoring")
+    if candidates_file.exists():
+        with open(candidates_file) as f:
+            n_candidates = f.read().count('rdfs:subClassOf')
+    
+    # LLM contribution rate: percentage of candidates that passed hybrid filtering
+    # (where LLM plausibility had 30% weight in the decision)
+    if n_candidates > 0:
+        llm_contribution = (n_accepted / n_candidates) * 100
+    
+    print(f"accepted axioms: {n_accepted}/{n_candidates}")
+    print(f"LLM contribution rate: {llm_contribution:.1f}% (30% weight in hybrid filter)")
     
     # Check consistency (from merge_and_reason output)
     output_file = src_dir / 'module_augmented.ttl'
