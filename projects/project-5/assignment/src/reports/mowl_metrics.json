@@ -1,0 +1,19 @@
+{
+  "mean_cosine_similarity": 0.0871841087937355,
+  "threshold": 0.7,
+  "passed": false,
+  "axioms_added": 81,
+  "training_pairs": 81,
+  "validation_pairs": 10,
+  "classes": 92,
+  "training_classes": 85,
+  "hyperparameters": {
+    "embedding_dim": 100,
+    "epochs": 1000,
+    "learning_rate": 0.01,
+    "dropout": 0.1,
+    "regularization": 0.01,
+    "patience": 100
+  },
+  "timestamp": "2025-11-24T14:59:21.016590"
+}

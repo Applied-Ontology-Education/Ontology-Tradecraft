@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
-Generate OWL 2 EL-compliant candidate axioms from enriched definitions.
+Generate OWL 2 EL-compliant candidate axioms from enriched definitions using Claude.
 Produces a Turtle file with formal axioms derived from natural language definitions.
 """
 
 import csv
+import json
+import os
 import re
 import sys
 from pathlib import Path
@@ -19,6 +21,14 @@ except ImportError:
     print("  pip install rdflib")
     sys.exit(1)
 
+try:
+    import anthropic
+    ANTHROPIC_AVAILABLE = True
+except ImportError:
+    ANTHROPIC_AVAILABLE = False
+    print("Error: anthropic package not installed. Install with: pip install anthropic")
+    sys.exit(1)
+
 
 # Define namespaces
 CCO = Namespace("https://www.commoncoreontologies.org/")
@@ -28,41 +38,18 @@ OBO = Namespace("http://purl.obolibrary.org/obo/")
 
 
 class OWL2ELAxiomGenerator:
-    """Generates OWL 2 EL-compliant axioms from natural language definitions."""
+    """Generates OWL 2 EL-compliant axioms from natural language definitions using Claude."""
     
-    def __init__(self):
-        """Initialize the axiom generator with parsing patterns and mappings."""
+    def __init__(self, api_key: Optional[str] = None):
+        """Initialize the axiom generator with Claude API and parsing patterns."""
         
-        # OWL 2 EL supports: SubClassOf, EquivalentClasses, DisjointClasses,
-        # SubObjectPropertyOf, EquivalentObjectProperties, ObjectPropertyDomain,
-        # ObjectPropertyRange, and existential restrictions
+        if not ANTHROPIC_AVAILABLE:
+            raise ValueError("Anthropic package not installed. Install with: pip install anthropic")
         
-        # Pattern to extract parent class and characteristics
-        self.canonical_pattern = re.compile(
-            r'^(?:A|An)\s+(.+?)\s+that\s+(.+?)\.?$',
-            re.IGNORECASE
+        self.client = anthropic.Anthropic(
+            api_key=api_key or os.getenv("ANTHROPIC_API_KEY")
         )
-        
-        # Patterns for extracting relationships
-        self.relationship_patterns = [
-            # "designed for/to" -> has_function/has_purpose
-            (r'designed (?:for|to)\s+(.+)', 'has_function', True),
-            # "used for/to" -> has_purpose
-            (r'used (?:for|to)\s+(.+)', 'has_purpose', True),
-            # "supports" -> supports
-            (r'supports?\s+(.+)', 'supports', False),
-            # "contains/containing" -> has_part
-            (r'contains?\s+(.+)', 'has_part', False),
-            (r'containing\s+(.+)', 'has_part', False),
-            # "located in/at" -> located_in
-            (r'located (?:in|at)\s+(.+)', 'located_in', False),
-            # "provides" -> provides
-            (r'provides?\s+(.+)', 'provides', False),
-            # "facilitates" -> facilitates
-            (r'facilitates?\s+(.+)', 'facilitates', False),
-            # "serves" -> serves
-            (r'serves?\s+(.+)', 'serves', False),
-        ]
+        self.model = "claude-sonnet-4-20250514"
         
         # Known parent class mappings (from CCO)
         self.parent_class_map = {
@@ -107,60 +94,95 @@ class OWL2ELAxiomGenerator:
             'designed_for': CCO.designed_for,
         }
     
-    def parse_definition(self, definition: str) -> Tuple[Optional[str], Optional[str]]:
+    def parse_definition_with_claude(self, label: str, definition: str, iri: str) -> Dict:
         """
-        Parse a canonical definition to extract parent class and characteristics.
+        Use Claude to parse a definition and extract structured axiom information.
         
         Args:
-            definition: Enriched definition in canonical form
+            label: Entity label
+            definition: Enriched definition
+            iri: Entity IRI
         
         Returns:
-            Tuple of (parent_class, characteristics) or (None, None)
+            Dictionary with parsed axiom information
         """
-        match = self.canonical_pattern.match(definition.strip())
-        if match:
-            parent_class = match.group(1).strip()
-            characteristics = match.group(2).strip()
-            return parent_class, characteristics
-        return None, None
+        parent_classes_str = ', '.join(self.parent_class_map.keys())
+        properties_str = ', '.join(self.object_properties.keys())
+        
+        prompt = f"""You are an ontology engineering expert. Parse the following definition into structured axiom components for OWL 2 EL.
+
+Entity Label: {label}
+Entity IRI: {iri}
+Definition: {definition}
+
+Available Parent Classes:
+{parent_classes_str}
+
+Available Object Properties:
+{properties_str}
+
+Task: Extract the following information from the definition:
+1. Parent Class: The most specific parent class from the available list (choose the closest match)
+2. Relationships: List of (property, object_description) pairs that describe characteristics
+
+Return ONLY a valid JSON object with this exact structure:
+{{
+  "parent_class": "exact parent class name from available list",
+  "relationships": [
+    {{"property": "property_name", "object": "description of what the property relates to"}}
+  ]
+}}
+
+Rules:
+- parent_class must be from the available parent classes list (exact match)
+- If no exact match, use "Facility" as the default parent
+- property must be from the available object properties list (exact match)
+- object should be a brief description (2-5 words) of what the relationship connects to
+- Extract all relevant relationships from the definition
+- Return ONLY the JSON, no other text"""
+
+        try:
+            message = self.client.messages.create(
+                model=self.model,
+                max_tokens=500,
+                temperature=0.2,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ]
+            )
+            
+            response_text = message.content[0].text.strip()
+            
+            # Remove markdown code blocks if present
+            response_text = re.sub(r'^```json\s*', '', response_text)
+            response_text = re.sub(r'\s*```$', '', response_text)
+            response_text = response_text.strip()
+            
+            # Parse JSON
+            parsed = json.loads(response_text)
+            
+            # Validate structure
+            if 'parent_class' not in parsed or 'relationships' not in parsed:
+                raise ValueError("Missing required fields in response")
+            
+            return parsed
+            
+        except Exception as e:
+            print(f"  Warning: Claude parsing failed for '{label}': {e}")
+            # Return default structure
+            return {
+                'parent_class': 'Facility',
+                'relationships': []
+            }
     
-    def extract_relationships(self, characteristics: str) -> List[Tuple[str, str]]:
+    def generate_class_axioms(self, iri: str, label: str, definition: str, g: Graph) -> None:
         """
-        Extract relationships from the characteristics part of a definition.
-        
-        Args:
-            characteristics: The "that..." part of the definition
-        
-        Returns:
-            List of (property, object) tuples
-        """
-        relationships = []
-        
-        for pattern, prop_name, is_functional in self.relationship_patterns:
-            matches = re.finditer(pattern, characteristics, re.IGNORECASE)
-            for match in matches:
-                obj = match.group(1).strip()
-                # Clean up the object
-                obj = re.sub(r'\s*\([^)]*\)', '', obj)  # Remove parenthetical notes
-                obj = obj.rstrip('.,;')
-                if obj:
-                    relationships.append((prop_name, obj))
-                    # For functional properties, only take the first match
-                    if is_functional:
-                        break
-        
-        return relationships
-    
-    def generate_class_axioms(self, iri: str, label: str, parent_class_str: str, 
-                            characteristics: str, g: Graph) -> None:
-        """
-        Generate OWL 2 EL class axioms for an entity.
+        Generate OWL 2 EL class axioms for an entity using Claude for parsing.
         
         Args:
             iri: The entity IRI
             label: The entity label
-            parent_class_str: Parent class from definition
-            characteristics: Characteristics from definition
+            definition: The enriched definition
             g: RDF graph to add axioms to
         """
         entity_uri = URIRef(iri)
@@ -171,11 +193,17 @@ class OWL2ELAxiomGenerator:
         # Add label
         g.add((entity_uri, RDFS.label, Literal(label, lang='en')))
         
+        # Add definition as skos:definition
+        g.add((entity_uri, SKOS.definition, Literal(definition, lang='en')))
+        
+        # Use Claude to parse the definition
+        parsed = self.parse_definition_with_claude(label, definition, iri)
+        
         # Add parent class (SubClassOf axiom)
-        parent_uri = None
-        if parent_class_str in self.parent_class_map:
-            parent_uri = self.parent_class_map[parent_class_str]
-        else:
+        parent_class_str = parsed.get('parent_class', 'Facility')
+        parent_uri = self.parent_class_map.get(parent_class_str)
+        
+        if not parent_uri:
             # Try to find partial matches
             for key, value in self.parent_class_map.items():
                 if key.lower() in parent_class_str.lower() or parent_class_str.lower() in key.lower():
@@ -188,26 +216,8 @@ class OWL2ELAxiomGenerator:
         
         g.add((entity_uri, RDFS.subClassOf, parent_uri))
         
-        # Extract and add relationships as restrictions (OWL 2 EL existential restrictions)
-        relationships = self.extract_relationships(characteristics)
-        
-        for prop_name, obj_desc in relationships:
-            if prop_name in self.object_properties:
-                prop_uri = self.object_properties[prop_name]
-                
-                # Create an existential restriction (someValuesFrom)
-                # In OWL 2 EL, we can use existential restrictions
-                restriction = BNode()
-                g.add((restriction, RDF.type, OWL.Restriction))
-                g.add((restriction, OWL.onProperty, prop_uri))
-                
-                # For now, we'll create a named class for the object
-                # In a real system, you'd want to resolve these to actual classes
-                obj_class = self.create_object_class(obj_desc, g)
-                g.add((restriction, OWL.someValuesFrom, obj_class))
-                
-                # Add the restriction as a superclass
-                g.add((entity_uri, RDFS.subClassOf, restriction))
+        # Skip adding relationship restrictions for flat candidate output
+
     
     def create_object_class(self, description: str, g: Graph) -> URIRef:
         """
@@ -220,9 +230,6 @@ class OWL2ELAxiomGenerator:
         Returns:
             URI of the object class
         """
-        # Simple heuristic: create a class based on key terms
-        # In production, this would need more sophisticated NLP
-        
         # Clean and normalize the description
         clean_desc = re.sub(r'[^\w\s]', '', description)
         tokens = clean_desc.split()
@@ -259,7 +266,7 @@ class OWL2ELAxiomGenerator:
     
     def generate_axioms(self, enriched_definitions: List[Dict[str, str]]) -> Graph:
         """
-        Generate OWL 2 EL axioms from enriched definitions.
+        Generate OWL 2 EL axioms from enriched definitions using Claude.
         
         Args:
             enriched_definitions: List of enriched definition dictionaries
@@ -282,46 +289,53 @@ class OWL2ELAxiomGenerator:
         g.add((onto_uri, RDF.type, OWL.Ontology))
         g.add((onto_uri, RDFS.label, Literal("Facility Ontology Candidate Axioms", lang='en')))
         g.add((onto_uri, RDFS.comment, 
-               Literal("OWL 2 EL-compliant candidate axioms generated from enriched definitions", lang='en')))
+               Literal("OWL 2 EL-compliant candidate axioms generated from enriched definitions using Claude", lang='en')))
         g.add((onto_uri, DCTERMS.created, Literal(datetime.now().isoformat())))
         
         # Process each definition
         successful = 0
         failed = 0
+        total = len(enriched_definitions)
         
-        for defn in enriched_definitions:
+        print(f"Processing {total} definitions with Claude...")
+        
+        for i, defn in enumerate(enriched_definitions, 1):
             try:
                 enriched = defn.get('enriched_definition', '')
                 if not enriched:
+                    enriched = defn.get('original_definition', '')
+                
+                if not enriched:
+                    print(f"  [{i}/{total}] Skipping {defn['label']}: No definition available")
+                    failed += 1
                     continue
                 
-                # Parse the definition
-                parent_class, characteristics = self.parse_definition(enriched)
+                print(f"  [{i}/{total}] Processing {defn['label']}...")
                 
-                if parent_class and characteristics:
-                    # Generate axioms
-                    self.generate_class_axioms(
-                        defn['IRI'],
-                        defn['label'],
-                        parent_class,
-                        characteristics,
-                        g
-                    )
-                    successful += 1
-                else:
-                    # Fall back to simple subclass axiom
-                    entity_uri = URIRef(defn['IRI'])
-                    g.add((entity_uri, RDF.type, OWL.Class))
-                    g.add((entity_uri, RDFS.label, Literal(defn['label'], lang='en')))
-                    g.add((entity_uri, RDFS.subClassOf, CCO.ont00000192))  # Default to Facility
-                    g.add((entity_uri, SKOS.definition, Literal(enriched, lang='en')))
-                    failed += 1
+                # Generate axioms using Claude
+                self.generate_class_axioms(
+                    defn['IRI'],
+                    defn['label'],
+                    enriched,
+                    g
+                )
+                successful += 1
+                
+                # Rate limiting
+                if i % 10 == 0:
+                    import time
+                    time.sleep(1)
                     
             except Exception as e:
                 print(f"  Warning: Failed to process {defn['label']}: {e}")
+                # Add basic axioms as fallback
+                entity_uri = URIRef(defn['IRI'])
+                g.add((entity_uri, RDF.type, OWL.Class))
+                g.add((entity_uri, RDFS.label, Literal(defn['label'], lang='en')))
+                g.add((entity_uri, RDFS.subClassOf, CCO.ont00000192))  # Default to Facility
                 failed += 1
         
-        print(f"  Successfully generated axioms for {successful} definitions")
+        print(f"\n  Successfully generated axioms for {successful} definitions")
         print(f"  Failed or used fallback for {failed} definitions")
         
         return g
@@ -369,6 +383,17 @@ class OWL2ELAxiomGenerator:
 def main():
     """Main function to generate candidate axioms."""
     
+    # Check for Anthropic API key
+    api_key = os.getenv("ANTHROPIC_API_KEY")
+    
+    if not api_key:
+        print("Error: No Anthropic API key found!")
+        print("Set the environment variable:")
+        print("  PowerShell: $env:ANTHROPIC_API_KEY = 'your-key-here'")
+        print("  Linux/Mac: export ANTHROPIC_API_KEY='your-key-here'")
+        print("\nGet your API key from: https://console.anthropic.com/")
+        sys.exit(1)
+    
     # Define file paths
     script_path = Path(__file__).resolve()
     
@@ -398,10 +423,11 @@ def main():
     print(f"Loaded {len(enriched_definitions)} enriched definitions")
     
     # Initialize generator
-    generator = OWL2ELAxiomGenerator()
+    print("\nInitializing Claude-based axiom generator...")
+    generator = OWL2ELAxiomGenerator(api_key=api_key)
     
     # Generate axioms
-    print("\nGenerating OWL 2 EL axioms from definitions...")
+    print("\nGenerating OWL 2 EL axioms using Claude...")
     axiom_graph = generator.generate_axioms(enriched_definitions)
     
     # Validate OWL 2 EL compliance
@@ -439,7 +465,7 @@ def main():
     for cls in classes:
         label = axiom_graph.value(cls, RDFS.label)
         parent = axiom_graph.value(cls, RDFS.subClassOf)
-        if label:
+        if label and not isinstance(parent, BNode):
             parent_label = axiom_graph.value(parent, RDFS.label) if parent else "Unknown"
             print(f"  {label} SubClassOf {parent_label if parent_label else parent}")
 

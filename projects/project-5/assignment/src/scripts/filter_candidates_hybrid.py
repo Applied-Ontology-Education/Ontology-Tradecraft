@@ -28,11 +28,11 @@ except ImportError as e:
     sys.exit(1)
 
 try:
-    from openai import OpenAI
-    QODO_AVAILABLE = True
+    import anthropic
+    ANTHROPIC_AVAILABLE = True
 except ImportError:
-    QODO_AVAILABLE = False
-    logger.warning("openai package not installed. Install with: pip install openai")
+    ANTHROPIC_AVAILABLE = False
+    logger.warning("anthropic package not installed. Install with: pip install anthropic")
 
 import os
 
@@ -49,41 +49,41 @@ def resolve_paths(candidates_file, metrics_file, output_file):
 
 
 def load_candidates(candidates_file: Path) -> List[Tuple[str, str]]:
-    """Load candidate axioms from TTL file."""
+    """Load candidate axioms from TTL file, handling multi-line class definitions."""
     logger.info(f"Loading candidates from: {candidates_file}")
-    
     candidates = []
-    
+
     with open(candidates_file, 'r', encoding='utf-8') as f:
+        current_subclass = None
         for line_num, line in enumerate(f, 1):
             line = line.strip()
+
+            # Detect start of a class definition
+            if line.startswith('cco:ont') and 'a owl:Class' in line:
+                current_subclass = line.split()[0]
+                if current_subclass.startswith('cco:'):
+                    current_subclass = f"https://www.commoncoreontologies.org/{current_subclass.split(':')[1]}"
             
-            # Look for subClassOf statements
-            # Format: cco:ont00000XXX rdfs:subClassOf cco:ont00000YYY .
-            if 'rdfs:subClassOf' in line and line.endswith('.'):
+            # Look for rdfs:subClassOf inside the block
+            elif current_subclass and line.startswith('rdfs:subClassOf'):
                 parts = line.split()
-                if len(parts) >= 4:
-                    subclass = parts[0]
-                    superclass = parts[2]
-                    
-                    logger.debug(f"Line {line_num}: Found {subclass} -> {superclass}")
-                    
-                    # Clean up prefixes and URIs
-                    if subclass.startswith('cco:'):
-                        subclass = f"https://www.commoncoreontologies.org/{subclass.split(':')[1]}"
+                if len(parts) >= 2:
+                    superclass = parts[1].rstrip(';').rstrip('.')
                     if superclass.startswith('cco:'):
                         superclass = f"https://www.commoncoreontologies.org/{superclass.split(':')[1]}"
-                    
-                    candidates.append((subclass, superclass))
-                    logger.debug(f"Added candidate: {subclass} ⊑ {superclass}")
-    
+                    candidates.append((current_subclass, superclass))
+                    logger.debug(f"Added candidate: {current_subclass} ⊑ {superclass}")
+            
+            # End of block (semicolon or period)
+            if line.endswith('.'):
+                current_subclass = None
+
     logger.info(f"Loaded {len(candidates)} candidate axioms")
-    
     if len(candidates) == 0:
-        logger.warning("No candidates found in file!")
-        logger.warning("Expected format: cco:ont00000XXX rdfs:subClassOf cco:ont00000YYY .")
+        logger.warning("No candidates found in file! Make sure rdfs:subClassOf is present.")
     
     return candidates
+
 
 
 def load_mowl_metrics(metrics_file: Path) -> Dict:
@@ -147,8 +147,8 @@ def compute_cosine_similarity(sub_iri: str, sup_iri: str, embeddings: np.ndarray
 
 
 def query_llm_plausibility(subclass_label: str, superclass_label: str, 
-                           client: OpenAI, model: str = "gpt-4o-mini") -> float:
-    """Query LLM to rate semantic plausibility of subclass relationship."""
+                           client: anthropic.Anthropic) -> float:
+    """Query Claude to rate semantic plausibility of subclass relationship."""
     
     prompt = f"""You are evaluating an ontology axiom for semantic plausibility.
 
@@ -168,18 +168,17 @@ Guidelines:
 Respond with ONLY a single number between 0.0 and 1.0, nothing else."""
 
     try:
-        response = client.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": "You are an expert in ontology engineering."},
-                {"role": "user", "content": prompt}
-            ],
+        message = client.messages.create(
+            model="claude-sonnet-4-20250514",
+            max_tokens=50,
             temperature=0.3,
-            max_tokens=50
+            messages=[
+                {"role": "user", "content": prompt}
+            ]
         )
         
         # Extract score
-        score_text = response.choices[0].message.content.strip()
+        score_text = message.content[0].text.strip()
         
         # Parse the number
         try:
@@ -188,11 +187,11 @@ Respond with ONLY a single number between 0.0 and 1.0, nothing else."""
             score = max(0.0, min(1.0, score))
             return score
         except ValueError:
-            logger.warning(f"Could not parse LLM response: {score_text}")
+            logger.warning(f"Could not parse Claude response: {score_text}")
             return 0.5  # Default to neutral
             
     except Exception as e:
-        logger.error(f"LLM query failed: {e}")
+        logger.error(f"Claude query failed: {e}")
         logger.error(f"Error details: {type(e).__name__}")
         return 0.5  # Default to neutral on error
 
@@ -202,7 +201,7 @@ def hybrid_filter_candidates(
     embeddings: np.ndarray,
     class_to_id: Dict[str, int],
     class_labels: Dict[str, str],
-    client: OpenAI,
+    client: anthropic.Anthropic,
     cosine_weight: float = 0.7,
     llm_weight: float = 0.3,
     threshold: float = 0.70,
@@ -386,33 +385,26 @@ def main():
     if not train_path.exists():
         raise FileNotFoundError(f"Training file not found: {train_path}")
     
-    # Check if OpenAI package is available
-    if not QODO_AVAILABLE:
-        logger.error("OpenAI package not installed!")
-        logger.error("Install with: pip install openai")
+    # Check if Anthropic package is available
+    if not ANTHROPIC_AVAILABLE:
+        logger.error("Anthropic package not installed!")
+        logger.error("Install with: pip install anthropic")
         sys.exit(1)
     
     # Get API key
-    api_key = (
-        args.api_key or 
-        os.environ.get('QODO_API_KEY') or 
-        os.environ.get('CODIUM_API_KEY') or
-        os.environ.get('OPENAI_API_KEY')
-    )
+    api_key = args.api_key or os.environ.get('ANTHROPIC_API_KEY')
     
     if not api_key:
-        logger.error("API key required!")
-        logger.error("Set environment variable: $env:QODO_API_KEY = 'your-key'")
+        logger.error("Anthropic API key required!")
+        logger.error("Set environment variable: $env:ANTHROPIC_API_KEY = 'your-key'")
+        logger.error("Or pass --api-key argument")
         sys.exit(1)
     
-    # Initialize Qodo client
-    logger.info("Initializing Qodo API client...")
+    # Initialize Anthropic client
+    logger.info("Initializing Anthropic API client...")
     try:
-        client = OpenAI(
-            api_key=api_key,
-            base_url="https://api.qodo.ai/v1"
-        )
-        logger.info("✓ Qodo client initialized")
+        client = anthropic.Anthropic(api_key=api_key)
+        logger.info("✓ Anthropic client initialized")
     except Exception as e:
         logger.error(f"Failed to initialize client: {e}")
         sys.exit(1)
@@ -476,4 +468,3 @@ def main():
 if __name__ == "__main__":
     sys.exit(main())
 
-    

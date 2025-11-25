@@ -250,38 +250,43 @@ def main():
         output_path = (script_dir / args.output).resolve()
     
     # Check if ROBOT is available
+    robot_jar_path = None
+
     if args.robot_jar:
-        # Use robot.jar directly
-        if Path(args.robot_jar).is_absolute():
-            robot_jar_path = Path(args.robot_jar).resolve()
-        else:
-            robot_jar_path = (script_dir / args.robot_jar).resolve()
-        
-        if not robot_jar_path.exists():
-            logger.error(f"robot.jar not found at: {robot_jar_path}")
-            logger.error("\nDownload robot.jar from:")
-            logger.error("https://github.com/ontodev/robot/releases/latest/download/robot.jar")
-            sys.exit(1)
-        
+        # Use robot.jar provided explicitly
+        robot_jar_path = Path(args.robot_jar).resolve()
+    else:
+        # Try to find robot.jar automatically
+        possible_paths = [
+            script_dir / "robot.jar",
+            script_dir / "tools" / "robot.jar"
+        ]
+        for p in possible_paths:
+            if p.exists():
+                robot_jar_path = p
+                logger.info(f"Auto-detected robot.jar at: {robot_jar_path}")
+                break
+
+    # Decide which execution method to use
+    if robot_jar_path:
         success = merge_and_reason_with_jar(
             accepted_path,
             base_path,
             output_path,
             robot_jar_path
         )
-    else:
-        # Try to use ROBOT command
-        if not check_robot_installed():
-            download_robot()
-            logger.error("\nAlternatively, download robot.jar and use:")
-            logger.error("  python merge_and_reason.py --robot-jar path/to/robot.jar")
-            sys.exit(1)
-        
+    elif check_robot_installed():
         success = merge_and_reason(
             accepted_path,
             base_path,
             output_path
         )
+    else:
+        logger.error("ROBOT not found and robot.jar not found in default locations.")
+        logger.error("Download robot.jar from:")
+        logger.error("https://github.com/ontodev/robot/releases/latest/download/robot.jar")
+        sys.exit(1)
+
     
     if success:
         logger.info("\n" + "="*60)

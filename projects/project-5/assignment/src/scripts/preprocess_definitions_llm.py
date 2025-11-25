@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Preprocess and enrich ontology definitions using Qodo LLM.
+Preprocess and enrich ontology definitions using Anthropic Claude.
 Normalizes definitions to canonical form and aligns with CCO style.
 """
 
@@ -12,38 +12,37 @@ import time
 from pathlib import Path
 from typing import Dict, List, Optional
 
-# Import OpenAI package (used for Qodo API)
+# Import Anthropic package
 try:
-    from openai import OpenAI
-    QODO_AVAILABLE = True
+    import anthropic
+    ANTHROPIC_AVAILABLE = True
 except ImportError:
-    QODO_AVAILABLE = False
-    print("Error: openai package not installed. Install with: pip install openai")
+    ANTHROPIC_AVAILABLE = False
+    print("Error: anthropic package not installed. Install with: pip install anthropic")
     sys.exit(1)
 
 
 class DefinitionEnricher:
-    """Enriches and normalizes ontology definitions using Qodo LLM."""
+    """Enriches and normalizes ontology definitions using Anthropic Claude."""
     
     def __init__(self, api_key: Optional[str] = None):
         """
-        Initialize the enricher with Qodo API credentials.
+        Initialize the enricher with Anthropic API credentials.
         
         Args:
-            api_key: Qodo API key
+            api_key: Anthropic API key
         """
-        if not QODO_AVAILABLE:
-            raise ValueError("OpenAI package not installed. Install with: pip install openai")
+        if not ANTHROPIC_AVAILABLE:
+            raise ValueError("Anthropic package not installed. Install with: pip install anthropic")
         
-        self.client = OpenAI(
-            api_key=api_key or os.getenv("QODO_API_KEY") or os.getenv("CODIUM_API_KEY"),
-            base_url="https://api.qodo.ai/v1"
+        self.client = anthropic.Anthropic(
+            api_key=api_key or os.getenv("ANTHROPIC_API_KEY")
         )
-        self.model = "gpt-4o-mini"
+        self.model = "claude-sonnet-4-20250514"
     
     def create_prompt(self, label: str, definition: str, iri: str) -> str:
         """
-        Create a prompt for the LLM to normalize and enrich a definition.
+        Create a prompt for Claude to normalize and enrich a definition.
         
         Args:
             label: The entity label
@@ -78,7 +77,7 @@ Provide ONLY the improved definition text, nothing else. Do not include the enti
     
     def enrich_definition(self, label: str, definition: str, iri: str, max_retries: int = 3) -> str:
         """
-        Enrich a single definition using Qodo LLM.
+        Enrich a single definition using Claude.
         
         Args:
             label: The entity label
@@ -93,16 +92,16 @@ Provide ONLY the improved definition text, nothing else. Do not include the enti
         
         for attempt in range(max_retries):
             try:
-                response = self.client.chat.completions.create(
+                message = self.client.messages.create(
                     model=self.model,
-                    messages=[
-                        {"role": "system", "content": "You are an expert in ontology engineering and the Common Core Ontologies."},
-                        {"role": "user", "content": prompt}
-                    ],
+                    max_tokens=200,
                     temperature=0.3,  # Lower temperature for more consistent output
-                    max_tokens=200
+                    messages=[
+                        {"role": "user", "content": prompt}
+                    ]
                 )
-                enriched = response.choices[0].message.content.strip()
+                
+                enriched = message.content[0].text.strip()
                 
                 # Validate the enriched definition
                 if enriched and len(enriched) > 10:
@@ -166,10 +165,10 @@ Provide ONLY the improved definition text, nothing else. Do not include the enti
                 'modified': enriched_def != defn['definition']
             })
             
-            # Rate limiting
+            # Rate limiting (Anthropic has generous limits, but still be respectful)
             if i % batch_size == 0 and i < total:
-                print(f"  Processed {i} definitions, pausing to avoid rate limits...")
-                time.sleep(2)
+                print(f"  Processed {i} definitions, brief pause...")
+                time.sleep(1)
         
         return enriched_definitions
 
@@ -215,33 +214,35 @@ def main():
         print("Please run extract_definitions.py first to generate the definitions.csv file.")
         sys.exit(1)
     
-    # Check for Qodo API key
-    api_key = os.getenv("QODO_API_KEY") or os.getenv("CODIUM_API_KEY")
+    # Check for Anthropic API key
+    api_key = os.getenv("ANTHROPIC_API_KEY")
     
     if not api_key:
-        print("Error: No Qodo API key found!")
+        print("Error: No Anthropic API key found!")
         print("Set the environment variable:")
-        print("  PowerShell: $env:QODO_API_KEY = 'your-key-here'")
-        print("  Linux/Mac: export QODO_API_KEY='your-key-here'")
+        print("  PowerShell: $env:ANTHROPIC_API_KEY = 'your-key-here'")
+        print("  Linux/Mac: export ANTHROPIC_API_KEY='your-key-here'")
+        print("\nGet your API key from: https://console.anthropic.com/")
         sys.exit(1)
     
-    print("Using Qodo AI for definition enrichment...")
+    print("Using Anthropic Claude for definition enrichment...")
+    print(f"Model: claude-sonnet-4-20250514")
     
     # Initialize enricher
     try:
         enricher = DefinitionEnricher(api_key=api_key)
     except Exception as e:
-        print(f"Error initializing Qodo enricher: {e}")
+        print(f"Error initializing Claude enricher: {e}")
         print("Please check your API key and internet connection.")
         sys.exit(1)
     
     # Load definitions
-    print(f"Loading definitions from {input_file}...")
+    print(f"\nLoading definitions from {input_file}...")
     definitions = load_definitions(input_file)
     print(f"Loaded {len(definitions)} definitions")
     
     # Process definitions
-    print("\nEnriching definitions with Qodo LLM...")
+    print("\nEnriching definitions with Claude...")
     enriched_definitions = enricher.process_definitions(definitions)
     
     # Save enriched definitions
@@ -258,5 +259,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-    

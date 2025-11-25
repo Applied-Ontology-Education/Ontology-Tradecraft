@@ -12,3 +12,7 @@
 #    Generated Axioms
 #################################################################
 
+### Generated axiom: ont00000192 ⊑ ont00000192
+### Cosine: 1.0000, LLM: 1.0000, Combined: 1.0000
+cco:ont00000192 rdfs:subClassOf cco:ont00000192 .
+
