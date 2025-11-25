@@ -46,7 +46,7 @@
   - [Lecture on Embeddings with MOWL](https://youtu.be/2papsQocRFI) 
 
 * **Week 13** Prompting for ontology building, SPARQL generation
-  - [Lecture on LLMs in Ontology Engineering 1]() 
+  - [Lecture on LLMs in Ontology Engineering 1](https://www.youtube.com/watch?v=0Jk4-K6Vjkw)
   
 * **Week 14** LLM risk analysis, evaluating logic and the boundaries of use
   - [Lecture on LLMs in Ontology Engineering 2]() 
