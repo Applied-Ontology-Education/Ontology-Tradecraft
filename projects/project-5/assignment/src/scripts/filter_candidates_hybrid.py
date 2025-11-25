@@ -312,11 +312,8 @@ def hybrid_filter_candidates(
         else:
             logger.info(f"  ✗ REJECTED (score={combined_score:.4f} < {threshold:.2f})")
         
-        # Rate limiting: small delay between LLM queries
-        if (i + 1) % batch_size == 0:
-            import time
-            time.sleep(1)
-    
+        # No artificial delay needed - Anthropic has generous rate limits
+        
     logger.info(f"\nAccepted {len(accepted)} / {len(candidates)} axioms")
     return accepted
 
@@ -546,4 +543,3 @@ def main():
 if __name__ == "__main__":
     sys.exit(main())
 
-    

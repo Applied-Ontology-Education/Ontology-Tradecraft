@@ -13,6 +13,7 @@ Key features:
 import json
 import logging
 import sys
+import os
 from pathlib import Path
 from datetime import datetime
 import pickle
@@ -50,13 +51,13 @@ METRICS_FILE = reports_dir / 'mowl_metrics.json'
 EMBEDDINGS_FILE = reports_dir / 'embeddings.npy'
 MAPPINGS_FILE = reports_dir / 'class_mappings.pkl'
 
-# Optimized hyperparameters
+# Optimized hyperparameters (tuned for speed vs accuracy)
 EMBEDDING_DIM = 100
-EPOCHS = 1000
+EPOCHS = 500  # Reduced from 1000 - early stopping usually kicks in around 300-400
 LEARNING_RATE = 0.01
 DROPOUT = 0.1
 REGULARIZATION = 0.01
-EARLY_STOP_PATIENCE = 100
+EARLY_STOP_PATIENCE = 50  # Reduced from 100 for faster convergence detection
 
 # Threshold search range (requirement: τ ∈ {0.60 – 0.80})
 THRESHOLD_CANDIDATES = [0.60, 0.62, 0.64, 0.66, 0.68, 0.70, 0.72, 0.74, 0.76, 0.78, 0.80]
@@ -447,6 +448,8 @@ def main():
     
     with open(METRICS_FILE, 'w') as f:
         json.dump(metrics, f, indent=2)
+        f.flush()  # Ensure data is written to disk immediately
+        os.fsync(f.fileno())  # Force OS to write to disk
     
     logging.info(f"\n✓ Metrics saved to {METRICS_FILE}")
     

@@ -1,6 +1,6 @@
 {
-  "mean_cosine_similarity": 0.008053879253566265,
-  "training_similarity": 0.9970607757568359,
+  "mean_cosine_similarity": -0.11052588373422623,
+  "training_similarity": 0.9943007230758667,
   "threshold": 0.6,
   "passed": true,
   "training_pairs": 72,
@@ -12,11 +12,11 @@
   "mappings_file": "C:\\Users\\crist\\Documents\\GitHub\\Ontology-Tradecraft\\Ontology-Tradecraft\\projects\\project-5\\assignment\\src\\reports\\class_mappings.pkl",
   "hyperparameters": {
     "embedding_dim": 100,
-    "epochs": 1000,
+    "epochs": 500,
     "learning_rate": 0.01,
     "dropout": 0.1,
     "regularization": 0.01,
-    "patience": 100
+    "patience": 50
   },
-  "timestamp": "2025-11-25T13:04:10.799872"
+  "timestamp": "2025-11-25T14:02:54.004907"
 }
