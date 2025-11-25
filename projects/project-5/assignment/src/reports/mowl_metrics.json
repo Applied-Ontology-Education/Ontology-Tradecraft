@@ -1,13 +1,13 @@
 {
-  "mean_cosine_similarity": 0.09417302906513214,
-  "training_similarity": 0.9963521957397461,
+  "mean_cosine_similarity": 0.051143139600753784,
+  "training_similarity": 0.9954119920730591,
   "threshold": 0.6,
   "passed": true,
   "training_pairs": 72,
   "validation_pairs": 19,
-  "computable_validation_pairs": 9,
+  "computable_validation_pairs": 6,
   "n_classes": 92,
-  "training_classes": 82,
+  "training_classes": 79,
   "embeddings_file": "C:\\Users\\crist\\Documents\\GitHub\\Ontology-Tradecraft\\Ontology-Tradecraft\\projects\\project-5\\assignment\\src\\reports\\embeddings.npy",
   "mappings_file": "C:\\Users\\crist\\Documents\\GitHub\\Ontology-Tradecraft\\Ontology-Tradecraft\\projects\\project-5\\assignment\\src\\reports\\class_mappings.pkl",
   "hyperparameters": {
@@ -18,5 +18,5 @@
     "regularization": 0.01,
     "patience": 50
   },
-  "timestamp": "2025-11-25T14:08:00.629457"
+  "timestamp": "2025-11-25T15:27:28.701993"
 }

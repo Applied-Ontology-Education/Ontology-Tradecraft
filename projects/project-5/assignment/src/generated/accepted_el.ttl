@@ -12,6 +12,290 @@
 #    Generated Axioms
 #################################################################
 
+### Generated axiom: ont00000032 ⊑ ont00000052
+### Cosine: 0.9964, LLM: 0.5000, Combined: 0.8475
+cco:ont00000032 rdfs:subClassOf cco:ont00000052 .
+
+### Generated axiom: ont00000040 ⊑ ont00001102
+### Cosine: 0.9966, LLM: 0.5000, Combined: 0.8476
+cco:ont00000040 rdfs:subClassOf cco:ont00001102 .
+
+### Generated axiom: ont00000045 ⊑ ont00000881
+### Cosine: 0.9988, LLM: 0.5000, Combined: 0.8491
+cco:ont00000045 rdfs:subClassOf cco:ont00000881 .
+
+### Generated axiom: ont00000060 ⊑ ont00000639
+### Cosine: 0.9964, LLM: 0.5000, Combined: 0.8474
+cco:ont00000060 rdfs:subClassOf cco:ont00000639 .
+
+### Generated axiom: ont00000094 ⊑ ont00000946
+### Cosine: 0.9965, LLM: 0.5000, Combined: 0.8475
+cco:ont00000094 rdfs:subClassOf cco:ont00000946 .
+
+### Generated axiom: ont00000104 ⊑ ont00000639
+### Cosine: 0.9969, LLM: 0.5000, Combined: 0.8478
+cco:ont00000104 rdfs:subClassOf cco:ont00000639 .
+
+### Generated axiom: ont00000180 ⊑ ont00000410
+### Cosine: 0.9988, LLM: 0.5000, Combined: 0.8492
+cco:ont00000180 rdfs:subClassOf cco:ont00000410 .
+
+### Generated axiom: ont00000220 ⊑ ont00000881
+### Cosine: 0.9980, LLM: 0.5000, Combined: 0.8486
+cco:ont00000220 rdfs:subClassOf cco:ont00000881 .
+
+### Generated axiom: ont00000232 ⊑ ont00000192
+### Cosine: 0.9786, LLM: 0.5000, Combined: 0.8350
+cco:ont00000232 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000245 ⊑ ont00000782
+### Cosine: 0.9965, LLM: 0.5000, Combined: 0.8475
+cco:ont00000245 rdfs:subClassOf cco:ont00000782 .
+
+### Generated axiom: ont00000248 ⊑ ont00000782
+### Cosine: 0.9964, LLM: 0.5000, Combined: 0.8475
+cco:ont00000248 rdfs:subClassOf cco:ont00000782 .
+
+### Generated axiom: ont00000262 ⊑ ont00001102
+### Cosine: 0.9971, LLM: 0.5000, Combined: 0.8479
+cco:ont00000262 rdfs:subClassOf cco:ont00001102 .
+
+### Generated axiom: ont00000271 ⊑ ont00000639
+### Cosine: 0.9968, LLM: 0.5000, Combined: 0.8478
+cco:ont00000271 rdfs:subClassOf cco:ont00000639 .
+
+### Generated axiom: ont00000330 ⊑ ont00001076
+### Cosine: 0.9910, LLM: 0.5000, Combined: 0.8437
+cco:ont00000330 rdfs:subClassOf cco:ont00001076 .
+
+### Generated axiom: ont00000336 ⊑ ont00000410
+### Cosine: 0.9984, LLM: 0.5000, Combined: 0.8489
+cco:ont00000336 rdfs:subClassOf cco:ont00000410 .
+
+### Generated axiom: ont00000349 ⊑ ont00000479
+### Cosine: 0.9968, LLM: 0.5000, Combined: 0.8478
+cco:ont00000349 rdfs:subClassOf cco:ont00000479 .
+
+### Generated axiom: ont00000375 ⊑ ont00000881
+### Cosine: 0.9977, LLM: 0.5000, Combined: 0.8484
+cco:ont00000375 rdfs:subClassOf cco:ont00000881 .
+
+### Generated axiom: ont00000421 ⊑ ont00001076
+### Cosine: 0.9793, LLM: 0.5000, Combined: 0.8355
+cco:ont00000421 rdfs:subClassOf cco:ont00001076 .
+
+### Generated axiom: ont00000423 ⊑ ont00000782
+### Cosine: 0.9972, LLM: 0.5000, Combined: 0.8480
+cco:ont00000423 rdfs:subClassOf cco:ont00000782 .
+
+### Generated axiom: ont00000432 ⊑ ont00001052
+### Cosine: 0.9978, LLM: 0.5000, Combined: 0.8485
+cco:ont00000432 rdfs:subClassOf cco:ont00001052 .
+
+### Generated axiom: ont00000468 ⊑ ont00001102
+### Cosine: 0.9970, LLM: 0.5000, Combined: 0.8479
+cco:ont00000468 rdfs:subClassOf cco:ont00001102 .
+
+### Generated axiom: ont00000483 ⊑ ont00001052
+### Cosine: 0.9973, LLM: 0.5000, Combined: 0.8481
+cco:ont00000483 rdfs:subClassOf cco:ont00001052 .
+
+### Generated axiom: ont00000510 ⊑ ont00000052
+### Cosine: 0.9983, LLM: 0.5000, Combined: 0.8488
+cco:ont00000510 rdfs:subClassOf cco:ont00000052 .
+
+### Generated axiom: ont00000545 ⊑ ont00000946
+### Cosine: 0.9972, LLM: 0.5000, Combined: 0.8480
+cco:ont00000545 rdfs:subClassOf cco:ont00000946 .
+
+### Generated axiom: ont00000667 ⊑ ont00001052
+### Cosine: 0.9983, LLM: 0.5000, Combined: 0.8488
+cco:ont00000667 rdfs:subClassOf cco:ont00001052 .
+
+### Generated axiom: ont00000670 ⊑ ont00000677
+### Cosine: 0.9253, LLM: 0.5000, Combined: 0.7977
+cco:ont00000670 rdfs:subClassOf cco:ont00000677 .
+
+### Generated axiom: ont00000705 ⊑ ont00000677
+### Cosine: 0.9969, LLM: 0.5000, Combined: 0.8479
+cco:ont00000705 rdfs:subClassOf cco:ont00000677 .
+
+### Generated axiom: ont00000708 ⊑ ont00000881
+### Cosine: 0.9980, LLM: 0.5000, Combined: 0.8486
+cco:ont00000708 rdfs:subClassOf cco:ont00000881 .
+
+### Generated axiom: ont00000710 ⊑ ont00001052
+### Cosine: 0.9990, LLM: 0.5000, Combined: 0.8493
+cco:ont00000710 rdfs:subClassOf cco:ont00001052 .
+
+### Generated axiom: ont00000717 ⊑ ont00001076
+### Cosine: 0.9975, LLM: 0.5000, Combined: 0.8483
+cco:ont00000717 rdfs:subClassOf cco:ont00001076 .
+
+### Generated axiom: ont00000737 ⊑ ont00001052
+### Cosine: 0.9952, LLM: 0.5000, Combined: 0.8467
+cco:ont00000737 rdfs:subClassOf cco:ont00001052 .
+
+### Generated axiom: ont00000757 ⊑ ont00000052
+### Cosine: 0.9984, LLM: 0.5000, Combined: 0.8489
+cco:ont00000757 rdfs:subClassOf cco:ont00000052 .
+
+### Generated axiom: ont00000778 ⊑ ont00000881
+### Cosine: 0.9983, LLM: 0.5000, Combined: 0.8488
+cco:ont00000778 rdfs:subClassOf cco:ont00000881 .
+
+### Generated axiom: ont00000802 ⊑ ont00000641
+### Cosine: 0.9973, LLM: 0.5000, Combined: 0.8481
+cco:ont00000802 rdfs:subClassOf cco:ont00000641 .
+
+### Generated axiom: ont00000846 ⊑ ont00001076
+### Cosine: 0.9970, LLM: 0.5000, Combined: 0.8479
+cco:ont00000846 rdfs:subClassOf cco:ont00001076 .
+
+### Generated axiom: ont00000867 ⊑ ont00000677
+### Cosine: 0.9970, LLM: 0.5000, Combined: 0.8479
+cco:ont00000867 rdfs:subClassOf cco:ont00000677 .
+
+### Generated axiom: ont00000882 ⊑ ont00001076
+### Cosine: 0.9977, LLM: 0.5000, Combined: 0.8484
+cco:ont00000882 rdfs:subClassOf cco:ont00001076 .
+
+### Generated axiom: ont00000905 ⊑ ont00000655
+### Cosine: 0.9975, LLM: 0.5000, Combined: 0.8483
+cco:ont00000905 rdfs:subClassOf cco:ont00000655 .
+
+### Generated axiom: ont00000957 ⊑ ont00000881
+### Cosine: 0.9982, LLM: 0.5000, Combined: 0.8487
+cco:ont00000957 rdfs:subClassOf cco:ont00000881 .
+
+### Generated axiom: ont00001078 ⊑ ont00000226
+### Cosine: 0.9970, LLM: 0.5000, Combined: 0.8479
+cco:ont00001078 rdfs:subClassOf cco:ont00000226 .
+
+### Generated axiom: ont00001091 ⊑ ont00001052
+### Cosine: 0.9972, LLM: 0.5000, Combined: 0.8480
+cco:ont00001091 rdfs:subClassOf cco:ont00001052 .
+
+### Generated axiom: ont00001107 ⊑ ont00001315
+### Cosine: 0.9971, LLM: 0.5000, Combined: 0.8480
+cco:ont00001107 rdfs:subClassOf cco:ont00001315 .
+
+### Generated axiom: ont00001165 ⊑ ont00000332
+### Cosine: 0.9979, LLM: 0.5000, Combined: 0.8485
+cco:ont00001165 rdfs:subClassOf cco:ont00000332 .
+
+### Generated axiom: ont00001257 ⊑ ont00000881
+### Cosine: 0.9972, LLM: 0.5000, Combined: 0.8481
+cco:ont00001257 rdfs:subClassOf cco:ont00000881 .
+
+### Generated axiom: ont00001258 ⊑ ont00000226
+### Cosine: 0.9924, LLM: 0.5000, Combined: 0.8447
+cco:ont00001258 rdfs:subClassOf cco:ont00000226 .
+
+### Generated axiom: ont00001283 ⊑ ont00000782
+### Cosine: 0.9921, LLM: 0.5000, Combined: 0.8445
+cco:ont00001283 rdfs:subClassOf cco:ont00000782 .
+
+### Generated axiom: ont00001287 ⊑ ont00000192
+### Cosine: 0.9981, LLM: 0.5000, Combined: 0.8487
+cco:ont00001287 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00001295 ⊑ ont00000192
+### Cosine: 0.9981, LLM: 0.5000, Combined: 0.8487
+cco:ont00001295 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00001297 ⊑ ont00001052
+### Cosine: 0.9983, LLM: 0.5000, Combined: 0.8488
+cco:ont00001297 rdfs:subClassOf cco:ont00001052 .
+
+### Generated axiom: ont00001308 ⊑ ont00001315
+### Cosine: 0.9975, LLM: 0.5000, Combined: 0.8482
+cco:ont00001308 rdfs:subClassOf cco:ont00001315 .
+
+### Generated axiom: ont00001311 ⊑ ont00000782
+### Cosine: 0.9978, LLM: 0.5000, Combined: 0.8484
+cco:ont00001311 rdfs:subClassOf cco:ont00000782 .
+
+### Generated axiom: ont00001344 ⊑ ont00000881
+### Cosine: 0.9979, LLM: 0.5000, Combined: 0.8485
+cco:ont00001344 rdfs:subClassOf cco:ont00000881 .
+
+### Generated axiom: ont00001358 ⊑ ont00000270
+### Cosine: 0.9981, LLM: 0.5000, Combined: 0.8486
+cco:ont00001358 rdfs:subClassOf cco:ont00000270 .
+
+### Generated axiom: ont00001362 ⊑ ont00000782
+### Cosine: 0.9869, LLM: 0.5000, Combined: 0.8408
+cco:ont00001362 rdfs:subClassOf cco:ont00000782 .
+
+### Generated axiom: ont00001380 ⊑ ont00000339
+### Cosine: 0.9975, LLM: 0.5000, Combined: 0.8482
+cco:ont00001380 rdfs:subClassOf cco:ont00000339 .
+
+### Generated axiom: ont00001383 ⊑ ont00000479
+### Cosine: 0.9973, LLM: 0.5000, Combined: 0.8481
+cco:ont00001383 rdfs:subClassOf cco:ont00000479 .
+
+### Generated axiom: ont00000055 ⊑ ont00000192
+### Cosine: 0.9978, LLM: 0.5000, Combined: 0.8484
+cco:ont00000055 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000270 ⊑ ont00000192
+### Cosine: 0.9953, LLM: 0.5000, Combined: 0.8467
+cco:ont00000270 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000339 ⊑ ont00000192
+### Cosine: 0.9962, LLM: 0.5000, Combined: 0.8474
+cco:ont00000339 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000531 ⊑ ont00000192
+### Cosine: 0.9980, LLM: 0.5000, Combined: 0.8486
+cco:ont00000531 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000641 ⊑ ont00000192
+### Cosine: 0.9964, LLM: 0.5000, Combined: 0.8474
+cco:ont00000641 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000655 ⊑ ont00000192
+### Cosine: 0.9957, LLM: 0.5000, Combined: 0.8470
+cco:ont00000655 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00001375 ⊑ ont00000192
+### Cosine: 0.9976, LLM: 0.5000, Combined: 0.8483
+cco:ont00001375 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000479 ⊑ ont00000192
+### Cosine: 0.9924, LLM: 0.5000, Combined: 0.8447
+cco:ont00000479 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00001315 ⊑ ont00000192
+### Cosine: 0.9923, LLM: 0.5000, Combined: 0.8446
+cco:ont00001315 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000639 ⊑ ont00000192
+### Cosine: 0.9817, LLM: 0.5000, Combined: 0.8372
+cco:ont00000639 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000677 ⊑ ont00000192
+### Cosine: 0.9860, LLM: 0.5000, Combined: 0.8402
+cco:ont00000677 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00001102 ⊑ ont00000192
+### Cosine: 0.9843, LLM: 0.5000, Combined: 0.8390
+cco:ont00001102 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000226 ⊑ ont00000192
+### Cosine: 0.9820, LLM: 0.5000, Combined: 0.8374
+cco:ont00000226 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00001076 ⊑ ont00000192
+### Cosine: 0.9729, LLM: 0.5000, Combined: 0.8310
+cco:ont00001076 rdfs:subClassOf cco:ont00000192 .
+
+### Generated axiom: ont00000782 ⊑ ont00000192
+### Cosine: 0.9606, LLM: 0.5000, Combined: 0.8225
+cco:ont00000782 rdfs:subClassOf cco:ont00000192 .
+
 ### Generated axiom: ont00000192 ⊑ ont00000192
 ### Cosine: 1.0000, LLM: 1.0000, Combined: 1.0000
 cco:ont00000192 rdfs:subClassOf cco:ont00000192 .

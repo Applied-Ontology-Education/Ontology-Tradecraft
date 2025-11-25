@@ -6260,7 +6260,8 @@ cco:ont00000669 rdf:type owl:Class ;
 
 ###  https://www.commoncoreontologies.org/ont00000670
 cco:ont00000670 rdf:type owl:Class ;
-                rdfs:subClassOf cco:ont00001258 ;
+                rdfs:subClassOf cco:ont00000677 ,
+                                cco:ont00001258 ;
                 rdfs:label "Distribution Port"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A Port that is designed with the cargo handling equipment necessary for the loading and unloading of Watercraft"@en ;
                 cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Port&oldid=1064091505"^^xsd:anyURI ;

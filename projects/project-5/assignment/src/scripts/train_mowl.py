@@ -121,11 +121,14 @@ def enrich_with_reasoner(train_file, output_file):
     output_iri = IRI.create(output_file.as_uri())
     manager.saveOntology(ontology, output_iri)
 
-    java_output_file = jpype.JClass('java.io.File')(str(output_file))
-    final_ontology = manager.loadOntologyFromOntologyDocument(java_output_file)
-    final_count = len(list(final_ontology.getAxioms()))
+    # No need to reload - ontology is already enriched in memory
+    final_count = len(list(ontology.getAxioms()))
 
     reasoner.dispose()
+    
+    # Clean up: remove ontology from manager to prevent "already exists" errors
+    manager.removeOntology(ontology)
+    
     inferred_count = final_count - initial_count
     logging.info(f"✓ Added {inferred_count} inferred axioms")
 
@@ -159,6 +162,9 @@ def load_class_pairs(ontology_file):
 
             pairs.append((sub_iri, sup_iri))
 
+    # Clean up: remove ontology from manager
+    manager.removeOntology(ontology)
+    
     return pairs
 
 
@@ -348,11 +354,19 @@ def main():
         logging.error(f"Validation file not found: {VALID_FILE}")
         sys.exit(1)
     
-    # Step 1: Enrich training ontology with reasoner
-    if not TRAIN_ENRICHED.exists():
-        enrich_with_reasoner(TRAIN_FILE, TRAIN_ENRICHED)
-    else:
-        logging.info(f"Using existing enriched ontology: {TRAIN_ENRICHED}")
+    # Step 1: Enrich training ontology with reasoner (optional - skip if it causes conflicts)
+    TRAIN_ENRICHED = TRAIN_FILE  # Default to original file if enrichment fails
+    
+    try:
+        if not (SRC_DIR / 'train_enriched.ttl').exists():
+            TRAIN_ENRICHED = enrich_with_reasoner(TRAIN_FILE, SRC_DIR / 'train_enriched.ttl')
+        else:
+            TRAIN_ENRICHED = SRC_DIR / 'train_enriched.ttl'
+            logging.info(f"Using existing enriched ontology: {TRAIN_ENRICHED}")
+    except Exception as e:
+        logging.warning(f"⚠️  Enrichment failed: {e}")
+        logging.warning("⚠️  Continuing with original training file (no enrichment)")
+        TRAIN_ENRICHED = TRAIN_FILE
     
     # Step 2: Load training and validation pairs
     logging.info("Loading ontologies...")

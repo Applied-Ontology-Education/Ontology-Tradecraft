@@ -97,30 +97,42 @@ def load_candidates(candidates_file: Path) -> List[Tuple[str, str]]:
         if not line or line.startswith('#'):
             continue
         
-        # Match class declaration: cco:ont00000XXX a owl:Class
+        # Match class declaration: cco:ont00000XXX a owl:Class or :ClassName a owl:Class or <URI> a owl:Class
         if ' a owl:Class' in line or 'rdf:type owl:Class' in line:
             parts = line.split()
-            if parts and parts[0].startswith('cco:ont'):
-                current_subject = parts[0]
-                logger.debug(f"Line {line_num}: Found class {current_subject}")
+            if parts:
+                class_ref = parts[0]
+                # Handle different formats
+                if class_ref.startswith('cco:ont') or class_ref.startswith(':') or class_ref.startswith('<'):
+                    current_subject = class_ref
+                    logger.debug(f"Line {line_num}: Found class {current_subject}")
         
         # Match SubClassOf within class definition
         elif current_subject and 'rdfs:subClassOf' in line:
             # Extract superclass
-            # Line format: "rdfs:subClassOf cco:ont00000YYY ;" or "rdfs:subClassOf cco:ont00000YYY ."
+            # Line format: "rdfs:subClassOf cco:ont00000YYY ;" or "rdfs:subClassOf :ClassName ;" or "rdfs:subClassOf <URI> ;"
             parts = line.split('rdfs:subClassOf')
             if len(parts) > 1:
                 superclass_part = parts[1].strip()
-                # Remove trailing punctuation (; or .)
-                superclass = superclass_part.split()[0].rstrip(';').rstrip('.')
+                # Remove trailing punctuation (; or . or ,)
+                superclass = superclass_part.split()[0].rstrip(';').rstrip('.').rstrip(',')
                 
-                if superclass.startswith('cco:ont'):
-                    # Convert to full URIs
-                    subclass_iri = f"https://www.commoncoreontologies.org/{current_subject.split(':')[1]}"
-                    superclass_iri = f"https://www.commoncoreontologies.org/{superclass.split(':')[1]}"
-                    
-                    candidates.append((subclass_iri, superclass_iri))
-                    logger.debug(f"Line {line_num}: Added {current_subject} → {superclass}")
+                # Convert to full URIs based on format
+                def to_full_uri(ref):
+                    if ref.startswith('cco:ont'):
+                        return f"https://www.commoncoreontologies.org/{ref.split(':')[1]}"
+                    elif ref.startswith(':'):
+                        return f"http://test.org/ontology#{ref[1:]}"
+                    elif ref.startswith('<') and ref.endswith('>'):
+                        return ref[1:-1]
+                    else:
+                        return ref
+                
+                subclass_iri = to_full_uri(current_subject)
+                superclass_iri = to_full_uri(superclass)
+                
+                candidates.append((subclass_iri, superclass_iri))
+                logger.debug(f"Line {line_num}: Added {current_subject} → {superclass}")
         
         # Reset current subject on period (end of class definition)
         if line.endswith('.') and not 'rdfs:subClassOf' in line:
@@ -543,3 +555,4 @@ def main():
 if __name__ == "__main__":
     sys.exit(main())
 
+    
