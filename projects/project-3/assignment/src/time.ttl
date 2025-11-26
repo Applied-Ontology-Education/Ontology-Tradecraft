@@ -7,6 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
 
 <http://www.w3.org/2006/time>
   a owl:Ontology ;
@@ -305,6 +306,8 @@ In the original OWL-Time the following constraint appeared:
   a owl:Class ;
   rdfs:label "Month of year"@en ;
   rdfs:subClassOf :DateTimeDescription ;
+  skos:closeMatch cco:ont00001707 ;
+  rdfs:seeAlso cco:ont00001707 ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "0"^^xsd:nonNegativeInteger ;
@@ -456,6 +459,8 @@ Detailed guidance about working with time zones is given in http://www.w3.org/TR
   a owl:DeprecatedClass ;
   rdfs:label "Year"@en ;
   rdfs:subClassOf :DurationDescription ;
+  skos:closeMatch cco:ont00001444 ;
+  rdfs:seeAlso cco:ont00001444 ;
   rdfs:subClassOf [
       a owl:Restriction ;
       owl:cardinality "0"^^xsd:nonNegativeInteger ;

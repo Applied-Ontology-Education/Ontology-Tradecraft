@@ -1,0 +1,21 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# QUDT perspective: Unit types have CCOM Descriptive ICE as superclass
+qudt:BiomedicalUnit rdfs:subClassOf cco:ont00000853 .
+qudt:CurrencyUnit rdfs:subClassOf cco:ont00000853 .
+qudt:AtomicPhysicsUnit rdfs:subClassOf cco:ont00000853 .
+qudt:RadiologyUnit rdfs:subClassOf cco:ont00000853 .
+qudt:FinancialUnit rdfs:subClassOf cco:ont00000853 .
+qudt:CommunicationsUnit rdfs:subClassOf cco:ont00000853 .
+qudt:MechanicsUnit rdfs:subClassOf cco:ont00000853 .
+qudt:SpaceAndTimeUnit rdfs:subClassOf cco:ont00000853 .
+qudt:ThermodynamicsUnit rdfs:subClassOf cco:ont00000853 .
+qudt:ElectricityAndMagnetismUnit rdfs:subClassOf cco:ont00000853 .
+qudt:ChemistryUnit rdfs:subClassOf cco:ont00000853 .
+qudt:ScienceAndEngineeringUnit rdfs:subClassOf cco:ont00000853 .
+qudt:HumanUnit rdfs:subClassOf cco:ont00000853 .
+qudt:ComputingUnit rdfs:subClassOf cco:ont00000853 .
+qudt:PhysicalUnit rdfs:subClassOf cco:ont00000853 .
