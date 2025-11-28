@@ -40,16 +40,16 @@
   - [Due: Project 4 - ETL + Validation Midterm](projects/project-4/README.md)
 
 * **Week 11** Link prediction, classification, evaluation of ontology-based ML
-  - [Lecture on ML and Ontologies]() 
+  - [Lecture on ML and Ontologies](https://youtu.be/43Eu8R3Bp9c) 
 
 * **Week 12** Embeddings and semantic similarity
-  - [Lecture on Embeddings with MOWL]() 
+  - [Lecture on Embeddings with MOWL](https://youtu.be/2papsQocRFI) 
 
 * **Week 13** Prompting for ontology building, SPARQL generation
-  - [Lecture on LLMs in Ontology Engineering 1]() 
+  - [Lecture on LLMs in Ontology Engineering 1](https://www.youtube.com/watch?v=0Jk4-K6Vjkw)
   
-* **Week 14** LLM risk analysis, evaluating logic and the boundaries of use
-  - [Lecture on LLMs in Ontology Engineering 2]() 
+* **Week 14** Ontology Mapping, Debugging, and Debugging with LLMs
+  - [Lecture on LLMs in Ontology Engineering 2](https://youtu.be/urj7aTBaEDM) 
   - [Due: Project 5 - ML + LLM Pipelines](projects/project-5/README.md)
 
 * **Week 15** Student Presentations
