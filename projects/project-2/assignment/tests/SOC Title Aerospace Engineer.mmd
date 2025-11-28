@@ -1,0 +1,73 @@
+flowchart LR
+
+    %% ------------------------------------------------------------
+    %% ROLE (Realizable Dependent Continuant)
+    %% ------------------------------------------------------------
+    A[Aerospace Engineer Role] -->|rdf:type| B[Job Classification]
+
+    %% ------------------------------------------------------------
+    %% SOC CODES AND TITLES AS INFORMATION CONTENT ENTITIES
+    %% ------------------------------------------------------------
+    A -->|is classified by| C[SOC Code: 17-2010]
+    C -->|rdf:type| ICE1[Information Content Entity]
+
+    A -->|is classified by| D[SOC Title: Aerospace Engineer]
+    D -->|rdf:type| ICE2[Information Content Entity]
+
+    %% Subclass SOC designations (still ICEs)
+    A -->|is classified by| F[SOC Subclass Code: 17-2011]
+    F -->|rdf:type| ICE3[Information Content Entity]
+
+    A -->|is classified by| G[SOC Subclass Code: 17-3021]
+    G -->|rdf:type| ICE4[Information Content Entity]
+
+    %% ------------------------------------------------------------
+    %% ENGINEER IS NOT A SUBCLASS OF A PERSON—IT IS A ROLE
+    %% ------------------------------------------------------------
+    A -->|subclass of role| E[Engineer Role]
+
+    %% ------------------------------------------------------------
+    %% OCCUPATIONAL ACTIVITIES AS PROCESSES
+    %% ------------------------------------------------------------
+    A -->|realized in| J[Aircraft Processing Activity]
+    J -->|rdf:type| Occ1[cco:Process]
+
+    A -->|realized in| H[Aircraft Design Activity]
+    H -->|rdf:type| Occ2[cco:Process]
+
+    %% ------------------------------------------------------------
+    %% 17-2011 SPECIALIZATION ACTIVITIES (Processes)
+    %% ------------------------------------------------------------
+    F -->|associated with process| I[Aircraft / Missile / Spacecraft Design Process]
+    I -->|rdf:type| Occ3[cco:Process]
+
+    F -->|associated with process| K[Aircraft / Missile / Spacecraft Construction Process]
+    K -->|rdf:type| Occ4[cco:Process]
+
+    F -->|associated with process| L[Aircraft / Missile / Spacecraft Testing Process]
+    L -->|rdf:type| Occ5[cco:Process]
+
+    F -->|associated with process| M[Adaptability Evaluation Process]
+    M -->|rdf:type| Occ6[cco:Process]
+
+    %% ------------------------------------------------------------
+    %% PROCESS OUTPUT & INFORMATION CONTENT ENTITIES
+    %% ------------------------------------------------------------
+    N[Changes in design and manufacturing processes] -->|is output of| M
+    N -->|is about| O[Design Improvement Information]
+    O -->|is about| P[Artifact Design]
+
+    %% ------------------------------------------------------------
+    %% ACTIVITIES FOR 17-3021 (Processes)
+    %% ------------------------------------------------------------
+    G -->|participates in| Q[Integrated System Operation Activity]
+    Q -->|rdf:type| Occ7[cco:Process]
+
+    G -->|participates in| R[Testing of measurement instruments & equipment]
+    R -->|rdf:type| Occ8[cco:Process]
+
+    R -->|realizes| S[Function of instruments/equipment for vehicle launch, tracking & evaluation]
+    S -->|rdf:type| Func1[cco:Function]
+
+    G -->|participates in| T[Data Interpretation and Analysis Activity]
+    T -->|rdf:type| Occ9[cco:Process]

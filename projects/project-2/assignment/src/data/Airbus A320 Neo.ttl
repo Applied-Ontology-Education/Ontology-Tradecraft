@@ -1,0 +1,161 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix bfo:  <http://purl.obolibrary.org/obo/bfo.owl#> .
+@prefix cco:  <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix ex:   <http://example.org/a320neo/> .
+
+#################################################################
+## AIRCRAFT ENTITY — MATERIAL ENTITY / ARTIFACT
+#################################################################
+
+ex:A320Neo rdf:type cco:FixedWingAircraft ;
+    rdfs:label "Airbus A320 Neo" ;
+    cco:hasContinuantPart ex:JetEngine_x2 ;
+    cco:isClassifiedBy ex:ICAO_A20N,
+                       ex:FAA_A20N_1,
+                       ex:FAA_A20N_2,
+                       ex:Manufacturer_Airbus,
+                       ex:MainGearConfig_D,
+                       ex:ICAO_WTC_Medium,
+                       ex:FAAWeight_Large,
+                       ex:CWT_F,
+                       ex:Wake_OneHalf_D,
+                       ex:Wake_AppxA_D,
+                       ex:Wake_AppxB_C,
+                       ex:SRS_III,
+                       ex:LAHSO_7,
+                       ex:SFAA_Registry_Yes ;
+    cco:hasQuality ex:Q_ApproachSpeed ,
+                   ex:Q_Wingspan ,
+                   ex:Q_Length ,
+                   ex:Q_TailHeight ,
+                   ex:Q_WheelBase ,
+                   ex:Q_CockpitToMainGear ,
+                   ex:Q_MainGearWidth ,
+                   ex:Q_MTOW ,
+                   ex:Q_MALW ,
+                   ex:Q_ParkingArea ;
+    ex:hasRegistrationCount ex:RegCount_147 ;
+    ex:hasTMFSOperationsFY24 ex:TMFS_540276 ;
+    cco:hasDescription ex:Remark_FSB_Validation .
+
+#################################################################
+## CONTINUANT PARTS
+#################################################################
+
+ex:JetEngine_x2 rdf:type cco:Engine ;
+    rdfs:label "Jet Engine - x2" .
+
+#################################################################
+## IDENTIFIERS AS ICEs
+#################################################################
+
+ex:ICAO_A20N rdf:type cco:InformationContentEntity ;
+    rdfs:label "A20N (ICAO code)" .
+
+ex:FAA_A20N_1 rdf:type cco:InformationContentEntity ;
+    rdfs:label "A20N (FAA designator)" .
+
+ex:FAA_A20N_2 rdf:type cco:InformationContentEntity ;
+    rdfs:label "A20N (FAA designator duplicate)" .
+
+ex:Manufacturer_Airbus rdf:type cco:InformationContentEntity ;
+    rdfs:label "Airbus (Manufacturer)" .
+
+#################################################################
+## QUALITIES + MEASUREMENT VALUES (CCO PATTERN)
+#################################################################
+
+### Approach Speed 137 knots
+ex:Q_ApproachSpeed rdf:type bfo:Quality ;
+    rdfs:label "Approach Speed Quality" ;
+    cco:isQualifiedBy ex:V_ApproachSpeed_137 .
+
+ex:V_ApproachSpeed_137 rdf:type cco:MeasurementValue ;
+    cco:hasUnit ex:U_Knots ;
+    cco:hasNumericalValue "137"^^xsd:decimal .
+
+### Wingspan 117.5 ft
+ex:Q_Wingspan rdf:type bfo:Quality ;
+    cco:isQualifiedBy ex:V_Wingspan_117_5 .
+
+ex:V_Wingspan_117_5 rdf:type cco:MeasurementValue ;
+    cco:hasUnit ex:U_Feet ;
+    cco:hasNumericalValue "117.5"^^xsd:decimal .
+
+### Length 123.3 ft
+ex:Q_Length rdf:type bfo:Quality ;
+    cco:isQualifiedBy ex:V_Length_123_3 .
+
+ex:V_Length_123_3 rdf:type cco:MeasurementValue ;
+    cco:hasUnit ex:U_Feet ;
+    cco:hasNumericalValue "123.3"^^xsd:decimal .
+
+### Tail Height 39.6 ft
+ex:Q_TailHeight rdf:type bfo:Quality ;
+    cco:isQualifiedBy ex:V_TailHeight_39_6 .
+
+ex:V_TailHeight_39_6 rdf:type cco:MeasurementValue ;
+    cco:hasUnit ex:U_Feet ;
+    cco:hasNumericalValue "39.6"^^xsd:decimal .
+
+### Wheel Base 41.5 ft
+ex:Q_WheelBase rdf:type bfo:Quality ;
+    cco:isQualifiedBy ex:V_WheelBase_41_5 .
+
+ex:V_WheelBase_41_5 rdf:type cco:MeasurementValue ;
+    cco:hasUnit ex:U_Feet ;
+    cco:hasNumericalValue "41.5"^^xsd:decimal .
+
+### Cockpit-to-Main Gear 50.2 ft
+ex:Q_CockpitToMainGear rdf:type bfo:Quality ;
+    cco:isQualifiedBy ex:V_CockpitToMainGear_50_2 .
+
+ex:V_CockpitToMainGear_50_2 rdf:type cco:MeasurementValue ;
+    cco:hasUnit ex:U_Feet ;
+    cco:hasNumericalValue "50.2"^^xsd:decimal .
+
+### Main Gear Width 29.4 ft
+ex:Q_MainGearWidth rdf:type bfo:Quality ;
+    cco:isQualifiedBy ex:V_MainGearWidth_29_4 .
+
+ex:V_MainGearWidth_29_4 rdf:type cco:MeasurementValue ;
+    cco:hasUnit ex:U_Feet ;
+    cco:hasNumericalValue "29.4"^^xsd:decimal .
+
+### MTOW 174,165 lbs
+ex:Q_MTOW rdf:type bfo:Quality ;
+    cco:isQualifiedBy ex:V_MTOW_174165 .
+
+ex:V_MTOW_174165 rdf:type cco:MeasurementValue ;
+    cco:hasUnit ex:U_Pounds ;
+    cco:hasNumericalValue "174165"^^xsd:decimal .
+
+### MALW 148,591 lbs
+ex:Q_MALW rdf:type bfo:Quality ;
+    cco:isQualifiedBy ex:V_MALW_148591 .
+
+ex:V_MALW_148591 rdf:type cco:MeasurementValue ;
+    cco:hasUnit ex:U_Pounds ;
+    cco:hasNumericalValue "148591"^^xsd:decimal .
+
+### Parking Area ft^2
+ex:Q_ParkingArea rdf:type bfo:Quality ;
+    cco:isQualifiedBy ex:V_ParkingArea_16358_3 .
+
+ex:V_ParkingArea_16358_3 rdf:type cco:MeasurementValue ;
+    cco:hasUnit ex:U_SquareFeet ;
+    cco:hasNumericalValue "16358.3"^^xsd:decimal .
+
+#################################################################
+## CATEGORICAL ICEs
+#################################################################
+
+ex:MainGearConfig_D rdf:type cco:InformationContentEntity ; rdfs:label "Main Gear Configuration: D" .
+ex:ICAO_WTC_Medium rdf:type cco:InformationContentEntity ; rdfs:label "ICAO Wake Turbulence Category: Medium" .
+ex:FAAWeight_Large rdf:type cco:InformationContentEntity ; rdfs:label "FAA Weight Class: Large" .
+ex:CWT_F rdf:type cco:InformationContentEntity ; rdfs:label "CWT: F" .
+ex:Wake_OneHalf_D rdf:type cco:InformationContentEntity ; rdfs:label "Wake Category One-Half: D" .
+ex:Wake_AppxA_D rdf:type cco:InformationContentEntity ; rdfs:label "Wake Category Appendix A: D" .
+ex:Wake_AppxB_C rdf:type cc

@@ -7,7 +7,7 @@ from pathlib import Path
 #2 Define input/output locations
 IN_A = Path("src/data/sensor_A.csv")
 IN_B = Path("src/data/sensor_B.json")
-IN_C = Path("src/data/sensor_C.csv") 
+
 OUT  = Path("src/data/readings_normalized.csv")
 
 #3 Load Sensor A (CSV):
