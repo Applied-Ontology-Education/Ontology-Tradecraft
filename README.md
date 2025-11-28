@@ -33,9 +33,10 @@
 * **Week 8** Fall break; making sure folks caught up on projects
 
 * **Week 9** Midterm: Semantic Pipeline Part 1
-  - [Lecture Semantic Pipelines](https://youtu.be/sScyvhhnKAY)
+  - [Lecture Semantic Pipelines 1](https://youtu.be/sScyvhhnKAY)
 
 * **Week 10** Midterm: Semantic Pipeline Part 2
+  - [Lecture Semantic Pipelines 2](https://youtu.be/9KI013aD-oY)
   - [Due: Project 4 - ETL + Validation Midterm](projects/project-4/README.md)
 
 * **Week 11** Link prediction, classification, evaluation of ontology-based ML
@@ -46,10 +47,10 @@
 
 * **Week 13** Prompting for ontology building, SPARQL generation
   - [Lecture on LLMs in Ontology Engineering 1]() 
-  - [Due: Project 5 - ML + LLM Pipelines](projects/project-5/README.md)
-
+  
 * **Week 14** LLM risk analysis, evaluating logic and the boundaries of use
   - [Lecture on LLMs in Ontology Engineering 2]() 
+  - [Due: Project 5 - ML + LLM Pipelines](projects/project-5/README.md)
 
 * **Week 15** Student Presentations
   - [Student Presentation 1]()
