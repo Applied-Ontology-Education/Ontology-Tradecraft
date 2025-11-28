@@ -1,0 +1,56 @@
+@prefix ex: <http://example.org/aircraft#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# --- Main Entity ---
+ex:Airbus_A320_Neo
+    rdf:type ex:Jet ;
+    ex:hasModelBADA ex:Airbus_A320_271 ;
+    ex:hasModelFAA ex:Airbus_A320_Neoc ;
+    ex:hasArtifactDesign ex:Aircraft ;
+    ex:hasICAOCode "A20N" ;
+    ex:hasFAADesignator "A20N" ;
+    ex:hasManufacturer ex:Airbus ;
+    ex:hasContinuantPart ex:Jet_Engine_x2 ;
+    ex:hasApproachSpeed "137"^^xsd:decimal ;
+    ex:hasApproachSpeedUnits "knots" ;
+    ex:hasWingSpan "117.5"^^xsd:decimal ;
+    ex:hasWingSpanUnits "feet" ;
+    ex:hasLengthFt "123.3"^^xsd:decimal ;
+    ex:hasTailHeightFt "39.6"^^xsd:decimal ;
+    ex:hasWheelBase "41.5"^^xsd:decimal ;
+    ex:hasCockpitToMainGear "50.2"^^xsd:decimal ;
+    ex:hasMainGearWidth "29.4"^^xsd:decimal ;
+    ex:hasMTOW "174165"^^xsd:decimal ;
+    ex:hasMTOWUnits "lbs" ;
+    ex:hasMALW "148591"^^xsd:decimal ;
+    ex:hasMALWUnits "lbs" ;
+    ex:hasMainGearConfiguration "D" ;
+    ex:ICAO_WTC "Medium" ;
+    ex:requiresParkingArea "16358.3"^^xsd:decimal ;
+    ex:requiresParkingAreaUnits "ft2" ;
+    rdfs:subClassOf ex:Fixed_Wing_Aircraft ;
+    ex:hasFAAWeight "Large" ;
+    ex:CWT "F" ;
+    ex:OneHalfWakeCategory "D" ;
+    ex:TwoWakeCategoryAppxA "D" ;
+    ex:TwoWakeCategoryAppxB "C" ;
+    ex:SRS "III" ;
+    ex:LAHSO "7"^^xsd:integer ;
+    ex:sFAA_Registry true ;
+    ex:hasRegistrationCount "147"^^xsd:integer ;
+    ex:TMFS_Operations_FY24 "540276"^^xsd:integer ;
+    ex:hasRemarks "AAC validated by Flight Standardization Board FSB report" .
+
+# --- Class Relationships ---
+ex:Jet rdfs:subClassOf ex:Aircraft ;
+       rdf:type ex:Generally_Independent_Continuant .
+
+ex:Jet_Engine_x2 rdf:type ex:Generally_Dependent_Continuant .
+
+# --- Manufacturer ---
+ex:Airbus rdf:type ex:Manufacturer .
+
+# --- Data Reference ---
+ex:Data ex:isAbout ex:Airbus_A320_Neo .
