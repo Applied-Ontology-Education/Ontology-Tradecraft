@@ -1,0 +1,6 @@
+# Title: 
+#    No Class Should Be Outside the BFO Hierarchy
+# Constraint Description: 
+#     All classes must have a BFO superclass.
+# Severity:
+#     Error

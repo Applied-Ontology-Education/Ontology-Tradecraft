@@ -1,0 +1,7 @@
+Device Name,Reading Type,Reading Value,Units,Time (Local)
+Boiler-07,Temperature,212,F,3/17/24 19:03
+Boiler-07,Pressure,14.7,psi,3/17/24 19:04
+Chiller 3,Temperature,68,F,3/18/24 8:01
+Chiller 3,Temperature,not_a_number,F,3/18/24 8:06
+Pump-A1 ,Pressure,101.325,kPa,3/18/24 8:07
+Pump-A1 ,Pressure, ,psi,3/18/24 8:08
