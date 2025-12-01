@@ -23,28 +23,162 @@ ex:ArtifactHasSDCShape
 #################################################################
 # 2) SDC is measured by at least one MICE (coverage via inverse) 
 #################################################################
+ex:SDCMeasuredByMICEShape
+  a sh:NodeShape ;
+  sh:targetClass bfo:SpecificallyDependentContinuant ;
+  sh:property [
+    # There must exist at least one MICE such that
+    #   MICE cco:is_measurement_of this SDC
+    sh:path [ sh:inversePath cco:is_measurement_of ] ;
+    sh:minCount 1 ;
+    sh:class cco:MeasurementInformationContentEntity ;
+    sh:message "Every SDC must be measured by at least one Measurement Information Content Entity (MICE)." ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 3) MICE measures exactly one SDC (functional)
 #################################################################
-
+ex:MICEMeasuresExactlyOneSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  sh:property [
+    sh:path cco:is_measurement_of ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class bfo:SpecificallyDependentContinuant ;
+    sh:message "Each MICE must measure exactly one Specifically Dependent Continuant (SDC)." ;
+    sh:severity sh:Violation
+  ] .
 #################################################################
 # 4) MICE must have one unit and one numeric value (completeness)
 #################################################################
-
+ex:MICEHasUnitAndValueShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  # Exactly one unit
+  sh:property [
+    sh:path cco:uses_measurement_unit ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class cco:MeasurementUnit ;
+    sh:message "Each MICE must use exactly one Measurement Unit." ;
+    sh:severity sh:Violation
+  ] ;
+  # At least one numeric value
+  sh:property [
+    sh:path cco:has_measurement_value ;
+    sh:minCount 1 ;
+    sh:datatype xsd:double ;
+    sh:message "Each MICE must have at least one numeric measurement value (xsd:double)." ;
+    sh:severity sh:Violation
+  ] ;
+  # At least one timestamp
+  sh:property [
+    sh:path cco:has_datetime_value ;
+    sh:minCount 1 ;
+    sh:datatype xsd:dateTime ;
+    sh:message "Each MICE must have at least one datetime value (xsd:dateTime)." ;
+    sh:severity sh:Violation
+  ] .
 #################################################################
 # 5) No empty values in literals
 #################################################################
-
+ex:NoEmptyLiteralShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  # Measurement value must not be an empty literal
+  sh:property [
+    sh:path cco:has_measurement_value ;
+    sh:minCount 1 ;
+    sh:minLength 1 ;
+    sh:message "Measurement values must not be empty literals." ;
+    sh:severity sh:Violation
+  ] ;
+  # Datetime value must not be an empty literal
+  sh:property [
+    sh:path cco:has_datetime_value ;
+    sh:minCount 1 ;
+    sh:minLength 1 ;
+    sh:message "Datetime values must not be empty literals." ;
+    sh:severity sh:Violation
+  ] .
 #################################################################
 # 6) Unit must match SDC being measured
 #################################################################
+ex:UnitMatchesSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Unit label must be appropriate for the SDC kind being measured (e.g., temperature uses C/F, pressure uses kPa)." ;
+    sh:select """
+      SELECT ?this
+      WHERE {
+        ?this cco:is_measurement_of ?sdc ;
+              cco:uses_measurement_unit ?unit .
 
+        OPTIONAL { ?sdc  rdfs:label ?sdcLabel . }
+        OPTIONAL { ?unit rdfs:label ?unitLabel . }
+
+        BIND(LCASE(STR(?sdcLabel)) AS ?kind)
+        BIND(STR(?unitLabel) AS ?u)
+
+        # Example policy; adjust strings to match your sdc_kind values:
+        #   - temp/temperature -> C or F
+        #   - pressure        -> kPa
+        FILTER(
+          (?kind IN ("temp", "temperature") && ?u NOT IN ("C", "F")) ||
+          (?kind = "pressure" && ?u != "kPa")
+        )
+      }
+    """ ;
+  ] .
 #################################################################
 # 7) No duplicate MICE
 #################################################################
+ex:NoDuplicateMICEShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "No two MICE may share the same SDC, unit, value, and timestamp (duplicate measurement)." ;
+    sh:select """
+      SELECT ?this
+      WHERE {
+        ?this cco:is_measurement_of ?sdc ;
+              cco:uses_measurement_unit ?unit ;
+              cco:has_measurement_value ?val ;
+              cco:has_datetime_value ?ts .
 
+        ?other cco:is_measurement_of ?sdc ;
+               cco:uses_measurement_unit ?unit ;
+               cco:has_measurement_value ?val ;
+               cco:has_datetime_value ?ts .
+
+        FILTER(?other != ?this)
+      }
+    """ ;
+  ] .
 #################################################################
 # 8) No dangling/mistyped nodes 
 #################################################################
-
+ex:NoDanglingNodesShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  # is_measurement_of must point to an SDC
+  sh:property [
+    sh:path cco:is_measurement_of ;
+    sh:class bfo:SpecificallyDependentContinuant ;
+    sh:minCount 1 ;
+    sh:message "MICE must only point via cco:is_measurement_of to instances of SpecificallyDependentContinuant (no dangling/mistyped SDC nodes)." ;
+    sh:severity sh:Violation
+  ] ;
+  # uses_measurement_unit must point to a MeasurementUnit
+  sh:property [
+    sh:path cco:uses_measurement_unit ;
+    sh:class cco:MeasurementUnit ;
+    sh:minCount 1 ;
+    sh:message "MICE must only use units that are instances of MeasurementUnit (no dangling/mistyped unit nodes)." ;
+    sh:severity sh:Violation
+  ] .

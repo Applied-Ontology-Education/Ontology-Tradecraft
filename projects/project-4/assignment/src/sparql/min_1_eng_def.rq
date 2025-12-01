@@ -1,7 +1,27 @@
-# Title: 
-#    Definition Required
-# Constraint Description: 
-#    Any class or object property must have a non-empty definition with an English language tag.  
+# Title:
+#   At Least One English Definition per Class
+# Constraint Description:
+#   Every owl:Class must have at least one IAO:0000115 definition with @en.
 # Severity:
-#     Warning
+#   Error
+#
+# A valid ontology should return ZERO rows.
 
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX IAO:  <http://purl.obolibrary.org/obo/IAO_>
+PREFIX ex:   <http://example.org/ontology-tradecraft/>
+
+SELECT ?class
+WHERE {
+  ?class rdf:type owl:Class .
+
+  # Only check our own ontology's classes
+  FILTER(STRSTARTS(STR(?class), STR(ex:)))
+
+  # "Bad" if there is no English definition annotation
+  FILTER NOT EXISTS {
+    ?class IAO:IAO_0000115 ?def .
+    FILTER(LANG(?def) = "en")
+  }
+}

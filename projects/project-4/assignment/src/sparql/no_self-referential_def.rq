@@ -1,6 +1,26 @@
-# Title:  
-#    No cyclical definitions
-# Constraint Description:  
-#    No class definition should be self-referential. 
-# Severity:  
-#    Error
+# Title:
+#   No Self-Referential Definitions
+# Constraint Description:
+#   A class's definition should not simply repeat its own label text.
+# Severity:
+#   Warning
+#
+# A valid ontology should return ZERO rows.
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX IAO:  <http://purl.obolibrary.org/obo/IAO_>
+
+SELECT ?class ?label ?def
+WHERE {
+  ?class rdf:type owl:Class ;
+         rdfs:label ?label ;
+         IAO:IAO_0000115 ?def .
+
+  FILTER(LANG(?label) = "en")
+  FILTER(LANG(?def) = "en")
+
+  # Flag definitions that contain the label text (case-insensitive)
+  FILTER(CONTAINS(LCASE(STR(?def)), LCASE(STR(?label))))
+}

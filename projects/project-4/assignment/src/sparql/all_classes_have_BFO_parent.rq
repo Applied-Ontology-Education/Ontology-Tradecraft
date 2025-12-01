@@ -4,3 +4,22 @@
 #     All classes must have a BFO superclass.
 # Severity:
 #     Error
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX ex:   <http://example.org/ontology-tradecraft/>
+
+SELECT ?class
+WHERE {
+  ?class rdf:type owl:Class .
+
+  # Only check classes in our own namespace, not CCO/BFO/OWL
+  FILTER(STRSTARTS(STR(?class), STR(ex:)))
+
+  # A "bad" class is one that has NO subclass chain that reaches any BFO_* class
+  FILTER NOT EXISTS {
+    ?class rdfs:subClassOf* ?bfoSuper .
+    FILTER(STRSTARTS(STR(?bfoSuper), "http://purl.obolibrary.org/obo/BFO_"))
+  }
+}

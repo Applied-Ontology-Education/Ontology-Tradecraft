@@ -1,6 +1,18 @@
-# Title:  
-#    Class SubClassOf Hierarchy Circularity
-# Constraint Description:  
-#    No class should appear in a circular `subClassOf` hierarchy.
-# Severity:  
-#    Error
+# Title:
+#   No Subclass Circularity
+# Constraint Description:
+#   No class shall be in a non-trivial rdfs:subClassOf+ cycle with itself.
+# Severity:
+#   Error
+#
+# A valid ontology should return ZERO rows.
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?class
+WHERE {
+  ?class rdf:type owl:Class .
+  ?class rdfs:subClassOf+ ?class .
+}

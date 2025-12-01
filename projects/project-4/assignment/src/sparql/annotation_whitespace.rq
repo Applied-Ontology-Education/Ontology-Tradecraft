@@ -4,3 +4,20 @@
 #    No annotation value may have leading or trailing whitespace.    
 # Severity:
 #    Error 
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX IAO:  <http://purl.obolibrary.org/obo/IAO_>
+
+SELECT ?entity ?prop ?value
+WHERE {
+  ?entity ?prop ?value .
+
+  # Only look at labels and text definitions
+  FILTER (?prop IN (rdfs:label, IAO:IAO_0000115))
+
+  # Values that start or end with a space are "bad"
+  FILTER (
+    STRSTARTS(STR(?value), " ") ||
+    STRENDS(STR(?value), " ")
+  )
+}

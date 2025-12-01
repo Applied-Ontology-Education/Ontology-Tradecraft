@@ -1,6 +1,30 @@
-# Title: 
-#     Ontology Title Required
-# Constraint Description: 
-#     Any owl:Ontology must have an rdfs:label.
+# Title:
+#   Ontology Must Have an English Title or Label
+# Constraint Description:
+#   The owl:Ontology node must have at least one dcterms:title or rdfs:label with @en.
 # Severity:
-#     Warning
+#   Error
+#
+# A valid ontology should return ZERO rows.
+
+PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:    <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs:   <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms:<http://purl.org/dc/terms/>
+
+SELECT ?ont
+WHERE {
+  ?ont rdf:type owl:Ontology .
+
+  FILTER NOT EXISTS {
+    {
+      ?ont dcterms:title ?t .
+      FILTER(LANG(?t) = "en")
+    }
+    UNION
+    {
+      ?ont rdfs:label ?t .
+      FILTER(LANG(?t) = "en")
+    }
+  }
+}

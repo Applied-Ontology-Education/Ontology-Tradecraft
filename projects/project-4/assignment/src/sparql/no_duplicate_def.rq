@@ -1,6 +1,23 @@
-# Title: 
-#    No Duplicate Definitions
-# Constraint Description: 
-#    No two ontology elements may have the exact same definition.    
+# Title:
+#   No Duplicate Definitions
+# Constraint Description:
+#   No two owl:Class entities share the same IAO:0000115 definition string.
 # Severity:
-#     Error 
+#   Warning
+#
+# A valid ontology should return ZERO rows.
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX IAO:  <http://purl.obolibrary.org/obo/IAO_>
+
+SELECT ?class1 ?class2 ?def
+WHERE {
+  ?class1 rdf:type owl:Class ;
+          IAO:IAO_0000115 ?def .
+
+  ?class2 rdf:type owl:Class ;
+          IAO:IAO_0000115 ?def .
+
+  FILTER(?class1 != ?class2)
+}

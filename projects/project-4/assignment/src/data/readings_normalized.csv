@@ -1,0 +1,12 @@
+artifact_id,sdc_kind,unit_label,value,timestamp
+Boiler-07,Temperature,F,212.0,2024-03-17T19:03:00Z
+Boiler-07,Pressure,psi,14.7,2024-03-17T19:04:00Z
+Boiler-07,temp,C,100.0,2024-03-17T23:03:00Z
+Boiler-07,pressure,kPa,101.325,2024-03-17T23:04:00Z
+Chiller 3,Temperature,F,68.0,2024-03-18T08:01:00Z
+Chiller-3,temp,C,19.5,2024-03-18T12:01:00Z
+Chiller-4,temp,F,6.5,2024-03-18T12:01:00Z
+Chiller-4,temp,F,19.5,2024-03-18T12:06:00Z
+Circuit-12,voltage,volt,2.0,2024-03-18T12:01:01Z
+Circuit-12,resistance,ohm,1.3,2024-03-18T12:06:00Z
+Pump-A1,Pressure,kPa,101.325,2024-03-18T08:07:00Z
