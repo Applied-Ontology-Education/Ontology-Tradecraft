@@ -9,6 +9,34 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<http://example.org/ontology-tradecraft/artifact/Boiler-07> a cco:ont00000995 ;
+    rdfs:label "Boiler-07" ;
+    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/sdc/Boiler-07_Pressure>,
+        <http://example.org/ontology-tradecraft/sdc/Boiler-07_Temperature>,
+        <http://example.org/ontology-tradecraft/sdc/Boiler-07_pressure>,
+        <http://example.org/ontology-tradecraft/sdc/Boiler-07_temp> .
+
+<http://example.org/ontology-tradecraft/artifact/Chiller-3> a cco:ont00000995 ;
+    rdfs:label "Chiller-3" ;
+    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/sdc/Chiller-3_temp> .
+
+<http://example.org/ontology-tradecraft/artifact/Chiller-4> a cco:ont00000995 ;
+    rdfs:label "Chiller-4" ;
+    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/sdc/Chiller-4_temp> .
+
+<http://example.org/ontology-tradecraft/artifact/Chiller_3> a cco:ont00000995 ;
+    rdfs:label "Chiller 3" ;
+    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/sdc/Chiller_3_Temperature> .
+
+<http://example.org/ontology-tradecraft/artifact/Circuit-12> a cco:ont00000995 ;
+    rdfs:label "Circuit-12" ;
+    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/sdc/Circuit-12_resistance>,
+        <http://example.org/ontology-tradecraft/sdc/Circuit-12_voltage> .
+
+<http://example.org/ontology-tradecraft/artifact/Pump-A1> a cco:ont00000995 ;
+    rdfs:label "Pump-A1" ;
+    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/sdc/Pump-A1_Pressure> .
+
 <http://example.org/ontology-tradecraft/measurement/0> a cco:ont00001163 ;
     cco:ont00001767 "2024-03-17T19:03:00+00:00"^^xsd:dateTime ;
     cco:ont00001770 2.12e+02 ;
@@ -17,14 +45,14 @@
 
 <http://example.org/ontology-tradecraft/measurement/1> a cco:ont00001163 ;
     cco:ont00001767 "2024-03-17T19:04:00+00:00"^^xsd:dateTime ;
-    cco:ont00001770 1.47e+01 ;
-    cco:ont00001863 <http://example.org/ontology-tradecraft/unit/psi> ;
+    cco:ont00001770 1.01353e+05 ;
+    cco:ont00001863 <http://example.org/ontology-tradecraft/unit/Pa> ;
     cco:ont00001966 <http://example.org/ontology-tradecraft/sdc/Boiler-07_Pressure> .
 
 <http://example.org/ontology-tradecraft/measurement/10> a cco:ont00001163 ;
     cco:ont00001767 "2024-03-18T08:07:00+00:00"^^xsd:dateTime ;
-    cco:ont00001770 1.01325e+02 ;
-    cco:ont00001863 <http://example.org/ontology-tradecraft/unit/kPa> ;
+    cco:ont00001770 1.01325e+05 ;
+    cco:ont00001863 <http://example.org/ontology-tradecraft/unit/Pa> ;
     cco:ont00001966 <http://example.org/ontology-tradecraft/sdc/Pump-A1_Pressure> .
 
 <http://example.org/ontology-tradecraft/measurement/2> a cco:ont00001163 ;
@@ -35,8 +63,8 @@
 
 <http://example.org/ontology-tradecraft/measurement/3> a cco:ont00001163 ;
     cco:ont00001767 "2024-03-17T23:04:00+00:00"^^xsd:dateTime ;
-    cco:ont00001770 1.01325e+02 ;
-    cco:ont00001863 <http://example.org/ontology-tradecraft/unit/kPa> ;
+    cco:ont00001770 1.01325e+05 ;
+    cco:ont00001863 <http://example.org/ontology-tradecraft/unit/Pa> ;
     cco:ont00001966 <http://example.org/ontology-tradecraft/sdc/Boiler-07_pressure> .
 
 <http://example.org/ontology-tradecraft/measurement/4> a cco:ont00001163 ;
@@ -9933,59 +9961,8 @@ cco:ont00001967 a owl:ObjectProperty ;
     owl:inverseOf cco:ont00001969 ;
     cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
 
-<http://example.org/ontology-tradecraft/artifact/Chiller-3> a cco:ont00000995 ;
-    rdfs:label "Chiller-3" .
-
-<http://example.org/ontology-tradecraft/artifact/Chiller-4> a cco:ont00000995 ;
-    rdfs:label "Chiller-4" .
-
-<http://example.org/ontology-tradecraft/artifact/Chiller_3> a cco:ont00000995 ;
-    rdfs:label "Chiller 3" .
-
-<http://example.org/ontology-tradecraft/artifact/Pump-A1> a cco:ont00000995 ;
-    rdfs:label "Pump-A1" .
-
-<http://example.org/ontology-tradecraft/sdc/Boiler-07_Pressure> a bfo:BFO_0000020 ;
-    rdfs:label "Pressure of Boiler-07" ;
-    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/artifact/Boiler-07> .
-
-<http://example.org/ontology-tradecraft/sdc/Boiler-07_Temperature> a bfo:BFO_0000020 ;
-    rdfs:label "Temperature of Boiler-07" ;
-    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/artifact/Boiler-07> .
-
-<http://example.org/ontology-tradecraft/sdc/Boiler-07_pressure> a bfo:BFO_0000020 ;
-    rdfs:label "pressure of Boiler-07" ;
-    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/artifact/Boiler-07> .
-
-<http://example.org/ontology-tradecraft/sdc/Boiler-07_temp> a bfo:BFO_0000020 ;
-    rdfs:label "temp of Boiler-07" ;
-    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/artifact/Boiler-07> .
-
-<http://example.org/ontology-tradecraft/sdc/Chiller-3_temp> a bfo:BFO_0000020 ;
-    rdfs:label "temp of Chiller-3" ;
-    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/artifact/Chiller-3> .
-
-<http://example.org/ontology-tradecraft/sdc/Chiller_3_Temperature> a bfo:BFO_0000020 ;
-    rdfs:label "Temperature of Chiller 3" ;
-    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/artifact/Chiller_3> .
-
-<http://example.org/ontology-tradecraft/sdc/Circuit-12_resistance> a bfo:BFO_0000020 ;
-    rdfs:label "resistance of Circuit-12" ;
-    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/artifact/Circuit-12> .
-
-<http://example.org/ontology-tradecraft/sdc/Circuit-12_voltage> a bfo:BFO_0000020 ;
-    rdfs:label "voltage of Circuit-12" ;
-    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/artifact/Circuit-12> .
-
-<http://example.org/ontology-tradecraft/sdc/Pump-A1_Pressure> a bfo:BFO_0000020 ;
-    rdfs:label "Pressure of Pump-A1" ;
-    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/artifact/Pump-A1> .
-
 <http://example.org/ontology-tradecraft/unit/ohm> a cco:ont00000120 ;
     rdfs:label "ohm" .
-
-<http://example.org/ontology-tradecraft/unit/psi> a cco:ont00000120 ;
-    rdfs:label "psi" .
 
 <http://example.org/ontology-tradecraft/unit/volt> a cco:ont00000120 ;
     rdfs:label "volt" .
@@ -11749,18 +11726,35 @@ cco:ont00001998 a owl:ObjectProperty ;
     skos:scopeNote "Given a stronger temporal interpretation, this property may be asymmetric and irreflexive. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
 
-<http://example.org/ontology-tradecraft/artifact/Circuit-12> a cco:ont00000995 ;
-    rdfs:label "Circuit-12" .
+<http://example.org/ontology-tradecraft/sdc/Boiler-07_Pressure> a bfo:BFO_0000020 ;
+    rdfs:label "Pressure of Boiler-07" .
 
-<http://example.org/ontology-tradecraft/sdc/Chiller-4_temp> a bfo:BFO_0000020 ;
-    rdfs:label "temp of Chiller-4" ;
-    bfo:BFO_0000196 <http://example.org/ontology-tradecraft/artifact/Chiller-4> .
+<http://example.org/ontology-tradecraft/sdc/Boiler-07_Temperature> a bfo:BFO_0000020 ;
+    rdfs:label "Temperature of Boiler-07" .
+
+<http://example.org/ontology-tradecraft/sdc/Boiler-07_pressure> a bfo:BFO_0000020 ;
+    rdfs:label "pressure of Boiler-07" .
+
+<http://example.org/ontology-tradecraft/sdc/Boiler-07_temp> a bfo:BFO_0000020 ;
+    rdfs:label "temp of Boiler-07" .
+
+<http://example.org/ontology-tradecraft/sdc/Chiller-3_temp> a bfo:BFO_0000020 ;
+    rdfs:label "temp of Chiller-3" .
+
+<http://example.org/ontology-tradecraft/sdc/Chiller_3_Temperature> a bfo:BFO_0000020 ;
+    rdfs:label "Temperature of Chiller 3" .
+
+<http://example.org/ontology-tradecraft/sdc/Circuit-12_resistance> a bfo:BFO_0000020 ;
+    rdfs:label "resistance of Circuit-12" .
+
+<http://example.org/ontology-tradecraft/sdc/Circuit-12_voltage> a bfo:BFO_0000020 ;
+    rdfs:label "voltage of Circuit-12" .
+
+<http://example.org/ontology-tradecraft/sdc/Pump-A1_Pressure> a bfo:BFO_0000020 ;
+    rdfs:label "Pressure of Pump-A1" .
 
 <http://example.org/ontology-tradecraft/unit/C> a cco:ont00000120 ;
     rdfs:label "C" .
-
-<http://example.org/ontology-tradecraft/unit/kPa> a cco:ont00000120 ;
-    rdfs:label "kPa" .
 
 bfo:BFO_0000009 a owl:Class ;
     rdfs:label "two-dimensional spatial region"@en ;
@@ -12757,6 +12751,12 @@ cco:ont00001999 a owl:Class ;
     skos:definition "An Artifact Function that is realized in a process where entities of a specific type or which have specified properties enter it or pass through it."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
 
+<http://example.org/ontology-tradecraft/sdc/Chiller-4_temp> a bfo:BFO_0000020 ;
+    rdfs:label "temp of Chiller-4" .
+
+<http://example.org/ontology-tradecraft/unit/Pa> a cco:ont00000120 ;
+    rdfs:label "Pa" .
+
 bfo:BFO_0000084 a owl:ObjectProperty ;
     rdfs:label "generically depends on"@en ;
     dc:identifier "252-BFO" ;
@@ -13389,9 +13389,6 @@ cco:ont00001988 a owl:ObjectProperty ;
     rdfs:label "is uncle of"@en ;
     rdfs:subPropertyOf cco:ont00001865 ;
     cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
-
-<http://example.org/ontology-tradecraft/artifact/Boiler-07> a cco:ont00000995 ;
-    rdfs:label "Boiler-07" .
 
 <http://example.org/ontology-tradecraft/unit/F> a cco:ont00000120 ;
     rdfs:label "F" .

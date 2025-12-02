@@ -131,7 +131,7 @@ def build_graph() -> Graph:
             g.add((sdc_iri, RDFS.label, Literal(label)))
 
             # bfo:bearer_of(sdc-inst, art-inst)
-            g.add((sdc_iri, BFO_BEARER_OF, art_iri))
+            g.add((art_iri, BFO_BEARER_OF, sdc_iri))
 
         # -----------------------------
         # Measurement Unit (unit-inst)
