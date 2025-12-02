@@ -120,6 +120,20 @@ def normalize_and_write() -> None:
     # numeric value
     df["value"] = pd.to_numeric(df["value"], errors="coerce")
 
+    # ------------------------------------------------------------------
+    # Convert pressure units psi and kPa to Pascals (Pa)
+    # ------------------------------------------------------------------
+    # Any row where unit_label is 'psi'
+    mask_psi = df["unit_label"].astype(str).str.lower() == "psi"
+    df.loc[mask_psi, "value"] = df.loc[mask_psi, "value"] * 6894.76  # psi → Pa
+    df.loc[mask_psi, "unit_label"] = "Pa"
+
+    # Any row where unit_label is 'kPa'
+    mask_kpa = df["unit_label"].astype(str).str.lower() == "kpa"
+    df.loc[mask_kpa, "value"] = df.loc[mask_kpa, "value"] * 1000.0   # kPa → Pa
+    df.loc[mask_kpa, "unit_label"] = "Pa"
+
+
     # 7: Timestamp parsing to ISO 8601
     df["timestamp"] = df["timestamp"].apply(to_iso8601)
 
