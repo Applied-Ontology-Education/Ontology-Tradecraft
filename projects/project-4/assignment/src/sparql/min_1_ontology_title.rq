@@ -16,15 +16,15 @@ SELECT ?ont
 WHERE {
   ?ont rdf:type owl:Ontology .
 
+  # "Bad" if there is no English title
   FILTER NOT EXISTS {
-    {
-      ?ont dcterms:title ?t .
-      FILTER(LANG(?t) = "en")
-    }
-    UNION
-    {
-      ?ont rdfs:label ?t .
-      FILTER(LANG(?t) = "en")
-    }
+    ?ont dcterms:title ?tTitle .
+    FILTER(LANG(?tTitle) = "en")
+  }
+
+  # ...and also no English label
+  FILTER NOT EXISTS {
+    ?ont rdfs:label ?tLabel .
+    FILTER(LANG(?tLabel) = "en")
   }
 }
