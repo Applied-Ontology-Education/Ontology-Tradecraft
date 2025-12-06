@@ -1,5 +1,6 @@
 flowchart LR
 
+<<<<<<< HEAD
 %% =======================================================
 %% AIRCRAFT (Material Entity → Artifact → GIC)
 %% =======================================================
@@ -128,3 +129,35 @@ DATA[/Data/] -->|is about| A
 %% Remarks
 A -->|has associated information| REM[AAC validated by Flight Standardization Board (FSB)]
 REM -->|rdf:type| ICE13[Information Content Entity]
+=======
+    %% ---------------------------------------------------------------------
+    %% AIRCRAFT (Independent Continuant → Artifact → Material Entity)
+    %% ---------------------------------------------------------------------
+    A[Airbus A320 Neo] -->|rdf:type| AC[cco:FixedWingAircraft]
+    AC -->|rdfs:subClassOf| ME[Material Entity]
+    ME -->|rdfs:subClassOf| GIC[Generically Independent Continuant]
+
+    %% ---------------------------------------------------------------------
+    %% IDENTIFIERS (Information Content Entities about the aircraft)
+    %% ---------------------------------------------------------------------
+    A -->|denoted by ICAO code| ICAO[A20N]
+    A -->|denoted by FAA designator| FAA1[A20N]
+    A -->|denoted by FAA designator| FAA2[A20N]
+    A -->|denoted by Manufacturer| MANU[Airbus]
+
+    %% ---------------------------------------------------------------------
+    %% CONTINUANT PARTS
+    %% ---------------------------------------------------------------------
+    A -->|has continuant part| JETENG[Jet Engine - x2]
+    JETENG -->|rdf:type| METYPE[Material Entity]
+
+    %% ---------------------------------------------------------------------
+    %% QUALITIES (Speed, Dimensions, Weight, Configurations)
+    %% ---------------------------------------------------------------------
+    A -->|has quality| QSPEED{Approach Speed Quality}
+    QSPEED -->|qualified by| VSPEED[137]
+    VSPEED -->|has unit| KNOTS[knots]
+
+    A -->|has quality| QSPAN{Wingspan Quality}
+    QSPA
+>>>>>>> 10621c69cd26268eea7dddb9746f6f76015b3119
