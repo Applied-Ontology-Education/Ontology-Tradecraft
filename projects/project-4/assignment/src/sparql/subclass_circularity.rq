@@ -1,0 +1,6 @@
+# Title:  
+#    Class SubClassOf Hierarchy Circularity
+# Constraint Description:  
+#    No class should appear in a circular `subClassOf` hierarchy.
+# Severity:  
+#    Error

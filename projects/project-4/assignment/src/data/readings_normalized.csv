@@ -1,0 +1,8 @@
+artifact_id,sdc_kind,unit_label,value,timestamp
+Boiler-07,temperature,degC,100.0,2024-03-17T23:03:00Z
+Boiler-07,pressure,kPa_gauge,101.325,2024-03-17T23:04:00Z
+Chiller-3,temperature,degC,19.5,2024-03-18T12:01:00Z
+Chiller-4,temperature,degF,6.5,2024-03-18T12:01:00Z
+Chiller-4,temperature,degF,19.5,2024-03-18T12:06:00Z
+Circuit-12,voltage,V,2.0,2024-03-18T12:01:01Z
+Circuit-12,resistance,Ω,1.3,2024-03-18T12:06:00Z

@@ -1,0 +1,50 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix bfo:  <http://purl.obolibrary.org/obo/bfo.owl#> .
+@prefix cco:  <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix ex:   <http://example.org/shapes/> .
+
+#################################################################
+# 1) Artifact bears at least one SDC (cardinality); 
+#################################################################
+ex:ArtifactHasSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:Artifact ;
+  sh:property [
+    sh:path bfo:bearer_of ;
+    sh:minCount 1 ;
+    sh:class bfo:SpecificallyDependentContinuant ;
+    sh:message "Every Artifact must bear at least one SDC (Specifically Dependent Continuant)." ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 2) SDC is measured by at least one MICE (coverage via inverse) 
+#################################################################
+
+#################################################################
+# 3) MICE measures exactly one SDC (functional)
+#################################################################
+
+#################################################################
+# 4) MICE must have one unit and one numeric value (completeness)
+#################################################################
+
+#################################################################
+# 5) No empty values in literals
+#################################################################
+
+#################################################################
+# 6) Unit must match SDC being measured
+#################################################################
+
+#################################################################
+# 7) No duplicate MICE
+#################################################################
+
+#################################################################
+# 8) No dangling/mistyped nodes 
+#################################################################
+

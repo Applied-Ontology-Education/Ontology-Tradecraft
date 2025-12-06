@@ -1,0 +1,6 @@
+# Title: 
+#    No Extra Annotation Whitespace
+# Constraint Description: 
+#    No annotation value may have leading or trailing whitespace.    
+# Severity:
+#    Error 

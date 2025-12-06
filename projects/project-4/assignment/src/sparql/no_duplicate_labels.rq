@@ -1,0 +1,27 @@
+# Title: 
+#     No Duplicate Labels
+# Constraint Description: 
+#     No two ontology elements shall have the same rdfs:label.
+# Severity:
+#     Warning
+
+# Title:
+#   No Duplicate Labels (lexical)
+# Constraint Description:
+#   No two subjects shall share the same rdfs:label lexical string.
+# Severity: Warning
+#
+# A valid ontology should return ZERO rows.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?element ?element2 ?label ?error
+WHERE {
+  ?element rdfs:label ?label .
+  ?element2 rdfs:label ?label .
+  FILTER (?element != ?element2)
+  FILTER (!isBlank(?element))
+  FILTER (!isBlank(?element2))
+  BIND (concat("WARNING: The following ontology elements have the same rdfs:label ", str(?element), " and ", str(?element2)) AS ?error)
+}
+ORDER BY DESC(UCASE(str(?label)))

@@ -1,0 +1,6 @@
+# Title:  
+#    No cyclical definitions
+# Constraint Description:  
+#    No class definition should be self-referential. 
+# Severity:  
+#    Error
