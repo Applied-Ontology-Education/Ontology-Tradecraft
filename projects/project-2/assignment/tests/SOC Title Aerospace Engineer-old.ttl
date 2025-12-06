@@ -1,0 +1,19 @@
+flowchart LR
+A{Aerospace Engineer}-->|has RDF type|B{Job Classification}
+A-->|has SOC code|C[17-2010]
+A-->|has SOC title|D[Aerospace Engineer]
+A-->|Is of subclass of|E[Engineer]
+A-->|has subclass SOC code|F[17-2011]
+A-->|Has subclass SOC code|G[17-3021]
+A-->|Inheres in|J([Act of Aircraft Processing])
+F-->|Inheres in|I[Aircraft, Missle, Spacecraft Design]
+F-->|Inheres in|K[Aircraft, Missle, Spacecraft Construction]
+F-->|Inheres in|L[Aircraft, Missle, Spacecraft Testing]
+F-->|Inheres in|M[Adaptabilty Evaluation]
+N[Changes in design and manufacturing processes]-->|is output of|M
+N-->|Is about|O[Aircraft, Missle, Spacecraft Design iprovements]
+O-->|Is about|P[Artifact Design]
+G-->|Is participsant of|Q[Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition]
+G-->|Inheres in act of measuring|R[testing of measurement instruments and equipment, to launch, track, position, and evaluate air and space vehicles]
+R-->|realizes|S[/instruments/equipment used to launch, track, position, and evaluate air and space vehicles/]
+G-->|Inheres in|T[Data interpretation and anlysis]

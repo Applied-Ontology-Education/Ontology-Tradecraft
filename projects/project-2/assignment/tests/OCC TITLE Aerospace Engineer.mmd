@@ -1,0 +1,37 @@
+flowchart LR
+
+    %% ------------------------------------------------------------
+    %% ROLE / CLASSIFICATION
+    %% ------------------------------------------------------------
+    A[Aerospace Engineer Role] -->|rdf:type| B[Job Classification]
+
+    %% ------------------------------------------------------------
+    %% OCCUPATIONAL CODES AS INFORMATION CONTENT ENTITIES (ICEs)
+    %% ------------------------------------------------------------
+    A -->|is classified by| C[O*NET Code: 1235]
+    C -->|rdf:type| ICE1[Information Content Entity]
+
+    A -->|is classified by| D[SOC Code: 17-2010]
+    D -->|rdf:type| ICE2[Information Content Entity]
+
+    A -->|is classified by| E[SOC Code: 17-2011]
+    E -->|rdf:type| ICE3[Information Content Entity]
+
+    A -->|is classified by| F[SOC Code: 17-3021]
+    F -->|rdf:type| ICE4[Information Content Entity]
+
+    %% ------------------------------------------------------------
+    %% SOC CATEGORY GROUPS (ICEs)
+    %% ------------------------------------------------------------
+    D -->|has SOC group| G[Broad SOC Group]
+    G -->|rdf:type| ICE5[Information Content Entity]
+
+    E -->|has SOC group| H[Detailed SOC Group]
+    H -->|rdf:type| ICE6[Information Content Entity]
+
+    F -->|has SOC group| I[Detailed SOC Group]
+    I -->|rdf:type| ICE7[Information Content Entity]
+
+    %% ------------------------------------------------------------
+    %% OCCUPATIONAL STATISTICAL AREAS (ICEs)
+    %% ----------------------

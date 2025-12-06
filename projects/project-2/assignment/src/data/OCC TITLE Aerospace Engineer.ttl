@@ -1,0 +1,86 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix bfo:  <http://purl.obolibrary.org/obo/bfo.owl#> .
+@prefix cco:  <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix ex:   <http://example.org/job/> .
+
+################################################################################
+## AEROSPACE ENGINEER ROLE (REALIZABLE DEPENDENT CONTINUANT)
+################################################################################
+
+ex:AerospaceEngineerRole a bfo:Role ;
+    rdfs:label "Aerospace Engineer Role" ;
+    cco:isClassifiedBy ex:ONET_1235 ,
+                       ex:SOC_17_2010 ,
+                       ex:SOC_17_2011 ,
+                       ex:SOC_17_3021 .
+
+################################################################################
+## OCCUPATIONAL CODES AS INFORMATION CONTENT ENTITIES
+################################################################################
+
+ex:ONET_1235 a cco:InformationContentEntity ;
+    rdfs:label "O*NET Code: 1235" .
+
+ex:SOC_17_2010 a cco:InformationContentEntity ;
+    rdfs:label "SOC Code: 17-2010" ;
+    cco:hasSubtype ex:SOCGroup_Broad ;
+    cco:isAbout ex:Area_99 ;
+    cco:hasOutput ex:Employment_68440_1 .
+
+ex:SOC_17_2011 a cco:InformationContentEntity ;
+    rdfs:label "SOC Code: 17-2011" ;
+    cco:hasSubtype ex:SOCGroup_Detailed_1 ;
+    cco:isAbout ex:Area_99 ;
+    cco:hasOutput ex:Employment_68440_2 .
+
+ex:SOC_17_3021 a cco:InformationContentEntity ;
+    rdfs:label "SOC Code: 17-3021" ;
+    cco:hasSubtype ex:SOCGroup_Detailed_2 ;
+    cco:isAbout ex:Area_99 ;
+    cco:hasOutput ex:Employment_9060 .
+
+################################################################################
+## SOC GROUPS (ICEs)
+################################################################################
+
+ex:SOCGroup_Broad a cco:InformationContentEntity ;
+    rdfs:label "SOC Group: Broad" .
+
+ex:SOCGroup_Detailed_1 a cco:InformationContentEntity ;
+    rdfs:label "SOC Group: Detailed (SOC 17-2011)" .
+
+ex:SOCGroup_Detailed_2 a cco:InformationContentEntity ;
+    rdfs:label "SOC Group: Detailed (SOC 17-3021)" .
+
+################################################################################
+## STATISTICAL AREA (ICE)
+################################################################################
+
+ex:Area_99 a cco:InformationContentEntity ;
+    rdfs:label "Statistical Area Code: 99" .
+
+################################################################################
+## EMPLOYMENT ESTIMATES (MEASUREMENT VALUES)
+################################################################################
+
+ex:Employment_68440_1 a cco:MeasurementValue ;
+    rdfs:label "Employment Estimate: 68440 (SOC 17-2010)" ;
+    cco:hasNumericalValue "68440"^^xsd:integer .
+
+ex:Employment_68440_2 a cco:MeasurementValue ;
+    rdfs:label "Employment Estimate: 68440 (SOC 17-2011)" ;
+    cco:hasNumericalValue "68440"^^xsd:integer .
+
+ex:Employment_9060 a cco:MeasurementValue ;
+    rdfs:label "Employment Estimate: 9060 (SOC 17-3021)" ;
+    cco:hasNumericalValue "9060"^^xsd:integer .
+
+################################################################################
+## DATASET AS INFORMATION CONTENT ENTITY
+################################################################################
+
+ex:OEWS_DataSet a cco:InformationContentEntity ;
+    rdfs:label "Occupational Employment and Wage Statistics (OEWS)" ;
+    cco:providesDataAbout ex:AerospaceEngineerRole .

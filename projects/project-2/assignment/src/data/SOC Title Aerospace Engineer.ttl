@@ -1,0 +1,80 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix aero: <http://example.org/aerospace-ontology#> .
+
+# ------------------------------------------------------------
+# ROLE (Realizable Dependent Continuant)
+# ------------------------------------------------------------
+aero:AerospaceEngineerRole rdf:type aero:JobClassification ;
+    aero:isClassifiedBy aero:SOCCode_17-2010 ,
+                        aero:SOCTitle_AerospaceEngineer ,
+                        aero:SOCSubclassCode_17-2011 ,
+                        aero:SOCSubclassCode_17-3021 ;
+    rdfs:subClassOf aero:EngineerRole ;
+    aero:realizedIn aero:AircraftProcessingActivity ,
+                    aero:AircraftDesignActivity .
+
+# ------------------------------------------------------------
+# SOC CODES AND TITLES AS INFORMATION CONTENT ENTITIES
+# ------------------------------------------------------------
+aero:SOCCode_17-2010 rdf:type cco:InformationContentEntity .
+
+aero:SOCTitle_AerospaceEngineer rdf:type cco:InformationContentEntity .
+
+aero:SOCSubclassCode_17-2011 rdf:type cco:InformationContentEntity ;
+    aero:associatedWithProcess aero:AircraftMissileSpacecraftDesignProcess ,
+                               aero:AircraftMissileSpacecraftConstructionProcess ,
+                               aero:AircraftMissileSpacecraftTestingProcess ,
+                               aero:AdaptabilityEvaluationProcess .
+
+aero:SOCSubclassCode_17-3021 rdf:type cco:InformationContentEntity ;
+    aero:participatesIn aero:IntegratedSystemOperationActivity ,
+                        aero:TestingOfMeasurementInstrumentsAndEquipment ,
+                        aero:DataInterpretationAndAnalysisActivity .
+
+# ------------------------------------------------------------
+# ENGINEER IS NOT A SUBCLASS OF A PERSON—IT IS A ROLE
+# ------------------------------------------------------------
+aero:EngineerRole rdf:type aero:Role .
+
+# ------------------------------------------------------------
+# OCCUPATIONAL ACTIVITIES AS PROCESSES
+# ------------------------------------------------------------
+aero:AircraftProcessingActivity rdf:type cco:Process .
+
+aero:AircraftDesignActivity rdf:type cco:Process .
+
+# ------------------------------------------------------------
+# 17-2011 SPECIALIZATION ACTIVITIES (Processes)
+# ------------------------------------------------------------
+aero:AircraftMissileSpacecraftDesignProcess rdf:type cco:Process .
+
+aero:AircraftMissileSpacecraftConstructionProcess rdf:type cco:Process .
+
+aero:AircraftMissileSpacecraftTestingProcess rdf:type cco:Process .
+
+aero:AdaptabilityEvaluationProcess rdf:type cco:Process ;
+    cco:hasOutput aero:ChangesInDesignAndManufacturingProcesses .
+
+# ------------------------------------------------------------
+# PROCESS OUTPUT & INFORMATION CONTENT ENTITIES
+# ------------------------------------------------------------
+aero:ChangesInDesignAndManufacturingProcesses 
+    aero:isAbout aero:DesignImprovementInformation .
+
+aero:DesignImprovementInformation 
+    aero:isAbout aero:ArtifactDesign .
+
+# ------------------------------------------------------------
+# ACTIVITIES FOR 17-3021 (Processes)
+# ------------------------------------------------------------
+aero:IntegratedSystemOperationActivity rdf:type cco:Process .
+
+aero:TestingOfMeasurementInstrumentsAndEquipment rdf:type cco:Process ;
+    aero:realizes aero:FunctionOfInstrumentsEquipmentForVehicleLaunchTrackingAndEvaluation .
+
+aero:FunctionOfInstrumentsEquipmentForVehicleLaunchTrackingAndEvaluation 
+    rdf:type cco:Function .
+
+aero:DataInterpretationAndAnalysisActivity rdf:type cco:Process .

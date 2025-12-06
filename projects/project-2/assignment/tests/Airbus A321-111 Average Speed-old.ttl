@@ -1,0 +1,48 @@
+@prefix ex: <http://example.org/aircraft#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qudt: <http://qudt.org/schema/qudt/> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
+@prefix quantity: <http://qudt.org/vocab/quantitykind/> .
+
+#################################################################
+# --- Main Entity: Airbus A321-111 ---
+#################################################################
+
+ex:Airbus_A321_111
+    rdf:type ex:Jet ;
+    ex:hasMaximumApproachSpeed ex:Speed_142_Knots ;
+    ex:hasTestProcess ex:Test_Speed_1 ,
+                      ex:Test_Speed_2 ,
+                      ex:Test_Speed_3 ,
+                      ex:Test_Speed_4 ,
+                      ex:Test_Speed_5 .
+
+#################################################################
+# --- Maximum Approach Speed Measurement ---
+#################################################################
+
+ex:Speed_142_Knots
+    rdf:type qudt:QuantityValue ;
+    qudt:quantityKind quantity:Speed ;
+    qudt:numericValue "142"^^xsd:decimal ;
+    qudt:unit unit:KN .
+
+#################################################################
+# --- Test Processes and Temporal Regions ---
+#################################################################
+
+ex:Test_Speed_1
+    rdf:type ex:TestProcess ;
+    ex:hasTemporalRegion ex:Temporal_Region_Test_Speed_1 ;
+    ex:prescribesNewAverage ex:Speed_139_Knots .
+
+ex:Test_Speed_2
+    rdf:type ex:TestProcess ;
+    ex:hasTemporalRegion ex:Temporal_Region_Test_Speed_2 ;
+    ex:prescribesNewAverage ex:Speed_139_Knots .
+
+ex:Test_Speed_3
+    rdf:type ex:TestProcess ;
+    ex:hasTemporalRegion ex:Temporal_Regio_
