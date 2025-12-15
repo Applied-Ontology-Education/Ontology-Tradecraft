@@ -4,3 +4,44 @@
 #    No class definition should be self-referential. 
 # Severity:  
 #    Error
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+# ---------------------------------------------------------------
+# Title: No cyclical definitions
+# Constraint: No class definition should refer to the class itself.
+# Severity: ERROR
+# ---------------------------------------------------------------
+
+SELECT DISTINCT ?class ?property ?definition ?error
+WHERE {
+    VALUES ?property {
+        rdfs:comment
+        obo:IAO_0000115
+        skos:definition
+        dcterms:description
+    }
+
+    # class with definition
+    ?class ?property ?definition .
+
+    # literal only
+    FILTER(isLiteral(?definition))
+
+    # Check if definition text contains the class URI string
+    FILTER(CONTAINS(LCASE(STR(?definition)), LCASE(STR(?class))))
+
+    # Construct readable error message
+    BIND(
+        CONCAT(
+            "ERROR: Class ", STR(?class),
+            " has a self-referential definition in property ",
+            STR(?property)
+        ) AS ?error
+    )
+}
+ORDER BY ?class

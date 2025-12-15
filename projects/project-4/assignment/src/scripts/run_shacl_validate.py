@@ -10,10 +10,12 @@ from pathlib import Path
 from pyshacl import validate
 
 def main():
-    # Determine base directory: .../assignment/src/scripts -> go up twice to /assignment/src
-    SRC_DIR = Path(__file__).resolve().parents[1]
+    # Determine base directory: .../src/scripts -> go up to /src
+    SCRIPT_DIR = Path(__file__).resolve().parent
+    SRC_DIR = SCRIPT_DIR.parent
+    
     DATA = SRC_DIR / "measure_cco.ttl"
-    SHAPES = SRC_DIR / "shacl" / "cco_shapes.ttl"
+    SHAPES = SRC_DIR / "cco_shapes.ttl"  # Back to shacl subdirectory but ETL lives in src
 
     print("[shacl] DATA   :", DATA)
     print("[shacl] exists?:", DATA.exists())

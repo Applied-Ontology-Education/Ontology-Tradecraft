@@ -1,0 +1,58 @@
+@prefix ex: <http://example.org/ontology#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix schema: <https://schema.org/> .
+
+#################################################################
+# --- Main Occupation: Aerospace Engineer ---
+#################################################################
+
+ex:Aerospace_Engineer
+    rdf:type ex:JobClassification ;
+    schema:name "Aerospace Engineer" ;
+    ex:hasOWNCode "1235" ;
+    ex:hasOCCCode ex:OCC_17_2010 , ex:OCC_17_2011 , ex:OCC_17_3021 ;
+    ex:isMeasuredBy ex:Occupational_Employment_and_Wage_Statistics .
+
+#################################################################
+# --- OCC Code: 17-2010 ---
+#################################################################
+
+ex:OCC_17_2010
+    rdf:type ex:Occupation ;
+    ex:OCCCode "17-2010" ;
+    ex:hasOGroup "broad" ;
+    ex:hasArea "99"^^xsd:integer ;
+    ex:hasEstimatedTotalEmployment "68440"^^xsd:integer .
+
+#################################################################
+# --- OCC Code: 17-2011 ---
+#################################################################
+
+ex:OCC_17_2011
+    rdf:type ex:Occupation ;
+    ex:OCCCode "17-2011" ;
+    ex:hasOGroup "detailed" ;
+    ex:hasArea "99"^^xsd:integer ;
+    ex:hasEstimatedTotalEmployment "68440"^^xsd:integer .
+
+#################################################################
+# --- OCC Code: 17-3021 ---
+#################################################################
+
+ex:OCC_17_3021
+    rdf:type ex:Occupation ;
+    ex:OCCCode "17-3021" ;
+    ex:hasOGroup "detailed" ;
+    ex:hasArea "99"^^xsd:integer ;
+    ex:hasEstimatedTotalEmployment "9060"^^xsd:integer .
+
+#################################################################
+# --- Measurement Context: Occupational Employment and Wage Statistics ---
+#################################################################
+
+ex:Occupational_Employment_and_Wage_Statistics
+    rdf:type ex:StatisticalSurvey ;
+    schema:name "Occupational Employment and Wage Statistics"@en ;
+    ex:inheresInActOfMeasuring ex:Aerospace_Engineer .

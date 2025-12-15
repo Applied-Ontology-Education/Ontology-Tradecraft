@@ -163,9 +163,11 @@ jobs:
           q_all_mice_ok = f"""
           SELECT (COUNT(*) AS ?n_bad)
           WHERE {{
+          {{
             ?m a <{IRI_MICE}> .
             # Missing required links with the exact IRIs?
             FILTER NOT EXISTS {{ ?m <{IRI_IS_MEASURE_OF}> ?sdc . ?sdc a <{IRI_SDC}> . }}
+          }}
             UNION
             {{ ?m a <{IRI_MICE}> .
                FILTER NOT EXISTS {{ ?m <{IRI_USES_MU}> ?u . ?u a <{IRI_MU}> . }} }}

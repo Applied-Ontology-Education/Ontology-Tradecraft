@@ -1,0 +1,128 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO_> .
+@prefix ex: <http://example.org/ontology/> .
+
+###############
+## TOP-LEVEL ##
+###############
+
+ex:MaterialEntity a rdfs:Class ;
+    rdfs:subClassOf bfo:0000040 .    # BFO Material Entity
+
+ex:GenericallyIndependentContinuant a rdfs:Class ;
+    rdfs:subClassOf bfo:0000003 .
+
+cco:FixedWingAircraft rdfs:subClassOf ex:MaterialEntity .
+cco:JetAircraft rdfs:subClassOf ex:MaterialEntity .
+
+###############
+## ROLES ##
+###############
+
+ex:JobClassification a rdfs:Class ;
+    rdfs:subClassOf bfo:0000017 .        # realizable dependent continuant
+
+ex:AerospaceEngineerRole a rdfs:Class ;
+    rdfs:subClassOf ex:JobClassification .
+
+ex:EngineerRole a rdfs:Class ;
+    rdfs:subClassOf ex:JobClassification .
+
+
+###########################
+## INFORMATION CONTENT ENTITIES
+###########################
+
+ex:InformationContentEntity a rdfs:Class ;
+    rdfs:subClassOf cco:InformationContentEntity .
+
+###########################
+## QUALITIES + MEASUREMENTS
+###########################
+
+ex:Quality a rdfs:Class ;
+    rdfs:subClassOf bfo:0000019 .       # quality
+
+ex:Measurement a rdfs:Class ;
+    rdfs:subClassOf cco:MeasurementInformationContentEntity .
+
+ex:UnitOfMeasure a rdfs:Class .
+
+# Units
+ex:knots a ex:UnitOfMeasure .
+ex:feet a ex:UnitOfMeasure .
+ex:pounds a ex:UnitOfMeasure .
+ex:count a ex:UnitOfMeasure .
+ex:squareFeet a ex:UnitOfMeasure .
+
+###################################
+## PROCESSES
+###################################
+
+cco:Process a rdfs:Class .
+ex:TestRun a rdfs:Class ;
+    rdfs:subClassOf cco:Process .
+
+cco:Function a rdfs:Class .
+
+###################################
+## OBJECT PROPERTIES
+###################################
+
+ex:isDenotedBy a rdf:Property ;
+    rdfs:domain ex:MaterialEntity ;
+    rdfs:range ex:InformationContentEntity .
+
+ex:hasContinuantPart a rdf:Property ;
+    rdfs:domain ex:MaterialEntity ;
+    rdfs:range ex:MaterialEntity .
+
+ex:hasQuality a rdf:Property ;
+    rdfs:domain ex:MaterialEntity ;
+    rdfs:range ex:Quality .
+
+ex:hasMeasurement a rdf:Property ;
+    rdfs:domain ex:Quality ;
+    rdfs:range ex:Measurement .
+
+ex:hasUnit a rdf:Property ;
+    rdfs:domain ex:Measurement ;
+    rdfs:range ex:UnitOfMeasure .
+
+ex:qualifies a rdf:Property ;
+    rdfs:domain ex:Measurement ;
+    rdfs:range ex:Quality .
+
+ex:inheresIn a rdf:Property ;
+    rdfs:domain ex:Quality ;
+    rdfs:range ex:MaterialEntity .
+
+ex:isClassifiedBy a rdf:Property ;
+    rdfs:domain ex:JobClassification ;
+    rdfs:range ex:InformationContentEntity .
+
+ex:participatesIn a rdf:Property ;
+    rdfs:domain ex:InformationContentEntity ;
+    rdfs:range cco:Process .
+
+ex:realizedIn a rdf:Property ;
+    rdfs:domain ex:JobClassification ;
+    rdfs:range cco:Process .
+
+ex:associatedWithProcess a rdf:Property ;
+    rdfs:domain ex:InformationContentEntity ;
+    rdfs:range cco:Process .
+
+ex:hasOutput a rdf:Property ;
+    rdfs:domain cco:Process ;
+    rdfs:range ex:InformationContentEntity .
+
+ex:isAbout a rdf:Property ;
+    rdfs:domain ex:InformationContentEntity ;
+    rdfs:range ex:InformationContentEntity .
+
+ex:occursIn a rdf:Property ;
+    rdfs:domain cco:Process ;
+    rdfs:range cco:Process .

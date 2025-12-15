@@ -1,0 +1,163 @@
+flowchart LR
+
+<<<<<<< HEAD
+%% =======================================================
+%% AIRCRAFT (Material Entity → Artifact → GIC)
+%% =======================================================
+A[Airbus A320 Neo] -->|rdf:type| AC[cco:FixedWingAircraft]
+AC -->|rdfs:subClassOf| ME[Material Entity]
+ME -->|rdfs:subClassOf| GIC[Generically Independent Continuant]
+
+%% =======================================================
+%% IDENTIFIERS (Information Content Entities)
+%% =======================================================
+A -->|is denoted by| ICAO[A20N (ICAO Code)]
+ICAO -->|rdf:type| ICE1[Information Content Entity]
+
+A -->|is denoted by| FAA1[A20N (FAA Designator)]
+FAA1 -->|rdf:type| ICE2[Information Content Entity]
+
+A -->|is denoted by| FAA2[A20N (FAA Designator)]
+FAA2 -->|rdf:type| ICE3[Information Content Entity]
+
+A -->|is denoted by| MANU[Airbus Manufacturer Name]
+MANU -->|rdf:type| ICE4[Information Content Entity]
+
+%% =======================================================
+%% CONTINUANT PARTS (Material Entities)
+%% =======================================================
+A -->|has continuant part| JETENG[Jet Engine ×2]
+JETENG -->|rdf:type| METYPE[Material Entity]
+
+%% =======================================================
+%% QUALITIES + MEASUREMENTS (CCO Measurement Pattern)
+%% =======================================================
+
+%% Approach Speed
+A -->|has quality| QSPEED[Approach Speed Quality]
+QSPEED -->|has measurement| MSPEED[137]
+MSPEED -->|has unit| KNOT[knot]
+
+%% Wingspan
+A -->|has quality| QSPAN[Wingspan Quality]
+QSPAN -->|has measurement| MSPAN[117.5]
+MSPAN -->|has unit| FEET1[feet]
+
+%% Length
+A -->|has quality| QLEN[Length Quality]
+QLEN -->|has measurement| MLEN[123.3]
+MLEN -->|has unit| FEET2[feet]
+
+%% Tail Height
+A -->|has quality| QHEIGHT[Tail Height Quality]
+QHEIGHT -->|has measurement| MHEIGHT[39.6]
+MHEIGHT -->|has unit| FEET3[feet]
+
+%% Wheel Base
+A -->|has quality| QWHB[Wheelbase Quality]
+QWHB -->|has measurement| MWHB[41.5]
+MWHB -->|has unit| FEET4[feet]
+
+%% Cockpit-to-Main-Gear
+A -->|has quality| QCG[CG Distance Quality]
+QCG -->|has measurement| MCG[50.2]
+MCG -->|has unit| FEET5[feet]
+
+%% Main Gear Width
+A -->|has quality| QMGW[Main Gear Width Quality]
+QMGW -->|has measurement| MMGW[29.4]
+MMGW -->|has unit| FEET6[feet]
+
+%% MTOW
+A -->|has quality| QMTOW[Maximum Takeoff Weight Quality]
+QMTOW -->|has measurement| MMTOW[174165]
+MMTOW -->|has unit| LBS1[pounds]
+
+%% MALW
+A -->|has quality| QMALW[Maximum Landing Weight Quality]
+QMALW -->|has measurement| MMALW[148591]
+MMALW -->|has unit| LBS2[pounds]
+
+%% Parking Area
+A -->|has quality| QPARK[Required Parking Area Quality]
+QPARK -->|has measurement| MPARK[16358.3]
+MPARK -->|has unit| FT2[square feet]
+
+%% FAA Weight Class (ICE)
+A -->|is classified by| FAAW[Large Weight Class]
+FAAW -->|rdf:type| ICE5[Information Content Entity]
+
+%% ICAO Wake Turbulence Category (ICE)
+A -->|is classified by| WTC[Medium Wake Category]
+WTC -->|rdf:type| ICE6[Information Content Entity]
+
+%% Wake categories (ICEs)
+A -->|is classified by| WHALF[Half Wake Category D]
+WHALF -->|rdf:type| ICE7[Information Content Entity]
+
+A -->|is classified by| WAPPXA[Wake Category Appendix A D]
+WAPPXA -->|rdf:type| ICE8[Information Content Entity]
+
+A -->|is classified by| WAPPXB[Wake Category Appendix B C]
+WAPPXB -->|rdf:type| ICE9[Information Content Entity]
+
+%% SRS (ICE)
+A -->|is denoted by| SRS[III]
+SRS -->|rdf:type| ICE10[Information Content Entity]
+
+%% LAHSO Capability (ICE)
+A -->|is denoted by| LAHSO[7]
+LAHSO -->|rdf:type| ICE11[Information Content Entity]
+
+%% FAA Registry
+A -->|is denoted by| REG[FAA Registry: Yes]
+REG -->|rdf:type| ICE12[Information Content Entity]
+
+%% Registration Count
+A -->|has quality| QREG[Registration Count Quality]
+QREG -->|has measurement| MREG[147]
+MREG -->|has unit| COUNT[count]
+
+%% TMFS Operations
+A -->|has quality| QOPS[TMFS Operations FY24]
+QOPS -->|has measurement| MOPS[540276]
+MOPS -->|has unit| COUNT2[count]
+
+%% Data File
+DATA[/Data/] -->|is about| A
+
+%% Remarks
+A -->|has associated information| REM[AAC validated by Flight Standardization Board (FSB)]
+REM -->|rdf:type| ICE13[Information Content Entity]
+=======
+    %% ---------------------------------------------------------------------
+    %% AIRCRAFT (Independent Continuant → Artifact → Material Entity)
+    %% ---------------------------------------------------------------------
+    A[Airbus A320 Neo] -->|rdf:type| AC[cco:FixedWingAircraft]
+    AC -->|rdfs:subClassOf| ME[Material Entity]
+    ME -->|rdfs:subClassOf| GIC[Generically Independent Continuant]
+
+    %% ---------------------------------------------------------------------
+    %% IDENTIFIERS (Information Content Entities about the aircraft)
+    %% ---------------------------------------------------------------------
+    A -->|denoted by ICAO code| ICAO[A20N]
+    A -->|denoted by FAA designator| FAA1[A20N]
+    A -->|denoted by FAA designator| FAA2[A20N]
+    A -->|denoted by Manufacturer| MANU[Airbus]
+
+    %% ---------------------------------------------------------------------
+    %% CONTINUANT PARTS
+    %% ---------------------------------------------------------------------
+    A -->|has continuant part| JETENG[Jet Engine - x2]
+    JETENG -->|rdf:type| METYPE[Material Entity]
+
+    %% ---------------------------------------------------------------------
+    %% QUALITIES (Speed, Dimensions, Weight, Configurations)
+    %% ---------------------------------------------------------------------
+    A -->|has quality| QSPEED{Approach Speed Quality}
+    QSPEED -->|qualified by| VSPEED[137]
+    VSPEED -->|has unit| KNOTS[knots]
+
+    A -->|has quality| QSPAN{Wingspan Quality}
+    QSPA
+>>>>>>> 10621c69cd26268eea7dddb9746f6f76015b3119

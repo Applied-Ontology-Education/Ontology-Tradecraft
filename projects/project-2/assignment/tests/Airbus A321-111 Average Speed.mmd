@@ -1,0 +1,45 @@
+flowchart LR
+
+    %% AIRCRAFT
+    A[Airbus A321-111] -->|rdf:type| B[cco:JetAircraft]
+
+    %% QUALITY (APPROACH SPEED)
+    A -->|has quality| Q{Maximum Approach Speed Quality}
+
+    %% MEASUREMENT VALUE (142 knots)
+    V142[Measurement Value: 142] -->|has unit| U[knots]
+    V142 -->|qualifies| Q
+
+    %% MEASUREMENT PROCESSES
+    A -->|undergoes process| D[Test Speed 1 Process]
+    A -->|undergoes process| E[Test Speed 2 Process]
+    A -->|undergoes process| F[Test Speed 3 Process]
+    A -->|undergoes process| G[Test Speed 4 Process]
+    A -->|undergoes process| H[Test Speed 5 Process]
+
+    %% TEST RUN OCCURRENTS (PROCESS BOUNDARIES)
+    D -->|occurs in| K[Test Run 1]
+    E -->|occurs in| L[Test Run 2]
+    F -->|occurs in| M[Test Run 3]
+    G -->|occurs in| N[Test Run 4]
+    H -->|occurs in| O[Test Run 5]
+
+    %% MEASUREMENT ICEs (RESULTS OF PROCESSES)
+    D -->|has output| M1[Measurement ICE 1]
+    E -->|has output| M2[Measurement ICE 2]
+    F -->|has output| M3[Measurement ICE 3]
+    G -->|has output| M4[Measurement ICE 4]
+    H -->|has output| M5[Measurement ICE 5]
+
+    %% EACH ICE DENOTES THE SAME NEW AVERAGE VALUE
+    M1 -->|denotes| V139[Measurement Value: 139]
+    M2 -->|denotes| V139
+    M3 -->|denotes| V139
+    M4 -->|denotes| V139
+    M5 -->|denotes| V139
+
+    V139 -->|has unit| U
+    V139 -->|qualifies| Q
+
+    %% LINK BACK TO THE QUALITY TYPE
+    Q -->|inheres in| A

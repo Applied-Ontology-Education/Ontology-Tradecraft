@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-from rdflib import Graph
+from rdflib import Graph, Namespace
 from pathlib import Path
 import sys
 
@@ -38,8 +38,22 @@ def main() -> int:
         return 2
 
     g = Graph()
+    
+    # Bind namespaces BEFORE parsing to ensure they're preserved
+    BFO = Namespace("http://purl.obolibrary.org/obo/bfo.owl#")
+    CCO = Namespace("http://www.ontologyrepository.com/CommonCoreOntologies/")
+    EX = Namespace("http://example.org/")
+    
+    g.bind("bfo", BFO)
+    g.bind("cco", CCO)
+    g.bind("ex", EX)
+    
     g.parse(DATA, format="turtle")
     print(f"[qc] triples loaded: {len(g)}")
+    
+    # Verify BFO namespace is present
+    bfo_triples = sum(1 for s, p, o in g if str(p).startswith("http://purl.obolibrary.org/obo/bfo.owl#"))
+    print(f"[qc] BFO triples found: {bfo_triples}")
 
     rq_files = sorted(QUERIES.glob("*.rq"))
     print(f"[qc] found {len(rq_files)} query file(s):")

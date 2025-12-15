@@ -1,0 +1,106 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix ex: <http://example.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Artifact_Boiler-07 a cco:ont00000995 ;
+    rdfs:label "Boiler-07" ;
+    bfo:BFO_0000196 ex:Boiler-07_pressure_Quality,
+        ex:Boiler-07_temperature_Quality .
+
+ex:Artifact_Chiller-3 a cco:ont00000995 ;
+    rdfs:label "Chiller-3" ;
+    bfo:BFO_0000196 ex:Chiller-3_temperature_Quality .
+
+ex:Artifact_Chiller-4 a cco:ont00000995 ;
+    rdfs:label "Chiller-4" ;
+    bfo:BFO_0000196 ex:Chiller-4_temperature_Quality .
+
+ex:Artifact_Circuit-12 a cco:ont00000995 ;
+    rdfs:label "Circuit-12" ;
+    bfo:BFO_0000196 ex:Circuit-12_resistance_Quality,
+        ex:Circuit-12_voltage_Quality .
+
+ex:Boiler-07_pressure_Measurement_1 a cco:ont00001163 ;
+    rdfs:label "Boiler-07 pressure measurement 1" ;
+    cco:has_data_value 101.325 ;
+    cco:measurement_time "2024-03-17T23:04:00+00:00"^^xsd:dateTime ;
+    cco:ont00001863 ex:Unit_kPa ;
+    cco:ont00001966 ex:Boiler-07_pressure_Quality .
+
+ex:Boiler-07_temperature_Measurement_0 a cco:ont00001163 ;
+    rdfs:label "Boiler-07 temperature measurement 0" ;
+    cco:has_data_value 100.0 ;
+    cco:measurement_time "2024-03-17T23:03:00+00:00"^^xsd:dateTime ;
+    cco:ont00001863 ex:Unit_C ;
+    cco:ont00001966 ex:Boiler-07_temperature_Quality .
+
+ex:Chiller-3_temperature_Measurement_2 a cco:ont00001163 ;
+    rdfs:label "Chiller-3 temperature measurement 2" ;
+    cco:has_data_value 19.5 ;
+    cco:measurement_time "2024-03-18T12:01:00+00:00"^^xsd:dateTime ;
+    cco:ont00001863 ex:Unit_C ;
+    cco:ont00001966 ex:Chiller-3_temperature_Quality .
+
+ex:Chiller-4_temperature_Measurement_3 a cco:ont00001163 ;
+    rdfs:label "Chiller-4 temperature measurement 3" ;
+    cco:has_data_value 6.5 ;
+    cco:measurement_time "2024-03-18T12:01:00+00:00"^^xsd:dateTime ;
+    cco:ont00001863 ex:Unit_F ;
+    cco:ont00001966 ex:Chiller-4_temperature_Quality .
+
+ex:Chiller-4_temperature_Measurement_4 a cco:ont00001163 ;
+    rdfs:label "Chiller-4 temperature measurement 4" ;
+    cco:has_data_value 19.5 ;
+    cco:measurement_time "2024-03-18T12:06:00+00:00"^^xsd:dateTime ;
+    cco:ont00001863 ex:Unit_F ;
+    cco:ont00001966 ex:Chiller-4_temperature_Quality .
+
+ex:Circuit-12_resistance_Measurement_6 a cco:ont00001163 ;
+    rdfs:label "Circuit-12 resistance measurement 6" ;
+    cco:has_data_value 1.3 ;
+    cco:measurement_time "2024-03-18T12:06:00+00:00"^^xsd:dateTime ;
+    cco:ont00001863 ex:Unit_ohm ;
+    cco:ont00001966 ex:Circuit-12_resistance_Quality .
+
+ex:Circuit-12_voltage_Measurement_5 a cco:ont00001163 ;
+    rdfs:label "Circuit-12 voltage measurement 5" ;
+    cco:has_data_value 2.0 ;
+    cco:measurement_time "2024-03-18T12:01:01+00:00"^^xsd:dateTime ;
+    cco:ont00001863 ex:Unit_V ;
+    cco:ont00001966 ex:Circuit-12_voltage_Quality .
+
+ex:Unit_V a cco:ont00000120 ;
+    rdfs:label "volt" .
+
+ex:Unit_kPa a cco:ont00000120 ;
+    rdfs:label "kilopascal" .
+
+ex:Unit_ohm a cco:ont00000120 ;
+    rdfs:label "ohm" .
+
+ex:Boiler-07_pressure_Quality a bfo:BFO_0000020 ;
+    rdfs:label "Boiler-07 pressure quality" .
+
+ex:Boiler-07_temperature_Quality a bfo:BFO_0000020 ;
+    rdfs:label "Boiler-07 temperature quality" .
+
+ex:Chiller-3_temperature_Quality a bfo:BFO_0000020 ;
+    rdfs:label "Chiller-3 temperature quality" .
+
+ex:Circuit-12_resistance_Quality a bfo:BFO_0000020 ;
+    rdfs:label "Circuit-12 resistance quality" .
+
+ex:Circuit-12_voltage_Quality a bfo:BFO_0000020 ;
+    rdfs:label "Circuit-12 voltage quality" .
+
+ex:Unit_C a cco:ont00000120 ;
+    rdfs:label "degree Celsius" .
+
+ex:Unit_F a cco:ont00000120 ;
+    rdfs:label "degree Fahrenheit" .
+
+ex:Chiller-4_temperature_Quality a bfo:BFO_0000020 ;
+    rdfs:label "Chiller-4 temperature quality" .
+

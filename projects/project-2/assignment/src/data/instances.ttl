@@ -1,0 +1,237 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ex: <http://example.org/ontology/> .
+@prefix cco: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+
+#############################
+## AIRCRAFT INDIVIDUALS
+#############################
+
+ex:AirbusA320Neo a cco:FixedWingAircraft .
+
+ex:ICAO_A20N a ex:InformationContentEntity .
+ex:FAA_A20N_1 a ex:InformationContentEntity .
+ex:FAA_A20N_2 a ex:InformationContentEntity .
+ex:Manufacturer_Airbus a ex:InformationContentEntity .
+
+ex:AirbusA320Neo ex:isDenotedBy ex:ICAO_A20N , ex:FAA_A20N_1 , ex:FAA_A20N_2 , ex:Manufacturer_Airbus .
+
+ex:JetEngineX2 a ex:MaterialEntity .
+ex:AirbusA320Neo ex:hasContinuantPart ex:JetEngineX2 .
+
+### Qualities + Measurements (A320 Neo)
+
+ex:ApproachSpeedQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_137 .
+ex:MS_137 a ex:Measurement ;
+    ex:hasUnit ex:knots .
+
+ex:WingspanQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_117_5 .
+ex:MS_117_5 a ex:Measurement ;
+    ex:hasUnit ex:feet .
+
+ex:LengthQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_123_3 .
+ex:MS_123_3 a ex:Measurement ;
+    ex:hasUnit ex:feet .
+
+ex:TailHeightQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_39_6 .
+ex:MS_39_6 a ex:Measurement ;
+    ex:hasUnit ex:feet .
+
+ex:WheelbaseQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_41_5 .
+ex:MS_41_5 a ex:Measurement ;
+    ex:hasUnit ex:feet .
+
+ex:CGDistanceQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_50_2 .
+ex:MS_50_2 a ex:Measurement ;
+    ex:hasUnit ex:feet .
+
+ex:MainGearWidthQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_29_4 .
+ex:MS_29_4 a ex:Measurement ;
+    ex:hasUnit ex:feet .
+
+ex:MTOWQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_174165 .
+ex:MS_174165 a ex:Measurement ;
+    ex:hasUnit ex:pounds .
+
+ex:MALWQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_148591 .
+ex:MS_148591 a ex:Measurement ;
+    ex:hasUnit ex:pounds .
+
+ex:ParkingAreaQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_16358_3 .
+ex:MS_16358_3 a ex:Measurement ;
+    ex:hasUnit ex:squareFeet .
+
+### ICE Classifications (A320 Neo)
+
+ex:FAAWeightClass_Large a ex:InformationContentEntity .
+ex:AirbusA320Neo ex:isClassifiedBy ex:FAAWeightClass_Large .
+
+ex:WakeCategory_Medium a ex:InformationContentEntity .
+ex:AirbusA320Neo ex:isClassifiedBy ex:WakeCategory_Medium .
+
+ex:WakeHalfCategoryD a ex:InformationContentEntity .
+ex:WakeAppendixA_D a ex:InformationContentEntity .
+ex:WakeAppendixB_C a ex:InformationContentEntity .
+
+ex:AirbusA320Neo ex:isClassifiedBy ex:WakeHalfCategoryD ,
+                                    ex:WakeAppendixA_D ,
+                                    ex:WakeAppendixB_C .
+
+ex:SRS_III a ex:InformationContentEntity .
+ex:LAHSO_7 a ex:InformationContentEntity .
+ex:FAARegistry_Yes a ex:InformationContentEntity .
+
+ex:AirbusA320Neo ex:isDenotedBy ex:SRS_III ,
+                                   ex:LAHSO_7 ,
+                                   ex:FAARegistry_Yes .
+
+### Registration + TMFS
+
+ex:RegistrationCountQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_147 .
+ex:MS_147 a ex:Measurement ;
+    ex:hasUnit ex:count .
+
+ex:TMFSOpsQuality a ex:Quality ;
+    ex:hasMeasurement ex:MS_540276 .
+ex:MS_540276 a ex:Measurement ;
+    ex:hasUnit ex:count .
+
+#############
+## DATA FILE
+#############
+
+ex:DataFile a ex:InformationContentEntity ;
+    ex:isAbout ex:AirbusA320Neo .
+
+#############################
+## REMARKS
+#############################
+
+ex:FSB_Remark a ex:InformationContentEntity ;
+    ex:isAbout ex:AirbusA320Neo .
+
+#############################
+## AIRBUS A321-111 MODEL
+#############################
+
+ex:A321_111 a cco:JetAircraft .
+
+ex:MaxApproachSpeedQuality a ex:Quality ;
+    ex:inheresIn ex:A321_111 ;
+    ex:hasMeasurement ex:MV_142 .
+
+ex:MV_142 a ex:Measurement ;
+    ex:hasUnit ex:knots .
+
+### Measurement Processes
+
+ex:TestSpeed1 ex:occursIn ex:TestRun1 ;
+    a cco:Process ;
+    ex:hasOutput ex:ICE_M1 .
+
+ex:TestSpeed2 ex:occursIn ex:TestRun2 ;
+    a cco:Process ;
+    ex:hasOutput ex:ICE_M2 .
+
+ex:TestSpeed3 ex:occursIn ex:TestRun3 ;
+    a cco:Process ;
+    ex:hasOutput ex:ICE_M3 .
+
+ex:TestSpeed4 ex:occursIn ex:TestRun4 ;
+    a cco:Process ;
+    ex:hasOutput ex:ICE_M4 .
+
+ex:TestSpeed5 ex:occursIn ex:TestRun5 ;
+    a cco:Process ;
+    ex:hasOutput ex:ICE_M5 .
+
+### All denote the new average:
+
+ex:MV_139 a ex:Measurement ;
+    ex:hasUnit ex:knots .
+
+ex:ICE_M1 ex:denotes ex:MV_139 .
+ex:ICE_M2 ex:denotes ex:MV_139 .
+ex:ICE_M3 ex:denotes ex:MV_139 .
+ex:ICE_M4 ex:denotes ex:MV_139 .
+ex:ICE_M5 ex:denotes ex:MV_139 .
+
+#############################
+## JOB CLASSIFICATION INSTANCE MODEL (2 files merged)
+#############################
+
+ex:AerospaceEngineerRoleInstance a ex:AerospaceEngineerRole .
+
+# Codes
+
+ex:ONET_1235 a ex:InformationContentEntity .
+ex:AerospaceEngineerRoleInstance ex:isClassifiedBy ex:ONET_1235 .
+
+ex:SOC_17_2010 a ex:InformationContentEntity .
+ex:SOC_17_2011 a ex:InformationContentEntity .
+ex:SOC_17_3021 a ex:InformationContentEntity .
+
+ex:AerospaceEngineerRoleInstance ex:isClassifiedBy ex:SOC_17_2010 ,
+                                                    ex:SOC_17_2011 ,
+                                                    ex:SOC_17_3021 .
+
+# Groups & areas
+
+ex:SOCGroup_Broad a ex:InformationContentEntity .
+ex:SOCGroup_Detailed1 a ex:InformationContentEntity .
+ex:SOCGroup_Detailed2 a ex:InformationContentEntity .
+
+# Processes for Engineer Role
+
+ex:AircraftProcessing a cco:Process .
+ex:AircraftDesignActivity a cco:Process .
+
+ex:AerospaceEngineerRoleInstance ex:realizedIn ex:AircraftProcessing ,
+                                                      ex:AircraftDesignActivity .
+
+# Processes for SOC 17–2011
+
+ex:DesignProcess a cco:Process .
+ex:ConstructionProcess a cco:Process .
+ex:TestingProcess a cco:Process .
+ex:AdaptabilityProcess a cco:Process .
+
+ex:SOC_17_2011 ex:associatedWithProcess ex:DesignProcess ,
+                                         ex:ConstructionProcess ,
+                                         ex:TestingProcess ,
+                                         ex:AdaptabilityProcess .
+
+# Output ICEs
+
+ex:DesignChangeInfo a ex:InformationContentEntity .
+ex:DesignConceptInfo a ex:InformationContentEntity .
+ex:ArtifactDesignInfo a ex:InformationContentEntity .
+
+ex:DesignChangeInfo ex:isAbout ex:DesignConceptInfo .
+ex:DesignConceptInfo ex:isAbout ex:ArtifactDesignInfo .
+
+# Processes for SOC 17–3021
+
+ex:SystemOperationActivity a cco:Process .
+ex:InstrumentTestingActivity a cco:Process .
+ex:DataInterpretationActivity a cco:Process .
+
+ex:SOC_17_3021 ex:participatesIn ex:SystemOperationActivity ,
+                                  ex:InstrumentTestingActivity ,
+                                  ex:DataInterpretationActivity .
+
+# Function
+
+ex:InstrumentFunction a cco:Function .
+ex:InstrumentTestingActivity ex:realizes ex:InstrumentFunction .
