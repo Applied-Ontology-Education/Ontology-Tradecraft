@@ -37,7 +37,8 @@ You will write a **small Python script** (e.g., `src/scripts/normalize_readings.
 
 3. **Load Sensor A (CSV)**
    ```python
-   df_a = pd.read_csv(IN_A, dtype=str, keep_default_na=False, na_values=["", "NA", "NaN"])
+import preprocess.io
+   df_a = preprocess.io.read_csv(IN_A, dtype=str, keep_default_na=False, na_values=["", "NA", "NaN"])
    # Map columns to canonical names (EDIT to match the actual headers)
    df_a = df_a.rename(columns={
        "asset_id": "artifact_id",

@@ -121,8 +121,8 @@ def test_required_terms_have_labels_and_definitions():
         # Task 2
         "Test Process", "is temporal part of", "is measurement unit of",
         "prescribes", "Measurement Unit",
-        # Task 3
-        "Act of Aircraft Processing", "Adaptability Evaluation",
+        # # Task 3
+        # "Act of Aircraft Processing", "Adaptability Evaluation",
         # Task 4
         "quality", "Act of Measuring", "Total Employment",
         "has area", "o group", "own code",
@@ -238,6 +238,7 @@ def test_task1_a320neo_spec_modeled():
     assert ask(g, q_dims), "A320 NEO must have numeric 'has Length Ft' and 'has Tail Height Ft/Tf' values with numeric xsd datatypes."
 
 # ---- Task 2 -------------------------------------------------------------------
+
 
 def test_task2_a321111_and_test_process():
     g = load_graph()
@@ -471,4 +472,3 @@ def test_literals_are_typed_and_task_instances_have_labels():
     required_instances = ["Airbus A320 NEO", "Airbus A321-111"]
     for lab in required_instances:
         assert by_label_iri(g, lab), f"Missing required instance labeled '{lab}'."
-

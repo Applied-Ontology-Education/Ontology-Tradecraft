@@ -1,0 +1,557 @@
+{
+  "tau": 0.4,
+  "w_cos": 0.7,
+  "num_candidates": 78,
+  "num_accepted": 28,
+  "ollama_model": "gemma3n",
+  "ollama_host": "http://localhost:11434",
+  "dry_run": false,
+  "details": [
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000029",
+      "sup": "https://www.commoncoreontologies.org/ont00000745",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000073",
+      "sup": "http://purl.obolibrary.org/obo/BFO_0000008",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000080",
+      "sup": "http://purl.obolibrary.org/obo/BFO_0000203",
+      "cosine": 0.10107791423797607,
+      "plausibility": 0.95,
+      "hybrid": 0.3557545399665833
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000087",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.595683217048645,
+      "plausibility": 0.75,
+      "hybrid": 0.6419782519340516
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000120",
+      "sup": "https://www.commoncoreontologies.org/ont00000853",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000127",
+      "sup": "https://www.commoncoreontologies.org/ont00000965",
+      "cosine": 0.4609662890434265,
+      "plausibility": 0.95,
+      "hybrid": 0.6076764023303985
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000154",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.32504701614379883,
+      "plausibility": 0.95,
+      "hybrid": 0.5125329113006591
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000164",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000186",
+      "sup": "https://www.commoncoreontologies.org/ont00001010",
+      "cosine": 0.13532806932926178,
+      "plausibility": 0.95,
+      "hybrid": 0.3797296485304833
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000203",
+      "sup": "https://www.commoncoreontologies.org/ont00000293",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000275",
+      "sup": "https://www.commoncoreontologies.org/ont00000398",
+      "cosine": 0.9958463907241821,
+      "plausibility": 0.95,
+      "hybrid": 0.9820924735069275
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000276",
+      "sup": "https://www.commoncoreontologies.org/ont00000891",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000369",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000399",
+      "sup": "https://www.commoncoreontologies.org/ont00000686",
+      "cosine": 0.5691589117050171,
+      "plausibility": 0.95,
+      "hybrid": 0.683411238193512
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000539",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.3515858054161072,
+      "plausibility": 0.95,
+      "hybrid": 0.531110063791275
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000540",
+      "sup": "http://purl.obolibrary.org/obo/BFO_0000203",
+      "cosine": 0.5107091665267944,
+      "plausibility": 0.95,
+      "hybrid": 0.6424964165687561
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000589",
+      "sup": "https://www.commoncoreontologies.org/ont00000827",
+      "cosine": 0.9987451434135437,
+      "plausibility": 0.95,
+      "hybrid": 0.9841216003894806
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000592",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000604",
+      "sup": "http://purl.obolibrary.org/obo/BFO_0000001",
+      "cosine": 0.2988048195838928,
+      "plausibility": 0.95,
+      "hybrid": 0.494163373708725
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000626",
+      "sup": "https://www.commoncoreontologies.org/ont00000853",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000653",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.9643902778625488,
+      "plausibility": 0.95,
+      "hybrid": 0.9600731945037841
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000669",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000683",
+      "sup": "https://www.commoncoreontologies.org/ont00000605",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000692",
+      "sup": "https://www.commoncoreontologies.org/ont00001163",
+      "cosine": 0.6771444082260132,
+      "plausibility": 0.95,
+      "hybrid": 0.7590010857582092
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000731",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000749",
+      "sup": "https://www.commoncoreontologies.org/ont00000498",
+      "cosine": 0.03864601254463196,
+      "plausibility": 0.95,
+      "hybrid": 0.3120522087812424
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000829",
+      "sup": "https://www.commoncoreontologies.org/ont00000390",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000833",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.75,
+      "hybrid": 0.22500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000833",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.75,
+      "hybrid": 0.22500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000833",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.75,
+      "hybrid": 0.22500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000833",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.75,
+      "hybrid": 0.22500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000833",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.75,
+      "hybrid": 0.22500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000833",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.75,
+      "hybrid": 0.22500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000833",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.75,
+      "hybrid": 0.22500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000833",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.75,
+      "hybrid": 0.22500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000833",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.75,
+      "hybrid": 0.22500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000833",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.75,
+      "hybrid": 0.22500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000845",
+      "sup": "https://www.commoncoreontologies.org/ont00001022",
+      "cosine": 0.9965851902961731,
+      "plausibility": 0.95,
+      "hybrid": 0.9826096332073212
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000894",
+      "sup": "https://www.commoncoreontologies.org/ont00000529",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000896",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.03604242205619812,
+      "plausibility": 0.95,
+      "hybrid": 0.3102296954393387
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000915",
+      "sup": "https://www.commoncoreontologies.org/ont00000605",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000916",
+      "sup": "https://www.commoncoreontologies.org/ont00000891",
+      "cosine": 0.03555317223072052,
+      "plausibility": 0.95,
+      "hybrid": 0.3098872205615044
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000923",
+      "sup": "https://www.commoncoreontologies.org/ont00000649",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000973",
+      "sup": "http://purl.obolibrary.org/obo/BFO_0000203",
+      "cosine": 0.5833646059036255,
+      "plausibility": 0.95,
+      "hybrid": 0.6933552241325378
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000990",
+      "sup": "https://www.commoncoreontologies.org/ont00000003",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001041",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001069",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001146",
+      "sup": "https://www.commoncoreontologies.org/ont00001328",
+      "cosine": 0.8323293924331665,
+      "plausibility": 0.95,
+      "hybrid": 0.8676305747032166
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001149",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.22319138050079346,
+      "plausibility": 0.75,
+      "hybrid": 0.38123396635055545
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001175",
+      "sup": "https://www.commoncoreontologies.org/ont00000965",
+      "cosine": 0.8591362237930298,
+      "plausibility": 0.95,
+      "hybrid": 0.8863953566551208
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001176",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.49634063243865967,
+      "plausibility": 0.95,
+      "hybrid": 0.6324384427070617
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001205",
+      "sup": "https://www.commoncoreontologies.org/ont00000398",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001235",
+      "sup": "http://purl.obolibrary.org/obo/BFO_0000006",
+      "cosine": 0.8244538307189941,
+      "plausibility": 0.95,
+      "hybrid": 0.8621176815032959
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001256",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001309",
+      "sup": "https://www.commoncoreontologies.org/ont00000077",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001331",
+      "sup": "https://www.commoncoreontologies.org/ont00001014",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001340",
+      "sup": "https://www.commoncoreontologies.org/ont00000529",
+      "cosine": 0.9899004697799683,
+      "plausibility": 0.95,
+      "hybrid": 0.9779303288459777
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001351",
+      "sup": "http://purl.obolibrary.org/obo/BFO_0000006",
+      "cosine": 0.45517486333847046,
+      "plausibility": 0.95,
+      "hybrid": 0.6036224043369294
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001352",
+      "sup": "http://purl.obolibrary.org/obo/BFO_0000006",
+      "cosine": 0.9908440113067627,
+      "plausibility": 0.95,
+      "hybrid": 0.9785908079147339
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001364",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.010552257299423218,
+      "plausibility": 0.95,
+      "hybrid": 0.2923865801095963
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000077",
+      "sup": "https://www.commoncoreontologies.org/ont00000649",
+      "cosine": 0.9910243153572083,
+      "plausibility": 0.95,
+      "hybrid": 0.9787170207500457
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000293",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.2692069411277771,
+      "plausibility": 0.95,
+      "hybrid": 0.473444858789444
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000390",
+      "sup": "https://www.commoncoreontologies.org/ont00000686",
+      "cosine": 0.7547802925109863,
+      "plausibility": 0.95,
+      "hybrid": 0.8133462047576904
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000827",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.02976691722869873,
+      "plausibility": 0.95,
+      "hybrid": 0.30583684206008915
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001010",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.039996445178985596,
+      "plausibility": 0.95,
+      "hybrid": 0.31299751162528994
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001014",
+      "sup": "https://www.commoncoreontologies.org/ont00000003",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001022",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001163",
+      "sup": "https://www.commoncoreontologies.org/ont00000853",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00001328",
+      "sup": "https://www.commoncoreontologies.org/ont00000398",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000529",
+      "sup": "https://www.commoncoreontologies.org/ont00000800",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000605",
+      "sup": "https://www.commoncoreontologies.org/ont00000003",
+      "cosine": 0.44247812032699585,
+      "plausibility": 0.95,
+      "hybrid": 0.5947346842288971
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000649",
+      "sup": "https://www.commoncoreontologies.org/ont00000686",
+      "cosine": 0.7182072401046753,
+      "plausibility": 0.95,
+      "hybrid": 0.7877450680732727
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000965",
+      "sup": "http://purl.obolibrary.org/obo/BFO_0000001",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000003",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.9854309558868408,
+      "plausibility": 0.95,
+      "hybrid": 0.9748016691207886
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000398",
+      "sup": "https://www.commoncoreontologies.org/ont00000853",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000686",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.8700764775276184,
+      "plausibility": 0.95,
+      "hybrid": 0.8940535342693329
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000853",
+      "sup": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.0,
+      "plausibility": 0.95,
+      "hybrid": 0.28500000000000003
+    },
+    {
+      "sub": "https://www.commoncoreontologies.org/ont00000958",
+      "sup": "http://purl.obolibrary.org/obo/BFO_0000001",
+      "cosine": 0.16656719148159027,
+      "plausibility": 0.95,
+      "hybrid": 0.4015970340371132
+    }
+  ]
+}

@@ -7,6 +7,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
 
 <http://www.w3.org/2006/time>
   a owl:Ontology ;
@@ -23,8 +24,8 @@
   rdfs:seeAlso <http://dx.doi.org/10.3233/SW-150187> ;
   rdfs:seeAlso <http://www.semantic-web-journal.net/content/time-ontology-extended-non-gregorian-calendar-applications> ;
   rdfs:seeAlso <http://www.w3.org/TR/owl-time> ;
-  owl:priorVersion <http://www.w3.org/2006/time#2006> ;
-  owl:versionIRI <http://www.w3.org/2006/time#2016> ;
+  owl:priorVersion :2006 ;
+  owl:versionIRI :2016 ;
   skos:changeNote "2016-06-15 - initial update of OWL-Time - modified to support arbitrary temporal reference systems. " ;
   skos:changeNote "2016-12-20 - adjust range of time:timeZone to time:TimeZone, moved up from the tzont ontology.  " ;
   skos:changeNote "2016-12-20 - restore time:Year and time:January which were present in the 2006 version of the ontology, but now marked \"deprecated\". " ;
@@ -1807,3 +1808,14 @@ xsd:dateTimeStamp  rdfs:label  "sello de tiempo"@es .
 :TemporalDuration 
         rdfs:label       "duración temporal"@es ;
         skos:definition  "Extensión de tiempo; duración de un intervalo de tiempo independiente de su posición de inicio particular."@es .
+
+:Year	rdfs:subclassOf	cco:ont00000810 .
+:MonthOfYear	rdfs:subclassOf	cco:ont00000211 .
+:January	rdfs:subclassOf	cco:ont00000211 .
+:Year	rdfs:subclassOf	cco:ont00000211 .
+:MonthOfYear	rdfs:subclassOf	cco:ont00000063 .
+:Year	rdfs:subclassOf	cco:ont00000063 .
+:January	rdfs:subclassOf	cco:ont00001166 .
+:Year	rdfs:subclassOf	cco:ont00001166 .
+:MonthOfYear	rdfs:subclassOf	cco:ont00000225 .
+:January	rdfs:subclassOf	cco:ont00000225 .

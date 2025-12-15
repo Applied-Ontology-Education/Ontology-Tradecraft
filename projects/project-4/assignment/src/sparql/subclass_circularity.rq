@@ -4,3 +4,10 @@
 #    No class should appear in a circular `subClassOf` hierarchy.
 # Severity:  
 #    Error
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?class (CONCAT("Error: The following ontology element appears in a circular `subClassOf` hierarchy: ", STR(?class)) AS ?error)
+WHERE {
+  ?class rdfs:subClassOf+ ?class .
+}
+ORDER BY ASC(UCASE(STR(?class)))

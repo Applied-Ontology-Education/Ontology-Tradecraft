@@ -1,0 +1,115 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://www.commoncoreontologies.org/ont00000077> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000649> ] .
+
+<https://www.commoncoreontologies.org/ont00000087> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000800> ] .
+
+<https://www.commoncoreontologies.org/ont00000127> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001942> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000965> ] .
+
+<https://www.commoncoreontologies.org/ont00000154> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001966> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000958> ] .
+
+<https://www.commoncoreontologies.org/ont00000275> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001982> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000398> ] .
+
+<https://www.commoncoreontologies.org/ont00000293> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001868> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000958> ] .
+
+<https://www.commoncoreontologies.org/ont00000390> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000686> ] .
+
+<https://www.commoncoreontologies.org/ont00000399> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000686> ] .
+
+<https://www.commoncoreontologies.org/ont00000539> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001966> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000958> ] .
+
+<https://www.commoncoreontologies.org/ont00000540> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000203> ] .
+
+<https://www.commoncoreontologies.org/ont00000589> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000827> ] .
+
+<https://www.commoncoreontologies.org/ont00000604> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001966> ;
+            owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001> ] .
+
+<https://www.commoncoreontologies.org/ont00000605> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000003> ] .
+
+<https://www.commoncoreontologies.org/ont00000653> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001942> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000958> ] .
+
+<https://www.commoncoreontologies.org/ont00000692> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001966> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00001163> ] .
+
+<https://www.commoncoreontologies.org/ont00000845> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001966> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00001022> ] .
+
+<https://www.commoncoreontologies.org/ont00000973> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000203> ] .
+
+<https://www.commoncoreontologies.org/ont00001146> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001982> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00001328> ] .
+
+<https://www.commoncoreontologies.org/ont00001175> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001942> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000965> ] .
+
+<https://www.commoncoreontologies.org/ont00001176> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001966> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000958> ] .
+
+<https://www.commoncoreontologies.org/ont00001235> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000006> ] .
+
+<https://www.commoncoreontologies.org/ont00001340> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000529> ] .
+
+<https://www.commoncoreontologies.org/ont00001351> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001982> ;
+            owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000006> ] .
+
+<https://www.commoncoreontologies.org/ont00001352> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000006> ] .
+
+<https://www.commoncoreontologies.org/ont00000003> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000958> ] .
+
+<https://www.commoncoreontologies.org/ont00000649> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000686> ] .
+
+<https://www.commoncoreontologies.org/ont00000686> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000958> ] .
+
+<https://www.commoncoreontologies.org/ont00000958> rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000084> ;
+            owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001> ] .
+

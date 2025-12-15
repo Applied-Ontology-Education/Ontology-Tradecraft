@@ -1,0 +1,20 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix to: <http://www.w3.org/2006/time#> .
+
+to:January rdfs:subClassOf cco:ont00000211,
+        cco:ont00000225,
+        cco:ont00001166 .
+
+to:MonthOfYear rdfs:subClassOf cco:ont00000063,
+        cco:ont00000211,
+        cco:ont00000225 .
+
+cco:ont00000832 owl:equivalentClass to:Year .
+
+to:Year rdfs:subClassOf cco:ont00000063,
+        cco:ont00000211,
+        cco:ont00000810,
+        cco:ont00001166 .
+

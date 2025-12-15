@@ -1,0 +1,715 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+cco:ont00000029 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00001176 ],
+        cco:ont00000745 .
+
+cco:ont00000067 a owl:Class .
+
+cco:ont00000080 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom obo:BFO_0000203 ],
+        cco:ont00000827 .
+
+cco:ont00000087 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000800 ],
+        cco:ont00000894 .
+
+cco:ont00000120 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom cco:ont00000853 ],
+        cco:ont00000853 .
+
+cco:ont00000127 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001942 ;
+            owl:someValuesFrom cco:ont00000965 ],
+        cco:ont00000965 .
+
+cco:ont00000146 a owl:Class .
+
+cco:ont00000154 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000745 ],
+        cco:ont00000745 .
+
+cco:ont00000164 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000958 ],
+        cco:ont00001010 .
+
+cco:ont00000186 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001808 ;
+            owl:someValuesFrom cco:ont00001163 ],
+        cco:ont00001010 .
+
+cco:ont00000203 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000293 ] .
+
+cco:ont00000223 a owl:Class .
+
+cco:ont00000263 a owl:Class ;
+    rdfs:subClassOf cco:ont00001328 .
+
+cco:ont00000276 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom cco:ont00000891 ],
+        cco:ont00000891 .
+
+cco:ont00000314 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty obo:BFO_0000197 ;
+            owl:someValuesFrom cco:ont00000253 ],
+        obo:BFO_0000019 .
+
+cco:ont00000369 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000958 ],
+        cco:ont00001010 .
+
+cco:ont00000406 a owl:Class .
+
+cco:ont00000419 a owl:Class ;
+    rdfs:subClassOf cco:ont00000077 .
+
+cco:ont00000469 a owl:Class ;
+    rdfs:subClassOf cco:ont00000275 .
+
+cco:ont00000496 a owl:Class .
+
+cco:ont00000539 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000958 ],
+        cco:ont00001022 .
+
+cco:ont00000589 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000540 ],
+        cco:ont00000973 .
+
+cco:ont00000592 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000958 ],
+        cco:ont00001163 .
+
+cco:ont00000604 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000958 ],
+        cco:ont00001010 .
+
+cco:ont00000626 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom cco:ont00000853 ] .
+
+cco:ont00000630 a owl:Class ;
+    rdfs:subClassOf cco:ont00000124 .
+
+cco:ont00000653 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001942 ;
+            owl:someValuesFrom cco:ont00000958 ] .
+
+cco:ont00000669 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000253 ],
+        cco:ont00001022 .
+
+cco:ont00000683 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001808 ;
+            owl:someValuesFrom cco:ont00001014 ] .
+
+cco:ont00000692 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00001163 ],
+        cco:ont00001163 .
+
+cco:ont00000729 a owl:Class .
+
+cco:ont00000731 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000958 ],
+        cco:ont00001163 .
+
+cco:ont00000735 a owl:Class .
+
+cco:ont00000833 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000359 ],
+        [ a owl:Restriction ;
+            owl:onProperty obo:BFO_0000178 ;
+            owl:someValuesFrom cco:ont00000749 ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000359 ] .
+
+cco:ont00000845 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000958 ] .
+
+cco:ont00000896 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000958 ] .
+
+cco:ont00000915 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000605 ] .
+
+cco:ont00000916 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom cco:ont00000891 ],
+        cco:ont00000891 .
+
+cco:ont00000923 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001808 ;
+            owl:someValuesFrom cco:ont00000649 ],
+        cco:ont00000649 .
+
+cco:ont00000990 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001808 ;
+            owl:someValuesFrom cco:ont00000003 ],
+        cco:ont00000003 .
+
+cco:ont00001041 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001808 ;
+            owl:someValuesFrom cco:ont00001010 ],
+        cco:ont00001010 .
+
+cco:ont00001069 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001938 ;
+            owl:someValuesFrom cco:ont00000958 ] .
+
+cco:ont00001101 a owl:Class ;
+    rdfs:subClassOf cco:ont00001176 .
+
+cco:ont00001146 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom cco:ont00001328 ] .
+
+cco:ont00001149 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00001176 ] .
+
+cco:ont00001175 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001942 ;
+            owl:someValuesFrom cco:ont00000965 ] .
+
+cco:ont00001205 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001808 ;
+            owl:someValuesFrom cco:ont00000398 ],
+        cco:ont00000398 .
+
+cco:ont00001235 a owl:Class ;
+    rdfs:subClassOf cco:ont00000829 .
+
+cco:ont00001238 a owl:Class .
+
+cco:ont00001256 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00001163 ],
+        cco:ont00001163 .
+
+cco:ont00001309 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000077 ],
+        cco:ont00000077 .
+
+cco:ont00001331 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001808 ;
+            owl:someValuesFrom cco:ont00001014 ],
+        cco:ont00001014 .
+
+cco:ont00001340 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000529 ],
+        cco:ont00000529 .
+
+cco:ont00001351 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom obo:BFO_0000006 ],
+        cco:ont00000275 .
+
+cco:ont00001352 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom obo:BFO_0000006 ] .
+
+cco:ont00001364 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001808 ;
+            owl:someValuesFrom obo:BFO_0000001 ],
+        cco:ont00001163 .
+
+cco:ont00001765 a owl:DatatypeProperty .
+
+cco:ont00001767 a owl:DatatypeProperty .
+
+cco:ont00001768 a owl:DatatypeProperty .
+
+cco:ont00001769 a owl:DatatypeProperty .
+
+cco:ont00001770 a owl:DatatypeProperty .
+
+cco:ont00001771 a owl:DatatypeProperty .
+
+cco:ont00001772 a owl:DatatypeProperty .
+
+cco:ont00001773 a owl:DatatypeProperty .
+
+cco:ont00001801 a owl:ObjectProperty .
+
+cco:ont00001824 a owl:ObjectProperty .
+
+cco:ont00001837 a owl:ObjectProperty .
+
+cco:ont00001863 a owl:ObjectProperty .
+
+cco:ont00001873 a owl:ObjectProperty .
+
+cco:ont00001877 a owl:ObjectProperty .
+
+cco:ont00001878 a owl:ObjectProperty .
+
+cco:ont00001879 a owl:ObjectProperty .
+
+cco:ont00001884 a owl:ObjectProperty .
+
+cco:ont00001899 a owl:ObjectProperty .
+
+cco:ont00001900 a owl:ObjectProperty .
+
+cco:ont00001904 a owl:ObjectProperty .
+
+cco:ont00001908 a owl:ObjectProperty .
+
+cco:ont00001912 a owl:ObjectProperty .
+
+cco:ont00001913 a owl:ObjectProperty .
+
+cco:ont00001914 a owl:ObjectProperty .
+
+cco:ont00001917 a owl:ObjectProperty .
+
+cco:ont00001919 a owl:ObjectProperty .
+
+cco:ont00001920 a owl:ObjectProperty .
+
+cco:ont00001961 a owl:ObjectProperty .
+
+cco:ont00001963 a owl:ObjectProperty .
+
+cco:ont00001964 a owl:ObjectProperty .
+
+cco:ont00001965 a owl:ObjectProperty .
+
+cco:ont00001976 a owl:ObjectProperty .
+
+cco:ont00001980 a owl:ObjectProperty .
+
+cco:ont00001997 a owl:ObjectProperty .
+
+cco:ont00002003 a owl:Class ;
+    rdfs:subClassOf cco:ont00002002 .
+
+cco:ont00002005 a owl:Class ;
+    rdfs:subClassOf cco:ont00002004 .
+
+cco:ont00002006 a owl:Class ;
+    rdfs:subClassOf cco:ont00002001 .
+
+cco:ont00002008 a owl:Class ;
+    rdfs:subClassOf cco:ont00002007 .
+
+cco:ont00002009 a owl:Class ;
+    rdfs:subClassOf cco:ont00002001 .
+
+cco:ont00002011 a owl:Class ;
+    rdfs:subClassOf cco:ont00002010 .
+
+cco:ont00002012 a owl:Class ;
+    rdfs:subClassOf cco:ont00002010 .
+
+cco:ont00002013 a owl:Class .
+
+cco:ont00002016 a owl:Class ;
+    rdfs:subClassOf cco:ont00002015 .
+
+cco:ont00002017 a owl:Class ;
+    rdfs:subClassOf cco:ont00002015 .
+
+cco:ont00002018 a owl:Class ;
+    rdfs:subClassOf cco:ont00002015 .
+
+cco:ont00002019 a owl:Class ;
+    rdfs:subClassOf cco:ont00002015 .
+
+cco:ont00002021 a owl:Class ;
+    rdfs:subClassOf cco:ont00002020 .
+
+cco:ont00002022 a owl:Class ;
+    rdfs:subClassOf cco:ont00002020 .
+
+cco:ont00002023 a owl:Class ;
+    rdfs:subClassOf cco:ont00002020 .
+
+cco:ont00002024 a owl:Class ;
+    rdfs:subClassOf cco:ont00002020 .
+
+cco:ont00002026 a owl:Class ;
+    rdfs:subClassOf cco:ont00002025 .
+
+cco:ont00002027 a owl:Class ;
+    rdfs:subClassOf cco:ont00002025 .
+
+cco:ont00002028 a owl:Class ;
+    rdfs:subClassOf cco:ont00002025 .
+
+cco:ont00002029 a owl:Class ;
+    rdfs:subClassOf cco:ont00002025 .
+
+cco:ont00002030 a owl:Class ;
+    rdfs:subClassOf cco:ont00002025 .
+
+cco:ont00002031 a owl:Class ;
+    rdfs:subClassOf cco:ont00002020 .
+
+cco:ont00002032 a owl:Class ;
+    rdfs:subClassOf cco:ont00002020 .
+
+cco:ont00002033 a owl:Class ;
+    rdfs:subClassOf cco:ont00002020 .
+
+cco:ont00002035 a owl:Class ;
+    rdfs:subClassOf cco:ont00002034 .
+
+cco:ont00002036 a owl:Class ;
+    rdfs:subClassOf cco:ont00002034 .
+
+cco:ont00002037 a owl:Class ;
+    rdfs:subClassOf cco:ont00002001 .
+
+cco:ont00002038 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty obo:BFO_0000176 ;
+            owl:someValuesFrom cco:ont00002039 ],
+        cco:ont00002001 .
+
+cco:ont00002040 a owl:Class .
+
+cco:ont00002041 a owl:Class .
+
+cco:ont00002042 a owl:Class ;
+    rdfs:subClassOf cco:ont00002039 .
+
+cco:ont00002043 a owl:Class ;
+    rdfs:subClassOf cco:ont00002039 .
+
+cco:ont00002044 a owl:Class ;
+    rdfs:subClassOf cco:ont00002039 .
+
+cco:ont00002045 a owl:Class .
+
+cco:ont00000073 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom obo:BFO_0000038 ],
+        cco:ont00000399 .
+
+cco:ont00000124 a owl:Class .
+
+cco:ont00000293 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001868 ;
+            owl:someValuesFrom cco:ont00000686 ],
+        cco:ont00001163 .
+
+cco:ont00000605 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00001014 ],
+        cco:ont00000003 .
+
+cco:ont00000749 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000498 ],
+        [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000498 ],
+        cco:ont00000894 .
+
+cco:ont00000829 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000390 ],
+        cco:ont00000390 .
+
+cco:ont00000973 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom obo:BFO_0000203 ],
+        cco:ont00000827 .
+
+cco:ont00001811 a owl:ObjectProperty .
+
+cco:ont00001868 a owl:ObjectProperty .
+
+cco:ont00001938 a owl:ObjectProperty .
+
+cco:ont00001983 a owl:ObjectProperty .
+
+cco:ont00002002 a owl:Class ;
+    rdfs:subClassOf cco:ont00002001 .
+
+cco:ont00002004 a owl:Class ;
+    rdfs:subClassOf cco:ont00002001 .
+
+cco:ont00002007 a owl:Class ;
+    rdfs:subClassOf cco:ont00002001 .
+
+cco:ont00000253 a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000030 .
+
+cco:ont00000390 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom obo:BFO_0000006 ],
+        cco:ont00000686 .
+
+cco:ont00000399 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000686 ],
+        cco:ont00000686 .
+
+cco:ont00000498 a owl:Class .
+
+cco:ont00000540 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom obo:BFO_0000203 ],
+        cco:ont00000399 .
+
+cco:ont00000827 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000800 ],
+        cco:ont00000540 .
+
+cco:ont00000894 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000529 ],
+        cco:ont00000529 .
+
+cco:ont00001022 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001983 ;
+            owl:someValuesFrom cco:ont00000958 ],
+        cco:ont00001163 .
+
+cco:ont00002010 a owl:Class ;
+    rdfs:subClassOf cco:ont00002001 .
+
+cco:ont00002014 a owl:Class ;
+    rdfs:subClassOf cco:ont00002001 .
+
+cco:ont00002034 a owl:Class ;
+    rdfs:subClassOf cco:ont00002020 .
+
+cco:ont00000077 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000649 ],
+        cco:ont00000649 .
+
+cco:ont00000275 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom cco:ont00000275 ],
+        cco:ont00000398 .
+
+cco:ont00000745 a owl:Class ;
+    rdfs:subClassOf cco:ont00001176 .
+
+cco:ont00000965 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001942 ;
+            owl:someValuesFrom obo:BFO_0000001 ],
+        cco:ont00000958 .
+
+cco:ont00001328 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom cco:ont00000398 ],
+        cco:ont00000398 .
+
+cco:ont00000529 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000800 ],
+        cco:ont00000073 .
+
+cco:ont00000649 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000686 ] .
+
+cco:ont00000891 a owl:Class ;
+    rdfs:subClassOf cco:ont00001328 .
+
+cco:ont00001014 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000003 ],
+        cco:ont00000003 .
+
+cco:ont00001176 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001966 ;
+            owl:someValuesFrom cco:ont00000958 ],
+        cco:ont00001163 .
+
+cco:ont00001942 a owl:ObjectProperty .
+
+cco:ont00002015 a owl:Class ;
+    rdfs:subClassOf cco:ont00002014 .
+
+cco:ont00002039 a owl:Class ;
+    rdfs:subClassOf cco:ont00002001 .
+
+cco:ont00000003 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000686 ],
+        cco:ont00000686 .
+
+cco:ont00000398 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom cco:ont00000853 ],
+        cco:ont00000853 .
+
+cco:ont00002025 a owl:Class ;
+    rdfs:subClassOf cco:ont00002020 .
+
+cco:ont00001010 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001811 ;
+            owl:someValuesFrom obo:BFO_0000001 ],
+        cco:ont00001163 .
+
+cco:ont00000686 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001916 ;
+            owl:someValuesFrom cco:ont00000958 ],
+        cco:ont00000958 .
+
+cco:ont00000853 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom cco:ont00000958 ],
+        cco:ont00000958 .
+
+cco:ont00001808 a owl:ObjectProperty .
+
+cco:ont00002020 a owl:Class ;
+    rdfs:subClassOf cco:ont00002014 .
+
+cco:ont00002001 a owl:Class ;
+    rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00001982 a owl:ObjectProperty .
+
+cco:ont00001163 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty cco:ont00001982 ;
+            owl:someValuesFrom cco:ont00000853 ],
+        cco:ont00000853 .
+
+cco:ont00001966 a owl:ObjectProperty .
+
+cco:ont00000958 a owl:Class ;
+    rdfs:subClassOf [ a owl:Restriction ;
+            owl:onProperty obo:BFO_0000084 ;
+            owl:someValuesFrom obo:BFO_0000001 ],
+        obo:BFO_0000031 .
+
+cco:ont00001916 a owl:ObjectProperty .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+

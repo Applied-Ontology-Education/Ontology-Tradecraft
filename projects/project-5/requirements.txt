@@ -1,6 +1,21 @@
 # Core
-mowl==1.0.2
-JPype1==1.6.0
+mowl==1.0.3
+JPype1>=1.6.0
 torch>=2.2,<3
 rdflib==7.0.0
-pandas==2.2.2
+pandas
+python-dotenv
+
+# LLM enrichment (LangChain + Ollama)
+python-dotenv>=1.0.1
+langchain-core>=0.3.0
+langchain-ollama>=0.2.0
+
+# Retrieval helpers
+rapidfuzz>=3.7.0
+dotenv>=0.9.9
+
+# Vector search (Milvus Lite) and embeddings
+pymilvus>=2.4.4
+pymilvus[milvus_lite]
+sentence-transformers>=3.0.0

@@ -1,7 +1,14 @@
-# Title: 
+# Title:
 #    Definition Required
 # Constraint Description: 
 #    Any class or object property must have a non-empty definition with an English language tag.  
 # Severity:
 #     Warning
-
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+SELECT ?element ?warning
+WHERE {
+  ?element skos:definition ?def .
+  FILTER (!isLiteral(?def) || !langMatches(lang(?def), "en") || strlen(str(?def)) = 0)
+  BIND (concat("WARNING: The following ontology elements have no English definition ", str(?element)) AS ?warning)
+}
+ORDER BY DESC(UCASE(str(?element)))

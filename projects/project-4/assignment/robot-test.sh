@@ -1,0 +1,1 @@
+robot reason --reasoner HermiT --input /home/sanne/Projects/Ontology-Tradecraft/projects/project-4/assignment/test.ttl --output /home/sanne/Projects/Ontology-Tradecraft/projects/project-4/assignment/test-reasoned.ttl --create-new-ontology true --equivalent-classes-allowed all --include-indirect true --axiom-generators "SubClass"
