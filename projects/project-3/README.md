@@ -1,4 +1,4 @@
-# Week 5 Project: Targeted and Global Reasoning
+# Week 3 Project: Targeted and Global Reasoning
 
 This week’s project builds on skills in **SPARQL querying within Jupyter notebooks** and introduces **reasoning with OWL2 profiles** using standard reasoners (HermiT, ELK). Students will apply both targeted and global reasoning approaches to ontology mappings between:
 

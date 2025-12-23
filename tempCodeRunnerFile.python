@@ -1,0 +1,22 @@
+
+import pandas as pd
+from rdflib import Graph, Literal, RDF, URIRef, Namespace
+from rdflib.namespace import XSD
+from datetime import datetime
+import uuid
+
+print(2) 
+
+
+from datetime import datetime
+
+timestamp_str = "3/17/24 19:03"
+timestamp_dt = datetime.strptime(timestamp_str, "%m/%d/%y %H:%M")
+
+print(timestamp_dt)        # 2024-03-17 19:03:00
+print(type(timestamp_dt))  # <class 'datetime.datetime'>
+
+
+timestamp_literal = Literal(timestamp_dt.isoformat(), datatype=XSD.dateTime)
+print(timestamp_literal)
+# You'll need to replace 'has_timestamp' with the actual CCO ID

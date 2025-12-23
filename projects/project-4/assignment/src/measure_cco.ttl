@@ -1,0 +1,29 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix data: <http://example.org/sensor-data/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:measurement_data_83e08a07-588a-438a-9c87-b4e2a32435dd a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-17T19:03:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 data:unit_F ;
+    cco:ont00001966 data:quality_Temperature_83e08a07-588a-438a-9c87-b4e2a32435dd .
+
+data:measurement_data_ad604c1b-c8d1-468a-99de-572e79a5d98e a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-17T19:04:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 14.7 ;
+    cco:ont00001863 data:unit_psi ;
+    cco:ont00001966 data:quality_Pressure_ad604c1b-c8d1-468a-99de-572e79a5d98e .
+
+data:quality_Pressure_ad604c1b-c8d1-468a-99de-572e79a5d98e a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Boiler-07 .
+
+data:quality_Temperature_83e08a07-588a-438a-9c87-b4e2a32435dd a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Boiler-07 .
+
+data:unit_F a cco:ont00000120 .
+
+data:unit_psi a cco:ont00000120 .
+
+data:artifact_Boiler-07 a cco:ont00000995 .
+
