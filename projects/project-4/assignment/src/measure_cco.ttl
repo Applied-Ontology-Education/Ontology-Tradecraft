@@ -3,27 +3,76 @@
 @prefix data: <http://example.org/sensor-data/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-data:measurement_data_83e08a07-588a-438a-9c87-b4e2a32435dd a cco:ont00001163 ;
-    cco:ont00001767 "2024-03-17T19:03:00+00:00"^^xsd:dateTime ;
-    cco:ont00001769 212.0 ;
-    cco:ont00001863 data:unit_F ;
-    cco:ont00001966 data:quality_Temperature_83e08a07-588a-438a-9c87-b4e2a32435dd .
+data:measurement_data_0557410e-eb83-43f8-bf08-96a46d106257 a cco:ont00001163 ;
+    cco:ont00001767 "NaT"^^xsd:dateTime ;
+    cco:ont00001769 "NaN"^^xsd:decimal ;
+    cco:ont00001863 data:unit_nan ;
+    cco:ont00001966 data:quality_nan_0557410e-eb83-43f8-bf08-96a46d106257 .
 
-data:measurement_data_ad604c1b-c8d1-468a-99de-572e79a5d98e a cco:ont00001163 ;
+data:measurement_data_2505bc9b-79d1-4baf-b445-5b8d82e0ffcb a cco:ont00001163 ;
+    cco:ont00001767 "NaT"^^xsd:dateTime ;
+    cco:ont00001769 "NaN"^^xsd:decimal ;
+    cco:ont00001863 data:unit_nan ;
+    cco:ont00001966 data:quality_nan_2505bc9b-79d1-4baf-b445-5b8d82e0ffcb .
+
+data:measurement_data_6cc4ff8a-575b-47b3-8b81-a6a685008d6f a cco:ont00001163 ;
     cco:ont00001767 "2024-03-17T19:04:00+00:00"^^xsd:dateTime ;
     cco:ont00001769 14.7 ;
     cco:ont00001863 data:unit_psi ;
-    cco:ont00001966 data:quality_Pressure_ad604c1b-c8d1-468a-99de-572e79a5d98e .
+    cco:ont00001966 data:quality_Pressure_6cc4ff8a-575b-47b3-8b81-a6a685008d6f .
 
-data:quality_Pressure_ad604c1b-c8d1-468a-99de-572e79a5d98e a bfo:BFO_0000020 ;
+data:measurement_data_7ba5a17d-e037-4572-a53e-12d693219046 a cco:ont00001163 ;
+    cco:ont00001767 "NaT"^^xsd:dateTime ;
+    cco:ont00001769 "NaN"^^xsd:decimal ;
+    cco:ont00001863 data:unit_nan ;
+    cco:ont00001966 data:quality_nan_7ba5a17d-e037-4572-a53e-12d693219046 .
+
+data:measurement_data_a8dbe56b-6fe4-4865-b717-26948a8ff291 a cco:ont00001163 ;
+    cco:ont00001767 "NaT"^^xsd:dateTime ;
+    cco:ont00001769 "NaN"^^xsd:decimal ;
+    cco:ont00001863 data:unit_nan ;
+    cco:ont00001966 data:quality_nan_a8dbe56b-6fe4-4865-b717-26948a8ff291 .
+
+data:measurement_data_bc6af74a-929b-42a6-b1d3-dfddedfa7b30 a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-17T19:03:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 data:unit_F ;
+    cco:ont00001966 data:quality_Temperature_bc6af74a-929b-42a6-b1d3-dfddedfa7b30 .
+
+data:measurement_data_e36558b3-f8c7-4940-bc27-7596b371a1a5 a cco:ont00001163 ;
+    cco:ont00001767 "NaT"^^xsd:dateTime ;
+    cco:ont00001769 "NaN"^^xsd:decimal ;
+    cco:ont00001863 data:unit_nan ;
+    cco:ont00001966 data:quality_nan_e36558b3-f8c7-4940-bc27-7596b371a1a5 .
+
+data:quality_Pressure_6cc4ff8a-575b-47b3-8b81-a6a685008d6f a bfo:BFO_0000020 ;
     bfo:BFO_0000052 data:artifact_Boiler-07 .
 
-data:quality_Temperature_83e08a07-588a-438a-9c87-b4e2a32435dd a bfo:BFO_0000020 ;
+data:quality_Temperature_bc6af74a-929b-42a6-b1d3-dfddedfa7b30 a bfo:BFO_0000020 ;
     bfo:BFO_0000052 data:artifact_Boiler-07 .
+
+data:quality_nan_0557410e-eb83-43f8-bf08-96a46d106257 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_nan .
+
+data:quality_nan_2505bc9b-79d1-4baf-b445-5b8d82e0ffcb a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_nan .
+
+data:quality_nan_7ba5a17d-e037-4572-a53e-12d693219046 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_nan .
+
+data:quality_nan_a8dbe56b-6fe4-4865-b717-26948a8ff291 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_nan .
+
+data:quality_nan_e36558b3-f8c7-4940-bc27-7596b371a1a5 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_nan .
 
 data:unit_F a cco:ont00000120 .
 
 data:unit_psi a cco:ont00000120 .
 
 data:artifact_Boiler-07 a cco:ont00000995 .
+
+data:artifact_nan a cco:ont00000995 .
+
+data:unit_nan a cco:ont00000120 .
 

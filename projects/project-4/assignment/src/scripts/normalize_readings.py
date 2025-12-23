@@ -59,6 +59,9 @@ for col in ["artifact_id", "sdc_kind", "unit_label"]:
     if col in df.columns:
         df[col] = df[col].astype(str).str.strip()
 
+# Normalize artifact_id: replace spaces with hyphens for consistency
+df["artifact_id"] = df["artifact_id"].str.replace(" ", "-")
+
 # Convert to numeric (will convert "not_a_number" and empty strings to NaN)
 df["value"] = pd.to_numeric(df["value"], errors="coerce")
 
@@ -75,7 +78,8 @@ def to_iso8601(x):
 
 df["timestamp"] = df["timestamp"].apply(to_iso8601)
 
-# 8. **Unit normalization**
+# 8. **Values normalization**
+# Unit values normalization
 UNIT_MAP = {
     "celsius": "C", "°c": "C", "c": "C",
     "fahrenheit": "F", "°f": "F", "f": "F",
@@ -87,6 +91,21 @@ UNIT_MAP = {
     "ohm": "ohm",
 }
 df["unit_label"] = df["unit_label"].str.lower().map(UNIT_MAP).fillna(df["unit_label"])
+
+
+# SDC values normalization
+SDC_MAP = {
+    "temperature": "temperature",
+    "temp": "temperature",
+    "pressure": "pressure",
+    "voltage": "voltage",
+    "resistance": "resistance",
+}
+df["sdc_kind"] = df["sdc_kind"].str.lower().map(SDC_MAP).fillna(df["sdc_kind"])
+
+# Numeric values normalization
+df["value"] = df["value"].round(1)
+
 
 # 9. **Drop rows with missing critical values**
 df = df.dropna(subset=["artifact_id", "sdc_kind", "unit_label", "value", "timestamp"])
