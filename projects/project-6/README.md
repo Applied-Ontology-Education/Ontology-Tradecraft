@@ -8,7 +8,7 @@ You will select one of two project pathways and deliver a live presentation and 
 
 **Option 1: Data & Design-Pattern Expansion**
 
-Extend your current semantic pipeline so that it can ingest and model a new domain, a new class of data, or a new family of design patterns.
+Extend your current semantic pipeline so that it can ingest and model a new domain, a new class of data, or a new family of design patterns.  <!--so, basically extending Project 4 and 5 with LLMs and else  -->
 
 Your project should demonstrate how LLMs assist with:
 - Detecting and normalizing unfamiliar schemas
@@ -28,6 +28,7 @@ Tools you may use (not exhaustive):
 **Option 2: Ontology Mapping Pipeline**
 
 Develop or extend a pipeline that uses LLMs to generate, evaluate, and validate ontology mappings.
+ <!-- too far-fetched -->
 
 Your project should show how LLMs contribute by:
 - Generating candidate mapping axioms

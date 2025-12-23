@@ -1,0 +1,126 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/bfo.owl> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix data: <http://example.org/sensor-data/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+data:measurement_data_027bb92f-4835-488c-8ac2-1f6dfbeca419 a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-17T19:03:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 data:unit_F ;
+    cco:ont00001966 data:quality_temperature_027bb92f-4835-488c-8ac2-1f6dfbeca419 .
+
+data:measurement_data_17b39a5b-44c8-44e3-a337-6cbb686a7248 a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-17T23:04:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 101.3 ;
+    cco:ont00001863 data:unit_kPa ;
+    cco:ont00001966 data:quality_pressure_17b39a5b-44c8-44e3-a337-6cbb686a7248 .
+
+data:measurement_data_39dd33bc-df00-4445-ab80-6b43acfb821f a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-18T08:01:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 68.0 ;
+    cco:ont00001863 data:unit_F ;
+    cco:ont00001966 data:quality_temperature_39dd33bc-df00-4445-ab80-6b43acfb821f .
+
+data:measurement_data_44f1c337-4f2d-412b-82bd-ce1f4c26369d a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-18T12:01:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 6.5 ;
+    cco:ont00001863 data:unit_F ;
+    cco:ont00001966 data:quality_temperature_44f1c337-4f2d-412b-82bd-ce1f4c26369d .
+
+data:measurement_data_8814b379-e814-4ce6-a078-17d306fb9d0c a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-17T19:04:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 14.7 ;
+    cco:ont00001863 data:unit_psi ;
+    cco:ont00001966 data:quality_pressure_8814b379-e814-4ce6-a078-17d306fb9d0c .
+
+data:measurement_data_961e024d-8573-44e0-885e-d14930208471 a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-18T08:07:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 101.3 ;
+    cco:ont00001863 data:unit_kPa ;
+    cco:ont00001966 data:quality_pressure_961e024d-8573-44e0-885e-d14930208471 .
+
+data:measurement_data_9d9d95f8-b337-45d0-b9a5-2cd81db60171 a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-18T12:01:01+00:00"^^xsd:dateTime ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 data:unit_volt ;
+    cco:ont00001966 data:quality_voltage_9d9d95f8-b337-45d0-b9a5-2cd81db60171 .
+
+data:measurement_data_acb5eff4-d3de-4e98-aeff-87f1f3f92c09 a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-17T23:03:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 100.0 ;
+    cco:ont00001863 data:unit_C ;
+    cco:ont00001966 data:quality_temperature_acb5eff4-d3de-4e98-aeff-87f1f3f92c09 .
+
+data:measurement_data_be687a42-1250-47d7-8549-2fdf970217a6 a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-18T12:01:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 data:unit_C ;
+    cco:ont00001966 data:quality_temperature_be687a42-1250-47d7-8549-2fdf970217a6 .
+
+data:measurement_data_c9b2bba6-d57a-4638-a8a6-923df7265ce3 a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-18T12:06:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 1.3 ;
+    cco:ont00001863 data:unit_ohm ;
+    cco:ont00001966 data:quality_resistance_c9b2bba6-d57a-4638-a8a6-923df7265ce3 .
+
+data:measurement_data_eca24418-444d-417c-a77d-7f5dcefca0d8 a cco:ont00001163 ;
+    cco:ont00001767 "2024-03-18T12:06:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 data:unit_F ;
+    cco:ont00001966 data:quality_temperature_eca24418-444d-417c-a77d-7f5dcefca0d8 .
+
+data:artifact_Pump-A1 a cco:ont00000995 .
+
+data:quality_pressure_17b39a5b-44c8-44e3-a337-6cbb686a7248 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Boiler-07 .
+
+data:quality_pressure_8814b379-e814-4ce6-a078-17d306fb9d0c a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Boiler-07 .
+
+data:quality_pressure_961e024d-8573-44e0-885e-d14930208471 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Pump-A1 .
+
+data:quality_resistance_c9b2bba6-d57a-4638-a8a6-923df7265ce3 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Circuit-12 .
+
+data:quality_temperature_027bb92f-4835-488c-8ac2-1f6dfbeca419 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Boiler-07 .
+
+data:quality_temperature_39dd33bc-df00-4445-ab80-6b43acfb821f a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Chiller-3 .
+
+data:quality_temperature_44f1c337-4f2d-412b-82bd-ce1f4c26369d a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Chiller-4 .
+
+data:quality_temperature_acb5eff4-d3de-4e98-aeff-87f1f3f92c09 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Boiler-07 .
+
+data:quality_temperature_be687a42-1250-47d7-8549-2fdf970217a6 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Chiller-3 .
+
+data:quality_temperature_eca24418-444d-417c-a77d-7f5dcefca0d8 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Chiller-4 .
+
+data:quality_voltage_9d9d95f8-b337-45d0-b9a5-2cd81db60171 a bfo:BFO_0000020 ;
+    bfo:BFO_0000052 data:artifact_Circuit-12 .
+
+data:unit_ohm a cco:ont00000120 .
+
+data:unit_psi a cco:ont00000120 .
+
+data:unit_volt a cco:ont00000120 .
+
+data:artifact_Chiller-3 a cco:ont00000995 .
+
+data:artifact_Chiller-4 a cco:ont00000995 .
+
+data:artifact_Circuit-12 a cco:ont00000995 .
+
+data:unit_C a cco:ont00000120 .
+
+data:unit_kPa a cco:ont00000120 .
+
+data:artifact_Boiler-07 a cco:ont00000995 .
+
+data:unit_F a cco:ont00000120 .
+

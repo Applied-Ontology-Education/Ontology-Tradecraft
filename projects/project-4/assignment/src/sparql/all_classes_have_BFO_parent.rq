@@ -4,3 +4,32 @@
 #     All classes must have a BFO superclass.
 # Severity:
 #     Error
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bfo: <http://purl.obolibrary.org/obo/bfo.owl>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+
+PREFIX usesMeasurementUnit: cco:ont00001863
+PREFIX SDC: bfo:BFO_0000020
+PREFIX inheresIn: bfo:ont0000052
+PREFIX MaterialArtifact: cco:ont00000995
+PREFIX MICE: cco:ont00001163
+PREFIX isAMeasurementOf: cco:ont00001966
+PREFIX usesMeasurementUnit: cco:ont00001863
+PREFIX isAbout: cco:ont00001966
+PREFIX hasDateTimeValue: cco:ont00001767
+PREFIX hasDecimalValue: cco:ont00001769
+
+
+SELECT DISTINCT ?class ?bfoParent ?error
+WHERE {
+  ?class a owl:Class .
+  FILTER (!isBlank(?class))
+  FILTER (?class != owl:Thing)
+  FILTER NOT EXISTS {
+    ?class rdfs:subClassOf+ ?bfoParent .
+    FILTER (strstarts(str(?bfoParent), "http://purl.obolibrary.org/obo/BFO_"))
+  }
+  BIND (concat("ERROR: The following class does not have a BFO parent: ", str(?class)) AS ?error)
+}
