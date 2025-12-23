@@ -56,11 +56,11 @@ def transform_csv_to_ttl(csv_path, output_path, cco_ontology_path):
             artifacts_created.add(artifact_uri)
         
         # 2. SDC INSTANCE (sdc-inst) - Specifically Dependent Continuant (Quality)
-        # This quality inheres in this artifact
         sdc_uri = DATA[f"quality_{row['sdc_kind']}_{measurement_id}"]
         g.add((sdc_uri, RDF.type, BFO['BFO_0000020']))  # BFO:0000020 = Specifically Dependent Continuant
         
         # Relationship: sdc-inst BFO:inheres_in art-inst (BFO:0000052)
+        # This quality inheres in this artifact
         g.add((sdc_uri, BFO['BFO_0000052'], artifact_uri))
         
         # 3. MICE INSTANCE (mice-inst) - Measurement Information Content Entity
