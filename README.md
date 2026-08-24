@@ -22,7 +22,6 @@ Students should work through the modules in the order listed below. Unless other
 * **Week 3 — September 7–13**  
   **The Semantic Web Stack**  
   RDF, RDFS, OWL, and Linked Data best practices
-  - **September 7:** Holiday
   - [Lecture on the Semantic Stack](https://www.youtube.com/watch?v=jQbXhtJhs4E&list=PLDpLIEgKNGbOVAAfiD_28PH18wcktXy3M&index=2)
 
 * **Week 4 — September 14–20**  
@@ -52,8 +51,6 @@ Students should work through the modules in the order listed below. Unless other
   - [Late Night Debugging Session](https://youtu.be/TkwIPS-QJQQ)
 
 * **Week 8 — October 12–18**  
-  **Fall Break and Project Catch-Up**
-  - **October 12–13:** Fall Break
   - No new major technical unit is introduced this week.
   - Students should use the remainder of the week to review previous modules, resolve technical problems, and bring Projects 1–3 up to date.
 
