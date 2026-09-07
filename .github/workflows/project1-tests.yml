@@ -1,11 +1,15 @@
-# .github/workflows/autograde-project-1.yml
+# .github/workflows/project1-tests.yml
 name: Autograde (Project 1 only)
 
 on:
   pull_request:
     paths:
       - "projects/project-1/**"
-      - ".github/workflows/autograde-project-1.yml"
+      - ".github/workflows/project1-tests.yml"
+  push:
+    paths:
+      - "projects/project-1/**"
+      - ".github/workflows/project1-tests.yml"
   workflow_dispatch:
 
 jobs:
