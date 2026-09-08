@@ -16,7 +16,6 @@ Students should work through the modules in the order listed below. Unless other
   **Ontology Engineering Methodology**  
   Competency questions, hub-and-spoke development, ontology reuse, and design patterns
   - [Lecture on Modeling using Basic Formal Ontology](https://www.youtube.com/watch?v=eQzBrRKe68E)
-  - [Lecture on Ontology Engineering Methodology](https://www.youtube.com/watch?v=eQzBrRKe68E)
   - [Challenging Modeling Exercises & Solutions](https://www.youtube.com/watch?v=rXEsc0dDdsA)
 
 * **Week 3 — September 7–13**  
