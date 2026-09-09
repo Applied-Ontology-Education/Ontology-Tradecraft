@@ -1,0 +1,138 @@
+@prefix mod:  <https://syutkinmga-del.github.io/ontology-tradecraft/project2/module/> .
+@prefix bfo:  <http://purl.obolibrary.org/obo/BFO_> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+mod:bfo-module
+    a owl:Ontology ;
+    rdfs:label "Project 2 BFO module"@en ;
+    skos:definition "A local module containing the Basic Formal Ontology classes required by Project 2."@en ;
+    owl:imports <http://purl.obolibrary.org/obo/bfo.owl> .
+
+# ---------------------------------------------------------------------------
+# Root category
+# ---------------------------------------------------------------------------
+
+bfo:0000001
+    a owl:Class ;
+    rdfs:label "entity"@en ;
+    skos:definition "Anything that exists or has existed, or that can be represented as existing."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+# ---------------------------------------------------------------------------
+# Continuants
+# ---------------------------------------------------------------------------
+
+bfo:0000002
+    a owl:Class ;
+    rdfs:subClassOf bfo:0000001 ;
+    rdfs:label "continuant"@en ;
+    skos:definition "An entity that persists through time while remaining wholly present whenever it exists."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+bfo:0000004
+    a owl:Class ;
+    rdfs:subClassOf bfo:0000002 ;
+    rdfs:label "independent continuant"@en ;
+    skos:definition "A continuant that does not depend on another entity as its bearer."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+bfo:0000040
+    a owl:Class ;
+    rdfs:subClassOf bfo:0000004 ;
+    rdfs:label "material entity"@en ;
+    skos:definition "An independent continuant that has some portion of matter as a part."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+bfo:0000031
+    a owl:Class ;
+    rdfs:subClassOf bfo:0000002 ;
+    rdfs:label "generically dependent continuant"@en ;
+    skos:definition "A continuant that can be concretized in multiple bearers and can continue to exist through changes in its particular bearer."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+# ---------------------------------------------------------------------------
+# Occurrents
+# ---------------------------------------------------------------------------
+
+bfo:0000003
+    a owl:Class ;
+    rdfs:subClassOf bfo:0000001 ;
+    rdfs:label "occurrent"@en ;
+    skos:definition "An entity that unfolds through time and has temporal parts."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+bfo:0000015
+    a owl:Class ;
+    rdfs:subClassOf bfo:0000003 ;
+    rdfs:label "process"@en ;
+    skos:definition "An occurrent that has temporal parts and depends on one or more material entities as participants."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+    # ---------------------------------------------------------------------------
+# Specifically dependent continuants
+# ---------------------------------------------------------------------------
+
+bfo:0000020
+    a owl:Class ;
+    rdfs:subClassOf bfo:0000002 ;
+    rdfs:label "specifically dependent continuant"@en ;
+    skos:definition "A continuant that depends on one particular independent continuant as its bearer."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+bfo:0000019
+    a owl:Class ;
+    rdfs:subClassOf bfo:0000020 ;
+    rdfs:label "quality"@en ;
+    skos:definition "A specifically dependent continuant that is fully manifested whenever it exists."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+bfo:0000017
+    a owl:Class ;
+    rdfs:subClassOf bfo:0000020 ;
+    rdfs:label "realizable entity"@en ;
+    skos:definition "A specifically dependent continuant that can be realized in a process under appropriate conditions."@en ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+    # ===========================================================================
+# BFO object properties
+# ===========================================================================
+
+bfo:0000178
+    a owl:ObjectProperty ;
+    rdfs:label "has continuant part"@en ;
+    skos:definition "A relation between continuants in which the object is a continuant part of the subject."@en ;
+    rdfs:domain bfo:0000002 ;
+    rdfs:range bfo:0000002 ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+bfo:0000139
+    a owl:ObjectProperty ;
+    rdfs:label "is temporal part of"@en ;
+    skos:definition "A relation between occurrents in which the subject occupies a temporal part of the temporal region occupied by the object."@en ;
+    rdfs:domain bfo:0000003 ;
+    rdfs:range bfo:0000003 ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+bfo:0000055
+    a owl:ObjectProperty ;
+    rdfs:label "realizes"@en ;
+    skos:definition "A relation in which a process manifests or actualizes a realizable entity."@en ;
+    rdfs:domain bfo:0000015 ;
+    rdfs:range bfo:0000017 ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+
+bfo:0000197
+    a owl:ObjectProperty ;
+    rdfs:label "inheres in"@en ;
+    skos:definition "A relation in which a specifically dependent continuant depends on and is borne by an independent continuant."@en ;
+    rdfs:domain bfo:0000020 ;
+    rdfs:range bfo:0000004 ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
+    bfo:0000057
+    a owl:ObjectProperty ;
+    rdfs:label "has participant"@en ;
+    skos:definition "A relation between a process and a continuant that participates in that process."@en ;
+    rdfs:domain bfo:0000015 ;
+    rdfs:range bfo:0000002 ;
+    rdfs:isDefinedBy <http://purl.obolibrary.org/obo/bfo.owl> .
