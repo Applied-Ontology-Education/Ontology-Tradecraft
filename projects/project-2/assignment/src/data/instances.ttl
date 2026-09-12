@@ -1,0 +1,1232 @@
+@prefix : <http://www.semanticweb.org/ianre/ontologies/2026/8/untitled-ontology-73/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/ianre/ontologies/2026/8/untitled-ontology-73/> .
+
+<http://www.semanticweb.org/ianre/ontologies/2026/8/untitled-ontology-73> rdf:type owl:Ontology ;
+                                                                           owl:imports <http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl> ,
+                                                                                       <http://www.semanticweb.org/ianre/ontologies/2026/8/aircraft-core> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000412
+<http://purl.obolibrary.org/obo/IAO_0000412> rdfs:label "imported from"@en .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#isDefinedBy
+rdfs:isDefinedBy rdfs:label "is defined by"@en-us .
+
+
+###  http://www.w3.org/2000/01/rdf-schema#label
+rdfs:label rdfs:label "label"@en-us .
+
+
+###  http://www.w3.org/2002/07/owl#qualifiedCardinality
+owl:qualifiedCardinality rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty ;
+                                              rdfs:label "example"@en-us .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://spec.industrialontologies.org/ontology/annotation/explanatoryNote
+<https://spec.industrialontologies.org/ontology/annotation/explanatoryNote> rdf:type owl:AnnotationProperty ;
+                                                                            rdfs:label "explanatory note"@en-us .
+
+
+###  https://spec.industrialontologies.org/ontology/annotation/firstOrderLogicDefinition
+<https://spec.industrialontologies.org/ontology/annotation/firstOrderLogicDefinition> rdf:type owl:AnnotationProperty ;
+                                                                                      rdfs:label "first order logic definition"@en-us .
+
+
+###  https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition
+<https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> rdf:type owl:AnnotationProperty ;
+                                                                                      rdfs:label "natural language definition"@en-us .
+
+
+###  https://spec.industrialontologies.org/ontology/annotation/semiFormalNaturalLanguageDefinition
+<https://spec.industrialontologies.org/ontology/annotation/semiFormalNaturalLanguageDefinition> rdf:type owl:AnnotationProperty ;
+                                                                                                rdfs:label "semi-formal natural language definition"@en-us .
+
+
+###  https://www.commoncoreontologies.org/ont00001754
+<https://www.commoncoreontologies.org/ont00001754> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:label "definition source"@en .
+
+
+###  https://www.commoncoreontologies.org/ont00001760
+<https://www.commoncoreontologies.org/ont00001760> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:label "is curated in ontology"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.example.com/aircraft/0000019
+<http://purl.example.com/aircraft/0000019> rdf:type owl:ObjectProperty ;
+                                           rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                           rdfs:range <https://spec.industrialontologies.org/ontology/construct/Manufacturer> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:18:50Z"^^xsd:dateTime ;
+                                           rdfs:label "has manufacturer"@en .
+
+
+###  http://purl.example.com/aircraft/0000027
+<http://purl.example.com/aircraft/0000027> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf owl:topObjectProperty ;
+                                           rdfs:domain <https://www.commoncoreontologies.org/ont00000958> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T17:49:00Z"^^xsd:dateTime ;
+                                           rdfs:label "is about"@en .
+
+
+###  http://purl.example.com/aircraft/0000029
+<http://purl.example.com/aircraft/0000029> rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf <http://purl.example.com/aircraft/0000027> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:07:00Z"^^xsd:dateTime ;
+                                           rdfs:label "describes"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+<http://purl.obolibrary.org/obo/BFO_0000054> owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000055> .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000056
+<http://purl.obolibrary.org/obo/BFO_0000056> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "250-BFO" ;
+                                             rdfs:label "participates in"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region & some process p such that b participates in p some way"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000139
+<http://purl.obolibrary.org/obo/BFO_0000139> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "078-BFO" ;
+                                             rdfs:label "temporal part of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b temporal part of c =Def b occurrent part of c & (b and c are temporal regions) or (b and c are spatiotemporal regions & b temporally projects onto an occurrent part of the temporal region that c temporally projects onto) or (b and c are processes or process boundaries & b occupies a temporal region that is an occurrent part of the temporal region that c occupies)"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Your heart beating from 4pm to 5pm today is a temporal part of the process of your heart beating; the 4th year of your life is a temporal part of your life, as is the process boundary which separates the 3rd and 4th years of your life; the first quarter of a game of football is a temporal part of the whole game"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000176
+<http://purl.obolibrary.org/obo/BFO_0000176> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf owl:topObjectProperty ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "221-BFO" ;
+                                             rdfs:label "continuant part of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b continuant part of c =Def b and c are continuants & there is some time t such that b and c exist at t & b continuant part of c at t"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Milk teeth continuant part of human; surgically removed tumour continuant part of organism"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000178
+<http://purl.obolibrary.org/obo/BFO_0000178> rdf:type owl:ObjectProperty ;
+                                             <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                             <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:18:28Z"^^xsd:dateTime ;
+                                             rdfs:label "has continuant part"@en .
+
+
+###  https://www.commoncoreontologies.org/ont00001841
+<https://www.commoncoreontologies.org/ont00001841> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "is input of"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is input of y =Def x participates in y, x is an Independent Continuant (but not a Spatial Region), y is a Process, and the presence of x at the beginning of y is a necessary condition for the start of y."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001863
+<https://www.commoncoreontologies.org/ont00001863> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001961> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "uses measurement unit"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x uses measurement unit y =Def y is measurement unit of x"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001942
+<https://www.commoncoreontologies.org/ont00001942> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "prescribes"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x prescribes y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x serves as a rule or guide for y if y an Occurrent, or x serves as a model for y if y is a Continuant."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "A blueprint prescribes some artifact or facility by being a model for it." ,
+                                                                                                 "A professional code of conduct prescribes some realizations of a profession (role) by giving rules for how the bearer should act in those realizations." ,
+                                                                                                 "An operations plan prescribes an operation by enumerating the tasks that need to be performed in order to achieve the objectives of the operation." ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001961
+<https://www.commoncoreontologies.org/ont00001961> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "is measurement unit of"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is_measurement_unit_of y iff y is an instance of Information Bearing Entity and x is an instance of Measurement Unit, such that x describes the magnitude of measured physical quantity mentioned in y."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001966
+<https://www.commoncoreontologies.org/ont00001966> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf owl:topObjectProperty ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "is a measurement of"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is_a_measurement_of y iff x is an instance of Measurement Information Content Entity and y is an instance of Entity, such that x describes some attribute of y relative to some scale or classification scheme."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Given a stronger temporal interpretation, this property may be functional. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en ,
+                                                                                                   "This object property, as well as all of its children are typified as functional properties. This means that for instances x, y, and z if x is a measurement of y and x is a measurement of z, then y = z."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.example.com/aircraft/0000002
+<http://purl.example.com/aircraft/0000002> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:08:10Z"^^xsd:dateTime ;
+                                           rdfs:label "has model FAA"@en .
+
+
+###  http://purl.example.com/aircraft/0000003
+<http://purl.example.com/aircraft/0000003> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:08:26Z"^^xsd:dateTime ;
+                                           rdfs:label "has model BADA"@en .
+
+
+###  http://purl.example.com/aircraft/0000004
+<http://purl.example.com/aircraft/0000004> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:08:42Z"^^xsd:dateTime ;
+                                           rdfs:label "has length ft"@en .
+
+
+###  http://purl.example.com/aircraft/0000005
+<http://purl.example.com/aircraft/0000005> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:09:38Z"^^xsd:dateTime ;
+                                           rdfs:label "has tail height ft"@en .
+
+
+###  http://purl.example.com/aircraft/0000006
+<http://purl.example.com/aircraft/0000006> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:10:33Z"^^xsd:dateTime ;
+                                           rdfs:label "has approach speed knot"@en .
+
+
+###  http://purl.example.com/aircraft/0000007
+<http://purl.example.com/aircraft/0000007> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:10:57Z"^^xsd:dateTime ;
+                                           rdfs:label "has wingspan ft without winglets sharklets"@en .
+
+
+###  http://purl.example.com/aircraft/0000008
+<http://purl.example.com/aircraft/0000008> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:11:15Z"^^xsd:dateTime ;
+                                           rdfs:label "has wingspan ft with winglets sharklets"@en .
+
+
+###  http://purl.example.com/aircraft/0000009
+<http://purl.example.com/aircraft/0000009> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:11:43Z"^^xsd:dateTime ;
+                                           rdfs:label "has wheelbase ft"@en .
+
+
+###  http://purl.example.com/aircraft/0000010
+<http://purl.example.com/aircraft/0000010> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:11:57Z"^^xsd:dateTime ;
+                                           rdfs:label "has cockpit to main gear ft"@en .
+
+
+###  http://purl.example.com/aircraft/0000011
+<http://purl.example.com/aircraft/0000011> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:12:13Z"^^xsd:dateTime ;
+                                           rdfs:label "has main gear width ft"@en .
+
+
+###  http://purl.example.com/aircraft/0000012
+<http://purl.example.com/aircraft/0000012> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:12:31Z"^^xsd:dateTime ;
+                                           rdfs:label "has mtow lb"@en .
+
+
+###  http://purl.example.com/aircraft/0000013
+<http://purl.example.com/aircraft/0000013> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:12:39Z"^^xsd:dateTime ;
+                                           rdfs:label "has malw lb"@en .
+
+
+###  http://purl.example.com/aircraft/0000014
+<http://purl.example.com/aircraft/0000014> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:12:50Z"^^xsd:dateTime ;
+                                           rdfs:label "has parking area ft2"@en .
+
+
+###  http://purl.example.com/aircraft/0000015
+<http://purl.example.com/aircraft/0000015> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:13:14Z"^^xsd:dateTime ;
+                                           rdfs:label "has registration count"@en .
+
+
+###  http://purl.example.com/aircraft/0000016
+<http://purl.example.com/aircraft/0000016> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:13:28Z"^^xsd:dateTime ;
+                                           rdfs:label "has tmfs operations fy24"@en .
+
+
+###  http://purl.example.com/aircraft/0000031
+<http://purl.example.com/aircraft/0000031> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:13:07Z"^^xsd:dateTime ;
+                                           rdfs:label "has ICAO code"@en .
+
+
+###  http://purl.example.com/aircraft/0000032
+<http://purl.example.com/aircraft/0000032> rdf:type owl:DatatypeProperty ;
+                                           rdfs:subPropertyOf owl:topDataProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:13:28Z"^^xsd:dateTime ;
+                                           rdfs:label "has FAA designator code"@en .
+
+
+###  http://purl.example.com/aircraft/0000047
+<http://purl.example.com/aircraft/0000047> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:46:53Z"^^xsd:dateTime ;
+                                           rdfs:label "has FAA registry status"@en .
+
+
+###  http://purl.example.com/aircraft/0000100
+<http://purl.example.com/aircraft/0000100> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:39:44Z"^^xsd:dateTime ;
+                                           rdfs:label "has max approach speed knots"@en .
+
+
+###  http://purl.example.com/aircraft/0000246
+<http://purl.example.com/aircraft/0000246> rdf:type owl:DatatypeProperty ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:16:46Z"^^xsd:dateTime ;
+                                           rdfs:label "has total employment"@en .
+
+
+###  https://www.commoncoreontologies.org/ont00001769
+<https://www.commoncoreontologies.org/ont00001769> rdf:type owl:DatatypeProperty ;
+                                                   rdfs:label "has decimal value"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A data property that has as its range a decimal value." .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.example.com/aircraft/0000000
+<http://purl.example.com/aircraft/0000000> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001043> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T15:50:27Z"^^xsd:dateTime ;
+                                           rdfs:label "Fixed Wing Aircraft"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "An aircraft that has fixed wings." .
+
+
+###  http://purl.example.com/aircraft/0000001
+<http://purl.example.com/aircraft/0000001> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T15:53:44Z"^^xsd:dateTime ;
+                                           rdfs:label "Organization"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "On object aggregate that is a group of people." .
+
+
+###  http://purl.example.com/aircraft/0000024
+<http://purl.example.com/aircraft/0000024> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T17:45:39Z"^^xsd:dateTime ;
+                                           rdfs:label "AAC Category"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity categorizing an aircraft based on a range of the  highest reported Approach Speed/Stall Speed in Flight Standardization Board (FSB) or aircraft manufacturer's documentation." .
+
+
+###  http://purl.example.com/aircraft/0000025
+<http://purl.example.com/aircraft/0000025> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T17:46:05Z"^^xsd:dateTime ;
+                                           rdfs:label "ADG Category"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes an aircraft's Aircraft Design Group classification. ADG is determined based on combination of Tail Height and Wingspan per FAA AC 150/5300-13B." .
+
+
+###  http://purl.example.com/aircraft/0000026
+<http://purl.example.com/aircraft/0000026> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T17:46:21Z"^^xsd:dateTime ;
+                                           rdfs:label "TDG Category"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes an aircraft's FAA Taxiway Design Group classification." .
+
+
+###  http://purl.example.com/aircraft/0000035
+<http://purl.example.com/aircraft/0000035> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:28:04Z"^^xsd:dateTime ;
+                                           rdfs:label "Main Gears Configuration Category"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that is about the main gears in an aircraft." .
+
+
+###  http://purl.example.com/aircraft/0000037
+<http://purl.example.com/aircraft/0000037> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:30:15Z"^^xsd:dateTime ;
+                                           rdfs:label "ICAO WTC"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes the category of weight teurbelence in an aircraft." .
+
+
+###  http://purl.example.com/aircraft/0000039
+<http://purl.example.com/aircraft/0000039> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:35:41Z"^^xsd:dateTime ;
+                                           rdfs:label "FAA Weight Class"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that denotes the category of FAA weight class." .
+
+
+###  http://purl.example.com/aircraft/0000041
+<http://purl.example.com/aircraft/0000041> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:38:41Z"^^xsd:dateTime ;
+                                           rdfs:label "Consolidated Weight Class Category"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes the wake-turbulence weight category the Federal Aviation Administration assigns to an aircraft on the basis of its maximum certificated takeoff weight." .
+
+
+###  http://purl.example.com/aircraft/0000043
+<http://purl.example.com/aircraft/0000043> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:44:47Z"^^xsd:dateTime ;
+                                           rdfs:label "RECAT 2 Wake Category (Appendix A)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes an aircraft's FAA Wake Turbulence Recategorization (RECAT 2) classification under Appendix A, assigning it to one of categories A through G on the basis of the aircraft's wingspan and maximum takeoff weight." .
+
+
+###  http://purl.example.com/aircraft/0000044
+<http://purl.example.com/aircraft/0000044> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:44:58Z"^^xsd:dateTime ;
+                                           rdfs:label "RECAT 2 Wake Category (Appendix B)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes an aircraft's FAA Wake Turbulence Recategorization (RECAT 2) classification under Appendix B, assigning it to one of categories A through G on the basis of the aircraft's wingspan and maximum takeoff weight." .
+
+
+###  http://purl.example.com/aircraft/0000045
+<http://purl.example.com/aircraft/0000045> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:45:06Z"^^xsd:dateTime ;
+                                           rdfs:label "SRS"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes an aircraft's Same Runway Separation (SRS) category, which determines the required separation between that aircraft, when departing, and a preceding departing or arriving aircraft using the same runway." .
+
+
+###  http://purl.example.com/aircraft/0000046
+<http://purl.example.com/aircraft/0000046> rdf:type owl:Class ;
+                                           rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:45:16Z"^^xsd:dateTime ;
+                                           rdfs:label "LAHSO"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes an aircraft's Land and Hold Short Operations (LAHSO) group, assigning it to one of ten groups used to determine the aircraft's eligibility for land-and-hold-short runway clearances." .
+
+
+###  http://purl.example.com/aircraft/0000118
+<http://purl.example.com/aircraft/0000118> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T22:32:27Z"^^xsd:dateTime ;
+                                           rdfs:label "Test Process"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "A process that test for something." .
+
+
+###  https://spec.industrialontologies.org/ontology/construct/Manufacturer
+<https://spec.industrialontologies.org/ontology/construct/Manufacturer> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://purl.example.com/aircraft/0000001> ;
+                                                                        <http://purl.obolibrary.org/obo/IAO_0000412> "https://spec.industrialontologies.org/ontology/202602/core/Core/" ;
+                                                                        rdfs:isDefinedBy "https://spec.industrialontologies.org/ontology/core/Core/"^^xsd:anyURI ;
+                                                                        rdfs:label "manufacturer"@en-us ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "An organization that manufactures something." ;
+                                                                        <http://www.w3.org/2004/02/skos/core#example> "MiliporeSigma is a manufacturer of single-use bioreactors; Boeing is a manufacturer of airplanes; dell is a manufacturer of lap-tops"@en-us ;
+                                                                        <https://spec.industrialontologies.org/ontology/annotation/explanatoryNote> "See the expanded definition under the corresponding role class. The term is formalized here as a defined class by referring to its corresponding role class and exists primarily for ontological modeling and implementation convenience." ;
+                                                                        <https://spec.industrialontologies.org/ontology/annotation/firstOrderLogicDefinition> "Manufacturer(x) ↔ Organization(x) ∧ ∃r(ManufacturerRole(r) ∧ hasRole(x,r))" ;
+                                                                        <https://spec.industrialontologies.org/ontology/annotation/naturalLanguageDefinition> "organization which has a manufacturer role"@en-us ;
+                                                                        <https://spec.industrialontologies.org/ontology/annotation/semiFormalNaturalLanguageDefinition> "every instance of 'manufacturer' is defined as exactly an instance of 'organization' that 'has role' some 'manufacturer role'" .
+
+
+###  https://www.commoncoreontologies.org/ont00000120
+<https://www.commoncoreontologies.org/ont00000120> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Measurement Unit"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Unit_of_measurement&oldid=1061038125"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000210
+<https://www.commoncoreontologies.org/ont00000210> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000995> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Engine"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Motor"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Material Artifact that is designed to convert one form of energy into mechanical energy."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Engine&oldid=1063879193"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000319
+<https://www.commoncoreontologies.org/ont00000319> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> .
+
+
+###  https://www.commoncoreontologies.org/ont00000533
+<https://www.commoncoreontologies.org/ont00000533> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000210> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Jet Engine"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Reaction Engine that discharges a fast moving jet that generates Thrust by jet propulsion."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Some (most) jet engines utilize turbines, but some do not. Most rocket engines do not utilize turbines, but some do."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Jet_engine&oldid=1060157063"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000713
+<https://www.commoncoreontologies.org/ont00000713> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000995> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Vehicle"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Material Artifact that is designed to facilitate the movement of material entities from one location to another by conveying them there."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Vehicle&oldid=1063682179"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000853
+<https://www.commoncoreontologies.org/ont00000853> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Descriptive Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Descriptive ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that consists of a set of propositions that describe some Entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000958
+<https://www.commoncoreontologies.org/ont00000958> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Generically Dependent Continuant that generically depends on some Information Bearing Entity and stands in relation of aboutness to some Entity."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Information Content Entity is here intended to be a class of Entities whose instances are the informational content of Information Bearing Entities. For example, three instances of information bearers -- such as a bar chart, color-coded map, and a written report -- each of which lists the GDP of Countries for the year 2010 are each different carriers of the same information content. It is this content that is generically dependent upon its carrier. This treatment of Informational Content Entity (cf. the Information Artifact Ontology) leads to a principle of subtyping based upon the relationship that ICE's have with the Entity they are about rather than characteristics such as format, language, measurement scale, or media. The latter are treated here as being Qualities of bearers."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://purl.obolibrary.org/obo/IAO_0000030" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000965
+<https://www.commoncoreontologies.org/ont00000965> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Prescriptive Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Directive ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that consists of a set of propositions or images (as in the case of a blueprint) that prescribe some Entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000969
+<https://www.commoncoreontologies.org/ont00000969> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000120> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Measurement Unit of Speed"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Measurement Unit that is used as a standard for measurement of the rates at which objects traverse distance."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "miles per hour, kilometers per hour, knot, mach" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/UnitsOfMeasureOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000995
+<https://www.commoncoreontologies.org/ont00000995> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Material Artifact"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Material Entity that was designed by some Agent to realize a certain Function."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001043
+<https://www.commoncoreontologies.org/ont00001043> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000713> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Aircraft"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Vehicle that is designed to convey passengers, cargo, or equipment from one location to another by air travel."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Aircraft&oldid=1063924562"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001163
+<https://www.commoncoreontologies.org/ont00001163> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> ;
+                                                   <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                   rdfs:label "Measurement Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Measurement ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Descriptive Information Content Entity that describes the extent, dimensions, quantity, or quality of an Entity relative to some standard."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://purl.example.com/aircraft/0000017
+<http://purl.example.com/aircraft/0000017> rdf:type owl:NamedIndividual ,
+                                                    <https://spec.industrialontologies.org/ontology/construct/Manufacturer> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:13:45Z"^^xsd:dateTime ;
+                                           rdfs:label "Airbus"@en .
+
+
+###  http://purl.example.com/aircraft/0000018
+<http://purl.example.com/aircraft/0000018> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00000319> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <http://purl.example.com/aircraft/0000027> ;
+                                                      owl:allValuesFrom [ owl:intersectionOf ( <http://purl.example.com/aircraft/0000000>
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://purl.example.com/aircraft/0000019> ;
+                                                                                                 owl:hasValue <http://purl.example.com/aircraft/0000017>
+                                                                                               ]
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                                                                                 owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                                                 owl:onClass <https://www.commoncoreontologies.org/ont00000533>
+                                                                                               ]
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://purl.example.com/aircraft/0000002> ;
+                                                                                                 owl:hasValue "Airbus A320 NEO"
+                                                                                               ]
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://purl.example.com/aircraft/0000003> ;
+                                                                                                 owl:hasValue "Airbus A320-271N"
+                                                                                               ]
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://purl.example.com/aircraft/0000004> ;
+                                                                                                 owl:hasValue "123.3"
+                                                                                               ]
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://purl.example.com/aircraft/0000005> ;
+                                                                                                 owl:hasValue "39.6"
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ]
+                                                    ] ;
+                                           <http://purl.example.com/aircraft/0000027> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T16:14:39Z"^^xsd:dateTime ;
+                                           rdfs:label "Airbus 320N Spec_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000020
+<http://purl.example.com/aircraft/0000020> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000000> ;
+                                           <http://purl.example.com/aircraft/0000019> <http://purl.example.com/aircraft/0000017> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000178> <http://purl.example.com/aircraft/0000021> ,
+                                                                                        <http://purl.example.com/aircraft/0000022> ;
+                                           <http://purl.example.com/aircraft/0000002> "Airbus A320 NEO" ;
+                                           <http://purl.example.com/aircraft/0000003> "Airbus A320-271N" ;
+                                           <http://purl.example.com/aircraft/0000004> 123.3 ;
+                                           <http://purl.example.com/aircraft/0000005> 39.6 ;
+                                           <http://purl.example.com/aircraft/0000006> 136 ;
+                                           <http://purl.example.com/aircraft/0000007> 111.9 ;
+                                           <http://purl.example.com/aircraft/0000008> 117.5 ;
+                                           <http://purl.example.com/aircraft/0000009> 41.5 ;
+                                           <http://purl.example.com/aircraft/0000010> 50.2 ;
+                                           <http://purl.example.com/aircraft/0000011> 29.4 ;
+                                           <http://purl.example.com/aircraft/0000012> 171961 ;
+                                           <http://purl.example.com/aircraft/0000013> 145505 ;
+                                           <http://purl.example.com/aircraft/0000014> 16354.4 ;
+                                           <http://purl.example.com/aircraft/0000015> 698 ;
+                                           <http://purl.example.com/aircraft/0000016> 1397404 ;
+                                           <http://purl.example.com/aircraft/0000031> "A320" ;
+                                           <http://purl.example.com/aircraft/0000032> "A320" ;
+                                           <http://purl.example.com/aircraft/0000047> "true"^^xsd:boolean ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T17:20:49Z"^^xsd:dateTime ;
+                                           rdfs:label "aircraft_a320neo"@en ,
+                                                      "Airbus A320 NEO" .
+
+
+###  http://purl.example.com/aircraft/0000021
+<http://purl.example.com/aircraft/0000021> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00000533> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T19:17:53Z"^^xsd:dateTime ;
+                                           rdfs:label "engine_a320neo_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000022
+<http://purl.example.com/aircraft/0000022> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00000533> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T19:18:28Z"^^xsd:dateTime ;
+                                           rdfs:label "engine_a320neo_2"@en .
+
+
+###  http://purl.example.com/aircraft/0000028
+<http://purl.example.com/aircraft/0000028> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000026> ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:04:03Z"^^xsd:dateTime ;
+                                           rdfs:label "TDG Category 3"@en .
+
+
+###  http://purl.example.com/aircraft/0000030
+<http://purl.example.com/aircraft/0000030> rdf:type owl:NamedIndividual ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:08:19Z"^^xsd:dateTime ;
+                                           rdfs:label "ADG Category III"@en .
+
+
+###  http://purl.example.com/aircraft/0000034
+<http://purl.example.com/aircraft/0000034> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000024> ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:22:04Z"^^xsd:dateTime ;
+                                           rdfs:label "AAC Category C"@en .
+
+
+###  http://purl.example.com/aircraft/0000036
+<http://purl.example.com/aircraft/0000036> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000035> ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:28:24Z"^^xsd:dateTime ;
+                                           rdfs:label "Main Gears Category D"@en .
+
+
+###  http://purl.example.com/aircraft/0000038
+<http://purl.example.com/aircraft/0000038> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000037> ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:32:08Z"^^xsd:dateTime ;
+                                           rdfs:label "ICAO WTC Medium"@en .
+
+
+###  http://purl.example.com/aircraft/0000040
+<http://purl.example.com/aircraft/0000040> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000039> ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:37:40Z"^^xsd:dateTime ;
+                                           rdfs:label "FAA Weight Large"@en .
+
+
+###  http://purl.example.com/aircraft/0000042
+<http://purl.example.com/aircraft/0000042> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000041> ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:41:06Z"^^xsd:dateTime ;
+                                           rdfs:label "Consolidated Weight Class Category F"@en .
+
+
+###  http://purl.example.com/aircraft/0000048
+<http://purl.example.com/aircraft/0000048> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000043> ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:48:48Z"^^xsd:dateTime ;
+                                           rdfs:label "RECAT 2 Wake  (Appendix A) Category D"@en .
+
+
+###  http://purl.example.com/aircraft/0000049
+<http://purl.example.com/aircraft/0000049> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000044> ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:49:24Z"^^xsd:dateTime ;
+                                           rdfs:label "RECAT 2 Wake  (Appendix B) Category D"@en .
+
+
+###  http://purl.example.com/aircraft/0000050
+<http://purl.example.com/aircraft/0000050> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000045> ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:50:06Z"^^xsd:dateTime ;
+                                           rdfs:label "SRS Category III"@en .
+
+
+###  http://purl.example.com/aircraft/0000051
+<http://purl.example.com/aircraft/0000051> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000046> ;
+                                           <http://purl.example.com/aircraft/0000029> <http://purl.example.com/aircraft/0000020> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T18:50:36Z"^^xsd:dateTime ;
+                                           rdfs:label "LAHSO Category 7"@en .
+
+
+###  http://purl.example.com/aircraft/0000101
+<http://purl.example.com/aircraft/0000101> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00000969> ;
+                                           <https://www.commoncoreontologies.org/ont00001961> <http://purl.example.com/aircraft/0000112> ,
+                                                                                              <http://purl.example.com/aircraft/0000113> ,
+                                                                                              <http://purl.example.com/aircraft/0000114> ,
+                                                                                              <http://purl.example.com/aircraft/0000115> ,
+                                                                                              <http://purl.example.com/aircraft/0000116> ,
+                                                                                              <http://purl.example.com/aircraft/0000117> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:35:13Z"^^xsd:dateTime ;
+                                           rdfs:label "Knot Measurement Unit"@en .
+
+
+###  http://purl.example.com/aircraft/0000103
+<http://purl.example.com/aircraft/0000103> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00000319> ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty <https://www.commoncoreontologies.org/ont00001942> ;
+                                                      owl:allValuesFrom [ owl:intersectionOf ( <http://purl.example.com/aircraft/0000000>
+                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                 owl:onProperty <http://purl.example.com/aircraft/0000100> ;
+                                                                                                 owl:hasValue 142
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ]
+                                                    ] ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:42:45Z"^^xsd:dateTime ;
+                                           rdfs:label "Airbus 321-111 Spec_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000104
+<http://purl.example.com/aircraft/0000104> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000000> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000056> <http://purl.example.com/aircraft/0000105> ;
+                                           <https://www.commoncoreontologies.org/ont00001942> <http://purl.example.com/aircraft/0000117> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:46:20Z"^^xsd:dateTime ;
+                                           rdfs:label "Airbus A321-111"@en .
+
+
+###  http://purl.example.com/aircraft/0000105
+<http://purl.example.com/aircraft/0000105> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000118> ,
+                                                    <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:49:13Z"^^xsd:dateTime ;
+                                           rdfs:label "Test Process"@en .
+
+
+###  http://purl.example.com/aircraft/0000106
+<http://purl.example.com/aircraft/0000106> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00001163> ;
+                                           <https://www.commoncoreontologies.org/ont00001966> <http://purl.example.com/aircraft/0000105> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:51:16Z"^^xsd:dateTime ;
+                                           rdfs:label "avg_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000107
+<http://purl.example.com/aircraft/0000107> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000118> ,
+                                                    <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000139> <http://purl.example.com/aircraft/0000105> ;
+                                           <https://www.commoncoreontologies.org/ont00001769> 139 ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:53:14Z"^^xsd:dateTime ;
+                                           rdfs:label "approach_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000108
+<http://purl.example.com/aircraft/0000108> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000118> ,
+                                                    <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000139> <http://purl.example.com/aircraft/0000105> ;
+                                           <https://www.commoncoreontologies.org/ont00001769> 139 ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:53:19Z"^^xsd:dateTime ;
+                                           rdfs:label "approach_2"@en .
+
+
+###  http://purl.example.com/aircraft/0000109
+<http://purl.example.com/aircraft/0000109> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000118> ,
+                                                    <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000139> <http://purl.example.com/aircraft/0000105> ;
+                                           <https://www.commoncoreontologies.org/ont00001769> 139 ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:53:25Z"^^xsd:dateTime ;
+                                           rdfs:label "approach_3"@en .
+
+
+###  http://purl.example.com/aircraft/0000110
+<http://purl.example.com/aircraft/0000110> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000118> ,
+                                                    <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000139> <http://purl.example.com/aircraft/0000105> ;
+                                           <https://www.commoncoreontologies.org/ont00001769> 139 ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:53:31Z"^^xsd:dateTime ;
+                                           rdfs:label "approach_4"@en .
+
+
+###  http://purl.example.com/aircraft/0000111
+<http://purl.example.com/aircraft/0000111> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000118> ,
+                                                    <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000139> <http://purl.example.com/aircraft/0000105> ;
+                                           <https://www.commoncoreontologies.org/ont00001769> 139 ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:53:42Z"^^xsd:dateTime ;
+                                           rdfs:label "approach_5"@en .
+
+
+###  http://purl.example.com/aircraft/0000112
+<http://purl.example.com/aircraft/0000112> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00001163> ;
+                                           <https://www.commoncoreontologies.org/ont00001966> <http://purl.example.com/aircraft/0000107> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:57:54Z"^^xsd:dateTime ;
+                                           rdfs:label "approach_1_msr"@en .
+
+
+###  http://purl.example.com/aircraft/0000113
+<http://purl.example.com/aircraft/0000113> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00001163> ;
+                                           <https://www.commoncoreontologies.org/ont00001966> <http://purl.example.com/aircraft/0000108> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:58:02Z"^^xsd:dateTime ;
+                                           rdfs:label "approach_2_msr"@en .
+
+
+###  http://purl.example.com/aircraft/0000114
+<http://purl.example.com/aircraft/0000114> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00001163> ;
+                                           <https://www.commoncoreontologies.org/ont00001966> <http://purl.example.com/aircraft/0000109> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:58:10Z"^^xsd:dateTime ;
+                                           rdfs:label "approach_3_msr"@en .
+
+
+###  http://purl.example.com/aircraft/0000115
+<http://purl.example.com/aircraft/0000115> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00001163> ;
+                                           <https://www.commoncoreontologies.org/ont00001966> <http://purl.example.com/aircraft/0000110> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:58:18Z"^^xsd:dateTime ;
+                                           rdfs:label "approach_4_msr"@en .
+
+
+###  http://purl.example.com/aircraft/0000116
+<http://purl.example.com/aircraft/0000116> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00001163> ;
+                                           <https://www.commoncoreontologies.org/ont00001966> <http://purl.example.com/aircraft/0000111> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T21:58:26Z"^^xsd:dateTime ;
+                                           rdfs:label "approach_5_msr"@en .
+
+
+###  http://purl.example.com/aircraft/0000117
+<http://purl.example.com/aircraft/0000117> rdf:type owl:NamedIndividual ,
+                                                    <https://www.commoncoreontologies.org/ont00001163> ;
+                                           <https://www.commoncoreontologies.org/ont00001769> 142 ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-10T22:17:40Z"^^xsd:dateTime ;
+                                           rdfs:label "airbus321_111_approach_speed_msr"@en .
+
+
+###  http://purl.example.com/aircraft/0000150
+<http://purl.example.com/aircraft/0000150> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000136> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-11T21:49:18Z"^^xsd:dateTime ;
+                                           rdfs:label "SOC:17-3021 Aerospace Engineering and Operations Technologists and Technicians (detailed)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data." .
+
+
+###  http://purl.example.com/aircraft/0000151
+<http://purl.example.com/aircraft/0000151> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000136> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-11T21:52:20Z"^^xsd:dateTime ;
+                                           rdfs:label "SOC:17-2010 Aerospace Engineer (broad)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Perform engineering duties on aircraft." .
+
+
+###  http://purl.example.com/aircraft/0000152
+<http://purl.example.com/aircraft/0000152> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000136> ;
+                                           <http://purl.example.com/aircraft/0000027> <http://purl.example.com/aircraft/0000155> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-11T21:52:46Z"^^xsd:dateTime ;
+                                           rdfs:label "SOC:17-2011 Aerospace Engineer (detailed)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques." .
+
+
+###  http://purl.example.com/aircraft/0000153
+<http://purl.example.com/aircraft/0000153> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000130> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.example.com/aircraft/0000154> ,
+                                                                                        <http://purl.example.com/aircraft/0000156> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-11T21:54:18Z"^^xsd:dateTime ;
+                                           rdfs:label "Act of Aircraft Processing_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000154
+<http://purl.example.com/aircraft/0000154> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000132> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.example.com/aircraft/0000156> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-11T21:55:30Z"^^xsd:dateTime ;
+                                           rdfs:label "Adaptability Evaluation Process_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000155
+<http://purl.example.com/aircraft/0000155> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.obolibrary.org/obo/OCCO_00000001> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000196> <http://purl.example.com/aircraft/0000156> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-11T21:59:57Z"^^xsd:dateTime ;
+                                           rdfs:label "engineer_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000156
+<http://purl.example.com/aircraft/0000156> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000131> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-11T22:00:58Z"^^xsd:dateTime ;
+                                           rdfs:label "aerospace engineer role_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000157
+<http://purl.example.com/aircraft/0000157> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000135> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000055> <http://purl.example.com/aircraft/0000156> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-11T22:06:39Z"^^xsd:dateTime ;
+                                           rdfs:label "act of aircraft design_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000158
+<http://purl.example.com/aircraft/0000158> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000133> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000054> <http://purl.example.com/aircraft/0000154> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000197> <http://purl.example.com/aircraft/0000155> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-11T22:07:34Z"^^xsd:dateTime ;
+                                           rdfs:label "adaptability evaluation skill_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000159
+<http://purl.example.com/aircraft/0000159> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000134> ;
+                                           <http://purl.example.com/aircraft/0000027> <https://www.commoncoreontologies.org/ont00000319> ;
+                                           <https://www.commoncoreontologies.org/ont00001816> <http://purl.example.com/aircraft/0000154> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-11T22:08:52Z"^^xsd:dateTime ;
+                                           rdfs:label "report_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000241
+<http://purl.example.com/aircraft/0000241> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000204> ;
+                                           <http://purl.example.com/aircraft/0000201> 99 ;
+                                           <http://purl.example.com/aircraft/0000202> "broad" ;
+                                           <http://purl.example.com/aircraft/0000203> 1235 ;
+                                           <http://purl.example.com/aircraft/0000240> "17-2010" ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:07:44Z"^^xsd:dateTime ;
+                                           rdfs:label "OCC: 17-2011 Aerospace Engineer (broad)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Estimated total employment, wage, and classification data for Aerospace Engineers (SOC 17-2011), broad occupation level, U.S. national estimate, from the BLS OEWS May 2024 survey" .
+
+
+###  http://purl.example.com/aircraft/0000242
+<http://purl.example.com/aircraft/0000242> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000200> ;
+                                           <https://www.commoncoreontologies.org/ont00001986> <http://purl.example.com/aircraft/0000243> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:10:13Z"^^xsd:dateTime ;
+                                           rdfs:label "act of measuring_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000243
+<http://purl.example.com/aircraft/0000243> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000245> ;
+                                           <http://purl.example.com/aircraft/0000027> <http://purl.example.com/aircraft/0000244> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000176> <http://purl.example.com/aircraft/0000241> ;
+                                           <http://purl.example.com/aircraft/0000246> 68440 ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:11:22Z"^^xsd:dateTime ;
+                                           rdfs:label "total employment"@en .
+
+
+###  http://purl.example.com/aircraft/0000244
+<http://purl.example.com/aircraft/0000244> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                           <https://www.commoncoreontologies.org/ont00001841> <http://purl.example.com/aircraft/0000242> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:12:03Z"^^xsd:dateTime ;
+                                           rdfs:label "count_1"@en .
+
+
+###  http://purl.example.com/aircraft/0000247
+<http://purl.example.com/aircraft/0000247> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000204> ;
+                                           <http://purl.example.com/aircraft/0000201> 99 ;
+                                           <http://purl.example.com/aircraft/0000202> "detailed" ;
+                                           <http://purl.example.com/aircraft/0000203> 1235 ;
+                                           <http://purl.example.com/aircraft/0000240> "17-2011" ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:22:46Z"^^xsd:dateTime ;
+                                           rdfs:label "OCC: 17-2011 Aerospace Engineer (detailed)"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Estimated total employment, wage, and classification data for Aerospace Engineers (SOC 17-2011), broad occupation level, U.S. national estimate, from the BLS OEWS May 2024 survey" .
+
+
+###  http://purl.example.com/aircraft/0000248
+<http://purl.example.com/aircraft/0000248> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000200> ;
+                                           <https://www.commoncoreontologies.org/ont00001986> <http://purl.example.com/aircraft/0000249> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:26:24Z"^^xsd:dateTime ;
+                                           rdfs:label "act of measuring_2"@en .
+
+
+###  http://purl.example.com/aircraft/0000249
+<http://purl.example.com/aircraft/0000249> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000245> ;
+                                           <http://purl.example.com/aircraft/0000027> <http://purl.example.com/aircraft/0000250> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000176> <http://purl.example.com/aircraft/0000247> ;
+                                           <http://purl.example.com/aircraft/0000246> 68440 ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:27:07Z"^^xsd:dateTime ;
+                                           rdfs:label "total employment value_2"@en .
+
+
+###  http://purl.example.com/aircraft/0000250
+<http://purl.example.com/aircraft/0000250> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                           <https://www.commoncoreontologies.org/ont00001841> <http://purl.example.com/aircraft/0000248> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:27:32Z"^^xsd:dateTime ;
+                                           rdfs:label "count_2"@en .
+
+
+###  http://purl.example.com/aircraft/0000251
+<http://purl.example.com/aircraft/0000251> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000204> ;
+                                           <http://purl.example.com/aircraft/0000201> 99 ;
+                                           <http://purl.example.com/aircraft/0000202> "detailed" ;
+                                           <http://purl.example.com/aircraft/0000203> 1235 ;
+                                           <http://purl.example.com/aircraft/0000240> "17-3021" ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:30:33Z"^^xsd:dateTime ;
+                                           rdfs:label "OCC: 17-3021 Aerospace Engineering and Operations Technologists and Technicians"@en ;
+                                           <http://www.w3.org/2004/02/skos/core#definition> "Estimated total employment, wage, and classification data for Aerospace Engineers (SOC 17-2011), broad occupation level, U.S. national estimate, from the BLS OEWS May 2024 survey" .
+
+
+###  http://purl.example.com/aircraft/0000252
+<http://purl.example.com/aircraft/0000252> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                                           <https://www.commoncoreontologies.org/ont00001841> <http://purl.example.com/aircraft/0000253> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:33:05Z"^^xsd:dateTime ;
+                                           rdfs:label "count_3"@en .
+
+
+###  http://purl.example.com/aircraft/0000253
+<http://purl.example.com/aircraft/0000253> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000200> ;
+                                           <https://www.commoncoreontologies.org/ont00001986> <http://purl.example.com/aircraft/0000254> ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:33:15Z"^^xsd:dateTime ;
+                                           rdfs:label "act of measuring_3"@en .
+
+
+###  http://purl.example.com/aircraft/0000254
+<http://purl.example.com/aircraft/0000254> rdf:type owl:NamedIndividual ,
+                                                    <http://purl.example.com/aircraft/0000245> ;
+                                           <http://purl.example.com/aircraft/0000027> <http://purl.example.com/aircraft/0000252> ;
+                                           <http://purl.obolibrary.org/obo/BFO_0000176> <http://purl.example.com/aircraft/0000251> ;
+                                           <http://purl.example.com/aircraft/0000246> 9060 ;
+                                           <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0002-0443-3036> ;
+                                           <http://purl.org/dc/elements/1.1/date> "2026-09-12T19:33:28Z"^^xsd:dateTime ;
+                                           rdfs:label "total employment value_3"@en .
+
+
+###  https://www.commoncoreontologies.org/ont00000319
+<https://www.commoncoreontologies.org/ont00000319> rdf:type owl:NamedIndividual ;
+                                                   <http://purl.example.com/aircraft/0000027> <http://purl.example.com/aircraft/0000103> .
+
+
+[ owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger
+] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<https://www.commoncoreontologies.org/ont00000319> <http://purl.obolibrary.org/obo/IAO_0000412> "https://www.commoncoreontologies.org/2026-04-04/CommonCoreOntologiesMerged" ;
+                                                    rdfs:label "Artifact Design"@en ;
+                                                    <http://www.w3.org/2004/02/skos/core#definition> "A Prescriptive Information Content Entity that is a specification of an object, manifested by an agent, intended to accomplish goals, in a particular environment, using a set of primitive components, satisfying a set of requirements, subject to constraints."@en ;
+                                                    <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Design&oldid=1063941625"^^xsd:anyURI ;
+                                                    <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
