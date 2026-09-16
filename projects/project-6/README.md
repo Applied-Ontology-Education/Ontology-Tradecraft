@@ -2,7 +2,7 @@
 
 The final project for this seminar asks you to demonstrate how Large Language Models (LLMs) can be integrated with symbolic ontology tools to create a modern, hybrid semantic pipeline. Your goal is to show how LLMs can augment traditional semantic technologies—improving automation, scalability, and reasoning while maintaining correctness and trustworthiness.
 
-You will select one of two project pathways and deliver a live presentation and demonstration during the final class meeting.
+You will select one of two project pathways and deliver a presentation and to complete your work in the class.
 
 ## Project
 
@@ -44,11 +44,11 @@ Tools you may use (not exhaustive):
 - CI automation to validate the mapping layer end-to-end
 - Your favorite LLM(s)
 
-## Final Deliverable: Live Presentation
+## Final Deliverable: Presentation
 
-Your in-class presentation must include:
+Your presentation must include:
 - Option selected and how you understood the task
 - Explanation of your system architecture, including description of your inputs and expected outputs
-- Live demonstration of your semantic pipeline
+- Demonstration of your semantic pipeline
 - Verifying correctness with reasoners, SHACL, SPARQL QC, and CI automation
 - Display and description of your deliverables
