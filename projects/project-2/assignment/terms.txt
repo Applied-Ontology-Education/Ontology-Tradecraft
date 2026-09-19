@@ -1,0 +1,44 @@
+# ---- BFO 2020: classes
+http://purl.obolibrary.org/obo/BFO_0000015 # process
+http://purl.obolibrary.org/obo/BFO_0000019 # quality
+http://purl.obolibrary.org/obo/BFO_0000023 # role
+http://purl.obolibrary.org/obo/BFO_0000027 # object aggregate
+http://purl.obolibrary.org/obo/BFO_0000031 # generically dependent continuant
+http://purl.obolibrary.org/obo/BFO_0000040 # material entity
+# ---- BFO 2020: relations
+http://purl.obolibrary.org/obo/BFO_0000178 # has continuant part
+http://purl.obolibrary.org/obo/BFO_0000139 # temporal part of
+http://purl.obolibrary.org/obo/BFO_0000197 # inheres in
+http://purl.obolibrary.org/obo/BFO_0000196 # bearer of
+http://purl.obolibrary.org/obo/BFO_0000055 # realizes
+http://purl.obolibrary.org/obo/BFO_0000057 # has participant
+http://purl.obolibrary.org/obo/BFO_0000084 # generically depends on
+# ---- CCO: classes
+https://www.commoncoreontologies.org/ont00000319 # Artifact Design
+https://www.commoncoreontologies.org/ont00001045 # Artifact Model
+https://www.commoncoreontologies.org/ont00000965 # Prescriptive Information Content Entity
+https://www.commoncoreontologies.org/ont00000853 # Descriptive Information Content Entity
+https://www.commoncoreontologies.org/ont00001163 # Measurement Information Content Entity
+https://www.commoncoreontologies.org/ont00000253 # Information Bearing Entity
+https://www.commoncoreontologies.org/ont00000533 # Jet Engine
+https://www.commoncoreontologies.org/ont00001043 # Aircraft
+https://www.commoncoreontologies.org/ont00000443 # Commercial Organization
+https://www.commoncoreontologies.org/ont00001262 # Person
+https://www.commoncoreontologies.org/ont00000984 # Occupation Role
+https://www.commoncoreontologies.org/ont00000228 # Planned Act
+https://www.commoncoreontologies.org/ont00000345 # Act of Measuring
+https://www.commoncoreontologies.org/ont00000120 # Measurement Unit
+https://www.commoncoreontologies.org/ont00000969 # Measurement Unit of Speed
+# ---- CCO: relations
+https://www.commoncoreontologies.org/ont00001942 # prescribes
+https://www.commoncoreontologies.org/ont00001808 # is about
+https://www.commoncoreontologies.org/ont00001961 # is measurement unit of
+https://www.commoncoreontologies.org/ont00001863 # uses measurement unit
+https://www.commoncoreontologies.org/ont00001769 # has decimal value
+https://www.commoncoreontologies.org/ont00001816 # is output of
+https://www.commoncoreontologies.org/ont00001986 # has output
+https://www.commoncoreontologies.org/ont00001966 # is a measurement of
+https://www.commoncoreontologies.org/ont00001904 # is measured by
+# ---- CCO: individuals (units)
+https://www.commoncoreontologies.org/ont00001646 # Knot Measurement Unit
+https://www.commoncoreontologies.org/ont00001714 # Foot Measurement Unit

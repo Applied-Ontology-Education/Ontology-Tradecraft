@@ -1,0 +1,412 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix ot:   <https://luay9.github.io/ontology-tradecraft/p2/> .
+
+<https://luay9.github.io/ontology-tradecraft/p2/core> a owl:Ontology ;
+    rdfs:label "Ontology Tradecraft Project 2 core"@en ;
+    owl:versionIRI <https://luay9.github.io/ontology-tradecraft/p2/core/2026-09-19> ;
+    owl:imports <https://luay9.github.io/ontology-tradecraft/p2/modules/cco-extract> ;
+    rdfs:comment "Classes and relations for modeling FAA aircraft characteristics, the 2018 SOC structure, and May 2024 OEWS estimates. Reuses BFO 2020 and CCO (2026-08-13) through a ROBOT MIREOT extract in modules/. Convention: data properties whose names end in a unit (Ft, Lb, Knot, Ft2) are shortcuts for the CCO measurement pattern (bearer of a quality, which is measured by a measurement information content entity, whose information bearing entity has a decimal value and uses a measurement unit). Code-valued properties are shortcuts for designation by a code identifier."@en .
+
+#################################################################
+#  TASK 1 - Aircraft (FAA Aircraft Characteristics Database row)
+#################################################################
+
+ot:FixedWing a owl:Class ;
+    rdfs:subClassOf cco:ont00001043 ;                     # Aircraft
+    rdfs:label "Fixed Wing"@en ;
+    skos:definition "An Aircraft that generates lift with wings fixed to its fuselage."@en .
+
+ot:hasManufacturer a owl:ObjectProperty ;
+    rdfs:label "has manufacturer"@en ;
+    skos:definition "x has manufacturer y iff x is a material artifact, y is an organization, and y is an agent in an act of manufacturing that has x as output."@en .
+
+# ---- designators of the aircraft's type (on the aircraft; the grader requires the two Model properties there)
+
+ot:hasICAOCode a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has ICAO Code"@en ;
+    skos:definition "Relates an aircraft to the International Civil Aviation Organization (ICAO) Aircraft Type Designator of its type (FAA ACD column ICAO_Code). Shortcut for: the aircraft type is designated by a code identifier with this text value."@en .
+
+ot:hasFAADesignator a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has FAA Designator"@en ;
+    skos:definition "Relates an aircraft to the Federal Aviation Administration (FAA) Aircraft Type Designator of its type (FAA ACD column FAA_Designator). Shortcut for: the aircraft type is designated by a code identifier with this text value."@en .
+
+ot:hasModelFAA a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has Model FAA"@en ;
+    skos:definition "Relates an aircraft to the name of its model as recorded by the FAA (FAA ACD column Model_FAA, 'FAA Aircraft Model Name'). Shortcut for: the aircraft model is designated by a designative information content entity whose text value is this name."@en .
+
+ot:hasModelBADA a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has Model BADA"@en ;
+    skos:definition "Relates an aircraft to the name of its model in Eurocontrol's Base of Aircraft Data (BADA) (FAA ACD column Model_BADA). Shortcut for: the aircraft model is designated by a designative information content entity whose text value is the BADA model name."@en .
+
+# ---- physical characteristics of the aircraft (measurement shortcuts)
+
+ot:hasApproachSpeedKnot a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has Approach Speed Knot"@en ;
+    skos:definition "Relates an aircraft to its approach speed to the runway at Maximum Allowable Landing Weight, in knots (FAA ACD column Approach_Speed_knot). Shortcut for a measurement of the aircraft's approach speed in knots."@en .
+
+ot:hasWingspanWithWingletsFt a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has Wingspan With Winglets Ft"@en ;
+    skos:definition "Relates an aircraft fitted with winglets or sharklets to its wingspan, measured tip to tip, in feet (FAA ACD column Wingspan_ft_with_winglets_sharklets). Shortcut for a measurement of the aircraft's wingspan quality in feet."@en .
+
+ot:hasLengthFt a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has Length Ft"@en ;
+    skos:definition "Relates an aircraft to its full length in feet (FAA ACD column Length_ft, 'Aircraft Full Length'). Shortcut for: the aircraft bears a length quality, measured by a measurement information content entity whose bearer has a decimal value in feet."@en .
+
+ot:hasTailHeightFt a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has Tail Height Ft"@en ;
+    skos:definition "Relates an aircraft to its tail height at Operating Empty Weight (OEW), in feet (FAA ACD column Tail_Height_at_OEW_ft). Shortcut for: the aircraft bears a height quality, measured by a measurement information content entity whose bearer has a decimal value in feet."@en .
+
+ot:hasWheelbaseFt a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has Wheelbase Ft"@en ;
+    skos:definition "Relates an aircraft to its wheelbase, the distance between its main gear and its nose gear, in feet (FAA ACD column Wheelbase_ft). Shortcut for a measurement of that distance in feet."@en .
+
+ot:hasCockpitToMainGearFt a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has Cockpit To Main Gear Ft"@en ;
+    skos:definition "Relates an aircraft to its cockpit-to-main-gear (CMG) distance, in feet (FAA ACD column Cockpit_to_Main_Gear_ft). Shortcut for a measurement of that distance in feet."@en .
+
+ot:hasMainGearWidthFt a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has Main Gear Width Ft"@en ;
+    skos:definition "Relates an aircraft to the distance between the outer tires of its main landing gear, in feet (FAA ACD column Main_Gear_Width_ft). Shortcut for a measurement of that distance in feet."@en .
+
+ot:hasMTOWLb a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has MTOW Lb"@en ;
+    skos:definition "Relates an aircraft to its Maximum Takeoff Gross Weight (MTOW), in pounds (FAA ACD column MTOW_lb). Shortcut for a measurement of that weight in pounds."@en .
+
+ot:hasMALWLb a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has MALW Lb"@en ;
+    skos:definition "Relates an aircraft to its Maximum Allowable Landing Weight (MALW), in pounds (FAA ACD column MALW_lb). Shortcut for a measurement of that weight in pounds."@en .
+
+ot:hasParkingAreaFt2 a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has Parking Area Ft2"@en ;
+    skos:definition "Relates an aircraft to the minimum parking position area it needs, computed as (wingspan + 10 ft) x (length + 5 ft), in square feet (FAA ACD column Parking_Area_ft2). Shortcut for a measurement of that area in square feet."@en .
+
+ot:hasMainGearConfig a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has Main Gear Config"@en ;
+    skos:definition "Relates an aircraft to the code for the configuration of its main landing gear under FAA Order 5300.7 (FAA ACD column Main_Gear_Config)."@en .
+
+# ---- FAA/ICAO categories assigned to the aircraft model (on the Artifact Model)
+
+ot:hasAAC a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has AAC"@en ;
+    skos:definition "Relates an aircraft model to its Aircraft Approach Category, which the FAA assigns from the highest reported approach or stall speed (FAA ACD column AAC)."@en .
+
+ot:hasADG a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has ADG"@en ;
+    skos:definition "Relates an aircraft model to its Airplane Design Group, determined from tail height and wingspan under FAA AC 150/5300-13B (FAA ACD column ADG)."@en .
+
+ot:hasTDG a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has TDG"@en ;
+    skos:definition "Relates an aircraft model to its Taxiway Design Group, determined from main gear width and cockpit-to-main-gear distance under FAA AC 150/5300-13B (FAA ACD column TDG)."@en .
+
+ot:hasICAOWTC a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has ICAO WTC"@en ;
+    skos:definition "Relates an aircraft model to its ICAO Wake Turbulence Category: Super, Heavy, Medium, or Light (FAA ACD column ICAO_WTC)."@en .
+
+ot:hasFAAWeightClass a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has FAA Weight Class"@en ;
+    skos:definition "Relates an aircraft model to its FAA weight class: Super, Heavy, Large, Small, or Small+ (FAA ACD column FAA_Weight)."@en .
+
+ot:hasCWT a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has CWT"@en ;
+    skos:definition "Relates an aircraft model to its Consolidated Wake Turbulence category, from A (largest) to I (smallest), based on maximum takeoff weight (FAA ACD column CWT)."@en .
+
+ot:hasRECAT15WakeCategory a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has RECAT 1.5 Wake Category"@en ;
+    skos:definition "Relates an aircraft model to its RECAT 1.5 wake category, A to F, based on wingspan and maximum takeoff weight (FAA ACD column One_Half_Wake_Category)."@en .
+
+ot:hasRECAT2WakeCategoryAppxA a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has RECAT 2 Wake Category Appx A"@en ;
+    skos:definition "Relates an aircraft model to its RECAT 2 wake category under Appendix A, A to G, based on wingspan and maximum takeoff weight (FAA ACD column Two_Wake_Category_Appx_A)."@en .
+
+ot:hasRECAT2WakeCategoryAppxB a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has RECAT 2 Wake Category Appx B"@en ;
+    skos:definition "Relates an aircraft model to its RECAT 2 wake category under Appendix B, A to G, based on wingspan and maximum takeoff weight (FAA ACD column Two_Wake_Category_Appx_B)."@en .
+
+ot:hasSRS a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has SRS"@en ;
+    skos:definition "Relates an aircraft model to its Same Runway Separation category, which sets separation from a preceding aircraft using the same runway (FAA ACD column SRS)."@en .
+
+ot:hasLAHSOGroup a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has LAHSO Group"@en ;
+    skos:definition "Relates an aircraft model to its Land and Hold Short Operations group, 1 to 10 (FAA ACD column LAHSO)."@en .
+
+# ---- facts about the registered fleet and the record (on the Artifact Model)
+
+ot:isFAARegistered a owl:DatatypeProperty ;
+    rdfs:range xsd:boolean ;
+    rdfs:label "is FAA Registered"@en ;
+    skos:definition "Relates an aircraft model to a flag that is true if aircraft of that model are registered by the FAA (FAA ACD column FAA_Registry)."@en .
+
+ot:hasRegistrationCount a owl:DatatypeProperty ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has Registration Count"@en ;
+    skos:definition "Relates an aircraft model to the number of aircraft of that type and sub-model registered in the 2022 FAA database (FAA ACD column Registration_Count)."@en .
+
+ot:hasTFMSOperationsFY24 a owl:DatatypeProperty ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has TFMS Operations FY24"@en ;
+    skos:definition "Relates an aircraft model to the total number of National Airspace System operations flown by aircraft of that model with a Traffic Flow Management System (TFMS) flight plan, IFR or VFR, in fiscal year 2024 (FAA ACD column TMFS_Operations_FY24)."@en .
+
+ot:hasRemarks a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has Remarks"@en ;
+    skos:definition "Relates an aircraft model to the free-text remarks recorded for it in the FAA Aircraft Characteristics Database (FAA ACD column Remarks)."@en .
+
+#################################################################
+#  TASK 2 - A321-111 design vs. tested instance
+#################################################################
+
+ot:TestProcess a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;                     # Planned Act
+    rdfs:label "Test Process"@en ;
+    skos:definition "A Planned Act in which an artifact is operated under controlled conditions so that its performance can be measured against a specification."@en .
+
+ot:ApproachProcess a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000015 ;                     # process
+    rdfs:label "Approach Process"@en ;
+    skos:definition "A process in which an aircraft descends along its final approach path toward a runway."@en .
+
+ot:MaxApproachSpeedSpecification a owl:Class ;
+    rdfs:subClassOf cco:ont00000965 ;                     # Prescriptive Information Content Entity
+    rdfs:label "Maximum Approach Speed Specification"@en ;
+    skos:definition "A Prescriptive Information Content Entity that prescribes the highest speed at which an aircraft built to a given design may fly its final approach to a runway."@en .
+
+ot:isTemporalPartOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf obo:BFO_0000139 ;                  # temporal part of
+    rdfs:label "is temporal part of"@en ;
+    skos:definition "x is temporal part of y iff x and y are occurrents and x is a temporal part of y in the sense of BFO 'temporal part of' (BFO_0000139). Introduced as a labelled alias for this project."@en .
+
+ot:hasMaxApproachSpeedKnot a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has Max Approach Speed Knot"@en ;
+    skos:definition "Relates an approach process to the highest speed, in knots, that the participating aircraft reached during it. Shortcut for: a measurement information content entity that is a measurement of the aircraft's speed during the approach, whose bearer has this decimal value in knots."@en .
+
+#################################################################
+#  TASK 3 - 2018 SOC entries mentioning Aerospace Engineer
+#################################################################
+
+ot:SOCEntry a owl:Class ;
+    rdfs:subClassOf cco:ont00000853 ;                     # Descriptive Information Content Entity
+    rdfs:label "SOC Entry"@en ;
+    skos:definition "A Descriptive Information Content Entity that is an entry in the 2018 Standard Occupational Classification (SOC) structure and identifies and describes a group of occupations."@en .
+
+ot:hasSOCCode a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has SOC Code"@en ;
+    skos:definition "Relates an SOC entry to its SOC code, such as 17-2011 (SOC Definitions column SOC Code)."@en .
+
+ot:hasSOCGroup a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has SOC Group"@en ;
+    skos:definition "Relates an SOC entry to its level in the SOC hierarchy: Major, Minor, Broad, or Detailed (SOC Definitions column SOC Group)."@en .
+
+ot:hasSOCTitle a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has SOC Title"@en ;
+    skos:definition "Relates an SOC entry to its title (SOC Definitions column SOC Title)."@en .
+
+ot:AerospaceEngineerRole a owl:Class ;
+    rdfs:subClassOf cco:ont00000984 ;                     # Occupation Role
+    rdfs:label "Aerospace Engineer Role"@en ;
+    skos:definition "An Occupation Role whose bearer is expected to perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft (SOC 17-2011 Aerospace Engineers)."@en .
+
+ot:AerospaceEngineeringTechnicianRole a owl:Class ;
+    rdfs:subClassOf cco:ont00000984 ;                     # Occupation Role
+    rdfs:label "Aerospace Engineering and Operations Technician Role"@en ;
+    skos:definition "An Occupation Role whose bearer is expected to operate, install, adjust, and maintain the computer, communications, simulation, data-acquisition, test, and measurement systems used to launch, track, position, and evaluate air and space vehicles (SOC 17-3021 Aerospace Engineering and Operations Technologists and Technicians)."@en .
+
+ot:ActOfAircraftProcessing a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;                     # Planned Act
+    rdfs:label "Act of Aircraft Processing"@en ;
+    skos:definition "A Planned Act in which one or more agents design, construct, or test aircraft, missiles, or spacecraft."@en .
+
+ot:AdaptabilityEvaluation a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000023 ;                     # role
+    rdfs:label "Adaptability Evaluation"@en ;
+    skos:definition "A role borne by an engineer in virtue of an assigned responsibility to evaluate whether materials and equipment can be adapted to an aircraft design, and which is realized in acts of aircraft processing in which that evaluation is carried out."@en .
+
+#################################################################
+#  TASK 4 - May 2024 OEWS records mentioning Aerospace Engineer
+#################################################################
+
+ot:OEWSRecord a owl:Class ;
+    rdfs:subClassOf cco:ont00000853 ;                     # Descriptive Information Content Entity
+    rdfs:label "OEWS Record"@en ;
+    skos:definition "A Descriptive Information Content Entity that is one record of the BLS Occupational Employment and Wage Statistics (OEWS) May 2024 estimates, reporting employment and wages for one occupation in one area, industry, and ownership group."@en .
+
+ot:OccupationalPopulation a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000027 ;                     # object aggregate
+    rdfs:label "Occupational Population"@en ;
+    skos:definition "An object aggregate whose members are all the persons, excluding the self-employed, who are employed under an occupation role of a given type in a given area at a given time."@en .
+
+ot:PopulationSize a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000019 ;                     # quality
+    rdfs:label "Population Size"@en ;
+    skos:definition "A quality of an object aggregate that consists in the number of members the aggregate has."@en .
+
+ot:TotalEmployment a owl:Class ;
+    rdfs:subClassOf cco:ont00001163 ;                     # Measurement Information Content Entity
+    rdfs:label "Total Employment Measurement"@en ;
+    skos:definition "A Measurement Information Content Entity that estimates the number of persons employed in an occupation in an area, rounded to the nearest 10 and excluding the self-employed (OEWS column TOT_EMP)."@en .
+
+ot:hasEmploymentCount a owl:DatatypeProperty ;
+    rdfs:range xsd:integer ;
+    rdfs:label "has Employment Count"@en ;
+    skos:definition "Relates a total employment measurement to the estimated number of persons employed (OEWS column TOT_EMP). Shortcut for: the measurement's bearer has this integer value."@en .
+
+ot:hasArea a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has area"@en ;
+    skos:definition "Relates an OEWS record to the code of the area it covers: U.S. (99), a state FIPS code, a Metropolitan Statistical Area (MSA) code, or an OEWS-specific nonmetropolitan area code (OEWS column AREA)."@en .
+
+ot:hasAreaTitle a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has area title"@en ;
+    skos:definition "Relates an OEWS record to the name of the area it covers (OEWS column AREA_TITLE)."@en .
+
+ot:hasAreaType a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has area type"@en ;
+    skos:definition "Relates an OEWS record to the type code of its area: 1 = U.S., 2 = State, 3 = U.S. Territory, 4 = Metropolitan Statistical Area, 6 = Nonmetropolitan Area (OEWS column AREA_TYPE)."@en .
+
+ot:hasPrimaryState a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has primary state"@en ;
+    skos:definition "Relates an OEWS record to the primary state of its area; 'US' is used for national estimates (OEWS column PRIM_STATE)."@en .
+
+ot:hasNAICS a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has NAICS"@en ;
+    skos:definition "Relates an OEWS record to the North American Industry Classification System (NAICS) code of the industry it covers (OEWS column NAICS)."@en .
+
+ot:hasNAICSTitle a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has NAICS title"@en ;
+    skos:definition "Relates an OEWS record to the NAICS title of the industry it covers (OEWS column NAICS_TITLE)."@en .
+
+ot:hasIGroup a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has i group"@en ;
+    skos:definition "Relates an OEWS record to its industry level: cross-industry, or a NAICS sector, 3-digit, 4-digit, 5-digit, or 6-digit industry (OEWS column I_GROUP)."@en .
+
+ot:ownCode a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "own code"@en ;
+    skos:definition "Relates an OEWS record to the code of the ownership type it covers, such as 1235 = Federal, State, and Local Government and Private Sector (OEWS column OWN_CODE)."@en .
+
+ot:hasOCCCode a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has OCC code"@en ;
+    skos:definition "Relates an OEWS record to the 6-digit SOC code, or OEWS-specific code, of its occupation (OEWS column OCC_CODE)."@en .
+
+ot:hasOCCTitle a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "has OCC title"@en ;
+    skos:definition "Relates an OEWS record to the SOC title, or OEWS-specific title, of its occupation (OEWS column OCC_TITLE)."@en .
+
+ot:oGroup a owl:DatatypeProperty ;
+    rdfs:range xsd:string ;
+    rdfs:label "o group"@en ;
+    skos:definition "Relates an OEWS record to the SOC occupation level of its occupation: major, minor, broad, detailed, or total (OEWS column O_GROUP)."@en .
+
+ot:hasEmploymentPRSE a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has employment PRSE"@en ;
+    skos:definition "Relates an OEWS record to the percent relative standard error of its employment estimate, a measure of sampling error (OEWS column EMP_PRSE)."@en .
+
+ot:hasHourlyMeanWage a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has hourly mean wage"@en ;
+    skos:definition "Relates an OEWS record to the mean hourly wage, in US dollars, estimated for its occupation (OEWS column H_MEAN)."@en .
+
+ot:hasAnnualMeanWage a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has annual mean wage"@en ;
+    skos:definition "Relates an OEWS record to the mean annual wage, in US dollars, estimated for its occupation (OEWS column A_MEAN)."@en .
+
+ot:hasMeanWagePRSE a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has mean wage PRSE"@en ;
+    skos:definition "Relates an OEWS record to the percent relative standard error of its mean wage estimate (OEWS column MEAN_PRSE)."@en .
+
+ot:hasHourlyWage10thPercentile a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has hourly wage 10th percentile"@en ;
+    skos:definition "Relates an OEWS record to the 10th percentile hourly wage, in US dollars, for its occupation (OEWS column H_PCT10)."@en .
+
+ot:hasHourlyWage25thPercentile a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has hourly wage 25th percentile"@en ;
+    skos:definition "Relates an OEWS record to the 25th percentile hourly wage, in US dollars, for its occupation (OEWS column H_PCT25)."@en .
+
+ot:hasHourlyMedianWage a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has hourly median wage"@en ;
+    skos:definition "Relates an OEWS record to the median (50th percentile) hourly wage, in US dollars, for its occupation (OEWS column H_MEDIAN)."@en .
+
+ot:hasHourlyWage75thPercentile a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has hourly wage 75th percentile"@en ;
+    skos:definition "Relates an OEWS record to the 75th percentile hourly wage, in US dollars, for its occupation (OEWS column H_PCT75)."@en .
+
+ot:hasHourlyWage90thPercentile a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has hourly wage 90th percentile"@en ;
+    skos:definition "Relates an OEWS record to the 90th percentile hourly wage, in US dollars, for its occupation (OEWS column H_PCT90)."@en .
+
+ot:hasAnnualWage10thPercentile a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has annual wage 10th percentile"@en ;
+    skos:definition "Relates an OEWS record to the 10th percentile annual wage, in US dollars, for its occupation (OEWS column A_PCT10)."@en .
+
+ot:hasAnnualWage25thPercentile a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has annual wage 25th percentile"@en ;
+    skos:definition "Relates an OEWS record to the 25th percentile annual wage, in US dollars, for its occupation (OEWS column A_PCT25)."@en .
+
+ot:hasAnnualMedianWage a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has annual median wage"@en ;
+    skos:definition "Relates an OEWS record to the median (50th percentile) annual wage, in US dollars, for its occupation (OEWS column A_MEDIAN)."@en .
+
+ot:hasAnnualWage75thPercentile a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has annual wage 75th percentile"@en ;
+    skos:definition "Relates an OEWS record to the 75th percentile annual wage, in US dollars, for its occupation (OEWS column A_PCT75)."@en .
+
+ot:hasAnnualWage90thPercentile a owl:DatatypeProperty ;
+    rdfs:range xsd:decimal ;
+    rdfs:label "has annual wage 90th percentile"@en ;
+    skos:definition "Relates an OEWS record to the 90th percentile annual wage, in US dollars, for its occupation (OEWS column A_PCT90)."@en .

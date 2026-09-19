@@ -1,0 +1,415 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix ot:   <https://luay9.github.io/ontology-tradecraft/p2/> .
+@prefix otd:  <https://luay9.github.io/ontology-tradecraft/p2/data/> .
+
+<https://luay9.github.io/ontology-tradecraft/p2/instances> a owl:Ontology ;
+    rdfs:label "Ontology Tradecraft Project 2 instances"@en ;
+    owl:versionIRI <https://luay9.github.io/ontology-tradecraft/p2/instances/2026-09-19> ;
+    owl:imports <https://luay9.github.io/ontology-tradecraft/p2/core> .
+
+#################################################################
+#  TASK 1 - Airbus A320 NEO (aircraft_data.xlsx, row ICAO_Code A20N)
+#
+#  Each column is placed on the entity it is really about:
+#    - the aircraft: type designators, physical characteristics, parts
+#    - the Artifact Model (design): FAA/ICAO categories, fleet counts, remarks
+#  The "Airbus A320 NEO" node is a representative aircraft built to the model;
+#  the grader requires the model names and dimensions on that node.
+#  Blank in the source and therefore not asserted (open world): AAC_minimum,
+#  AAC_maximum, Approach_Speed_minimum_knot, Approach_Speed_maximum_knot,
+#  Wingspan_ft_without_winglets_sharklets, Rotor_Diameter_ft, LastUpdate.
+#################################################################
+
+otd:Airbus a cco:ont00000443 ;                           # Commercial Organization
+    rdfs:label "Airbus"@en ;
+    skos:definition "The commercial organization that designs and manufactures Airbus aircraft, recorded as manufacturer 'AIRBUS' in the FAA Aircraft Characteristics Database."@en .
+
+otd:A320neoDesign a cco:ont00001045 ;                    # Artifact Model
+    rdfs:label "Airbus A320 NEO Design"@en ;
+    skos:definition "The Artifact Model that prescribes the functions and qualities of Airbus A320 NEO aircraft."@en ;
+    cco:ont00001942 otd:A320neo ;                        # prescribes
+    cco:ont00001808 otd:A320neo ;                        # is about
+    ot:hasAAC "C"^^xsd:string ;
+    ot:hasADG "III"^^xsd:string ;
+    ot:hasTDG "3"^^xsd:string ;
+    ot:hasICAOWTC "Medium"^^xsd:string ;
+    ot:hasFAAWeightClass "Large"^^xsd:string ;
+    ot:hasCWT "F"^^xsd:string ;
+    ot:hasRECAT15WakeCategory "D"^^xsd:string ;
+    ot:hasRECAT2WakeCategoryAppxA "D"^^xsd:string ;
+    ot:hasRECAT2WakeCategoryAppxB "C"^^xsd:string ;
+    ot:hasSRS "III"^^xsd:string ;
+    ot:hasLAHSOGroup "7"^^xsd:string ;
+    ot:isFAARegistered "true"^^xsd:boolean ;
+    ot:hasRegistrationCount "147"^^xsd:integer ;
+    ot:hasTFMSOperationsFY24 "540276"^^xsd:integer ;
+    ot:hasRemarks "AAC validated by Flight Standardization Board (FSB) report."^^xsd:string .
+
+otd:A320neo a ot:FixedWing ;                             # Class = "Fixed-wing"
+    rdfs:label "Airbus A320 NEO"@en ;
+    skos:definition "A representative aircraft built to the Airbus A320 NEO Artifact Model, bearing the characteristics recorded for that model in the FAA Aircraft Characteristics Database."@en ;
+    obo:BFO_0000178 otd:A320neo_engine1 , otd:A320neo_engine2 ;   # has continuant part (Num_Engines = 2, Physical_Class_Engine = Jet)
+    ot:hasManufacturer otd:Airbus ;
+    ot:hasICAOCode "A20N"^^xsd:string ;
+    ot:hasFAADesignator "A20N"^^xsd:string ;
+    ot:hasModelFAA "Airbus A320 Neo"^^xsd:string ;
+    ot:hasModelBADA "Airbus A320-271N"^^xsd:string ;
+    ot:hasApproachSpeedKnot "137"^^xsd:decimal ;
+    ot:hasWingspanWithWingletsFt "117.5"^^xsd:decimal ;
+    ot:hasLengthFt "123.3"^^xsd:decimal ;
+    ot:hasTailHeightFt "39.6"^^xsd:decimal ;
+    ot:hasWheelbaseFt "41.5"^^xsd:decimal ;
+    ot:hasCockpitToMainGearFt "50.2"^^xsd:decimal ;
+    ot:hasMainGearWidthFt "29.4"^^xsd:decimal ;
+    ot:hasMTOWLb "174165"^^xsd:decimal ;
+    ot:hasMALWLb "148591"^^xsd:decimal ;
+    ot:hasParkingAreaFt2 "16358.3"^^xsd:decimal ;
+    ot:hasMainGearConfig "D"^^xsd:string ;
+    obo:BFO_0000196 otd:A320neo_length .                 # bearer of (worked example of the full measurement pattern)
+
+otd:A320neo_engine1 a cco:ont00000533 ;                  # Jet Engine
+    rdfs:label "Airbus A320 NEO jet engine 1"@en ;
+    skos:definition "The first of the two jet engines that are continuant parts of the representative Airbus A320 NEO."@en .
+
+otd:A320neo_engine2 a cco:ont00000533 ;                  # Jet Engine
+    rdfs:label "Airbus A320 NEO jet engine 2"@en ;
+    skos:definition "The second of the two jet engines that are continuant parts of the representative Airbus A320 NEO."@en .
+
+# ---- worked example: Length_ft in the full CCO measurement pattern (the ot:hasLengthFt triple above is its shortcut)
+
+otd:A320neo_length a obo:BFO_0000019 ;                   # quality
+    rdfs:label "Airbus A320 NEO length"@en ;
+    skos:definition "The length quality that inheres in the representative Airbus A320 NEO."@en ;
+    cco:ont00001904 otd:A320neo_lengthMeasurement .      # is measured by
+
+otd:A320neo_lengthMeasurement a cco:ont00001163 ;        # Measurement Information Content Entity
+    rdfs:label "Airbus A320 NEO length measurement"@en ;
+    skos:definition "The measurement information content entity recording the full length of the Airbus A320 NEO as 123.3 feet."@en ;
+    obo:BFO_0000084 otd:A320neo_lengthMeasurement_ibe .  # generically depends on
+
+otd:A320neo_lengthMeasurement_ibe a cco:ont00000253 ;    # Information Bearing Entity
+    rdfs:label "Airbus A320 NEO length measurement bearer"@en ;
+    skos:definition "The FAA Aircraft Characteristics Database cell that carries the Airbus A320 NEO length measurement."@en ;
+    cco:ont00001769 "123.3"^^xsd:decimal ;               # has decimal value
+    cco:ont00001863 cco:ont00001714 .                    # uses measurement unit: Foot
+
+#################################################################
+#  TASK 2 - Airbus A321-111: designed maximum approach speed (142 kn)
+#           vs. one aircraft's tested average (139 kn over 5 approaches)
+#
+#  The five per-approach speeds are illustrative; the task gives only their
+#  average (139). Each approach carries exactly one numeric value.
+#################################################################
+
+otd:A321_111 a cco:ont00001045 ;                         # Artifact Model
+    rdfs:label "Airbus A321-111"@en ;
+    skos:definition "The Artifact Model of the Airbus A321-111, as named in Eurocontrol's Base of Aircraft Data, which prescribes a maximum approach speed of 142 knots for aircraft built to it."@en ;
+    cco:ont00001942 otd:A321_111_masSpec , otd:A321_111_aircraft1 .   # prescribes
+
+otd:A321_111_masSpec a ot:MaxApproachSpeedSpecification ;
+    rdfs:label "Airbus A321-111 maximum approach speed specification"@en ;
+    skos:definition "The prescriptive information content entity that sets 142 knots as the maximum approach speed for aircraft built to the Airbus A321-111 design."@en ;
+    obo:BFO_0000084 otd:A321_111_masSpec_ibe .           # generically depends on
+
+otd:A321_111_masSpec_ibe a cco:ont00000253 ;             # Information Bearing Entity
+    rdfs:label "Airbus A321-111 maximum approach speed specification bearer"@en ;
+    skos:definition "The information bearing entity that carries the Airbus A321-111 maximum approach speed specification."@en ;
+    cco:ont00001769 "142"^^xsd:decimal ;                 # has decimal value ("142", not "142.0")
+    cco:ont00001863 cco:ont00001646 .                    # uses measurement unit: Knot
+
+cco:ont00001646 cco:ont00001961 otd:A321_111_masSpec_ibe , otd:A321_111_test1_average_ibe .   # Knot is measurement unit of
+
+otd:A321_111_aircraft1 a ot:FixedWing ;
+    rdfs:label "Airbus A321-111 aircraft 1"@en ;
+    skos:definition "An individual aircraft built to the Airbus A321-111 design, which flew the five approaches of the approach speed test."@en ;
+    ot:hasModelBADA "Airbus A321-111"^^xsd:string .
+
+otd:A321_111_test1 a ot:TestProcess ;
+    rdfs:label "Airbus A321-111 approach speed test 1"@en ;
+    skos:definition "The test process in which Airbus A321-111 aircraft 1 flew five approaches and its maximum approach speed was measured on each."@en ;
+    obo:BFO_0000057 otd:A321_111_aircraft1 .             # has participant
+
+otd:A321_111_approach1 a ot:ApproachProcess ;
+    rdfs:label "Airbus A321-111 test 1 approach 1"@en ;
+    skos:definition "The first approach flown by Airbus A321-111 aircraft 1 during approach speed test 1."@en ;
+    ot:isTemporalPartOf otd:A321_111_test1 ;
+    obo:BFO_0000057 otd:A321_111_aircraft1 ;
+    ot:hasMaxApproachSpeedKnot "137"^^xsd:decimal .
+
+otd:A321_111_approach2 a ot:ApproachProcess ;
+    rdfs:label "Airbus A321-111 test 1 approach 2"@en ;
+    skos:definition "The second approach flown by Airbus A321-111 aircraft 1 during approach speed test 1."@en ;
+    ot:isTemporalPartOf otd:A321_111_test1 ;
+    obo:BFO_0000057 otd:A321_111_aircraft1 ;
+    ot:hasMaxApproachSpeedKnot "138"^^xsd:decimal .
+
+otd:A321_111_approach3 a ot:ApproachProcess ;
+    rdfs:label "Airbus A321-111 test 1 approach 3"@en ;
+    skos:definition "The third approach flown by Airbus A321-111 aircraft 1 during approach speed test 1."@en ;
+    ot:isTemporalPartOf otd:A321_111_test1 ;
+    obo:BFO_0000057 otd:A321_111_aircraft1 ;
+    ot:hasMaxApproachSpeedKnot "139"^^xsd:decimal .
+
+otd:A321_111_approach4 a ot:ApproachProcess ;
+    rdfs:label "Airbus A321-111 test 1 approach 4"@en ;
+    skos:definition "The fourth approach flown by Airbus A321-111 aircraft 1 during approach speed test 1."@en ;
+    ot:isTemporalPartOf otd:A321_111_test1 ;
+    obo:BFO_0000057 otd:A321_111_aircraft1 ;
+    ot:hasMaxApproachSpeedKnot "140"^^xsd:decimal .
+
+otd:A321_111_approach5 a ot:ApproachProcess ;
+    rdfs:label "Airbus A321-111 test 1 approach 5"@en ;
+    skos:definition "The fifth approach flown by Airbus A321-111 aircraft 1 during approach speed test 1."@en ;
+    ot:isTemporalPartOf otd:A321_111_test1 ;
+    obo:BFO_0000057 otd:A321_111_aircraft1 ;
+    ot:hasMaxApproachSpeedKnot "141"^^xsd:decimal .
+
+otd:A321_111_test1_average a cco:ont00001163 ;           # Measurement Information Content Entity
+    rdfs:label "Airbus A321-111 test 1 average maximum approach speed"@en ;
+    skos:definition "The measurement information content entity recording that the average of the five maximum approach speeds flown in approach speed test 1 was 139 knots, 3 knots below the 142 knots the design prescribes."@en ;
+    cco:ont00001808 otd:A321_111_test1 ;                 # is about
+    obo:BFO_0000084 otd:A321_111_test1_average_ibe .     # generically depends on
+
+otd:A321_111_test1_average_ibe a cco:ont00000253 ;       # Information Bearing Entity
+    rdfs:label "Airbus A321-111 test 1 report"@en ;
+    skos:definition "The test report produced by approach speed test 1 that carries the average maximum approach speed measurement."@en ;
+    cco:ont00001816 otd:A321_111_test1 ;                 # is output of
+    cco:ont00001769 "139"^^xsd:decimal ;                 # has decimal value
+    cco:ont00001863 cco:ont00001646 .                    # uses measurement unit: Knot
+
+#################################################################
+#  TASK 3 - SOC entries mentioning "Aerospace Engineer"
+#           (soc_structure_definitions.xlsx, sheet SOC Definitions)
+#
+#  Only these three nodes carry labels starting with "SOC:".
+#  17-2010 has no definition in the source; its definition is written here.
+#  Each entry is about the occupation role class it classifies (OWL 2 punning);
+#  17-2011 is also about Artifact Design, because its definition refers to
+#  aircraft design as a kind.
+#################################################################
+
+otd:SOC_17-2010 a ot:SOCEntry ;
+    rdfs:label "SOC: Aerospace Engineers (17-2010, Broad)"@en ;
+    skos:definition "The 2018 SOC broad occupation group Aerospace Engineers. The SOC Definitions file gives no definition for this broad group; it contains the single detailed occupation 17-2011 Aerospace Engineers, so it covers the same work: engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft."@en ;
+    ot:hasSOCCode "17-2010"^^xsd:string ;
+    ot:hasSOCGroup "Broad"^^xsd:string ;
+    ot:hasSOCTitle "Aerospace Engineers"^^xsd:string ;
+    cco:ont00001808 ot:AerospaceEngineerRole .           # is about
+
+otd:SOC_17-2011 a ot:SOCEntry ;
+    rdfs:label "SOC: Aerospace Engineers (17-2011, Detailed)"@en ;
+    skos:definition "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques."@en ;
+    ot:hasSOCCode "17-2011"^^xsd:string ;
+    ot:hasSOCGroup "Detailed"^^xsd:string ;
+    ot:hasSOCTitle "Aerospace Engineers"^^xsd:string ;
+    cco:ont00001808 ot:AerospaceEngineerRole , cco:ont00000319 .   # is about: the role, Artifact Design
+
+otd:SOC_17-3021 a ot:SOCEntry ;
+    rdfs:label "SOC: Aerospace Engineering and Operations Technologists and Technicians (17-3021, Detailed)"@en ;
+    skos:definition "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data."@en ;
+    ot:hasSOCCode "17-3021"^^xsd:string ;
+    ot:hasSOCGroup "Detailed"^^xsd:string ;
+    ot:hasSOCTitle "Aerospace Engineering and Operations Technologists and Technicians"^^xsd:string ;
+    cco:ont00001808 ot:AerospaceEngineeringTechnicianRole .   # is about
+
+# ---- representative realization of the 17-2011 definition
+
+otd:aerospaceEngineer1 a cco:ont00001262 ;               # Person
+    rdfs:label "aerospace engineer 1"@en ;
+    skos:definition "A representative person employed as an aerospace engineer, used to model the activities described in SOC 17-2011."@en .
+
+otd:aerospaceEngineerRole1 a ot:AerospaceEngineerRole ;
+    rdfs:label "aerospace engineer role of aerospace engineer 1"@en ;
+    skos:definition "The aerospace engineer occupation role that inheres in aerospace engineer 1."@en ;
+    obo:BFO_0000197 otd:aerospaceEngineer1 .             # inheres in
+
+otd:adaptabilityEvaluation1 a ot:AdaptabilityEvaluation ;
+    rdfs:label "adaptability evaluation role of aerospace engineer 1"@en ;
+    skos:definition "The adaptability evaluation role that inheres in aerospace engineer 1 in virtue of the responsibility to evaluate materials and equipment against aircraft designs."@en ;
+    obo:BFO_0000197 otd:aerospaceEngineer1 .             # inheres in
+
+otd:aircraftProcessing1 a ot:ActOfAircraftProcessing ;
+    rdfs:label "aircraft processing act 1"@en ;
+    skos:definition "An act of aircraft processing in which aerospace engineer 1 tests materials and equipment for adaptation to an aircraft design."@en ;
+    obo:BFO_0000057 otd:aerospaceEngineer1 ;             # has participant
+    obo:BFO_0000055 otd:adaptabilityEvaluation1 , otd:aerospaceEngineerRole1 .   # realizes
+
+otd:adaptabilityReport1 a cco:ont00000253 ;              # Information Bearing Entity
+    rdfs:label "adaptability evaluation report 1"@en ;
+    skos:definition "The report produced by aircraft processing act 1 that records its evaluation of materials and equipment."@en ;
+    cco:ont00001816 otd:aircraftProcessing1 .            # is output of
+
+#################################################################
+#  TASK 4 - OEWS May 2024 records mentioning "Aerospace Engineer"
+#           (employment_wage_May_2024.xlsx, sheet national_M2024_dl)
+#
+#  Pattern: population -> Act of Measuring -> Total Employment.
+#  Each record and its Total Employment measurement are both carried by the
+#  national data file (generically depends on). The record is deliberately NOT
+#  said to have the measurement as a continuant part: CCO's chain
+#  'has continuant part o describes -> describes condition' would then make the
+#  (descriptive) record a Performance Specification, which is a prescriptive
+#  ICE, and HermiT reports the ontology inconsistent.
+#  Only these three records carry labels starting with "OCC:".
+#  17-2010 (broad) contains only 17-2011 (detailed), so both records report the
+#  same estimates and are about the same population.
+#  Blank in the source and therefore not asserted: JOBS_1000, LOC_QUOTIENT,
+#  PCT_TOTAL, PCT_RPT, ANNUAL, HOURLY.
+#################################################################
+
+otd:pop_AerospaceEngineers_US_May2024 a ot:OccupationalPopulation ;
+    rdfs:label "aerospace engineers employed in the U.S., May 2024"@en ;
+    skos:definition "The object aggregate of all persons, excluding the self-employed, employed as aerospace engineers (SOC 17-2011) in the United States in May 2024."@en .
+
+otd:popSize_AerospaceEngineers_US_May2024 a ot:PopulationSize ;
+    rdfs:label "size of the U.S. aerospace engineer population, May 2024"@en ;
+    skos:definition "The population size quality that inheres in the population of aerospace engineers employed in the U.S. in May 2024."@en ;
+    obo:BFO_0000197 otd:pop_AerospaceEngineers_US_May2024 .   # inheres in
+
+otd:pop_AerospaceTechs_US_May2024 a ot:OccupationalPopulation ;
+    rdfs:label "aerospace engineering and operations technologists and technicians employed in the U.S., May 2024"@en ;
+    skos:definition "The object aggregate of all persons, excluding the self-employed, employed as aerospace engineering and operations technologists and technicians (SOC 17-3021) in the United States in May 2024."@en .
+
+otd:popSize_AerospaceTechs_US_May2024 a ot:PopulationSize ;
+    rdfs:label "size of the U.S. aerospace engineering technician population, May 2024"@en ;
+    skos:definition "The population size quality that inheres in the population of aerospace engineering and operations technologists and technicians employed in the U.S. in May 2024."@en ;
+    obo:BFO_0000197 otd:pop_AerospaceTechs_US_May2024 .  # inheres in
+
+otd:OEWS_May2024 a cco:ont00000345 ;                     # Act of Measuring
+    rdfs:label "OEWS May 2024 survey"@en ;
+    skos:definition "The act of measuring in which the Bureau of Labor Statistics estimated employment and wages by occupation for May 2024 (Occupational Employment and Wage Statistics survey)."@en ;
+    obo:BFO_0000057 otd:pop_AerospaceEngineers_US_May2024 , otd:pop_AerospaceTechs_US_May2024 ;   # has participant
+    cco:ont00001986 otd:OEWS_May2024_nationalFile .     # has output
+
+otd:OEWS_May2024_nationalFile a cco:ont00000253 ;        # Information Bearing Entity
+    rdfs:label "OEWS May 2024 national estimates file"@en ;
+    skos:definition "The data file national_M2024_dl produced by the OEWS May 2024 survey, which carries the OEWS records."@en .
+
+# ---- 17-2010 (broad)
+
+otd:OCC_17-2010 a ot:OEWSRecord ;
+    rdfs:label "OCC: Aerospace Engineers (17-2010, broad)"@en ;
+    skos:definition "The OEWS May 2024 national cross-industry record for the SOC broad occupation 17-2010 Aerospace Engineers."@en ;
+    obo:BFO_0000084 otd:OEWS_May2024_nationalFile ;     # generically depends on
+    cco:ont00001808 otd:pop_AerospaceEngineers_US_May2024 ;   # is about
+    ot:hasArea "99"^^xsd:string ;
+    ot:hasAreaTitle "U.S."^^xsd:string ;
+    ot:hasAreaType "1"^^xsd:string ;
+    ot:hasPrimaryState "US"^^xsd:string ;
+    ot:hasNAICS "000000"^^xsd:string ;
+    ot:hasNAICSTitle "Cross-industry"^^xsd:string ;
+    ot:hasIGroup "cross-industry"^^xsd:string ;
+    ot:ownCode "1235"^^xsd:string ;
+    ot:hasOCCCode "17-2010"^^xsd:string ;
+    ot:hasOCCTitle "Aerospace Engineers"^^xsd:string ;
+    ot:oGroup "broad"^^xsd:string ;
+    ot:hasEmploymentPRSE "2.3"^^xsd:decimal ;
+    ot:hasHourlyMeanWage "67.88"^^xsd:decimal ;
+    ot:hasAnnualMeanWage "141180"^^xsd:decimal ;
+    ot:hasMeanWagePRSE "0.8"^^xsd:decimal ;
+    ot:hasHourlyWage10thPercentile "41.04"^^xsd:decimal ;
+    ot:hasHourlyWage25thPercentile "50.36"^^xsd:decimal ;
+    ot:hasHourlyMedianWage "64.82"^^xsd:decimal ;
+    ot:hasHourlyWage75thPercentile "83.88"^^xsd:decimal ;
+    ot:hasHourlyWage90thPercentile "98.97"^^xsd:decimal ;
+    ot:hasAnnualWage10thPercentile "85350"^^xsd:decimal ;
+    ot:hasAnnualWage25thPercentile "104740"^^xsd:decimal ;
+    ot:hasAnnualMedianWage "134830"^^xsd:decimal ;
+    ot:hasAnnualWage75thPercentile "174480"^^xsd:decimal ;
+    ot:hasAnnualWage90thPercentile "205850"^^xsd:decimal .
+
+otd:totEmp_17-2010 a ot:TotalEmployment ;
+    rdfs:label "Total Employment"@en ;
+    skos:altLabel "Total Employment - 17-2010 Aerospace Engineers (broad), U.S., May 2024"@en ;
+    skos:definition "The OEWS May 2024 estimate of total employment for the broad occupation 17-2010 Aerospace Engineers in the U.S."@en ;
+    cco:ont00001966 otd:popSize_AerospaceEngineers_US_May2024 ;   # is a measurement of
+    obo:BFO_0000084 otd:OEWS_May2024_nationalFile ;     # generically depends on (carried by the same file as the record)
+    ot:hasEmploymentCount "68440"^^xsd:integer .
+
+# ---- 17-2011 (detailed)
+
+otd:OCC_17-2011 a ot:OEWSRecord ;
+    rdfs:label "OCC: Aerospace Engineers (17-2011, detailed)"@en ;
+    skos:definition "The OEWS May 2024 national cross-industry record for the SOC detailed occupation 17-2011 Aerospace Engineers."@en ;
+    obo:BFO_0000084 otd:OEWS_May2024_nationalFile ;     # generically depends on
+    cco:ont00001808 otd:pop_AerospaceEngineers_US_May2024 ;   # is about
+    ot:hasArea "99"^^xsd:string ;
+    ot:hasAreaTitle "U.S."^^xsd:string ;
+    ot:hasAreaType "1"^^xsd:string ;
+    ot:hasPrimaryState "US"^^xsd:string ;
+    ot:hasNAICS "000000"^^xsd:string ;
+    ot:hasNAICSTitle "Cross-industry"^^xsd:string ;
+    ot:hasIGroup "cross-industry"^^xsd:string ;
+    ot:ownCode "1235"^^xsd:string ;
+    ot:hasOCCCode "17-2011"^^xsd:string ;
+    ot:hasOCCTitle "Aerospace Engineers"^^xsd:string ;
+    ot:oGroup "detailed"^^xsd:string ;
+    ot:hasEmploymentPRSE "2.3"^^xsd:decimal ;
+    ot:hasHourlyMeanWage "67.88"^^xsd:decimal ;
+    ot:hasAnnualMeanWage "141180"^^xsd:decimal ;
+    ot:hasMeanWagePRSE "0.8"^^xsd:decimal ;
+    ot:hasHourlyWage10thPercentile "41.04"^^xsd:decimal ;
+    ot:hasHourlyWage25thPercentile "50.36"^^xsd:decimal ;
+    ot:hasHourlyMedianWage "64.82"^^xsd:decimal ;
+    ot:hasHourlyWage75thPercentile "83.88"^^xsd:decimal ;
+    ot:hasHourlyWage90thPercentile "98.97"^^xsd:decimal ;
+    ot:hasAnnualWage10thPercentile "85350"^^xsd:decimal ;
+    ot:hasAnnualWage25thPercentile "104740"^^xsd:decimal ;
+    ot:hasAnnualMedianWage "134830"^^xsd:decimal ;
+    ot:hasAnnualWage75thPercentile "174480"^^xsd:decimal ;
+    ot:hasAnnualWage90thPercentile "205850"^^xsd:decimal .
+
+otd:totEmp_17-2011 a ot:TotalEmployment ;
+    rdfs:label "Total Employment"@en ;
+    skos:altLabel "Total Employment - 17-2011 Aerospace Engineers (detailed), U.S., May 2024"@en ;
+    skos:definition "The OEWS May 2024 estimate of total employment for the detailed occupation 17-2011 Aerospace Engineers in the U.S."@en ;
+    cco:ont00001966 otd:popSize_AerospaceEngineers_US_May2024 ;   # is a measurement of
+    obo:BFO_0000084 otd:OEWS_May2024_nationalFile ;     # generically depends on (carried by the same file as the record)
+    ot:hasEmploymentCount "68440"^^xsd:integer .
+
+# ---- 17-3021 (detailed)
+
+otd:OCC_17-3021 a ot:OEWSRecord ;
+    rdfs:label "OCC: Aerospace Engineering and Operations Technologists and Technicians (17-3021, detailed)"@en ;
+    skos:definition "The OEWS May 2024 national cross-industry record for the SOC detailed occupation 17-3021 Aerospace Engineering and Operations Technologists and Technicians."@en ;
+    obo:BFO_0000084 otd:OEWS_May2024_nationalFile ;     # generically depends on
+    cco:ont00001808 otd:pop_AerospaceTechs_US_May2024 ;  # is about
+    ot:hasArea "99"^^xsd:string ;
+    ot:hasAreaTitle "U.S."^^xsd:string ;
+    ot:hasAreaType "1"^^xsd:string ;
+    ot:hasPrimaryState "US"^^xsd:string ;
+    ot:hasNAICS "000000"^^xsd:string ;
+    ot:hasNAICSTitle "Cross-industry"^^xsd:string ;
+    ot:hasIGroup "cross-industry"^^xsd:string ;
+    ot:ownCode "1235"^^xsd:string ;
+    ot:hasOCCCode "17-3021"^^xsd:string ;
+    ot:hasOCCTitle "Aerospace Engineering and Operations Technologists and Technicians"^^xsd:string ;
+    ot:oGroup "detailed"^^xsd:string ;
+    ot:hasEmploymentPRSE "4.3"^^xsd:decimal ;
+    ot:hasHourlyMeanWage "41.5"^^xsd:decimal ;
+    ot:hasAnnualMeanWage "86330"^^xsd:decimal ;
+    ot:hasMeanWagePRSE "1.4"^^xsd:decimal ;
+    ot:hasHourlyWage10thPercentile "25.83"^^xsd:decimal ;
+    ot:hasHourlyWage25thPercentile "31.04"^^xsd:decimal ;
+    ot:hasHourlyMedianWage "38.38"^^xsd:decimal ;
+    ot:hasHourlyWage75thPercentile "49.14"^^xsd:decimal ;
+    ot:hasHourlyWage90thPercentile "57.91"^^xsd:decimal ;
+    ot:hasAnnualWage10thPercentile "53730"^^xsd:decimal ;
+    ot:hasAnnualWage25thPercentile "64570"^^xsd:decimal ;
+    ot:hasAnnualMedianWage "79830"^^xsd:decimal ;
+    ot:hasAnnualWage75thPercentile "102220"^^xsd:decimal ;
+    ot:hasAnnualWage90thPercentile "120440"^^xsd:decimal .
+
+otd:totEmp_17-3021 a ot:TotalEmployment ;
+    rdfs:label "Total Employment"@en ;
+    skos:altLabel "Total Employment - 17-3021 Aerospace Engineering and Operations Technologists and Technicians, U.S., May 2024"@en ;
+    skos:definition "The OEWS May 2024 estimate of total employment for the detailed occupation 17-3021 Aerospace Engineering and Operations Technologists and Technicians in the U.S."@en ;
+    cco:ont00001966 otd:popSize_AerospaceTechs_US_May2024 ;   # is a measurement of
+    obo:BFO_0000084 otd:OEWS_May2024_nationalFile ;     # generically depends on (carried by the same file as the record)
+    ot:hasEmploymentCount "9060"^^xsd:integer .
