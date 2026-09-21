@@ -109,3 +109,34 @@
 
 :SOC172011 obo:IAO_0000136 :ArtifactDesign .
 
+### Task 4 Instances
+
+:ActOfMeasuring1 rdf:type :ActOfMeasuring ;
+    rdfs:label "Act of Measuring 1"@en ;
+    obo:BFO_0000055 :TotalEmploymentValue1 .
+
+:TotalEmploymentValue1 rdf:type obo:BFO_0000019 ;
+    rdfs:label "Total Employment"@en ;
+    skos:definition "the total number of individuals employed in a given occupation, as reported by BLS OEWS data"@en ;
+    :hasValue "68440"^^xsd:integer .
+
+:OCC172010 rdf:type :OCCCode ;
+    rdfs:label "OCC:17-2010 Aerospace Engineers"@en ;
+    skos:definition "Broad occupational category for aerospace engineers, per BLS OEWS data."@en ;
+    :hasArea "99"^^xsd:string ;
+    :hasOGroup "broad"^^xsd:string ;
+    :hasOwnCode "1235"^^xsd:string .
+
+:OCC172011 rdf:type :OCCCode ;
+    rdfs:label "OCC:17-2011 Aerospace Engineers"@en ;
+    skos:definition "..."@en ;
+    :hasArea "99"^^xsd:string ;
+    :hasOGroup "detailed"^^xsd:string ;
+    :hasOwnCode "1235"^^xsd:string .
+
+:OCC173021 rdf:type :OCCCode ;
+    rdfs:label "OCC:17-3021 Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    skos:definition "..."@en ;
+    :hasArea "99"^^xsd:string ;
+    :hasOGroup "detailed"^^xsd:string ;
+    :hasOwnCode "1235"^^xsd:string .

@@ -86,6 +86,17 @@
                                                          rdfs:label "Adaptability Evaluation"@en ;
                                                          skos:definition "an evaluation process assessing whether an artifact design is adaptable to a new use or requirement"@en .
 
+### http://www.example.com/project2#ActOfMeasuring
+<http://www.example.com/project2#ActOfMeasuring> rdf:type owl:Class ;
+                                                 rdfs:subClassOf obo:BFO_0000015 ;
+                                                 rdfs:label "Act of Measuring"@en ;
+                                                 skos:definition "a process in which a quantity or quality is measured and recorded"@en .
+
+### http://www.example.com/project2#OCCCode
+<http://www.example.com/project2#OCCCode> rdf:type owl:Class ;
+                                          rdfs:subClassOf obo:BFO_0000031 ;
+                                          rdfs:label "OCC Code"@en ;
+                                          skos:definition "a generically dependent continuant representing a BLS Occupational Employment and Wage Statistics classification code"@en .
 
 ######################################################
 # Relations
@@ -125,5 +136,20 @@
                                                                     rdfs:label "has measured approach speed knots"@en ;
                                                                     skos:definition "relates an approach process to its actually observed speed in knots"@en .
 
+### http://www.example.com/project2#hasArea
+<http://www.example.com/project2#hasArea> rdf:type owl:DatatypeProperty ;
+                                          rdfs:label "has area"@en ;
+                                          skos:definition "relates an occupation entry to its BLS geographic area code"@en .
 
+## http://www.example.com/project2#hasOGroup
+:hasOGroup rdf:type owl:DatatypeProperty ;
+    rdfs:label "o group"@en ;
+    skos:definition "relates an occupation entry to its BLS occupational group level (e.g., broad, detailed)"@en .
 
+### http://www.example.com/project2#hasOwnCode
+:hasOwnCode rdf:type owl:DatatypeProperty ;
+    rdfs:label "own code"@en ;
+    skos:definition "relates an occupation entry to its BLS ownership code"@en .
+
+obo:BFO_0000139 rdfs:label "is temporal part of"@en ;
+    skos:definition "a relation between a temporal or spatiotemporal part and the whole occurrent of which it is a part"@en .
