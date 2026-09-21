@@ -78,4 +78,34 @@
     obo:BFO_0000139 :TestProcess1;
     :hasmeasuredapproachspeedknots "140"^^xsd:integer .
 
+### Task 3 Instances
+
+:SOC172010 rdf:type :SOCCode ;
+    rdfs:label "SOC:17-2010 Aerospace Engineers"@en ;
+    skos:definition "Broad occupational category for aerospace engineers."@en .
+
+:SOC172011 rdf:type :SOCCode ;
+    rdfs:label "SOC:17-2011 Aerospace Engineers"@en ;
+    skos:definition "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques."@en .
+
+:SOC173021 rdf:type :SOCCode ;
+    rdfs:label "SOC:17-3021 Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    skos:definition "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data."@en .
+
+:ActOfAircraftProcessing1 rdf:type :ActOfAircraftProcessing ;
+    rdfs:label "Act of Aircraft Processing 1"@en ;
+    obo:BFO_0000055 :AdaptabilityEvaluation1 ;
+    cco:ont00001816 :ArtifactDesign .
+
+:AdaptabilityEvaluation1 a :AdaptabilityEvaluation ;
+    rdfs:label "Adaptability Evaluation 1"@en .
+
+:Person1 a :Person ;
+    rdfs:label "Person 1"@en .
+
+:JobRole1 a :Role ;
+    rdfs:label "Job Role 1"@en ;
+    obo:BFO_0000197 :Person1 .
+
+:SOC172011 obo:IAO_0000136 :ArtifactDesign .
 

@@ -16,7 +16,6 @@
                  <http://purl.obolibrary.org/obo/bfo.owl> ,
                  <http://purl.obolibrary.org/obo/iao.owl> .
 
-
 ######################################################
 # Classes
 ######################################################
@@ -56,6 +55,37 @@
                                                rdfs:subClassOf obo:BFO_0000015 ;
                                                rdfs:label "Approach"@en ;
                                                skos:definition "a process involving a timed entry for an aviation vehicle"@en .
+
+### http://www.example.com/project2#SOCCode
+    <http://www.example.com/project2#SOCCode> rdf:type owl:Class ;
+                                              rdfs:subClassOf obo:BFO_0000031 ;
+                                              rdfs:label "SOC Code"@en ;
+                                              skos:definition "a generically dependent continuant with SOC codes"@en .
+
+### http://www.example.com/project2#JobRole
+    <http://www.example.com/project2#JobRole> rdf:type owl:Class ;
+                                              rdfs:subClassOf obo:BFO_0000023 ;
+                                              rdfs:label "Job Role"@en ;
+                                              skos:definition "a role relating to a specific employment type"@en .
+
+### http://www.example.com/project2#ActofAircraftProcessing
+    <http://www.example.com/project2#ActofAircraftProcessing> rdf:type owl:Class ;
+                                                              rdfs:subClassOf obo:BFO_0000015 ;
+                                                              rdfs:label "Act of Aircraft Processing"@en ;
+                                                              skos:definition "process of aircraft processing"@en .
+
+### http://www.example.com/project2#Report
+    <http://www.example.com/project2#Report> rdf:type owl:Class ;
+                                             rdfs:subClassOf obo:BFO_0000031;
+                                             rdfs:label "Report"@en ;
+                                             skos:definition "generically dependent continuant for reports"@en .
+
+### http://www.example.com/project2#AdaptabilityEvaluation
+<http://www.example.com/project2#AdaptabilityEvaluation> rdf:type owl:Class ;
+                                                         rdfs:subClassOf obo:BFO_0000015 ;
+                                                         rdfs:label "Adaptability Evaluation"@en ;
+                                                         skos:definition "an evaluation process assessing whether an artifact design is adaptable to a new use or requirement"@en .
+
 
 ######################################################
 # Relations
