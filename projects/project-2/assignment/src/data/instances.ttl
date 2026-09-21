@@ -1,0 +1,81 @@
+@prefix : <http://www.example.com/project2#> .
+@prefix obo: <http://purl.obolibrary.org/obo/>  .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .
+@prefix owl: <http://www.w3.org/2002/07/owl#>  .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://www.example.com/project2> .
+
+### Task 1 Instances
+
+:AirbusA320NEOSpec-1 rdf:type :ArtifactDesign ;
+    rdfs:label "Airbus A320 NEO Spec-1"@en ;
+    obo:IAO_0000136 :AirbusA320NEO .
+
+
+### Here I opted to create an individual of the Airbus A320 Neo type that holds the required attributes. Not strictly correct, but I'm not sure about building the OWL anonymous class (yet)
+:AirbusA320NEO rdf:type :FixedWing ;
+    rdfs:label "Airbus A320 NEO"@en ;
+    obo:BFO_0000178 :Engine1 , 
+                :Engine2 ;
+    :hasmanufacturer :Airbus ;
+    :hasModelBADA "Airbus A320-271N"^^xsd:string ;
+    :hasModelFAA "Airbus A320 Neo"^^xsd:string ;
+    :haslengthft "123.3"^^xsd:decimal ;
+    :hastailheightft "39.6"^^xsd:decimal .
+
+:Engine1 rdf:type :JetEngine ;
+    rdfs:label "Engine 1"@en .
+
+:Engine2 rdf:type :JetEngine ;
+    rdfs:label "Engine 2"@en .
+
+:Airbus rdf:type :Manufacturer ;
+    rdfs:label "Airbus"@en .
+
+### Task 2 Instances
+
+:AirbusA321111 rdf:type :ArtifactDesign ;
+    rdfs:label "Airbus A321-111"@en ;
+    cco:ont00000965 :MaxApproachSpeed .
+  
+
+:MaxApproachSpeed rdf:type cco:ont00001163 ;
+    rdfs:label "Max Approach Speed"@en ;
+    :hasmaxapproachspeedknots "142"^^xsd:integer .
+
+:Knot rdf:type cco:ont00000120 ;
+    rdfs:label "Knot"@en ;
+    cco:ont00001961 :MaxApproachSpeed.
+
+:TestProcess1 rdf:type :TestProcess ;
+    rdfs:label "Test Process 1"@en .
+
+:Approach1 rdf:type :Approach ;
+    rdfs:label "Approach 1"@en ;
+    obo:BFO_0000139 :TestProcess1;
+    :hasmeasuredapproachspeedknots "138"^^xsd:integer .
+
+:Approach2 rdf:type :Approach ;
+    rdfs:label "Approach 2"@en ;
+    obo:BFO_0000139 :TestProcess1;
+    :hasmeasuredapproachspeedknots "139"^^xsd:integer .
+
+:Approach3 rdf:type :Approach ;
+    rdfs:label "Approach 3"@en ;
+    obo:BFO_0000139 :TestProcess1;
+    :hasmeasuredapproachspeedknots "139"^^xsd:integer .
+
+:Approach4 rdf:type :Approach ;
+    rdfs:label "Approach 4"@en ;
+    obo:BFO_0000139 :TestProcess1;
+    :hasmeasuredapproachspeedknots "140"^^xsd:integer .
+
+:Approach5 rdf:type :Approach ;
+    rdfs:label "Approach 5"@en ;
+    obo:BFO_0000139 :TestProcess1;
+    :hasmeasuredapproachspeedknots "140"^^xsd:integer .
+
+

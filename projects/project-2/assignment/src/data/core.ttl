@@ -1,0 +1,99 @@
+@prefix : <http://www.example.com/project2#> .
+@prefix obo: <http://purl.obolibrary.org/obo/>  .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .
+@prefix owl: <http://www.w3.org/2002/07/owl#>  .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@base <http://www.example.com/project2> .
+
+<http://www.example.com/project2> rdf:type owl:Ontology ;
+    owl:imports <https://www.commoncoreontologies.org/ExtendedRelationOntology> ,
+                 <https://www.commoncoreontologies.org/InformationEntityOntology> ,
+                 <https://www.commoncoreontologies.org/AgentOntology> ,
+                 <http://purl.obolibrary.org/obo/bfo.owl> ,
+                 <http://purl.obolibrary.org/obo/iao.owl> .
+
+
+######################################################
+# Classes
+######################################################
+
+### http://www.example.com/project2#ArtifactDesign
+    <http://www.example.com/project2#ArtifactDesign> rdf:type owl:Class ;
+                                                      rdfs:subClassOf obo:IAO_0000104 ;
+                                                      rdfs:label "Artifact Design"@en ;
+                                                      skos:definition "a plan specification that enumerates the physical properties of a planned artifact"@en .
+
+### http://www.example.com/project2#JetEngine
+    <http://www.example.com/project2#JetEngine> rdf:type owl:Class ;
+                                                rdfs:subClassOf obo:BFO_0000030 ;
+                                                rdfs:label "Jet Engine"@en ;
+                                                skos:definition "an object used to provide the propelling mechanism for a jet" .          
+
+### http://www.example.com/project2#FixedWing
+    <http://www.example.com/project2#FixedWing> rdf:type owl:Class ;
+                                                rdfs:subClassOf obo:BFO_0000030 ;
+                                                rdfs:label "Fixed Wing"@en ;
+                                                skos:definition "an object that is a fixed wing jet"@en .
+
+### http://www.example.com/project2#Manufacturer
+    <http://www.example.com/project2#Manufacturer> rdf:type owl:Class ;
+                                                   rdfs:subClassOf cco:ont00001180 ;
+                                                   rdfs:label "Manufacturer"@en ;
+                                                   skos:definition "an organization whose core purpose is the manufacturing of material goods"@en .
+
+### http://www.example.com/project2#TestProcess
+    <http://www.example.com/project2#TestProcess> rdf:type owl:Class ;
+                                                  rdfs:subClassOf obo:BFO_0000015 ;
+                                                  rdfs:label "Test Process"@en ;
+                                                  skos:definition "a process carried out in order to perform a test"@en .
+
+### http://www.example.com/project2#Approach
+    <http://www.example.com/project2#Approach> rdf:type owl:Class ;
+                                               rdfs:subClassOf obo:BFO_0000015 ;
+                                               rdfs:label "Approach"@en ;
+                                               skos:definition "a process involving a timed entry for an aviation vehicle"@en .
+
+######################################################
+# Relations
+######################################################
+
+### http://www.example.com/project2#hasModelBADA
+   <http://www.example.com/project2#hasModelBADA> rdf:type owl:DatatypeProperty ;
+                                                  rdfs:label "has Model BADA"@en ;
+                                                  skos:definition "denotes the EU control Base of Aircraft Data (BADA) Aircraft Model Name"@en .
+
+### http://www.example.com/project2#hasModelFAA
+   <http://www.example.com/project2#hasModelFAA> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:label "has Model FAA"@en ;
+                                                 skos:definition "denotes the FAA Aircraft Model Name"@en .
+### http://www.example.com/project2#haslengthft
+   <http://www.example.com/project2#haslengthft> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:label "has length ft"@en ;
+                                                 skos:definition "indicates aircraft full length in feet"@en .
+
+### http://www.example.com/project2#hastailheightft
+   <http://www.example.com/project2#hastailheightft> rdf:type owl:DatatypeProperty ;
+                                                 rdfs:label "has tail height ft"@en ;
+                                                 skos:definition "indicates aircraft tail height in feet"@en .
+
+### http://www.example.com/project2#hasmanufacturer
+   <http://www.example.com/project2#hasmanufacturer> rdf:type owl:ObjectProperty ;
+                                                     rdfs:label "has manufacturer"@en ;
+                                                     skos:definition "indicates organization whose role it is to manufacture the material good"@en .
+
+### http://www.example.com/project2#hasmaxapproachspeedknots
+    <http://www.example.com/project2#hasmaxapproachspeedknots> rdf:type owl:DatatypeProperty ;
+                                                               rdfs:label "has max approach speed knots"@en ;
+                                                               skos:definition "indicates the maximum speed of approach of a jet in trial in knots"@en .
+
+### http://www.example.com/project2#hasmeasuredapproachspeedknots
+    <http://www.example.com/project2#hasmeasuredapproachspeedknots> rdf:type owl:DatatypeProperty ;
+                                                                    rdfs:label "has measured approach speed knots"@en ;
+                                                                    skos:definition "relates an approach process to its actually observed speed in knots"@en .
+
+
+
