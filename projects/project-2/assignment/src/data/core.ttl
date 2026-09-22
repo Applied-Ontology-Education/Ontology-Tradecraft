@@ -1,0 +1,468 @@
+@prefix :        <https://example.org/tradecraft/core#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo:     <http://purl.obolibrary.org/obo/> .
+
+<https://example.org/tradecraft/core> a owl:Ontology ;
+    rdfs:label "Ontology Tradecraft Core" ;
+    skos:definition "Core TBox for the Ontology Tradecraft projects: classes and relations used across tasks, subclassed under BFO 2020." ;
+    owl:imports <http://purl.obolibrary.org/obo/bfo.owl> .
+
+########################################
+# TASK 1 classes
+########################################
+
+:ArtifactDesign a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000031 ;   # generically dependent continuant
+    rdfs:label "Artifact Design" ;
+    skos:definition "An information content entity that specifies how an artifact is to be built, including the parts it comprises and the values of its designed characteristics." .
+
+:AircraftModel a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000040 ;   # material entity
+    rdfs:label "Aircraft Model" ;
+    skos:definition "A kind of aircraft characterized by a shared design; individuals of this class stand for the model as a designed object of reference." .
+
+:JetEngine a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000040 ;   # material entity
+    rdfs:label "Jet Engine" ;
+    skos:definition "An engine that generates thrust by expelling a high-velocity jet of gas." .
+
+:FixedWing a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000040 ;   # material entity
+    rdfs:label "Fixed Wing" ;
+    skos:definition "A wing that is rigidly attached to an aircraft body, in contrast to a rotary wing." .
+
+:Organization a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000040 ;   # material entity
+    rdfs:label "Organization" ;
+    skos:definition "A social entity composed of persons and other resources organized to pursue collective goals." .
+
+########################################
+# TASK 2 classes
+########################################
+
+:TestProcess a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000015 ;   # process
+    rdfs:label "Test Process" ;
+    skos:definition "A process in which the performance characteristics of an artifact are measured against its design specifications." .
+
+:MeasurementUnit a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000031 ;   # generically dependent continuant (an information artifact)
+    rdfs:label "Measurement Unit" ;
+    skos:definition "A standard quantity in terms of which the magnitudes of other quantities of the same kind are stated." .
+
+:ApproachProcess a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000015 ;   # process
+    rdfs:label "Approach Process" ;
+    skos:definition "A process in which an aircraft performs a final approach for landing, during which the approach speed is exhibited." .
+
+:MaxApproachSpeedSpecification a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000031 ;   # generically dependent continuant
+    rdfs:label "Maximum Approach Speed Specification" ;
+    skos:definition "An information content entity that specifies the maximum approach speed prescribed by an aircraft design." .
+
+########################################
+# TASK 3 classes
+########################################
+
+:SOCEntry a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000031 ;   # generically dependent continuant
+    rdfs:label "SOC Entry" ;
+    skos:definition "An information content entity that is one row of the BLS Standard Occupational Classification structure, identifying an occupational category by SOC Code, SOC Group, SOC Title, and (for Detailed entries) a SOC Definition." .
+
+:AerospaceEngineer a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000040 ;   # material entity (a person)
+    rdfs:label "Aerospace Engineer" ;
+    skos:definition "A person who performs the professional activities characteristic of aerospace engineering, such as designing, constructing, and testing aircraft, missiles, and spacecraft." .
+
+:ActOfAircraftProcessing a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000015 ;   # process
+    rdfs:label "Act of Aircraft Processing" ;
+    skos:definition "A process in which an aircraft is engineered, designed, modified, or otherwise worked on by aerospace personnel." .
+
+:AdaptabilityEvaluation a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000017 ;   # realizable entity
+    rdfs:label "Adaptability Evaluation" ;
+    skos:definition "A realizable entity borne by an aerospace engineer whose realization is the assessment of an aircraft design's fitness for a particular set of conditions." .
+
+########################################
+# TASK 4 classes
+########################################
+
+:ActOfMeasuring a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000015 ;   # process
+    rdfs:label "Act of Measuring" ;
+    skos:definition "A process in which the magnitude of some quality is determined and recorded." .
+
+:TotalEmployment a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000019 ;   # quality
+    rdfs:label "Total Employment" ;
+    skos:definition "A quality of a population that is the count of persons in that population who occupy some specified occupation." .
+
+:OCCEntry a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000031 ;   # generically dependent continuant
+    rdfs:label "OCC Entry" ;
+    skos:definition "An information content entity that is one row of the BLS Occupational Employment and Wage Statistics dataset, describing employment counts and wage statistics for one occupation in one area for one industry group." .
+
+:GeographicArea a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000040 ;   # material entity
+    rdfs:label "Geographic Area" ;
+    skos:definition "A geographic area referenced in occupational statistics, identified by an AREA code and AREA_TITLE." .
+
+:OwnershipCategory a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000031 ;   # generically dependent continuant
+    rdfs:label "Ownership Category" ;
+    skos:definition "An information content entity representing an OWN_CODE ownership classification used in BLS OEWS data." .
+
+:OccupationGroup a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000031 ;   # generically dependent continuant
+    rdfs:label "Occupation Group" ;
+    skos:definition "An information content entity representing an O_GROUP hierarchy tier (e.g. major, minor, broad, detailed)." .
+
+:Population a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000027 ;   # object aggregate
+    rdfs:label "Population" ;
+    skos:definition "An aggregate of persons in a defined area and occupation, which bears the Total Employment quality." .
+
+########################################
+# Object properties
+########################################
+
+:hasContinuantPart a owl:ObjectProperty ;
+    rdfs:subPropertyOf obo:BFO_0000178 ;
+    rdfs:label "has continuant part" ;
+    skos:definition "Mereological part relation among continuants: the subject has the object as a part at some time." .
+
+:isAbout a owl:ObjectProperty ;
+    rdfs:label "is about" ;
+    skos:definition "Relates an information content entity to the entity it describes or represents." .
+
+:hasManufacturer a owl:ObjectProperty ;
+    rdfs:label "has manufacturer" ;
+    skos:definition "Relates a design or artifact to the organization responsible for its manufacture." .
+
+:isTemporalPartOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf obo:BFO_0000139 ;
+    rdfs:label "is temporal part of" ;
+    skos:definition "Relates an occurrent to a larger occurrent of which it is a temporal segment." .
+
+:isMeasurementUnitOf a owl:ObjectProperty ;
+    rdfs:label "is measurement unit of" ;
+    skos:definition "Relates a measurement unit to a quantity or specification that is expressed in terms of it." .
+
+:prescribes a owl:ObjectProperty ;
+    rdfs:label "prescribes" ;
+    skos:definition "Relates a design or specification to a value or property it stipulates for its bearer." .
+
+:realizes a owl:ObjectProperty ;
+    rdfs:subPropertyOf obo:BFO_0000055 ;
+    rdfs:label "realizes" ;
+    skos:definition "Relates a process to a realizable entity whose realization the process is." .
+
+:isOutputOf a owl:ObjectProperty ;
+    rdfs:label "is output of" ;
+    skos:definition "Relates an entity produced by a process to that process." .
+
+:inheresIn a owl:ObjectProperty ;
+    rdfs:subPropertyOf obo:BFO_0000197 ;
+    rdfs:label "inheres in" ;
+    skos:definition "Relates a specifically dependent continuant to the independent continuant that bears it." .
+
+:hasArea a owl:ObjectProperty ;
+    rdfs:label "has area" ;
+    skos:definition "Relates an occupational entry to the geographic area to which its statistics pertain." .
+
+:oGroup a owl:ObjectProperty ;
+    rdfs:label "o group" ;
+    skos:definition "Relates an occupational entry to its Occupation (O_GROUP) classification tier." .
+
+:ownCode a owl:ObjectProperty ;
+    rdfs:label "own code" ;
+    skos:definition "Relates an occupational entry to its OCC_CODE identifier." .
+
+########################################
+# Task 1 datatype properties (required-vocab items first)
+########################################
+
+:hasModelBADA a owl:DatatypeProperty ;
+    rdfs:label "has Model BADA" ;
+    skos:definition "Eurocontrol Base of Aircraft Data (BADA) model designation for an aircraft design." .
+
+:hasModelFAA a owl:DatatypeProperty ;
+    rdfs:label "has Model FAA" ;
+    skos:definition "Federal Aviation Administration model name for an aircraft design." .
+
+:hasLengthFt a owl:DatatypeProperty ;
+    rdfs:label "has Length Ft" ;
+    skos:definition "Overall length of the aircraft measured in feet." .
+
+:hasTailHeightFt a owl:DatatypeProperty ;
+    rdfs:label "has Tail HeightFt" ;
+    skos:definition "Height of the aircraft tail at operating empty weight, measured in feet." .
+
+########################################
+# Task 1 datatype properties (other columns from aircraft_data.xlsx)
+########################################
+
+:hasICAOCode a owl:DatatypeProperty ;
+    rdfs:label "has ICAO code" ;
+    skos:definition "ICAO aircraft type designator." .
+
+:hasFAADesignator a owl:DatatypeProperty ;
+    rdfs:label "has FAA designator" ;
+    skos:definition "FAA aircraft type designator." .
+
+:hasPhysicalClassEngine a owl:DatatypeProperty ;
+    rdfs:label "has physical class engine" ;
+    skos:definition "Class of engine used (e.g. Jet, Turboprop, Piston)." .
+
+:hasNumEngines a owl:DatatypeProperty ;
+    rdfs:label "has number of engines" ;
+    skos:definition "Count of engines specified by the aircraft design." .
+
+:hasAAC a owl:DatatypeProperty ;
+    rdfs:label "has AAC" ;
+    skos:definition "FAA Aircraft Approach Category." .
+
+:hasADG a owl:DatatypeProperty ;
+    rdfs:label "has ADG" ;
+    skos:definition "FAA Aircraft Design Group." .
+
+:hasTDG a owl:DatatypeProperty ;
+    rdfs:label "has TDG" ;
+    skos:definition "FAA Taxiway Design Group." .
+
+:hasApproachSpeedKnot a owl:DatatypeProperty ;
+    rdfs:label "has approach speed knot" ;
+    skos:definition "Approach speed for the aircraft design, in knots." .
+
+:hasWingspanFtWithWingletsSharklets a owl:DatatypeProperty ;
+    rdfs:label "has wingspan ft with winglets sharklets" ;
+    skos:definition "Wingspan of the aircraft including winglets or sharklets, in feet." .
+
+:hasWheelbaseFt a owl:DatatypeProperty ;
+    rdfs:label "has wheelbase ft" ;
+    skos:definition "Distance from the nose gear to the main gear, in feet." .
+
+:hasCockpitToMainGearFt a owl:DatatypeProperty ;
+    rdfs:label "has cockpit to main gear ft" ;
+    skos:definition "Distance from the cockpit reference point to the main landing gear, in feet." .
+
+:hasMainGearWidthFt a owl:DatatypeProperty ;
+    rdfs:label "has main gear width ft" ;
+    skos:definition "Track width of the main landing gear, in feet." .
+
+:hasMTOWLb a owl:DatatypeProperty ;
+    rdfs:label "has MTOW lb" ;
+    skos:definition "Maximum takeoff weight, in pounds." .
+
+:hasMALWLb a owl:DatatypeProperty ;
+    rdfs:label "has MALW lb" ;
+    skos:definition "Maximum allowable landing weight, in pounds." .
+
+:hasMainGearConfig a owl:DatatypeProperty ;
+    rdfs:label "has main gear config" ;
+    skos:definition "Configuration classification of the main landing gear." .
+
+:hasICAOWTC a owl:DatatypeProperty ;
+    rdfs:label "has ICAO WTC" ;
+    skos:definition "ICAO Wake Turbulence Category." .
+
+:hasParkingAreaFt2 a owl:DatatypeProperty ;
+    rdfs:label "has parking area ft2" ;
+    skos:definition "Parking area required by the aircraft, in square feet." .
+
+:hasAircraftClass a owl:DatatypeProperty ;
+    rdfs:label "has aircraft class" ;
+    skos:definition "Structural aircraft class (e.g. Fixed-wing, Rotorcraft)." .
+
+:hasFAAWeight a owl:DatatypeProperty ;
+    rdfs:label "has FAA weight" ;
+    skos:definition "FAA weight classification (e.g. Small, Large, Heavy)." .
+
+:hasCWT a owl:DatatypeProperty ;
+    rdfs:label "has CWT" ;
+    skos:definition "Consolidated Wake Turbulence category." .
+
+:hasOneHalfWakeCategory a owl:DatatypeProperty ;
+    rdfs:label "has one and a half wake category" ;
+    skos:definition "One-and-a-half wake turbulence category." .
+
+:hasTwoWakeCategoryAppxA a owl:DatatypeProperty ;
+    rdfs:label "has two wake category appendix A" ;
+    skos:definition "Two-category wake classification per Appendix A." .
+
+:hasTwoWakeCategoryAppxB a owl:DatatypeProperty ;
+    rdfs:label "has two wake category appendix B" ;
+    skos:definition "Two-category wake classification per Appendix B." .
+
+:hasSRS a owl:DatatypeProperty ;
+    rdfs:label "has SRS" ;
+    skos:definition "Same Runway Separation category." .
+
+:hasLAHSO a owl:DatatypeProperty ;
+    rdfs:label "has LAHSO" ;
+    skos:definition "Land and Hold Short Operations grouping value." .
+
+:hasFAARegistry a owl:DatatypeProperty ;
+    rdfs:label "has FAA registry" ;
+    skos:definition "Whether the type appears in the FAA registry." .
+
+:hasRegistrationCount a owl:DatatypeProperty ;
+    rdfs:label "has registration count" ;
+    skos:definition "Count of registered aircraft of this type in the FAA registry." .
+
+:hasTMFSOperationsFY24 a owl:DatatypeProperty ;
+    rdfs:label "has TMFS operations FY24" ;
+    skos:definition "FAA TMFS operations count for fiscal year 2024." .
+
+:hasRemarks a owl:DatatypeProperty ;
+    rdfs:label "has remarks" ;
+    skos:definition "Free-text remarks associated with the design record." .
+
+:hasOrganizationName a owl:DatatypeProperty ;
+    rdfs:label "has organization name" ;
+    skos:definition "Name of an organization." .
+
+########################################
+# Task 2 datatype properties
+########################################
+
+:hasSpeedValue a owl:DatatypeProperty ;
+    rdfs:label "has speed value" ;
+    skos:definition "The numeric magnitude of a speed specification or measurement." .
+
+:hasMeasuredMaxApproachSpeedKnot a owl:DatatypeProperty ;
+    rdfs:label "has measured max approach speed knot" ;
+    skos:definition "The measured maximum approach speed observed during an approach process, in knots." .
+
+########################################
+# Task 3 datatype properties
+########################################
+
+:hasSOCCode a owl:DatatypeProperty ;
+    rdfs:label "has SOC code" ;
+    skos:definition "The Standard Occupational Classification code identifier for a SOC entry." .
+
+:hasSOCGroup a owl:DatatypeProperty ;
+    rdfs:label "has SOC group" ;
+    skos:definition "The SOC hierarchy level of an entry (Major, Minor, Broad, or Detailed)." .
+
+:hasSOCTitle a owl:DatatypeProperty ;
+    rdfs:label "has SOC title" ;
+    skos:definition "The human-readable title of a SOC entry." .
+
+########################################
+# Task 4 datatype properties (OCC columns)
+########################################
+
+:hasAreaCode a owl:DatatypeProperty ;
+    rdfs:label "has area code" ;
+    skos:definition "The AREA code of a geographic area referenced by an OCC entry." .
+
+:hasAreaTitle a owl:DatatypeProperty ;
+    rdfs:label "has area title" ;
+    skos:definition "The AREA_TITLE of a geographic area referenced by an OCC entry." .
+
+:hasAreaType a owl:DatatypeProperty ;
+    rdfs:label "has area type" ;
+    skos:definition "The AREA_TYPE code describing the granularity of the geographic area." .
+
+:hasPrimState a owl:DatatypeProperty ;
+    rdfs:label "has prim state" ;
+    skos:definition "The PRIM_STATE (primary state) code for a geographic area." .
+
+:hasNAICS a owl:DatatypeProperty ;
+    rdfs:label "has NAICS" ;
+    skos:definition "The North American Industry Classification System code for an OCC entry." .
+
+:hasNAICSTitle a owl:DatatypeProperty ;
+    rdfs:label "has NAICS title" ;
+    skos:definition "The NAICS_TITLE (industry title) for an OCC entry." .
+
+:hasIGroup a owl:DatatypeProperty ;
+    rdfs:label "has i group" ;
+    skos:definition "The I_GROUP (industry group level) for an OCC entry." .
+
+:hasOwnCode a owl:DatatypeProperty ;
+    rdfs:label "has own code value" ;
+    skos:definition "The OWN_CODE numeric identifier value of an ownership category." .
+
+:hasOGroupValue a owl:DatatypeProperty ;
+    rdfs:label "has o group value" ;
+    skos:definition "The O_GROUP tier identifier value of an occupation group." .
+
+:hasOCCCode a owl:DatatypeProperty ;
+    rdfs:label "has OCC code" ;
+    skos:definition "The OCC_CODE identifier for an OCC entry." .
+
+:hasOCCTitle a owl:DatatypeProperty ;
+    rdfs:label "has OCC title" ;
+    skos:definition "The OCC_TITLE (occupation title) for an OCC entry." .
+
+:hasTotEmp a owl:DatatypeProperty ;
+    rdfs:label "has TOT EMP" ;
+    skos:definition "The TOT_EMP total employment count for an OCC entry." .
+
+:hasEmpPrse a owl:DatatypeProperty ;
+    rdfs:label "has EMP PRSE" ;
+    skos:definition "The EMP_PRSE (percent relative standard error of the employment estimate) for an OCC entry." .
+
+:hasHMean a owl:DatatypeProperty ;
+    rdfs:label "has H MEAN" ;
+    skos:definition "The H_MEAN (mean hourly wage) for an OCC entry, in USD per hour." .
+
+:hasAMean a owl:DatatypeProperty ;
+    rdfs:label "has A MEAN" ;
+    skos:definition "The A_MEAN (mean annual wage) for an OCC entry, in USD per year." .
+
+:hasMeanPrse a owl:DatatypeProperty ;
+    rdfs:label "has MEAN PRSE" ;
+    skos:definition "The MEAN_PRSE (percent relative standard error of the mean-wage estimate) for an OCC entry." .
+
+:hasHPct10 a owl:DatatypeProperty ;
+    rdfs:label "has H PCT10" ;
+    skos:definition "The 10th-percentile hourly wage for an OCC entry, in USD per hour." .
+
+:hasHPct25 a owl:DatatypeProperty ;
+    rdfs:label "has H PCT25" ;
+    skos:definition "The 25th-percentile hourly wage for an OCC entry, in USD per hour." .
+
+:hasHMedian a owl:DatatypeProperty ;
+    rdfs:label "has H MEDIAN" ;
+    skos:definition "The median hourly wage for an OCC entry, in USD per hour." .
+
+:hasHPct75 a owl:DatatypeProperty ;
+    rdfs:label "has H PCT75" ;
+    skos:definition "The 75th-percentile hourly wage for an OCC entry, in USD per hour." .
+
+:hasHPct90 a owl:DatatypeProperty ;
+    rdfs:label "has H PCT90" ;
+    skos:definition "The 90th-percentile hourly wage for an OCC entry, in USD per hour." .
+
+:hasAPct10 a owl:DatatypeProperty ;
+    rdfs:label "has A PCT10" ;
+    skos:definition "The 10th-percentile annual wage for an OCC entry, in USD per year." .
+
+:hasAPct25 a owl:DatatypeProperty ;
+    rdfs:label "has A PCT25" ;
+    skos:definition "The 25th-percentile annual wage for an OCC entry, in USD per year." .
+
+:hasAMedian a owl:DatatypeProperty ;
+    rdfs:label "has A MEDIAN" ;
+    skos:definition "The median annual wage for an OCC entry, in USD per year." .
+
+:hasAPct75 a owl:DatatypeProperty ;
+    rdfs:label "has A PCT75" ;
+    skos:definition "The 75th-percentile annual wage for an OCC entry, in USD per year." .
+
+:hasAPct90 a owl:DatatypeProperty ;
+    rdfs:label "has A PCT90" ;
+    skos:definition "The 90th-percentile annual wage for an OCC entry, in USD per year." .
+
+:hasTotalEmploymentValue a owl:DatatypeProperty ;
+    rdfs:label "has total employment value" ;
+    skos:definition "The numeric magnitude of a Total Employment quality." .
