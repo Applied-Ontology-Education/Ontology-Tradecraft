@@ -1,0 +1,379 @@
+@prefix : <http://example.org/aircraft-soc-bfo/instances#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/aircraft-soc-bfo/instances#> .
+
+<http://example.org/aircraft-soc-bfo/instances> rdf:type owl:Ontology ;
+                                                 owl:imports <core.ttl> .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001760
+<https://www.commoncoreontologies.org/ont00001760> rdf:type owl:AnnotationProperty ;
+                                                   rdfs:label "is curated in ontology"@en .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000139
+<http://purl.obolibrary.org/obo/BFO_0000139> rdfs:label "is temporal part of" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/aircraft-soc-bfo/instances#A321111_Approach1
+:A321111_Approach1 rdf:type owl:NamedIndividual ;
+                   <http://purl.obolibrary.org/obo/BFO_0000139> :A321111_ApproachTestProcess ;
+                   <http://example.org/aircraft-soc-bfo/core#hasNumericValue> 137.0 ;
+                   rdfs:label "Airbus A321-111 Approach 1" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "The first of five approach measurements, recording a speed of 137 knots." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#A321111_Approach2
+:A321111_Approach2 rdf:type owl:NamedIndividual ;
+                   <http://purl.obolibrary.org/obo/BFO_0000139> :A321111_ApproachTestProcess ;
+                   <http://example.org/aircraft-soc-bfo/core#hasNumericValue> 138.0 ;
+                   rdfs:label "Airbus A321-111 Approach 2" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "The second of five approach measurements, recording a speed of 138 knots." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#A321111_Approach3
+:A321111_Approach3 rdf:type owl:NamedIndividual ;
+                   <http://purl.obolibrary.org/obo/BFO_0000139> :A321111_ApproachTestProcess ;
+                   <http://example.org/aircraft-soc-bfo/core#hasNumericValue> 139.0 ;
+                   rdfs:label "Airbus A321-111 Approach 3" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "The third of five approach measurements, recording a speed of 139 knots." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#A321111_Approach4
+:A321111_Approach4 rdf:type owl:NamedIndividual ;
+                   <http://purl.obolibrary.org/obo/BFO_0000139> :A321111_ApproachTestProcess ;
+                   <http://example.org/aircraft-soc-bfo/core#hasNumericValue> 140.0 ;
+                   rdfs:label "Airbus A321-111 Approach 4" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "The fourth of five approach measurements, recording a speed of 140 knots." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#A321111_Approach5
+:A321111_Approach5 rdf:type owl:NamedIndividual ;
+                   <http://purl.obolibrary.org/obo/BFO_0000139> :A321111_ApproachTestProcess ;
+                   <http://example.org/aircraft-soc-bfo/core#hasNumericValue> 141.0 ;
+                   rdfs:label "Airbus A321-111 Approach 5" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "The fifth of five approach measurements, recording a speed of 141 knots." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#A321111_ApproachTestProcess
+:A321111_ApproachTestProcess rdf:type owl:NamedIndividual ,
+                                      <http://example.org/aircraft-soc-bfo/core#TestProcess> ;
+                             rdfs:label "Airbus A321-111 Approach Test Process" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "The process of testing the Airbus A321-111's actual approach speed across five approaches." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#AerospaceProfessional
+:AerospaceProfessional rdf:type owl:NamedIndividual ,
+                                <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                       rdfs:label "Aerospace Professional" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "A person who holds an aerospace engineering occupational role, as described by the SOC classification system." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#AirbusA320NEO_Aircraft
+:AirbusA320NEO_Aircraft rdf:type owl:NamedIndividual ,
+                                 <http://example.org/aircraft-soc-bfo/core#FixedWing> ;
+                        <http://example.org/aircraft-soc-bfo/core#hasManufacturerOrganization> :Airbus_Company ;
+                        <http://purl.obolibrary.org/obo/BFO_0000178> :AirbusA320NEO_Engine1 ,
+                                                                     :AirbusA320NEO_Engine2 ;
+                        <http://example.org/aircraft-soc-bfo/core#hasLengthFt> 123.3 ;
+                        <http://example.org/aircraft-soc-bfo/core#hasModelBADA> "Airbus A320-271N" ;
+                        <http://example.org/aircraft-soc-bfo/core#hasModelFAA> "Airbus A320 Neo" ;
+                        <http://example.org/aircraft-soc-bfo/core#hasTailHeightFt> 39.6 ;
+                        rdfs:label "Airbus A320 NEO" ,
+                                   "Airbus A320 NEO Aircraft" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "The physical aircraft instance corresponding to the Airbus A320 NEO row in the aircraft dataset." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#AirbusA320NEO_Design
+:AirbusA320NEO_Design rdf:type owl:NamedIndividual ,
+                               <http://example.org/aircraft-soc-bfo/core#ArtifactDesign> ;
+                      <http://purl.obolibrary.org/obo/IAO_0000136> :AirbusA320NEO_Aircraft ;
+                      <http://example.org/aircraft-soc-bfo/core#hasLengthFt> 123.3 ;
+                      <http://example.org/aircraft-soc-bfo/core#hasManufacturer> "AIRBUS" ;
+                      <http://example.org/aircraft-soc-bfo/core#hasModelBADA> "Airbus A320-271N" ;
+                      <http://example.org/aircraft-soc-bfo/core#hasModelFAA> "Airbus A320 Neo" ;
+                      <http://example.org/aircraft-soc-bfo/core#hasTailHeightFt> 39.6 ;
+                      rdfs:label "Airbus A320 NEO Design" ,
+                                 "Artifact Design" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "The design specification for the Airbus A320 NEO, carrying its manufacturer, model codes, length, and tail height." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#AirbusA320NEO_Engine1
+:AirbusA320NEO_Engine1 rdf:type owl:NamedIndividual ,
+                                <http://example.org/aircraft-soc-bfo/core#JetEngine> ;
+                       rdfs:label "Airbus A320 NEO Engine 1" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "One of the two jet engines that are part of the Airbus A320 NEO aircraft." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#AirbusA320NEO_Engine2
+:AirbusA320NEO_Engine2 rdf:type owl:NamedIndividual ,
+                                <http://example.org/aircraft-soc-bfo/core#JetEngine> ;
+                       rdfs:label "Airbus A320 NEO Engine 2" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "The second of the two jet engines that are part of the Airbus A320 NEO aircraft." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#AirbusA321111_Design
+:AirbusA321111_Design rdf:type owl:NamedIndividual ,
+                               <http://example.org/aircraft-soc-bfo/core#ArtifactDesign> ;
+                      <https://www.commoncoreontologies.org/ont00001942> :AirbusA321111_MaxApproachSpeedSpec ;
+                      rdfs:label "Airbus A321-111" ,
+                                 "Airbus A321-111 Design" ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "The design specification for the Airbus A321-111 that prescribes its maximum approach speed." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#AirbusA321111_MaxApproachSpeedSpec
+:AirbusA321111_MaxApproachSpeedSpec rdf:type owl:NamedIndividual ;
+                                    <http://example.org/aircraft-soc-bfo/core#hasNumericValue> 142 ;
+                                    rdfs:label "Airbus A321-111 Maximum Approach Speed Specification" ;
+                                    <http://www.w3.org/2004/02/skos/core#definition> "The prescribed value of 142 knots for the Airbus A321-111's maximum approach speed." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#Airbus_Company
+:Airbus_Company rdf:type owl:NamedIndividual ,
+                         <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                rdfs:label "Airbus" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The multinational aerospace corporation that manufactures the Airbus A320 NEO and A321-111 aircraft." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#Knots
+:Knots rdf:type owl:NamedIndividual ,
+                <http://example.org/aircraft-soc-bfo/core#MeasurementUnit> ;
+       <http://example.org/aircraft-soc-bfo/core#isMeasurementUnitOf> :A321111_Approach1 ,
+                                                                      :A321111_Approach2 ,
+                                                                      :A321111_Approach3 ,
+                                                                      :A321111_Approach4 ,
+                                                                      :A321111_Approach5 ,
+                                                                      :AirbusA321111_MaxApproachSpeedSpec ;
+       rdfs:label "Knots" ;
+       <http://www.w3.org/2004/02/skos/core#definition> "The unit of speed used to express approach speed measurements in this dataset." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_2010
+:SOC_17_2010 rdf:type owl:NamedIndividual ,
+                      <http://purl.obolibrary.org/obo/BFO_0000023> ;
+             <http://purl.obolibrary.org/obo/BFO_0000197> :AerospaceProfessional ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage10thPercentile> 85350.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage25thPercentile> 104740.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage75thPercentile> 174480.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage90thPercentile> 205850.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasArea> "U.S." ;
+             <http://example.org/aircraft-soc-bfo/core#hasAreaType> 1.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasEmploymentPercentRSE> 2.3 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage10thPercentile> 41.04 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage25thPercentile> 50.36 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage75thPercentile> 83.88 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage90thPercentile> 98.97 ;
+             <http://example.org/aircraft-soc-bfo/core#hasIGroup> "cross-industry" ;
+             <http://example.org/aircraft-soc-bfo/core#hasMeanAnnualWage> 134830.0 ,
+                                                                          141180.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMeanHourlyWage> 67.88 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMeanWagePercentRSE> 0.8 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMedianHourlyWage> 64.82 ;
+             <http://example.org/aircraft-soc-bfo/core#hasNAICSCode> 000000 ;
+             <http://example.org/aircraft-soc-bfo/core#hasNAICSTitle> "Cross-industry" ;
+             <http://example.org/aircraft-soc-bfo/core#hasOGroup> "broad" ;
+             <http://example.org/aircraft-soc-bfo/core#hasOwnCode> 1235 ;
+             <http://example.org/aircraft-soc-bfo/core#hasPrimState> "US" ;
+             rdfs:label "Aerospace Engineers (SOC 17-2010)" ,
+                        "OCC: Aerospace Engineers" ,
+                        "SOC: Aerospace Engineers" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The broad occupational category grouping detailed aerospace engineering roles involved in designing, constructing, and testing aircraft, missiles, and spacecraft." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_2010_Act
+:SOC_17_2010_Act rdf:type owl:NamedIndividual ,
+                          <http://example.org/aircraft-soc-bfo/core#ActOfAircraftProcessing> ;
+                 <http://purl.obolibrary.org/obo/BFO_0000055> :SOC_17_2010 ,
+                                                              :SOC_17_2010_Evaluation ;
+                 rdfs:label "Act of Aircraft Processing (SOC 17-2010)" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The performance of engineering duties broadly grouped under the Aerospace Engineers occupational category." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_2010_Evaluation
+:SOC_17_2010_Evaluation rdf:type owl:NamedIndividual ,
+                                 <http://example.org/aircraft-soc-bfo/core#AdaptabilityEvaluation> ;
+                        <http://purl.obolibrary.org/obo/IAO_0000136> :AirbusA320NEO_Design ;
+                        <https://www.commoncoreontologies.org/ont00001816> :SOC_17_2010_Act ;
+                        rdfs:label "Adaptability Evaluation (SOC 17-2010)" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "A finding produced under the broad Aerospace Engineers category, evaluating the adaptability of materials and equipment to the Airbus A320 NEO's design." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_2010_MeasuringAct
+:SOC_17_2010_MeasuringAct rdf:type owl:NamedIndividual ,
+                                   <http://example.org/aircraft-soc-bfo/core#ActOfMeasuring> ;
+                          <http://purl.obolibrary.org/obo/IAO_0000136> :SOC_17_2010_TotalEmployment ;
+                          rdfs:label "Act of Measuring (SOC 17-2010)" ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "The act of collecting and recording the total employment statistic for the Aerospace Engineers (SOC 17-2010) occupation." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_2010_TotalEmployment
+:SOC_17_2010_TotalEmployment rdf:type owl:NamedIndividual ,
+                                      <http://example.org/aircraft-soc-bfo/core#TotalEmployment> ;
+                             <http://purl.obolibrary.org/obo/BFO_0000197> :SOC_17_2010 ;
+                             <http://example.org/aircraft-soc-bfo/core#hasNumericValue> 68440.0 ;
+                             rdfs:label "Total Employment" ,
+                                        "Total Employment (SOC 17-2010)" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "The total number of people employed in the Aerospace Engineers (SOC 17-2010) occupation, as measured in May 2024." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_2011
+:SOC_17_2011 rdf:type owl:NamedIndividual ,
+                      <http://purl.obolibrary.org/obo/BFO_0000023> ;
+             <http://purl.obolibrary.org/obo/BFO_0000197> :AerospaceProfessional ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage10thPercentile> 85350.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage25thPercentile> 104740.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage75thPercentile> 174480.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage90thPercentile> 205850.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasArea> "U.S." ;
+             <http://example.org/aircraft-soc-bfo/core#hasAreaType> 1 ;
+             <http://example.org/aircraft-soc-bfo/core#hasEmploymentPercentRSE> 2.3 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage10thPercentile> 41.04 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage25thPercentile> 50.36 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage75thPercentile> 83.88 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage90thPercentile> 98.97 ;
+             <http://example.org/aircraft-soc-bfo/core#hasIGroup> "cross-industry" ;
+             <http://example.org/aircraft-soc-bfo/core#hasMeanAnnualWage> 141180.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMeanHourlyWage> 67.88 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMeanWagePercentRSE> 0.8 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMedianAnnualWage> 134830.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMedianHourlyWage> 64.82 ;
+             <http://example.org/aircraft-soc-bfo/core#hasNAICSCode> 000000 ;
+             <http://example.org/aircraft-soc-bfo/core#hasNAICSTitle> "Cross-industry" ;
+             <http://example.org/aircraft-soc-bfo/core#hasOGroup> "detailed" ;
+             <http://example.org/aircraft-soc-bfo/core#hasOwnCode> 1235 ;
+             <http://example.org/aircraft-soc-bfo/core#hasPrimState> "US" ;
+             rdfs:label "Aerospace Engineers (SOC 17-2011)" ,
+                        "OCC: Aerospace Engineers" ,
+                        "SOC: Aerospace Engineers" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_2011_Act
+:SOC_17_2011_Act rdf:type owl:NamedIndividual ,
+                          <http://example.org/aircraft-soc-bfo/core#ActOfAircraftProcessing> ;
+                 <http://purl.obolibrary.org/obo/BFO_0000055> :SOC_17_2011 ,
+                                                              :SOC_17_2011_Evaluation ;
+                 rdfs:label "Act of Aircraft Processing (SOC 17-2011)" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The performance of engineering duties in designing, constructing, and testing aircraft, as carried out under the Aerospace Engineer role." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_2011_Evaluation
+:SOC_17_2011_Evaluation rdf:type owl:NamedIndividual ,
+                                 <http://example.org/aircraft-soc-bfo/core#AdaptabilityEvaluation> ;
+                        <http://purl.obolibrary.org/obo/IAO_0000136> :AirbusA320NEO_Design ;
+                        <https://www.commoncoreontologies.org/ont00001816> :SOC_17_2011_Act ;
+                        rdfs:label "Adaptability Evaluation (SOC 17-2011)" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "The finding produced by research conducted under the Aerospace Engineer role, evaluating the adaptability of materials and equipment to the Airbus A320 NEO's design." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_2011_MeasuringAct
+:SOC_17_2011_MeasuringAct rdf:type owl:NamedIndividual ,
+                                   <http://example.org/aircraft-soc-bfo/core#ActOfMeasuring> ;
+                          <http://purl.obolibrary.org/obo/IAO_0000136> :SOC_17_2011_TotalEmployment ;
+                          rdfs:label "Act of Measuring (SOC 17-2011)" ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "The act of collecting and recording the total employment statistic for the Aerospace Engineers (SOC 17-2011) occupation." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_2011_TotalEmployment
+:SOC_17_2011_TotalEmployment rdf:type owl:NamedIndividual ,
+                                      <http://example.org/aircraft-soc-bfo/core#TotalEmployment> ;
+                             <http://purl.obolibrary.org/obo/BFO_0000197> :SOC_17_2011 ;
+                             <http://example.org/aircraft-soc-bfo/core#hasNumericValue> 68440.0 ;
+                             rdfs:label "Total Employment (SOC 17-2011)" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "The total number of people employed in the Aerospace Engineers (SOC 17-2011) occupation, as measured in May 2024." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_3021
+:SOC_17_3021 rdf:type owl:NamedIndividual ,
+                      <http://purl.obolibrary.org/obo/BFO_0000023> ;
+             <http://purl.obolibrary.org/obo/BFO_0000197> :AerospaceProfessional ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage10thPercentile> 53730.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage25thPercentile> 64570.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage75thPercentile> 102220.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasAnnualWage90thPercentile> 120440.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasArea> "U.S." ;
+             <http://example.org/aircraft-soc-bfo/core#hasAreaType> 1 ;
+             <http://example.org/aircraft-soc-bfo/core#hasEmploymentPercentRSE> 4.3 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage10thPercentile> 25.83 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage25thPercentile> 31.04 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage75thPercentile> 49.14 ;
+             <http://example.org/aircraft-soc-bfo/core#hasHourlyWage90thPercentile> 57.91 ;
+             <http://example.org/aircraft-soc-bfo/core#hasIGroup> "cross-industry" ;
+             <http://example.org/aircraft-soc-bfo/core#hasMeanAnnualWage> 86330.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMeanHourlyWage> 41.50 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMeanWagePercentRSE> 1.4 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMedianAnnualWage> 79830.0 ;
+             <http://example.org/aircraft-soc-bfo/core#hasMedianHourlyWage> 38.38 ;
+             <http://example.org/aircraft-soc-bfo/core#hasNAICSCode> 000000 ;
+             <http://example.org/aircraft-soc-bfo/core#hasNAICSTitle> "Cross-industry" ;
+             <http://example.org/aircraft-soc-bfo/core#hasOGroup> "detailed" ;
+             <http://example.org/aircraft-soc-bfo/core#hasOwnCode> 1235 ;
+             <http://example.org/aircraft-soc-bfo/core#hasPrimState> "US" ;
+             rdfs:label "Aerospace Engineering and Operations Technologists and Technicians (SOC 17-3021)" ,
+                        "OCC: Aerospace Engineering and Operations Technologists and Technicians" ,
+                        "SOC: Aerospace Engineering and Operations Technologists and Technicians" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_3021_Act
+:SOC_17_3021_Act rdf:type owl:NamedIndividual ,
+                          <http://example.org/aircraft-soc-bfo/core#ActOfAircraftProcessing> ;
+                 <http://purl.obolibrary.org/obo/BFO_0000055> :SOC_17_3021 ,
+                                                              :SOC_17_3021_Evaluation ;
+                 rdfs:label "Act of Aircraft Processing (SOC 17-3021)" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The operation, installation, adjustment, and maintenance of test and measurement equipment used to evaluate aerospace vehicles." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_3021_Evaluation
+:SOC_17_3021_Evaluation rdf:type owl:NamedIndividual ,
+                                 <http://example.org/aircraft-soc-bfo/core#AdaptabilityEvaluation> ;
+                        <http://purl.obolibrary.org/obo/IAO_0000136> :AirbusA320NEO_Design ;
+                        <https://www.commoncoreontologies.org/ont00001816> :SOC_17_3021_Act ;
+                        rdfs:label "Adaptability Evaluation (SOC 17-3021)" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "A recorded and interpreted test finding produced while evaluating the Airbus A320 NEO using aerospace test and measurement equipment." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_3021_MeasuringAct
+:SOC_17_3021_MeasuringAct rdf:type owl:NamedIndividual ,
+                                   <http://example.org/aircraft-soc-bfo/core#ActOfMeasuring> ;
+                          <http://purl.obolibrary.org/obo/IAO_0000136> :SOC_17_3021_TotalEmployment ;
+                          rdfs:label "Act of Measuring (SOC 17-3021)" ;
+                          <http://www.w3.org/2004/02/skos/core#definition> "The act of collecting and recording the total employment statistic for the Aerospace Engineering and Operations Technologists and Technicians (SOC 17-3021) occupation." .
+
+
+###  http://example.org/aircraft-soc-bfo/instances#SOC_17_3021_TotalEmployment
+:SOC_17_3021_TotalEmployment rdf:type owl:NamedIndividual ,
+                                      <http://example.org/aircraft-soc-bfo/core#TotalEmployment> ;
+                             <http://purl.obolibrary.org/obo/BFO_0000197> :SOC_17_3021 ;
+                             <http://example.org/aircraft-soc-bfo/core#hasNumericValue> 9060.0 ;
+                             rdfs:label "Total Employment (SOC 17-3021)" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "The total number of people employed in the Aerospace Engineering and Operations Technologists and Technicians (SOC 17-3021) occupation, as measured in May 2024." .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.obolibrary.org/obo/IAO_0000412> rdfs:label "imported from"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi

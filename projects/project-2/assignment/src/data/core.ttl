@@ -1,0 +1,291 @@
+@prefix : <http://example.org/aircraft-soc-bfo/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/aircraft-soc-bfo/core#> .
+
+<http://example.org/aircraft-soc-bfo/core> rdf:type owl:Ontology ;
+                                            owl:imports <modules/reused-terms.ttl> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/aircraft-soc-bfo/core#hasManufacturerOrganization
+:hasManufacturerOrganization rdf:type owl:ObjectProperty ;
+                             rdfs:label "has manufacturer" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Relates an artifact to the organization that manufactures it." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#isMeasurementUnitOf
+:isMeasurementUnitOf rdf:type owl:ObjectProperty ;
+                     rdfs:label "is measurement unit of" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "an object property linking a unit standard to the specific quality, process, or entity it measures" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/aircraft-soc-bfo/core#hasAnnualWage10thPercentile
+:hasAnnualWage10thPercentile rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:decimal ;
+                             rdfs:label "has Annual Wage 10th Percentile" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the 10th percentile of its annual wage distribution." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasAnnualWage25thPercentile
+:hasAnnualWage25thPercentile rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:decimal ;
+                             rdfs:label "has Annual Wage 25th Percentile" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the 25th percentile of its annual wage distribution." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasAnnualWage75thPercentile
+:hasAnnualWage75thPercentile rdf:type owl:DatatypeProperty ;
+                             rdfs:label "has Annual Wage 75th Percentile" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the 75th percentile of its annual wage distribution." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasAnnualWage90thPercentile
+:hasAnnualWage90thPercentile rdf:type owl:DatatypeProperty ;
+                             rdfs:label "has Annual Wage 90th Percentile" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the 90th percentile of its annual wage distribution." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasArea
+:hasArea rdf:type owl:DatatypeProperty ;
+         rdfs:label "has area" ;
+         <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the geographic area for which its statistics are reported." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasAreaType
+:hasAreaType rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:integer ;
+             rdfs:label "has Area Type" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to its BLS area type code." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasEmploymentPercentRSE
+:hasEmploymentPercentRSE rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:decimal ;
+                         rdfs:label "has Employment Percent RSE" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the relative standard error of its employment estimate, as a percentage." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasHourlyWage10thPercentile
+:hasHourlyWage10thPercentile rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:decimal ;
+                             rdfs:label "has Hourly Wage 10th Percentile" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the 10th percentile of its hourly wage distribution." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasHourlyWage25thPercentile
+:hasHourlyWage25thPercentile rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:decimal ;
+                             rdfs:label "has Hourly Wage 25th Percentile" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the 25th percentile of its hourly wage distribution." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasHourlyWage75thPercentile
+:hasHourlyWage75thPercentile rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:decimal ;
+                             rdfs:label "has Hourly Wage 75th Percentile" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the 75th percentile of its hourly wage distribution." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasHourlyWage90thPercentile
+:hasHourlyWage90thPercentile rdf:type owl:DatatypeProperty ;
+                             rdfs:range xsd:decimal ;
+                             rdfs:label "has Hourly Wage 90th Percentile" ;
+                             <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the 90th percentile of its hourly wage distribution." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasIGroup
+:hasIGroup rdf:type owl:DatatypeProperty ;
+           rdfs:label "has I Group" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to its industry aggregation group level." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasLengthFt
+:hasLengthFt rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:decimal ;
+             rdfs:label "has Length Ft" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Relates an artifact design to its overall length, measured in feet" .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasManufacturer
+:hasManufacturer rdf:type owl:DatatypeProperty ;
+                 rdfs:label "has Manufacturer" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Relates an artifact design to the name of the organization that manufactures it" .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasMeanAnnualWage
+:hasMeanAnnualWage rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:label "has Mean Annual Wage" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to its mean annual wage in US dollars." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasMeanHourlyWage
+:hasMeanHourlyWage rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:label "has Mean Hourly Wage" ;
+                   <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to its mean hourly wage in US dollars." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasMeanWagePercentRSE
+:hasMeanWagePercentRSE rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:decimal ;
+                       rdfs:label "has Mean Wage Percent RSE" ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the relative standard error of its mean wage estimate, as a percentage." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasMedianAnnualWage
+:hasMedianAnnualWage rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:decimal ;
+                     rdfs:label "has Median Annual Wage" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the median of its annual wage distribution." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasMedianHourlyWage
+:hasMedianHourlyWage rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:decimal ;
+                     rdfs:label "has Median Hourly Wage" ;
+                     <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the median of its hourly wage distribution." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasModelBADA
+:hasModelBADA rdf:type owl:DatatypeProperty ;
+              rdfs:label "has Model BADA" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Relates an artifact design to its BADA (Base of Aircraft Data) model designation" .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasModelFAA
+:hasModelFAA rdf:type owl:DatatypeProperty ;
+             rdfs:label "has Model FAA" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Relates an artifact design to its FAA model designation" .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasNAICSCode
+:hasNAICSCode rdf:type owl:DatatypeProperty ;
+              rdfs:label "has NAICS Code" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to its North American Industry Classification System code." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasNAICSTitle
+:hasNAICSTitle rdf:type owl:DatatypeProperty ;
+               rdfs:label "has NAICS Title" ;
+               <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to the title of its North American Industry Classification System code." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasNumericValue
+:hasNumericValue rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:decimal ;
+                 rdfs:label "has Numeric Value" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Relates an entity to a decimal number that expresses its magnitude, where the unit of measure is specified separately." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasOGroup
+:hasOGroup rdf:type owl:DatatypeProperty ;
+           rdfs:label "o group" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to its classification group level (broad or detailed) within the occupational system." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasOwnCode
+:hasOwnCode rdf:type owl:DatatypeProperty ;
+            rdfs:range xsd:integer ;
+            rdfs:label "own code" ;
+            <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to its BLS ownership code, indicating the type of establishment ownership covered by the statistics." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasPrimState
+:hasPrimState rdf:type owl:DatatypeProperty ;
+              rdfs:label "has Prim State" ;
+              <http://www.w3.org/2004/02/skos/core#definition> "Relates an occupation entry to its primary state abbreviation." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#hasTailHeightFt
+:hasTailHeightFt rdf:type owl:DatatypeProperty ;
+                 rdfs:range xsd:decimal ;
+                 rdfs:label "has Tail HeightFt" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Relates an artifact design to its tail height, measured in feet" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/aircraft-soc-bfo/core#ActOfAircraftProcessing
+:ActOfAircraftProcessing rdf:type owl:Class ;
+                         rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                         rdfs:label "Act of Aircraft Processing" ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "A process in which engineering duties are performed on an aircraft, such as designing, constructing, or testing it." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#ActOfMeasuring
+:ActOfMeasuring rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                rdfs:label "Act of Measuring" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A process in which a statistic about an occupation, such as its employment count or wage distribution, is collected and recorded." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#AdaptabilityEvaluation
+:AdaptabilityEvaluation rdf:type owl:Class ;
+                        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                        rdfs:label "Adaptability Evaluation" ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that records a finding about how well materials or equipment adapt to an aircraft's design and manufacturing requirements." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#ArtifactDesign
+:ArtifactDesign rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                rdfs:label "Artifact Design" ;
+                <http://www.w3.org/2004/02/skos/core#definition> "A specification that documents the intended identifying designations and physical characteristics of an artifact type" .
+
+
+###  http://example.org/aircraft-soc-bfo/core#FixedWing
+:FixedWing rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+           rdfs:label "Fixed Wing" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "An aircraft with wings that stay in place and do not spin or flap to create lift." .
+
+
+###  http://example.org/aircraft-soc-bfo/core#JetEngine
+:JetEngine rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+           rdfs:label "Jet Engine" ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A gas turbine engine that produces thrust by expelling jet exhaust" .
+
+
+###  http://example.org/aircraft-soc-bfo/core#MeasurementUnit
+:MeasurementUnit rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                 rdfs:label "Measurement Unit" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A standard amount or quantity used to express a physical property, count, or value" .
+
+
+###  http://example.org/aircraft-soc-bfo/core#TestProcess
+:TestProcess rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+             rdfs:label "Test Process" ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A process in which measurements are taken of an aircraft's performance and compared against the values specified in its design, in order to evaluate conformance" .
+
+
+###  http://example.org/aircraft-soc-bfo/core#TotalEmployment
+:TotalEmployment rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> ;
+                 rdfs:label "Total Employment" ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "A quality of an occupation that indicates the total number of people employed in that occupation." .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.obolibrary.org/obo/IAO_0000412> rdfs:label "imported from"@en .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
