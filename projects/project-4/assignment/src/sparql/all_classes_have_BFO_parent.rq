@@ -1,6 +1,24 @@
-# Title: 
+# Title:
 #    No Class Should Be Outside the BFO Hierarchy
-# Constraint Description: 
+# Constraint Description:
 #     All classes must have a BFO superclass.
 # Severity:
 #     Error
+#
+# Every named class must reach a BFO class through rdfs:subClassOf+ (BFO classes themselves are the
+# hierarchy, so they are exempt). A valid ontology returns ZERO rows.
+
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?class ?error
+WHERE {
+  ?class a owl:Class .
+  FILTER (isIRI(?class))
+  FILTER (!STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/BFO_"))
+  FILTER NOT EXISTS {
+    ?class rdfs:subClassOf+ ?bfo .
+    FILTER (STRSTARTS(STR(?bfo), "http://purl.obolibrary.org/obo/BFO_"))
+  }
+  BIND (CONCAT("ERROR: class has no BFO superclass: ", STR(?class)) AS ?error)
+}

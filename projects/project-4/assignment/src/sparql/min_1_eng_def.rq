@@ -1,7 +1,23 @@
-# Title: 
+# Title:
 #    Definition Required
-# Constraint Description: 
-#    Any class or object property must have a non-empty definition with an English language tag.  
+# Constraint Description:
+#    Any class or object property must have a non-empty definition with an English language tag.
 # Severity:
 #     Warning
+#
+# A valid ontology returns ZERO rows.
 
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?element ?error
+WHERE {
+  VALUES ?type { owl:Class owl:ObjectProperty }
+  ?element a ?type .
+  FILTER (isIRI(?element))
+  FILTER NOT EXISTS {
+    ?element skos:definition ?def .
+    FILTER (LANGMATCHES(LANG(?def), "en") && STRLEN(STR(?def)) > 0)
+  }
+  BIND (CONCAT("WARNING: no non-empty English skos:definition for ", STR(?element)) AS ?error)
+}

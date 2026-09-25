@@ -1,6 +1,21 @@
-# Title: 
+# Title:
 #     Ontology Title Required
-# Constraint Description: 
+# Constraint Description:
 #     Any owl:Ontology must have an rdfs:label.
 # Severity:
 #     Warning
+#
+# A valid ontology returns ZERO rows.
+
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?ontology ?error
+WHERE {
+  ?ontology a owl:Ontology .
+  FILTER NOT EXISTS {
+    ?ontology rdfs:label ?title .
+    FILTER (STRLEN(STR(?title)) > 0)
+  }
+  BIND (CONCAT("WARNING: ontology has no rdfs:label: ", STR(?ontology)) AS ?error)
+}
