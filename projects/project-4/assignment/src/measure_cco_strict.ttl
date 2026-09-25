@@ -14,6 +14,10 @@
     obo:BFO_0000196 <http://example.org/tradecraft/p4/sdc/Boiler-07/pressure>,
         <http://example.org/tradecraft/p4/sdc/Boiler-07/temperature> .
 
+<http://example.org/tradecraft/p4/artifact/Boiler-09> a cco:ont00000995 ;
+    rdfs:label "Boiler-09"@en ;
+    obo:BFO_0000196 <http://example.org/tradecraft/p4/sdc/Boiler-09/pressure> .
+
 <http://example.org/tradecraft/p4/artifact/Chiller-3> a cco:ont00000995 ;
     rdfs:label "Chiller-3"@en ;
     obo:BFO_0000196 <http://example.org/tradecraft/p4/sdc/Chiller-3/temperature> .
@@ -21,6 +25,10 @@
 <http://example.org/tradecraft/p4/artifact/Chiller-4> a cco:ont00000995 ;
     rdfs:label "Chiller-4"@en ;
     obo:BFO_0000196 <http://example.org/tradecraft/p4/sdc/Chiller-4/temperature> .
+
+<http://example.org/tradecraft/p4/artifact/Circuit-07> a cco:ont00000995 ;
+    rdfs:label "Circuit-07"@en ;
+    obo:BFO_0000196 <http://example.org/tradecraft/p4/sdc/Circuit-07/voltage> .
 
 <http://example.org/tradecraft/p4/artifact/Circuit-12> a cco:ont00000995 ;
     rdfs:label "Circuit-12"@en ;
@@ -31,6 +39,11 @@
         cco:ont00000995 ;
     rdfs:label "Pump-A1"@en ;
     obo:BFO_0000196 <http://example.org/tradecraft/p4/sdc/Pump-A1/pressure> .
+
+<http://example.org/tradecraft/p4/artifact/Pump-A2> a cco:ont00000116,
+        cco:ont00000995 ;
+    rdfs:label "Pump-A2"@en ;
+    obo:BFO_0000196 <http://example.org/tradecraft/p4/sdc/Pump-A2/pressure> .
 
 <http://example.org/tradecraft/p4/mice/Boiler-07/pressure/2024-03-17T23-04-00Z/101325-0-Pa> a cco:ont00001163 ;
     rdfs:label "Boiler-07 pressure reading of 101325.0 Pa at 2024-03-17T23:04:00Z"@en ;
@@ -52,6 +65,11 @@
     obo:BFO_0000058 <http://example.org/tradecraft/p4/mice/Boiler-07/temperature/2024-03-17T23-03-00Z/212-0-F/iqe> ;
     cco:ont00001966 <http://example.org/tradecraft/p4/sdc/Boiler-07/temperature> .
 
+<http://example.org/tradecraft/p4/mice/Boiler-09/pressure/2024-03-18T23-06-00Z/94458-174916-Pa> a cco:ont00001163 ;
+    rdfs:label "Boiler-09 pressure reading of 94458.174916 Pa at 2024-03-18T23:06:00Z"@en ;
+    obo:BFO_0000058 <http://example.org/tradecraft/p4/mice/Boiler-09/pressure/2024-03-18T23-06-00Z/94458-174916-Pa/iqe> ;
+    cco:ont00001966 <http://example.org/tradecraft/p4/sdc/Boiler-09/pressure> .
+
 <http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-18T12-01-00Z/19-5-C> a cco:ont00001163 ;
     rdfs:label "Chiller-3 temperature reading of 19.5 C at 2024-03-18T12:01:00Z"@en ;
     obo:BFO_0000058 <http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-18T12-01-00Z/19-5-C/iqe> ;
@@ -60,6 +78,11 @@
 <http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-18T12-01-00Z/68-0-F> a cco:ont00001163 ;
     rdfs:label "Chiller-3 temperature reading of 68.0 F at 2024-03-18T12:01:00Z"@en ;
     obo:BFO_0000058 <http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-18T12-01-00Z/68-0-F/iqe> ;
+    cco:ont00001966 <http://example.org/tradecraft/p4/sdc/Chiller-3/temperature> .
+
+<http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-19T13-01-00Z/70-0-F> a cco:ont00001163 ;
+    rdfs:label "Chiller-3 temperature reading of 70.0 F at 2024-03-19T13:01:00Z"@en ;
+    obo:BFO_0000058 <http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-19T13-01-00Z/70-0-F/iqe> ;
     cco:ont00001966 <http://example.org/tradecraft/p4/sdc/Chiller-3/temperature> .
 
 <http://example.org/tradecraft/p4/mice/Chiller-4/temperature/2024-03-18T12-01-00Z/6-5-F> a cco:ont00001163 ;
@@ -71,6 +94,11 @@
     rdfs:label "Chiller-4 temperature reading of 19.5 F at 2024-03-18T12:06:00Z"@en ;
     obo:BFO_0000058 <http://example.org/tradecraft/p4/mice/Chiller-4/temperature/2024-03-18T12-06-00Z/19-5-F/iqe> ;
     cco:ont00001966 <http://example.org/tradecraft/p4/sdc/Chiller-4/temperature> .
+
+<http://example.org/tradecraft/p4/mice/Circuit-07/voltage/2024-03-18T23-05-00Z/2-0-V> a cco:ont00001163 ;
+    rdfs:label "Circuit-07 voltage reading of 2.0 V at 2024-03-18T23:05:00Z"@en ;
+    obo:BFO_0000058 <http://example.org/tradecraft/p4/mice/Circuit-07/voltage/2024-03-18T23-05-00Z/2-0-V/iqe> ;
+    cco:ont00001966 <http://example.org/tradecraft/p4/sdc/Circuit-07/voltage> .
 
 <http://example.org/tradecraft/p4/mice/Circuit-12/resistance/2024-03-18T12-06-00Z/1-3-ohm> a cco:ont00001163 ;
     rdfs:label "Circuit-12 resistance reading of 1.3 ohm at 2024-03-18T12:06:00Z"@en ;
@@ -86,6 +114,11 @@
     rdfs:label "Pump-A1 pressure reading of 101325.0 Pa at 2024-03-18T12:07:00Z"@en ;
     obo:BFO_0000058 <http://example.org/tradecraft/p4/mice/Pump-A1/pressure/2024-03-18T12-07-00Z/101325-0-Pa/iqe> ;
     cco:ont00001966 <http://example.org/tradecraft/p4/sdc/Pump-A1/pressure> .
+
+<http://example.org/tradecraft/p4/mice/Pump-A2/pressure/2024-03-19T13-07-00Z/101325-0-Pa> a cco:ont00001163 ;
+    rdfs:label "Pump-A2 pressure reading of 101325.0 Pa at 2024-03-19T13:07:00Z"@en ;
+    obo:BFO_0000058 <http://example.org/tradecraft/p4/mice/Pump-A2/pressure/2024-03-19T13-07-00Z/101325-0-Pa/iqe> ;
+    cco:ont00001966 <http://example.org/tradecraft/p4/sdc/Pump-A2/pressure> .
 
 obo:BFO_0000058 a owl:ObjectProperty ;
     rdfs:label "is concretized by"@en ;
@@ -114,11 +147,6 @@ cco:ont00001863 a owl:ObjectProperty ;
 cco:ont00001966 a owl:ObjectProperty ;
     rdfs:label "is a measurement of"@en ;
     skos:definition "x is_a_measurement_of y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x describes some attribute of y relative to some scale or classification scheme."@en .
-
-ex:ElectricPotentialDifference a owl:Class ;
-    rdfs:label "Electric Potential Difference"@en ;
-    rdfs:subClassOf obo:BFO_0000019 ;
-    skos:definition "A quality of an electrical circuit that is the work needed per unit charge to move a test charge between two of its terminals."@en .
 
 ex:ElectricalResistance a owl:Class ;
     rdfs:label "Electrical Resistance"@en ;
@@ -175,6 +203,16 @@ ex:Ohm a ex:MeasurementUnitOfElectricalResistance,
     rdfs:label "information quality of Boiler-07 record 2024-03-17T23:03:00Z 212.0 F"@en ;
     obo:BFO_0000197 <http://example.org/tradecraft/p4/mice/Boiler-07/temperature/2024-03-17T23-03-00Z/212-0-F/ibe> .
 
+<http://example.org/tradecraft/p4/mice/Boiler-09/pressure/2024-03-18T23-06-00Z/94458-174916-Pa/ibe> a cco:ont00000253 ;
+    rdfs:label "sensor record of Boiler-09 pressure 94458.174916 Pa at 2024-03-18T23:06:00Z"@en ;
+    cco:ont00001767 "2024-03-18T23:06:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 94458.174916 ;
+    cco:ont00001863 cco:ont00001559 .
+
+<http://example.org/tradecraft/p4/mice/Boiler-09/pressure/2024-03-18T23-06-00Z/94458-174916-Pa/iqe> a cco:ont00000314 ;
+    rdfs:label "information quality of Boiler-09 record 2024-03-18T23:06:00Z 94458.174916 Pa"@en ;
+    obo:BFO_0000197 <http://example.org/tradecraft/p4/mice/Boiler-09/pressure/2024-03-18T23-06-00Z/94458-174916-Pa/ibe> .
+
 <http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-18T12-01-00Z/19-5-C/ibe> a cco:ont00000253 ;
     rdfs:label "sensor record of Chiller-3 temperature 19.5 C at 2024-03-18T12:01:00Z"@en ;
     cco:ont00001767 "2024-03-18T12:01:00+00:00"^^xsd:dateTime ;
@@ -195,6 +233,16 @@ ex:Ohm a ex:MeasurementUnitOfElectricalResistance,
     rdfs:label "information quality of Chiller-3 record 2024-03-18T12:01:00Z 68.0 F"@en ;
     obo:BFO_0000197 <http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-18T12-01-00Z/68-0-F/ibe> .
 
+<http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-19T13-01-00Z/70-0-F/ibe> a cco:ont00000253 ;
+    rdfs:label "sensor record of Chiller-3 temperature 70.0 F at 2024-03-19T13:01:00Z"@en ;
+    cco:ont00001767 "2024-03-19T13:01:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 70.0 ;
+    cco:ont00001863 cco:ont00001724 .
+
+<http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-19T13-01-00Z/70-0-F/iqe> a cco:ont00000314 ;
+    rdfs:label "information quality of Chiller-3 record 2024-03-19T13:01:00Z 70.0 F"@en ;
+    obo:BFO_0000197 <http://example.org/tradecraft/p4/mice/Chiller-3/temperature/2024-03-19T13-01-00Z/70-0-F/ibe> .
+
 <http://example.org/tradecraft/p4/mice/Chiller-4/temperature/2024-03-18T12-01-00Z/6-5-F/ibe> a cco:ont00000253 ;
     rdfs:label "sensor record of Chiller-4 temperature 6.5 F at 2024-03-18T12:01:00Z"@en ;
     cco:ont00001767 "2024-03-18T12:01:00+00:00"^^xsd:dateTime ;
@@ -214,6 +262,16 @@ ex:Ohm a ex:MeasurementUnitOfElectricalResistance,
 <http://example.org/tradecraft/p4/mice/Chiller-4/temperature/2024-03-18T12-06-00Z/19-5-F/iqe> a cco:ont00000314 ;
     rdfs:label "information quality of Chiller-4 record 2024-03-18T12:06:00Z 19.5 F"@en ;
     obo:BFO_0000197 <http://example.org/tradecraft/p4/mice/Chiller-4/temperature/2024-03-18T12-06-00Z/19-5-F/ibe> .
+
+<http://example.org/tradecraft/p4/mice/Circuit-07/voltage/2024-03-18T23-05-00Z/2-0-V/ibe> a cco:ont00000253 ;
+    rdfs:label "sensor record of Circuit-07 voltage 2.0 V at 2024-03-18T23:05:00Z"@en ;
+    cco:ont00001767 "2024-03-18T23:05:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 cco:ont00001450 .
+
+<http://example.org/tradecraft/p4/mice/Circuit-07/voltage/2024-03-18T23-05-00Z/2-0-V/iqe> a cco:ont00000314 ;
+    rdfs:label "information quality of Circuit-07 record 2024-03-18T23:05:00Z 2.0 V"@en ;
+    obo:BFO_0000197 <http://example.org/tradecraft/p4/mice/Circuit-07/voltage/2024-03-18T23-05-00Z/2-0-V/ibe> .
 
 <http://example.org/tradecraft/p4/mice/Circuit-12/resistance/2024-03-18T12-06-00Z/1-3-ohm/ibe> a cco:ont00000253 ;
     rdfs:label "sensor record of Circuit-12 resistance 1.3 ohm at 2024-03-18T12:06:00Z"@en ;
@@ -245,6 +303,16 @@ ex:Ohm a ex:MeasurementUnitOfElectricalResistance,
     rdfs:label "information quality of Pump-A1 record 2024-03-18T12:07:00Z 101325.0 Pa"@en ;
     obo:BFO_0000197 <http://example.org/tradecraft/p4/mice/Pump-A1/pressure/2024-03-18T12-07-00Z/101325-0-Pa/ibe> .
 
+<http://example.org/tradecraft/p4/mice/Pump-A2/pressure/2024-03-19T13-07-00Z/101325-0-Pa/ibe> a cco:ont00000253 ;
+    rdfs:label "sensor record of Pump-A2 pressure 101325.0 Pa at 2024-03-19T13:07:00Z"@en ;
+    cco:ont00001767 "2024-03-19T13:07:00+00:00"^^xsd:dateTime ;
+    cco:ont00001769 101325.0 ;
+    cco:ont00001863 cco:ont00001559 .
+
+<http://example.org/tradecraft/p4/mice/Pump-A2/pressure/2024-03-19T13-07-00Z/101325-0-Pa/iqe> a cco:ont00000314 ;
+    rdfs:label "information quality of Pump-A2 record 2024-03-19T13:07:00Z 101325.0 Pa"@en ;
+    obo:BFO_0000197 <http://example.org/tradecraft/p4/mice/Pump-A2/pressure/2024-03-19T13-07-00Z/101325-0-Pa/ibe> .
+
 obo:BFO_0000001 a owl:Class ;
     rdfs:label "entity"@en ;
     skos:definition "(Elucidation) An entity is anything that exists or has existed or will exist"@en .
@@ -263,11 +331,6 @@ obo:BFO_0000031 a owl:Class ;
     rdfs:label "generically dependent continuant"@en ;
     rdfs:subClassOf obo:BFO_0000002 ;
     skos:definition "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en .
-
-cco:ont00000116 a owl:Class ;
-    rdfs:label "Pump"@en ;
-    rdfs:subClassOf cco:ont00000256 ;
-    skos:definition "A Fluid Control Artifact that is designed to impart motion to a portion of fluid to transport it within a system through the use of mechanical action."@en .
 
 cco:ont00000256 a owl:Class ;
     rdfs:label "Fluid Control Artifact"@en ;
@@ -289,15 +352,18 @@ cco:ont00001090 a owl:Class ;
     rdfs:subClassOf cco:ont00000120 ;
     skos:definition "A Measurement Unit that is used as a standard for measurement of Force applied perpendicular to a surface per unit area."@en .
 
-cco:ont00001450 a owl:NamedIndividual,
-        cco:ont00000120,
-        cco:ont00001004 ;
-    rdfs:label "Volt Measurement Unit"@en .
-
-ex:FluidPressure a owl:Class ;
-    rdfs:label "Fluid Pressure"@en ;
+ex:ElectricPotentialDifference a owl:Class ;
+    rdfs:label "Electric Potential Difference"@en ;
     rdfs:subClassOf obo:BFO_0000019 ;
-    skos:definition "A quality of a portion of fluid, or of the artifact containing it, that is the force per unit area the fluid exerts on its boundary."@en .
+    skos:definition "A quality of an electrical circuit that is the work needed per unit charge to move a test charge between two of its terminals."@en .
+
+<http://example.org/tradecraft/p4/sdc/Boiler-09/pressure> a ex:FluidPressure,
+        obo:BFO_0000020 ;
+    rdfs:label "pressure of Boiler-09"@en .
+
+<http://example.org/tradecraft/p4/sdc/Circuit-07/voltage> a ex:ElectricPotentialDifference,
+        obo:BFO_0000020 ;
+    rdfs:label "voltage of Circuit-07"@en .
 
 <http://example.org/tradecraft/p4/sdc/Circuit-12/resistance> a ex:ElectricalResistance,
         obo:BFO_0000020 ;
@@ -311,10 +377,19 @@ ex:FluidPressure a owl:Class ;
         obo:BFO_0000020 ;
     rdfs:label "pressure of Pump-A1"@en .
 
+<http://example.org/tradecraft/p4/sdc/Pump-A2/pressure> a ex:FluidPressure,
+        obo:BFO_0000020 ;
+    rdfs:label "pressure of Pump-A2"@en .
+
 obo:BFO_0000040 a owl:Class ;
     rdfs:label "material entity"@en ;
     rdfs:subClassOf obo:BFO_0000004 ;
     skos:definition "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en .
+
+cco:ont00000116 a owl:Class ;
+    rdfs:label "Pump"@en ;
+    rdfs:subClassOf cco:ont00000256 ;
+    skos:definition "A Fluid Control Artifact that is designed to impart motion to a portion of fluid to transport it within a system through the use of mechanical action."@en .
 
 cco:ont00000844 a owl:Class ;
     rdfs:label "Measurement Unit of Temperature"@en ;
@@ -325,6 +400,11 @@ cco:ont00000853 a owl:Class ;
     rdfs:label "Descriptive Information Content Entity"@en ;
     rdfs:subClassOf cco:ont00000958 ;
     skos:definition "An Information Content Entity that consists of a set of propositions that describe some Entity."@en .
+
+cco:ont00001450 a owl:NamedIndividual,
+        cco:ont00000120,
+        cco:ont00001004 ;
+    rdfs:label "Volt Measurement Unit"@en .
 
 cco:ont00001606 a owl:NamedIndividual,
         cco:ont00000120,
@@ -338,10 +418,6 @@ cco:ont00001606 a owl:NamedIndividual,
 <http://example.org/tradecraft/p4/sdc/Boiler-07/temperature> a obo:BFO_0000020,
         cco:ont00000441 ;
     rdfs:label "temperature of Boiler-07"@en .
-
-<http://example.org/tradecraft/p4/sdc/Chiller-3/temperature> a obo:BFO_0000020,
-        cco:ont00000441 ;
-    rdfs:label "temperature of Chiller-3"@en .
 
 <http://example.org/tradecraft/p4/sdc/Chiller-4/temperature> a obo:BFO_0000020,
         cco:ont00000441 ;
@@ -357,6 +433,20 @@ cco:ont00000441 a owl:Class ;
     rdfs:subClassOf obo:BFO_0000019 ;
     skos:definition "A Quality that inheres in a bearer in virtue of its thermal energy."@en .
 
+ex:FluidPressure a owl:Class ;
+    rdfs:label "Fluid Pressure"@en ;
+    rdfs:subClassOf obo:BFO_0000019 ;
+    skos:definition "A quality of a portion of fluid, or of the artifact containing it, that is the force per unit area the fluid exerts on its boundary."@en .
+
+<http://example.org/tradecraft/p4/sdc/Chiller-3/temperature> a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "temperature of Chiller-3"@en .
+
+obo:BFO_0000019 a owl:Class ;
+    rdfs:label "quality"@en ;
+    rdfs:subClassOf obo:BFO_0000020 ;
+    skos:definition "(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized"@en .
+
 cco:ont00001559 a owl:NamedIndividual,
         cco:ont00000120,
         cco:ont00001090 ;
@@ -367,10 +457,10 @@ cco:ont00001724 a owl:NamedIndividual,
         cco:ont00000844 ;
     rdfs:label "Degree Fahrenheit Measurement Unit"@en .
 
-obo:BFO_0000019 a owl:Class ;
-    rdfs:label "quality"@en ;
-    rdfs:subClassOf obo:BFO_0000020 ;
-    skos:definition "(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized"@en .
+cco:ont00000120 a owl:Class ;
+    rdfs:label "Measurement Unit"@en ;
+    rdfs:subClassOf cco:ont00000853 ;
+    skos:definition "A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en .
 
 cco:ont00000995 a owl:Class ;
     rdfs:label "Material Artifact"@en ;
@@ -381,11 +471,6 @@ obo:BFO_0000020 a owl:Class ;
     rdfs:label "specifically dependent continuant"@en ;
     rdfs:subClassOf obo:BFO_0000002 ;
     skos:definition "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b specifically depends on c"@en .
-
-cco:ont00000120 a owl:Class ;
-    rdfs:label "Measurement Unit"@en ;
-    rdfs:subClassOf cco:ont00000853 ;
-    skos:definition "A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en .
 
 cco:ont00000253 a owl:Class ;
     rdfs:label "Information Bearing Entity"@en ;
