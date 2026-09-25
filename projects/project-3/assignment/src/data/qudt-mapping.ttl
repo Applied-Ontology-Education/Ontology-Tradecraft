@@ -1,0 +1,19 @@
+# QUDT -> CCOM mapping axioms (subject = QUDT class). Project 3, steps 4 and 8.
+# The QUDT classes that ccom-mapping.ttl treats as broader than a CCOM class are still
+# measurement units in the CCO sense, so they fall under CCO 'Measurement Unit'
+# (cco:ont00000120, the parent of every CCOM class). The equivalences in ccom-mapping.ttl
+# let the reasoner derive the same result for the other QUDT classes.
+
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco:     <https://www.commoncoreontologies.org/> .
+@prefix qudt-v1: <http://qudt.org/schema/qudt#> .
+
+<http://example.org/ontology-tradecraft/project-3/qudt-mapping> a owl:Ontology ;
+    rdfs:comment "QUDT-to-CCOM alignment axioms whose subject is a QUDT class." .
+
+qudt-v1:EnergyAndWorkUnit         rdfs:subClassOf cco:ont00000120 .   # Measurement Unit
+qudt-v1:PressureOrStressUnit      rdfs:subClassOf cco:ont00000120 .
+qudt-v1:BendingMomentOrTorqueUnit rdfs:subClassOf cco:ont00000120 .
+qudt-v1:LinearMomentumUnit        rdfs:subClassOf cco:ont00000120 .
+qudt-v1:LinearVelocityUnit        rdfs:subClassOf cco:ont00000120 .

@@ -1,0 +1,33 @@
+# CCOT -> W3C OWL-Time mapping axioms (subject = CCOT class or the BFO class that CCOT
+# builds on). Project 3, steps 4 and 8. Review notes are in mapping-decisions.md.
+#
+# Targeted vs global reasoning: only the two BFO parents are mapped. The reasoner then
+# pushes every CCOT interval (Day, Hour, Week, Morning, ...) under time:ProperInterval and
+# every CCOT instant (Time of Day, Reference Time, Unix Temporal Instant, ...) under
+# time:Instant, so there is no need to assert 20+ leaf-level axioms by hand.
+
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<http://example.org/ontology-tradecraft/project-3/ccot-mapping> a owl:Ontology ;
+    rdfs:comment "CCOT-to-OWL-Time alignment axioms whose subject is a CCOT/BFO class." .
+
+# BFO temporal interval (continuous, no gaps) always has distinct begin and end:
+# OWL-Time ProperInterval = "a temporal entity with non-zero extent ... the value of
+# the beginning and end are different".
+obo:BFO_0000202 rdfs:subClassOf time:ProperInterval .
+
+# BFO temporal instant ("zero-dimensional temporal region that has no proper temporal
+# part") = OWL-Time Instant ("a temporal entity with zero extent or duration").
+# Converse asserted in to-mapping.ttl.
+obo:BFO_0000203 rdfs:subClassOf time:Instant .
+
+# Gregorian Day / Gregorian Year are calendar-aligned intervals in the Gregorian calendar:
+# exactly what OWL-Time DateTimeInterval ("defined using the multi-element
+# DateTimeDescription", Gregorian by default) describes. Julian Day/Year are NOT mapped:
+# DateTimeDescription is fixed to the Gregorian calendar.
+cco:ont00000435 rdfs:subClassOf time:DateTimeInterval .   # Gregorian Day
+cco:ont00000425 rdfs:subClassOf time:DateTimeInterval .   # Gregorian Year

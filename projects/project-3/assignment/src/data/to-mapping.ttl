@@ -1,0 +1,25 @@
+# W3C OWL-Time -> CCOT/BFO mapping axioms (subject = OWL-Time class).
+# Project 3, steps 4 and 8. Review notes are in mapping-decisions.md.
+
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<http://example.org/ontology-tradecraft/project-3/to-mapping> a owl:Ontology ;
+    rdfs:comment "OWL-Time-to-CCOT/BFO alignment axioms whose subject is an OWL-Time class." .
+
+# Converse of ccot-mapping.ttl; together they entail time:Instant = BFO temporal instant.
+time:Instant rdfs:subClassOf obo:BFO_0000203 .            # temporal instant
+
+# A ProperInterval has non-zero extent, so it is at least a BFO one-dimensional temporal
+# region. Not mapped to BFO 'temporal interval': OWL-Time does not say ProperIntervals
+# are gap-free.
+time:ProperInterval rdfs:subClassOf obo:BFO_0000038 .     # one-dimensional temporal region
+
+# A DateTimeInterval is the single contiguous interval named by a calendar-clock
+# description (a given day, month or year), so it has no gaps.
+time:DateTimeInterval rdfs:subClassOf obo:BFO_0000202 .   # temporal interval
+
+# OWL-Time TemporalEntity ("a temporal interval or instant") falls under BFO temporal region.
+time:TemporalEntity rdfs:subClassOf obo:BFO_0000008 .     # temporal region

@@ -1,0 +1,44 @@
+# CCOM -> QUDT mapping axioms (subject = CCOM class). Project 3, steps 4 and 8.
+# Candidates came from the round-2 structural pass: after enrichment, every unit class on
+# both sides carries a "quantityKind value <kind>" restriction. A candidate row was
+# accepted only when (a) both classes name the same quantity kind and (b) the textual
+# definitions agree. See mapping-decisions.md.
+#
+# equivalentClass = the two classes pick out the same units.
+# subClassOf      = the QUDT class is broader (QUDT groups several quantity kinds that
+#                   share units, e.g. "Energy And Work", "Pressure Or Stress").
+
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco:     <https://www.commoncoreontologies.org/> .
+@prefix qudt-v1: <http://qudt.org/schema/qudt#> .
+
+<http://example.org/ontology-tradecraft/project-3/ccom-mapping> a owl:Ontology ;
+    rdfs:comment "CCOM-to-QUDT alignment axioms whose subject is a CCOM class." .
+
+# --- Equivalences (same quantity kind, same scope) ---
+cco:ont00001290 owl:equivalentClass qudt-v1:LengthUnit .              # Length
+cco:ont00000239 owl:equivalentClass qudt-v1:MassUnit .                # Mass
+cco:ont00001357 owl:equivalentClass qudt-v1:TimeUnit .                # Time
+cco:ont00000844 owl:equivalentClass qudt-v1:TemperatureUnit .         # Temperature
+cco:ont00000140 owl:equivalentClass qudt-v1:AmountOfSubstanceUnit .   # Amount of Substance
+cco:ont00000217 owl:equivalentClass qudt-v1:AreaUnit .                # Area
+cco:ont00001317 owl:equivalentClass qudt-v1:VolumeUnit .              # Volume
+cco:ont00000497 owl:equivalentClass qudt-v1:ForceUnit .               # Force
+cco:ont00000959 owl:equivalentClass qudt-v1:FrequencyUnit .           # Frequency
+cco:ont00000229 owl:equivalentClass qudt-v1:PowerUnit .               # Power
+cco:ont00000770 owl:equivalentClass qudt-v1:MassPerVolumeUnit .       # Density ("mass ... per unit of its total volume")
+cco:ont00001307 owl:equivalentClass qudt-v1:MassPerTimeUnit .         # Mass Flow Rate
+cco:ont00000374 owl:equivalentClass qudt-v1:VolumePerTimeUnit .       # Volumetric Flow Rate
+cco:ont00000527 owl:equivalentClass qudt-v1:AngularMassUnit .         # Rotational Inertia (QUDT: "used to measure the moment of inertia")
+cco:ont00000707 owl:equivalentClass qudt-v1:PlaneAngleUnit .          # Angle ("angle between two lines or planes" = plane angle)
+cco:ont00000074 owl:equivalentClass qudt-v1:LinearAccelerationUnit .  # Acceleration ("rate at which objects change their velocities")
+
+# --- Subsumptions (QUDT class is broader) ---
+cco:ont00000444 rdfs:subClassOf qudt-v1:EnergyAndWorkUnit .           # Energy
+cco:ont00000852 rdfs:subClassOf qudt-v1:EnergyAndWorkUnit .           # Work
+cco:ont00001090 rdfs:subClassOf qudt-v1:PressureOrStressUnit .        # Pressure
+cco:ont00000659 rdfs:subClassOf qudt-v1:BendingMomentOrTorqueUnit .   # Torque
+cco:ont00000940 rdfs:subClassOf qudt-v1:LinearMomentumUnit .          # Momentum (of matter "in Motion" = linear)
+cco:ont00001345 rdfs:subClassOf qudt-v1:LinearMomentumUnit .          # Impulse (N*s: the same units as linear momentum)
+cco:ont00000969 rdfs:subClassOf qudt-v1:LinearVelocityUnit .          # Speed (scalar; QUDT also covers velocity)

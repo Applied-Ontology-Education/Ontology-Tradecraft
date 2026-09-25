@@ -1,0 +1,33 @@
+# IES -> BFO mapping axioms (subject = IES class). Project 3, steps 4 and 8.
+# Review notes for every candidate row are in mapping-decisions.md.
+#
+# Design stance: IES is a 4D (BORO) ontology in which every Entity is also a State of
+# itself (e.g. ies:Person is a subclass of both ies:Entity and ies:PersonState). Mapping
+# ies:State to BFO occurrent while mapping ies:Person to BFO object makes ies:Person
+# unsatisfiable, so no continuant-side IES classes are mapped here. The mappings below sit
+# on the occurrent side, where IES's spatio-temporal extents and BFO's occurrents agree.
+
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+
+<http://example.org/ontology-tradecraft/project-3/ies-mapping> a owl:Ontology ;
+    rdfs:comment "IES-to-BFO alignment axioms whose subject is an IES class." .
+
+# Converse of bfo-mapping.ttl; together they entail ies:ParticularPeriod = BFO temporal interval.
+ies:ParticularPeriod rdfs:subClassOf obo:BFO_0000202 .   # temporal interval
+
+# IES PeriodOfTime: "an Element whose spatial extent is everywhere, but whose temporal
+# extent is limited" = a stretch of time. Every such period is a BFO temporal region
+# ("an occurrent over which processes can unfold"). Only subClassOf: BFO temporal regions
+# also include zero-dimensional instants, which are not IES periods.
+ies:PeriodOfTime rdfs:subClassOf obo:BFO_0000008 .       # temporal region
+
+# IES Event: "an activity or incident, involving one or more participating entities"
+# BFO process: "an occurrent that has some temporal proper part and ... has some material
+# entity as participant". Every IES event is a BFO process; the converse does not hold
+# (IES reserves Event for activities and incidents of interest, not every process).
+# The structural pass did not pair these (process also carries 'only' axioms), so this
+# came out of the definition review.
+ies:Event rdfs:subClassOf obo:BFO_0000015 .              # process

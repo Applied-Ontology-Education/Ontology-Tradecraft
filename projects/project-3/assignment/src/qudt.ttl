@@ -1256,8 +1256,11 @@ qudt-v1:Unit
   rdfs:label "Unit" ;
   rdfs:subClassOf owl:Thing ;
   rdfs:subClassOf [
+      # P3 repair: Unit had 'typePrefix exactly 1' AND 'typePrefix value U', while every subclass adds
+      # another hasValue (e.g. PhysicalUnit 'UPHS'); two values under max 1 made 161 classes unsatisfiable.
+      # Type prefixes are class-level codes, so the instance-level cardinality is relaxed to 'min 1'.
       rdf:type owl:Restriction ;
-      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
       owl:onProperty qudt-v1:typePrefix ;
     ] ;
   rdfs:subClassOf [
@@ -1474,7 +1477,9 @@ qudt-v1:derivedUnitOfSystem
 qudt-v1:description
   rdf:type owl:DatatypeProperty ;
   rdfs:label "description" ;
-  rdfs:range qudt-v1:string1024 ;
+  # P3 repair: two class descriptions (AreaThermalExpansionUnit, VolumeThermalExpansionUnit) exceed
+  # 1024 characters, which made the ontology inconsistent under HermiT. Was: rdfs:range qudt-v1:string1024 ;
+  rdfs:range xsd:string ;
   rdfs:subPropertyOf vaem:description ;
 .
 qudt-v1:dimensionInverse
@@ -1508,7 +1513,8 @@ qudt-v1:exactMatch
 qudt-v1:floatPercentage
   rdf:type rdfs:Datatype ;
   rdfs:label "float percentage" ;
-  rdfs:subClassOf xsd:float ;
+  # P3 repair: rdfs:subClassOf on an rdfs:Datatype makes OWLAPI read it as a class (parse errors). Removed:
+  # rdfs:subClassOf xsd:float ;
   owl:equivalentClass [
       rdf:type rdfs:Datatype ;
       owl:onDatatype xsd:float ;
@@ -1534,7 +1540,8 @@ qudt-v1:generalization
 qudt-v1:integerPercentage
   rdf:type rdfs:Datatype ;
   rdfs:label "integer percentage" ;
-  rdfs:subClassOf xsd:integer ;
+  # P3 repair: rdfs:subClassOf on an rdfs:Datatype makes OWLAPI read it as a class (parse errors). Removed:
+  # rdfs:subClassOf xsd:integer ;
   owl:equivalentClass [
       rdf:type rdfs:Datatype ;
       owl:onDatatype xsd:integer ;
@@ -1632,7 +1639,8 @@ qudt-v1:standardUncertainty
 qudt-v1:string1024
   rdf:type rdfs:Datatype ;
   rdfs:label "string1024" ;
-  rdfs:subClassOf xsd:string ;
+  # P3 repair: rdfs:subClassOf on an rdfs:Datatype makes OWLAPI read it as a class (parse errors). Removed:
+  # rdfs:subClassOf xsd:string ;
   owl:equivalentClass [
       rdf:type rdfs:Datatype ;
       owl:onDatatype xsd:string ;
@@ -1790,3 +1798,84 @@ skos:closeMatch
 skos:exactMatch
   rdf:type rdf:Property ;
 .
+
+# ===== BEGIN Project 3 OWL enrichment =====
+# QUDT unit classes carry no definitions for most leaf classes; their meaning is "units
+# of quantity kind X". These axioms state that explicitly (as QUDT v1.1 originally did
+# with quantityKind hasValue restrictions), mirroring the CCOM definitions
+# "used as a standard for measurement of X".
+@prefix qk: <http://qudt.org/vocab/quantitykind/> .
+
+qk:AmountOfSubstance rdf:type owl:NamedIndividual ; rdfs:label "AmountOfSubstance" .
+qk:Area rdf:type owl:NamedIndividual ; rdfs:label "Area" .
+qk:Density rdf:type owl:NamedIndividual ; rdfs:label "Density" .
+qk:Energy rdf:type owl:NamedIndividual ; rdfs:label "Energy" .
+qk:Force rdf:type owl:NamedIndividual ; rdfs:label "Force" .
+qk:Frequency rdf:type owl:NamedIndividual ; rdfs:label "Frequency" .
+qk:Impulse rdf:type owl:NamedIndividual ; rdfs:label "Impulse" .
+qk:Length rdf:type owl:NamedIndividual ; rdfs:label "Length" .
+qk:LinearAcceleration rdf:type owl:NamedIndividual ; rdfs:label "LinearAcceleration" .
+qk:LinearMomentum rdf:type owl:NamedIndividual ; rdfs:label "LinearMomentum" .
+qk:LinearVelocity rdf:type owl:NamedIndividual ; rdfs:label "LinearVelocity" .
+qk:Mass rdf:type owl:NamedIndividual ; rdfs:label "Mass" .
+qk:MassFlowRate rdf:type owl:NamedIndividual ; rdfs:label "MassFlowRate" .
+qk:MomentOfInertia rdf:type owl:NamedIndividual ; rdfs:label "MomentOfInertia" .
+qk:PlaneAngle rdf:type owl:NamedIndividual ; rdfs:label "PlaneAngle" .
+qk:Power rdf:type owl:NamedIndividual ; rdfs:label "Power" .
+qk:Pressure rdf:type owl:NamedIndividual ; rdfs:label "Pressure" .
+qk:Speed rdf:type owl:NamedIndividual ; rdfs:label "Speed" .
+qk:Stress rdf:type owl:NamedIndividual ; rdfs:label "Stress" .
+qk:ThermodynamicTemperature rdf:type owl:NamedIndividual ; rdfs:label "ThermodynamicTemperature" .
+qk:Time rdf:type owl:NamedIndividual ; rdfs:label "Time" .
+qk:Torque rdf:type owl:NamedIndividual ; rdfs:label "Torque" .
+qk:Volume rdf:type owl:NamedIndividual ; rdfs:label "Volume" .
+qk:VolumeFlowRate rdf:type owl:NamedIndividual ; rdfs:label "VolumeFlowRate" .
+qk:Work rdf:type owl:NamedIndividual ; rdfs:label "Work" .
+
+qudt-v1:LinearAccelerationUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:LinearAcceleration ] .
+qudt-v1:AmountOfSubstanceUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:AmountOfSubstance ] .
+qudt-v1:PlaneAngleUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:PlaneAngle ] .
+qudt-v1:AreaUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Area ] .
+qudt-v1:MassPerVolumeUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Density ] .
+qudt-v1:EnergyAndWorkUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Energy ] ,
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Work ] .
+qudt-v1:ForceUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Force ] .
+qudt-v1:FrequencyUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Frequency ] .
+qudt-v1:LinearMomentumUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:LinearMomentum ] ,
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Impulse ] .
+qudt-v1:LengthUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Length ] .
+qudt-v1:MassUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Mass ] .
+qudt-v1:MassPerTimeUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:MassFlowRate ] .
+qudt-v1:PowerUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Power ] .
+qudt-v1:PressureOrStressUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Pressure ] ,
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Stress ] .
+qudt-v1:AngularMassUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:MomentOfInertia ] .
+qudt-v1:LinearVelocityUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:LinearVelocity ] ,
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Speed ] .
+qudt-v1:TemperatureUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:ThermodynamicTemperature ] .
+qudt-v1:TimeUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Time ] .
+qudt-v1:BendingMomentOrTorqueUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Torque ] .
+qudt-v1:VolumeUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:Volume ] .
+qudt-v1:VolumePerTimeUnit rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty qudt-v1:quantityKind ; owl:hasValue qk:VolumeFlowRate ] .
+# ===== END Project 3 OWL enrichment =====
