@@ -1,0 +1,324 @@
+@prefix : <http://example.org/ontology-tradecraft/project2/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+# ============================================================
+# TASK 1 — Airbus A320 NEO
+# ============================================================
+
+:AirbusA320NEO a :FixedWing ;
+    rdfs:label "Airbus A320 NEO"@en ;
+    skos:definition "A fixed-wing Airbus A320 NEO aircraft represented from the provided aircraft data."@en ;
+
+    :hasManufacturer :Airbus ;
+    :hasContinuantPart :A320NEOEngine1 ;
+    :hasContinuantPart :A320NEOEngine2 ;
+
+    :hasICAOCode "A20N"@en ;
+    :hasFAADesignator "A20N"@en ;
+    :hasModelBADA "Airbus A320-271N"@en ;
+    :hasModelFAA "Airbus A320 Neo"@en ;
+    :hasAAC "C"@en ;
+    :hasADG "III"@en ;
+    :hasTDG "3"^^xsd:integer ;
+    :hasApproachSpeedKnot "137"^^xsd:decimal ;
+    :hasWingspanFt "117.5"^^xsd:decimal ;
+    :hasLengthFt "123.3"^^xsd:decimal ;
+    :hasTailHeightFt "39.6"^^xsd:decimal ;
+    :hasWheelbaseFt "41.5"^^xsd:decimal ;
+    :hasCockpitToMainGearFt "50.2"^^xsd:decimal ;
+    :hasMainGearWidthFt "29.4"^^xsd:decimal ;
+    :hasMTOWLb "174165"^^xsd:integer ;
+    :hasMALWLb "148591"^^xsd:integer ;
+    :hasMainGearConfig "D"@en ;
+    :hasICAOWTC "Medium"@en ;
+    :hasParkingAreaFt2 "16358.3"^^xsd:decimal ;
+    :hasFAAWeight "Large"@en ;
+    :hasCWT "F"@en ;
+    :hasWakeCategoryOneHalf "D"@en ;
+    :hasWakeCategoryTwoAppendixA "D"@en ;
+    :hasWakeCategoryTwoAppendixB "C"@en ;
+    :hasSRS "III"@en ;
+    :hasLAHSO "7"^^xsd:integer ;
+    :hasFAARegistry "Yes"@en ;
+    :hasRegistrationCount "147"^^xsd:integer ;
+    :hasTMFSOperationsFY24 "540276"^^xsd:integer ;
+    :hasRemarks "AAC validated by Flight Standardization Board (FSB) report."@en ;
+
+    :isAbout :A320NEOArtifactDesign .
+
+:A320NEOArtifactDesign a :ArtifactDesign ;
+    rdfs:label "Airbus A320 NEO Artifact Design"@en ;
+    skos:definition "An artifact design associated with the Airbus A320 NEO aircraft."@en .
+
+:Airbus a owl:NamedIndividual ;
+    rdfs:label "Airbus"@en ;
+    skos:definition "The manufacturer associated with the Airbus A320 NEO aircraft."@en .
+
+:A320NEOEngine1 a :JetEngine ;
+    rdfs:label "Airbus A320 NEO Jet Engine 1"@en ;
+    skos:definition "A jet engine that is a continuant part of the Airbus A320 NEO aircraft."@en .
+
+:A320NEOEngine2 a :JetEngine ;
+    rdfs:label "Airbus A320 NEO Jet Engine 2"@en ;
+    skos:definition "A jet engine that is a continuant part of the Airbus A320 NEO aircraft."@en .
+
+# ============================================================
+# TASK 2 — Airbus A321-111 and approach-speed testing
+# ============================================================
+
+:AirbusA321111 a :Aircraft ;
+    rdfs:label "Airbus A321-111"@en ;
+    skos:definition "An Airbus A321-111 aircraft represented for an approach-speed testing process."@en ;
+    :prescribes :A321111DesignedApproachSpeed .
+
+:A321111DesignedApproachSpeed a :MeasurementUnit ;
+    rdfs:label "A321-111 designed maximum approach speed 142 knots"@en ;
+    skos:definition "The designed maximum approach speed prescribed for the Airbus A321-111."@en ;
+    :hasValue "142"^^xsd:decimal ;
+    :isMeasurementUnitOf :Knot .
+
+:Knot a :MeasurementUnitOfSpeed ;
+    rdfs:label "knot"@en ;
+    skos:definition "A unit of speed used to express aircraft approach speed."@en .
+
+:A321111ApproachSpeedTest a :TestProcess ;
+    rdfs:label "A321-111 Approach Speed Test"@en ;
+    skos:definition "A test process consisting of five approach measurements used to determine an average maximum approach speed."@en .
+
+:A321111TestApproach1 a :ApproachTest ;
+    rdfs:label "A321-111 Approach Test 1"@en ;
+    skos:definition "The first approach test in the A321-111 approach-speed test process."@en ;
+    :hasApproachSpeedKnot "138"^^xsd:decimal ;
+    :isTemporalPartOf :A321111ApproachSpeedTest .
+
+:A321111TestApproach2 a :ApproachTest ;
+    rdfs:label "A321-111 Approach Test 2"@en ;
+    skos:definition "The second approach test in the A321-111 approach-speed test process."@en ;
+    :hasApproachSpeedKnot "139"^^xsd:decimal ;
+    :isTemporalPartOf :A321111ApproachSpeedTest .
+
+:A321111TestApproach3 a :ApproachTest ;
+    rdfs:label "A321-111 Approach Test 3"@en ;
+    skos:definition "The third approach test in the A321-111 approach-speed test process."@en ;
+    :hasApproachSpeedKnot "139"^^xsd:decimal ;
+    :isTemporalPartOf :A321111ApproachSpeedTest .
+
+:A321111TestApproach4 a :ApproachTest ;
+    rdfs:label "A321-111 Approach Test 4"@en ;
+    skos:definition "The fourth approach test in the A321-111 approach-speed test process."@en ;
+    :hasApproachSpeedKnot "139"^^xsd:decimal ;
+    :isTemporalPartOf :A321111ApproachSpeedTest .
+
+:A321111TestApproach5 a :ApproachTest ;
+    rdfs:label "A321-111 Approach Test 5"@en ;
+    skos:definition "The fifth approach test in the A321-111 approach-speed test process."@en ;
+    :hasApproachSpeedKnot "140"^^xsd:decimal ;
+    :isTemporalPartOf :A321111ApproachSpeedTest .
+
+:A321111AverageApproachSpeed a :MeasurementUnit ;
+    rdfs:label "A321-111 average maximum approach speed"@en ;
+    skos:definition "The average maximum approach speed obtained from five A321-111 approach tests."@en ;
+    :hasAverageApproachSpeedKnot "139"^^xsd:decimal ;
+    :isMeasurementUnitOf :Knot .
+
+# ============================================================
+# TASK 3 — SOC Aerospace Engineer entries
+# ============================================================
+
+:SOC_17_2010 a :ActOfAircraftProcessing ;
+    rdfs:label "SOC: 17-2010 Aerospace Engineers"@en ;
+    skos:definition "A broad SOC occupational category for Aerospace Engineers."@en ;
+    :isAbout :AircraftDesignArtifact ;
+    :realizes :AerospaceEngineerAdaptabilityEvaluation ;
+    :isOutputOf :AerospaceEngineerProcessing .
+
+:SOC_17_2011 a :ActOfAircraftProcessing ;
+    rdfs:label "SOC: 17-2011 Aerospace Engineers"@en ;
+    skos:definition "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques."@en ;
+    :isAbout :AircraftDesignArtifact ;
+    :realizes :AerospaceEngineerAdaptabilityEvaluation ;
+    :isOutputOf :AerospaceEngineerProcessing .
+
+:SOC_17_3021 a :ActOfAircraftProcessing ;
+    rdfs:label "SOC: 17-3021 Aerospace Engineer — Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    skos:definition "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data."@en ;
+    :isAbout :AircraftDesignArtifact ;
+    :realizes :AerospaceEngineerAdaptabilityEvaluation ;
+    :isOutputOf :AerospaceEngineerProcessing .
+
+:AircraftDesignArtifact a :ArtifactDesign ;
+    rdfs:label "Artifact Design"@en ;
+    skos:definition "An artifact design associated with aircraft engineering and manufacture."@en .
+
+:AerospaceEngineerAdaptabilityEvaluation a :AdaptabilityEvaluation ;
+    rdfs:label "Aerospace Engineer Adaptability Evaluation"@en ;
+    skos:definition "An evaluation of the adaptability of materials and equipment to aircraft design and manufacture."@en ;
+    :inheresIn :AircraftDesignArtifact .
+
+:AerospaceEngineerProcessing a :ActOfAircraftProcessing ;
+    rdfs:label "Aerospace Engineer Aircraft Processing"@en ;
+    skos:definition "An act of processing associated with aircraft engineering and evaluation."@en .
+
+# ============================================================
+# TASK 4 — OCC Aerospace Engineer employment data
+# ============================================================
+
+:OCC_17_2010 a :ActOfMeasuring ;
+    rdfs:label "OCC: 17-2010 Aerospace Engineers"@en ;
+    skos:definition "A national employment and wage record for Aerospace Engineers in the broad occupational group."@en ;
+
+    :hasArea :USArea ;
+    :hasAreaCode "99"^^xsd:integer ;
+    :hasAreaTitle "U.S."@en ;
+    :hasAreaType "1"^^xsd:integer ;
+    :hasPrimaryState "US"@en ;
+
+    :hasNAICS "0"^^xsd:integer ;
+    :hasNAICSTitle "Cross-industry"@en ;
+    :hasIndustryGroup "cross-industry"@en ;
+
+    :ownCode "1235"^^xsd:integer ;
+    :hasOccupationCode "17-2010"@en ;
+    :hasOccupationTitle "Aerospace Engineers"@en ;
+    :oGroup :BroadOccupationalGroup ;
+
+    :hasTotalEmployment :TotalEmployment_17_2010 ;
+    :hasTotalEmploymentValue "68440"^^xsd:integer ;
+    :hasEmploymentRelativeStandardError "2.3"^^xsd:decimal ;
+
+    :hasHourlyMeanWage "67.88"^^xsd:decimal ;
+    :hasAnnualMeanWage "141180"^^xsd:integer ;
+    :hasMeanWageRelativeStandardError "0.8"^^xsd:decimal ;
+
+    :hasHourlyWagePercentile10 "41.04"^^xsd:decimal ;
+    :hasHourlyWagePercentile25 "50.36"^^xsd:decimal ;
+    :hasHourlyMedianWage "64.82"^^xsd:decimal ;
+    :hasHourlyWagePercentile75 "83.88"^^xsd:decimal ;
+    :hasHourlyWagePercentile90 "98.97"^^xsd:decimal ;
+
+    :hasAnnualWagePercentile10 "85350"^^xsd:integer ;
+    :hasAnnualWagePercentile25 "104740"^^xsd:integer ;
+    :hasAnnualMedianWage "134830"^^xsd:integer ;
+    :hasAnnualWagePercentile75 "174480"^^xsd:integer ;
+    :hasAnnualWagePercentile90 "205850"^^xsd:integer .
+
+:OCC_17_2011 a :ActOfMeasuring ;
+    rdfs:label "OCC: 17-2011 Aerospace Engineers"@en ;
+    skos:definition "A national employment and wage record for Aerospace Engineers in the detailed occupational group."@en ;
+
+    :hasArea :USArea ;
+    :hasAreaCode "99"^^xsd:integer ;
+    :hasAreaTitle "U.S."@en ;
+    :hasAreaType "1"^^xsd:integer ;
+    :hasPrimaryState "US"@en ;
+
+    :hasNAICS "0"^^xsd:integer ;
+    :hasNAICSTitle "Cross-industry"@en ;
+    :hasIndustryGroup "cross-industry"@en ;
+
+    :ownCode "1235"^^xsd:integer ;
+    :hasOccupationCode "17-2011"@en ;
+    :hasOccupationTitle "Aerospace Engineers"@en ;
+    :oGroup :DetailedOccupationalGroup ;
+
+    :hasTotalEmployment :TotalEmployment_17_2011 ;
+    :hasTotalEmploymentValue "68440"^^xsd:integer ;
+    :hasEmploymentRelativeStandardError "2.3"^^xsd:decimal ;
+
+    :hasHourlyMeanWage "67.88"^^xsd:decimal ;
+    :hasAnnualMeanWage "141180"^^xsd:integer ;
+    :hasMeanWageRelativeStandardError "0.8"^^xsd:decimal ;
+
+    :hasHourlyWagePercentile10 "41.04"^^xsd:decimal ;
+    :hasHourlyWagePercentile25 "50.36"^^xsd:decimal ;
+    :hasHourlyMedianWage "64.82"^^xsd:decimal ;
+    :hasHourlyWagePercentile75 "83.88"^^xsd:decimal ;
+    :hasHourlyWagePercentile90 "98.97"^^xsd:decimal ;
+
+    :hasAnnualWagePercentile10 "85350"^^xsd:integer ;
+    :hasAnnualWagePercentile25 "104740"^^xsd:integer ;
+    :hasAnnualMedianWage "134830"^^xsd:integer ;
+    :hasAnnualWagePercentile75 "174480"^^xsd:integer ;
+    :hasAnnualWagePercentile90 "205850"^^xsd:integer .
+
+:OCC_17_3021 a :ActOfMeasuring ;
+    rdfs:label "OCC: 17-3021 Aerospace Engineer — Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    skos:definition "A national employment and wage record for Aerospace Engineering and Operations Technologists and Technicians."@en ;
+
+    :hasArea :USArea ;
+    :hasAreaCode "99"^^xsd:integer ;
+    :hasAreaTitle "U.S."@en ;
+    :hasAreaType "1"^^xsd:integer ;
+    :hasPrimaryState "US"@en ;
+
+    :hasNAICS "0"^^xsd:integer ;
+    :hasNAICSTitle "Cross-industry"@en ;
+    :hasIndustryGroup "cross-industry"@en ;
+
+    :ownCode "1235"^^xsd:integer ;
+    :hasOccupationCode "17-3021"@en ;
+    :hasOccupationTitle "Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    :oGroup :DetailedOccupationalGroup ;
+
+    :hasTotalEmployment :TotalEmployment_17_3021 ;
+    :hasTotalEmploymentValue "9060"^^xsd:integer ;
+    :hasEmploymentRelativeStandardError "4.3"^^xsd:decimal ;
+
+    :hasHourlyMeanWage "41.5"^^xsd:decimal ;
+    :hasAnnualMeanWage "86330"^^xsd:integer ;
+    :hasMeanWageRelativeStandardError "1.4"^^xsd:decimal ;
+
+    :hasHourlyWagePercentile10 "25.83"^^xsd:decimal ;
+    :hasHourlyWagePercentile25 "31.04"^^xsd:decimal ;
+    :hasHourlyMedianWage "38.38"^^xsd:decimal ;
+    :hasHourlyWagePercentile75 "49.14"^^xsd:decimal ;
+    :hasHourlyWagePercentile90 "57.91"^^xsd:decimal ;
+
+    :hasAnnualWagePercentile10 "53730"^^xsd:integer ;
+    :hasAnnualWagePercentile25 "64570"^^xsd:integer ;
+    :hasAnnualMedianWage "79830"^^xsd:integer ;
+    :hasAnnualWagePercentile75 "102220"^^xsd:integer ;
+    :hasAnnualWagePercentile90 "120440"^^xsd:integer .
+
+:USArea a owl:NamedIndividual ;
+    rdfs:label "U.S."@en ;
+    skos:definition "The geographic area represented by the employment record."@en .
+
+:BroadOccupationalGroup a owl:NamedIndividual ;
+    rdfs:label "broad"@en ;
+    skos:definition "The broad occupational group classification in the employment data."@en .
+
+:DetailedOccupationalGroup a owl:NamedIndividual ;
+    rdfs:label "detailed"@en ;
+    skos:definition "The detailed occupational group classification in the employment data."@en .
+
+:TotalEmployment_17_2010 a :TotalEmployment ;
+    rdfs:label "Total Employment"@en ;
+    skos:definition "Total employment reported for OCC 17-2010."@en ;
+    :hasTotalEmploymentValue "68440"^^xsd:integer .
+
+:TotalEmployment_17_2011 a :TotalEmployment ;
+    rdfs:label "Total Employment 17-2011"@en ;
+    skos:definition "Total employment reported for OCC 17-2011."@en ;
+    :hasTotalEmploymentValue "68440"^^xsd:integer .
+
+:TotalEmployment_17_3021 a :TotalEmployment ;
+    rdfs:label "Total Employment 17-3021"@en ;
+    skos:definition "Total employment reported for OCC 17-3021."@en ;
+    :hasTotalEmploymentValue "9060"^^xsd:integer .
+
+:OCC_17_2010_Measurement a :ActOfMeasuring ;
+    rdfs:label "Act of Measuring OCC 17-2010"@en ;
+    skos:definition "An act of measuring employment information for OCC 17-2010."@en .
+
+:OCC_17_2011_Measurement a :ActOfMeasuring ;
+    rdfs:label "Act of Measuring OCC 17-2011"@en ;
+    skos:definition "An act of measuring employment information for OCC 17-2011."@en .
+
+:OCC_17_3021_Measurement a :ActOfMeasuring ;
+    rdfs:label "Act of Measuring OCC 17-3021"@en ;
+    skos:definition "An act of measuring employment information for OCC 17-3021."@en .
