@@ -1,0 +1,110 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<https://example.org/project3/ccot-mapping> a owl:Ontology .
+
+# CCO temporal regions HAVE a duration; they are not themselves time:Duration
+# (time:Duration is the measured amount: a number scaled by a temporal unit).
+
+# Second
+cco:ont00000992 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Minute
+cco:ont00000085 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Hour
+cco:ont00001058 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Day
+cco:ont00000800 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Week
+cco:ont00000619 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Month
+cco:ont00000225 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Year
+cco:ont00000832 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Multi-Second Temporal Interval
+cco:ont00001154 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Multi-Minute Temporal Interval
+cco:ont00001166 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Multi-Hour Temporal Interval
+cco:ont00000063 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Multi-Day Temporal Interval
+cco:ont00000211 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Multi-Week Temporal Interval
+cco:ont00000810 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Multi-Month Temporal Interval
+cco:ont00000329 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Multi-Year Temporal Interval
+cco:ont00001206 rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom time:Duration
+] .
+
+# Time of Day is a temporal instant
+cco:ont00000223 rdfs:subClassOf time:Instant .
