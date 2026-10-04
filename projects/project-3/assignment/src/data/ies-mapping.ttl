@@ -1,0 +1,6 @@
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# IES PeriodOfTime (can be an arbitrary period) while BFO_000011 is an occurent entity part of spacetime.  BFO is 3D while IES is 4D. 
+ies:PeriodOfTime rdfs:subClassOf obo:BFO_0000011 .

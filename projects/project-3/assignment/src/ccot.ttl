@@ -8,6 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @base <https://www.commoncoreontologies.org/TimeOntology> .
 
 <https://www.commoncoreontologies.org/TimeOntology> rdf:type owl:Ontology ;
@@ -642,6 +643,163 @@ cco:ont00001206 rdf:type owl:Class ;
                  rdfs:label "Multi-Year Temporal Interval"@en ;
                  skos:definition "A one-dimensional temporal region that is measured in Years and spans at least one Year."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/TimeOntology"^^xsd:anyURI .
+
+
+#########################################
+## SLBacek extensions
+######################################### 
+##Multi-Minute Temporal Interval is a time duration
+cco:ont00001166 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitMinute
+                        ]
+  ] .
+
+  cco:ont00001154 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitSecond
+                        ]
+  ] .
+
+  cco:ont00000329 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitMonth
+                        ]
+  ] .
+
+  cco:ont00000063   rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitHour
+                        ]
+  ] .
+
+cco:ont00000211 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitDay
+                        ]
+  ] .
+
+  cco:ont00000810 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitWeek
+                        ]
+  ] .
+
+  cco:ont00001206 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitYear
+                        ]
+  ] .
+####end multi interval duration definitions
+
+####start individual interval duration definitions
+cco:ont00000085 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitMinute
+                        ]
+  ] .
+
+  cco:ont00000225 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitMonth
+                        ]
+  ] .
+
+cco:ont00001058 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitHour
+                        ]
+  ] .
+
+  cco:ont00000832 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitYear
+                        ]
+  ] .
+
+cco:ont00000619 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitWeek
+                        ]
+  ] .
+
+  cco:ont00008000 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitDay
+                        ]
+  ] .
+cco:ont00000992 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:hasDuration ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitSecond
+                        ]
+  ] .
+
+  cco:ont00000223 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:inTemporalPosition ;
+    owl:someValuesFrom [a owl:Restriction ;
+                         owl:onProperty time:unitType ;
+                         owl:hasvalue time:unitDay
+                        ]
+  ] . 
+
+  cco:ont00000359 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:inTimePosition ;
+    owl:someValuesFrom  time:TimePosition
+  ] .
+
+  cco:ont00000223 rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty time:inTemporalPosition ;
+    owl:someValuesFrom  time:TemporalPosition
+  ] .
+
+
+#####################
+
 
 
 ###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

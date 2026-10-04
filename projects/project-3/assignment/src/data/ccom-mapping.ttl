@@ -1,0 +1,17 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+
+<http://www.semanticweb.org/shannon/ontologies/project3/ccom-mapping>
+    a owl:Ontology ;
+    rdfs:comment "CCOM to QUDT class mappings (Project 3, step 8 re-run)." .
+
+cco:ont00001357 a owl:Class ;
+    rdfs:label "Measurement Unit of Time"@en .
+
+qudt:TimeUnit a owl:Class ;
+    rdfs:label "Time Unit"@en .
+
+# Same scope: units used as standards for measuring time / temporal regions
+cco:ont00001357 owl:equivalentClass qudt:TimeUnit .

@@ -12,6 +12,8 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cco: <https://www.commoncoreontologies.org/UnitsOfMeasureOntology> .
+
 
 dc:contributor
   rdf:type owl:AnnotationProperty ;
@@ -1790,3 +1792,14 @@ skos:closeMatch
 skos:exactMatch
   rdf:type rdf:Property ;
 .
+
+#################################################################
+# Added Content - SLBacek
+#################################################################
+# Time Unit is a unit of measurement
+qudt-v1:TimeUnit rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty cco:isMeasurementUnitOf ;
+    owl:someValuesFrom cco:MeasurementInformationContentEntity;
+] .
+
