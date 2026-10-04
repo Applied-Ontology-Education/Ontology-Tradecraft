@@ -23,17 +23,14 @@ CORE:A320_Neo_Engine_1 rdf:type owl:NamedIndividual ,
                                 www:ont00000533 ;
                        owl:differentFrom CORE:A320_Neo_Engine_2 ;
                        rdfs:label "A320 NEO Engine 1" ;
-                       skos:definition ""@en ,
-                                       "'Jet Engine'" .
+                       skos:definition  "'Jet Engine'" .                              
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A320_Neo_Engine_2
 CORE:A320_Neo_Engine_2 rdf:type owl:NamedIndividual ,
                                 www:ont00000533 ;
                        rdfs:label "A320 NEO Engine 2" ;
-                       skos:definition ""@en ,
-                                       "A320_Neo_Engine_2" .
-
+                       skos:definition "A320_Neo_Engine_2" .
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Approach_Speed_140kt_Record
 CORE:A321_Approach_Speed_140kt_Record rdf:type owl:NamedIndividual ,
@@ -41,10 +38,10 @@ CORE:A321_Approach_Speed_140kt_Record rdf:type owl:NamedIndividual ,
                                       CORE:is_measurement_record_for CORE:Airbus_A321-111 ;
                                       www:ont00001816 CORE:A321_Approach_Speed_Run_at_166449_lb ;
                                       www:ont00001863 www:ont00001646 ;
-                                      CORE:records_measured_value 140 ;
+                                      CORE:records_measured_value "140"^^xsd:integer ;
                                       rdfs:label "A321 Approach Speed 140kt Record" ;
-                                      skos:definition ""@en ,
-                                                      "A321 Approach speed 140kt record DP" .
+                                      skos:definition "A321 Approach speed 140kt record DP" .
+                                                      
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Approach_Speed_142kt_Record
@@ -53,92 +50,89 @@ CORE:A321_Approach_Speed_142kt_Record rdf:type owl:NamedIndividual ,
                                       CORE:is_measurement_record_for CORE:Airbus_A321-111 ;
                                       www:ont00001816 CORE:A321_Approach_Speed_Run_at_171520_lb ;
                                       www:ont00001863 www:ont00001646 ;
-                                      CORE:records_measured_value 142 ;
+                                      CORE:records_measured_value "142"^^xsd:integer ;
                                       rdfs:label "A321 Approach Speed 142kt Record" ;
-                                      skos:definition ""@en ,
-                                                      "A321 Approach speed 142kt record DP" .
+                                      skos:definition "A321 Approach speed 142kt record DP" .
+                                                      
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Approach_Speed_Run_at_166449_lb
 CORE:A321_Approach_Speed_Run_at_166449_lb rdf:type owl:NamedIndividual ,
                                                    CORE:Approach_Speed_Test_Process ;
                                           obo:BFO_0000057 CORE:Airbus_A321-111 ;
-                                          obo:BFO_0000139 CORE:A321_FSB_Flight_Test ;
-                                          CORE:has_reference_landing_weight_lb 166449 ;
+                                          obo:BFO_0000139 CORE:A321_FSB_Flight_Test ; # temporal part of
+                                          CORE:has_reference_landing_weight_lb "166449"^^xsd:integer ;
                                           rdfs:label "A321 Approach Speed Run at 166449 lb" ;
-                                          skos:definition ""@en ,
-                                                          "A321 Approach speed run 1 DP" .
-
+                                          skos:definition "A321 Approach speed run 1 DP" .
+                                                          
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Approach_Speed_Run_at_171520_lb
 CORE:A321_Approach_Speed_Run_at_171520_lb rdf:type owl:NamedIndividual ,
                                                    CORE:Approach_Speed_Test_Process ;
                                           obo:BFO_0000057 CORE:Airbus_A321-111 ;
                                           obo:BFO_0000139 CORE:A321_FSB_Flight_Test ;
-                                          CORE:has_reference_landing_weight_lb 171520 ;
+                                          CORE:has_reference_landing_weight_lb "171520"^^xsd:integer ;
                                           rdfs:label "A321 Approach Speed Run at 171520 lb" ;
-                                          skos:definition ""@en ,
-                                                          "A321 Approach speed run 2 DP" .
+                                          skos:definition "A321 Approach speed run 2 DP" .
+                                                          
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Approach_Test_1
 CORE:A321_Approach_Test_1 rdf:type owl:NamedIndividual ,
                                    CORE:Approach_Speed_Test_Process ;
                           CORE:is_temporal_part_of CORE:A321_Five_Approach_Test ;
-                          CORE:has_obtained_maximum_approach_speed_knot 137 ;
+                          CORE:has_obtained_maximum_approach_speed_knot "137"^^xsd:integer ;
                           rdfs:label "A321 Approach Test 1" ;
-                          skos:definition ""@en ,
-                                          "A321 Approach Test 1" .
+                          skos:definition "A321 Approach Test 1" .
+                                          
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Approach_Test_2
 CORE:A321_Approach_Test_2 rdf:type owl:NamedIndividual ,
                                    CORE:Approach_Speed_Test_Process ;
                           CORE:is_temporal_part_of CORE:A321_Five_Approach_Test ;
-                          CORE:has_obtained_maximum_approach_speed_knot 138 ;
+                          CORE:has_obtained_maximum_approach_speed_knot "138"^^xsd:integer ;
                           rdfs:label "A321 Approach Test 2" ;
-                          skos:definition ""@en ,
-                                          "A321 Approach Test 2" .
+                          skos:definition "A321 Approach Test 2" .
+                                          
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Approach_Test_3
 CORE:A321_Approach_Test_3 rdf:type owl:NamedIndividual ,
                                    CORE:Approach_Speed_Test_Process ;
                           CORE:is_temporal_part_of CORE:A321_Five_Approach_Test ;
-                          CORE:has_obtained_maximum_approach_speed_knot 139 ;
+                          CORE:has_obtained_maximum_approach_speed_knot "139"^^xsd:integer ;
                           rdfs:label "A321 Approach Test 3" ;
-                          skos:definition ""@en ,
-                                          "A321 Approach Test 3" .
+                          skos:definition "A321 Approach Test 3" .
+                                          
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Approach_Test_4
 CORE:A321_Approach_Test_4 rdf:type owl:NamedIndividual ,
                                    CORE:Approach_Speed_Test_Process ;
                           CORE:is_temporal_part_of CORE:A321_Five_Approach_Test ;
-                          CORE:has_obtained_maximum_approach_speed_knot 140 ;
+                          CORE:has_obtained_maximum_approach_speed_knot "140"^^xsd:integer ;
                           rdfs:label "A321 Approach Test 4" ;
-                          skos:definition ""@en ,
-                                          "A321 Approach Test 4" .
+                          skos:definition "A321 Approach Test 4" .
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Approach_Test_5
 CORE:A321_Approach_Test_5 rdf:type owl:NamedIndividual ,
                                    CORE:Approach_Speed_Test_Process ;
                           CORE:is_temporal_part_of CORE:A321_Five_Approach_Test ;
-                          CORE:has_obtained_maximum_approach_speed_knot 141 ;
+                          CORE:has_obtained_maximum_approach_speed_knot "141"^^xsd:integer ;
                           rdfs:label "A321 Approach Test 5" ;
-                          skos:definition ""@en ,
-                                          "A321 Approach Test 5" .
-
+                          skos:definition "A321 Approach Test 5" .
+                                          
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Design_and_Build_Process
 CORE:A321_Design_and_Build_Process rdf:type owl:NamedIndividual ,
                                             CORE:Act_of_Aircraft_Processing ;
                                    obo:BFO_0000055 CORE:Aerospace_Engineer_Role_1 ;
-                                   obo:BFO_0000117 CORE:A321_Material_Adaptability_Evalutation ;
+                                   obo:BFO_0000117 CORE:A321_Material_Adaptability_Evaluation ;
+                                   www:ont00001833 CORE:Aerospace_Engineer_Person ;
                                    rdfs:label "A321 Design and Build Process" ;
-                                   skos:definition ""@en ,
-                                                   "A321 Design and Build Process" .
+                                   skos:definition "The act of designing, constructing, and testing the Airbus A321-111 airframe, carried out by an aerospace engineer."@en . 
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_FSB_Flight_Test
@@ -147,9 +141,8 @@ CORE:A321_FSB_Flight_Test rdf:type owl:NamedIndividual ,
                           obo:BFO_0000057 CORE:Airbus_A321-111 ;
                           www:ont00001833 CORE:Federal_Aviation_Administration ;
                           rdfs:label "A321 FSB Flight Test" ;
-                          skos:definition ""@en ,
-                                          "Flight test for A321 by FSB" .
-
+                          skos:definition "Flight test for A321 by FSB" .
+                                          
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_FSB_Report
 CORE:A321_FSB_Report rdf:type owl:NamedIndividual ,
@@ -160,36 +153,33 @@ CORE:A321_FSB_Report rdf:type owl:NamedIndividual ,
                               ] ;
                      CORE:has_issuing_organization CORE:Federal_Aviation_Administration ;
                      www:ont00001808 CORE:Airbus_A321_Specification ;
-                     www:ont00001942 CORE:AAC_D ;
+                     www:ont00001942 CORE:AAC_D;  # prescribes
                      rdfs:label "A321 FSB Report" ;
-                     skos:definition ""@en ,
-                                     "report by the FSB for A321" .
-
+                     skos:definition "report by the FSB for A321" .
+                                     
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Five_Approach_Test
 CORE:A321_Five_Approach_Test rdf:type owl:NamedIndividual ,
                                       CORE:Test_Process ;
                              rdfs:label "A321-111 Five Approach Test" ;
-                             skos:definition ""@en ,
-                                             "A321 Five Approach Test" .
+                             skos:definition "A321 Five Approach Test" .
+                                             
 
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Material_Adaptability_Evaluation
+CORE:A321_Material_Adaptability_Evaluation rdf:type owl:NamedIndividual ,
+      CORE:Adaptability_Evaluation ;
+      www:ont00001833 CORE:Aerospace_Engineer_Person ;
+      rdfs:label "A321 Material Adaptability Evaluation" ;
+      skos:definition "The appraisal of the suitability of materials and equipment of the Airbus A321-111 airframe against the A321 artifact design" .
 
-###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Material_Adaptability_Evalutation
-CORE:A321_Material_Adaptability_Evalutation rdf:type owl:NamedIndividual ,
-                                                     CORE:Adaptability_Evaluation ;
-                                            rdfs:label "A321 Material Adaptability Evaluation" ;
-                                            skos:definition ""@en ,
-                                                            "A321 Material Adaptability Evalutation" .
-
-
+                                                            
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#A321_Prescribed_Maximum_Approach_Speed
 CORE:A321_Prescribed_Maximum_Approach_Speed rdf:type owl:NamedIndividual ,
                                                      www:ont00000965 ;
-                                            CORE:has_maximum_approach_speed_knot 142 ;
+                                            CORE:has_maximum_approach_speed_knot "142"^^xsd:integer ;
                                             rdfs:label "A321-111 Prescribed Maximum Approach Speed" ;
-                                            skos:definition ""@en ,
-                                                            "A321-111 Prescribed Maximum Approach Speed" .
-
+                                            skos:definition "A321-111 Prescribed Maximum Approach Speed" .
+                                                            
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#AAC_C
 CORE:AAC_C rdf:type owl:NamedIndividual ,
@@ -199,9 +189,8 @@ CORE:AAC_C rdf:type owl:NamedIndividual ,
            CORE:is_designation_in_scheme CORE:FAA_AAC_Scheme ;
            CORE:has_code_value "C" ;
            rdfs:label "AAC C" ;
-           skos:definition ""@en ,
-                           "airport approach category C DP" .
-
+           skos:definition "airport approach category C DP" .
+                           
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#AAC_D
 CORE:AAC_D rdf:type owl:NamedIndividual ,
@@ -210,9 +199,7 @@ CORE:AAC_D rdf:type owl:NamedIndividual ,
            CORE:is_designation_in_scheme CORE:FAA_AAC_Scheme ;
            CORE:has_code_value "D" ;
            rdfs:label "AAC D" ;
-           skos:definition ""@en ,
-                           "airport approach category D DP" .
-
+           skos:definition "airport approach category D DP" .
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#ADG_III
 CORE:ADG_III rdf:type owl:NamedIndividual ,
@@ -221,9 +208,8 @@ CORE:ADG_III rdf:type owl:NamedIndividual ,
              CORE:is_designation_in_scheme CORE:FAA_Aircraft_Design_Group_Scheme ;
              CORE:has_code_value "III" ;
              rdfs:label "ADG III" ;
-             skos:definition ""@en ,
-                             "Design group III DP" .
-
+             skos:definition "Design group III DP" .
+                             
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Act_of_Measuring_Employment_SOC_17_2010_US_May_2024
 CORE:Act_of_Measuring_Employment_SOC_17_2010_US_May_2024 rdf:type owl:NamedIndividual ,
@@ -259,18 +245,15 @@ CORE:Act_of_Measuring_Employment_SOC_17_3021_US_May_2024 rdf:type owl:NamedIndiv
 CORE:Aerospace_Engineer_Person rdf:type owl:NamedIndividual ,
                                         www:ont00001262 ;
                                rdfs:label "Aerospace Engineer Person" ;
-                               skos:definition ""@en ,
-                                               "Aerospace Engineer Person" .
-
-
+                               skos:definition "Aerospace Engineer Person" .
+                                               
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aerospace_Engineer_Role_1
 CORE:Aerospace_Engineer_Role_1 rdf:type owl:NamedIndividual ,
                                         CORE:Aerospace_Engineer_Occupation_Role ;
                                obo:BFO_0000197 CORE:Aerospace_Engineer_Person ;
                                rdfs:label "Aerospace Engineer Role 1" ;
-                               skos:definition ""@en ,
-                                               "Aerospace Engineer Role 1" .
-
+                               skos:definition "Aerospace Engineer Role 1" .
+                                               
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Airbus
 CORE:Airbus rdf:type owl:NamedIndividual ,
@@ -278,7 +261,7 @@ CORE:Airbus rdf:type owl:NamedIndividual ,
             CORE:has_manufacture_name "Airbus" ;
             rdfs:comment "Airbus" ;
             rdfs:label "Airbus" ;
-            skos:definition ""@en .
+            skos:definition "Name of the manufacturer".
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Airbus_A320_NEO
@@ -288,9 +271,8 @@ CORE:Airbus_A320_NEO rdf:type owl:NamedIndividual ,
                                      CORE:A320_Neo_Engine_2 ;
                      CORE:has_specification CORE:Airbus_A320_Neo_Specification ;
                      rdfs:label "Airbus A320 NEO" ;
-                     skos:definition ""@en ,
-                                     "Plane code for Airbus A320 Neo" .
-
+                     skos:definition "Plane code for Airbus A320 Neo" .
+                                     
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Airbus_A320_Neo_Specification
 CORE:Airbus_A320_Neo_Specification rdf:type owl:NamedIndividual ,
@@ -316,33 +298,30 @@ CORE:Airbus_A320_Neo_Specification rdf:type owl:NamedIndividual ,
                                    CORE:has_FAA_registration_count 147 ;
                                    CORE:has_FAA_registry_entry_indicator "true"^^xsd:boolean ;
                                    CORE:has_ICAO_code "A20N" ;
-                                   CORE:has_approach_speed_knot 137 ;
-                                   CORE:has_cockpit_to_main_gear_ft 50.2 ;
-                                   CORE:has_length_ft 123.3 ;
-                                   CORE:has_main_gear_width_ft 29.4 ;
-                                   CORE:has_maximum_allowable_landing_weight_lb 148591 ;
-                                   CORE:has_maximum_takeoff_gross_weight_lb 174165 ;
-                                   CORE:has_minimum_parking_position_area_ft2 16358.3 ;
+                                   CORE:has_approach_speed_knot "137"^^xsd:integer ;
+                                   CORE:has_cockpit_to_main_gear_ft "50.2"^^xsd:decimal ;
+                                   CORE:has_length_ft "123.3"^^xsd:decimal ;
+                                   CORE:has_main_gear_width_ft "29.4"^^xsd:decimal ;
+                                   CORE:has_maximum_allowable_landing_weight_lb "148591"^^xsd:integer ;
+                                   CORE:has_maximum_takeoff_gross_weight_lb "174165"^^xsd:integer ;
+                                   CORE:has_minimum_parking_position_area_ft2 "16358.3"^^xsd:decimal ;
                                    CORE:has_model_BADA "Airbus A320-271N" ;
                                    CORE:has_model_FAA "Airbus A320 Neo" ;
                                    CORE:has_remark_text "AAC validated by Flight Standardization Board (FSB) report." ;
-                                   CORE:has_tail_height_at_OEW_ft 39.6 ;
-                                   CORE:has_wheelbase_ft 41.5 ;
-                                   CORE:has_wingspan_with_winglets_or_sharklets_ft 117.5 ;
+                                   CORE:has_tail_height_at_OEW_ft "39.6"^^xsd:decimal ;
+                                   CORE:has_wheelbase_ft "41.5"^^xsd:decimal ;
+                                   CORE:has_wingspan_with_winglets_or_sharklets_ft "117.5"^^xsd:decimal ;
                                    rdfs:label "Airbus A320 Neo Specification" ;
-                                   skos:definition ""@en ,
-                                                   "Airbus A320 Neo Specification DP" .
-
+                                   skos:definition "Airbus A320 Neo Specification DP" .
+                                                   
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Airbus_A321-111
 CORE:Airbus_A321-111 rdf:type owl:NamedIndividual ,
                               CORE:Airbus_A321_Aircraft ;
                      CORE:has_specification CORE:Airbus_A321_Specification ;
                      rdfs:label "Airbus A321-111 Aircraft frame" ;
-                     skos:definition ""@en ,
-                                     "Type of plane A321" .
-
-
+                     skos:definition  "Type of plane A321" .
+                                    
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Airbus_A321_Specification
 CORE:Airbus_A321_Specification rdf:type owl:NamedIndividual ,
                                         CORE:Jet_Specification ,
@@ -371,27 +350,26 @@ CORE:Airbus_A321_Specification rdf:type owl:NamedIndividual ,
                                CORE:has_FAA_registry_entry_indicator "true"^^xsd:boolean ;
                                CORE:has_ICAO_code "A321" ;
                                CORE:has_TMFS_FY24_operation_count "1364686"^^xsd:nonNegativeInteger ;
-                               CORE:has_approach_speed_knot 142 ;
-                               CORE:has_cockpit_to_main_gear_ft 64.2 ;
-                               CORE:has_length_ft 146.0 ;
-                               CORE:has_main_gear_width_ft 29.4 ;
-                               CORE:has_maximum_allowable_landing_weight_lb 171520 ;
-                               CORE:has_maximum_approach_speed_knot 142 ;
-                               CORE:has_maximum_takeoff_gross_weight_lb 200621 ;
-                               CORE:has_minimum_approach_speed_knot 140 ;
-                               CORE:has_minimum_parking_position_area_ft2 19256.3 ;
+                               CORE:has_approach_speed_knot "142"^^xsd:integer ;
+                               CORE:has_cockpit_to_main_gear_ft "64.2"^^xsd:decimal ;
+                               CORE:has_length_ft "146.0"^^xsd:decimal ;
+                               CORE:has_main_gear_width_ft "29.4"^^xsd:decimal ;
+                               CORE:has_maximum_allowable_landing_weight_lb "171520"^^xsd:integer ;
+                               CORE:has_maximum_approach_speed_knot "142"^^xsd:integer ;
+                               CORE:has_maximum_takeoff_gross_weight_lb "200621"^^xsd:integer ;
+                               CORE:has_minimum_approach_speed_knot "140"^^xsd:integer ;
+                               CORE:has_minimum_parking_position_area_ft2 "19256.3"^^xsd:decimal ;
                                CORE:has_model_BADA "Airbus A321-111" ;
                                CORE:has_model_FAA "Airbus A321" ;
                                CORE:has_remark_text "The final approach speed is 140 knot at a MALW of 166,449 lb and classifies the aircraft into the AAC C while approach speed is 142 knot at a MALW of 171,520 lb and classifies into the AAC D. AAC validated by Flight Standardization Board (FSB) report." ;
-                               CORE:has_tail_height_at_OEW_ft 39.7 ;
-                               CORE:has_wheelbase_ft 55.5 ;
-                               CORE:has_wingspan_with_winglets_or_sharklets_ft 117.5 ;
-                               CORE:has_wingspan_without_winglets_or_sharklets_ft 111.9 ;
+                               CORE:has_tail_height_at_OEW_ft "39.7"^^xsd:decimal ;
+                               CORE:has_wheelbase_ft "55.5"^^xsd:decimal ;
+                               CORE:has_wingspan_with_winglets_or_sharklets_ft "117.5"^^xsd:decimal ;
+                               CORE:has_wingspan_without_winglets_or_sharklets_ft "111.9"^^xsd:decimal ;
                                rdfs:label "Airbus A321-111" ,
                                           "Artifact Design" ;
-                               skos:definition ""@en ,
-                                               "Airbus A321 Specification DP" .
-
+                               skos:definition "Airbus A321 Specification DP" .
+                                               
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Bureau_of_Labor_Statistics
 CORE:Bureau_of_Labor_Statistics rdf:type owl:NamedIndividual ,
@@ -457,7 +435,7 @@ CORE:FAA_CWT_Scheme rdf:type owl:NamedIndividual ,
                     CORE:has_issuing_organization CORE:Federal_Aviation_Administration ;
                     CORE:has_effective_date "2024-01-01T00:00:00Z"^^xsd:dateTime ;
                     rdfs:label "FAA CWT Scheme" ;
-                    skos:definition "FSS CWT Schem DP" .
+                    skos:definition "FAA CWT Scheme DP" .
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#FAA_LAHSO_Group_Scheme
@@ -636,21 +614,21 @@ CORE:OEWS_May2024_Estimate_SOC_17_2010 rdf:type owl:NamedIndividual ,
 CORE:OEWS_May_2024_Estimate_Record_SOC_17_2010 rdf:type owl:NamedIndividual ,
                                                         CORE:Employment_Estimate_Record ;
                                                obo:BFO_0000101 CORE:OEWS_May2024_Estimate_SOC_17_2010 ;
-                                               CORE:has_annual_wage_pct10_value 85350 ;
-                                               CORE:has_annual_wage_pct25_value 104740 ;
-                                               CORE:has_annual_wage_pct50_value 134830 ;
-                                               CORE:has_annual_wage_pct75_value 174480 ;
-                                               CORE:has_annual_wage_pct90_value 205850 ;
-                                               CORE:has_employment_count_value 68440 ;
-                                               CORE:has_employment_prse_percent 2.3 ;
-                                               CORE:has_hourly_wage_pct10_value 41.04 ;
-                                               CORE:has_hourly_wage_pct25_value 50.36 ;
-                                               CORE:has_hourly_wage_pct50_value 64.82 ;
-                                               CORE:has_hourly_wage_pct75_value 83.88 ;
-                                               CORE:has_hourly_wage_pct90_value 98.97 ;
-                                               CORE:has_mean_annual_wage_value 141180 ;
-                                               CORE:has_mean_hourly_wage_value 67.88 ;
-                                               CORE:has_mean_wage_prse_percent 0.8 ;
+                                               CORE:has_annual_wage_pct10_value "85350"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct25_value "104740"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct50_value "134830"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct75_value "174480"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct90_value "205850"^^xsd:integer ;
+                                               CORE:has_employment_count_value "68440"^^xsd:integer ;
+                                               CORE:has_employment_prse_percent "2.3"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct10_value "41.04"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct25_value "50.36"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct50_value "64.82"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct75_value "83.88"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct90_value "98.97"^^xsd:decimal ;
+                                               CORE:has_mean_annual_wage_value "141180"^^xsd:integer ;
+                                               CORE:has_mean_hourly_wage_value "67.88"^^xsd:decimal ;
+                                               CORE:has_mean_wage_prse_percent "0.8"^^xsd:decimal ;
                                                rdfs:label "OEWS May 2024 Estimate Record SOC 17 2010" ;
                                                skos:definition "OEWS May 2024 Estimate Record SOC 17 2010" .
 
@@ -659,21 +637,21 @@ CORE:OEWS_May_2024_Estimate_Record_SOC_17_2010 rdf:type owl:NamedIndividual ,
 CORE:OEWS_May_2024_Estimate_Record_SOC_17_2011 rdf:type owl:NamedIndividual ,
                                                         CORE:Employment_Estimate_Record ;
                                                obo:BFO_0000101 CORE:OEWS_May_2024_Estimate_SOC_17_2011 ;
-                                               CORE:has_annual_wage_pct10_value 85350 ;
-                                               CORE:has_annual_wage_pct25_value 104740 ;
-                                               CORE:has_annual_wage_pct50_value 134830 ;
-                                               CORE:has_annual_wage_pct75_value 174480 ;
-                                               CORE:has_annual_wage_pct90_value 205850 ;
-                                               CORE:has_employment_count_value 68440 ;
-                                               CORE:has_employment_prse_percent 2.3 ;
-                                               CORE:has_hourly_wage_pct10_value 41.04 ;
-                                               CORE:has_hourly_wage_pct25_value 50.36 ;
-                                               CORE:has_hourly_wage_pct50_value 64.82 ;
-                                               CORE:has_hourly_wage_pct75_value 83.88 ;
-                                               CORE:has_hourly_wage_pct90_value 98.97 ;
-                                               CORE:has_mean_annual_wage_value 141180 ;
-                                               CORE:has_mean_hourly_wage_value 67.88 ;
-                                               CORE:has_mean_wage_prse_percent 0.8 ;
+                                               CORE:has_annual_wage_pct10_value "85350"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct25_value "104740"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct50_value "134830"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct75_value "174480"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct90_value "205850"^^xsd:integer ;
+                                               CORE:has_employment_count_value "68440"^^xsd:integer ;
+                                               CORE:has_employment_prse_percent "2.3"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct10_value "41.04"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct25_value "50.36"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct50_value "64.82"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct75_value "83.88"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct90_value "98.97"^^xsd:decimal ;
+                                               CORE:has_mean_annual_wage_value "141180"^^xsd:integer ;
+                                               CORE:has_mean_hourly_wage_value "67.88"^^xsd:decimal ;
+                                               CORE:has_mean_wage_prse_percent "0.8"^^xsd:decimal ;
                                                rdfs:label "OEWS May 2024 Estimate Record SOC 17 2011" ;
                                                skos:definition "OEWS May 2024 Estimate Record SOC 17 2011" .
 
@@ -682,21 +660,21 @@ CORE:OEWS_May_2024_Estimate_Record_SOC_17_2011 rdf:type owl:NamedIndividual ,
 CORE:OEWS_May_2024_Estimate_Record_SOC_17_3021 rdf:type owl:NamedIndividual ,
                                                         CORE:Employment_Estimate_Record ;
                                                obo:BFO_0000101 CORE:OEWS_May_2024_Estimate_SOC_17_3021 ;
-                                               CORE:has_annual_wage_pct10_value 53730 ;
-                                               CORE:has_annual_wage_pct25_value 64570 ;
-                                               CORE:has_annual_wage_pct50_value 79830 ;
-                                               CORE:has_annual_wage_pct75_value 102220 ;
-                                               CORE:has_annual_wage_pct90_value 120440 ;
-                                               CORE:has_employment_count_value 9060 ;
-                                               CORE:has_employment_prse_percent 0.6 ;
-                                               CORE:has_hourly_wage_pct10_value 25.83 ;
-                                               CORE:has_hourly_wage_pct25_value 31.04 ;
-                                               CORE:has_hourly_wage_pct50_value 38.38 ;
-                                               CORE:has_hourly_wage_pct75_value 49.14 ;
-                                               CORE:has_hourly_wage_pct90_value 57.91 ;
-                                               CORE:has_mean_annual_wage_value 86330 ;
-                                               CORE:has_mean_hourly_wage_value 41.50 ;
-                                               CORE:has_mean_wage_prse_percent 1.4 ;
+                                               CORE:has_annual_wage_pct10_value "53730"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct25_value "64570"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct50_value "79830"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct75_value "102220"^^xsd:integer ;
+                                               CORE:has_annual_wage_pct90_value "120440"^^xsd:integer ;
+                                               CORE:has_employment_count_value "9060"^^xsd:integer ;
+                                               CORE:has_employment_prse_percent "0.6"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct10_value "25.83"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct25_value "31.04"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct50_value "38.38"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct75_value "49.14"^^xsd:decimal ;
+                                               CORE:has_hourly_wage_pct90_value "57.91"^^xsd:decimal ;
+                                               CORE:has_mean_annual_wage_value "86330"^^xsd:integer ;
+                                               CORE:has_mean_hourly_wage_value "41.50"^^xsd:decimal ;
+                                               CORE:has_mean_wage_prse_percent "1.4"^^xsd:decimal ;
                                                rdfs:label "OEWS May 2024 Estimate Record SOC 17 3021" ;
                                                skos:definition "OEWS May 2024 Estimate Record SOC 17 3021" .
 
@@ -777,7 +755,7 @@ CORE:Occupation_Role_SOC_17_3021 rdf:type owl:NamedIndividual ,
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Own_Code_1235
 CORE:Own_Code_1235 rdf:type owl:NamedIndividual ,
                             CORE:Ownership_Designation ;
-                   CORE:has_ownership_type "1235" ;
+                   CORE:has_ownership_type "1235"^^xsd:string ;
                    rdfs:label "Own Code 1235" ;
                    skos:definition "Ownership type: 1= Federal Government; 2= State Government; 3= Local Government; 123= Federal, State, and Local Government; 235=Private, State, and Local Government; 35 = Private and Local Government; 5= Private; 57=Private, Local Government Gambling Establishments (Sector 71), and Local Government Casino Hotels (Sector 72); 58= Private plus State and Local Government Hospitals; 59= Private and Postal Service; 1235= Federal, State, and Local Government and Private Sector" .
 
@@ -841,9 +819,8 @@ CORE:SOC_17_2010 rdf:type owl:NamedIndividual ,
                  CORE:is_designation_in_scheme CORE:SOC_2018_Scheme ;
                  CORE:is_subgroup_of_designation CORE:SOC_17_2000 ;
                  CORE:has_code_value "17-2010" ;
-                 CORE:has_soc_title "Aerospace Engineers" ;
-                 rdfs:label "SOC 17 2010" ,
-                            "SOC: 17-2010 Aerospace Engineers" ;
+                 CORE:has_soc_title "Aerospace Engineer" ;
+                 rdfs:label "SOC:Aerospace Engineer 17-2010 " ;
                  skos:definition "occupation code" .
 
 
@@ -858,8 +835,8 @@ CORE:SOC_17_2011 rdf:type owl:NamedIndividual ,
                  CORE:is_subgroup_of_designation CORE:SOC_17_2010 ;
                  CORE:has_code_value "17-2011" ;
                  CORE:has_soc_title "Aerospace Engineers" ;
-                 rdfs:label "SOC: 17-2011 Aerospace Engineers" ;
-                 skos:definition "occupation code" .
+                 rdfs:label "SOC: 17-2010 Aerospace Engineers" ;
+                 skos:definition "SOC 2018 broad group 17-2010 Aerospace Engineers; it contains the single detailed occupation 17-2011 Aerospace Engineers, whose definition is: Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques."@en .
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#SOC_17_2011_Definition
@@ -905,12 +882,12 @@ CORE:SOC_17_3021 rdf:type owl:NamedIndividual ,
                             owl:someValuesFrom CORE:Aerospace_Engineering_and_Operations_Technician_Occupation_Role
                           ] ;
                  CORE:is_designation_in_scheme CORE:SOC_2018_Scheme ;
-                 CORE:is_estimate_for_occupation CORE:SOC_17_3021 ;
+                 ##CORE:is_estimate_for_occupation CORE:SOC_17_3021 ;
                  CORE:is_subgroup_of_designation CORE:SOC_17_3020 ;
                  CORE:has_code_value "17-3021" ;
                  CORE:has_soc_title "Aerospace Engineering and Operations Technologists and Technicians" ;
                  rdfs:label "SOC: 17-3021 Aerospace Engineering and Operations Technologists and Technicians" ;
-                 skos:definition "occupation code" .
+                 skos:definition "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data."@en .
 
 
 ###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#SOC_17_3021_Definition
@@ -958,7 +935,7 @@ CORE:Total_Employment_SOC_17_2011_US_May_2024 rdf:type owl:NamedIndividual ,
                                                        CORE:Total_Employment ;
                                               www:ont00001816 CORE:Act_of_Measuring_Employment_SOC_17_2011_US_May_2024 ;
                                               www:ont00001966 CORE:Employment_Amount_SOC_17_2011_US_May_2024 ;
-                                              CORE:has_estimated_total_employment_amount 68440 ;
+                                              CORE:has_estimated_total_employment_amount "68440"^^xsd:integer ;
                                               rdfs:label "Total Employment SOC 17 2011 US May 2024" ;
                                               skos:definition "Total Employment SOC 17 2011 US May 2024" .
 
@@ -968,7 +945,7 @@ CORE:Total_Employment_SOC_17_3021_US_May_2024 rdf:type owl:NamedIndividual ,
                                                        CORE:Total_Employment ;
                                               www:ont00001816 CORE:Act_of_Measuring_Employment_SOC_17_3021_US_May_2024 ;
                                               www:ont00001966 CORE:Employment_Amount_SOC_17_3021_US_May_2024 ;
-                                              CORE:has_estimated_total_employment_amount 9060 ;
+                                              CORE:has_estimated_total_employment_amount "9060"^^xsd:integer ;
                                               rdfs:label "Total Employment SOC 17 3021 US May 2024" ;
                                               skos:definition "Total Employment SOC 17 3021 US May 2024" .
 
@@ -978,7 +955,7 @@ CORE:Totla_Employment_SOC_17_2010_US_May_2024 rdf:type owl:NamedIndividual ,
                                                        CORE:Total_Employment ;
                                               www:ont00001816 CORE:Act_of_Measuring_Employment_SOC_17_2010_US_May_2024 ;
                                               www:ont00001966 CORE:Employment_Amount_SOC_17_2010_US_May_2024 ;
-                                              CORE:has_estimated_total_employment_amount 68440 ;
+                                              CORE:has_estimated_total_employment_amount "68440"^^xsd:integer  ;
                                               rdfs:label "Total Employment SOC 17 2010 US May 2024" ;
                                               skos:definition "Totla Employment SOC 17 2010 US May 2024" .
 
@@ -1001,8 +978,11 @@ CORE:detailed rdf:type owl:NamedIndividual ,
 
 ###  https://www.commoncoreontologies.org/ont00001646
 www:ont00001646 www:ont00001961 CORE:A321_Approach_Speed_140kt_Record ,
-                                CORE:A321_Approach_Speed_142kt_Record ;
+                                CORE:A321_Approach_Speed_142kt_Record ; #is measurement unit of
                 skos:definition "measurement label" .
+
+# knot is measurement unit of is an instance of Measurement Unit.
+www:ont00001646 rdf:type www:ont00000120 .
 
 ###Autograder fix
 CORE:Airbus_A320_NEO CORE:has_manufacturer CORE:Airbus ;
@@ -1012,17 +992,36 @@ CORE:Airbus_A320_NEO CORE:has_manufacturer CORE:Airbus ;
                      CORE:has_tail_height_at_OEW_ft "39.6"^^xsd:decimal .
 
  ###  Autograder-required OCC labels (same occupation codes as the SOC entries)
-CORE:SOC_17_2010 rdfs:label "OCC: 17-2010 Aerospace Engineers" .
-CORE:SOC_17_2011 rdfs:label "OCC: 17-2011 Aerospace Engineers" .
-CORE:SOC_17_3021 rdfs:label "OCC: 17-3021 Aerospace Engineering and Operations Technologists and Technicians" .
+CORE:SOC_17_2010 rdfs:label "OCC: Aerospace Engineers" .
+CORE:SOC_17_2011 rdfs:label "OCC: Aerospace Engineers" .
+CORE:SOC_17_3021 rdfs:label "OCC: Aerospace Engineering and Operations Technologists and Technicians" .
 
 ###  Autograder-required exact label
 CORE:Total_Employment_SOC_17_2011_US_May_2024 rdfs:label "Total Employment" .
 
-CORE:A321_Adaptability_Evaluation_Disposition rdf:type owl:NamedIndividual ,
-                                                       CORE:Adaptability_Evaluation_Disposition ;
-    obo:BFO_0000197 CORE:Airbus_A321-111 ;
-    rdfs:label "A321 Material Adaptability Evaluation Disposition" ;
-    skos:definition "The disposition of the A321-111 airframe to undergo material adaptability evaluation."@en .
 
-CORE:A321_Design_and_Build_Process obo:BFO_0000055 CORE:A321_Adaptability_Evaluation_Disposition .
+CORE:A321_Adaptability_Evaluation_Role rdf:type owl:NamedIndividual ,
+                                               CORE:Adaptability_Evaluation_Role ;
+    obo:BFO_0000197 CORE:Airbus_A321-111 ;
+    rdfs:label "A321 Material Adaptability Evaluation Role" ;
+    skos:definition "The role of the A321-111 airframe as the subject of a material adaptability evaluation."@en .
+
+CORE:A321_Design_and_Build_Process obo:BFO_0000055 CORE:A321_Adaptability_Evaluation_Role .
+
+###  TASK-3 output pattern: evaluation -> result (is output of) -> is about the Artifact Design
+CORE:A321_Material_Adaptability_Evaluation_Result rdf:type owl:NamedIndividual ,
+                                                          CORE:Adaptability_Evaluation_Result ;
+    www:ont00001816 CORE:A321_Material_Adaptability_Evaluation ;
+    www:ont00001808 CORE:Airbus_A321_Specification ,
+                    CORE:Airbus_A321-111 ;
+    rdfs:label "A321 Material Adaptability Evaluation Result" ;
+    skos:definition "The result of evaluating the materials and equipment of the A321-111 airframe against the A321 artifact design."@en .
+
+
+##CORE:A321_Adaptability_Evaluation_Disposition rdf:type owl:NamedIndividual ,
+  ##                                                     CORE:Adaptability_Evaluation_Disposition ;
+    ##obo:BFO_0000197 CORE:Airbus_A321-111 ;
+    ##rdfs:label "A321 Material Adaptability Evaluation Disposition" ;
+    ##skos:definition "The disposition of the A321-111 airframe to undergo material adaptability evaluation."@en .
+
+##CORE:A321_Design_and_Build_Process obo:BFO_0000055 CORE:A321_Adaptability_Evaluation_Disposition .
