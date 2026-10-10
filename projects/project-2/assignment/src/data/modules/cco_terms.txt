@@ -1,0 +1,6 @@
+https://www.commoncoreontologies.org/ont00000120
+https://www.commoncoreontologies.org/ont00000965
+https://www.commoncoreontologies.org/ont00001180
+https://www.commoncoreontologies.org/ont00001816
+https://www.commoncoreontologies.org/ont00001942
+https://www.commoncoreontologies.org/ont00001961

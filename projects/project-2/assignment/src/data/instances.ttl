@@ -1,0 +1,139 @@
+@prefix : <http://www.example.com/project2#> .
+@prefix obo: <http://purl.obolibrary.org/obo/>  .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>  .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>  .
+@prefix owl: <http://www.w3.org/2002/07/owl#>  .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://www.example.com/project2> .
+
+### Task 1 Instances
+
+:AirbusA320NEODesignSpec rdf:type :ArtifactDesign ;
+    rdfs:label "Airbus A320 NEO Design Spec"@en .
+
+### Here I opted to create an individual of the Airbus A320 Neo type that holds the required attributes. Not strictly correct, but I'm not sure about building the OWL anonymous class (yet)
+:AirbusA320NEO rdf:type :FixedWing ;
+    rdfs:label "Airbus A320 NEO"@en ;
+    obo:BFO_0000178 :Engine1 , 
+                    :Engine2 ;
+    :hasmanufacturer :Airbus ;
+    :hasModelBADA "Airbus A320-271N"^^xsd:string ;
+    :hasModelFAA "Airbus A320 Neo"^^xsd:string ;
+    :haslengthft "123.3"^^xsd:decimal ;
+    :hastailheightft "39.6"^^xsd:decimal .
+
+:Engine1 rdf:type :JetEngine ;
+    rdfs:label "Engine 1"@en .
+
+:Engine2 rdf:type :JetEngine ;
+    rdfs:label "Engine 2"@en .
+
+:Airbus rdf:type :Manufacturer ;
+    rdfs:label "Airbus"@en .
+
+### Task 2 Instances
+
+:AirbusA321111 rdf:type :ArtifactDesign ;
+    rdfs:label "Airbus A321-111"@en ;
+    cco:ont00001942 :MaxApproachSpeed .
+
+:MaxApproachSpeed rdf:type cco:ont00000965 ;
+    rdfs:label "Max Approach Speed"@en ;
+    :hasmaxapproachspeedknots "142"^^xsd:integer .
+    
+:Knot rdf:type cco:ont00000120 ;
+    rdfs:label "Knot"@en ;
+    cco:ont00001961 :MaxApproachSpeed.
+
+:TestProcess1 rdf:type :TestProcess ;
+    rdfs:label "Test Process 1"@en .
+
+:Approach1 rdf:type :Approach ;
+    rdfs:label "Approach 1"@en ;
+    obo:BFO_0000139 :TestProcess1;
+    :hasmeasuredapproachspeedknots "138"^^xsd:integer .
+
+:Approach2 rdf:type :Approach ;
+    rdfs:label "Approach 2"@en ;
+    obo:BFO_0000139 :TestProcess1;
+    :hasmeasuredapproachspeedknots "139"^^xsd:integer .
+
+:Approach3 rdf:type :Approach ;
+    rdfs:label "Approach 3"@en ;
+    obo:BFO_0000139 :TestProcess1;
+    :hasmeasuredapproachspeedknots "139"^^xsd:integer .
+
+:Approach4 rdf:type :Approach ;
+    rdfs:label "Approach 4"@en ;
+    obo:BFO_0000139 :TestProcess1;
+    :hasmeasuredapproachspeedknots "140"^^xsd:integer .
+
+:Approach5 rdf:type :Approach ;
+    rdfs:label "Approach 5"@en ;
+    obo:BFO_0000139 :TestProcess1;
+    :hasmeasuredapproachspeedknots "140"^^xsd:integer .
+
+### Task 3 Instances
+
+:SOC172010 rdf:type :SOCCode ;
+    rdfs:label "SOC:17-2010 Aerospace Engineers"@en ;
+    skos:definition "Broad occupational category for aerospace engineers."@en .
+
+:SOC172011 rdf:type :SOCCode ;
+    rdfs:label "SOC:17-2011 Aerospace Engineers"@en ;
+    skos:definition "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques."@en .
+
+:SOC173021 rdf:type :SOCCode ;
+    rdfs:label "SOC:17-3021 Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    skos:definition "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data."@en .
+
+:ActOfAircraftProcessing1 rdf:type :ActOfAircraftProcessing ;
+    rdfs:label "Act of Aircraft Processing 1"@en ;
+    obo:BFO_0000055 :AdaptabilityEvaluation1 ;
+    cco:ont00001816 :ArtifactDesign .
+
+:AdaptabilityEvaluation1 a :AdaptabilityEvaluation ;
+    rdfs:label "Adaptability Evaluation 1"@en .
+
+:Person1 a :Person ;
+    rdfs:label "Person 1"@en .
+
+:JobRole1 a :Role ;
+    rdfs:label "Job Role 1"@en ;
+    obo:BFO_0000197 :Person1 .
+
+:SOC172011 obo:IAO_0000136 :ArtifactDesign .
+
+### Task 4 Instances
+
+:ActOfMeasuring1 rdf:type :ActOfMeasuring ;
+    rdfs:label "Act of Measuring 1"@en ;
+    obo:BFO_0000055 :TotalEmploymentValue1 .
+
+:TotalEmploymentValue1 rdf:type obo:BFO_0000019 ;
+    rdfs:label "Total Employment"@en ;
+    skos:definition "the total number of individuals employed in a given occupation, as reported by BLS OEWS data"@en ;
+    :hasValue "68440"^^xsd:integer .
+
+:OCC172010 rdf:type :OCCCode ;
+    rdfs:label "OCC:17-2010 Aerospace Engineers"@en ;
+    skos:definition "Broad occupational category for aerospace engineers, per BLS OEWS data."@en ;
+    :hasArea "99"^^xsd:string ;
+    :hasOGroup "broad"^^xsd:string ;
+    :hasOwnCode "1235"^^xsd:string .
+
+:OCC172011 rdf:type :OCCCode ;
+    rdfs:label "OCC:17-2011 Aerospace Engineers"@en ;
+    skos:definition "..."@en ;
+    :hasArea "99"^^xsd:string ;
+    :hasOGroup "detailed"^^xsd:string ;
+    :hasOwnCode "1235"^^xsd:string .
+
+:OCC173021 rdf:type :OCCCode ;
+    rdfs:label "OCC:17-3021 Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    skos:definition "..."@en ;
+    :hasArea "99"^^xsd:string ;
+    :hasOGroup "detailed"^^xsd:string ;
+    :hasOwnCode "1235"^^xsd:string .
