@@ -10,16 +10,14 @@
 
 ### Task 1 Instances
 
-:AirbusA320NEOSpec-1 rdf:type :ArtifactDesign ;
-    rdfs:label "Airbus A320 NEO Spec-1"@en ;
-    obo:IAO_0000136 :AirbusA320NEO .
-
+:AirbusA320NEODesignSpec rdf:type :ArtifactDesign ;
+    rdfs:label "Airbus A320 NEO Design Spec"@en .
 
 ### Here I opted to create an individual of the Airbus A320 Neo type that holds the required attributes. Not strictly correct, but I'm not sure about building the OWL anonymous class (yet)
 :AirbusA320NEO rdf:type :FixedWing ;
     rdfs:label "Airbus A320 NEO"@en ;
     obo:BFO_0000178 :Engine1 , 
-                :Engine2 ;
+                    :Engine2 ;
     :hasmanufacturer :Airbus ;
     :hasModelBADA "Airbus A320-271N"^^xsd:string ;
     :hasModelFAA "Airbus A320 Neo"^^xsd:string ;
@@ -39,13 +37,12 @@
 
 :AirbusA321111 rdf:type :ArtifactDesign ;
     rdfs:label "Airbus A321-111"@en ;
-    cco:ont00000965 :MaxApproachSpeed .
-  
+    cco:ont00001942 :MaxApproachSpeed .
 
-:MaxApproachSpeed rdf:type cco:ont00001163 ;
+:MaxApproachSpeed rdf:type cco:ont00000965 ;
     rdfs:label "Max Approach Speed"@en ;
     :hasmaxapproachspeedknots "142"^^xsd:integer .
-
+    
 :Knot rdf:type cco:ont00000120 ;
     rdfs:label "Knot"@en ;
     cco:ont00001961 :MaxApproachSpeed.
