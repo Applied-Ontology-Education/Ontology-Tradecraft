@@ -20,13 +20,14 @@ OUTPUT_FILE = SRC_DIR / "measure_cco.ttl"
 # NAMESPACES
 # ============================================================
 
-# Canonical IRIs used for the GitHub grader checks.
+# Canonical BFO namespace.
 BFO = Namespace(
     "http://purl.obolibrary.org/obo/"
 )
 
+# Canonical CCO 2.x namespace.
 CCO = Namespace(
-    "https://www.ontologyrepository.com/CommonCoreOntologies/"
+    "https://www.commoncoreontologies.org/"
 )
 
 # Compatibility namespaces used by the supplied Project 4
@@ -45,42 +46,48 @@ EX = Namespace(
 
 
 # ============================================================
-# CANONICAL CLASSES AND PROPERTIES
+# CANONICAL BFO / CCO CLASSES AND PROPERTIES
 # ============================================================
 
-# Artifact
+# CCO Material Artifact
 ARTIFACT_CLASS = URIRef(
-   "https://www.commoncoreontologies.org/ont00000995"
+    "https://www.commoncoreontologies.org/ont00000995"
 )
 
-# Specifically Dependent Continuant
+# BFO Specifically Dependent Continuant
 BFO_SDC_CLASS = URIRef(
     "http://purl.obolibrary.org/obo/BFO_0000020"
 )
 
-# Measurement Information Content Entity
+# CCO Measurement Information Content Entity
 MICE_CLASS = URIRef(
     "https://www.commoncoreontologies.org/ont00001163"
 )
 
-# Measurement Unit
+# CCO Measurement Unit
 MEASUREMENT_UNIT_CLASS = URIRef(
     "https://www.commoncoreontologies.org/ont00000120"
 )
 
-# bearer of
+# BFO bearer of
 BFO_BEARER_OF = URIRef(
     "http://purl.obolibrary.org/obo/BFO_0000196"
 )
 
-# MICE -> SDC
-IS_MEASURE_OF = CCO.is_a_measurement_of
+# CCO is a measurement of
+IS_MEASURE_OF = URIRef(
+    "https://www.commoncoreontologies.org/ont00001966"
+)
 
-# MICE -> numeric literal
-HAS_VALUE = CCO.has_decimal_value
+# CCO has decimal value
+HAS_VALUE = URIRef(
+    "https://www.commoncoreontologies.org/ont00001769"
+)
 
-# MICE -> Measurement Unit
-USES_MEASUREMENT_UNIT = CCO.uses_measurement_unit
+# CCO uses measurement unit
+USES_MEASUREMENT_UNIT = URIRef(
+    "https://www.commoncoreontologies.org/ont00001863"
+)
 
 
 # ============================================================
@@ -139,7 +146,6 @@ def safe_id(value):
     """
     Convert a CSV value into a safer local IRI component.
     """
-
     return (
         str(value)
         .strip()
@@ -150,14 +156,10 @@ def safe_id(value):
     )
 
 
-def count_typed_nodes(
-    graph,
-    class_iri,
-):
+def count_typed_nodes(graph, class_iri):
     """
     Count distinct subjects explicitly typed with class_iri.
     """
-
     return len(
         set(
             graph.subjects(
@@ -176,10 +178,9 @@ def add_type_with_compatibility(
 ):
     """
     Add both the canonical rdf:type triple expected by the
-    grader and the legacy rdf:type triple expected by the
-    supplied starter materials.
+    grader and the legacy rdf:type triple used by the supplied
+    Project 4 starter materials.
     """
-
     graph.add(
         (
             node,
@@ -208,7 +209,6 @@ def add_relation_with_compatibility(
     Add both canonical and starter-material-compatible
     relation triples.
     """
-
     graph.add(
         (
             subject,
@@ -246,9 +246,7 @@ def main():
     # 2. Load the normalized CSV.
     # --------------------------------------------------------
 
-    df = pd.read_csv(
-        DATA_FILE
-    )
+    df = pd.read_csv(DATA_FILE)
 
     print(
         f"Loaded {len(df)} normalized measurement rows."
@@ -280,58 +278,21 @@ def main():
     # 5. Bind namespaces.
     # --------------------------------------------------------
 
-    g.bind(
-        "bfo",
-        BFO,
-    )
-
-    g.bind(
-        "cco",
-        CCO,
-    )
-
-    g.bind(
-        "bfo_legacy",
-        BFO_LEGACY,
-    )
-
-    g.bind(
-        "cco_legacy",
-        CCO_LEGACY,
-    )
-
-    g.bind(
-        "ex",
-        EX,
-    )
-
-    g.bind(
-        "rdf",
-        RDF,
-    )
-
-    g.bind(
-        "rdfs",
-        RDFS,
-    )
-
-    g.bind(
-        "xsd",
-        XSD,
-    )
-
-    g.bind(
-        "owl",
-        OWL,
-    )
+    g.bind("bfo", BFO)
+    g.bind("cco", CCO)
+    g.bind("bfo_legacy", BFO_LEGACY)
+    g.bind("cco_legacy", CCO_LEGACY)
+    g.bind("ex", EX)
+    g.bind("rdf", RDF)
+    g.bind("rdfs", RDFS)
+    g.bind("xsd", XSD)
+    g.bind("owl", OWL)
 
     # --------------------------------------------------------
     # 6. Add ontology metadata.
     # --------------------------------------------------------
 
-    ontology = (
-        EX.Project4MeasurementOntology
-    )
+    ontology = EX.Project4MeasurementOntology
 
     g.add(
         (
@@ -371,13 +332,13 @@ def main():
         ).strip()
 
         # Timestamp remains preserved in the normalized CSV.
-        # The supplied measurement pattern does not define
-        # the relation to use for it.
+        # The supplied measurement design pattern does not
+        # specify a property for representing it in the RDF.
         _timestamp = str(
             row["timestamp"]
         ).strip()
 
-        # Keep measurement values as xsd:decimal.
+        # Decimal is used so the RDF literal is xsd:decimal.
         value = Decimal(
             str(row["value"])
         )
@@ -501,7 +462,7 @@ def main():
         )
 
         # ====================================================
-        # MICE IS A MEASUREMENT OF SDC
+        # MICE IS A MEASUREMENT OF THE SDC
         # ====================================================
 
         add_relation_with_compatibility(
@@ -593,12 +554,7 @@ def main():
     )
 
     # --------------------------------------------------------
-    # 11. Check required typed nodes locally.
-    #
-    # This specifically protects against the GitHub error:
-    #
-    # Missing required typed nodes:
-    # Artifact=0, SDC=0, MICE=0, MU=0
+    # 11. Check the canonical typed nodes locally.
     # --------------------------------------------------------
 
     typed_counts = {

@@ -1,7 +1,7 @@
 @prefix bfo: <http://purl.obolibrary.org/obo/> .
-@prefix bfo_legacy: <http://purl.obolibrary.org/obo/bfo.owl#> .
+
 @prefix cco: <https://www.ontologyrepository.com/CommonCoreOntologies/> .
-@prefix cco_legacy: <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+
 @prefix ex: <http://example.org/project4/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -10,261 +10,261 @@
 ex:Project4MeasurementOntology a owl:Ontology ;
     rdfs:label "Project 4 Measurement Ontology"@en .
 
-ex:artifact_Boiler-07 a cco_legacy:Artifact,
+ex:artifact_Boiler-07 a cco:Artifact,
         <https://www.commoncoreontologies.org/ont00000995> ;
     rdfs:label "Boiler-07"@en ;
     bfo:BFO_0000196 ex:sdc_Boiler-07_pressure,
         ex:sdc_Boiler-07_temperature ;
-    bfo_legacy:bearer_of ex:sdc_Boiler-07_pressure,
+    bfo:bearer_of ex:sdc_Boiler-07_pressure,
         ex:sdc_Boiler-07_temperature .
 
-ex:artifact_Boiler-09 a cco_legacy:Artifact,
+ex:artifact_Boiler-09 a cco:Artifact,
         <https://www.commoncoreontologies.org/ont00000995> ;
     rdfs:label "Boiler-09"@en ;
     bfo:BFO_0000196 ex:sdc_Boiler-09_pressure ;
-    bfo_legacy:bearer_of ex:sdc_Boiler-09_pressure .
+    bfo:bearer_of ex:sdc_Boiler-09_pressure .
 
-ex:artifact_Chiller-3 a cco_legacy:Artifact,
+ex:artifact_Chiller-3 a cco:Artifact,
         <https://www.commoncoreontologies.org/ont00000995> ;
     rdfs:label "Chiller-3"@en ;
     bfo:BFO_0000196 ex:sdc_Chiller-3_temperature ;
-    bfo_legacy:bearer_of ex:sdc_Chiller-3_temperature .
+    bfo:bearer_of ex:sdc_Chiller-3_temperature .
 
-ex:artifact_Chiller-4 a cco_legacy:Artifact,
+ex:artifact_Chiller-4 a cco:Artifact,
         <https://www.commoncoreontologies.org/ont00000995> ;
     rdfs:label "Chiller-4"@en ;
     bfo:BFO_0000196 ex:sdc_Chiller-4_temperature ;
-    bfo_legacy:bearer_of ex:sdc_Chiller-4_temperature .
+    bfo:bearer_of ex:sdc_Chiller-4_temperature .
 
-ex:artifact_Circuit-07 a cco_legacy:Artifact,
+ex:artifact_Circuit-07 a cco:Artifact,
         <https://www.commoncoreontologies.org/ont00000995> ;
     rdfs:label "Circuit-07"@en ;
     bfo:BFO_0000196 ex:sdc_Circuit-07_voltage ;
-    bfo_legacy:bearer_of ex:sdc_Circuit-07_voltage .
+    bfo:bearer_of ex:sdc_Circuit-07_voltage .
 
-ex:artifact_Circuit-12 a cco_legacy:Artifact,
+ex:artifact_Circuit-12 a cco:Artifact,
         <https://www.commoncoreontologies.org/ont00000995> ;
     rdfs:label "Circuit-12"@en ;
     bfo:BFO_0000196 ex:sdc_Circuit-12_resistance,
         ex:sdc_Circuit-12_voltage ;
-    bfo_legacy:bearer_of ex:sdc_Circuit-12_resistance,
+    bfo:bearer_of ex:sdc_Circuit-12_resistance,
         ex:sdc_Circuit-12_voltage .
 
-ex:artifact_Pump-A1 a cco_legacy:Artifact,
+ex:artifact_Pump-A1 a cco:Artifact,
         <https://www.commoncoreontologies.org/ont00000995> ;
     rdfs:label "Pump-A1"@en ;
     bfo:BFO_0000196 ex:sdc_Pump-A1_pressure ;
-    bfo_legacy:bearer_of ex:sdc_Pump-A1_pressure .
+    bfo:bearer_of ex:sdc_Pump-A1_pressure .
 
-ex:artifact_Pump-A2 a cco_legacy:Artifact,
+ex:artifact_Pump-A2 a cco:Artifact,
         <https://www.commoncoreontologies.org/ont00000995> ;
     rdfs:label "Pump-A2"@en ;
     bfo:BFO_0000196 ex:sdc_Pump-A2_pressure ;
-    bfo_legacy:bearer_of ex:sdc_Pump-A2_pressure .
+    bfo:bearer_of ex:sdc_Pump-A2_pressure .
 
-ex:mice_0 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_0 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Boiler-07 temperature measurement 0"@en ;
-    cco_legacy:has_decimal_value 100.0 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Boiler-07_temperature ;
-    cco_legacy:uses_measurement_unit ex:unit_C ;
+    cco:has_decimal_value 100.0 ;
+    cco:is_a_measurement_of ex:sdc_Boiler-07_temperature ;
+    cco:uses_measurement_unit ex:unit_C ;
     cco:has_decimal_value 100.0 ;
     cco:is_a_measurement_of ex:sdc_Boiler-07_temperature ;
     cco:uses_measurement_unit ex:unit_C .
 
-ex:mice_1 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_1 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Boiler-07 pressure measurement 1"@en ;
-    cco_legacy:has_decimal_value 101.4 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Boiler-07_pressure ;
-    cco_legacy:uses_measurement_unit ex:unit_Pa ;
+    cco:has_decimal_value 101.4 ;
+    cco:is_a_measurement_of ex:sdc_Boiler-07_pressure ;
+    cco:uses_measurement_unit ex:unit_Pa ;
     cco:has_decimal_value 101.4 ;
     cco:is_a_measurement_of ex:sdc_Boiler-07_pressure ;
     cco:uses_measurement_unit ex:unit_Pa .
 
-ex:mice_10 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_10 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Circuit-07 voltage measurement 10"@en ;
-    cco_legacy:has_decimal_value 2.0 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Circuit-07_voltage ;
-    cco_legacy:uses_measurement_unit ex:unit_V ;
+    cco:has_decimal_value 2.0 ;
+    cco:is_a_measurement_of ex:sdc_Circuit-07_voltage ;
+    cco:uses_measurement_unit ex:unit_V ;
     cco:has_decimal_value 2.0 ;
     cco:is_a_measurement_of ex:sdc_Circuit-07_voltage ;
     cco:uses_measurement_unit ex:unit_V .
 
-ex:mice_11 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_11 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Circuit-12 voltage measurement 11"@en ;
-    cco_legacy:has_decimal_value 2.0 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Circuit-12_voltage ;
-    cco_legacy:uses_measurement_unit ex:unit_V ;
+    cco:has_decimal_value 2.0 ;
+    cco:is_a_measurement_of ex:sdc_Circuit-12_voltage ;
+    cco:uses_measurement_unit ex:unit_V ;
     cco:has_decimal_value 2.0 ;
     cco:is_a_measurement_of ex:sdc_Circuit-12_voltage ;
     cco:uses_measurement_unit ex:unit_V .
 
-ex:mice_12 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_12 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Circuit-12 resistance measurement 12"@en ;
-    cco_legacy:has_decimal_value 1.3 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Circuit-12_resistance ;
-    cco_legacy:uses_measurement_unit ex:unit_ohm ;
+    cco:has_decimal_value 1.3 ;
+    cco:is_a_measurement_of ex:sdc_Circuit-12_resistance ;
+    cco:uses_measurement_unit ex:unit_ohm ;
     cco:has_decimal_value 1.3 ;
     cco:is_a_measurement_of ex:sdc_Circuit-12_resistance ;
     cco:uses_measurement_unit ex:unit_ohm .
 
-ex:mice_13 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_13 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Pump-A1 pressure measurement 13"@en ;
-    cco_legacy:has_decimal_value 101.3 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Pump-A1_pressure ;
-    cco_legacy:uses_measurement_unit ex:unit_Pa ;
+    cco:has_decimal_value 101.3 ;
+    cco:is_a_measurement_of ex:sdc_Pump-A1_pressure ;
+    cco:uses_measurement_unit ex:unit_Pa ;
     cco:has_decimal_value 101.3 ;
     cco:is_a_measurement_of ex:sdc_Pump-A1_pressure ;
     cco:uses_measurement_unit ex:unit_Pa .
 
-ex:mice_14 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_14 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Pump-A2 pressure measurement 14"@en ;
-    cco_legacy:has_decimal_value 101.3 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Pump-A2_pressure ;
-    cco_legacy:uses_measurement_unit ex:unit_Pa ;
+    cco:has_decimal_value 101.3 ;
+    cco:is_a_measurement_of ex:sdc_Pump-A2_pressure ;
+    cco:uses_measurement_unit ex:unit_Pa ;
     cco:has_decimal_value 101.3 ;
     cco:is_a_measurement_of ex:sdc_Pump-A2_pressure ;
     cco:uses_measurement_unit ex:unit_Pa .
 
-ex:mice_2 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_2 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Boiler-07 temperature measurement 2"@en ;
-    cco_legacy:has_decimal_value 100.0 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Boiler-07_temperature ;
-    cco_legacy:uses_measurement_unit ex:unit_C ;
+    cco:has_decimal_value 100.0 ;
+    cco:is_a_measurement_of ex:sdc_Boiler-07_temperature ;
+    cco:uses_measurement_unit ex:unit_C ;
     cco:has_decimal_value 100.0 ;
     cco:is_a_measurement_of ex:sdc_Boiler-07_temperature ;
     cco:uses_measurement_unit ex:unit_C .
 
-ex:mice_3 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_3 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Boiler-07 pressure measurement 3"@en ;
-    cco_legacy:has_decimal_value 101.3 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Boiler-07_pressure ;
-    cco_legacy:uses_measurement_unit ex:unit_Pa ;
+    cco:has_decimal_value 101.3 ;
+    cco:is_a_measurement_of ex:sdc_Boiler-07_pressure ;
+    cco:uses_measurement_unit ex:unit_Pa ;
     cco:has_decimal_value 101.3 ;
     cco:is_a_measurement_of ex:sdc_Boiler-07_pressure ;
     cco:uses_measurement_unit ex:unit_Pa .
 
-ex:mice_4 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_4 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Boiler-09 pressure measurement 4"@en ;
-    cco_legacy:has_decimal_value 94.5 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Boiler-09_pressure ;
-    cco_legacy:uses_measurement_unit ex:unit_Pa ;
+    cco:has_decimal_value 94.5 ;
+    cco:is_a_measurement_of ex:sdc_Boiler-09_pressure ;
+    cco:uses_measurement_unit ex:unit_Pa ;
     cco:has_decimal_value 94.5 ;
     cco:is_a_measurement_of ex:sdc_Boiler-09_pressure ;
     cco:uses_measurement_unit ex:unit_Pa .
 
-ex:mice_5 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_5 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Chiller-3 temperature measurement 5"@en ;
-    cco_legacy:has_decimal_value 20.0 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Chiller-3_temperature ;
-    cco_legacy:uses_measurement_unit ex:unit_C ;
+    cco:has_decimal_value 20.0 ;
+    cco:is_a_measurement_of ex:sdc_Chiller-3_temperature ;
+    cco:uses_measurement_unit ex:unit_C ;
     cco:has_decimal_value 20.0 ;
     cco:is_a_measurement_of ex:sdc_Chiller-3_temperature ;
     cco:uses_measurement_unit ex:unit_C .
 
-ex:mice_6 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_6 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Chiller-3 temperature measurement 6"@en ;
-    cco_legacy:has_decimal_value 19.5 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Chiller-3_temperature ;
-    cco_legacy:uses_measurement_unit ex:unit_C ;
+    cco:has_decimal_value 19.5 ;
+    cco:is_a_measurement_of ex:sdc_Chiller-3_temperature ;
+    cco:uses_measurement_unit ex:unit_C ;
     cco:has_decimal_value 19.5 ;
     cco:is_a_measurement_of ex:sdc_Chiller-3_temperature ;
     cco:uses_measurement_unit ex:unit_C .
 
-ex:mice_7 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_7 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Chiller-3 temperature measurement 7"@en ;
-    cco_legacy:has_decimal_value 21.1 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Chiller-3_temperature ;
-    cco_legacy:uses_measurement_unit ex:unit_C ;
+    cco:has_decimal_value 21.1 ;
+    cco:is_a_measurement_of ex:sdc_Chiller-3_temperature ;
+    cco:uses_measurement_unit ex:unit_C ;
     cco:has_decimal_value 21.1 ;
     cco:is_a_measurement_of ex:sdc_Chiller-3_temperature ;
     cco:uses_measurement_unit ex:unit_C .
 
-ex:mice_8 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_8 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Chiller-4 temperature measurement 8"@en ;
-    cco_legacy:has_decimal_value -14.2 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Chiller-4_temperature ;
-    cco_legacy:uses_measurement_unit ex:unit_C ;
+    cco:has_decimal_value -14.2 ;
+    cco:is_a_measurement_of ex:sdc_Chiller-4_temperature ;
+    cco:uses_measurement_unit ex:unit_C ;
     cco:has_decimal_value -14.2 ;
     cco:is_a_measurement_of ex:sdc_Chiller-4_temperature ;
     cco:uses_measurement_unit ex:unit_C .
 
-ex:mice_9 a cco_legacy:MeasurementInformationContentEntity,
+ex:mice_9 a cco:MeasurementInformationContentEntity,
         <https://www.commoncoreontologies.org/ont00001163> ;
     rdfs:label "Chiller-4 temperature measurement 9"@en ;
-    cco_legacy:has_decimal_value -6.9 ;
-    cco_legacy:is_a_measurement_of ex:sdc_Chiller-4_temperature ;
-    cco_legacy:uses_measurement_unit ex:unit_C ;
+    cco:has_decimal_value -6.9 ;
+    cco:is_a_measurement_of ex:sdc_Chiller-4_temperature ;
+    cco:uses_measurement_unit ex:unit_C ;
     cco:has_decimal_value -6.9 ;
     cco:is_a_measurement_of ex:sdc_Chiller-4_temperature ;
     cco:uses_measurement_unit ex:unit_C .
 
-ex:unit_ohm a cco_legacy:MeasurementUnit,
+ex:unit_ohm a cco:MeasurementUnit,
         <https://www.commoncoreontologies.org/ont00000120> ;
     rdfs:label "ohm"@en .
 
 ex:sdc_Boiler-09_pressure a bfo:BFO_0000020,
-        bfo_legacy:SpecificallyDependentContinuant ;
+        bfo:SpecificallyDependentContinuant ;
     rdfs:label "Boiler-09 pressure"@en .
 
 ex:sdc_Circuit-07_voltage a bfo:BFO_0000020,
-        bfo_legacy:SpecificallyDependentContinuant ;
+        bfo:SpecificallyDependentContinuant ;
     rdfs:label "Circuit-07 voltage"@en .
 
 ex:sdc_Circuit-12_resistance a bfo:BFO_0000020,
-        bfo_legacy:SpecificallyDependentContinuant ;
+        bfo:SpecificallyDependentContinuant ;
     rdfs:label "Circuit-12 resistance"@en .
 
 ex:sdc_Circuit-12_voltage a bfo:BFO_0000020,
-        bfo_legacy:SpecificallyDependentContinuant ;
+        bfo:SpecificallyDependentContinuant ;
     rdfs:label "Circuit-12 voltage"@en .
 
 ex:sdc_Pump-A1_pressure a bfo:BFO_0000020,
-        bfo_legacy:SpecificallyDependentContinuant ;
+        bfo:SpecificallyDependentContinuant ;
     rdfs:label "Pump-A1 pressure"@en .
 
 ex:sdc_Pump-A2_pressure a bfo:BFO_0000020,
-        bfo_legacy:SpecificallyDependentContinuant ;
+        bfo:SpecificallyDependentContinuant ;
     rdfs:label "Pump-A2 pressure"@en .
 
-ex:unit_V a cco_legacy:MeasurementUnit,
+ex:unit_V a cco:MeasurementUnit,
         <https://www.commoncoreontologies.org/ont00000120> ;
     rdfs:label "V"@en .
 
 ex:sdc_Boiler-07_pressure a bfo:BFO_0000020,
-        bfo_legacy:SpecificallyDependentContinuant ;
+        bfo:SpecificallyDependentContinuant ;
     rdfs:label "Boiler-07 pressure"@en .
 
 ex:sdc_Boiler-07_temperature a bfo:BFO_0000020,
-        bfo_legacy:SpecificallyDependentContinuant ;
+        bfo:SpecificallyDependentContinuant ;
     rdfs:label "Boiler-07 temperature"@en .
 
 ex:sdc_Chiller-4_temperature a bfo:BFO_0000020,
-        bfo_legacy:SpecificallyDependentContinuant ;
+        bfo:SpecificallyDependentContinuant ;
     rdfs:label "Chiller-4 temperature"@en .
 
 ex:sdc_Chiller-3_temperature a bfo:BFO_0000020,
-        bfo_legacy:SpecificallyDependentContinuant ;
+        bfo:SpecificallyDependentContinuant ;
     rdfs:label "Chiller-3 temperature"@en .
 
-ex:unit_Pa a cco_legacy:MeasurementUnit,
+ex:unit_Pa a cco:MeasurementUnit,
         <https://www.commoncoreontologies.org/ont00000120> ;
     rdfs:label "Pa"@en .
 
-ex:unit_C a cco_legacy:MeasurementUnit,
+ex:unit_C a cco:MeasurementUnit,
         <https://www.commoncoreontologies.org/ont00000120> ;
     rdfs:label "C"@en .
 
