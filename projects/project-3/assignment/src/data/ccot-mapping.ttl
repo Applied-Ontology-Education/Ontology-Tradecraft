@@ -1,0 +1,26 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+# CCOT to Time 
+
+cco:ont00000223 rdfs:subClassOf time:TemporalPosition .  
+cco:ont00000225 rdfs:subClassOf time:MonthOfYear .  
+cco:ont00000359 rdfs:subClassOf time:TimePosition .  
+cco:ont00000832 rdfs:subClassOf time:Year .  
+
+cco:ont00000329 rdfs:subClassOf time:Duration . 
+cco:ont00001058 rdfs:subClassOf time:Duration .  
+cco:ont00000810 rdfs:subClassOf time:Duration .  
+cco:ont00001206 rdfs:subClassOf time:Duration .  
+cco:ont00000085 rdfs:subClassOf time:Duration .  
+cco:ont00000225 rdfs:subClassOf time:Duration .  
+cco:ont00000619 rdfs:subClassOf time:Duration .  
+cco:ont00001166 rdfs:subClassOf time:Duration .  
+cco:ont00000992 rdfs:subClassOf time:Duration .  
+cco:ont00000211 rdfs:subClassOf time:Duration .  
+cco:ont00001154 rdfs:subClassOf time:Duration .  
+cco:ont00000063 rdfs:subClassOf time:Duration .  
+cco:ont00000832 rdfs:subClassOf time:Duration .  
+cco:ont00000800 rdfs:subClassOf time:Duration .  

@@ -8,6 +8,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix time: <http://www.w3.org/2006/time#> .
 @base <https://www.commoncoreontologies.org/TimeOntology> .
 
 <https://www.commoncoreontologies.org/TimeOntology> rdf:type owl:Ontology ;
@@ -288,6 +289,10 @@ cco:ont00000063 rdf:type owl:Class ;
                                    owl:someValuesFrom cco:ont00001058
                                  ] ;
                  rdfs:comment "This is a defined class."@en ;
+                 rdfs:subClassOf time:Duration ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:unitType ;
+                                   owl:hasValue time:unitHour ] ;
                  rdfs:label "Multi-Hour Temporal Interval"@en ;
                  skos:definition "A one-dimensional temporal region that is measured in Hours and spans at least one Hour."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/TimeOntology"^^xsd:anyURI .
@@ -330,6 +335,10 @@ cco:ont00000211 rdf:type owl:Class ;
                                    owl:someValuesFrom cco:ont00000800
                                  ] ;
                  rdfs:comment "This is a defined class."@en ;
+                 rdfs:subClassOf time:Duration ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:unitType ;
+                                   owl:hasValue time:unitDay ] ;
                  rdfs:label "Multi-Day Temporal Interval"@en ;
                  skos:definition "A one-dimensional temporal region that is measured in Days and spans at least one Day."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/TimeOntology"^^xsd:anyURI .
@@ -342,6 +351,10 @@ cco:ont00000223 rdf:type owl:Class ;
                                    owl:onProperty obo:BFO_0000132 ;
                                    owl:someValuesFrom cco:ont00000800
                                  ] ;
+                 rdfs:subClassOf time:TemporalPosition ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:hasTRS ;
+                                   owl:someValuesFrom owl:Thing ] ;
                  rdfs:label "Time of Day"@en ;
                  skos:definition "A Temporal Instant that is part of a Day."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/TimeOntology"^^xsd:anyURI .
@@ -387,6 +400,10 @@ cco:ont00000329 rdf:type owl:Class ;
                                    owl:someValuesFrom cco:ont00000225
                                  ] ;
                  rdfs:comment "This is a defined class."@en ;
+                 rdfs:subClassOf time:Duration ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:unitType ;
+                                   owl:hasValue time:unitMonth ] ;
                  rdfs:label "Multi-Month Temporal Interval"@en ;
                  skos:definition "A one-dimensional temporal region that is measured in Months and spans at least one Month."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/TimeOntology"^^xsd:anyURI .
@@ -399,6 +416,10 @@ cco:ont00000359 rdf:type owl:Class ;
                                    owl:onProperty obo:BFO_0000132 ;
                                    owl:someValuesFrom cco:ont00000498
                                  ] ;
+                 rdfs:subClassOf time:TimePosition ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:numericPosition ;
+                                   owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
                  rdfs:label "Julian Date"@en ;
                  skos:definition "A Time of Day as specified according to the Julian Calendar using the Julian Date epoch."@en ;
                  cco:ont00001753 "JD" ;
@@ -490,6 +511,10 @@ cco:ont00000800 rdf:type owl:Class ;
                                    owl:onProperty cco:ont00001869 ;
                                    owl:someValuesFrom cco:ont00000619
                                  ] ;
+                 rdfs:subClassOf time:Duration ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:unitType ;
+                                   owl:hasValue time:unitDay ] ;
                  rdfs:label "Day"@en ;
                  skos:definition "A Temporal Interval that is equal to the approximate length of time required for an Astronomical Body to complete one rotation around its Rotational Axis as specified relative to a particular Temporal Reference System."@en ;
                  skos:scopeNote "Unless otherwise specified, a Day is assumed to be relative to the rotational motion of the Earth and is approximately equal to a twenty-four hour temporal region for which the start and end times are specified by the Temporal Reference System used."@en ;
@@ -505,6 +530,10 @@ cco:ont00000810 rdf:type owl:Class ;
                                    owl:someValuesFrom cco:ont00000619
                                  ] ;
                  rdfs:comment "This is a defined class."@en ;
+                 rdfs:subClassOf time:Duration ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:unitType ;
+                                   owl:hasValue time:unitWeek ] ;
                  rdfs:label "Multi-Week Temporal Interval"@en ;
                  skos:definition "A one-dimensional temporal region that is measured in Weeks and spans at least one Week."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/TimeOntology"^^xsd:anyURI .
@@ -517,6 +546,14 @@ cco:ont00000832 rdf:type owl:Class ;
                                    owl:onProperty cco:ont00001869 ;
                                    owl:someValuesFrom cco:ont00001088
                                  ] ;
+                 rdfs:subClassOf time:Year ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:years ;
+                                   owl:hasValue "1"^^xsd:decimal ] ;
+                 rdfs:subClassOf time:Duration ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:unitType ;
+                                   owl:hasValue time:unitYear ] ;
                  rdfs:label "Year"@en ;
                  skos:definition "A Temporal Interval that is equal to the approximate length of time required for an Astronomical Body to complete one Orbital Revolution around its Primary Body as specified relative to a particular Temporal Reference System."@en ;
                  skos:scopeNote "Unless otherwise specified, a Year is assumed to be relative to the Orbiting of the Earth around the Sun and is approximately equal to 12 Months or 365 Days."@en ;
@@ -540,6 +577,10 @@ cco:ont00000992 rdf:type owl:Class ;
                                    owl:someValuesFrom cco:ont00000085
                                  ] ;
                  rdfs:comment "The Second is used as the basic SI unit of time."@en ;
+                 rdfs:subClassOf time:Duration ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:unitType ;
+                                   owl:hasValue time:unitSecond ] ;
                  rdfs:label "Second"@en ;
                  skos:definition "A Temporal Interval that is equal to the duration of 9,192,631,770 periods of the radiation corresponding to the transition between the two hyperfine levels of the ground state of the cesium 133 atom."@en ;
                  cco:ont00001754 "https://physics.nist.gov/cuu/Units/second.html" ;
@@ -605,6 +646,10 @@ cco:ont00001154 rdf:type owl:Class ;
                                    owl:someValuesFrom cco:ont00000992
                                  ] ;
                  rdfs:comment "This is a defined class."@en ;
+                 rdfs:subClassOf time:Duration ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:unitType ;
+                                   owl:hasValue time:unitSecond ] ;
                  rdfs:label "Multi-Second Temporal Interval"@en ;
                  skos:definition "A one-dimensional temporal region that is measured in Seconds and spans at least one Second."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/TimeOntology"^^xsd:anyURI .
@@ -618,6 +663,10 @@ cco:ont00001166 rdf:type owl:Class ;
                                    owl:someValuesFrom cco:ont00000085
                                  ] ;
                  rdfs:comment "This is a defined class."@en ;
+                 rdfs:subClassOf time:Duration ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:unitType ;
+                                   owl:hasValue time:unitMinute ] ;
                  rdfs:label "Multi-Minute Temporal Interval"@en ;
                  skos:definition "A one-dimensional temporal region that is measured in Minutes and spans at least one Minute."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/TimeOntology"^^xsd:anyURI .
@@ -639,6 +688,10 @@ cco:ont00001206 rdf:type owl:Class ;
                                    owl:someValuesFrom cco:ont00000832
                                  ] ;
                  rdfs:comment "This is a defined class."@en ;
+                 rdfs:subClassOf time:Duration ;
+                 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                   owl:onProperty time:unitType ;
+                                   owl:hasValue time:unitYear ] ;
                  rdfs:label "Multi-Year Temporal Interval"@en ;
                  skos:definition "A one-dimensional temporal region that is measured in Years and spans at least one Year."@en ;
                  cco:ont00001760 "https://www.commoncoreontologies.org/TimeOntology"^^xsd:anyURI .
