@@ -1,0 +1,11 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+
+# QUDT to CCOM
+
+cco:ont00001290 rdfs:subClassOf qudt:LengthUnit .
+cco:ont00000844 rdfs:subClassOf qudt:TemperatureUnit .
+cco:ont00001317 rdfs:subClassOf qudt:VolumeUnit .
+cco:ont00000497 rdfs:subClassOf qudt:ForceUnit .
