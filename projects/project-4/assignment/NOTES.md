@@ -1,5 +1,30 @@
 Project 4
 
+I broke the work up into chunks:
+ 1.   take time to understnad the ask and review the various files and plan the work (what the various requirements state- design pattern, IRIs,; )
+   
+2.    understand what the data is in the files.  Where all of the files exist and where new files need to go.  backup plans, inconsistency in the files, data value issues, null values, naming issues, etc
+3.  load the data and process into a common model (canonical)
+    determine how to handle the time zone data (the data appeared the same but different -- one file showed local time while the other UTC.  WHat local means in unknown, with 4 hour difference went with et.    
+4. Normalize the data (Chiller-3 versus chiller etc)
+    
+5. Ontology    
+    create my ontology file (added the buffalo center location and the stream id--
+    
+6. RDFLIB file creation - leverage content from the readme file; kept close to the langauge from the design patterns; reference new ontology and BFO and CCO)
+        ran test and got back 11 rows with 111 triples.
+        received an error on a union message and referenced input from Claire about brackets.-- asking about updating the project4-test.yml file to add the brackets.
+
+Made update to the project4test yaml file to add the brackets and will run a test prior to the next few steps        
+
+SPARQL Work
+
+
+
+SHACL Work
+
+------------
+
 Extract every "must", file path, and command into the tracker.
 
 Cross-check each one against the grader. Where they disagree (gotchas 1, 8, 11), the grader decides what passes. Log the conflict.
@@ -33,9 +58,6 @@ Trim whitespace - requirement 6 - rows 142 - 145
 Compared the script to the requirements.  No change made and confirmed that the Pump A1 has no extra spaces.
 
 
-
-ETL Script
-
 Files:  Entity Id = Device Name (difference in name (chiller 3 and chiller-3; (CSV file has the discrepancy)
 Kind = Reading Type
 Temperature F versus Celcius f
@@ -46,7 +68,6 @@ Reading type = Temp/Pressure/Voltage/Resistance
 Reading value = decimals and nulls
 UNit = measurement unit
 Time (date time - UTC
-
 
 
 
@@ -70,24 +91,11 @@ Time is UTC time
 
 
 
-Csv
+TTL Files:
+Used Boiler as a starter 
+identified the IRIs of the items needed for the design pattern
+Went into Protege to create the ontology.
+    Device subclasses
+    For the boiler device type - had 4 measurement units to support the 4 readings
 
-Normalized File
-
-
-Data Issues
-
-Source		Row			Issues			Decision
-
-
-
-
-Modeling Decisions
-
-Timezone
-Unit of Measure
-One SDC per artifact or per reading
-…
-
-
-QUestions
+For step 6
