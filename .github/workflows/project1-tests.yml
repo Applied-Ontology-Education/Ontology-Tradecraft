@@ -5,8 +5,11 @@ on:
   pull_request:
     paths:
       - "projects/project-1/**"
-      - ".github/workflows/autograde-project-1.yml"
-  workflow_dispatch:
+      - ".github/workflows/project1-tests.yml"
+  push:
+    paths:
+      - "projects/project-1/**"
+      - ".github/workflows/project1-tests.yml"
 
 jobs:
   grade:
