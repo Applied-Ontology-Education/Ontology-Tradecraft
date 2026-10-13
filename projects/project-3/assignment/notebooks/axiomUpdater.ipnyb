@@ -1,0 +1,19 @@
+import csv
+from rdflib import Graph, URIRef, OWL
+
+# 1. Load your existing Turtle file
+g = Graph()
+g.parse("your_file.ttl", format="turtle")
+
+# 2. Automatically inject pairs (e.g., from a list or read from a CSV)
+equivalences = [
+    ("http://example.org", "http://example.org"),
+    ("http://example.org", "http://example.org")
+]
+
+for subject_uri, object_uri in equivalences:
+    # Use OWL.sameAs, OWL.equivalentClass, or OWL.equivalentProperty
+    g.add((URIRef(subject_uri), OWL.equivalentClass, URIRef(object_uri)))
+
+# 3. Serialize back to Turtle (it handles formatting and prefixes automatically)
+g.serialize(destination="updated_file.ttl", format="turtle")

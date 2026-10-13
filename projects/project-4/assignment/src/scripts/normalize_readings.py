@@ -6,6 +6,7 @@ import json
 import pandas as pd
 from dateutil import parser as dateparser
 import datetime as _dt
+import numpy as np
 
 # ---------- Paths resolved relative to this script ----------
 SCRIPT_DIR = Path(__file__).resolve().parent          # .../src/scripts
@@ -159,11 +160,20 @@ def normalize_and_clean(df: pd.DataFrame) -> pd.DataFrame:
         df[col] = df[col].astype(str).str.strip()
 
     # Normalize labels
+    df["artifact_id"] = df["artifact_id"].str.replace(" ", "-", regex=False).str.strip("-")
     df["sdc_kind"] = df["sdc_kind"].apply(_norm_kind)
     df["unit_label"] = df["unit_label"].apply(_norm_unit)
 
     # Coerce types
-    df["value"] = df["value"].apply(_to_float)
+    df["value"] = df["value"].apply(_to_float).round(1)
+    df["value"] = np.where(df["unit_label"] == "psi", (df["value"] * 6.895).round(1), df["value"])
+    df["unit_label"] = np.where(df["unit_label"] == "psi", "Pa", df["unit_label"])
+#call kPa PA, just to test
+    df["unit_label"] = np.where(df["unit_label"] == "kPa", "Pa", df["unit_label"])
+
+    df["value"] = np.where(df["unit_label"] == "F", ((df["value"] - 32) * (5/9)).round(1), df["value"])
+    df["unit_label"] = np.where(df["unit_label"] == "F", "C", df["unit_label"])
+
     df["timestamp"] = df["timestamp"].apply(_to_iso_utc)
 
     # Diagnostics
@@ -183,6 +193,10 @@ def normalize_and_clean(df: pd.DataFrame) -> pd.DataFrame:
 
     # Sort deterministically
     df = df.sort_values(["artifact_id", "timestamp"]).reset_index(drop=True)
+
+    #drop duplicates
+    df = df.drop_duplicates(subset=["artifact_id", "sdc_kind", "value", "timestamp"])
+
 
     # Reorder columns
     df = df[CANON]

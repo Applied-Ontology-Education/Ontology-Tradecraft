@@ -23,28 +23,309 @@ ex:ArtifactHasSDCShape
 #################################################################
 # 2) SDC is measured by at least one MICE (coverage via inverse) 
 #################################################################
-
+ex:SDCHasMICE
+  a sh:NodeShape ;
+  sh:targetClass bfo:SpecificallyDependentContinuant ;
+  sh:property [
+    sh:path [
+      sh:inversePath cco:is_a_measurement_of
+    ] ;
+    sh:minCount 1 ;
+    sh:class cco:MeasurementInformationContentEntity ;
+    sh:message "Every SDC must be measured by at least one Measurement Information Content Entity (MICE)." ;
+    sh:severity sh:Violation
+  ] .
 #################################################################
 # 3) MICE measures exactly one SDC (functional)
 #################################################################
-
+ex:MICEMeasuresExactlyOneSDC
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+  sh:property [
+    sh:path cco:is_a_measurement_of ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class bfo:SpecificallyDependentContinuant ;
+    sh:message "Every MICE must measure exactly one SDC." ;
+    sh:severity sh:Violation
+  ] .
 #################################################################
 # 4) MICE must have one unit and one numeric value (completeness)
 #################################################################
+ex:MICECompletenessShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
 
+  sh:property [
+    sh:path cco:uses_measurement_unit ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class cco:MeasurementUnit ;
+    sh:message "Every MICE must use exactly one Measurement Unit." ;
+    sh:severity sh:Violation
+  ] ;
+
+  sh:property [
+    sh:path cco:has_decimal_value ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:decimal ;
+    sh:message "Every MICE must have exactly one numeric xsd:decimal value." ;
+    sh:severity sh:Violation
+  ] .
 #################################################################
 # 5) No empty values in literals
 #################################################################
+ex:NoEmptyLiteralShape
+  a sh:NodeShape ;
 
+  # Apply this check to every explicitly typed subject in the graph.
+  sh:targetSubjectsOf rdf:type ;
+
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+
+    sh:message "Literal values must not be empty or contain only whitespace." ;
+
+    sh:severity sh:Violation ;
+
+    sh:select """
+      SELECT $this ?property ?value
+      WHERE {
+        $this ?property ?value .
+
+        FILTER(isLiteral(?value))
+
+        FILTER(
+          STRLEN(
+            REPLACE(
+              STR(?value),
+              "^\\\\s+|\\\\s+$",
+              ""
+            )
+          ) = 0
+        )
+      }
+    """
+  ] .
 #################################################################
 # 6) Unit must match SDC being measured
 #################################################################
+ex:MeasurementUnitMatchesSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
+
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "The Measurement Unit does not match the kind of SDC being measured." ;
+    sh:severity sh:Violation ;
+
+    sh:select """
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX cco:  <http://www.ontologyrepository.com/CommonCoreOntologies/>
+
+      SELECT $this ?sdc ?unit ?expectedUnit ?actualUnit
+      WHERE {
+
+        $this
+          cco:is_a_measurement_of ?sdc ;
+          cco:uses_measurement_unit ?unit .
+
+        ?sdc rdfs:label ?sdcLabel .
+        ?unit rdfs:label ?unitLabel .
+
+        BIND(
+          IF(
+            CONTAINS(
+              LCASE(STR(?sdcLabel)),
+              "temperature"
+            ),
+            "C",
+            IF(
+              CONTAINS(
+                LCASE(STR(?sdcLabel)),
+                "pressure"
+              ),
+              "psi",
+              IF(
+                CONTAINS(
+                  LCASE(STR(?sdcLabel)),
+                  "voltage"
+                ),
+                "V",
+                IF(
+                  CONTAINS(
+                    LCASE(STR(?sdcLabel)),
+                    "resistance"
+                  ),
+                  "ohm",
+                  ""
+                )
+              )
+            )
+          )
+          AS ?expectedUnit
+        )
+
+        BIND(
+          STR(?unitLabel)
+          AS ?actualUnit
+        )
+
+        FILTER(
+          ?expectedUnit != ""
+        )
+
+        FILTER(
+          ?actualUnit != ?expectedUnit
+        )
+      }
+    """
+  ] .
 
 #################################################################
 # 7) No duplicate MICE
 #################################################################
+ex:NoDuplicateMICEShape
+  a sh:NodeShape ;
+  sh:targetClass cco:MeasurementInformationContentEntity ;
 
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Duplicate MICE detected." ;
+    sh:severity sh:Violation ;
+
+    sh:select """
+      PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX cco:  <http://www.ontologyrepository.com/CommonCoreOntologies/>
+
+      SELECT $this ?otherMICE
+      WHERE {
+
+        $this
+          rdfs:label ?label ;
+          cco:is_a_measurement_of ?sdc ;
+          cco:has_decimal_value ?value ;
+          cco:uses_measurement_unit ?unit .
+
+        ?otherMICE
+          rdf:type cco:MeasurementInformationContentEntity ;
+          rdfs:label ?label ;
+          cco:is_a_measurement_of ?sdc ;
+          cco:has_decimal_value ?value ;
+          cco:uses_measurement_unit ?unit .
+
+        FILTER(
+          $this != ?otherMICE
+        )
+
+        FILTER(
+          STR($this) < STR(?otherMICE)
+        )
+      }
+    """
+  ] .
 #################################################################
 # 8) No dangling/mistyped nodes 
 #################################################################
+# An SDC should not exist without an Artifact that bears it.
 
+ex:NoDanglingSDCShape
+  a sh:NodeShape ;
+
+  sh:targetClass bfo:SpecificallyDependentContinuant ;
+
+  sh:property [
+    sh:path [
+      sh:inversePath bfo:bearer_of
+    ] ;
+
+    sh:minCount 1 ;
+
+    sh:class cco:Artifact ;
+
+    sh:message "Every SDC must be borne by at least one correctly typed Artifact." ;
+
+    sh:severity sh:Violation
+  ] .
+
+
+# A Measurement Unit should not exist unless at least one MICE
+# actually uses that unit.
+
+ex:NoDanglingMeasurementUnitShape
+  a sh:NodeShape ;
+
+  sh:targetClass cco:MeasurementUnit ;
+
+  sh:property [
+    sh:path [
+      sh:inversePath cco:uses_measurement_unit
+    ] ;
+
+    sh:minCount 1 ;
+
+    sh:class cco:MeasurementInformationContentEntity ;
+
+    sh:message "Every Measurement Unit must be used by at least one correctly typed MICE." ;
+
+    sh:severity sh:Violation
+  ] .
+
+
+# Check that every object of bfo:bearer_of is actually typed
+# as an SDC.
+
+ex:BearerOfCorrectTypeShape
+  a sh:NodeShape ;
+
+  sh:targetSubjectsOf bfo:bearer_of ;
+
+  sh:property [
+    sh:path bfo:bearer_of ;
+
+    sh:class bfo:SpecificallyDependentContinuant ;
+
+    sh:message "The object of bfo:bearer_of must be typed as a Specifically Dependent Continuant." ;
+
+    sh:severity sh:Violation
+  ] .
+
+
+# Check that every object of cco:is_a_measurement_of is
+# actually typed as an SDC.
+
+ex:MeasurementTargetCorrectTypeShape
+  a sh:NodeShape ;
+
+  sh:targetSubjectsOf cco:is_a_measurement_of ;
+
+  sh:property [
+    sh:path cco:is_a_measurement_of ;
+
+    sh:class bfo:SpecificallyDependentContinuant ;
+
+    sh:message "The object of cco:is_a_measurement_of must be typed as a Specifically Dependent Continuant." ;
+
+    sh:severity sh:Violation
+  ] .
+
+
+# Check that every object of cco:uses_measurement_unit is
+# actually typed as a Measurement Unit.
+
+ex:MeasurementUnitCorrectTypeShape
+  a sh:NodeShape ;
+
+  sh:targetSubjectsOf cco:uses_measurement_unit ;
+
+  sh:property [
+    sh:path cco:uses_measurement_unit ;
+
+    sh:class cco:MeasurementUnit ;
+
+    sh:message "The object of cco:uses_measurement_unit must be typed as a Measurement Unit." ;
+
+    sh:severity sh:Violation
+  ] .

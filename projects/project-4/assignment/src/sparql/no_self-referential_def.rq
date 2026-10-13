@@ -1,6 +1,53 @@
-# Title:  
+# Title:
 #    No cyclical definitions
-# Constraint Description:  
-#    No class definition should be self-referential. 
-# Severity:  
+# Constraint Description:
+#    No class definition should be self-referential.
+# Severity:
 #    Error
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT
+    ?class
+    ?label
+    ?definition
+    ?error
+WHERE {
+
+    ?class rdf:type ?classType .
+
+    VALUES ?classType {
+        owl:Class
+        rdfs:Class
+    }
+
+    ?class rdfs:label ?label .
+
+    ?class ?definitionProperty ?definition .
+
+    VALUES ?definitionProperty {
+        skos:definition
+        obo:IAO_0000115
+    }
+
+    FILTER(
+        CONTAINS(
+            LCASE(STR(?definition)),
+            LCASE(STR(?label))
+        )
+    )
+
+    BIND(
+        CONCAT(
+            "ERROR: Definition appears to refer to its own class label: ",
+            STR(?class)
+        )
+        AS ?error
+    )
+}
+
+ORDER BY ?class

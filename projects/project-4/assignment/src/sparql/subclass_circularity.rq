@@ -1,6 +1,34 @@
-# Title:  
+# Title:
 #    Class SubClassOf Hierarchy Circularity
-# Constraint Description:  
-#    No class should appear in a circular `subClassOf` hierarchy.
-# Severity:  
+# Constraint Description:
+#    No class should appear in a circular subClassOf hierarchy.
+# Severity:
 #    Error
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?class ?error
+WHERE {
+
+    ?class rdf:type ?classType .
+
+    VALUES ?classType {
+        owl:Class
+        rdfs:Class
+    }
+
+    # One or more subclass steps lead back to the same class.
+    ?class rdfs:subClassOf+ ?class .
+
+    BIND(
+        CONCAT(
+            "ERROR: Class participates in a circular subclass hierarchy: ",
+            STR(?class)
+        )
+        AS ?error
+    )
+}
+
+ORDER BY ?class
