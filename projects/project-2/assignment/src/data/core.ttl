@@ -76,7 +76,7 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                       )
                         ] ;
             rdfs:range <https://www.commoncoreontologies.org/ont00001180> ;
-            rdfs:label "is manufactured by"@en ;
+            rdfs:label "has manufacturer"@en ;
             skos:definition "A relation between a material artifact or an information artifact and an organization that participated in a process of which the artifact is an output."@en .
 
 
