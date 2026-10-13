@@ -654,7 +654,6 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 <http://example.org/sduesing/project2_instances.ttl/P2_0000009> rdf:type owl:NamedIndividual ,
                                                                          :P2_0000046 ;
                                                                 :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
-                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000048> ;
                                                                 :P2_0000014 "Airbus A320-271N" ;
                                                                 :P2_0000016 "Airbus A320 Neo" ;
                                                                 :P2_0000017 "Jet"@en ;
@@ -686,7 +685,8 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                 :P2_0000044 "AAC validated by Flight Standardization Board (FSB) report."@en ;
                                                                 :P2_0000050 "C" ;
                                                                 rdfs:label "Airbus A320 Neo specification"@en ;
-                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A320 NEO."@en .
+                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A320 NEO."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000048> .
 
 
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000010
@@ -718,6 +718,69 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000011> ;
                                                                 rdfs:label "Airbus A320 Neo"@en ;
                                                                 skos:definition "An instance of fixed-wing aircraft that is prescribed by the Airbus A320 Neo specification."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000051
+<http://example.org/sduesing/project2_instances.ttl/P2_0000051> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000046 ;
+                                                                :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000052> ;
+                                                                :P2_0000021 142 ;
+                                                                rdfs:label "Airbus A321-111 specification"@en ;
+                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000052
+<http://example.org/sduesing/project2_instances.ttl/P2_0000052> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000049 ;
+                                                                :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000056> <http://example.org/sduesing/project2_instances.ttl/P2_0000054> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000058> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000059> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000060> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000061> ;
+                                                                rdfs:label "Airbus A321-111"@en ;
+                                                                skos:definition "An instance of fixed-wing aircraft that is prescribed by the Airbus A321-111 specification."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000054
+<http://example.org/sduesing/project2_instances.ttl/P2_0000054> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000057 ;
+                                                                :P2_0000056 137 ;
+                                                                rdfs:label "A321-111 approach speed test 1"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000058
+<http://example.org/sduesing/project2_instances.ttl/P2_0000058> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000057 ;
+                                                                :P2_0000056 141 ;
+                                                                rdfs:label "A321-111 approach speed test 2"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000059
+<http://example.org/sduesing/project2_instances.ttl/P2_0000059> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000057 ;
+                                                                :P2_0000056 138 ;
+                                                                rdfs:label "A321-111 approach speed test 3"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000060
+<http://example.org/sduesing/project2_instances.ttl/P2_0000060> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000057 ;
+                                                                :P2_0000056 140 ;
+                                                                rdfs:label "A321-111 approach speed test 4"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000061
+<http://example.org/sduesing/project2_instances.ttl/P2_0000061> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000057 ;
+                                                                :P2_0000056 139 ;
+                                                                rdfs:label "A321-111 approach speed test 5"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
 
 
 #################################################################
