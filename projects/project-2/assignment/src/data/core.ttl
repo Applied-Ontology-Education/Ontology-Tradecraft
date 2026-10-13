@@ -916,7 +916,8 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
 ###  http://example.org/sduesing/project2.ttl/P2_0000049
 :P2_0000049 rdf:type owl:Class ;
             rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001043> ;
-            rdfs:label "fixed-wing aircraft"@en ;
+            rdfs:label "fixed wing"@en ;
+            skos:altLabel "fixed-wing aircraft"@en ;
             skos:definition "An aircraft that generates lift by means other than rotation or oscillation of the wings."@en ;
             <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/wiki/Fixed-wing_aircraft"^^xsd:anyURI .
 
