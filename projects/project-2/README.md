@@ -33,7 +33,7 @@ Your resulting RDF will be autograded using SPARQL, but you will not be required
   - **TASK-2** `Test Process`, `is temporal part of`, `is measurement unit of`, `prescribes`, `Measurement Unit`
   - **TASK-3** `Act of Aircraft Processing`, `Adaptability Evaluation`, `is about`, `realizes`, `is output of`, `Artifact Design`, `inheres in`
   - **TASK-4** `quality`, `Act of Measuring`, `Total Employment`, `has area`, `o group`, `own code`
-- **BFO Conformance** - You must leverage BFO classes and object properties correctly; for example, `Jet Engine` must be a subclass (directly or via intermediary classes) of `material entity`, `Test Process` must be a subclass (directly or via intermediary classes) of `Process`, `Act of Aircraft Design` must be a subclass (directly or via intermediary classes) of `generically dependent continuant`, and so on. 
+- **BFO Conformance** - You must leverage BFO classes and object properties correctly; for example, `Jet Engine` must be a subclass (directly or via intermediary classes) of `material entity`, `Test Process` must be a subclass (directly or via intermediary classes) of `Process`, `Act of Aircraft Design` must be a subclass (directly or via intermediary classes) of `Process`, and so on. 
 
 ## Automated Grading
 
