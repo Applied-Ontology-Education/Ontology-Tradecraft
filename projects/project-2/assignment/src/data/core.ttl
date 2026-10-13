@@ -65,6 +65,22 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 
 
 #################################################################
+#    Datatypes
+#################################################################
+
+###  http://example.org/sduesing/project2.ttl/P2_0000062
+:P2_0000062 rdf:type rdfs:Datatype ;
+            rdfs:comment "A BADA code that identifies the model of an aircraft."@en ;
+            rdfs:label "bada"@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000063
+:P2_0000063 rdf:type rdfs:Datatype ;
+            rdfs:comment "An FAA code that identifies the model of an aircraft."@en ;
+            rdfs:label "faa"@en .
+
+
+#################################################################
 #    Object Properties
 #################################################################
 
