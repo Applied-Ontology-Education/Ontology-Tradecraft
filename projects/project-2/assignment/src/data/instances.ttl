@@ -654,8 +654,6 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 <http://example.org/sduesing/project2_instances.ttl/P2_0000009> rdf:type owl:NamedIndividual ,
                                                                          :P2_0000046 ;
                                                                 :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
-                                                                :P2_0000014 "Airbus A320-271N"^^:P2_0000062 ;
-                                                                :P2_0000016 "Airbus A320 Neo"^^:P2_0000063 ;
                                                                 :P2_0000017 "Jet"@en ;
                                                                 :P2_0000018 2 ;
                                                                 :P2_0000019 "III" ;
@@ -716,6 +714,8 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                 :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
                                                                 <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/sduesing/project2_instances.ttl/P2_0000010> ,
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000011> ;
+                                                                :P2_0000014 "Airbus A320-271N"^^:P2_0000062 ;
+                                                                :P2_0000016 "Airbus A320 Neo"^^:P2_0000063 ;
                                                                 rdfs:label "Airbus A320 Neo"@en ;
                                                                 skos:definition "An instance of fixed-wing aircraft that is prescribed by the Airbus A320 Neo specification."@en .
 

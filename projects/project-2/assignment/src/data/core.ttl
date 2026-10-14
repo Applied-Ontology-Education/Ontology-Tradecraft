@@ -675,16 +675,20 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000014
 :P2_0000014 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf :P2_0000047 ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <https://www.commoncoreontologies.org/ont00001043> ;
+            rdfs:range :P2_0000062 ;
             rdfs:label "has model BADA"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the BADA code that identifies the model of the aircraft."@en .
+            skos:definition "A data property of an aircraft that indicates the BADA code that identifies the model of the aircraft."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000016
 :P2_0000016 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf :P2_0000047 ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:domain <https://www.commoncoreontologies.org/ont00001043> ;
+            rdfs:range :P2_0000063 ;
             rdfs:label "has model FAA"@en ;
-            skos:definition "A data property of an aircraft spec that indicates FAA code that identifies the model of the aircraft."@en .
+            skos:definition "A data property of an aircraft that indicates the FAA code that identifies the model of the aircraft."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000017
