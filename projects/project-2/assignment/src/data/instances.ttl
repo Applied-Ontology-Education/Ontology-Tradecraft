@@ -741,6 +741,7 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000059> ,
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000060> ,
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000061> ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000064> ;
                                                                 :P2_0000021 142 ;
                                                                 rdfs:label "Airbus A321-111"@en ;
                                                                 skos:definition "An instance of fixed-wing aircraft that is prescribed by the Airbus A321-111 specification."@en .
@@ -784,6 +785,13 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                 :P2_0000056 139 ;
                                                                 rdfs:label "A321-111 approach speed test 5"@en ;
                                                                 skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000064
+<http://example.org/sduesing/project2_instances.ttl/P2_0000064> rdf:type owl:NamedIndividual ;
+                                                                :P2_0000056 142 ;
+                                                                rdfs:label "An average of measured approach speed values."@en ,
+                                                                           "average approach speed value"@en .
 
 
 #################################################################
