@@ -959,17 +959,6 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
             skos:definition "A Planned Act in which an agent initiates or executes a process and measures some aspect of the process itself or its outputs to evaluate the process."@en .
 
 
-###  http://example.org/sduesing/project2.ttl/P2_0000057
-:P2_0000057 rdf:type owl:Class ;
-            rdfs:subClassOf :P2_0000053 ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty obo:BFO_0000057 ;
-                              owl:someValuesFrom <https://www.commoncoreontologies.org/ont00001043>
-                            ] ;
-            rdfs:label "aircraft approach speed test process"@en ;
-            skos:definition "A test process in which an aircraft participates and in which the aircraft's approach speed is measured."@en .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000001
 obo:BFO_0000001 rdf:type owl:Class ;
                 dc11:identifier "001-BFO" ;
