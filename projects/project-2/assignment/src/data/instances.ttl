@@ -682,7 +682,7 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                 :P2_0000043 540276 ;
                                                                 :P2_0000044 "AAC validated by Flight Standardization Board (FSB) report."@en ;
                                                                 :P2_0000050 "C" ;
-                                                                rdfs:label "Airbus A320 Neo specification"@en ;
+                                                                rdfs:label "Airbus A320 Neo"@en ;
                                                                 skos:definition "An instance of aircraft design that prescribes the Airbus A320 NEO."@en ;
                                                                 <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000048> .
 
@@ -726,7 +726,7 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                 :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
                                                                 <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000052> ;
                                                                 :P2_0000021 142 ;
-                                                                rdfs:label "Airbus A321-111 specification"@en ;
+                                                                rdfs:label "Airbus A321-111"@en ;
                                                                 skos:definition "An instance of aircraft design that prescribes the Airbus A321-111."@en .
 
 
