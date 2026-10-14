@@ -1041,18 +1041,6 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
             skos:definition "A role borne by a material entity participating in an act of adaptability evaluation." .
 
 
-###  http://example.org/sduesing/project2.ttl/P2_0000082
-:P2_0000082 rdf:type owl:Class ;
-            rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000077> ,
-                            [ rdf:type owl:Restriction ;
-                              owl:onProperty <https://www.commoncoreontologies.org/ont00001808> ;
-                              owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000319>
-                            ] ;
-            rdfs:label "Artifact Design Code Identifier"@en ;
-            skos:definition "A Code Identifier that refers to an artifact design." ;
-            skos:example "A BADA Code identifying an aircraft spec."@en .
-
-
 ###  http://purl.obolibrary.org/obo/BFO_0000001
 obo:BFO_0000001 rdf:type owl:Class ;
                 dc11:identifier "001-BFO" ;

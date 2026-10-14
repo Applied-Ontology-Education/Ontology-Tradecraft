@@ -843,6 +843,21 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                 skos:definition "An instance of SOC Occupation Role associated with SOC Code 17-3021."@en .
 
 
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000083
+<http://example.org/sduesing/project2_instances.ttl/P2_0000083> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000853> ;
+                                                                <https://www.commoncoreontologies.org/ont00001808> <http://example.org/sduesing/project2_instances.ttl/P2_0000084> ;
+                                                                rdfs:label "artifact design adaptability evaluation report"@en ;
+                                                                skos:definition "An instance of an information content entity that is about an artifact design and its participation in a process of evaluating adaptability."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000084
+<http://example.org/sduesing/project2_instances.ttl/P2_0000084> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000319> ;
+                                                                rdfs:label "Artifact Design"@en ;
+                                                                skos:definition "An instance of an artifact design."@en .
+
+
 #################################################################
 #    General axioms
 #################################################################
