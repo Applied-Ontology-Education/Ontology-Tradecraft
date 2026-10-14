@@ -1,0 +1,26 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+
+# Manual semantic curation, BFO <-> IES
+#
+# These two mappings were found by reading definitions directly rather than
+# through compare_structures.py's structural matching (which, even after
+# formalizing IES's definitions into restriction axioms, only ever turned up
+# coincidental structural matches against BFO's top-level categories; see
+# FINDINGS.md). Both assertions use rdfs:subClassOf rather than
+# owl:equivalentClass, since in both cases the BFO class is strictly broader
+# than the IES class, not identical to it.
+
+ies:Event rdfs:subClassOf obo:BFO_0000015 .
+# ies:Event ("an activity or incident... that occurred/started at a specific
+# point in time") matches BFO's process (an occurrent with participants).
+# Not every BFO process is an IES Event (process is far broader), so this is
+# subsumption, not equivalence.
+
+ies:Entity rdfs:subClassOf obo:BFO_0000004 .
+# ies:Entity ("a tangible thing like a Person, a Communications Device, or a
+# Location") is mapped to BFO's independent continuant rather than material
+# entity specifically, since IES's own example "Location" is not made of
+# matter and so would not qualify as a material entity in BFO's sense.
