@@ -77,7 +77,11 @@ ies:AccountHolder a rdfs:Class ;
     rdfs:label "Account Holder"^^xsd:string ;
     dcterms:identifier "{C93379F2-6B01-4100-ABFA-BD26098AC1CB}" ;
     rdfs:comment "A PersonState when they hold an Account" ;
-    rdfs:subClassOf ies:ResponsibleActorState .
+    rdfs:subClassOf ies:ResponsibleActorState,
+        [ a owl:Restriction ;
+          owl:onProperty ies:holdsAccount ;
+          owl:allValuesFrom ies:Account
+        ] .
 
 ies:AccountInCommunication a rdfs:Class ;
     rdfs:label "Account In Communication"^^xsd:string ;
@@ -2021,7 +2025,11 @@ ies:MoneyTransfer a rdfs:Class ;
 
 Usually a Money Transfer event will involve two accounts but we might not know both, or it might be a cash transfer – in which case only one of the participants might be specified.""" ;
     rdfs:subClassOf ies:BusinessEvent,
-        ies:TradeEvent .
+        ies:TradeEvent,
+        [ a owl:Restriction ;
+          owl:onProperty ies:transferValue ;
+          owl:allValuesFrom ies:AmountOfMoney
+        ] .
 
 ies:Movement a rdfs:Class ;
     rdfs:label "Movement"^^xsd:string ;
@@ -2624,7 +2632,11 @@ ies:RadioMast a rdfs:Class ;
 
 """ ;
     rdfs:subClassOf ies:Device,
-        ies:SystemState .
+        ies:SystemState,
+        [ a owl:Restriction ;
+          owl:onProperty ies:radioCoverage ;
+          owl:allValuesFrom ies:RadioCoverageArea
+        ] .
 
 ies:Ratification a rdfs:Class ;
     rdfs:label "Ratification"^^xsd:string ;
@@ -2825,7 +2837,11 @@ ies:ResponsibleActorState a rdfs:Class ;
 
 Note:  this is the superclass of ResponsibleActor (the whole life person or organisation) because the whole-life state is just a special case of a ResponsibleActorState. This pattern is true for all states. """ ;
     ies:powertype ies:ClassOfResponsibleActorState ;
-    rdfs:subClassOf ies:ActorState .
+    rdfs:subClassOf ies:ActorState,
+        [ a owl:Restriction ;
+          owl:onProperty ies:worksFor ;
+          owl:allValuesFrom ies:ResponsibleActor
+        ] .
 
 ies:Retailer a rdfs:Class ;
     rdfs:label "Retailer"^^xsd:string ;
