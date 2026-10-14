@@ -675,7 +675,7 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000014
 :P2_0000014 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :P2_0000047 ;
             rdfs:domain <https://www.commoncoreontologies.org/ont00001043> ;
             rdfs:range :P2_0000062 ;
             rdfs:label "has model BADA"@en ;
@@ -684,7 +684,7 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000016
 :P2_0000016 rdf:type owl:DatatypeProperty ;
-            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:subPropertyOf :P2_0000047 ;
             rdfs:domain <https://www.commoncoreontologies.org/ont00001043> ;
             rdfs:range :P2_0000063 ;
             rdfs:label "has model FAA"@en ;
@@ -695,203 +695,203 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
 :P2_0000017 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has engine class"@en ;
-            skos:definition "A data property of an aircraft spec that describes the physical class of the engines of aircrafts following that spec."@en .
+            skos:definition "A data property of an aircraft that describes the physical class of the engines of aircrafts following that spec."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000018
 :P2_0000018 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has number of engines"@en ;
-            skos:definition "A data property of an aircraft spec that is the number of engines the aircraft has."@en .
+            skos:definition "A data property of an aircraft that is the number of engines the aircraft has."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000019
 :P2_0000019 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has ADG code"@en ;
-            skos:definition "A data property of an aircraft spec that indicates its design group as determined based on combination of Tail Height and Wingspan per FAA AC 150/5300-13B."@en .
+            skos:definition "A data property of an aircraft that indicates its design group as determined based on combination of Tail Height and Wingspan per FAA AC 150/5300-13B."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000020
 :P2_0000020 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has TDG code"@en ;
-            skos:definition "A data property of an aircraft spec that indicates its taxiway design group as determined based on a combination of Main Gear Width and Cockpit to Main Gear Distance per FAA AC 150/5300-13B."@en .
+            skos:definition "A data property of an aircraft that indicates its taxiway design group as determined based on a combination of Main Gear Width and Cockpit to Main Gear Distance per FAA AC 150/5300-13B."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000021
 :P2_0000021 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has approach speed knots"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's approach speed to the runway at maximum allowable landing weight, measured in knots."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's approach speed to the runway at maximum allowable landing weight, measured in knots."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000022
 :P2_0000022 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has wingspan ft"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's wingspan."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's wingspan."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000023
 :P2_0000023 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has length ft"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's length in feet."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's length in feet."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000024
 :P2_0000024 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has tail height ft"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's tail height in feet."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's tail height in feet."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000025
 :P2_0000025 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has wheelbase ft"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the size of an aircraft's wheelbase in feet."@en .
+            skos:definition "A data property of an aircraft that indicates the size of an aircraft's wheelbase in feet."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000026
 :P2_0000026 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has cockpit to main gear ft"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the distance from an aircraft's cockpit to its main gear in feet."@en .
+            skos:definition "A data property of an aircraft that indicates the distance from an aircraft's cockpit to its main gear in feet."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000027
 :P2_0000027 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has main gear width ft"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the width of an aircraft's main gear in feet."@en .
+            skos:definition "A data property of an aircraft that indicates the width of an aircraft's main gear in feet."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000029
 :P2_0000029 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has MTOW lb"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's maximum takeoff gross weight in pounds."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's maximum takeoff gross weight in pounds."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000030
 :P2_0000030 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has MALW lb"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's maximum allowable landing weight in pounds."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's maximum allowable landing weight in pounds."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000031
 :P2_0000031 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has main gear config"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's main gear configuration."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's main gear configuration."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000032
 :P2_0000032 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has ICAO WTC"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's ICAO Weight Turbulence Category (WTC)."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's ICAO Weight Turbulence Category (WTC)."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000033
 :P2_0000033 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has parking area ft2"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's minimum parking position area in square feet."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's minimum parking position area in square feet."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000034
 :P2_0000034 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has FAA weight class"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's FAA weight class."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's FAA weight class."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000035
 :P2_0000035 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has CWT"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's Consolidated Wake Turbulence Category."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's Consolidated Wake Turbulence Category."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000036
 :P2_0000036 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has one half wake category"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's RECAT (Recategorization) 1.5 Wake Category."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's RECAT (Recategorization) 1.5 Wake Category."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000037
 :P2_0000037 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has two wake category appx A"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's RECAT (Recategorization) 2 Wake Category (Appendix A)."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's RECAT (Recategorization) 2 Wake Category (Appendix A)."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000038
 :P2_0000038 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has two wake category appx B"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's RECAT (Recategorization) 2 Wake Category (Appendix B)."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's RECAT (Recategorization) 2 Wake Category (Appendix B)."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000039
 :P2_0000039 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has SRS"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's Same Runway Separation Category."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's Same Runway Separation Category."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000040
 :P2_0000040 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has LAHSO"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's Land and Hold Short Operations Group number."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's Land and Hold Short Operations Group number."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000041
 :P2_0000041 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has FAA registry"@en ;
-            skos:definition "A data property of an aircraft spec that indicates whether an aircraft has an FAA registry."@en .
+            skos:definition "A data property of an aircraft that indicates whether an aircraft has an FAA registry."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000042
 :P2_0000042 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has registration count"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's registration count in the 2022 FAA Database"@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's registration count in the 2022 FAA Database"@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000043
 :P2_0000043 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has TMFS operations in FY24"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's total NAS operations with TFMS Flight Plan (IFR or VFR) in fiscal year 2024."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's total NAS operations with TFMS Flight Plan (IFR or VFR) in fiscal year 2024."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000044
 :P2_0000044 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has additional remarks"@en ;
-            skos:definition "A data property of an aircraft spec that indicates additional remarks about an aircraft model in the ACD data sheet."@en .
+            skos:definition "A data property of an aircraft that indicates additional remarks about an aircraft model in the ACD data sheet."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000047
 :P2_0000047 rdf:type owl:DatatypeProperty ;
-            rdfs:domain :P2_0000046 ;
-            rdfs:label "aircraft specification data property"@en ;
-            skos:definition "A data property of an aircraft specification, the value of which is data about some aspect of the aircraft prescribed by the specification."@en .
+            rdfs:domain <https://www.commoncoreontologies.org/ont00001043> ;
+            rdfs:label "aircraft data property"@en ;
+            skos:definition "A data property of an aircraft, the value of which is data about some aspect of the aircraft and which is prescribed by some aircraft specification."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000050
 :P2_0000050 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000047 ;
             rdfs:label "has AAC"@en ;
-            skos:definition "A data property of an aircraft spec that indicates the aircraft's approach category."@en .
+            skos:definition "A data property of an aircraft that indicates the aircraft's approach category."@en .
 
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000056
