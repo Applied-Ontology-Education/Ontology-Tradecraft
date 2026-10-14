@@ -811,6 +811,38 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                 skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots five times, with the final result being the average of the results of the five constituent tests."@en .
 
 
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000077
+<http://example.org/sduesing/project2_instances.ttl/P2_0000077> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000068 ;
+                                                                :P2_0000073 "Broad" ;
+                                                                :P2_0000074 "17-2010" ;
+                                                                :P2_0000075 "Aerospace Engineers" ;
+                                                                rdfs:label "SOC: Aerospace Engineers (17-2010)"@en ;
+                                                                skos:definition "An instance of SOC Occupation Role associated with SOC Code 17-2010."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000078
+<http://example.org/sduesing/project2_instances.ttl/P2_0000078> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000068 ;
+                                                                :P2_0000073 "Detailed" ;
+                                                                :P2_0000074 "17-2011" ;
+                                                                :P2_0000075 "Aerospace Engineers" ;
+                                                                :P2_0000076 "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques."@en ;
+                                                                rdfs:label "SOC: Aerospace Engineers (17-2011)"@en ;
+                                                                skos:definition "An instance of SOC Occupation Role associated with SOC Code 17-2011." .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000079
+<http://example.org/sduesing/project2_instances.ttl/P2_0000079> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000068 ;
+                                                                :P2_0000073 "Detailed"@en ;
+                                                                :P2_0000074 "17-3021" ;
+                                                                :P2_0000075 "Aerospace Engineering and Operations Technologists and Technicians"@en ;
+                                                                :P2_0000076 "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data."@en ;
+                                                                rdfs:label "SOC: Aerospace Engineering and Operations Technologists & Technicians (17-3021)"@en ;
+                                                                skos:definition "An instance of SOC Occupation Role associated with SOC Code 17-3021."@en .
+
+
 #################################################################
 #    General axioms
 #################################################################

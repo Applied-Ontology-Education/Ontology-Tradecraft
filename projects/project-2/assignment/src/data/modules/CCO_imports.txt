@@ -8,7 +8,10 @@ https://www.commoncoreontologies.org/ont00000636 # Act of Appraisal
 https://www.commoncoreontologies.org/ont00000738 # Length
 https://www.commoncoreontologies.org/ont00000908 # Act of Material Artifact Processing
 https://www.commoncoreontologies.org/ont00000967 # Height
+https://www.commoncoreontologies.org/ont00000984 # Occupation Role
+https://www.commoncoreontologies.org/ont00001017 # Agent
 https://www.commoncoreontologies.org/ont00001043 # Aircraft
 https://www.commoncoreontologies.org/ont00001163 # Measurement Information Content Entity
+https://www.commoncoreontologies.org/ont00001816 # is output of
 https://www.commoncoreontologies.org/ont00001942 # prescribes
 https://www.commoncoreontologies.org/ont00001961 # is measurement unit of

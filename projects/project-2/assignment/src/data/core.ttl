@@ -900,6 +900,40 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
             rdfs:label "has measured approach speed knots"@en .
 
 
+###  http://example.org/sduesing/project2.ttl/P2_0000072
+:P2_0000072 rdf:type owl:DatatypeProperty ;
+            rdfs:label "SOC data property"@en ;
+            skos:definition "A data property associated with entries in the US Bureau of Labor Statistics' Standard Occupational Classification."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000073
+:P2_0000073 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000072 ;
+            rdfs:label "has SOC Group"@en ;
+            skos:definition "A data property of an SOC Occupation Role that indicates its SOC Group."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000074
+:P2_0000074 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000072 ;
+            rdfs:label "has SOC Code"@en ;
+            skos:definition "A data property of an SOC Occupation Role that indicates its SOC Code."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000075
+:P2_0000075 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000072 ;
+            rdfs:label "has SOC Title"@en ;
+            skos:definition "A data property of an SOC Occupation Role that indicates its SOC Title" .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000076
+:P2_0000076 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000072 ;
+            rdfs:label "has SOC Definition"@en ;
+            skos:definition "A data property of an SOC Occupation Role that indicates its SOC Definition."@en .
+
+
 #################################################################
 #    Classes
 #################################################################
@@ -971,6 +1005,20 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
                             ] ;
             rdfs:label "Act of Aircraft Processing"@en ;
             skos:definition "A Planned Act in which material parts of an aircraft participate."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000068
+:P2_0000068 rdf:type owl:Class ;
+            rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000984> ;
+            rdfs:label "SOC Occupation Role"@en ;
+            skos:definition "An occupation role as characterized within the US Bureau of Labor Statistics' Standard Occupational Classification."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000080
+:P2_0000080 rdf:type owl:Class ;
+            rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000636> ;
+            rdfs:label "Adaptability Evaluation"@en ;
+            skos:definition "An Act of Appraisal in which the characteristic under appraisal is adaptability."@en .
 
 
 ###  http://purl.obolibrary.org/obo/BFO_0000001
