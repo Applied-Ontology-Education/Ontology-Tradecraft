@@ -661,9 +661,9 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000009
 <http://example.org/sduesing/project2_instances.ttl/P2_0000009> rdf:type owl:NamedIndividual ,
                                                                          :P2_0000046 ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000048> ;
                                                                 rdfs:label "Airbus A320 Neo specification"@en ;
-                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A320 NEO."@en ;
-                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000048> .
+                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A320 NEO."@en .
 
 
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000010
@@ -731,9 +731,9 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 <http://example.org/sduesing/project2_instances.ttl/P2_0000051> rdf:type owl:NamedIndividual ,
                                                                          :P2_0000046 ;
                                                                 :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000052> ;
                                                                 rdfs:label "Airbus A321-111 specification"@en ;
-                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A321-111."@en ;
-                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000052> .
+                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A321-111."@en .
 
 
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000052
@@ -745,10 +745,10 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000059> ,
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000060> ,
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000061> ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000064> ;
                                                                 :P2_0000021 142 ;
                                                                 rdfs:label "Airbus A321-111"@en ;
-                                                                skos:definition "An instance of fixed-wing aircraft that is prescribed by the Airbus A321-111 specification."@en ;
-                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000064> .
+                                                                skos:definition "An instance of fixed-wing aircraft that is prescribed by the Airbus A321-111 specification."@en .
 
 
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000054
@@ -850,9 +850,10 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000083
 <http://example.org/sduesing/project2_instances.ttl/P2_0000083> rdf:type owl:NamedIndividual ,
                                                                          <https://www.commoncoreontologies.org/ont00000853> ;
-                                                                rdfs:label "artifact design adaptability evaluation report"@en ;
-                                                                skos:definition "An instance of an information content entity that is about an artifact design and its participation in a process of evaluating adaptability."@en ;
-                                                                <https://www.commoncoreontologies.org/ont00001808> <http://example.org/sduesing/project2_instances.ttl/P2_0000084> .
+                                                                <https://www.commoncoreontologies.org/ont00001808> <http://example.org/sduesing/project2_instances.ttl/P2_0000084> ;
+                                                                <https://www.commoncoreontologies.org/ont00001816> <http://example.org/sduesing/project2_instances.ttl/P2_0000123> ;
+                                                                rdfs:label "adaptability evaluation report"@en ;
+                                                                skos:definition "An instance of an information content entity that is about an artifact design and its participation in a process of evaluating adaptability."@en .
 
 
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000084
@@ -971,6 +972,21 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                 :P2_0000118 120440 ;
                                                                 rdfs:label "OCC: Aerospace Engineering and Operations Technologists and Technicians (17-3021)"@en ;
                                                                 skos:definition "An OCC occupation entry associated with OCC Code 17-3021."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000122
+<http://example.org/sduesing/project2_instances.ttl/P2_0000122> rdf:type owl:NamedIndividual ,
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000016> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000197> <http://example.org/sduesing/project2_instances.ttl/P2_0000052> ;
+                                                                rdfs:label "A321-111 approach speed"@en ;
+                                                                skos:definition "An instance of a disposition inhering in an A321-111 and realized in the process of approaching the runway."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000123
+<http://example.org/sduesing/project2_instances.ttl/P2_0000123> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000636> ;
+                                                                rdfs:label "adaptability evaluation process"@en ;
+                                                                skos:definition "An instance of an Act of Appraisal in which the adaptability of an artifact is evaluated."@en .
 
 
 #################################################################
