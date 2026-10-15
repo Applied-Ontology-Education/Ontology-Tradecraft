@@ -934,6 +934,221 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
             skos:definition "A data property of an SOC Occupation Role that indicates its SOC Definition."@en .
 
 
+###  http://example.org/sduesing/project2.ttl/P2_0000087
+:P2_0000087 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf owl:topDataProperty ;
+            rdfs:label "OCC data property"@en ;
+            skos:definition "A data property associated with an Occupational Employment and Wage Statistics (OEWS) Survey entry."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000088
+:P2_0000088 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:integer ;
+            rdfs:label "has OCC area"@en ;
+            skos:definition "A data property of an OCC entry that indicates its U.S. (99), state FIPS code, Metropolitan Statistical Area (MSA) code, or OEWS-specific nonmetropolitan area code."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000089
+:P2_0000089 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:string ;
+            rdfs:label "has OCC area title"@en ;
+            skos:definition "A data property of an OCC entry that indicates its area title." .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000090
+:P2_0000090 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:integer ;
+            rdfs:label "has OCC area type"@en ;
+            skos:definition "A data property of an OCC entry that indicates its area type according to the following codes: 1= U.S.; 2= State; 3= U.S. Territory; 4= Metropolitan Statistical Area (MSA); 6= Nonmetropolitan Area."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000091
+:P2_0000091 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:string ;
+            rdfs:label "has OCC primary state"@en ;
+            skos:definition "A data property associated with an OCC entry that indicates the primary state associated with a the given area of the occupation, using \"US\" for national estimates."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000092
+:P2_0000092 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:integer ;
+            rdfs:label "has OCC NAICS"@en ;
+            skos:definition "A data property for an OCC entry that indicates the North American Industry Classification System (NAICS) code for the given industry."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000093
+:P2_0000093 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:string ;
+            rdfs:label "has OCC NAICS title"@en ;
+            skos:definition "A data property for an OCC entry that indicates the North American Industry Classification System (NAICS) title for the given industry"@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000094
+:P2_0000094 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:string ;
+            rdfs:label "has OCC i-group"@en ;
+            skos:definition "A data property of an OCC entry that indicates cross-industry or NAICS sector."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000095
+:P2_0000095 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:integer ;
+            rdfs:label "own code"@en ;
+            skos:definition "A data property of an OCC entry that indicates ownership type: 1= Federal Government; 2= State Government; 3= Local Government; 123= Federal, State, and Local Government; 235=Private, State, and Local Government; 35 = Private and Local Government; 5= Private; 57=Private, Local Government Gambling Establishments (Sector 71), and Local Government Casino Hotels (Sector 72); 58= Private plus State and Local Government Hospitals; 59= Private and Postal Service; 1235= Federal, State, and Local Government and Private Sector"@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000096
+:P2_0000096 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:string ;
+            rdfs:label "has OCC code"@en ;
+            skos:definition "A data property of an OCC entry that indicates the 6-digit Standard Occupational Classification (SOC) code or OEWS-specific code for the occupation."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000097
+:P2_0000097 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:string ;
+            rdfs:label "has OCC title"@en ;
+            skos:definition "A data property of an OCC entry that indicates the SOC title or OEWS-specific title for the occupation"@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000098
+:P2_0000098 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:string ;
+            rdfs:label "o group"@en ;
+            skos:definition "A data property of an OCC entry that indicates SOC occupation level."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000099
+:P2_0000099 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:integer ;
+            rdfs:label "total employment"@en ;
+            skos:definition "A data property of an OCC entry that indicates estimated total employment rounded to the nearest 10 (excluding self-employed)."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000100
+:P2_0000100 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC PRSE"@en ;
+            skos:definition "A data property of an OCC entry that indicates percent relative standard error (PRSE) for the employment estimate."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000105
+:P2_0000105 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC mean hourly wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the mean hourly wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000106
+:P2_0000106 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC mean annual wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the mean annual wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000108
+:P2_0000108 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC mean wage PRSE"@en ;
+            skos:definition "A data property of an OCC entry that indicates the percent relative standard error (PRSE) for the mean wage estimate."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000109
+:P2_0000109 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC 10th percentile hourly wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the 10th percentile hourly wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000110
+:P2_0000110 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC 25th percentile hourly wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the 25th percentile hourly wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000111
+:P2_0000111 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC 50th percentile hourly wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the 50th percentile hourly wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000112
+:P2_0000112 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC 75th percentile hourly wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the 75th percentile hourly wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000113
+:P2_0000113 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC 90th percentile hourly wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the 90eth percentile hourly wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000114
+:P2_0000114 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC 10th percentile annual wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the 10th percentile annual wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000115
+:P2_0000115 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC 25th percentile annual wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the 25th percentile annual wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000116
+:P2_0000116 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC 50th percentile annual wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the 50th percentile annual wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000117
+:P2_0000117 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC 75th percentile annual wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the 75th percentile annual wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000118
+:P2_0000118 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000087 ;
+            rdfs:range xsd:decimal ;
+            rdfs:label "has OCC 90th percentile annual wage"@en ;
+            skos:definition "A data property of an OCC entry indicating the 90th percentile annual wage."@en .
+
+
 #################################################################
 #    Classes
 #################################################################

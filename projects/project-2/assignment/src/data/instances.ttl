@@ -877,6 +877,102 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                 skos:definition "An instance of an adaptability evaluation role. See rdfs:comment on the class."@en .
 
 
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000119
+<http://example.org/sduesing/project2_instances.ttl/P2_0000119> rdf:type owl:NamedIndividual ;
+                                                                :P2_0000088 99 ;
+                                                                :P2_0000089 "U.S." ;
+                                                                :P2_0000090 1 ;
+                                                                :P2_0000091 "US" ;
+                                                                :P2_0000092 000000 ;
+                                                                :P2_0000093 "Cross-industry" ;
+                                                                :P2_0000094 "cross-industry" ;
+                                                                :P2_0000095 1235 ;
+                                                                :P2_0000096 "17-2010" ;
+                                                                :P2_0000097 "Aerospace Engineers"@en ;
+                                                                :P2_0000098 "broad" ;
+                                                                :P2_0000099 68440 ;
+                                                                :P2_0000100 2.3 ;
+                                                                :P2_0000105 67.88 ;
+                                                                :P2_0000106 141180 ;
+                                                                :P2_0000108 0.8 ;
+                                                                :P2_0000109 41.04 ;
+                                                                :P2_0000110 50.36 ;
+                                                                :P2_0000111 64.82 ;
+                                                                :P2_0000112 83.88 ;
+                                                                :P2_0000113 98.97 ;
+                                                                :P2_0000114 85350 ;
+                                                                :P2_0000115 104740 ;
+                                                                :P2_0000116 104740 ;
+                                                                :P2_0000117 174480 ;
+                                                                :P2_0000118 205850 ;
+                                                                rdfs:label "OCC: Aerospace Engineers (17-2010)"@en ;
+                                                                skos:definition "An OCC occupation entry associated with OCC Code 17-2010."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000120
+<http://example.org/sduesing/project2_instances.ttl/P2_0000120> rdf:type owl:NamedIndividual ;
+                                                                :P2_0000088 99 ;
+                                                                :P2_0000089 "U.S." ;
+                                                                :P2_0000090 1 ;
+                                                                :P2_0000091 "US" ;
+                                                                :P2_0000092 000000 ;
+                                                                :P2_0000093 "Cross-industry" ;
+                                                                :P2_0000094 "cross-industry" ;
+                                                                :P2_0000095 1235 ;
+                                                                :P2_0000096 "17-2011" ;
+                                                                :P2_0000097 "Aerospace Engineers"@en ;
+                                                                :P2_0000098 "detailed" ;
+                                                                :P2_0000099 68440 ;
+                                                                :P2_0000100 2.3 ;
+                                                                :P2_0000105 67.88 ;
+                                                                :P2_0000106 141180 ;
+                                                                :P2_0000108 0.8 ;
+                                                                :P2_0000109 41.04 ;
+                                                                :P2_0000110 50.36 ;
+                                                                :P2_0000111 64.82 ;
+                                                                :P2_0000112 83.88 ;
+                                                                :P2_0000113 98.97 ;
+                                                                :P2_0000114 85350 ;
+                                                                :P2_0000115 104740 ;
+                                                                :P2_0000116 104740 ;
+                                                                :P2_0000117 174480 ;
+                                                                :P2_0000118 205850 ;
+                                                                rdfs:label "OCC: Aerospace Engineers (17-2011)"@en ;
+                                                                skos:definition "An OCC occupation entry associated with OCC Code 17-2011."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000121
+<http://example.org/sduesing/project2_instances.ttl/P2_0000121> rdf:type owl:NamedIndividual ;
+                                                                :P2_0000088 99 ;
+                                                                :P2_0000089 "U.S." ;
+                                                                :P2_0000090 1 ;
+                                                                :P2_0000091 "US" ;
+                                                                :P2_0000092 000000 ;
+                                                                :P2_0000093 "Cross-industry" ;
+                                                                :P2_0000094 "cross-industry" ;
+                                                                :P2_0000095 1235 ;
+                                                                :P2_0000096 "17-3021" ;
+                                                                :P2_0000097 "Aerospace Engineering and Operations Technologists and Technicians"@en ;
+                                                                :P2_0000098 "detailed" ;
+                                                                :P2_0000099 9060 ;
+                                                                :P2_0000100 4.3 ;
+                                                                :P2_0000105 31.50 ;
+                                                                :P2_0000106 86330 ;
+                                                                :P2_0000108 1.4 ;
+                                                                :P2_0000109 25.83 ;
+                                                                :P2_0000110 31.04 ;
+                                                                :P2_0000111 38.38 ;
+                                                                :P2_0000112 49.14 ;
+                                                                :P2_0000113 57.91 ;
+                                                                :P2_0000114 53730 ;
+                                                                :P2_0000115 64570 ;
+                                                                :P2_0000116 79830 ;
+                                                                :P2_0000117 79550 ;
+                                                                :P2_0000118 120440 ;
+                                                                rdfs:label "OCC: Aerospace Engineering and Operations Technologists and Technicians (17-3021)"@en ;
+                                                                skos:definition "An OCC occupation entry associated with OCC Code 17-3021."@en .
+
+
 #################################################################
 #    General axioms
 #################################################################
