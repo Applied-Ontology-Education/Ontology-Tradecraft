@@ -67,6 +67,10 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 <https://www.commoncoreontologies.org/ont00001808> rdf:type owl:AnnotationProperty .
 
 
+###  https://www.commoncoreontologies.org/ont00001816
+<https://www.commoncoreontologies.org/ont00001816> rdf:type owl:AnnotationProperty .
+
+
 ###  https://www.commoncoreontologies.org/ont00001942
 <https://www.commoncoreontologies.org/ont00001942> rdf:type owl:AnnotationProperty .
 
@@ -661,9 +665,9 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000009
 <http://example.org/sduesing/project2_instances.ttl/P2_0000009> rdf:type owl:NamedIndividual ,
                                                                          :P2_0000046 ;
-                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000048> ;
                                                                 rdfs:label "Airbus A320 Neo specification"@en ;
-                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A320 NEO."@en .
+                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A320 NEO."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000048> .
 
 
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000010
@@ -731,9 +735,9 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 <http://example.org/sduesing/project2_instances.ttl/P2_0000051> rdf:type owl:NamedIndividual ,
                                                                          :P2_0000046 ;
                                                                 :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
-                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000052> ;
                                                                 rdfs:label "Airbus A321-111 specification"@en ;
-                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A321-111."@en .
+                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A321-111."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000052> .
 
 
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000052
@@ -745,10 +749,10 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000059> ,
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000060> ,
                                                                                                              <http://example.org/sduesing/project2_instances.ttl/P2_0000061> ;
-                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000064> ;
                                                                 :P2_0000021 142 ;
                                                                 rdfs:label "Airbus A321-111"@en ;
-                                                                skos:definition "An instance of fixed-wing aircraft that is prescribed by the Airbus A321-111 specification."@en .
+                                                                skos:definition "An instance of fixed-wing aircraft that is prescribed by the Airbus A321-111 specification."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000064> .
 
 
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000054
@@ -850,10 +854,10 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000083
 <http://example.org/sduesing/project2_instances.ttl/P2_0000083> rdf:type owl:NamedIndividual ,
                                                                          <https://www.commoncoreontologies.org/ont00000853> ;
-                                                                <https://www.commoncoreontologies.org/ont00001808> <http://example.org/sduesing/project2_instances.ttl/P2_0000084> ;
-                                                                <https://www.commoncoreontologies.org/ont00001816> <http://example.org/sduesing/project2_instances.ttl/P2_0000123> ;
                                                                 rdfs:label "adaptability evaluation report"@en ;
-                                                                skos:definition "An instance of an information content entity that is about an artifact design and its participation in a process of evaluating adaptability."@en .
+                                                                skos:definition "An instance of an information content entity that is about an artifact design and its participation in a process of evaluating adaptability."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001808> <http://example.org/sduesing/project2_instances.ttl/P2_0000084> ;
+                                                                <https://www.commoncoreontologies.org/ont00001816> <http://example.org/sduesing/project2_instances.ttl/P2_0000123> .
 
 
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000084
@@ -992,10 +996,62 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
 ###  http://example.org/sduesing/project2_instances.ttl/P2_0000124
 <http://example.org/sduesing/project2_instances.ttl/P2_0000124> rdf:type owl:NamedIndividual ,
                                                                          <https://www.commoncoreontologies.org/ont00000958> ;
-                                                                <https://www.commoncoreontologies.org/ont00001808> <http://example.org/sduesing/project2_instances.ttl/P2_0000077> ;
                                                                 :P2_0000126 68440 ;
-                                                                rdfs:comment "An information content entity that is about the total employment of OCC:17-2010 Aerospace Engineers."@en ;
-                                                                rdfs:label "total employment"@en .
+                                                                rdfs:label "total employment"@en ;
+                                                                skos:definition "An information content entity that is about the total employment of OCC:17-2010 Aerospace Engineers."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001808> <http://example.org/sduesing/project2_instances.ttl/P2_0000077> .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000129
+<http://example.org/sduesing/project2_instances.ttl/P2_0000129> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000054> ;
+                                                                rdfs:label "approach speed measurement 1"@en ;
+                                                                skos:definition "An instance of Act of Measuring that is part of a process of testing the approach speed of an A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000130
+<http://example.org/sduesing/project2_instances.ttl/P2_0000130> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000058> ;
+                                                                rdfs:label "approach speed measurement 2"@en ;
+                                                                skos:definition "An instance of Act of Measuring that is part of a process of testing the approach speed of an A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000131
+<http://example.org/sduesing/project2_instances.ttl/P2_0000131> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000059> ;
+                                                                rdfs:label "approach speed measurement 3"@en ;
+                                                                skos:definition "An instance of Act of Measuring that is part of a process of testing the approach speed of an A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000132
+<http://example.org/sduesing/project2_instances.ttl/P2_0000132> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000060> ;
+                                                                rdfs:label "approach speed measurement 4"@en ;
+                                                                skos:definition "An instance of Act of Measuring that is part of a process of testing the approach speed of an A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000133
+<http://example.org/sduesing/project2_instances.ttl/P2_0000133> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000061> ;
+                                                                rdfs:label "approach speed measurement 5"@en ;
+                                                                skos:definition "An instance of Act of Measuring that is part of a process of testing the approach speed of an A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000134
+<http://example.org/sduesing/project2_instances.ttl/P2_0000134> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000121> <http://example.org/sduesing/project2_instances.ttl/P2_0000129> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000130> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000131> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000132> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000133> ;
+                                                                rdfs:label "five-part average approach speed measurement"@en ;
+                                                                skos:definition "An instance of Act of Measuring involving conducting five approach speed measurements and averaging the values."@en .
 
 
 #################################################################
