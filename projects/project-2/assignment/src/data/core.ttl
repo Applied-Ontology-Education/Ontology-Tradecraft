@@ -945,7 +945,7 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
 :P2_0000088 rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :P2_0000087 ;
             rdfs:range xsd:integer ;
-            rdfs:label "has OCC area"@en ;
+            rdfs:label "has area"@en ;
             skos:definition "A data property of an OCC entry that indicates its U.S. (99), state FIPS code, Metropolitan Statistical Area (MSA) code, or OEWS-specific nonmetropolitan area code."@en .
 
 
