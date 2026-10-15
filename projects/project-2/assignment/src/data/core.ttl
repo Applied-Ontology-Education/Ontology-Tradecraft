@@ -896,6 +896,7 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
 
 ###  http://example.org/sduesing/project2.ttl/P2_0000056
 :P2_0000056 rdf:type owl:DatatypeProperty ;
+            rdfs:subPropertyOf :P2_0000126 ;
             rdfs:comment "A data property of an aircraft approach speed test process that indicates the measured approach speed value in knots."@en ;
             rdfs:label "has measured approach speed knots"@en .
 
@@ -1147,6 +1148,12 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
             rdfs:range xsd:decimal ;
             rdfs:label "has OCC 90th percentile annual wage"@en ;
             skos:definition "A data property of an OCC entry indicating the 90th percentile annual wage."@en .
+
+
+###  http://example.org/sduesing/project2.ttl/P2_0000126
+:P2_0000126 rdf:type owl:DatatypeProperty ;
+            rdfs:label "has measured value"@en ;
+            skos:definition "A data property that is the value output of an act of measurement."@en .
 
 
 #################################################################

@@ -989,6 +989,15 @@ skos:scopeNote rdf:type owl:AnnotationProperty .
                                                                 skos:definition "An instance of an Act of Appraisal in which the adaptability of an artifact is evaluated."@en .
 
 
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000124
+<http://example.org/sduesing/project2_instances.ttl/P2_0000124> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000958> ;
+                                                                <https://www.commoncoreontologies.org/ont00001808> <http://example.org/sduesing/project2_instances.ttl/P2_0000077> ;
+                                                                :P2_0000126 68440 ;
+                                                                rdfs:comment "An information content entity that is about the total employment of OCC:17-2010 Aerospace Engineers."@en ;
+                                                                rdfs:label "total employment"@en .
+
+
 #################################################################
 #    General axioms
 #################################################################
