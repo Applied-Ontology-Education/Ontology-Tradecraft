@@ -997,10 +997,6 @@ obo:BFO_0000224 rdf:type owl:ObjectProperty ,
 :P2_0000066 rdf:type owl:Class ;
             rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty obo:BFO_0000055 ;
-                              owl:someValuesFrom :P2_0000081
-                            ] ,
-                            [ rdf:type owl:Restriction ;
                               owl:onProperty obo:BFO_0000057 ;
                               owl:someValuesFrom [ rdf:type owl:Restriction ;
                                                    owl:onProperty obo:BFO_0000176 ;
