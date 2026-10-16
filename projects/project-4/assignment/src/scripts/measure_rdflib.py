@@ -1,4 +1,4 @@
-#"Build src/measure_cco.ttl from src/data/readings_normalized.csv using the measurement design pattern:
+##Build src/measure_cco.ttl from src/data/readings_normalized.csv using the measurement design pattern:
 ##
 ##  artifact --bearer of--> SDC
 ##  MICE --is measurement of--> SDC
@@ -9,7 +9,7 @@ from pathlib import Path
 
 import pandas as pd
 from rdflib import Graph, Literal, Namespace
-from rdflib.namespace import OWL, RDF, RDFS, XSD
+from rdflib.namespace import OWL, RDF, RDFS,SKOS, XSD
 
 # 1. Where to read and write
 SRC = Path(__file__).resolve().parents[1]
@@ -43,15 +43,54 @@ UNIT_IRI = {
     "ohm": EX.unit_ohm,   # CCO has no ohm, 
 }
 
+# 4b. Our own classes (copied from Project4 design.ttl)
+#     class: (label, definition, parent class)
+CLASSES = {
+    EX.Device: ("Device",
+                "A Material Artifact that is designed to perform a specific operational function within an engineered system.",
+                ARTIFACT),
+    EX.Boiler: ("Boiler",
+                "A Device that is designed to heat water or generate steam by transferring heat from a fuel or energy source.",
+                EX.Device),
+    EX.Chiller: ("Chiller",
+                 "A Device that is designed to remove heat from a liquid by refrigeration in order to supply chilled liquid for cooling.",
+                 EX.Device),
+    EX.Electrical_Circuit: ("Electrical Circuit",
+                            "A Device that consists of interconnected electrical components forming a closed conductive path through which electric current flows.",
+                            EX.Device),
+}
+
+# artifact_id in the CSV -> its most specific class
+DEVICE_CLASS = {
+    "Boiler-07": EX.Boiler,
+    "Chiller-3": EX.Chiller,
+    "Chiller-4": EX.Chiller,
+    "Circuit-12": EX.Electrical_Circuit,
+    "Pump-A1": CCO.ont00000116,   # Pump (a CCO class)
+}
+
+
 # 5. Start the graph
 g = Graph()
 g.bind("ex", EX)
 g.bind("cco", CCO)
 g.bind("obo", OBO)
+g.bind("skos", SKOS)
 
 ontology = EX.measurements
 g.add((ontology, RDF.type, OWL.Ontology))
 g.add((ontology, RDFS.label, Literal("Project 4 Measurement Graph", lang="en")))
+
+# declare our classes: type, parent, label, definition
+for cls, (label, definition, parent) in CLASSES.items():
+    g.add((cls, RDF.type, OWL.Class))
+    g.add((cls, RDFS.subClassOf, parent))
+    g.add((cls, RDFS.label, Literal(label, lang="en")))
+    g.add((cls, SKOS.definition, Literal(definition, lang="en")))
+
+# copied from CCO: Material Artifact is a subclass of BFO material entity.
+# Lets query 7 trace Device up to BFO without loading all of CCO.
+g.add((ARTIFACT, RDFS.subClassOf, OBO.BFO_0000040))
 
 # 6. One pass per CSV row #use Boiler 7 as an example of a device, temperature as an example of a kind, F as an example of a unit_label, 212.0 as an example of a value, and 2024-03-17T23:03:00Z as an example of a timestamp
 df = pd.read_csv(CSV_PATH, dtype=str, keep_default_na=False)
@@ -70,6 +109,8 @@ for i, row in df.iterrows():
 
     # the artifact bears the quality
     g.add((artifact, RDF.type, ARTIFACT))
+    g.add((artifact, RDF.type, EX.Device))
+    g.add((artifact, RDF.type, DEVICE_CLASS.get(device, EX.Device)))
     g.add((artifact, RDFS.label, Literal(device, lang="en")))
     g.add((artifact, BEARER_OF, sdc))
 

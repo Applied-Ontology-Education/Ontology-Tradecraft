@@ -1,0 +1,209 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix bfo:  <http://purl.obolibrary.org/obo/bfo.owl#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix ex:   <http://example.org/project4/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+##@prefix cco:  <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+##@prefix ex:   <http://example.org/shapes/> .
+
+
+# For reference: IRIs used in measure_rdflib.py:
+#   cco:ont00000995  Material Artifact
+#   obo:BFO_0000020  Specifically Dependent Continuant (SDC)
+#   cco:ont00001163  Measurement Information Content Entity (MICE)
+#   cco:ont00000120  Measurement Unit
+#   obo:BFO_0000196  bearer of
+#   cco:ont00001966  is measurement of
+#   cco:ont00001863  uses measurement unit
+#   cco:ont00001769  has decimal value
+#   cco:ont00001767  has datetime value
+
+# Prefixes for the SPARQL-based shapes (6, 7, 8)
+ex:
+  a owl:Ontology ;
+  sh:declare
+    [ sh:prefix "rdf"  ; sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ] ,
+    [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] ,
+    [ sh:prefix "ex"   ; sh:namespace "http://example.org/project4/"^^xsd:anyURI ] ,
+    [ sh:prefix "cco"  ; sh:namespace "https://www.commoncoreontologies.org/"^^xsd:anyURI ] ,
+    [ sh:prefix "obo"  ; sh:namespace "http://purl.obolibrary.org/obo/"^^xsd:anyURI ] .
+
+
+#################################################################
+# 1) Artifact bears at least one SDC (cardinality); 
+#target class is the artifact.  the property refers to the SDC with bearer of. 
+#################################################################
+ex:ArtifactShape 
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00000995 ; #Material Artifact
+    sh:property [
+        sh:path obo:BFO_0000196 ; #bearer of
+        sh:minCount 1 ;
+        sh:class obo:BFO_0000020 ; #SDC
+        sh:message "Artifact must bear at least one SDC" ;
+        sh:severity sh:Violation ;
+    ] .
+
+#################################################################
+# 2) SDC is measured by at least one MICE (coverage via inverse) 
+#my node/target class is SDC and values of my property are MICE.  I use the inverse of is measurement of to get from SDC to MICE.
+#################################################################
+ex:SDCShape 
+  a sh:NodeShape ;
+  sh:targetClass obo:BFO_0000020 ; #SDC
+    sh:property [
+        sh:path [ sh:inversePath cco:ont00001966 ] ; #iS measurement of
+        sh:minCount 1 ;
+        sh:class cco:ont00001163 ; #MICE
+        sh:message "SDC must be measured by at least one MICE" ;
+        sh:severity sh:Violation ;
+    ] .
+#################################################################
+# 3) MICE measures exactly one SDC (functional)
+#node/targetis MICE, and the property is is measurement of.  I want to make sure that each MICE measures exactly one SDC.
+#################################################################
+ex:MICEShape 
+ a sh:NodeShape ;
+    sh:targetClass cco:ont00001163 ; #MICE
+    sh:property [
+        sh:path cco:ont00001966; #cco:isMeasurementOf ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class obo:BFO_0000020 ; #SDC
+        sh:message "MICE must measure exactly one SDC" ;
+        sh:severity sh:Violation ;
+    ] .
+#################################################################
+# 4) MICE must have one unit and one numeric value (completeness)
+#target class of MICE requires uses measure unit for a class of measurement unit (only one) AND numer/decimal
+#################################################################
+ex:MICEUnitValueShape 
+ a sh:NodeShape ;
+    sh:targetClass cco:ont00001163 ; #MICE
+    sh:property [
+        sh:path cco:ont00001863 ; #uses measurement unit ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:class cco:ont00000120 ; #Measurement Unit ;
+        sh:message "MICE must have exactly one unit" ;
+        sh:severity sh:Violation ;
+      ] ;
+    sh:property [
+        sh:path cco:ont00001769 ; #decimal Value ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:datatype xsd:decimal ;
+        sh:message "MICE must have exactly one numeric value" ;
+        sh:severity sh:Violation ;
+    ] .
+#################################################################
+# 5) No empty values in literals
+# Labels and Values must be non-empty strings, and numeric values must be non-empty decimals.
+#All subjects (left side with a label)
+#################################################################
+ex:LiteralShape 
+ a sh:NodeShape ;
+ sh:targetSubjectsOf rdfs:label, cco:ont00001769 , cco:ont00001767 ; #specific nodes of interest
+ sh:property [
+    sh:path rdfs:label ;
+    sh:minLength 1 ;
+    sh:pattern "^\\S" ; 
+    sh:message "Label must be a non-empty string" ;
+    sh:severity sh:Violation ;
+  ] ;
+  sh:property [   
+    sh:path cco:ont00001769 ; #cco:hasNumericValue ;
+    sh:datatype xsd:decimal ;
+    sh:minLength 1 ;
+    sh:message "Numeric value must be a non-empty decimal" ;
+    sh:severity sh:Violation ;
+  ] ;
+  sh:property [
+    sh:path cco:ont00001767 ; #cco:hasDatetimeValue ;
+    sh:datatype xsd:dateTime ;
+    sh:minLength 1 ;
+    sh:message "Datetime value must be a non-empty dateTime" ;
+    sh:severity sh:Violation ;
+  ] .
+
+
+#################################################################
+# 6) Unit must match SDC being measured
+#unit must be appropriate for the SDC being measured. For example, a temperature SDC should have a unit of Celsius or Fahrenheit, while a pressure SDC should have a unit of psi or Pa.
+#################################################################
+ex:UnitSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ; #MICE
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Unit {?unit} is not a valid unit for the {?kind} measured by {?sdc}" ; #Compare the valid combiations of SDC and unit in the SPARQL query below to the actual SDC and unit of the MICE being validated. If they do not match, this constraint will be violated.
+    sh:severity sh:Violation ;
+    sh:prefixes ex: ; #my ontology
+    sh:select """  
+      SELECT $this ?sdc ?unit ?kind
+      WHERE {
+        $this cco:ont00001966 ?sdc ;   # is measurement of
+              cco:ont00001863 ?unit .  # uses measurement unit
+        BIND (REPLACE(STR(?sdc), "^.*_", "") AS ?kind)
+        FILTER (!(
+             (?kind = "temperature" && ?unit IN (cco:ont00001724, cco:ont00001606))  # F, C  
+          || (?kind = "pressure"    && ?unit IN (cco:ont00001694, cco:ont00001559))  # [psi], Pa
+          || (?kind = "voltage"     && ?unit = cco:ont00001450)                      # V
+          || (?kind = "resistance"  && ?unit = ex:unit_ohm)                          # ohm
+        ))
+      }
+    """ ;
+  ] .
+
+#################################################################
+# 7) No duplicate MICE
+#duplicate MICE are defined as having the same SDC, unit, value, and datetime. This constraint checks for duplicates by comparing the SDC, unit, value, and datetime of the MICE being validated to all other MICE in the graph. If a duplicate is found, this constraint will be violated.
+
+#################################################################
+ex:DuplicateMICEShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ; #MICE
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "MICE duplicates {?other}: same SDC, unit, value and datetime" ;
+    sh:severity sh:Violation ;
+    sh:prefixes ex: ;
+    sh:select """
+      SELECT $this ?other 
+      WHERE {
+        $this cco:ont00001966 ?sdc ;   # is measurement of
+              cco:ont00001863 ?unit ;  # uses measurement unit
+              cco:ont00001769 ?value ; # has decimal value
+              cco:ont00001767 ?time .  # has datetime value
+        ?other a cco:ont00001163 ;
+               cco:ont00001966 ?sdc ;
+               cco:ont00001863 ?unit ;
+               cco:ont00001769 ?value ;
+               cco:ont00001767 ?time .
+        FILTER (?other != $this)
+      }
+    """ ;
+  ] .
+#################################################################
+# 8) No dangling/mistyped nodes 
+#################################################################
+ex:DanglingSDCShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf obo:BFO_0000196 , #bearer of
+                     cco:ont00001966 ; #is measurement of
+  sh:nodeKind sh:IRI ;
+  sh:class obo:BFO_0000020 ; #SDC
+  sh:message "Object of bearer of / is measurement of must be a typed SDC" ;
+  sh:severity sh:Violation .
+
+ex:DanglingUnitShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf cco:ont00001863 ; #uses measurement unit
+  sh:nodeKind sh:IRI ;
+  sh:class cco:ont00000120 ; #Measurement Unit
+  sh:message "Object of uses measurement unit must be a typed Measurement Unit" ;
+  sh:severity sh:Violation .

@@ -4,3 +4,19 @@
 #     Any owl:Ontology must have an rdfs:label.
 # Severity:
 #     Warning
+
+# A valid ontology should return ZERO rows.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+#Find any owl:Ontology that does not have an rdfs:label.
+
+select ?ontology
+where {
+  ?ontology a owl:Ontology .
+  FILTER NOT EXISTS { ?ontology rdfs:label ?title . }
+}
+
+
+

@@ -4,3 +4,30 @@
 #    No two ontology elements may have the exact same definition.    
 # Severity:
 #     Error 
+
+# Title: 
+#     No Duplicate Labels
+# Constraint Description: 
+#     No two ontology elements shall have the same rdfs:label.
+# Severity:
+#     Warning
+
+# Title:
+#   No Duplicate Labels (lexical)
+# Constraint Description:
+#   No two subjects shall share the same rdfs:label lexical string.
+# Severity: Warning
+#
+# A valid ontology should return ZERO rows.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?element ?element2 ?def  
+WHERE {
+  ?element skos:definition ?def .
+  ?element2 skos:definition ?def2 .
+  FILTER (?element != ?element2)
+  FILTER (STR(?def) = STR(?def2))
+}
+ORDER BY DESC(UCASE(str(?def)))

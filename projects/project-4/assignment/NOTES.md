@@ -18,10 +18,20 @@ I broke the work up into chunks:
 Made update to the project4test yaml file to add the brackets and will run a test prior to the next few steps        
 
 SPARQL Work
-
+no duplicate labels has a script
+min 1 title - for the ontology file test that there is a title and answer set is filter where not exists -- ran a test to validate
+min 1 def with en - add skos; copy script from prior and update.  this will need to be at an element level for classes and obj prop
+    -- great when vs code prompts you for completion but not great when what it prompts is not right. 
+no duplicate definition - copied no duplicate labels and updated
+no whitespace in names - added how to test for whitespaces
+all classes have a BFO parent -- more research online to develop this query on the parents
+subclass circularity --> no class can be its own ancestor and a + after subclass of will cycle through
+no self referential --> a label should not be used in the definition
 
 
 SHACL Work
+do not like - notes are in the file.  
+
 
 ------------
 

@@ -3,27 +3,38 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-ex:Boiler-07 a cco:ont00000995 ;
+ex:Boiler-07 a ex:Boiler,
+        ex:Device,
+        cco:ont00000995 ;
     rdfs:label "Boiler-07"@en ;
     obo:BFO_0000196 ex:sdc_Boiler-07_pressure,
         ex:sdc_Boiler-07_temperature .
 
-ex:Chiller-3 a cco:ont00000995 ;
+ex:Chiller-3 a ex:Chiller,
+        ex:Device,
+        cco:ont00000995 ;
     rdfs:label "Chiller-3"@en ;
     obo:BFO_0000196 ex:sdc_Chiller-3_temperature .
 
-ex:Chiller-4 a cco:ont00000995 ;
+ex:Chiller-4 a ex:Chiller,
+        ex:Device,
+        cco:ont00000995 ;
     rdfs:label "Chiller-4"@en ;
     obo:BFO_0000196 ex:sdc_Chiller-4_temperature .
 
-ex:Circuit-12 a cco:ont00000995 ;
+ex:Circuit-12 a ex:Device,
+        ex:Electrical_Circuit,
+        cco:ont00000995 ;
     rdfs:label "Circuit-12"@en ;
     obo:BFO_0000196 ex:sdc_Circuit-12_resistance,
         ex:sdc_Circuit-12_voltage .
 
-ex:Pump-A1 a cco:ont00000995 ;
+ex:Pump-A1 a ex:Device,
+        cco:ont00000116,
+        cco:ont00000995 ;
     rdfs:label "Pump-A1"@en ;
     obo:BFO_0000196 ex:sdc_Pump-A1_pressure .
 
@@ -107,6 +118,16 @@ ex:mice_0011 a cco:ont00001163 ;
     cco:ont00001863 cco:ont00001559 ;
     cco:ont00001966 ex:sdc_Pump-A1_pressure .
 
+ex:Boiler a owl:Class ;
+    rdfs:label "Boiler"@en ;
+    rdfs:subClassOf ex:Device ;
+    skos:definition "A Device that is designed to heat water or generate steam by transferring heat from a fuel or energy source."@en .
+
+ex:Electrical_Circuit a owl:Class ;
+    rdfs:label "Electrical Circuit"@en ;
+    rdfs:subClassOf ex:Device ;
+    skos:definition "A Device that consists of interconnected electrical components forming a closed conductive path through which electric current flows."@en .
+
 ex:unit_ohm a cco:ont00000120 ;
     rdfs:label "ohm"@en .
 
@@ -115,6 +136,11 @@ cco:ont00001450 a cco:ont00000120 ;
 
 cco:ont00001694 a cco:ont00000120 ;
     rdfs:label "[psi]"@en .
+
+ex:Chiller a owl:Class ;
+    rdfs:label "Chiller"@en ;
+    rdfs:subClassOf ex:Device ;
+    skos:definition "A Device that is designed to remove heat from a liquid by refrigeration in order to supply chilled liquid for cooling."@en .
 
 ex:sdc_Circuit-12_resistance a obo:BFO_0000020 ;
     rdfs:label "resistance of Circuit-12"@en .
@@ -145,4 +171,11 @@ ex:sdc_Chiller-4_temperature a obo:BFO_0000020 ;
 
 cco:ont00001724 a cco:ont00000120 ;
     rdfs:label "F"@en .
+
+cco:ont00000995 rdfs:subClassOf obo:BFO_0000040 .
+
+ex:Device a owl:Class ;
+    rdfs:label "Device"@en ;
+    rdfs:subClassOf cco:ont00000995 ;
+    skos:definition "A Material Artifact that is designed to perform a specific operational function within an engineered system."@en .
 
