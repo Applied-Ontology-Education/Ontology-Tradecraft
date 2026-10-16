@@ -1,0 +1,193 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix ex: <http://example.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ex:Boiler-07 a cco:ont00000995 ;
+    obo:BFO_0000196 ex:Boiler-07_pressure,
+        ex:Boiler-07_temperature .
+
+ex:Boiler-07_pressure_20240317T190400Z a cco:ont00001163 ;
+    cco:ont00001769 14.7 ;
+    cco:ont00001863 cco:ont00001694 ;
+    cco:ont00001966 ex:Boiler-07_pressure .
+
+ex:Boiler-07_pressure_20240317T230400Z a cco:ont00001163 ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 ex:Kilopascal ;
+    cco:ont00001966 ex:Boiler-07_pressure .
+
+ex:Boiler-07_temperature_20240317T190300Z a cco:ont00001163 ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 ex:Boiler-07_temperature .
+
+ex:Boiler-07_temperature_20240317T230300Z a cco:ont00001163 ;
+    cco:ont00001769 100.0 ;
+    cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001966 ex:Boiler-07_temperature .
+
+ex:Chiller-3 a cco:ont00000995 ;
+    obo:BFO_0000196 ex:Chiller-3_temperature .
+
+ex:Chiller-3_temperature_20240318T080100Z a cco:ont00001163 ;
+    cco:ont00001769 68.0 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 ex:Chiller-3_temperature .
+
+ex:Chiller-3_temperature_20240318T120100Z a cco:ont00001163 ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001966 ex:Chiller-3_temperature .
+
+ex:Chiller-4 a cco:ont00000995 ;
+    obo:BFO_0000196 ex:Chiller-4_temperature .
+
+ex:Chiller-4_temperature_20240318T120100Z a cco:ont00001163 ;
+    cco:ont00001769 6.5 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 ex:Chiller-4_temperature .
+
+ex:Chiller-4_temperature_20240318T120600Z a cco:ont00001163 ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 ex:Chiller-4_temperature .
+
+ex:Circuit-12 a cco:ont00000995 ;
+    obo:BFO_0000196 ex:Circuit-12_resistance,
+        ex:Circuit-12_voltage .
+
+ex:Circuit-12_resistance_20240318T120600Z a cco:ont00001163 ;
+    cco:ont00001769 1.3 ;
+    cco:ont00001863 ex:Ohm ;
+    cco:ont00001966 ex:Circuit-12_resistance .
+
+ex:Circuit-12_voltage_20240318T120101Z a cco:ont00001163 ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 cco:ont00001450 ;
+    cco:ont00001966 ex:Circuit-12_voltage .
+
+ex:Pump-A1 a cco:ont00000995 ;
+    obo:BFO_0000196 ex:Pump-A1_pressure .
+
+ex:Pump-A1_pressure_20240318T080700Z a cco:ont00001163 ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 ex:Kilopascal ;
+    cco:ont00001966 ex:Pump-A1_pressure .
+
+ex:Ohm a cco:ont00000120 .
+
+obo:BFO_0000001 a owl:Class ;
+    rdfs:label "entity"@en ;
+    skos:definition "(Elucidation) An entity is anything that exists or has existed or will exist"@en .
+
+obo:BFO_0000004 a owl:Class ;
+    rdfs:label "independent continuant"@en ;
+    rdfs:subClassOf obo:BFO_0000002 ;
+    skos:definition "b is an independent continuant =Def b is a continuant & there is no c such that b specifically depends on c or b generically depends on c"@en .
+
+obo:BFO_0000019 a owl:Class ;
+    rdfs:label "quality"@en ;
+    rdfs:subClassOf obo:BFO_0000020 ;
+    skos:definition "(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized"@en .
+
+obo:BFO_0000031 a owl:Class ;
+    rdfs:label "generically dependent continuant"@en ;
+    rdfs:subClassOf obo:BFO_0000002 ;
+    skos:definition "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en .
+
+obo:BFO_0000040 a owl:Class ;
+    rdfs:label "material entity"@en ;
+    rdfs:subClassOf obo:BFO_0000004 ;
+    skos:definition "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en .
+
+cco:ont00000958 a owl:Class ;
+    rdfs:label "Information Content Entity"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
+    skos:definition "A Generically Dependent Continuant that generically depends on some Information Bearing Entity and stands in relation of aboutness to some Entity."@en .
+
+cco:ont00001004 a owl:Class ;
+    rdfs:label "Measurement Unit of Electromagnetic Force"@en ;
+    rdfs:subClassOf cco:ont00000120 ;
+    skos:definition "A Measurement Unit that is used as a standard for measurement of the electromagnetic force between electrically charged entities."@en .
+
+cco:ont00001090 a owl:Class ;
+    rdfs:label "Measurement Unit of Pressure"@en ;
+    rdfs:subClassOf cco:ont00000120 ;
+    skos:definition "A Measurement Unit that is used as a standard for measurement of Force applied perpendicular to a surface per unit area."@en .
+
+cco:ont00001450 a owl:NamedIndividual,
+        cco:ont00001004 ;
+    rdfs:label "Volt Measurement Unit"@en .
+
+cco:ont00001694 a owl:NamedIndividual,
+        cco:ont00001090 ;
+    rdfs:label "Pounds Per Square Inch Measurement Unit"@en .
+
+ex:Circuit-12_resistance a obo:BFO_0000020 .
+
+ex:Circuit-12_voltage a obo:BFO_0000020 .
+
+ex:Kilopascal a cco:ont00000120 .
+
+ex:Pump-A1_pressure a obo:BFO_0000020 .
+
+cco:ont00000844 a owl:Class ;
+    rdfs:label "Measurement Unit of Temperature"@en ;
+    rdfs:subClassOf cco:ont00000120 ;
+    skos:definition "A Measurement Unit that is used as a standard for measurement of the thermal energy in an object."@en .
+
+cco:ont00000853 a owl:Class ;
+    rdfs:label "Descriptive Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00000958 ;
+    skos:definition "An Information Content Entity that consists of a set of propositions that describe some Entity."@en .
+
+cco:ont00001606 a owl:NamedIndividual,
+        cco:ont00000844 ;
+    rdfs:label "Degree Celsius Measurement Unit"@en .
+
+ex:Boiler-07_pressure a obo:BFO_0000020 .
+
+ex:Boiler-07_temperature a cco:ont00000441 .
+
+ex:Chiller-3_temperature a cco:ont00000441 .
+
+ex:Chiller-4_temperature a cco:ont00000441 .
+
+obo:BFO_0000002 a owl:Class ;
+    rdfs:label "continuant"@en ;
+    rdfs:subClassOf obo:BFO_0000001 ;
+    skos:definition "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en .
+
+cco:ont00000441 a owl:Class ;
+    rdfs:label "Temperature"@en ;
+    rdfs:subClassOf obo:BFO_0000019 ;
+    skos:definition "A Quality that inheres in a bearer in virtue of its thermal energy."@en .
+
+cco:ont00001724 a owl:NamedIndividual,
+        cco:ont00000844 ;
+    rdfs:label "Degree Fahrenheit Measurement Unit"@en .
+
+obo:BFO_0000020 a owl:Class ;
+    rdfs:label "specifically dependent continuant"@en ;
+    rdfs:subClassOf obo:BFO_0000002 ;
+    skos:definition "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b specifically depends on c"@en .
+
+cco:ont00000120 a owl:Class ;
+    rdfs:label "Measurement Unit"@en ;
+    rdfs:subClassOf cco:ont00000853 ;
+    skos:definition "A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en .
+
+cco:ont00000995 a owl:Class ;
+    rdfs:label "Material Artifact"@en ;
+    rdfs:subClassOf obo:BFO_0000040 ;
+    skos:definition "A Material Entity that was designed by some Agent to realize a certain Function."@en .
+
+cco:ont00001163 a owl:Class ;
+    rdfs:label "Measurement Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00000853 ;
+    skos:definition "A Descriptive Information Content Entity that describes the extent, dimensions, quantity, or quality of an Entity relative to some standard."@en .
+
