@@ -2,20 +2,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
-@prefix bfo:  <http://purl.obolibrary.org/obo/bfo.owl#> .
-@prefix cco:  <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix bfo:  <http://purl.obolibrary.org/obo/BFO_> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
 @prefix ex:   <http://example.org/shapes/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
 
 #################################################################
 # 1) Artifact bears at least one SDC (cardinality); 
 #################################################################
 ex:ArtifactHasSDCShape
   a sh:NodeShape ;
-  sh:targetClass cco:Artifact ;
+  sh:targetClass cco:ont00000995 ; # Artifact
   sh:property [
-    sh:path bfo:bearer_of ;
+    sh:path bfo:0000196 ; # bearer of
     sh:minCount 1 ;
-    sh:class bfo:SpecificallyDependentContinuant ;
+    sh:class bfo:0000020 ; # Specifically Dependent Continuant
     sh:message "Every Artifact must bear at least one SDC (Specifically Dependent Continuant)." ;
     sh:severity sh:Violation
   ] .
@@ -24,27 +26,177 @@ ex:ArtifactHasSDCShape
 # 2) SDC is measured by at least one MICE (coverage via inverse) 
 #################################################################
 
+ex:SDCMeasuredByMICE
+  a sh:NodeShape ;
+  sh:targetClass bfo:0000020 ; # SDC
+  sh:property [
+    sh:path [sh:inversePath cco:ont00001966 ] ; # inverse of 'is a measurement of'
+    sh:minCount 1 ;
+    sh:class cco:ont00001163 ; # MICE
+    sh:message "Every SDC is measured by at least one MICE" ;
+    sh:severity sh:Violation
+  ] .
+
 #################################################################
 # 3) MICE measures exactly one SDC (functional)
 #################################################################
+
+ex:MICEMeasuresOneSDC
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ; # MICE
+  sh:property [
+    sh:path cco:ont00001966 ; # is a measurement of
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class bfo:0000020 ; # Specifically Dependent Continuant
+    sh:message "Every MICE must be a measurement of exactly one SDC" ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 4) MICE must have one unit and one numeric value (completeness)
 #################################################################
 
+ex:MICEisComplete
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ; # MICE
+  sh:property [
+    sh:path cco:ont00001863 ; # has unit
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Every MICE must have one unit" ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path cco:ont00001769 ; # has decimal value
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:decimal ;
+    sh:message "Every MICE must have one numeric value" ;
+    sh:severity sh:Violation
+  ] .
+
 #################################################################
 # 5) No empty values in literals
 #################################################################
+
+ex:NoEmptyLiterals
+  a sh:NodeShape ;
+  sh:targetSubjectsOf cco:ont00001769 ; # has decimal value
+  sh:targetSubjectsOf rdfs:label ;        # nodes that have a label
+  sh:targetSubjectsOf skos:definition ;   # nodes that have a definition
+  sh:property [
+    sh:path cco:ont00001769; # has decimal value
+    sh:minLength 1 ;
+    sh:message "Every node with a decimal value must have a non-empty decimal value" ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path rdfs:label ; # has label
+    sh:minLength 1 ;
+    sh:message "Every node with a label must have a non-empty label" ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path skos:definition ; # has definition
+    sh:minLength 1 ;
+    sh:message "Every node with a definition must have a non-empty definition" ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 6) Unit must match SDC being measured
 #################################################################
 
+ex:SCDsMatchUnits
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;   # MICE
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Unit must match SDC being measured." ;
+    sh:severity sh:Violation ;
+    sh:select """
+    PREFIX cco: <https://www.commoncoreontologies.org/>
+    SELECT $this ?sdc ?unit
+			WHERE {
+				$this 
+          cco:ont00001966 ?sdc ; 
+          cco:ont00001863 ?unit .
+        ?sdc a cco:ont00000441 .  
+        FILTER ( ?unit NOT IN ( cco:ont00001606, cco:ont00001724 ))
+			}
+
+    """
+  ] .
+
 #################################################################
 # 7) No duplicate MICE
 #################################################################
+
+ex:NoDuplicateMICE
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;   # MICE
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "No duplicate MICE are allowed." ;
+    sh:severity sh:Violation ;
+    sh:select """
+    PREFIX cco: <https://www.commoncoreontologies.org/>
+    SELECT $this ?other
+			WHERE {
+      $this  cco:ont00001966 ?sdc ;
+             cco:ont00001863 ?unit ;
+             cco:ont00001769 ?value .
+      ?other cco:ont00001966 ?sdc ;
+             cco:ont00001863 ?unit ;
+             cco:ont00001769 ?value .
+      FILTER ( ?other != $this )       
+			}
+
+    """
+  ] .
 
 #################################################################
 # 8) No dangling/mistyped nodes 
 #################################################################
 
+# Whatever an artifact bears must be an SDC
+ex:BearsSDCShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf bfo:0000196 ;          # the things that are borne
+  sh:class bfo:0000020 ;                    # must be an SDC
+  sh:message "Whatever an artifact bears must be an SDC" ;
+  sh:severity sh:Violation .
+
+# Whatever a MICE measures must be an SDC
+ex:MeasuredThingIsSDCShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf cco:ont00001966 ;      # the things that are measured
+  sh:class bfo:0000020 ;
+  sh:message "Whatever a MICE measures must be an SDC" ;
+  sh:severity sh:Violation .
+
+# Whatever has a measurement-of relation must be a MICE
+ex:MeasurerIsMICEShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf cco:ont00001966 ;     # the things doing the measuring
+  sh:class cco:ont00001163 ;                # must be a MICE
+  sh:message "Only a MICE may be a measurement of something" ;
+  sh:severity sh:Violation .
+
+# Whatever has a unit relation must be a MICE
+ex:UnitUserIsMICEShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf cco:ont00001863 ;
+  sh:class cco:ont00001163 ;
+  sh:message "Only a MICE may use a measurement unit" ;
+  sh:severity sh:Violation .
+
+# A unit must be a Measurement Unit
+ex:UnitIsMeasurementUnitShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf cco:ont00001863 ;      # the units
+  sh:class cco:ont00000120 ;                # Measurement Unit
+  sh:message "A unit used by a MICE must be a Measurement Unit" ;
+  sh:severity sh:Violation .
