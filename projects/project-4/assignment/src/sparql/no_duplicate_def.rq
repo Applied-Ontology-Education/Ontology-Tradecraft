@@ -4,3 +4,18 @@
 #    No two ontology elements may have the exact same definition.    
 # Severity:
 #     Error 
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?def1 ?def2 ?class1 ?class2
+WHERE {
+  ?class1 skos:definition ?def1 .
+  ?class2 skos:definition ?def2 .
+  FILTER(?class1 != ?class2)
+  FILTER(?def1 = ?def2)
+}
