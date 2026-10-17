@@ -30,8 +30,8 @@ with open(DATA_DIR / "readings_normalized.csv", mode='r', encoding='utf-8') as f
         "C":   CCO.ont00001606,   # Degree Celsius Measurement Unit
         "psi": CCO.ont00001694,   # Pounds Per Square Inch Measurement Unit
         "V":   CCO.ont00001450,   # Volt Measurement Unit
-        "kPa": EX.Kilopascal,     # not in CCO -> our own unit
-        "ohm": EX.Ohm,            # not in CCO -> our own unit
+        "kPa": EX.Kilopascal,     # not in CCO 
+        "ohm": EX.Ohm,            # not in CCO 
     }
     # sdc_kind -> SDC class (fall back to plain BFO SDC when CCO has no subclass)
     SDC_CLASSES = {
@@ -68,6 +68,12 @@ with open(DATA_DIR / "readings_normalized.csv", mode='r', encoding='utf-8') as f
 # 4. Import the CCO/BFO class hierarchy our data uses, so QC and SHACL can see it
 cco = Graph().parse(SRC_DIR / "cco_merged.ttl", format="turtle")
 ANNOTATIONS = (RDFS.label, SKOS.definition)
+PROPERTIES = (
+    OBO.BFO_0000196,   # bearer of
+    CCO.ont00001966,   # is a measurement of
+    CCO.ont00001863,   # uses measurement unit
+    CCO.ont00001769    # has decimal value
+)
 
 # CCO unit individuals are typed in CCO, not in our graph -> copy their types
 for unit in UNITS.values():
@@ -93,6 +99,14 @@ while todo:
         if isinstance(parent, URIRef):      # skip blank-node restrictions
             g.add((c, RDFS.subClassOf, parent))
             todo.append(parent)
+
+# copy CCO property declarations
+for property in PROPERTIES:
+    for t in cco.objects(property, RDF.type):
+        g.add((property, RDF.type, t))
+    for p in ANNOTATIONS:
+        for o in cco.objects(property, p):
+            g.add((property, p, o))            
 
 # 5. Serialize/Save the output to an RDF format (e.g., Turtle)
 g.serialize(destination=SRC_DIR / "measure_cco.ttl", format='turtle')

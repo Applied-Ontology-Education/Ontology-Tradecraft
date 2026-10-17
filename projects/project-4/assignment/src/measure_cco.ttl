@@ -78,6 +78,22 @@ ex:Pump-A1_pressure_20240318T080700Z a cco:ont00001163 ;
     cco:ont00001863 ex:Kilopascal ;
     cco:ont00001966 ex:Pump-A1_pressure .
 
+obo:BFO_0000196 a owl:ObjectProperty ;
+    rdfs:label "bearer of"@en ;
+    skos:definition "b bearer of c =Def c inheres in b"@en .
+
+cco:ont00001769 a owl:DatatypeProperty ;
+    rdfs:label "has decimal value"@en ;
+    skos:definition "A data property that has as its range a decimal value."@en .
+
+cco:ont00001863 a owl:ObjectProperty ;
+    rdfs:label "uses measurement unit"@en ;
+    skos:definition "y uses_measurement_unit x iff y is an instance of Information Bearing Entity and x is an instance of Measurement Unit, such that x describes the magnitude of measured physical quantity mentioned in y."@en .
+
+cco:ont00001966 a owl:ObjectProperty ;
+    rdfs:label "is a measurement of"@en ;
+    skos:definition "x is_a_measurement_of y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x describes some attribute of y relative to some scale or classification scheme."@en .
+
 ex:Ohm a cco:ont00000120 .
 
 obo:BFO_0000001 a owl:Class ;
