@@ -30,6 +30,14 @@ ex:Boiler-07_temperature_20240317T230300Z a cco:ont00001163 ;
     cco:ont00001863 cco:ont00001606 ;
     cco:ont00001966 ex:Boiler-07_temperature .
 
+ex:Boiler-09 a cco:ont00000995 ;
+    obo:BFO_0000196 ex:Boiler-09_pressure .
+
+ex:Boiler-09_pressure_20240318T190600Z a cco:ont00001163 ;
+    cco:ont00001769 13.7 ;
+    cco:ont00001863 cco:ont00001694 ;
+    cco:ont00001966 ex:Boiler-09_pressure .
+
 ex:Chiller-3 a cco:ont00000995 ;
     obo:BFO_0000196 ex:Chiller-3_temperature .
 
@@ -41,6 +49,11 @@ ex:Chiller-3_temperature_20240318T080100Z a cco:ont00001163 ;
 ex:Chiller-3_temperature_20240318T120100Z a cco:ont00001163 ;
     cco:ont00001769 19.5 ;
     cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001966 ex:Chiller-3_temperature .
+
+ex:Chiller-3_temperature_20240319T090100Z a cco:ont00001163 ;
+    cco:ont00001769 70.0 ;
+    cco:ont00001863 cco:ont00001724 ;
     cco:ont00001966 ex:Chiller-3_temperature .
 
 ex:Chiller-4 a cco:ont00000995 ;
@@ -55,6 +68,14 @@ ex:Chiller-4_temperature_20240318T120600Z a cco:ont00001163 ;
     cco:ont00001769 19.5 ;
     cco:ont00001863 cco:ont00001724 ;
     cco:ont00001966 ex:Chiller-4_temperature .
+
+ex:Circuit-07 a cco:ont00000995 ;
+    obo:BFO_0000196 ex:Circuit-07_voltage .
+
+ex:Circuit-07_voltage_20240318T190500Z a cco:ont00001163 ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 cco:ont00001450 ;
+    cco:ont00001966 ex:Circuit-07_voltage .
 
 ex:Circuit-12 a cco:ont00000995 ;
     obo:BFO_0000196 ex:Circuit-12_resistance,
@@ -77,6 +98,14 @@ ex:Pump-A1_pressure_20240318T080700Z a cco:ont00001163 ;
     cco:ont00001769 101.325 ;
     cco:ont00001863 ex:Kilopascal ;
     cco:ont00001966 ex:Pump-A1_pressure .
+
+ex:Pump-A2 a cco:ont00000995 ;
+    obo:BFO_0000196 ex:Pump-A2_pressure .
+
+ex:Pump-A2_pressure_20240319T090700Z a cco:ont00001163 ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 ex:Kilopascal ;
+    cco:ont00001966 ex:Pump-A2_pressure .
 
 obo:BFO_0000196 a owl:ObjectProperty ;
     rdfs:label "bearer of"@en ;
@@ -135,21 +164,17 @@ cco:ont00001090 a owl:Class ;
     rdfs:subClassOf cco:ont00000120 ;
     skos:definition "A Measurement Unit that is used as a standard for measurement of Force applied perpendicular to a surface per unit area."@en .
 
-cco:ont00001450 a owl:NamedIndividual,
-        cco:ont00001004 ;
-    rdfs:label "Volt Measurement Unit"@en .
+ex:Boiler-09_pressure a obo:BFO_0000020 .
 
-cco:ont00001694 a owl:NamedIndividual,
-        cco:ont00001090 ;
-    rdfs:label "Pounds Per Square Inch Measurement Unit"@en .
+ex:Circuit-07_voltage a obo:BFO_0000020 .
 
 ex:Circuit-12_resistance a obo:BFO_0000020 .
 
 ex:Circuit-12_voltage a obo:BFO_0000020 .
 
-ex:Kilopascal a cco:ont00000120 .
-
 ex:Pump-A1_pressure a obo:BFO_0000020 .
+
+ex:Pump-A2_pressure a obo:BFO_0000020 .
 
 cco:ont00000844 a owl:Class ;
     rdfs:label "Measurement Unit of Temperature"@en ;
@@ -161,17 +186,30 @@ cco:ont00000853 a owl:Class ;
     rdfs:subClassOf cco:ont00000958 ;
     skos:definition "An Information Content Entity that consists of a set of propositions that describe some Entity."@en .
 
+cco:ont00001450 a owl:NamedIndividual,
+        cco:ont00000120,
+        cco:ont00001004 ;
+    rdfs:label "Volt Measurement Unit"@en .
+
 cco:ont00001606 a owl:NamedIndividual,
+        cco:ont00000120,
         cco:ont00000844 ;
     rdfs:label "Degree Celsius Measurement Unit"@en .
 
+cco:ont00001694 a owl:NamedIndividual,
+        cco:ont00000120,
+        cco:ont00001090 ;
+    rdfs:label "Pounds Per Square Inch Measurement Unit"@en .
+
 ex:Boiler-07_pressure a obo:BFO_0000020 .
 
-ex:Boiler-07_temperature a cco:ont00000441 .
+ex:Boiler-07_temperature a obo:BFO_0000020,
+        cco:ont00000441 .
 
-ex:Chiller-3_temperature a cco:ont00000441 .
+ex:Chiller-4_temperature a obo:BFO_0000020,
+        cco:ont00000441 .
 
-ex:Chiller-4_temperature a cco:ont00000441 .
+ex:Kilopascal a cco:ont00000120 .
 
 obo:BFO_0000002 a owl:Class ;
     rdfs:label "continuant"@en ;
@@ -183,24 +221,28 @@ cco:ont00000441 a owl:Class ;
     rdfs:subClassOf obo:BFO_0000019 ;
     skos:definition "A Quality that inheres in a bearer in virtue of its thermal energy."@en .
 
+ex:Chiller-3_temperature a obo:BFO_0000020,
+        cco:ont00000441 .
+
 cco:ont00001724 a owl:NamedIndividual,
+        cco:ont00000120,
         cco:ont00000844 ;
     rdfs:label "Degree Fahrenheit Measurement Unit"@en .
 
-obo:BFO_0000020 a owl:Class ;
-    rdfs:label "specifically dependent continuant"@en ;
-    rdfs:subClassOf obo:BFO_0000002 ;
-    skos:definition "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b specifically depends on c"@en .
+cco:ont00000995 a owl:Class ;
+    rdfs:label "Material Artifact"@en ;
+    rdfs:subClassOf obo:BFO_0000040 ;
+    skos:definition "A Material Entity that was designed by some Agent to realize a certain Function."@en .
 
 cco:ont00000120 a owl:Class ;
     rdfs:label "Measurement Unit"@en ;
     rdfs:subClassOf cco:ont00000853 ;
     skos:definition "A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en .
 
-cco:ont00000995 a owl:Class ;
-    rdfs:label "Material Artifact"@en ;
-    rdfs:subClassOf obo:BFO_0000040 ;
-    skos:definition "A Material Entity that was designed by some Agent to realize a certain Function."@en .
+obo:BFO_0000020 a owl:Class ;
+    rdfs:label "specifically dependent continuant"@en ;
+    rdfs:subClassOf obo:BFO_0000002 ;
+    skos:definition "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b specifically depends on c"@en .
 
 cco:ont00001163 a owl:Class ;
     rdfs:label "Measurement Information Content Entity"@en ;

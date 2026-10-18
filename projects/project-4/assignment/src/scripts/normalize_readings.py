@@ -13,7 +13,7 @@ SRC_DIR    = SCRIPT_DIR.parent                         # .../src
 DATA_DIR   = SRC_DIR / "data"                          # .../src/data
 IN_A       = DATA_DIR / "sensor_A.csv"
 IN_B       = DATA_DIR / "sensor_B.json"
-#IN_C       = DATA_DIR / "sensor_C.csv"
+IN_C       = DATA_DIR / "sensor_C.csv"
 OUT        = DATA_DIR / "readings_normalized.csv"
 
 CANON = ["artifact_id", "sdc_kind", "unit_label", "value", "timestamp"]
@@ -84,9 +84,9 @@ def _norm_unit(u: Any) -> str | None:
         return "F"
     # pressure
     if low == "psi":
-        return "psi"
+        return "lbf/in2"
     if low in {"kpa", "kilopascal", "kilopascals"}:
-        return "kPa"
+        return "kN/m2"
     # electrical
     if low in {"v", "volt", "volts"}:
         return "V"
@@ -158,6 +158,10 @@ def normalize_and_clean(df: pd.DataFrame) -> pd.DataFrame:
     for col in ["artifact_id", "sdc_kind", "unit_label", "timestamp"]:
         df[col] = df[col].astype(str).str.strip()
 
+    # Same device must get one ID across sources ("Chiller 3" vs "Chiller-3")
+    df["artifact_id"] = df["artifact_id"].str.replace(r"\s+", "-", regex=True)
+
+
     # Normalize labels
     df["sdc_kind"] = df["sdc_kind"].apply(_norm_kind)
     df["unit_label"] = df["unit_label"].apply(_norm_unit)
@@ -192,17 +196,16 @@ def normalize_and_clean(df: pd.DataFrame) -> pd.DataFrame:
 def main():
     print("[paths] A:", IN_A)
     print("[paths] B:", IN_B)
- #   print("[paths] C:", IN_C)
+    print("[paths] C:", IN_C)
     df_a = load_sensor_a(IN_A)
     df_b = load_sensor_b(IN_B)
- #   df_c = load_sensor_a(IN_C)
+    df_c = load_sensor_a(IN_C)
 
     print(f"[normalize_readings] Input A rows: {len(df_a)}")
     print(f"[normalize_readings] Input B rows: {len(df_b)}")
- #   print(f"[normalize_readings] Input C rows: {len(df_c)}")
+    print(f"[normalize_readings] Input C rows: {len(df_c)}")
 
-    combined = pd.concat([df_a, df_b], ignore_index=True)
-    #add later ', df_c'
+    combined = pd.concat([df_a, df_b, df_c], ignore_index=True)
     cleaned = normalize_and_clean(combined)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)

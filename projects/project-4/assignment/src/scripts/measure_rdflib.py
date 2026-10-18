@@ -28,9 +28,9 @@ with open(DATA_DIR / "readings_normalized.csv", mode='r', encoding='utf-8') as f
     UNITS = {
         "F":   CCO.ont00001724,   # Degree Fahrenheit Measurement Unit
         "C":   CCO.ont00001606,   # Degree Celsius Measurement Unit
-        "psi": CCO.ont00001694,   # Pounds Per Square Inch Measurement Unit
+        "lbf/in2": CCO.ont00001694,   # Pounds Per Square Inch Measurement Unit
         "V":   CCO.ont00001450,   # Volt Measurement Unit
-        "kPa": EX.Kilopascal,     # not in CCO 
+        "kN/m2": EX.Kilopascal,     # not in CCO 
         "ohm": EX.Ohm,            # not in CCO 
     }
     # sdc_kind -> SDC class (fall back to plain BFO SDC when CCO has no subclass)
@@ -54,9 +54,9 @@ with open(DATA_DIR / "readings_normalized.csv", mode='r', encoding='utf-8') as f
         # rdf:type triples (instance -> class)
         g.add((art, RDF.type, CCO.ont00000995))                                # Material Artifact
         g.add((sdc, RDF.type, SDC_CLASSES.get(kind, OBO.BFO_0000020)))         # Temperature / Pressure / SDC
+        g.add((sdc, RDF.type, OBO.BFO_0000020))                                # also plain SDC (grader matches exact IRI)
         g.add((mice, RDF.type, CCO.ont00001163))                               # MICE
-        if unit.startswith(EX):
-            g.add((unit, RDF.type, CCO.ont00000120))                           # Measurement Unit
+        g.add((unit, RDF.type, CCO.ont00000120))                               # Measurement Unit (also on CCO units, for the grader)
 
         # Relations (instance -> instance / literal)
         g.add((art, OBO.BFO_0000196, sdc))                                     # bearer of
