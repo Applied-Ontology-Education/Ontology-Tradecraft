@@ -11,7 +11,7 @@ By completing this project, you will:
 ## Project
 1. **Clone the starter repository** https://github.com/Applied-Ontology-Education/Ontology-Tradecraft.git.  
 2. In your local repository, create a new Jupyter Notebook in `notebooks/` called `env-report.ipynb`, where you
-   - Print your Python version.
+   - Print your Python version. 
    - Import `rdflib`, `SPARQLWrapper`, and `pyshacl`.
    - Parse the provided file `sample.ttl` and print the number of triples it contains.  
 3. Commit and push your notebook and any code changes to GitHub.  
