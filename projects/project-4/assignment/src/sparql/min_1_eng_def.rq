@@ -5,3 +5,22 @@
 # Severity:
 #     Warning
 
+# A valid ontology should return ZERO rows.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+prefix skos: <http://www.w3.org/2004/02/skos/core#>
+
+
+#Find any element that does not have a RDFS definitions of english language tag.  This is a warning, not an error, as some ontologies may not have definitions for all elements.
+
+select ?element  
+where {
+  values ?type {owl:Class owl:ObjectProperty} .
+  ?element a ?type .
+  filter (!isBlank(?element))
+  FILTER NOT EXISTS { 
+    ?element skos:definition ?def . 
+    filter (langMatches(lang(?def), "en") && strlen(STR(?def)) >0)
+  } 
+}

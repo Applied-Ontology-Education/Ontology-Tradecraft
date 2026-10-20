@@ -4,3 +4,12 @@
 #    No class should appear in a circular `subClassOf` hierarchy.
 # Severity:  
 #    Error
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+# Find classes that are, through one or more subClassOf steps, a subclass of themselves.  no class as its own ancestor.  
+SELECT DISTINCT ?class
+WHERE {
+  ?class rdfs:subClassOf+ ?class . #plus sign means one or more steps
+  FILTER (!isBlank(?class)) 
+}

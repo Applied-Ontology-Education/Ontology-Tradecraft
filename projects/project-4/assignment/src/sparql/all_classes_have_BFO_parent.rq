@@ -4,3 +4,17 @@
 #     All classes must have a BFO superclass.
 # Severity:
 #     Error
+
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT ?invalidClass
+WHERE {
+  ?invalidClass a owl:Class .
+  FILTER (isURI(?invalidClass))  #Blank IRIs, so we ignore them
+  FILTER (!STRSTARTS(STR(?invalidClass), "http://purl.obolibrary.org/obo/BFO_")) #skip BFO classes themselves
+  FILTER NOT EXISTS { #where the classes will get reported. 
+    ?invalidClass rdfs:subClassOf+ ?parent . #use the subclassOf+ to get any ancestors  
+    FILTER (STRSTARTS(STR(?parent), "http://purl.obolibrary.org/obo/BFO_")) ## ancestor must be a BFO class
+  }
+}

@@ -4,3 +4,15 @@
 #    No annotation value may have leading or trailing whitespace.    
 # Severity:
 #    Error 
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+# Find leading or trailing whitespace in annotation values.
+SELECT ?element ?property ?value #where the problem is found
+WHERE {
+  VALUES ?property { rdfs:label rdfs:comment skos:definition } #only check these properties
+  ?element ?property ?value .
+  FILTER (isLiteral(?value))
+  FILTER (REGEX(STR(?value), "^\\s|\\s$")) #^ start of the text; $ end of the text and \\s is whitespace
+}
