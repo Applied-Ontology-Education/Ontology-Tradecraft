@@ -4,3 +4,18 @@
 #    No class definition should be self-referential. 
 # Severity:  
 #    Error
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?class ?def
+WHERE {
+    ?class a owl:Class .
+    ?class skos:definition ?def .
+    ?class rdfs:label ?label .
+    FILTER (CONTAINS(LCASE(STR(?def)), LCASE(STR(?label))) && !STRSTARTS(STR(?class), "http://purl.obolibrary.org/obo/BFO_"))
+}

@@ -4,3 +4,18 @@
 #    No annotation value may have leading or trailing whitespace.    
 # Severity:
 #    Error 
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?subject ?p (CONCAT("[", STR(?value), "]") AS ?shown)
+WHERE {
+    VALUES ?p { rdfs:label skos:definition }
+    ?subject ?p ?value .
+    
+    FILTER( STRSTARTS(STR(?value), " ") || STRENDS(STR(?value), " "))
+}

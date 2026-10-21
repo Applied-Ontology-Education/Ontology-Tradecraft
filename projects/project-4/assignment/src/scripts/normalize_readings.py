@@ -84,9 +84,9 @@ def _norm_unit(u: Any) -> str | None:
         return "F"
     # pressure
     if low == "psi":
-        return "psi"
+        return "lbf/in2"
     if low in {"kpa", "kilopascal", "kilopascals"}:
-        return "kPa"
+        return "kN/m2"
     # electrical
     if low in {"v", "volt", "volts"}:
         return "V"
@@ -157,6 +157,10 @@ def normalize_and_clean(df: pd.DataFrame) -> pd.DataFrame:
     # Trim strings
     for col in ["artifact_id", "sdc_kind", "unit_label", "timestamp"]:
         df[col] = df[col].astype(str).str.strip()
+
+    # Same device must get one ID across sources ("Chiller 3" vs "Chiller-3")
+    df["artifact_id"] = df["artifact_id"].str.replace(r"\s+", "-", regex=True)
+
 
     # Normalize labels
     df["sdc_kind"] = df["sdc_kind"].apply(_norm_kind)
