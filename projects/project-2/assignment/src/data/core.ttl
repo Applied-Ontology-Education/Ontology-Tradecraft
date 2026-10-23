@@ -1,0 +1,1340 @@
+@prefix : <http://www.semanticweb.org/shannon/ontologies/2026/8/CORE/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix www: <https://www.commoncoreontologies.org/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix CORE: <http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <http://www.semanticweb.org/shannon/ontologies/2026/8/CORE/> .
+
+obo:BFO_0000055 rdf:type owl:ObjectProperty ;
+                rdfs:label "realizes"^^xsd:string ;
+                skos:definition "b realizes c. Def b is a process and c is a realizable entity and b is the process in which c is exhibited (BFO 2020)." .
+
+obo:BFO_0000197 rdf:type owl:ObjectProperty ;
+                rdfs:label "inheres in"^^xsd:string ;
+                skos:definition "b inheres in c. Def b is a quality or disposition and c is an independent continuant and b is a characteristic of c (BFO 2020)." .
+
+www:ont00001808 rdf:type owl:ObjectProperty ;
+                rdfs:label "is about"^^xsd:string ;
+                skos:definition "b is about cDef b is a generically dependent continuant and c is an independent continuant and b is a characteristic of c (BFO 2020)." .
+
+www:ont00001816 rdf:type owl:ObjectProperty ;
+                rdfs:label "is output of"^^xsd:string ;
+                skos:definition "b is output of c. Def b is a process and c is an independent continuant and b is the process in which c is exhibited (BFO 2020)." .
+
+
+
+<http://www.semanticweb.org/shannon/ontologies/2026/8/CORE> rdf:type owl:Ontology ;
+    # owl:imports <https://www.commoncoreontologies.org/2026-08-13/AllCoreOntology> ;
+    owl:imports <file:///Users/shannon/dev/Buffalo-School/Ontology%20Engineering/Ontology-Tradecraft/projects/project-2/assignment/src/data/modules/CommonCoreOntologiesMerged.ttl> ;
+    rdfs:comment "Project 2 - Shannon Bacek" .
+
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_ICAO_Wake_Turbulance_Category_Designation
+CORE:has_ICAO_Wake_Turbulance_Category_Designation rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf CORE:has_wake_turbulence_category_designation ;
+                                                   rdfs:domain CORE:Jet_Specification ;
+                                                   rdfs:range CORE:ICAO_Wake_Turbulance_Category_Designation ;
+                                                   rdfs:label "has ICAO Wake Turbulance Category Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_LAHSO_group_designation
+CORE:has_LAHSO_group_designation rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf CORE:has_classification_designation ;
+                                 rdfs:domain CORE:Jet_Specification ;
+                                 rdfs:range CORE:LAHSO_Group_Designation ;
+                                 rdfs:label "has LAHSO group designation" ;
+                                 skos:definition "LAHSO OP" .
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_RECAT_1.5_wake_category_designation
+CORE:has_RECAT_1.5_wake_category_designation rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf CORE:has_wake_turbulence_category_designation ;
+                                             rdfs:domain CORE:Jet_Specification ;
+                                             rdfs:range CORE:RECAT_1.5_Wake_Category_Designation ;
+                                             rdfs:label "has RECAT 1.5 wake category designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_RECAT_2_wake_category_designation
+CORE:has_RECAT_2_wake_category_designation rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf CORE:has_wake_turbulence_category_designation ;
+                                           rdfs:domain CORE:Jet_Specification ;
+                                           rdfs:range CORE:RECAT_2_Wake_Category_Designation ;
+                                           rdfs:label "has RECAT 2 wake category designation" ;
+                                           skos:definition "has wak 2 category designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_aircraft_approach_category_designation
+CORE:has_aircraft_approach_category_designation rdf:type owl:ObjectProperty ;
+                                                rdfs:subPropertyOf CORE:has_classification_designation ;
+                                                rdfs:domain CORE:Jet_Specification ;
+                                                rdfs:range CORE:Aircraft_Approach_Category_Designation ;
+                                                rdfs:label "has aircraft approach category designation" ;
+                                                skos:definition "AAC OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_aircraft_design_group_designation
+CORE:has_aircraft_design_group_designation rdf:type owl:ObjectProperty ;
+                                           rdfs:subPropertyOf CORE:has_classification_designation ;
+                                           rdfs:domain CORE:Jet_Specification ;
+                                           rdfs:range CORE:Aircraft_Design_Group_Designation ;
+                                           rdfs:label "has aircraft design group designation" ;
+                                           skos:definition "ADG OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_area
+CORE:has_area rdf:type owl:ObjectProperty ;
+                          rdfs:domain CORE:Occupational_Employment_Estimate ;
+                          rdfs:range CORE:OEWS_Area_Designation ;
+                          rdfs:label "has area" ;
+                          skos:definition "has area" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_classification_designation
+CORE:has_classification_designation rdf:type owl:ObjectProperty ;
+                                    rdfs:subPropertyOf owl:topObjectProperty ;
+                                    rdfs:domain CORE:Jet_Specification ;
+                                    rdfs:range CORE:Aircraft_Classification_Category_Designation ;
+                                    rdfs:label "has classification designation" ;
+                                    skos:definition "classification designation OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_consolidated_wake_turbulence_category_designation
+CORE:has_consolidated_wake_turbulence_category_designation rdf:type owl:ObjectProperty ;
+                                                           rdfs:subPropertyOf CORE:has_wake_turbulence_category_designation ;
+                                                           rdfs:domain CORE:Jet_Specification ;
+                                                           rdfs:range CORE:Consolidated_Wake_Turbulence_Category_Designation ;
+                                                           rdfs:label "has consolidated wake turbulence category designation" ;
+                                                           skos:definition "CWT OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_industry_designation
+CORE:has_industry_designation rdf:type owl:ObjectProperty ;
+                              rdfs:domain CORE:Occupational_Employment_Estimate ;
+                              rdfs:range CORE:Industry_Designation ;
+                              rdfs:label "has industry designation" ;
+                              skos:definition "has industry designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_issuing_organization
+CORE:has_issuing_organization rdf:type owl:ObjectProperty ;
+                              rdfs:domain www:ont00000958 ;
+                              rdfs:range www:ont00001180 ;
+                              rdfs:label "has issuing organization" ;
+                              skos:definition "Issuing organization OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_main_gear_configuration_designation
+CORE:has_main_gear_configuration_designation rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf CORE:has_classification_designation ;
+                                             rdfs:domain CORE:Jet_Specification ;
+                                             rdfs:range CORE:Main_Gear_Configuration_Designation ;
+                                             rdfs:label "has main gear configuration designation" ;
+                                             skos:definition "MGC OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_manufacturer
+CORE:has_manufacturer rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf owl:topObjectProperty ;
+                      rdfs:range www:ont00000443 ;
+                      rdfs:label "has manufacturer" ;
+                      skos:definition "Manufacturer OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_maximum_aircraft_approach_category_designation
+CORE:has_maximum_aircraft_approach_category_designation rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf CORE:has_classification_designation ;
+                                                        rdfs:domain CORE:Jet_Specification ;
+                                                        rdfs:range CORE:Aircraft_Approach_Category_Designation ;
+                                                        rdfs:label "has maximum aircraft approach category designation" ;
+                                                        skos:definition "max AAC OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_minimum_aircraft_approach_category_designation
+CORE:has_minimum_aircraft_approach_category_designation rdf:type owl:ObjectProperty ;
+                                                        rdfs:subPropertyOf CORE:has_classification_designation ;
+                                                        rdfs:domain CORE:Jet_Specification ;
+                                                        rdfs:range CORE:Aircraft_Approach_Category_Designation ;
+                                                        rdfs:label "has minimum aircraft approach category designation" ;
+                                                        skos:definition "min AAC OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_occupation_group_designation
+CORE:has_occupation_group_designation rdf:type owl:ObjectProperty ;
+                                      rdfs:domain CORE:Occupational_Employment_Estimate ;
+                                      rdfs:range CORE:Occupation_Group_Designation ;
+                                      rdfs:label "o group" ;
+                                      skos:definition "has occupation group designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_occupation_population
+CORE:has_occupation_population rdf:type owl:ObjectProperty ;
+                               rdfs:domain CORE:Employment_Measuring ;
+                               rdfs:range CORE:Occupation_Group ;
+                               rdfs:label "has occupation population" ;
+                               skos:definition "has occupation population" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_occupation_role
+CORE:has_occupation_role rdf:type owl:ObjectProperty ;
+                         rdfs:domain CORE:Occupation_Group ;
+                         rdfs:range www:ont00000984 ;
+                         rdfs:label "has occupation role" ;
+                         skos:definition "role of occupation." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_ownership_designation
+CORE:has_ownership_designation rdf:type owl:ObjectProperty ;
+                               rdfs:domain CORE:Occupational_Employment_Estimate ;
+                               rdfs:range CORE:Ownership_Designation ;
+                               rdfs:label "has ownership designation" ;
+                               skos:definition "has ownership designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_reference_period
+CORE:has_reference_period rdf:type owl:ObjectProperty ;
+                          rdfs:domain CORE:Occupational_Employment_Estimate ;
+                          rdfs:range obo:BFO_0000038 ;
+                          rdfs:label "has reference period" ;
+                          skos:definition "has reference period" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_same_runway_seperation_designation
+CORE:has_same_runway_seperation_designation rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf CORE:has_classification_designation ;
+                                            rdfs:domain CORE:Jet_Specification ;
+                                            rdfs:range CORE:Same_Runway_Separation_Category_Designation ;
+                                            rdfs:label "has same runway seperation designation" ;
+                                            skos:definition "SRS OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_specification
+CORE:has_specification rdf:type owl:ObjectProperty ;
+                       rdfs:domain CORE:Fixed_Wing_Aircraft ;
+                       rdfs:range CORE:Jet_Specification ;
+                       rdfs:label "has specification" ;
+                       skos:definition "a value that provide the ability to specify something." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_taxiway_design_group_designation
+CORE:has_taxiway_design_group_designation rdf:type owl:ObjectProperty ;
+                                          rdfs:subPropertyOf CORE:has_classification_designation ;
+                                          rdfs:domain CORE:Jet_Specification ;
+                                          rdfs:range CORE:Taxiway_Design_Group_Designation ;
+                                          rdfs:label "has taxiway design group designation" ;
+                                          skos:definition "TDG OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_wake_turbulence_category_designation
+CORE:has_wake_turbulence_category_designation rdf:type owl:ObjectProperty ;
+                                              rdfs:subPropertyOf CORE:has_classification_designation ;
+                                              rdfs:domain CORE:Jet_Specification ;
+                                              rdfs:range CORE:Aircraft_Classification_Category_Designation ;
+                                              rdfs:label "has wake turbulence category designation" ;
+                                              skos:definition "WTC OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_weight_class_designation
+CORE:has_weight_class_designation rdf:type owl:ObjectProperty ;
+                                  rdfs:subPropertyOf CORE:has_classification_designation ;
+                                  rdfs:domain CORE:Jet_Specification ;
+                                  rdfs:range CORE:FAA_Weightclass_Designation ;
+                                  rdfs:label "has weight class designation" ;
+                                  skos:definition "WC OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#is_definition_of_designation
+CORE:is_definition_of_designation rdf:type owl:ObjectProperty ;
+                                  rdfs:domain CORE:SOC_Occupation_Definition ;
+                                  rdfs:range CORE:SOC_Occupation_Designation ;
+                                  rdfs:label "is definition of designation" ;
+                                  skos:definition "definition OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#is_designation_in_scheme
+CORE:is_designation_in_scheme rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf owl:topObjectProperty ;
+                              rdfs:domain CORE:Classification_Category_Designation ;
+                              rdfs:range CORE:Classification_Scheme ;
+                              rdfs:label "is designation in scheme" ;
+                              skos:definition "designation in scheme OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#is_estimate_for_occupation
+CORE:is_estimate_for_occupation rdf:type owl:ObjectProperty ;
+                                rdfs:range CORE:SOC_Occupation_Designation ;
+                                rdfs:label "is estimate for occupation" ;
+                                skos:definition "is estimate for occupation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#is_measurement_record_for
+CORE:is_measurement_record_for rdf:type owl:ObjectProperty ;
+                               rdfs:domain CORE:Aircraft_Measurement_Record ;
+                               rdfs:range CORE:Fixed_Wing_Aircraft ;
+                               rdfs:label "is measurement record for" ;
+                               skos:definition "measurement record OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#is_subgroup_of_designation
+CORE:is_subgroup_of_designation rdf:type owl:ObjectProperty ;
+                                rdfs:domain CORE:SOC_Occupation_Designation ;
+                                rdfs:range CORE:SOC_Occupation_Designation ;
+                                rdfs:label "is subgroup of designation" ;
+                                skos:definition "subgroup OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#is_temporal_part_of
+CORE:is_temporal_part_of rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf obo:BFO_0000139 ;
+                         rdfs:domain obo:BFO_0000003 ;
+                         rdfs:range obo:BFO_0000003 ;
+                         rdfs:label "is temporal part of" ;
+                         skos:definition "is temporal part of" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#realizes_evaluation
+##CORE:realizes_evaluation rdf:type owl:ObjectProperty ;
+  ##                       rdfs:subPropertyOf obo:BFO_0000117 ;
+    ##                     rdfs:domain CORE:Act_of_Aircraft_Processing ;
+      ##                   rdfs:range CORE:Adaptability_Evaluation ;
+        ##                 rdfs:label "realizes evaluation" ;
+          ##               #rdfs:altlabel "realizes evaluation" ;
+            ##             skos:definition "realizes evaluation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#reports_employment_PRSE
+CORE:reports_employment_PRSE rdf:type owl:ObjectProperty ;
+                             rdfs:domain CORE:Occupational_Employment_Estimate ;
+                             rdfs:range CORE:Employment_PRSE ;
+                             rdfs:label "reports employment PRSE" ;
+                             skos:definition "reports employment PRSE" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#reports_total_employment
+CORE:reports_total_employment rdf:type owl:ObjectProperty ;
+                              rdfs:label "reports total employment" ;
+                              skos:definition "total employment reported" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_Area_Name
+CORE:has_Area_Name rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:domain CORE:OEWS_Area_Designation ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "has area title name";
+                   skos:definition "area name" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_FAA_designator_code
+CORE:has_FAA_designator_code rdf:type owl:DatatypeProperty ;
+                             rdfs:domain CORE:Jet_Specification ;
+                             rdfs:range xsd:string ;
+                             rdfs:label "has FAA designator code";
+                             skos:definition "Standard abbreviations for aircraft assigned by FAA that are most commonly used by air traffic services." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_FAA_registration_count
+CORE:has_FAA_registration_count rdf:type owl:DatatypeProperty ;
+                                rdfs:domain CORE:Jet_Specification ;
+                                rdfs:range xsd:integer ;
+                                rdfs:label "has FAA registration count";
+                                skos:definition "registration count" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_FAA_registry_entry_indicator
+CORE:has_FAA_registry_entry_indicator rdf:type owl:DatatypeProperty ;
+                                      rdfs:subPropertyOf owl:topDataProperty ;
+                                      rdfs:domain CORE:Jet_Specification ;
+                                      rdfs:range xsd:boolean ;
+                                      rdfs:label "has FAA registry entry indicator";
+                                      skos:definition "registry entry" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_ICAO_code
+CORE:has_ICAO_code rdf:type owl:DatatypeProperty ;
+                   rdfs:domain CORE:Jet_Specification ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "has ICAO code";
+                   skos:definition "Standard abbreviations for aircraft assigned by ICAO that are most commonly used by air traffic services." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_NAICS_Code
+CORE:has_NAICS_Code rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf owl:topDataProperty ;
+                    rdfs:domain CORE:Industry_Designation ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "has NAICS Code" ;
+                    skos:definition "has NAICS Code" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_NAICS_Industry_Group
+CORE:has_NAICS_Industry_Group rdf:type owl:DatatypeProperty ;
+                              rdfs:domain CORE:Industry_Designation ;
+                              rdfs:range xsd:string ;
+                              rdfs:label "has NAICS Industry Group" ;
+                              skos:definition "has NAICS Industry Group" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_NAICS_Title
+CORE:has_NAICS_Title rdf:type owl:DatatypeProperty ;
+                     rdfs:domain CORE:Industry_Designation ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "has NAICS Title" ;
+                     skos:definition "has NAICS Title" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_TMFS_FY24_operation_count
+CORE:has_TMFS_FY24_operation_count rdf:type owl:DatatypeProperty ;
+                                   rdfs:domain CORE:Jet_Specification ;
+                                   rdfs:range xsd:nonNegativeInteger ;
+                                   rdfs:label "has TMFS FY24 operation count";
+                                   skos:definition "has TMFS FY24 operation count" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_annual_wage_pct10_value
+CORE:has_annual_wage_pct10_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has annual wage pct10 value" ;
+                                 skos:definition "has annual wage pct10 value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_annual_wage_pct25_value
+CORE:has_annual_wage_pct25_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has annual wage pct25 value" ;
+                                 skos:definition "has annual wage pct25 value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_annual_wage_pct50_value
+CORE:has_annual_wage_pct50_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has annual wage pct50 value" ;
+                                 skos:definition "has annual wage pct50 value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_annual_wage_pct75_value
+CORE:has_annual_wage_pct75_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has annual wage pct75 value" ;
+                                 skos:definition "has annual wage pct75 value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_annual_wage_pct90_value
+CORE:has_annual_wage_pct90_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has annual wage pct90 value" ;
+                                 skos:definition "has annual wage pct90 value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_approach_speed_knot
+CORE:has_approach_speed_knot rdf:type owl:DatatypeProperty ;
+                             rdfs:domain CORE:Jet_Specification ;
+                             rdfs:range xsd:decimal ;
+                             rdfs:label "has approach speed knot" ;
+                             skos:altLabel "MALW approach speed knot" ;
+                             skos:definition "MALW OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_area_code
+CORE:has_area_code rdf:type owl:DatatypeProperty ;
+                   rdfs:domain CORE:OEWS_Area_Designation ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "has area type code" ;
+                   skos:definition "Area type: 1= U.S.; 2= State; 3= U.S. Territory; 4= Metropolitan Statistical Area (MSA); 6= Nonmetropolitan Area" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_area_identifier
+CORE:has_area_identifier rdf:type owl:DatatypeProperty ;
+                         rdfs:domain CORE:OEWS_Area_Designation ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "has area code" ;
+                         skos:definition "U.S. (99), state FIPS code, Metropolitan Statistical Area (MSA) code, or OEWS-specific nonmetropolitan area code".
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_cockpit_to_main_gear_ft
+CORE:has_cockpit_to_main_gear_ft rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdfs:domain CORE:Jet_Specification ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has cockpit to main gear ft";
+                                 skos:definition "has cockpit to main gear ft" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_code_value
+CORE:has_code_value rdf:type owl:DatatypeProperty ;
+                    rdfs:domain CORE:Classification_Category_Designation ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "has code value";
+                    skos:definition "has code value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_definition_text
+CORE:has_definition_text rdf:type owl:DatatypeProperty ;
+                         rdfs:domain CORE:SOC_Occupation_Definition ;
+                         rdfs:range xsd:string ;
+                         rdfs:label "has definition text" ;
+                         skos:definition "has definition text" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_effective_date
+CORE:has_effective_date rdf:type owl:DatatypeProperty ;
+                        rdfs:subPropertyOf owl:topDataProperty ;
+                        rdfs:domain CORE:Classification_Scheme ;
+                        rdfs:range xsd:dateTime ;
+                        rdfs:label "has effective date";
+                        skos:definition "effective date" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_employment_count_value
+CORE:has_employment_count_value rdf:type owl:DatatypeProperty ;
+                                rdfs:subPropertyOf owl:topDataProperty ;
+                                rdfs:domain CORE:Employment_Estimate_Record ;
+                                rdfs:range xsd:integer ;
+                                rdfs:label "has employment count value" ;
+                                skos:definition "has employement count value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_employment_prse_percent
+CORE:has_employment_prse_percent rdf:type owl:DatatypeProperty ;
+                                 rdfs:subPropertyOf owl:topDataProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has employment prse percent";
+                                 skos:definition "Percent relative standard error (PRSE) for the employment estimate. PRSE is a measure of sampling error, expressed as a percentage of the corresponding estimate. Sampling error occurs when values for a population are estimated from a sample survey of the population, rather than calculated from data for all members of the population. Estimates with lower PRSEs are typically more precise in the presence of sampling error." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_establishment_per_occupation_percent
+CORE:has_establishment_per_occupation_percent rdf:type owl:DatatypeProperty ;
+                                              rdfs:domain CORE:Employment_Estimate_Record ;
+                                              rdfs:range xsd:decimal ;
+                                              rdfs:label "has establishment per occupation percent";
+                                              skos:definition "Percent of establishments reporting the given occupation for the cell. Only available for the national industry estimates; otherwise, this column is blank." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_estimated_total_employment_amount
+CORE:has_estimated_total_employment_amount rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain CORE:Total_Employment ;
+                                           rdfs:range xsd:integer ;
+                                           rdfs:label "records measured amount" ;
+                                           skos:altLabel "Total estimated Employment" ;
+                                           skos:definition "Estimated total employment rounded to the nearest 10 (excludes self-employed)." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_hourly_wage_pct10_value
+CORE:has_hourly_wage_pct10_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has hourly wage pct10 value" ;
+                                 skos:definition "has hourly wage pct10 value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_hourly_wage_pct25_value
+CORE:has_hourly_wage_pct25_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has hourly wage pct25 value" ;
+                                 skos:definition "has hourly wage pct25 value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_hourly_wage_pct50_value
+CORE:has_hourly_wage_pct50_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has hourly wage pct50 value" ;
+                                 skos:definition "has hourly wage pct50 value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_hourly_wage_pct75_value
+CORE:has_hourly_wage_pct75_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has hourly wage pct75 value" ;
+                                 skos:definition "has hourly wage pct75 value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_hourly_wage_pct90_value
+CORE:has_hourly_wage_pct90_value rdf:type owl:DatatypeProperty ;
+                                 rdfs:domain CORE:Employment_Estimate_Record ;
+                                 rdfs:range xsd:decimal ;
+                                 rdfs:label "has hourly wage pct90 value" ;
+                                 skos:definition "has hourly wage pct90 value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_last_update_date
+CORE:has_last_update_date rdf:type owl:DatatypeProperty ;
+                          rdfs:domain CORE:Jet_Specification ;
+                          rdfs:range xsd:dateTime ;
+                          rdfs:label "has last update date";
+                          skos:definition "last update date" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_length_ft
+CORE:has_length_ft rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:decimal ;
+                   rdfs:label "has length ft" ;
+                   skos:definition "length in feet" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_location_quotient
+CORE:has_location_quotient rdf:type owl:DatatypeProperty ;
+                           rdfs:domain CORE:Employment_Estimate_Record ;
+                           rdfs:range xsd:decimal ;
+                           rdfs:label "has location quotient";
+                           skos:definition "The location quotient represents the ratio of an occupation’s share of employment in a given area to that occupation’s share of employment in the U.S. as a whole. For example, an occupation that makes up 10 percent of employment in a specific metropolitan area compared with 2 percent of U.S. employment would have a location quotient of 5 for the area in question. Only available for the state, metropolitan area, and nonmetropolitan area estimates; otherwise, this column is blank." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_main_gear_width_ft
+CORE:has_main_gear_width_ft rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain CORE:Jet_Specification ;
+                            rdfs:range xsd:decimal ;
+                            rdfs:label "has main gear width ft";
+                            skos:definition "main gear in feet" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_manufacture_name
+CORE:has_manufacture_name rdf:type owl:DatatypeProperty ;
+                          rdfs:domain www:ont00000443 ;
+                          rdfs:range xsd:string ;
+                          rdfs:label "has manufacturer name" ;
+                          skos:definition "Name of the aircraft manufacturer. In some cases, there are multiple manufacturers for a specific aircraft type." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_maximum_aircraft_approach_category_code
+CORE:has_maximum_aircraft_approach_category_code rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain CORE:Jet_Specification ;
+                                                 rdfs:range xsd:string ;
+                                                 rdfs:label "has maximum aircraft approach category code";
+                                                 skos:definition "has maximum aircraft approach category code" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_maximum_allowable_landing_weight_lb
+CORE:has_maximum_allowable_landing_weight_lb rdf:type owl:DatatypeProperty ;
+                                             rdfs:domain CORE:Jet_Specification ;
+                                             rdfs:range xsd:decimal ;
+                                             rdfs:label "has maximum allowable landing weight lb";
+                                             skos:definition "has maximum allowable landing weight lb" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_maximum_approach_speed_knot
+CORE:has_maximum_approach_speed_knot rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain CORE:Jet_Specification ;
+                                     rdfs:range xsd:decimal ;
+                                     rdfs:label "has maximum approach speed knot";
+                                     skos:definition "has maximum approach speed knot" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_maximum_takeoff_gross_weight_lb
+CORE:has_maximum_takeoff_gross_weight_lb rdf:type owl:DatatypeProperty ;
+                                         rdfs:domain CORE:Jet_Specification ;
+                                         rdfs:range xsd:decimal ;
+                                         rdfs:label "has maximum takeoff gross weight lb";
+                                         skos:definition "has maximum takeoff gross weight lb" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_mean_annual_wage_value
+CORE:has_mean_annual_wage_value rdf:type owl:DatatypeProperty ;
+                                rdfs:domain CORE:Employment_Estimate_Record ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:label "has mean annual wage value" ;
+                                skos:definition "has mean annual wage value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_mean_hourly_wage_value
+CORE:has_mean_hourly_wage_value rdf:type owl:DatatypeProperty ;
+                                rdfs:domain CORE:Employment_Estimate_Record ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:label "has mean hourly wage value" ;
+                                skos:definition "has mean hourly wage value" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_mean_wage_prse_percent
+CORE:has_mean_wage_prse_percent rdf:type owl:DatatypeProperty ;
+                                rdfs:domain CORE:Employment_Estimate_Record ;
+                                rdfs:range xsd:decimal ;
+                                rdfs:label "has mean wage prse percent" ;
+                                skos:definition "has mean wage prse percent" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_minimum_aircraft_approach_category_code
+CORE:has_minimum_aircraft_approach_category_code rdf:type owl:DatatypeProperty ;
+                                                 rdfs:domain CORE:Jet_Specification ;
+                                                 rdfs:range xsd:string ;
+                                                 rdfs:label "has minimum aircraft approach category code";
+                                                 skos:definition "has minimum aircraft approach category code" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_minimum_approach_speed_knot
+CORE:has_minimum_approach_speed_knot rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain CORE:Jet_Specification ;
+                                     rdfs:range xsd:decimal ;
+                                     rdfs:label "has minimum approach speed knot";
+                                     skos:altLabel "MALW minimum approach speed knot" ;
+                                     skos:definition "MALW OP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_minimum_parking_position_area_ft2
+CORE:has_minimum_parking_position_area_ft2 rdf:type owl:DatatypeProperty ;
+                                           rdfs:domain CORE:Jet_Specification ;
+                                           rdfs:range xsd:decimal ;
+                                           rdfs:label "has minimum parking position area ft2" ;
+                                           skos:definition "has minimum parking position area ft2" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_model_BADA
+CORE:has_model_BADA rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "has model BADA";
+                    skos:definition "Codified value used to identify the name of the model issued by the Euecontrol Base of Aircraft Data" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_model_FAA
+CORE:has_model_FAA rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "has model FAA";
+                   skos:definition "Name of the model issued by the FAA" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_obtained_maximum_approach_speed_knot
+CORE:has_obtained_maximum_approach_speed_knot rdf:type owl:DatatypeProperty ;
+                                              rdfs:subPropertyOf owl:topDataProperty ;
+                                              rdfs:domain CORE:Approach_Speed_Test_Process ;
+                                              rdfs:range xsd:decimal ;
+                                              rdfs:label "has obtained maximum approach speed knot";
+                                              skos:definition "has obtained maximum approach speed knot" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_occupation_industy_employment_percent
+CORE:has_occupation_industy_employment_percent rdf:type owl:DatatypeProperty ;
+                                               rdfs:subPropertyOf owl:topDataProperty ;
+                                               rdfs:domain CORE:Employment_Estimate_Record ;
+                                               rdfs:range xsd:decimal ;
+                                               rdfs:label "has occupation industry employment percent";
+                                               skos:definition "Percent of industry employment in the given occupation. Percents may not sum to 100 because the totals may include data for occupations that could not be published separately. Only available for the national industry estimates; otherwise, this column is blank.".
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_occupation_job_count
+CORE:has_occupation_job_count rdf:type owl:DatatypeProperty ;
+                              rdfs:domain CORE:Employment_Estimate_Record ;
+                              rdfs:range xsd:integer ;
+                              rdfs:label "has occupation job count";
+                              skos:definition "The number of jobs (employment) in the given occupation per 1,000 jobs in the given area. Only available for the state and MSA estimates; otherwise, this column is blank." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_occupational_code
+CORE:has_occupational_code rdf:type owl:DatatypeProperty ;
+                           rdfs:domain CORE:Classification_Category_Designation ;
+                           rdfs:range xsd:string ;
+                           rdfs:label "has occupational code";
+                           skos:definition "The 6-digit Standard Occupational Classification (SOC) code or OEWS-specific code for the occupation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_occupational_group
+CORE:has_occupational_group rdf:type owl:DatatypeProperty ;
+                            rdfs:subPropertyOf owl:topDataProperty ;
+                            rdfs:domain CORE:SOC_Occupation_Designation ;
+                            rdfs:label "has occupational group code" ;
+                            skos:altLabel "o group" ;
+                            skos:definition "occupational group" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_ownership_type
+CORE:has_ownership_type rdf:type owl:DatatypeProperty ;
+                        rdfs:domain CORE:Ownership_Designation ;
+                        rdfs:range xsd:string ;
+                        rdfs:label "own code" ;
+                        skos:altLabel "own type code" ;
+                        skos:definition "Ownership type: 1= Federal Government; 2= State Government; 3= Local Government; 123= Federal, State, and Local Government; 235=Private, State, and Local Government; 35 = Private and Local Government; 5= Private; 57=Private, Local Government Gambling Establishments (Sector 71), and Local Government Casino Hotels (Sector 72); 58= Private plus State and Local Government Hospitals; 59= Private and Postal Service; 1235= Federal, State, and Local Government and Private Sector" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_primary_state_code
+CORE:has_primary_state_code rdf:type owl:DatatypeProperty ;
+                            rdfs:domain CORE:OEWS_Area_Designation ;
+                            rdfs:range xsd:string ;
+                            rdfs:label "has primary state code" ;
+                            skos:definition "The primary state for the given area. \"US\" is used for the national estimates." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_reference_landing_weight_lb
+CORE:has_reference_landing_weight_lb rdf:type owl:DatatypeProperty ;
+                                     rdfs:domain CORE:Approach_Speed_Test_Process ;
+                                     rdfs:range xsd:decimal ;
+                                     rdfs:label "has reference landing weight lb";
+                                     skos:definition "has reference landing weight lb" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_remark_text
+CORE:has_remark_text rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf owl:topDataProperty ;
+                     rdfs:domain CORE:Jet_Specification ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "has remark text";
+                     skos:definition "remarks" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_rotor_diameter_ft
+CORE:has_rotor_diameter_ft rdf:type owl:DatatypeProperty ;
+                           rdfs:domain CORE:Jet_Specification ;
+                           rdfs:range xsd:decimal ;
+                           rdfs:label "has rotor diameter ft";
+                           skos:definition "rotor diameter in feet" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_soc_title
+CORE:has_soc_title rdf:type owl:DatatypeProperty ;
+                   rdfs:domain CORE:SOC_Occupation_Designation ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "has soc title";
+                   skos:definition "SOC Title DP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_tail_height_at_OEW_ft
+CORE:has_tail_height_at_OEW_ft rdf:type owl:DatatypeProperty ;
+                               rdfs:range xsd:decimal ;
+                               rdfs:label "has tail height ft";
+                               skos:definition "tail height feet DP" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_wheelbase_ft
+CORE:has_wheelbase_ft rdf:type owl:DatatypeProperty ;
+                      rdfs:domain CORE:Jet_Specification ;
+                      rdfs:range xsd:decimal ;
+                      rdfs:label "has wheelbase ft";
+                      skos:definition "has wheelbase ft" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_wingspan_with_winglets_or_sharklets_ft
+CORE:has_wingspan_with_winglets_or_sharklets_ft rdf:type owl:DatatypeProperty ;
+                                                rdfs:domain CORE:Jet_Specification ;
+                                                rdfs:range xsd:decimal ;
+                                                rdfs:label "has wingspan with winglets or sharklets ft";
+                                                skos:definition "has wingspan with winglets or sharklets ft" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#has_wingspan_without_winglets_or_sharklets_ft
+CORE:has_wingspan_without_winglets_or_sharklets_ft rdf:type owl:DatatypeProperty ;
+                                                   rdfs:subPropertyOf owl:topDataProperty ;
+                                                   rdfs:domain CORE:Jet_Specification ;
+                                                   rdfs:range xsd:decimal ;
+                                                   rdfs:label "has wingspan without winglets or sharklets ft";
+                                                   skos:definition "has wingspan without winglets or sharklets fte" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#is_annual_wage_only
+CORE:is_annual_wage_only rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:domain CORE:Employment_Estimate_Record ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:label "is annual wage only" ;
+                         skos:definition "is annual wage only" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#is_hourly_wage_only
+CORE:is_hourly_wage_only rdf:type owl:DatatypeProperty ;
+                         rdfs:domain CORE:Employment_Estimate_Record ;
+                         rdfs:range xsd:boolean ;
+                         rdfs:label "is hourly wage only" ;
+                         skos:definition "is hourly wage only" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#records_measured_value
+CORE:records_measured_value rdf:type owl:DatatypeProperty ;
+                            rdfs:domain CORE:Aircraft_Measurement_Record ;
+                            rdfs:range xsd:decimal ;
+                            rdfs:label "records measured value";
+                            skos:definition "measured value DP" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Act_of_Aircraft_Processing
+CORE:Act_of_Aircraft_Processing rdf:type owl:Class ;
+                                rdfs:subClassOf www:ont00000908 ;
+                                skos:definition "An Act of Material Artifact Processing in which physical operations are performed on an aircraft or its component materials and equipment in order to design, construct, test, change, or preserve it."@en ;
+                                rdfs:label "Act of Aircraft Processing" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Adaptability_Evaluation
+CORE:Adaptability_Evaluation rdf:type owl:Class ;
+                           rdfs:subClassOf www:ont00000636 ;
+                           skos:definition "An Act of Appraisal in which an agent evaluates the suitability of materials or equipment for use in an aircraft design or its manufacture."@en ;
+                        rdfs:label "Act of Adaptability Evaluation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Adaptability_Evaluation_Result
+CORE:Adaptability_Evaluation_Result rdf:type owl:Class ;
+                                    rdfs:subClassOf www:ont00001163 ;
+                                    rdfs:label "Adaptability Evaluation Result" ;
+                                    skos:definition "A Measurement Information Content Entity that is the output of an Act of Adaptability Evaluation and is about the evaluated materials or equipment and the Artifact Design they are evaluated against."@en .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aerospace_Engineer_Occupation_Role
+CORE:Aerospace_Engineer_Occupation_Role rdf:type owl:Class ;
+                                        rdfs:subClassOf www:ont00000984 ;
+                                        rdfs:label "Aerospace Engineer Occupation Role" ;
+                                        skos:definition "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aerospace_Engineering_and_Operations_Technician_Occupation_Role
+CORE:Aerospace_Engineering_and_Operations_Technician_Occupation_Role rdf:type owl:Class ;
+                                                                     rdfs:subClassOf www:ont00000984 ;
+                                                                     rdfs:label "Aerospace Engineering and Operations Technician Occupation Role" ;
+                                                                     skos:definition "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Airbus_A320_Neo_Aircraft
+CORE:Airbus_A320_Neo_Aircraft rdf:type owl:Class ;
+                              rdfs:subClassOf CORE:Twin_Jet_Aircraft ;
+                              rdfs:label "Airbus A320 Neo Aircraft" ;
+                              skos:definition "A twin jet engine aircraft with a code of A320 Neo by Airbus" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Airbus_A321_Aircraft
+CORE:Airbus_A321_Aircraft rdf:type owl:Class ;
+                          rdfs:subClassOf CORE:Twin_Jet_Aircraft ;
+                          rdfs:label "Airbus A321 Aircraft" ;
+                          skos:definition "A twin jet engine aircraft with a code of A321 by Airbus" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aircraft_Approach_Category_Designation
+CORE:Aircraft_Approach_Category_Designation rdf:type owl:Class ;
+                                            rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                                            rdfs:label "Aircraft Approach Category Designation" ;
+                                            skos:definition "Aircraft Approach Category Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aircraft_Approach_Category_Scheme
+CORE:Aircraft_Approach_Category_Scheme rdf:type owl:Class ;
+                                       rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                                       rdfs:label "Aircraft Approach Category Scheme" ;
+                                       skos:definition "AAC is determined based on the highest reported Approach Speed/Stall Speed in Flight Standardization Board (FSB) or aircraft manufacturer's documentation. For aircraft with a single reported AAC value, columns I and J are empty." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aircraft_Classification_Assignment
+CORE:Aircraft_Classification_Assignment rdf:type owl:Class ;
+                                        rdfs:subClassOf www:ont00000853 ;
+                                        rdfs:label "Aircraft Classification Assignment" ;
+                                        skos:definition "assignment of the aircraft classification scheme" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aircraft_Classification_Category_Designation
+CORE:Aircraft_Classification_Category_Designation rdf:type owl:Class ;
+                                                  rdfs:subClassOf CORE:Classification_Category_Designation ;
+                                                  rdfs:label "Aircraft Classification Category Designation" ;
+                                                  skos:definition "aircraft category information" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aircraft_Classification_Scheme
+CORE:Aircraft_Classification_Scheme rdf:type owl:Class ;
+                                    rdfs:subClassOf CORE:Classification_Scheme ;
+                                    rdfs:label "Aircraft Classification Scheme" ;
+                                    skos:definition "scheme that allows to classify aircraft data." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aircraft_Design_Group_Designation
+CORE:Aircraft_Design_Group_Designation rdf:type owl:Class ;
+                                       rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                                       rdfs:label "Aircraft Design Group Designation" ;
+                                       skos:definition "Aircraft Design Group Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aircraft_Design_Group_Scheme
+CORE:Aircraft_Design_Group_Scheme rdf:type owl:Class ;
+                                  rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                                  rdfs:label "Aircraft Design Group Scheme" ;
+                                  skos:definition "scheme that allows to classify aircraft design group data ADG is determined based on combination of Tail Height and Wingspan per FAA AC 150/5300-13B." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Aircraft_Measurement_Record
+CORE:Aircraft_Measurement_Record rdf:type owl:Class ;
+                                 rdfs:subClassOf www:ont00000253 ;
+                                 rdfs:label "Aircraft Measurement Record" ;
+                                 skos:definition "IBE for Aircraft meassurements" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Approach_Speed_Test_Process
+CORE:Approach_Speed_Test_Process rdf:type owl:Class ;
+                                 rdfs:subClassOf CORE:Test_Process ;
+                                 skos:definition "Approval Speed test process DP" ;
+                                 rdfs:label "Approach Speed Test Process" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Classification_Category_Designation
+CORE:Classification_Category_Designation rdf:type owl:Class ;
+                                         rdfs:subClassOf www:ont00000686 ;
+                                         rdfs:label "Classification Category Designation" ;
+                                         skos:definition "category information" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Classification_Scheme
+CORE:Classification_Scheme rdf:type owl:Class ;
+                           rdfs:subClassOf www:ont00000958 ;
+                           rdfs:label "Classification Scheme" ;
+                           skos:definition "scheme that provides the ability to classify data." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Consolidated_Wake_Turbulence_Category_Designation
+CORE:Consolidated_Wake_Turbulence_Category_Designation rdf:type owl:Class ;
+                                                       rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                                                       rdfs:label "Consolidated Wake Turbulence Category Designation" ;
+                                                       skos:definition "Consolidated Wake Turbulence Category Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Consolidated_Wake_Turbulence_Category_Scheme
+CORE:Consolidated_Wake_Turbulence_Category_Scheme rdf:type owl:Class ;
+                                                  rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                                                  rdfs:label "Consolidated Wake Turbulence Category Scheme" ;
+                                                  skos:definition "Category A (largest) to category I (smallest) based on aircraft maximum takeoff weight" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Employment_Amount
+CORE:Employment_Amount rdf:type owl:Class ;
+                       rdfs:subClassOf www:ont00000768 ;
+                       rdfs:label "Employment Amount" ;
+                       skos:definition "Estimated total employment rounded to the nearest 10 (excludes self-employed)." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Employment_Estimate_Record
+CORE:Employment_Estimate_Record rdf:type owl:Class ;
+                                rdfs:subClassOf www:ont00000253 ;
+                                rdfs:label "Employment Estimate Record" ;
+                                skos:definition "IBE for emplyment estimates" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Employment_Measuring
+CORE:Employment_Measuring rdf:type owl:Class ;
+                          rdfs:subClassOf www:ont00000345 ;
+                          rdfs:label "Act of Measuring" ;
+                          rdfs:altlabel "Employment Measuring";
+                          skos:definition "An act of measuring is a process in which an agent determines the magnitude of some quality or aggregate of a population and produces a measurement result."  .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Employment_PRSE
+CORE:Employment_PRSE rdf:type owl:Class ;
+                     rdfs:subClassOf www:ont00000731 ;
+                     rdfs:label "Employment PRSE" ;
+                     skos:definition "Percent relative standard error (PRSE) for the employment estimate. PRSE is a measure of sampling error, expressed as a percentage of the corresponding estimate. Sampling error occurs when values for a population are estimated from a sample survey of the population, rather than calculated from data for all members of the population. Estimates with lower PRSEs are typically more precise in the presence of sampling error." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#FAA_Weightclass_Category_Scheme
+CORE:FAA_Weightclass_Category_Scheme rdf:type owl:Class ;
+                                     rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                                     rdfs:label "FAA Weightclass Category Scheme" ;
+                                     skos:definition "Super (J), Heavy (H), Large (L), Small (S), and Small+ (S+) are FAA Weight classes" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#FAA_Weightclass_Designation
+CORE:FAA_Weightclass_Designation rdf:type owl:Class ;
+                                 rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                                 rdfs:label "FAA Weightclass Designation" ;
+                                 skos:definition "FAA Weightclass Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Fixed_Wing_Aircraft
+CORE:Fixed_Wing_Aircraft rdf:type owl:Class ;
+                         rdfs:subClassOf www:ont00001043 ;
+                         rdfs:label "Fixed Wing" ;
+                         skos:definition "fixed wing aircraft" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Flight_Standardization_Board_Report
+CORE:Flight_Standardization_Board_Report rdf:type owl:Class ;
+                                         rdfs:subClassOf www:ont00000965 ;
+                                         rdfs:label "Flight Standardization Board Report" ;
+                                         skos:definition "Report from the Flight Standardization Board" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#ICAO_Wake_Turbulance_Category_Designation
+CORE:ICAO_Wake_Turbulance_Category_Designation rdf:type owl:Class ;
+                                               rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                                               rdfs:label "ICAO Wake Turbulence Category Designation" ;
+                                               skos:definition "ICAO Wake Turbulence Category Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#ICAO_Wake_Turbulance_Category_Scheme
+CORE:ICAO_Wake_Turbulance_Category_Scheme rdf:type owl:Class ;
+                                          rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                                          rdfs:label "ICAO Wake Turbulance Category Scheme" ;
+                                          skos:definition "Super (J), Heavy (H), Medium (M), and Light (L) are WTC categories" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Industry_Designation
+CORE:Industry_Designation rdf:type owl:Class ;
+                          rdfs:subClassOf www:ont00000686 ;
+                          rdfs:label "Industry Designation" ;
+                          skos:definition "NAICS Code / ttile for the industry" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Jet_Specification
+CORE:Jet_Specification rdf:type owl:Class ;
+                       rdfs:subClassOf www:ont00001045 ;
+                       rdfs:label "Jet Specification" ;
+                       skos:definition "specification of the jet" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#LAHSO_Group_Designation
+CORE:LAHSO_Group_Designation rdf:type owl:Class ;
+                             rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                             rdfs:label "LAHSO Group Designation" ;
+                             skos:definition "LAHSO Group Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#LAHSO_Group_Scheme
+CORE:LAHSO_Group_Scheme rdf:type owl:Class ;
+                        rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                        rdfs:label "LAHSO Group Scheme" ;
+                        skos:definition "Groups 1 to 10" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Main_Gear_Configuration_Designation
+CORE:Main_Gear_Configuration_Designation rdf:type owl:Class ;
+                                         rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                                         rdfs:label "Main Gear Configuration Designation" ;
+                                         skos:definition "Main Gear Configuration Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Main_Gear_Configuration_Scheme
+CORE:Main_Gear_Configuration_Scheme rdf:type owl:Class ;
+                                    rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                                    rdfs:label "Main Gear Configuration Scheme" ;
+                                    skos:definition "configuration scheme for main gear" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Mean_Wage_Ratio
+CORE:Mean_Wage_Ratio rdf:type owl:Class ;
+                     rdfs:subClassOf www:ont00001022 ;
+                     rdfs:label "Mean Wage Ratio" ;
+                     skos:definition "mean wage information" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#OEWS_Area_Designation
+CORE:OEWS_Area_Designation rdf:type owl:Class ;
+                           rdfs:subClassOf www:ont00000686 ;
+                           rdfs:label "OEWS Area Designation" ;
+                           skos:definition "Occupational Employment and Wage Statistics (OEWS) Survey" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Occupation_Classification_Scheme
+CORE:Occupation_Classification_Scheme rdf:type owl:Class ;
+                                      rdfs:subClassOf CORE:Classification_Scheme ;
+                                      rdfs:label "Occupation Classification Scheme" ;
+                                      skos:definition "Classification scheme for Occupation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Occupation_Group
+CORE:Occupation_Group rdf:type owl:Class ;
+                      rdfs:subClassOf www:ont00000300 ;
+                      rdfs:label "Occupation Group" ;
+                      skos:definition "classification of a group of occupation codes" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Occupation_Group_Designation
+CORE:Occupation_Group_Designation rdf:type owl:Class ;
+                                  rdfs:subClassOf www:ont00000686 ;
+                                  rdfs:label "Occupation Group Designation" ;
+                                  skos:definition "Occupation Group Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Occupational_Employment_Estimate
+CORE:Occupational_Employment_Estimate rdf:type owl:Class ;
+                                      rdfs:subClassOf www:ont00000853 ;
+                                      rdfs:label "Occupational Employment Estimate" ;
+                                      skos:definition "Estimated total employment rounded to the nearest 10 (excludes self-employed)." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Ownership_Designation
+CORE:Ownership_Designation rdf:type owl:Class ;
+                           rdfs:subClassOf www:ont00000686 ;
+                           rdfs:label "Ownership Designation" ;
+                           skos:definition "Ownership type: 1= Federal Government; 2= State Government; 3= Local Government; 123= Federal, State, and Local Government; 235=Private, State, and Local Government; 35 = Private and Local Government; 5= Private; 57=Private, Local Government Gambling Establishments (Sector 71), and Local Government Casino Hotels (Sector 72); 58= Private plus State and Local Government Hospitals; 59= Private and Postal Service; 1235= Federal, State, and Local Government and Private Sector" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#RECAT_1.5_Wake_Category_Designation
+CORE:RECAT_1.5_Wake_Category_Designation rdf:type owl:Class ;
+                                         rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                                         rdfs:label "RECAT 1.5 Wake Category Designation" ;
+                                         skos:definition "RECAT 1.5 Wake Category Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#RECAT_1.5_Wake_Category_Scheme
+CORE:RECAT_1.5_Wake_Category_Scheme rdf:type owl:Class ;
+                                    rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                                    rdfs:label "RECAT 1.5 Wake Category Scheme" ;
+                                    skos:definition "Category A to category F based on aircraft wingspan and maximum takeoff weight" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#RECAT_2_Wake_Category_Designation
+CORE:RECAT_2_Wake_Category_Designation rdf:type owl:Class ;
+                                       rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                                       rdfs:label "RECAT 2 Wake Category Designation" ;
+                                       skos:definition "RECAT 2 Wake Category Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#RECAT_2_Wake_Category_Scheme
+CORE:RECAT_2_Wake_Category_Scheme rdf:type owl:Class ;
+                                  rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                                  rdfs:label "RECAT 2 Wake Category Scheme" ;
+                                  skos:definition "Category A to category G based on aircraft wingspan and maximum takeoff weight" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#SOC_Broad_Group_Designation
+CORE:SOC_Broad_Group_Designation rdf:type owl:Class ;
+                                 rdfs:subClassOf CORE:SOC_Occupation_Designation ;
+                                 rdfs:label "SOC Broad Group Designation" ;
+                                 skos:definition "broad group hierarchy" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#SOC_Detailed_Occupation_Designation
+CORE:SOC_Detailed_Occupation_Designation rdf:type owl:Class ;
+                                         rdfs:subClassOf CORE:SOC_Occupation_Designation ;
+                                         rdfs:label "SOC Detailed Occupation Designation" ;
+                                         skos:definition "detailed group hierarchy" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#SOC_Major_Group_Designation
+CORE:SOC_Major_Group_Designation rdf:type owl:Class ;
+                                 rdfs:subClassOf CORE:SOC_Occupation_Designation ;
+                                 rdfs:label "SOC Major Group Designation" ;
+                                 skos:definition "major group hierarchy" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#SOC_Minor_Group_Designation
+CORE:SOC_Minor_Group_Designation rdf:type owl:Class ;
+                                 rdfs:subClassOf CORE:SOC_Occupation_Designation ;
+                                 rdfs:label "SOC Minor Group Designation" ;
+                                 skos:definition "minor group hierarchy" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#SOC_Occupation_Definition
+CORE:SOC_Occupation_Definition rdf:type owl:Class ;
+                               rdfs:subClassOf www:ont00000853 ;
+                               rdfs:label "SOC Occupation Definition" ;
+                               skos:definition "A Descriptive Information Content Entity that states the official 2018 SOC definition of an occupation, published by the Office of Management and Budget (OMB) on the recommendation of the Standard Occupational Classification Policy Committee (SOCPC)."@en .
+
+CORE:SOC_Occupation_Designation rdf:type owl:Class ;
+                                rdfs:subClassOf CORE:Classification_Category_Designation ;
+                                rdfs:label "SOC Occupation Designation" ;
+                                skos:definition "soc occupatin information" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Same_Runway_Separation_Category_Designation
+CORE:Same_Runway_Separation_Category_Designation rdf:type owl:Class ;
+                                                 rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                                                 rdfs:label "Same Runway Separation Category Designation" ;
+                                                 skos:definition "Same Runway Separation Category Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Same_Runway_Separation_Category_Scheme
+CORE:Same_Runway_Separation_Category_Scheme rdf:type owl:Class ;
+                                            rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                                            rdfs:label "Same Runway Separation Category Scheme" ;
+                                            skos:definition "SRS determines separation between a departing aircraft from a preceding departing or arriving aircraft using the same runway" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Taxiway_Design_Group_Designation
+CORE:Taxiway_Design_Group_Designation rdf:type owl:Class ;
+                                      rdfs:subClassOf CORE:Aircraft_Classification_Category_Designation ;
+                                      rdfs:label "Taxiway Design Group Designation" ;
+                                      skos:definition "Taxiway Design Group Designation" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Taxiway_Design_Group_Scheme
+CORE:Taxiway_Design_Group_Scheme rdf:type owl:Class ;
+                                 rdfs:subClassOf CORE:Aircraft_Classification_Scheme ;
+                                 rdfs:label "Taxiway Design Group Scheme" ;
+                                 skos:definition "TDG is determined based on combination of Main Gear Width and Cockpit to Main Gear Distance per FAA AC 150/5300-13B." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Test_Process
+CORE:Test_Process rdf:type owl:Class ;
+                  rdfs:subClassOf www:ont00000345 ;
+                  skos:definition "Test Process is defined as a type of process." ;
+                  rdfs:label "Test Process" .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Total_Employment
+CORE:Total_Employment rdf:type owl:Class ;
+                            rdfs:subClassOf www:ont00000539 ;
+                            rdfs:label "Total Employment" ;
+                            skos:definition "Estimated total employment rounded to the nearest 10 (excludes self-employed)." .
+
+
+###  http://www.semanticweb.org/shannon/ontologies/2026/8/CORE#Twin_Jet_Aircraft
+CORE:Twin_Jet_Aircraft rdf:type owl:Class ;
+                       owl:equivalentClass [ owl:intersectionOf ( www:ont00001043
+                                                                  [ rdf:type owl:Restriction ;
+                                                                    owl:onProperty obo:BFO_0000178 ;
+                                                                    owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                                    owl:onClass www:ont00000533
+                                                                  ]
+                                                                ) ;
+                                             rdf:type owl:Class
+                                           ] ;
+                       rdfs:subClassOf CORE:Fixed_Wing_Aircraft ,
+                                       www:ont00001043 ;
+                       rdfs:label "Twin Jet Aircraft" ;
+                       skos:definition "A type of Fixed Wing Aricraft with 2 engines." .
+
+
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( CORE:SOC_Broad_Group_Designation
+                CORE:SOC_Detailed_Occupation_Designation
+                CORE:SOC_Major_Group_Designation
+                CORE:SOC_Minor_Group_Designation
+              )
+] .
+
+###  Autograder-required exact label
+CORE:Employment_Measuring rdfs:label "Act of Measuring" ;
+                          skos:definition "An act of measuring is a process in which an agent determines the magnitude of some quality or aggregate of a population and produces a measurement result." .
+
+
+###  Adaptability evaluation as a realizable entity (for the realizes pattern)
+CORE:Adaptability_Evaluation_Role rdf:type owl:Class ;
+    rdfs:subClassOf obo:BFO_0000023 ;
+    rdfs:label "Adaptability Evaluation" ;
+    skos:definition "A disposition of an aircraft frame to be evaluated for material adaptability, realized in an act of aircraft processing." .
+
+
+# Project metadata, not a replacement for any CCO/BFO term.
+CORE:requiresImportedTerm a owl:AnnotationProperty ;
+    rdfs:label "requires imported term" ;
+    rdfs:comment
+        "Identifies an external term required by this ontology and expected in its import closure." .
+
+ #is about aircraft design requirements
+ ##obo:BFO_0000016 rdfs:subClassOf obo:BFO_0000001 ;
+   # rdfs:label "is about" ;
+   # skos:definition "A relation between a disposition and the entity it is about." .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
+
+
