@@ -1,0 +1,22 @@
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Julian Date: (https://www.commoncoreontologies.org/ont00000359) consists of the Julian Day Number
+# and the fractional part of the day. 
+# julian date represents a 'day'   
+# A temporal instant used in astronomy and other scientific applications to represent a 
+# specific point in time.
+
+
+##TemporalPosition subclass of TemporalInstant
+#Julian Date is a subclass of TemporalPosition, which is a subclass of TemporalInstant.
+cco:ont00000359 rdfs:subClassOf time:TemporalPosition .
+
+#rerun of step 8: CCO to QUDT class mappings (Project 3, step 8 re-run).
+
+# Multi-Day Temporal Interval: a one-dimensional temporal region spanning days -> an interval with distinct start and end
+cco:ont00000211 rdfs:subClassOf time:ProperInterval .
+
+# Time of Day: "a Temporal Instant that is part of a Day" -> a zero-extent temporal entity
+cco:ont00000223 rdfs:subClassOf time:Instant .

@@ -1,0 +1,7 @@
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+# Not equivalent: IES Element includes more information likepersons and objects which relate to BFO continuants.
+obo:BFO_0000011 rdfs:subClassOf ies:Element .

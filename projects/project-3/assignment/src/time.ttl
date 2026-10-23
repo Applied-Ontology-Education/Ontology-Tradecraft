@@ -7,6 +7,11 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+
+
 
 <http://www.w3.org/2006/time>
   a owl:Ontology ;
@@ -1807,3 +1812,34 @@ xsd:dateTimeStamp  rdfs:label  "sello de tiempo"@es .
 :TemporalDuration 
         rdfs:label       "duración temporal"@es ;
         skos:definition  "Extensión de tiempo; duración de un intervalo de tiempo independiente de su posición de inicio particular."@es .
+
+###################################
+# Added Content - SLBacek
+#################################################################
+# Time Duration
+  
+:Duration rdfs:subClassOf [
+  a owl:Restriction ;
+    owl:onProperty [owl:inverseOf :hasDuration ];
+    owl:someValuesFrom  obo:BFO_0000038 #one-dimensional-temporal-region
+  ].
+  
+  # temporal position  
+:TemporalPosition rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf :inTemporalPosition ] ;
+    owl:someValuesFrom obo:BFO_0000203 #temporal instant
+] .
+
+# A Month of year
+:MonthOfYear rdfs:subClassOf [
+    a owl:Restriction ;
+    owl:onProperty [ owl:inverseOf :hasDateTimeDescription ] ;
+    owl:someValuesFrom cco:ont00000259 #calendar month
+] .
+  
+
+
+
+
+
