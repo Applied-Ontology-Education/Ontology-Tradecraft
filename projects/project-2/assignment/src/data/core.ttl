@@ -1,0 +1,415 @@
+@prefix : <http://example.org/ontology-tradecraft/project2/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+
+#################################################################
+# Ontology
+#################################################################
+
+<http://example.org/ontology-tradecraft/project2/> a owl:Ontology ;
+    rdfs:label "Ontology Tradecraft Project 2"@en ;
+    skos:definition "An ontology for representing aircraft specifications, aircraft testing, occupational information, and employment data."@en ;
+    owl:imports <http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl> .
+
+#################################################################
+# Aircraft Classes
+#################################################################
+
+:Aircraft a owl:Class ;
+    rdfs:label "Aircraft"@en ;
+    skos:definition "A material artifact designed for transportation through the air."@en ;
+    rdfs:subClassOf obo:BFO_0000040 .
+
+:FixedWing a owl:Class ;
+    rdfs:label "Fixed Wing"@en ;
+    skos:definition "An aircraft whose primary lifting surfaces are fixed in position relative to the aircraft."@en ;
+    rdfs:subClassOf :Aircraft .
+
+:JetEngine a owl:Class ;
+    rdfs:label "Jet Engine"@en ;
+    skos:definition "A jet engine that provides propulsion for an aircraft."@en ;
+    rdfs:subClassOf obo:BFO_0000040 .
+
+:ArtifactDesign a owl:Class ;
+    rdfs:label "Artifact Design"@en ;
+    skos:definition "A generically dependent continuant that specifies how an artifact is designed."@en ;
+    rdfs:subClassOf obo:BFO_0000031 .
+
+
+#################################################################
+# Aircraft Testing Classes
+#################################################################
+
+:TestProcess a owl:Class ;
+    rdfs:label "Test Process"@en ;
+    skos:definition "A process in which an aircraft characteristic is tested or evaluated."@en ;
+    rdfs:subClassOf obo:BFO_0000015 .
+
+:ApproachTest a owl:Class ;
+    rdfs:label "Approach Test"@en ;
+    skos:definition "A temporal part of a test process representing a single approach measurement."@en ;
+    rdfs:subClassOf :TestProcess .
+
+:MeasurementUnit a owl:Class ;
+    rdfs:label "Measurement Unit"@en ;
+    skos:definition "A unit used to quantify a measurable quantity."@en .
+
+:MeasurementUnitOfSpeed a owl:Class ;
+    rdfs:label "Measurement Unit of Speed"@en ;
+    skos:definition "A measurement unit used to quantify speed."@en ;
+    rdfs:subClassOf :MeasurementUnit .
+
+
+#################################################################
+# Aircraft Processing Classes
+#################################################################
+
+:ActOfAircraftProcessing a owl:Class ;
+    rdfs:label "Act of Aircraft Processing"@en ;
+    skos:definition "A process in which information about an aircraft is processed or evaluated."@en ;
+    rdfs:subClassOf obo:BFO_0000015 .
+
+:AdaptabilityEvaluation a owl:Class ;
+    rdfs:label "Adaptability Evaluation"@en ;
+    skos:definition "A realizable entity representing an evaluation of the adaptability of an aircraft-related design."@en ;
+    rdfs:subClassOf obo:BFO_0000017 .
+
+:ActOfAircraftDesign a owl:Class ;
+    rdfs:label "Act of Aircraft Design"@en ;
+    skos:definition "A design specification that represents the design of an aircraft."@en ;
+    rdfs:subClassOf obo:BFO_0000031 .
+
+
+#################################################################
+# Employment and Measurement Classes
+#################################################################
+
+:Quality a owl:Class ;
+    rdfs:label "quality"@en ;
+    skos:definition "A specifically dependent continuant that represents a characteristic of an entity."@en ;
+    rdfs:subClassOf obo:BFO_0000019 .
+
+:ActOfMeasuring a owl:Class ;
+    rdfs:label "Act of Measuring"@en ;
+    skos:definition "A process in which a measurable quantity is determined."@en ;
+    rdfs:subClassOf obo:BFO_0000015 .
+
+:TotalEmployment a owl:Class ;
+    rdfs:label "Total Employment"@en ;
+    skos:definition "A quantity representing the total employment associated with an occupational category."@en ;
+    rdfs:subClassOf :Quality .
+
+
+#################################################################
+# Object Properties
+#################################################################
+
+:hasContinuantPart a owl:ObjectProperty ;
+    rdfs:label "has continuant part"@en ;
+    skos:definition "Relates an entity to a continuant that is part of that entity."@en .
+
+:hasManufacturer a owl:ObjectProperty ;
+    rdfs:label "has manufacturer"@en ;
+    skos:definition "Relates an aircraft to the organization that manufactures it."@en .
+
+:isAbout a owl:ObjectProperty ;
+    rdfs:label "is about"@en ;
+    skos:definition "Relates an information content entity to the entity that it describes or concerns."@en .
+
+:isTemporalPartOf a owl:ObjectProperty ;
+    rdfs:label "is temporal part of"@en ;
+    skos:definition "Relates a temporal part to the larger process of which it is a temporal part."@en .
+
+:isMeasurementUnitOf a owl:ObjectProperty ;
+    rdfs:label "is measurement unit of"@en ;
+    skos:definition "Relates a measurement unit to the quantity or quality that it is used to measure."@en .
+
+:prescribes a owl:ObjectProperty ;
+    rdfs:label "prescribes"@en ;
+    skos:definition "Relates an information content entity to a specification or value that it prescribes."@en .
+
+:realizes a owl:ObjectProperty ;
+    rdfs:label "realizes"@en ;
+    skos:definition "Relates a process to a realizable entity that is realized through the process."@en .
+
+:isOutputOf a owl:ObjectProperty ;
+    rdfs:label "is output of"@en ;
+    skos:definition "Relates an entity to the process that produces it as an output."@en .
+
+:inheresIn a owl:ObjectProperty ;
+    rdfs:label "inheres in"@en ;
+    skos:definition "Relates a specifically dependent continuant to the entity in which it inheres."@en .
+
+:hasArea a owl:ObjectProperty ;
+    rdfs:label "has area"@en ;
+    skos:definition "Relates an occupational entity to an area associated with it."@en .
+
+:oGroup a owl:ObjectProperty ;
+    rdfs:label "o group"@en ;
+    skos:definition "Relates an occupational entry to its occupational group."@en .
+
+:ownCode a owl:ObjectProperty ;
+    rdfs:label "own code"@en ;
+    skos:definition "Relates an entity to an identifying code associated with it."@en .
+
+:hasTotalEmployment a owl:ObjectProperty ;
+    rdfs:label "has total employment"@en ;
+    skos:definition "Relates an occupational measurement to the total employment quality it produced."@en .
+
+#################################################################
+# Aircraft Data Properties
+#################################################################
+
+:hasModelBADA a owl:DatatypeProperty ;
+    rdfs:label "has Model BADA"@en ;
+    skos:definition "Specifies the BADA model designation for an aircraft."@en .
+
+:hasModelFAA a owl:DatatypeProperty ;
+    rdfs:label "has Model FAA"@en ;
+    skos:definition "Specifies the FAA model designation for an aircraft."@en .
+
+:hasLengthFt a owl:DatatypeProperty ;
+    rdfs:label "has Length Ft"@en ;
+    skos:definition "Specifies an aircraft length measured in feet."@en .
+
+:hasTailHeightFt a owl:DatatypeProperty ;
+    rdfs:label "has Tail Height Ft"@en ;
+    skos:definition "Specifies an aircraft tail height measured in feet."@en .
+
+:hasApproachSpeedKnot a owl:DatatypeProperty ;
+    rdfs:label "has Approach Speed Knot"@en ;
+    skos:definition "Specifies an aircraft approach speed measured in knots."@en .
+
+:hasAverageApproachSpeedKnot a owl:DatatypeProperty ;
+    rdfs:label "has Average Approach Speed Knot"@en ;
+    skos:definition "Specifies an average aircraft approach speed measured in knots."@en .
+
+:hasNumberOfEngines a owl:DatatypeProperty ;
+    rdfs:label "has Number of Engines"@en ;
+    skos:definition "Specifies the number of engines associated with an aircraft."@en .
+
+:hasRegistrationCount a owl:DatatypeProperty ;
+    rdfs:label "has Registration Count"@en ;
+    skos:definition "Specifies the number of aircraft registrations."@en .
+
+
+#################################################################
+# Employment Data Properties
+#################################################################
+
+:hasTotalEmployment a owl:DatatypeProperty ;
+    rdfs:label "has Total Employment"@en ;
+    skos:definition "Specifies the total number of employed persons associated with an occupational entry."@en .
+
+:hasAreaValue a owl:DatatypeProperty ;
+    rdfs:label "has Area Value"@en ;
+    skos:definition "Specifies a numerical area value associated with an entity."@en .
+
+:hasCodeValue a owl:DatatypeProperty ;
+    rdfs:label "has Code Value"@en ;
+    skos:definition "Specifies the literal value of an identifying code."@en .
+
+:hasValue a owl:DatatypeProperty ;
+    rdfs:label "has value"@en ;
+    skos:definition "Specifies a literal value associated with an entity."@en .
+
+:hasICAOCode a owl:DatatypeProperty ;
+    rdfs:label "has ICAO Code"@en ;
+    skos:definition "Associates an aircraft with its ICAO aircraft code."@en .
+
+:hasFAADesignator a owl:DatatypeProperty ;
+    rdfs:label "has FAA Designator"@en ;
+    skos:definition "Associates an aircraft with its FAA designator."@en .
+
+:hasAAC a owl:DatatypeProperty ;
+    rdfs:label "has AAC"@en ;
+    skos:definition "Associates an aircraft with its Aircraft Approach Category classification."@en .
+
+:hasADG a owl:DatatypeProperty ;
+    rdfs:label "has ADG"@en ;
+    skos:definition "Associates an aircraft with its Airport Design Group classification."@en .
+
+:hasTDG a owl:DatatypeProperty ;
+    rdfs:label "has TDG"@en ;
+    skos:definition "Associates an aircraft with its Taxiway Design Group classification."@en .
+
+:hasWingspanFt a owl:DatatypeProperty ;
+    rdfs:label "has Wingspan Ft"@en ;
+    skos:definition "Associates an aircraft with its wingspan measured in feet."@en .
+
+:hasWheelbaseFt a owl:DatatypeProperty ;
+    rdfs:label "has Wheelbase Ft"@en ;
+    skos:definition "Associates an aircraft with its wheelbase measured in feet."@en .
+
+:hasCockpitToMainGearFt a owl:DatatypeProperty ;
+    rdfs:label "has Cockpit to Main Gear Ft"@en ;
+    skos:definition "Associates an aircraft with the distance from the cockpit to the main landing gear measured in feet."@en .
+
+:hasMainGearWidthFt a owl:DatatypeProperty ;
+    rdfs:label "has Main Gear Width Ft"@en ;
+    skos:definition "Associates an aircraft with its main landing gear width measured in feet."@en .
+
+:hasMTOWLb a owl:DatatypeProperty ;
+    rdfs:label "has MTOW Lb"@en ;
+    skos:definition "Associates an aircraft with its maximum takeoff weight measured in pounds."@en .
+
+:hasMALWLb a owl:DatatypeProperty ;
+    rdfs:label "has MALW Lb"@en ;
+    skos:definition "Associates an aircraft with its maximum allowable landing weight measured in pounds."@en .
+
+:hasMainGearConfig a owl:DatatypeProperty ;
+    rdfs:label "has Main Gear Config"@en ;
+    skos:definition "Associates an aircraft with its main landing gear configuration."@en .
+
+:hasICAOWTC a owl:DatatypeProperty ;
+    rdfs:label "has ICAO WTC"@en ;
+    skos:definition "Associates an aircraft with its ICAO wake turbulence category."@en .
+
+:hasParkingAreaFt2 a owl:DatatypeProperty ;
+    rdfs:label "has Parking Area Ft2"@en ;
+    skos:definition "Associates an aircraft with its required parking area measured in square feet."@en .
+
+:hasFAAWeight a owl:DatatypeProperty ;
+    rdfs:label "has FAA Weight"@en ;
+    skos:definition "Associates an aircraft with its FAA weight classification."@en .
+
+:hasCWT a owl:DatatypeProperty ;
+    rdfs:label "has CWT"@en ;
+    skos:definition "Associates an aircraft with its CWT classification."@en .
+
+:hasWakeCategoryOneHalf a owl:DatatypeProperty ;
+    rdfs:label "has One Half Wake Category"@en ;
+    skos:definition "Associates an aircraft with its one-half wake category classification."@en .
+
+:hasWakeCategoryTwoAppendixA a owl:DatatypeProperty ;
+    rdfs:label "has Two Wake Category Appendix A"@en ;
+    skos:definition "Associates an aircraft with its two wake category classification from Appendix A."@en .
+
+:hasWakeCategoryTwoAppendixB a owl:DatatypeProperty ;
+    rdfs:label "has Two Wake Category Appendix B"@en ;
+    skos:definition "Associates an aircraft with its two wake category classification from Appendix B."@en .
+
+:hasSRS a owl:DatatypeProperty ;
+    rdfs:label "has SRS"@en ;
+    skos:definition "Associates an aircraft with its SRS classification."@en .
+
+:hasLAHSO a owl:DatatypeProperty ;
+    rdfs:label "has LAHSO"@en ;
+    skos:definition "Associates an aircraft with its LAHSO value."@en .
+
+:hasFAARegistry a owl:DatatypeProperty ;
+    rdfs:label "has FAA Registry"@en ;
+    skos:definition "Associates an aircraft with its FAA registry status."@en .
+
+:hasRegistrationCount a owl:DatatypeProperty ;
+    rdfs:label "has Registration Count"@en ;
+    skos:definition "Associates an aircraft with its registration count."@en .
+
+:hasTMFSOperationsFY24 a owl:DatatypeProperty ;
+    rdfs:label "has TMFS Operations FY24"@en ;
+    skos:definition "Associates an aircraft with its TMFS operations during fiscal year 2024."@en .
+
+:hasRemarks a owl:DatatypeProperty ;
+    rdfs:label "has Remarks"@en ;
+    skos:definition "Associates an aircraft with remarks recorded in the source data."@en .
+
+:hasAreaCode a owl:DatatypeProperty ;
+    rdfs:label "has Area Code"@en ;
+    skos:definition "Associates an employment record with its area code."@en .
+
+:hasAreaTitle a owl:DatatypeProperty ;
+    rdfs:label "has Area Title"@en ;
+    skos:definition "Associates an employment record with the title of its geographic area."@en .
+
+:hasAreaType a owl:DatatypeProperty ;
+    rdfs:label "has Area Type"@en ;
+    skos:definition "Associates an employment record with its area type code."@en .
+
+:hasPrimaryState a owl:DatatypeProperty ;
+    rdfs:label "has Primary State"@en ;
+    skos:definition "Associates an employment record with its primary state or jurisdiction code."@en .
+
+:hasNAICS a owl:DatatypeProperty ;
+    rdfs:label "has NAICS"@en ;
+    skos:definition "Associates an employment record with its NAICS code."@en .
+
+:hasNAICSTitle a owl:DatatypeProperty ;
+    rdfs:label "has NAICS Title"@en ;
+    skos:definition "Associates an employment record with its NAICS industry title."@en .
+
+:hasIndustryGroup a owl:DatatypeProperty ;
+    rdfs:label "has Industry Group"@en ;
+    skos:definition "Associates an employment record with its industry group classification."@en .
+
+:hasOccupationCode a owl:DatatypeProperty ;
+    rdfs:label "has Occupation Code"@en ;
+    skos:definition "Associates an employment record with its occupation code."@en .
+
+:hasOccupationTitle a owl:DatatypeProperty ;
+    rdfs:label "has Occupation Title"@en ;
+    skos:definition "Associates an employment record with its occupation title."@en .
+
+:hasTotalEmploymentValue a owl:DatatypeProperty ;
+    rdfs:label "has Total Employment Value"@en ;
+    skos:definition "Associates an employment record with its total employment count."@en .
+
+:hasEmploymentRelativeStandardError a owl:DatatypeProperty ;
+    rdfs:label "has Employment Relative Standard Error"@en ;
+    skos:definition "Associates an employment record with the relative standard error of its employment estimate."@en .
+
+:hasHourlyMeanWage a owl:DatatypeProperty ;
+    rdfs:label "has Hourly Mean Wage"@en ;
+    skos:definition "Associates an employment record with its mean hourly wage."@en .
+
+:hasAnnualMeanWage a owl:DatatypeProperty ;
+    rdfs:label "has Annual Mean Wage"@en ;
+    skos:definition "Associates an employment record with its mean annual wage."@en .
+
+:hasMeanWageRelativeStandardError a owl:DatatypeProperty ;
+    rdfs:label "has Mean Wage Relative Standard Error"@en ;
+    skos:definition "Associates an employment record with the relative standard error of its mean wage estimate."@en .
+
+:hasHourlyWagePercentile10 a owl:DatatypeProperty ;
+    rdfs:label "has Hourly Wage Percentile 10"@en ;
+    skos:definition "Associates an employment record with its tenth percentile hourly wage."@en .
+
+:hasHourlyWagePercentile25 a owl:DatatypeProperty ;
+    rdfs:label "has Hourly Wage Percentile 25"@en ;
+    skos:definition "Associates an employment record with its twenty-fifth percentile hourly wage."@en .
+
+:hasHourlyMedianWage a owl:DatatypeProperty ;
+    rdfs:label "has Hourly Median Wage"@en ;
+    skos:definition "Associates an employment record with its median hourly wage."@en .
+
+:hasHourlyWagePercentile75 a owl:DatatypeProperty ;
+    rdfs:label "has Hourly Wage Percentile 75"@en ;
+    skos:definition "Associates an employment record with its seventy-fifth percentile hourly wage."@en .
+
+:hasHourlyWagePercentile90 a owl:DatatypeProperty ;
+    rdfs:label "has Hourly Wage Percentile 90"@en ;
+    skos:definition "Associates an employment record with its ninetieth percentile hourly wage."@en .
+
+:hasAnnualWagePercentile10 a owl:DatatypeProperty ;
+    rdfs:label "has Annual Wage Percentile 10"@en ;
+    skos:definition "Associates an employment record with its tenth percentile annual wage."@en .
+
+:hasAnnualWagePercentile25 a owl:DatatypeProperty ;
+    rdfs:label "has Annual Wage Percentile 25"@en ;
+    skos:definition "Associates an employment record with its twenty-fifth percentile annual wage."@en .
+
+:hasAnnualMedianWage a owl:DatatypeProperty ;
+    rdfs:label "has Annual Median Wage"@en ;
+    skos:definition "Associates an employment record with its median annual wage."@en .
+
+:hasAnnualWagePercentile75 a owl:DatatypeProperty ;
+    rdfs:label "has Annual Wage Percentile 75"@en ;
+    skos:definition "Associates an employment record with its seventy-fifth percentile annual wage."@en .
+
+:hasAnnualWagePercentile90 a owl:DatatypeProperty ;
+    rdfs:label "has Annual Wage Percentile 90"@en ;
+    skos:definition "Associates an employment record with its ninetieth percentile annual wage."@en .

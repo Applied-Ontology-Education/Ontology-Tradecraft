@@ -1,0 +1,8 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ccom: <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+
+ccom:ont00001290 owl:equivalentClass qudt:LengthUnit .
+ccom:ont00000239 owl:equivalentClass qudt:MassUnit .
+ccom:ont00001357 owl:equivalentClass qudt:TimeUnit .
