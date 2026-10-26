@@ -4,3 +4,15 @@
 #    No class definition should be self-referential. 
 # Severity:  
 #    Error
+
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?element ?element2 ?definition
+WHERE {
+  ?element obo:IAO_0000115 ?definition .
+  ?element2 obo:IAO_0000115 ?definition .
+  FILTER (?element != ?element2)
+  FILTER (!isBlank(?element))
+  FILTER (!isBlank(?element2))
+}
+ORDER BY STR(?definition)

@@ -4,3 +4,27 @@
 #    No annotation value may have leading or trailing whitespace.    
 # Severity:
 #    Error 
+
+# Title: No Extra Annotation Whitespace
+# Constraint Description:
+# No annotation value may have leading or trailing whitespace.
+# Severity: Error
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT ?element ?property ?value
+WHERE {
+  ?element ?property ?value .
+  FILTER (
+    ?property IN (
+      rdfs:label,
+      rdfs:comment,
+      owl:versionInfo,
+      <http://purl.obolibrary.org/obo/IAO_0000115>
+    )
+  )
+  FILTER (isLiteral(?value))
+  FILTER (STR(?value) != REPLACE(STR(?value), "^\\s+|\\s+$", ""))
+}

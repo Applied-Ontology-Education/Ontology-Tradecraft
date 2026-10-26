@@ -4,3 +4,19 @@
 #     All classes must have a BFO superclass.
 # Severity:
 #     Error
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX bfo: <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?class
+WHERE {
+  ?class a owl:Class .
+
+  FILTER NOT EXISTS {
+    ?class rdfs:subClassOf ?parent .
+    FILTER (
+      STRSTARTS(STR(?parent), STR(bfo:))
+    )
+  }
+}

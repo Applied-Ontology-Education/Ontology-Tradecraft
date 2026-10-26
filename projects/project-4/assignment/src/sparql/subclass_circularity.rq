@@ -4,3 +4,14 @@
 #    No class should appear in a circular `subClassOf` hierarchy.
 # Severity:  
 #    Error
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?class ?ancestor
+WHERE {
+  ?class rdfs:subClassOf+ ?ancestor .
+  ?ancestor rdfs:subClassOf+ ?class .
+
+  FILTER (?class != ?ancestor)
+}

@@ -84,9 +84,9 @@ def _norm_unit(u: Any) -> str | None:
         return "F"
     # pressure
     if low == "psi":
-        return "psi"
+        return "pounds_per_square_inch"
     if low in {"kpa", "kilopascal", "kilopascals"}:
-        return "kPa"
+        return "kpa_unit"
     # electrical
     if low in {"v", "volt", "volts"}:
         return "V"

@@ -1,0 +1,92 @@
+name: Ontology Workflow
+
+on:
+  push:
+    paths:
+      - "projects/project-4/assignment/src/data/**"
+
+jobs:
+  build-and-validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    env:
+      PROJECT_ROOT: projects/project-4/assignment
+
+    defaults:
+      run:
+        working-directory: ${{ env.PROJECT_ROOT }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # needed for diff below
+
+      - name: Detect exactly one newly ADDED file under src/data/**
+        id: detect
+        shell: bash
+        run: |
+          BEFORE_SHA="${{ github.event.before }}"
+          AFTER_SHA="${{ github.sha }}"
+
+          # Handle first-push edge case
+          if [[ "$BEFORE_SHA" == "0000000000000000000000000000000000000000" || -z "$BEFORE_SHA" ]]; then
+            if git rev-parse HEAD^ >/dev/null 2>&1; then
+              BEFORE_SHA="$(git rev-parse HEAD^)"
+            else
+              BEFORE_SHA="$AFTER_SHA"
+            fi
+          fi
+
+          echo "Diff range: $BEFORE_SHA..$AFTER_SHA"
+
+          ADDED=$(git diff --name-status "$BEFORE_SHA" "$AFTER_SHA" -- "projects/project-4/assignment/src/data/**" | awk '$1=="A"{print $2}')
+          COUNT=$(printf "%s\n" "$ADDED" | grep -c . || true)
+
+          echo "Newly added files:"; printf "%s\n" "$ADDED"
+          echo "added_count=$COUNT" >> "$GITHUB_OUTPUT"
+          if [ "$COUNT" -eq 1 ]; then
+            ONE_FILE=$(printf "%s\n" "$ADDED" | head -n1)
+            echo "added_file=$ONE_FILE" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Skip if no new dataset
+        if: steps.detect.outputs.added_count == '0'
+        run: echo "No brand-new files under src/data/. Skipping."
+
+      - name: Fail if more than one new dataset added
+        if: steps.detect.outputs.added_count != '0' && steps.detect.outputs.added_count != '1'
+        run: |
+          echo "This workflow handles exactly ONE new dataset per push."
+          echo "Found: ${{ steps.detect.outputs.added_count }} files added under src/data/."
+          exit 1
+
+      - name: Setup Python
+        if: steps.detect.outputs.added_count == '1'
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install deps
+        if: steps.detect.outputs.added_count == '1'
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt || pip install pandas rdflib pyshacl
+
+      - name: Run ETL
+        if: steps.detect.outputs.added_count == '1'
+        run: python src/scripts/normalize_readings.py
+
+      - name: Build RDF (CCO design pattern)
+        if: steps.detect.outputs.added_count == '1'
+        run: python src/scripts/measure_rdflib.py
+
+      - name: SPARQL QC
+        if: steps.detect.outputs.added_count == '1'
+        run: python src/scripts/run_sparql_qc.py
+
+      - name: SHACL validation
+        if: steps.detect.outputs.added_count == '1'
+        run: python src/scripts/run_shacl_validate.py

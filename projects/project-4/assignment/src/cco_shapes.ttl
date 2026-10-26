@@ -1,0 +1,166 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix bfo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix ex:   <http://example.org/shapes/> .
+
+#################################################################
+# 1) Artifact bears at least one SDC (cardinality); 
+#################################################################
+ex:ArtifactHasSDCShape
+  a sh:NodeShape ;
+   sh:targetClass cco:ont00000995 ; #artifact
+  sh:property [
+    sh:path bfo:BFO_0000196 ; #bearerof
+    sh:minCount 1 ;
+    sh:class bfo:BFO_0000020 ; #SDC
+    sh:message "Every Artifact must bear at least one SDC (Specifically Dependent Continuant)." ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 2) SDC is measured by at least one MICE (coverage via inverse) 
+#################################################################
+ex:SDCMeasuredByMICEShape
+  a sh:NodeShape ;
+  sh:targetClass bfo:BFO_0000019 ;
+  sh:property [
+    sh:path [ sh:inversePath cco:ont00001966 ] ;
+    sh:minCount 1 ;
+    sh:class cco:ont00001163 ;
+    sh:message "Every SDC quality must be measured by at least one MICE." ;
+    sh:severity sh:Violation
+  ] .
+#################################################################
+# 3) MICE measures exactly one SDC (functional)
+#################################################################
+
+ex:MICESingleMeasuredSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001966 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class bfo:BFO_0000020 ;
+    sh:message "Every MICE must measure exactly one SDC." ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 4) MICE must have one unit and one numeric value (completeness)
+#################################################################
+
+ex:MICEUnitAndValueShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001863 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class cco:ont00000120 ;
+    sh:message "Every MICE must use exactly one measurement unit." ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path cco:ont00001769 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:decimal ;
+    sh:message "Every MICE must have exactly one decimal measurement value." ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 5) No empty values in literals
+#################################################################
+
+  ex:NonEmptyLiteralShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf rdfs:label ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:minCount 1 ;
+    sh:pattern "\\S" ;
+    sh:message "Labels must not be empty or contain only whitespace." ;
+    sh:severity sh:Violation
+  ] .
+#################################################################
+# 6) Unit must match SDC being measured
+#################################################################
+
+ex:UnitMatchesSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:sparql [
+    sh:message "The measurement unit must be compatible with the kind of SDC being measured." ;
+    sh:select """
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX cco: <https://www.commoncoreontologies.org/>
+
+      SELECT $this
+      WHERE {
+        $this cco:ont00001966 ?sdc ;
+              cco:ont00001863 ?unit .
+        ?sdc rdfs:label ?sdcLabel .
+        ?unit rdfs:label ?unitLabel .
+
+        FILTER (
+          (CONTAINS(LCASE(STR(?sdcLabel)), "temperature") &&
+            STR(?unitLabel) NOT IN ("C", "F")) ||
+          (CONTAINS(LCASE(STR(?sdcLabel)), "pressure") &&
+            STR(?unitLabel) NOT IN ("psi", "kPa")) ||
+          (CONTAINS(LCASE(STR(?sdcLabel)), "voltage") &&
+            STR(?unitLabel) != "V") ||
+          (CONTAINS(LCASE(STR(?sdcLabel)), "resistance") &&
+            STR(?unitLabel) != "ohm")
+        )
+      }
+    """ ;
+  ] .
+
+#################################################################
+# 7) No duplicate MICE
+#################################################################
+
+ex:NoDuplicateMICELabelsShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:sparql [
+    sh:message "Each MICE must have a unique label." ;
+    sh:select """
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+      SELECT $this
+      WHERE {
+        $this rdfs:label ?label .
+        ?other rdfs:label ?label .
+        FILTER ($this != ?other)
+      }
+    """ ;
+    sh:severity sh:Violation ;
+  ] .
+
+#################################################################
+# 8) No dangling/mistyped nodes 
+#################################################################
+
+ex:MICEReferencesValidNodesShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001966 ;
+    sh:minCount 1 ;
+    sh:class bfo:BFO_0000020 ;
+    sh:message "Every MICE must reference an SDC." ;
+    sh:severity sh:Violation ;
+  ] ;
+  sh:property [
+    sh:path cco:ont00001863 ;
+    sh:minCount 1 ;
+    sh:class cco:ont00000120 ;
+    sh:message "Every MICE must reference a typed measurement unit." ;
+    sh:severity sh:Violation ;
+  ] .

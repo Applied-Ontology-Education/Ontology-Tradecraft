@@ -1,0 +1,188 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/measurement/artifact/Boiler-07> a cco:ont00000995 ;
+    rdfs:label "Boiler-07" ;
+    bfo:BFO_0000196 <https://example.org/measurement/quality/Boiler-07_pressure>,
+        <https://example.org/measurement/quality/Boiler-07_temperature> .
+
+<https://example.org/measurement/artifact/Boiler-09> a cco:ont00000995 ;
+    rdfs:label "Boiler-09" ;
+    bfo:BFO_0000196 <https://example.org/measurement/quality/Boiler-09_pressure> .
+
+<https://example.org/measurement/artifact/Chiller-3> a cco:ont00000995 ;
+    rdfs:label "Chiller-3" ;
+    bfo:BFO_0000196 <https://example.org/measurement/quality/Chiller-3_temperature> .
+
+<https://example.org/measurement/artifact/Chiller-4> a cco:ont00000995 ;
+    rdfs:label "Chiller-4" ;
+    bfo:BFO_0000196 <https://example.org/measurement/quality/Chiller-4_temperature> .
+
+<https://example.org/measurement/artifact/Chiller_3> a cco:ont00000995 ;
+    rdfs:label "Chiller 3" ;
+    bfo:BFO_0000196 <https://example.org/measurement/quality/Chiller_3_temperature> .
+
+<https://example.org/measurement/artifact/Circuit-07> a cco:ont00000995 ;
+    rdfs:label "Circuit-07" ;
+    bfo:BFO_0000196 <https://example.org/measurement/quality/Circuit-07_voltage> .
+
+<https://example.org/measurement/artifact/Circuit-12> a cco:ont00000995 ;
+    rdfs:label "Circuit-12" ;
+    bfo:BFO_0000196 <https://example.org/measurement/quality/Circuit-12_resistance>,
+        <https://example.org/measurement/quality/Circuit-12_voltage> .
+
+<https://example.org/measurement/artifact/Pump-A1> a cco:ont00000995 ;
+    rdfs:label "Pump-A1" ;
+    bfo:BFO_0000196 <https://example.org/measurement/quality/Pump-A1_pressure> .
+
+<https://example.org/measurement/artifact/Pump-A2> a cco:ont00000995 ;
+    rdfs:label "Pump-A2" ;
+    bfo:BFO_0000196 <https://example.org/measurement/quality/Pump-A2_pressure> .
+
+<https://example.org/measurement/measurement/reading_1> a cco:ont00001163 ;
+    rdfs:label "temperature reading for Boiler-07 at 2024-03-17T19:03:00Z" ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 <https://example.org/measurement/unit/F> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Boiler-07_temperature> .
+
+<https://example.org/measurement/measurement/reading_10> a cco:ont00001163 ;
+    rdfs:label "temperature reading for Chiller-4 at 2024-03-18T12:06:00Z" ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 <https://example.org/measurement/unit/F> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Chiller-4_temperature> .
+
+<https://example.org/measurement/measurement/reading_11> a cco:ont00001163 ;
+    rdfs:label "voltage reading for Circuit-07 at 2024-03-18T19:05:00Z" ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 <https://example.org/measurement/unit/V> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Circuit-07_voltage> .
+
+<https://example.org/measurement/measurement/reading_12> a cco:ont00001163 ;
+    rdfs:label "voltage reading for Circuit-12 at 2024-03-18T12:01:01Z" ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 <https://example.org/measurement/unit/V> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Circuit-12_voltage> .
+
+<https://example.org/measurement/measurement/reading_13> a cco:ont00001163 ;
+    rdfs:label "resistance reading for Circuit-12 at 2024-03-18T12:06:00Z" ;
+    cco:ont00001769 1.3 ;
+    cco:ont00001863 <https://example.org/measurement/unit/ohm> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Circuit-12_resistance> .
+
+<https://example.org/measurement/measurement/reading_14> a cco:ont00001163 ;
+    rdfs:label "pressure reading for Pump-A1 at 2024-03-18T08:07:00Z" ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 <https://example.org/measurement/unit/kpa_unit> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Pump-A1_pressure> .
+
+<https://example.org/measurement/measurement/reading_15> a cco:ont00001163 ;
+    rdfs:label "pressure reading for Pump-A2 at 2024-03-19T09:07:00Z" ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 <https://example.org/measurement/unit/kpa_unit> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Pump-A2_pressure> .
+
+<https://example.org/measurement/measurement/reading_2> a cco:ont00001163 ;
+    rdfs:label "pressure reading for Boiler-07 at 2024-03-17T19:04:00Z" ;
+    cco:ont00001769 14.7 ;
+    cco:ont00001863 <https://example.org/measurement/unit/pounds_per_square_inch> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Boiler-07_pressure> .
+
+<https://example.org/measurement/measurement/reading_3> a cco:ont00001163 ;
+    rdfs:label "temperature reading for Boiler-07 at 2024-03-17T23:03:00Z" ;
+    cco:ont00001769 100.0 ;
+    cco:ont00001863 <https://example.org/measurement/unit/C> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Boiler-07_temperature> .
+
+<https://example.org/measurement/measurement/reading_4> a cco:ont00001163 ;
+    rdfs:label "pressure reading for Boiler-07 at 2024-03-17T23:04:00Z" ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 <https://example.org/measurement/unit/kpa_unit> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Boiler-07_pressure> .
+
+<https://example.org/measurement/measurement/reading_5> a cco:ont00001163 ;
+    rdfs:label "pressure reading for Boiler-09 at 2024-03-18T19:06:00Z" ;
+    cco:ont00001769 13.7 ;
+    cco:ont00001863 <https://example.org/measurement/unit/pounds_per_square_inch> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Boiler-09_pressure> .
+
+<https://example.org/measurement/measurement/reading_6> a cco:ont00001163 ;
+    rdfs:label "temperature reading for Chiller 3 at 2024-03-18T08:01:00Z" ;
+    cco:ont00001769 68.0 ;
+    cco:ont00001863 <https://example.org/measurement/unit/F> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Chiller_3_temperature> .
+
+<https://example.org/measurement/measurement/reading_7> a cco:ont00001163 ;
+    rdfs:label "temperature reading for Chiller 3 at 2024-03-19T09:01:00Z" ;
+    cco:ont00001769 70.0 ;
+    cco:ont00001863 <https://example.org/measurement/unit/F> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Chiller_3_temperature> .
+
+<https://example.org/measurement/measurement/reading_8> a cco:ont00001163 ;
+    rdfs:label "temperature reading for Chiller-3 at 2024-03-18T12:01:00Z" ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 <https://example.org/measurement/unit/C> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Chiller-3_temperature> .
+
+<https://example.org/measurement/measurement/reading_9> a cco:ont00001163 ;
+    rdfs:label "temperature reading for Chiller-4 at 2024-03-18T12:01:00Z" ;
+    cco:ont00001769 6.5 ;
+    cco:ont00001863 <https://example.org/measurement/unit/F> ;
+    cco:ont00001966 <https://example.org/measurement/quality/Chiller-4_temperature> .
+
+<https://example.org/measurement/unit/ohm> a cco:ont00000120 ;
+    rdfs:label "ohm" .
+
+<https://example.org/measurement/quality/Boiler-09_pressure> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/quality/Chiller-3_temperature> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/quality/Circuit-07_voltage> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/quality/Circuit-12_resistance> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/quality/Circuit-12_voltage> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/quality/Pump-A1_pressure> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/quality/Pump-A2_pressure> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/unit/C> a cco:ont00000120,
+        cco:ont00001606 ;
+    rdfs:label "C" .
+
+<https://example.org/measurement/unit/V> a cco:ont00000120,
+        cco:ont00001450 ;
+    rdfs:label "V" .
+
+<https://example.org/measurement/unit/pounds_per_square_inch> a cco:ont00000120,
+        cco:ont00001694 ;
+    rdfs:label "pounds_per_square_inch" .
+
+<https://example.org/measurement/quality/Boiler-07_pressure> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/quality/Boiler-07_temperature> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/quality/Chiller-4_temperature> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/quality/Chiller_3_temperature> a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+<https://example.org/measurement/unit/kpa_unit> a cco:ont00000120 ;
+    rdfs:label "kpa_unit" .
+
+<https://example.org/measurement/unit/F> a cco:ont00000120,
+        cco:ont00001724 ;
+    rdfs:label "F" .
+
