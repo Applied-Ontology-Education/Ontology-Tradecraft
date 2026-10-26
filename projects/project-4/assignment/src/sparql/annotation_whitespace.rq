@@ -1,6 +1,43 @@
-# Title: 
+# Title:
 #    No Extra Annotation Whitespace
-# Constraint Description: 
-#    No annotation value may have leading or trailing whitespace.    
+# Constraint Description:
+#    No annotation value may have leading or trailing whitespace.
 # Severity:
-#    Error 
+#    Error
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT ?element ?property ?value ?error
+WHERE {
+
+    ?element ?property ?value .
+
+    VALUES ?property {
+        rdfs:label
+        rdfs:comment
+        skos:definition
+        obo:IAO_0000115
+    }
+
+    FILTER(isLiteral(?value))
+
+    FILTER(
+        STR(?value) != REPLACE(
+            STR(?value),
+            "^\\s+|\\s+$",
+            ""
+        )
+    )
+
+    BIND(
+        CONCAT(
+            "ERROR: Annotation contains leading or trailing whitespace: ",
+            STR(?element)
+        )
+        AS ?error
+    )
+}
+
+ORDER BY ?element

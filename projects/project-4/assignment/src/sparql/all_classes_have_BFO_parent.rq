@@ -4,3 +4,60 @@
 #     All classes must have a BFO superclass.
 # Severity:
 #     Error
+# Title:
+#    No Class Should Be Outside the BFO Hierarchy
+# Constraint Description:
+#    All classes must have a BFO superclass.
+# Severity:
+#    Error
+
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?class ?error
+WHERE {
+
+    # Find anything explicitly declared as a class.
+    ?class rdf:type ?classType .
+
+    VALUES ?classType {
+        owl:Class
+        rdfs:Class
+    }
+
+    # Ignore anonymous classes.
+    FILTER(isIRI(?class))
+
+    # Do not flag BFO classes themselves.
+    FILTER(
+        !STRSTARTS(
+            STR(?class),
+            "http://purl.obolibrary.org/obo/bfo.owl#"
+        )
+    )
+
+    # Return the class only when there is NO path through
+    # rdfs:subClassOf leading to a BFO class.
+    FILTER NOT EXISTS {
+
+        ?class rdfs:subClassOf+ ?bfoParent .
+
+        FILTER(
+            STRSTARTS(
+                STR(?bfoParent),
+                "http://purl.obolibrary.org/obo/bfo.owl#"
+            )
+        )
+    }
+
+    BIND(
+        CONCAT(
+            "ERROR: Class has no BFO superclass: ",
+            STR(?class)
+        )
+        AS ?error
+    )
+}
+
+ORDER BY ?class

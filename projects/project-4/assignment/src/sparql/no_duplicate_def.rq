@@ -1,6 +1,53 @@
-# Title: 
+# Title:
 #    No Duplicate Definitions
-# Constraint Description: 
-#    No two ontology elements may have the exact same definition.    
+# Constraint Description:
+#    No two ontology elements may have the exact same definition.
 # Severity:
-#     Error 
+#    Error
+
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX obo:  <http://purl.obolibrary.org/obo/>
+
+SELECT DISTINCT
+    ?element
+    ?element2
+    ?definition
+    ?error
+WHERE {
+
+    ?element ?definitionProperty ?definition .
+    ?element2 ?definitionProperty2 ?definition2 .
+
+    VALUES ?definitionProperty {
+        skos:definition
+        obo:IAO_0000115
+    }
+
+    VALUES ?definitionProperty2 {
+        skos:definition
+        obo:IAO_0000115
+    }
+
+    FILTER(?element != ?element2)
+
+    FILTER(
+        STR(?definition) = STR(?definition2)
+    )
+
+    # Prevent the same pair appearing twice as A-B and B-A.
+    FILTER(
+        STR(?element) < STR(?element2)
+    )
+
+    BIND(
+        CONCAT(
+            "ERROR: Two ontology elements have the same definition: ",
+            STR(?element),
+            " and ",
+            STR(?element2)
+        )
+        AS ?error
+    )
+}
+
+ORDER BY ?definition
