@@ -594,7 +594,9 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
   rdfs:domain :TemporalEntity ;
   rdfs:label "disjoint time entity" ;
   rdfs:range :TemporalEntity ;
-  owl:propertyDisjointWith :notDisjoint ;
+  # P3 repair: :disjoint is non-simple (transitive sub-properties :before/:after), so a
+  # disjoint-properties axiom on it violates OWL 2 DL and HermiT refuses the ontology.
+  # owl:propertyDisjointWith :notDisjoint ;
   skos:definition "If a temporal entity T1 is disjoint with another temporal entity T2, then the beginning of T1 is after the end of T2, or the end of T1 is before the beginning of T2, i.e. the two entities do not overlap or coincide in any way, but their ordering relationship is not known."@en ;
   skos:example """
 ex:LunchTime :disjoint ex:NapTime .
@@ -788,7 +790,8 @@ ex:Class :hasInside ex:Quiz .
   rdfs:domain :TemporalEntity ;
   rdfs:label "not disjoint with time entity" ;
   rdfs:range :TemporalEntity ;
-  owl:propertyDisjointWith :disjoint ;
+  # P3 repair: see :disjoint (non-simple property in a disjoint-properties axiom).
+  # owl:propertyDisjointWith :disjoint ;
   skos:definition "If a temporal entity T1 is notDisjoint with another temporal entity T2, then the the two entities not overlap or coincide in some way, but their ordering relationship is not known. This relation is the complement of disjoint and the union of equals, hasInside, in, meets, metBy, overlaps, overlappedBy."@en ;
 .
 
@@ -1807,3 +1810,18 @@ xsd:dateTimeStamp  rdfs:label  "sello de tiempo"@es .
 :TemporalDuration 
         rdfs:label       "duración temporal"@es ;
         skos:definition  "Extensión de tiempo; duración de un intervalo de tiempo independiente de su posición de inicio particular."@es .
+
+# ===== BEGIN Project 3 OWL enrichment =====
+# Axioms that reflect CCOT/BFO textual definitions in OWL-Time.
+# CCOT/BFO: a temporal interval is bounded by a first and a last temporal instant;
+# OWL-Time ProperInterval: "the value of the beginning and end are different".
+:ProperInterval rdfs:subClassOf
+    [ rdf:type owl:Restriction ; owl:onProperty :hasBeginning ; owl:someValuesFrom :Instant ] ,
+    [ rdf:type owl:Restriction ; owl:onProperty :hasEnd ; owl:someValuesFrom :Instant ] .
+
+# OWL-Time DateTimeInterval: "defined using the multi-element DateTimeDescription"
+# (CCOT: calendar intervals "begin and end concurrently with" units of a Calendar System)
+:DateTimeInterval rdfs:subClassOf [ rdf:type owl:Restriction ;
+    owl:onProperty :hasDateTimeDescription ;
+    owl:someValuesFrom :DateTimeDescription ] .
+# ===== END Project 3 OWL enrichment =====

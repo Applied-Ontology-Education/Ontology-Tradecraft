@@ -1,0 +1,18 @@
+# BFO -> IES mapping axioms (subject = BFO class). Project 3, steps 4 and 8.
+# Read together with ies-mapping.ttl: the two files assert subclass axioms in opposite
+# directions, and a reasoner run over the merged set infers the equivalences.
+# Review notes for every candidate row are in mapping-decisions.md.
+
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+
+<http://example.org/ontology-tradecraft/project-3/bfo-mapping> a owl:Ontology ;
+    rdfs:comment "BFO-to-IES alignment axioms whose subject is a BFO class." .
+
+# BFO 'temporal interval' ("a one-dimensional temporal region that is continuous, thus
+# without gaps or breaks") and IES ParticularPeriod ("a PeriodOfTime that is a specific,
+# contiguous extent of time") describe the same thing: a gap-free stretch of time.
+# Found in the definition review (step 7), not by the structural pass.
+obo:BFO_0000202 rdfs:subClassOf ies:ParticularPeriod .
