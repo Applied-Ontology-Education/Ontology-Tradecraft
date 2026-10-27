@@ -7,6 +7,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
 
 <http://www.w3.org/2006/time>
   a owl:Ontology ;
@@ -108,6 +110,7 @@ In the original OWL-Time the following constraint appeared:
       owl:onProperty :unitType ;
     ] ;
   skos:definition "Duration of a temporal extent expressed as a number scaled by a temporal unit"@en ;
+  skos:scopeNote "CCOT-Time structural matching spreadsheet identified multiple CCOT Temporal Intervals (Second, Day, Year, and the Multi-Hour/Minute/Second/Day/Week/Month/Year classes) as overlapping with this class. No further axioms are added here because that would push constraints from the narrower CCOT classes onto this broader Time class."@en ;
   skos:note "Alternative to time:DurationDescription to support description of a temporal duration other than using a calendar/clock system."@en ;
 .
 :DurationDescription
@@ -388,6 +391,7 @@ This is a stub class, representing the set of all temporal reference systems."""
       owl:onProperty :hasTRS ;
     ] ;
   skos:definition "A position on a time-line"@en ;
+  skos:scopeNote "CCOT-Time structural matching spreadsheet identified cco:ont00000223 (Time of Day) as overlapping with this class. No further axioms are added here because that would push constraints from the narrower CCOT class onto this broader Time class."@en ;
 .
 :TemporalUnit
   a owl:Class ;
@@ -429,6 +433,7 @@ In the original OWL-Time the following constraint appeared:
         ) ;
     ] ;
   skos:definition "A temporal position described using either a (nominal) value from an ordinal reference system, or a (numeric) value in a temporal coordinate system. "@en ;
+  skos:scopeNote "CCOT-Time structural matching spreadsheet identified cco:ont00000359 (Julian Date) as overlapping with this class. No further axioms are added here because that would push constraints from the narrower CCOT class onto this broader Time class."@en ;
 .
 :TimeZone
   a owl:Class ;
@@ -493,6 +498,7 @@ Detailed guidance about working with time zones is given in http://www.w3.org/TR
     ] ;
   owl:deprecated "true"^^xsd:boolean ;
   skos:definition "Year duration" ;
+  skos:scopeNote "CCOT-Time structural matching spreadsheet identified cco:ont00000832 (Year) as overlapping with this class. No further axioms are added here because time:Year is deprecated."@en ;
   skos:historyNote """Year was proposed in the 2006 version of OWL-Time as an example of how DurationDescription could be specialized to allow for a duration to be restricted to a number of years. 
 
 It is deprecated in this edition of OWL-Time. """ ;

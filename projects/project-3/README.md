@@ -54,23 +54,23 @@ By the end of this project, students will be able to:
     ```
     ```
     python compare_structures.py \
-    --bfo src/bfo-core.ttl \
-    --ies src/ies.ttl \
-    --outdir src/data/ \
+    --left bfo-core.ttl \
+    --right ies.ttl \
+    --outdir data/ \
     --shape coarse --presence-only --normalize families
     ```
     ```
     python compare_structures.py \
-    --ccom src/ccom.ttl \
-    --qudt src/qudt.ttl \
-    --outdir src/data/ \
+    --left ccom.ttl \
+    --right qudt.ttl \
+    --outdir data/ \
     --shape coarse --presence-only --normalize families
     ```
     ```
     python compare_structures.py \
-    --ccot src/ccot.ttl \
-    --to src/time.ttl \
-    --outdir src/data/ \
+    --left ccot.ttl \
+    --right time.ttl \
+    --outdir data/ \
     --shape coarse --presence-only --normalize families
     ```
    - Read the help information below stored under **compare_structures.py Help** for guidance on flags and matching options

@@ -6,6 +6,10 @@ on:
     paths:
       - "projects/project-3/**"
       - ".github/workflows/project3-tests.yml"
+  push:
+    paths:
+      - "projects/project-3/**"
+      - ".github/workflows/project3-tests.yml"
   workflow_dispatch:
 
 jobs:
