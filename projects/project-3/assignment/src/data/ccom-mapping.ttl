@@ -1,0 +1,18 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+
+<https://example.org/project3/ccom-mapping> a owl:Ontology .
+
+# Measurement Unit of Volume is a Space and Time Unit
+cco:ont00001317 rdfs:subClassOf qudt:SpaceAndTimeUnit .
+
+# Measurement Unit of Area is a Space and Time Unit
+cco:ont00000217 rdfs:subClassOf qudt:SpaceAndTimeUnit .
+
+# Measurement Unit of Length is a Space and Time Unit
+cco:ont00001290 rdfs:subClassOf qudt:SpaceAndTimeUnit .
+
+# Measurement Unit of Time is a Space and Time Unit
+cco:ont00001357 rdfs:subClassOf qudt:SpaceAndTimeUnit .

@@ -1,0 +1,9 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+
+<https://example.org/project3/ies-mapping> a owl:Ontology .
+
+# Crossing is a site
+ies:Crossing rdfs:subClassOf obo:BFO_0000029 .
