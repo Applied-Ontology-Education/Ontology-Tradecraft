@@ -1,0 +1,1103 @@
+@prefix : <http://example.org/sduesing/project2.ttl/> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc11: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@base <http://example.org/sduesing/project2.ttl/> .
+
+<http://example.org/sduesing/project2_instances.ttl> rdf:type owl:Ontology ;
+                                                      owl:versionIRI <http://example.org/sduesing/2026-09-26/project2_instances.ttl> ;
+                                                      owl:imports <http://example.org/sduesing/2026-09-26/project2.ttl> ;
+                                                      dc:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                                      dc:title "Project 2"@en .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/contributor
+dc11:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+dc11:identifier rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/license
+dc11:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+dc:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dc:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+skos:scopeNote rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001808
+<https://www.commoncoreontologies.org/ont00001808> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001816
+<https://www.commoncoreontologies.org/ont00001816> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001942
+<https://www.commoncoreontologies.org/ont00001942> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/sduesing/project2.ttl/P2_0000006
+:P2_0000006 rdf:type owl:ObjectProperty ;
+            rdfs:label "has length ft"@en ;
+            skos:definition "An object property that holds between an independent continuant and a length measurement value indicated in feet." .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+<http://purl.obolibrary.org/obo/BFO_0000054> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000055> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             dc11:identifier "206-BFO" ;
+                                             rdfs:label "has realization"@en ;
+                                             skos:altLabel "realized in"@en ;
+                                             skos:definition "b has realization c =Def c realizes b"@en ;
+                                             skos:example "As for realizes"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000055
+<http://purl.obolibrary.org/obo/BFO_0000055> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                             dc11:identifier "059-BFO" ;
+                                             rdfs:label "realizes"@en ;
+                                             skos:definition "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en ;
+                                             skos:example "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000056
+<http://purl.obolibrary.org/obo/BFO_0000056> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                         [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                                [ rdf:type owl:Class ;
+                                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ]
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             dc11:identifier "250-BFO" ;
+                                             rdfs:label "participates in"@en ;
+                                             skos:definition "(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region & some process p such that b participates in p some way"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000057
+<http://purl.obolibrary.org/obo/BFO_0000057> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                        <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                        [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                               [ rdf:type owl:Class ;
+                                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ]
+                                                                      )
+                                                        ] ;
+                                             dc11:identifier "248-BFO" ;
+                                             rdfs:label "has participant"@en ;
+                                             skos:definition "p has participant c =Def c participates in p"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000058
+<http://purl.obolibrary.org/obo/BFO_0000058> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000059> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                        <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                      )
+                                                        ] ;
+                                             dc11:identifier "258-BFO" ;
+                                             rdfs:label "is concretized by"@en ;
+                                             skos:definition "c is concretized by b =Def b concretizes c"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000059
+<http://purl.obolibrary.org/obo/BFO_0000059> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             dc11:identifier "256-BFO" ;
+                                             rdfs:label "concretizes"@en ;
+                                             skos:definition "b concretizes c =Def b is a process or a specifically dependent continuant & c is a generically dependent continuant & there is some time t such that c is the pattern or content which b shares at t with actual or potential copies"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000062
+<http://purl.obolibrary.org/obo/BFO_0000062> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000063> ;
+                                             rdf:type owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             dc11:identifier "213-BFO" ;
+                                             rdfs:label "preceded by"@en ;
+                                             skos:definition "b preceded by c =Def b precedes c"@en ;
+                                             skos:example "The temporal region occupied by the second half of the match is preceded by the temporal region occupied by the first half of the match"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000063
+<http://purl.obolibrary.org/obo/BFO_0000063> rdf:type owl:ObjectProperty ,
+                                                      owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             dc11:identifier "270-BFO" ;
+                                             rdfs:label "precedes"@en ;
+                                             skos:definition "(Elucidation) precedes is a relation between occurrents o, o' such that if t is the temporal extent of o & t' is the temporal extent of o' then either the last instant of o is before the first instant of o' or the last instant of o is the first instant of o' & neither o nor o' are temporal instants"@en ;
+                                             skos:example "The temporal region occupied by Mary's birth precedes the temporal region occupied by Mary's death."@en ;
+                                             skos:scopeNote "Each temporal region is its own temporal extent. The temporal extent of a spatiotemporal region is the temporal region it temporally projects onto. The temporal extent of a process or process boundary that occupies temporal region t is t." ,
+                                                            "Precedes defines a strict partial order on occurrents." .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000066
+<http://purl.obolibrary.org/obo/BFO_0000066> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000183> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000035>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000029>
+                                                                        <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                      )
+                                                        ] ;
+                                             dc11:identifier "143-BFO" ;
+                                             rdfs:label "occurs in"@en ;
+                                             skos:definition "b occurs in c =Def b is a process or a process boundary & c is a material entity or site & there exists a spatiotemporal region r & b occupies spatiotemporal region r & for all time t, if b exists at t then c exists at t & there exist spatial regions s and s' where b spatially projects onto s at t & c occupies spatial region s' at t & s is a continuant part of s' at t"@en ;
+                                             skos:example "A process of digestion occurs in the interior of an organism; a process of loading artillery rounds into a tank cannon occurs in the interior of the tank"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000084
+<http://purl.obolibrary.org/obo/BFO_0000084> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             rdfs:range [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                               [ rdf:type owl:Class ;
+                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                             dc11:identifier "252-BFO" ;
+                                             rdfs:label "generically depends on"@en ;
+                                             skos:altLabel "g-depends on"@en ;
+                                             skos:definition "b generically depends on c =Def b is a generically dependent continuant & c is an independent continuant that is not a spatial region & at some time t there inheres in c a specifically dependent continuant which concretizes b at t"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000101
+<http://purl.obolibrary.org/obo/BFO_0000101> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                [ rdf:type owl:Class ;
+                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             dc11:identifier "254-BFO" ;
+                                             rdfs:label "is carrier of"@en ;
+                                             skos:definition "b is carrier of c =Def there is some time t such that c generically depends on b at t"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000108
+<http://purl.obolibrary.org/obo/BFO_0000108> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> ;
+                                             dc11:identifier "118-BFO" ;
+                                             rdfs:label "exists at"@en ;
+                                             skos:definition "(Elucidation) exists at is a relation between a particular and some temporal region at which the particular exists"@en ;
+                                             skos:example "First World War exists at 1914-1916; Mexico exists at January 1, 2000"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000115
+<http://purl.obolibrary.org/obo/BFO_0000115> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000129> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             dc11:identifier "230-BFO" ;
+                                             rdfs:label "has member part"@en ;
+                                             skos:definition "b has member part c =Def c member part of b"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000117
+<http://purl.obolibrary.org/obo/BFO_0000117> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                             rdf:type owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             dc11:identifier "202-BFO" ;
+                                             rdfs:label "has occurrent part"@en ;
+                                             skos:definition "b has occurrent part c =Def c occurrent part of b"@en ;
+                                             skos:example "Mary's life has occurrent part Mary's 5th birthday"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000121
+<http://purl.obolibrary.org/obo/BFO_0000121> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000117> ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000139> ;
+                                             rdf:type owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             dc11:identifier "211-BFO" ;
+                                             rdfs:label "has temporal part"@en ;
+                                             skos:definition "b has temporal part c =Def c temporal part of b"@en ;
+                                             skos:example "Your life has temporal part the first year of your life"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000124
+<http://purl.obolibrary.org/obo/BFO_0000124> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000171> ;
+                                             rdfs:domain [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                [ rdf:type owl:Class ;
+                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                             rdfs:range [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                               [ rdf:type owl:Class ;
+                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                             dc11:identifier "236-BFO" ;
+                                             rdfs:label "location of"@en ;
+                                             skos:definition "b location of c =Def c located in b"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000127
+<http://purl.obolibrary.org/obo/BFO_0000127> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000218> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000016> ;
+                                             dc11:identifier "244-BFO" ;
+                                             rdfs:label "material basis of"@en ;
+                                             skos:definition "b material basis of c =Def c has material basis b"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000129
+<http://purl.obolibrary.org/obo/BFO_0000129> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000176> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             dc11:identifier "228-BFO" ;
+                                             rdfs:label "member part of"@en ;
+                                             skos:definition "b member part of c =Def b is an object & c is a material entity & there is some time t such that b continuant part of c at t & there is a mutually exhaustive and pairwise disjoint partition of c into objects x1, ..., xn (for some n ≠ 1) with b = xi (for some 1 <= i <= n)"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000132
+<http://purl.obolibrary.org/obo/BFO_0000132> rdf:type owl:ObjectProperty ,
+                                                      owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             dc11:identifier "003-BFO" ;
+                                             rdfs:label "occurrent part of"@en ;
+                                             skos:definition "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en ;
+                                             skos:example "Mary's 5th birthday is an occurrent part of Mary's life; the first set of the tennis match is an occurrent part of the tennis match"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000139
+<http://purl.obolibrary.org/obo/BFO_0000139> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000132> ;
+                                             rdf:type owl:TransitiveProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             dc11:identifier "078-BFO" ;
+                                             rdfs:label "temporal part of"@en ;
+                                             skos:definition "b temporal part of c =Def b occurrent part of c & (b and c are temporal regions) or (b and c are spatiotemporal regions & b temporally projects onto an occurrent part of the temporal region that c temporally projects onto) or (b and c are processes or process boundaries & b occupies a temporal region that is an occurrent part of the temporal region that c occupies)"@en ;
+                                             skos:example "Your heart beating from 4pm to 5pm today is a temporal part of the process of your heart beating; the 4th year of your life is a temporal part of your life, as is the process boundary which separates the 3rd and 4th years of your life; the first quarter of a game of football is a temporal part of the whole game"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000153
+<http://purl.obolibrary.org/obo/BFO_0000153> rdf:type owl:ObjectProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000011> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> ;
+                                             dc11:identifier "080-BFO" ;
+                                             rdfs:label "temporally projects onto"@en ;
+                                             skos:definition "(Elucidation) temporally projects onto is a relation between a spatiotemporal region s and some temporal region which is the temporal extent of s"@en ;
+                                             skos:example "The world line of a particle temporally projects onto the temporal region extending from the beginning to the end of the existence of the particle"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000171
+<http://purl.obolibrary.org/obo/BFO_0000171> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                [ rdf:type owl:Class ;
+                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                             rdfs:range [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                               [ rdf:type owl:Class ;
+                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                             dc11:identifier "234-BFO" ;
+                                             rdfs:label "located in"@en ;
+                                             skos:definition "b located in c =Def b is an independent continuant & c is an independent & neither is a spatial region & there is some time t such that the spatial region which b occupies at t is continuant part of the spatial region which c occupies at t"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000176
+<http://purl.obolibrary.org/obo/BFO_0000176> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000178> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             dc11:identifier "221-BFO" ;
+                                             rdfs:label "continuant part of"@en ;
+                                             skos:definition "b continuant part of c =Def b and c are continuants & there is some time t such that b and c exist at t & b part of c at t"@en ;
+                                             skos:example "Milk teeth continuant part of human; surgically removed tumour continuant part of organism"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000178
+<http://purl.obolibrary.org/obo/BFO_0000178> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             dc11:identifier "271-BFO" ;
+                                             rdfs:label "has continuant part"@en ;
+                                             skos:definition "b has continuant part c =Def c continuant part of b"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000183
+<http://purl.obolibrary.org/obo/BFO_0000183> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000029>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                        <http://purl.obolibrary.org/obo/BFO_0000035>
+                                                                      )
+                                                        ] ;
+                                             dc11:identifier "267-BFO" ;
+                                             rdfs:label "environs"@en ;
+                                             skos:altLabel "contains process"@en ;
+                                             skos:definition "b environs c =Def c occurs in b"@en ;
+                                             skos:example "Mouth environs process of mastication; city environs traffic"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000184
+<http://purl.obolibrary.org/obo/BFO_0000184> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000185> ;
+                                             rdf:type owl:FunctionalProperty ,
+                                                      owl:InverseFunctionalProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000182> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             dc11:identifier "144-BFO" ;
+                                             rdfs:label "history of"@en ;
+                                             skos:definition "(Elucidation) history of is a relation between history b and material entity c such that b is the unique history of c"@en ;
+                                             skos:example "This life is the history of this organism"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000185
+<http://purl.obolibrary.org/obo/BFO_0000185> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000182> ;
+                                             dc11:identifier "145-BFO" ;
+                                             rdfs:label "has history"@en ;
+                                             skos:definition "b has history c =Def c history of b"@en ;
+                                             skos:example "This organism has history this life"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000194
+<http://purl.obolibrary.org/obo/BFO_0000194> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000195> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                         [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                                [ rdf:type owl:Class ;
+                                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ]
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             dc11:identifier "260-BFO" ;
+                                             rdfs:label "specifically depended on by"@en ;
+                                             skos:altLabel "s-depended on by"@en ;
+                                             skos:definition "b specifically depended on by c =Def c specifically depends on b"@en ;
+                                             skos:example "Coloured object specifically depended on by colour"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000195
+<http://purl.obolibrary.org/obo/BFO_0000195> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                        [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                               [ rdf:type owl:Class ;
+                                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ]
+                                                                      )
+                                                        ] ;
+                                             dc11:identifier "012-BFO" ;
+                                             rdfs:label "specifically depends on"@en ;
+                                             skos:altLabel "s-depends on"@en ;
+                                             skos:definition "(Elucidation) specifically depends on is a relation between a specifically dependent continuant b and specifically dependent continuant or independent continuant that is not a spatial region c such that b and c share no parts in common & b is of a nature such that at all times t it cannot exist unless c exists & b is not a boundary of c"@en ;
+                                             skos:example "A shape specifically depends on the shaped object; hue, saturation and brightness of a colour sample specifically depends on each other"@en ;
+                                             skos:scopeNote "The analogue of specifically depends on for occurrents is has participant."@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000196
+<http://purl.obolibrary.org/obo/BFO_0000196> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000194> ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                             rdfs:domain [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                [ rdf:type owl:Class ;
+                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             dc11:identifier "053-BFO" ;
+                                             rdfs:label "bearer of"@en ;
+                                             skos:definition "b bearer of c =Def c inheres in b"@en ;
+                                             skos:example "A patch of ink is the bearer of a colour quality; an organism is the bearer of a temperature quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000197
+<http://purl.obolibrary.org/obo/BFO_0000197> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000195> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             rdfs:range [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                               [ rdf:type owl:Class ;
+                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                             dc11:identifier "051-BFO" ;
+                                             rdfs:label "inheres in"@en ;
+                                             skos:definition "b inheres in c =Def b is a specifically dependent continuant & c is an independent continuant that is not a spatial region & b specifically depends on c"@en ;
+                                             skos:example "A shape inheres in a shaped object; a mass inheres in a material entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000199
+<http://purl.obolibrary.org/obo/BFO_0000199> rdf:type owl:ObjectProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000035>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> ;
+                                             dc11:identifier "132-BFO" ;
+                                             rdfs:label "occupies temporal region"@en ;
+                                             skos:definition "p occupies temporal region t =Def p is a process or process boundary & the spatiotemporal region occupied by p temporally projects onto t"@en ;
+                                             skos:example "The Second World War occupies the temporal region September 1, 1939 - September 2, 1945"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000200
+<http://purl.obolibrary.org/obo/BFO_0000200> rdf:type owl:ObjectProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000035>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000011> ;
+                                             dc11:identifier "082-BFO" ;
+                                             rdfs:label "occupies spatiotemporal region"@en ;
+                                             skos:definition "(Elucidation) occupies spatiotemporal region is a relation between a process or process boundary p and the spatiotemporal region s which is its spatiotemporal extent"@en ;
+                                             skos:example "A particle emitted by a nuclear reactor occupies the spatiotemporal region which is its trajectory"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000210
+<http://purl.obolibrary.org/obo/BFO_0000210> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                [ rdf:type owl:Class ;
+                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000006> ;
+                                             dc11:identifier "232-BFO" ;
+                                             rdfs:label "occupies spatial region"@en ;
+                                             skos:definition "b occupies spatial region r =Def b is an independent continuant that is not a spatial region & r is a spatial region & there is some time t such that every continuant part of b occupies some continuant part of r at t and no continuant part of b occupies any spatial region that is not a continuant part of r at t"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000216
+<http://purl.obolibrary.org/obo/BFO_0000216> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000011> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000006> ;
+                                             dc11:identifier "246-BFO" ;
+                                             rdfs:label "spatially projects onto"@en ;
+                                             skos:definition "(Elucidation) spatially projects onto is a relation between some spatiotemporal region b and spatial region c such that at some time t, c is the spatial extent of b at t"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000218
+<http://purl.obolibrary.org/obo/BFO_0000218> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000016> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             dc11:identifier "242-BFO" ;
+                                             rdfs:label "has material basis"@en ;
+                                             skos:definition "b has material basis c =Def b is a disposition & c is a material entity & there is some d bearer of b & there is some time t such that c is a continuant part of d at t & d has disposition b because c is a continuant part of d at t"@en ;
+                                             skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000221
+<http://purl.obolibrary.org/obo/BFO_0000221> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000222> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000203> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> ;
+                                             dc11:identifier "268-BFO" ;
+                                             rdfs:label "first instant of"@en ;
+                                             skos:definition "t first instant of t' =Def t is a temporal instant & t' is a temporal region t' & t precedes all temporal parts of t' other than t"@en ;
+                                             skos:example "An hour starting at midnight yesterday has first instant midnight yesterday"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000222
+<http://purl.obolibrary.org/obo/BFO_0000222> rdf:type owl:ObjectProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000203> ;
+                                             dc11:identifier "261-BFO" ;
+                                             rdfs:label "has first instant"@en ;
+                                             skos:definition "t has first instant t' =Def t' first instant of t"@en ;
+                                             skos:example "The first hour of a year has first instant midnight on December 31"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000223
+<http://purl.obolibrary.org/obo/BFO_0000223> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000224> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000203> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000008> ;
+                                             dc11:identifier "269-BFO" ;
+                                             rdfs:label "last instant of"@en ;
+                                             skos:definition "t last instant of t' =Def t is a temporal instant & t' is a temporal region & all temporal parts of t' other than t precede t"@en ;
+                                             skos:example "Last midnight is the last instant of yesterday"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000224
+<http://purl.obolibrary.org/obo/BFO_0000224> rdf:type owl:ObjectProperty ,
+                                                      owl:FunctionalProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000008> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000203> ;
+                                             dc11:identifier "215-BFO" ;
+                                             rdfs:label "has last instant"@en ;
+                                             skos:definition "t has last instant t' =Def t' last instant of t"@en ;
+                                             skos:example "The last hour of a year has last instant midnight December 31"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000009
+<http://example.org/sduesing/project2_instances.ttl/P2_0000009> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000046 ;
+                                                                rdfs:label "Airbus A320 Neo specification"@en ;
+                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A320 NEO."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000048> .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000010
+<http://example.org/sduesing/project2_instances.ttl/P2_0000010> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000533> ;
+                                                                rdfs:label "Engine 1"@en ;
+                                                                skos:definition "An instance of jet engine that is part of an Airbus A320 Neo."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000011
+<http://example.org/sduesing/project2_instances.ttl/P2_0000011> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000533> ;
+                                                                rdfs:label "Engine 2"@en ;
+                                                                skos:definition "An instance of jet engine that is part of an Airbus A320 Neo."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000012
+<http://example.org/sduesing/project2_instances.ttl/P2_0000012> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000443> ;
+                                                                rdfs:label "Airbus"@en ;
+                                                                skos:definition "A commercial organization that manufactures aircraft and related material artifacts." .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000048
+<http://example.org/sduesing/project2_instances.ttl/P2_0000048> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000049 ;
+                                                                :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000178> <http://example.org/sduesing/project2_instances.ttl/P2_0000010> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000011> ;
+                                                                :P2_0000014 "Airbus A320-271N"^^:P2_0000062 ;
+                                                                :P2_0000016 "Airbus A320 Neo"^^:P2_0000063 ;
+                                                                :P2_0000017 "Jet"@en ;
+                                                                :P2_0000018 2 ;
+                                                                :P2_0000019 "III" ;
+                                                                :P2_0000020 3 ;
+                                                                :P2_0000021 137 ;
+                                                                :P2_0000022 117.5 ;
+                                                                :P2_0000023 123.3 ;
+                                                                :P2_0000024 39.6 ;
+                                                                :P2_0000025 41.5 ;
+                                                                :P2_0000026 50.2 ;
+                                                                :P2_0000027 29.4 ;
+                                                                :P2_0000029 174165 ;
+                                                                :P2_0000030 148591 ;
+                                                                :P2_0000031 "D" ;
+                                                                :P2_0000032 "Medium"@en ;
+                                                                :P2_0000033 16358.3 ;
+                                                                :P2_0000034 "Large"@en ;
+                                                                :P2_0000035 "F" ;
+                                                                :P2_0000036 "D" ;
+                                                                :P2_0000037 "D" ;
+                                                                :P2_0000038 "C" ;
+                                                                :P2_0000039 "III" ;
+                                                                :P2_0000040 7 ;
+                                                                :P2_0000041 "Yes"@en ;
+                                                                :P2_0000042 147 ;
+                                                                :P2_0000043 540276 ;
+                                                                :P2_0000044 "AAC validated by Flight Standardization Board (FSB) report."@en ;
+                                                                :P2_0000050 "C" ;
+                                                                rdfs:label "Airbus A320 Neo"@en ;
+                                                                skos:definition "An instance of fixed-wing aircraft that is prescribed by the Airbus A320 Neo specification."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000051
+<http://example.org/sduesing/project2_instances.ttl/P2_0000051> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000046 ;
+                                                                :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
+                                                                rdfs:label "Airbus A321-111 specification"@en ;
+                                                                skos:definition "An instance of aircraft design that prescribes the Airbus A321-111."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000052> .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000052
+<http://example.org/sduesing/project2_instances.ttl/P2_0000052> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000049 ;
+                                                                :P2_0000013 <http://example.org/sduesing/project2_instances.ttl/P2_0000012> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000056> <http://example.org/sduesing/project2_instances.ttl/P2_0000057> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000058> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000059> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000060> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000061> ;
+                                                                :P2_0000021 142 ;
+                                                                rdfs:label "Airbus A321-111"@en ;
+                                                                skos:definition "An instance of fixed-wing aircraft that is prescribed by the Airbus A321-111 specification."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001942> <http://example.org/sduesing/project2_instances.ttl/P2_0000064> .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000054
+<http://example.org/sduesing/project2_instances.ttl/P2_0000054> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000053 ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000121> <http://example.org/sduesing/project2_instances.ttl/P2_0000057> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000058> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000059> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000060> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000061> ;
+                                                                rdfs:label "A321-111 five-part average approach speed test"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots five times, with the final result being the average of the results of the five constituent tests."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000057
+<http://example.org/sduesing/project2_instances.ttl/P2_0000057> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000053 ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000054> ;
+                                                                :P2_0000056 137 ;
+                                                                rdfs:label "A321-111 approach speed test 1"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000058
+<http://example.org/sduesing/project2_instances.ttl/P2_0000058> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000053 ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000054> ;
+                                                                :P2_0000056 141 ;
+                                                                rdfs:label "A321-111 approach speed test 2"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000059
+<http://example.org/sduesing/project2_instances.ttl/P2_0000059> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000053 ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000054> ;
+                                                                :P2_0000056 138 ;
+                                                                rdfs:label "A321-111 approach speed test 3"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000060
+<http://example.org/sduesing/project2_instances.ttl/P2_0000060> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000053 ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000054> ;
+                                                                :P2_0000056 140 ;
+                                                                rdfs:label "A321-111 approach speed test 4"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000061
+<http://example.org/sduesing/project2_instances.ttl/P2_0000061> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000053 ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000054> ;
+                                                                :P2_0000056 139 ;
+                                                                rdfs:label "A321-111 approach speed test 5"@en ;
+                                                                skos:definition "An instance of test process in which the approach speed of an Airbus A321-111 is measured in knots."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000064
+<http://example.org/sduesing/project2_instances.ttl/P2_0000064> rdf:type owl:NamedIndividual ;
+                                                                :P2_0000056 142 ;
+                                                                rdfs:label "An average of measured approach speed values."@en ,
+                                                                           "average approach speed value"@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000077
+<http://example.org/sduesing/project2_instances.ttl/P2_0000077> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000068 ;
+                                                                :P2_0000073 "Broad" ;
+                                                                :P2_0000074 "17-2010" ;
+                                                                :P2_0000075 "Aerospace Engineers" ;
+                                                                rdfs:label "SOC: Aerospace Engineers (17-2010)"@en ;
+                                                                skos:definition "An instance of SOC Occupation Role associated with SOC Code 17-2010."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000078
+<http://example.org/sduesing/project2_instances.ttl/P2_0000078> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000068 ;
+                                                                :P2_0000073 "Detailed" ;
+                                                                :P2_0000074 "17-2011" ;
+                                                                :P2_0000075 "Aerospace Engineers" ;
+                                                                :P2_0000076 "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques."@en ;
+                                                                rdfs:label "SOC: Aerospace Engineers (17-2011)"@en ;
+                                                                skos:definition "An instance of SOC Occupation Role associated with SOC Code 17-2011." .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000079
+<http://example.org/sduesing/project2_instances.ttl/P2_0000079> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000068 ;
+                                                                :P2_0000073 "Detailed"@en ;
+                                                                :P2_0000074 "17-3021" ;
+                                                                :P2_0000075 "Aerospace Engineering and Operations Technologists and Technicians"@en ;
+                                                                :P2_0000076 "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data."@en ;
+                                                                rdfs:label "SOC: Aerospace Engineering and Operations Technologists & Technicians (17-3021)"@en ;
+                                                                skos:definition "An instance of SOC Occupation Role associated with SOC Code 17-3021."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000083
+<http://example.org/sduesing/project2_instances.ttl/P2_0000083> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000853> ;
+                                                                rdfs:label "adaptability evaluation report"@en ;
+                                                                skos:definition "An instance of an information content entity that is about an artifact design and its participation in a process of evaluating adaptability."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001808> <http://example.org/sduesing/project2_instances.ttl/P2_0000084> ;
+                                                                <https://www.commoncoreontologies.org/ont00001816> <http://example.org/sduesing/project2_instances.ttl/P2_0000123> .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000084
+<http://example.org/sduesing/project2_instances.ttl/P2_0000084> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000319> ;
+                                                                rdfs:label "Artifact Design"@en ;
+                                                                skos:definition "An instance of an artifact design."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000085
+<http://example.org/sduesing/project2_instances.ttl/P2_0000085> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000066 ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000055> <http://example.org/sduesing/project2_instances.ttl/P2_0000086> ;
+                                                                rdfs:label "aircraft processing action"@en ;
+                                                                skos:definition "An instance of an act of aircraft processing."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000086
+<http://example.org/sduesing/project2_instances.ttl/P2_0000086> rdf:type owl:NamedIndividual ,
+                                                                         :P2_0000081 ;
+                                                                rdfs:label "adaptability evaluation"@en ;
+                                                                skos:definition "An instance of an adaptability evaluation role. See rdfs:comment on the class."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000119
+<http://example.org/sduesing/project2_instances.ttl/P2_0000119> rdf:type owl:NamedIndividual ;
+                                                                :P2_0000088 99 ;
+                                                                :P2_0000089 "U.S." ;
+                                                                :P2_0000090 1 ;
+                                                                :P2_0000091 "US" ;
+                                                                :P2_0000092 000000 ;
+                                                                :P2_0000093 "Cross-industry" ;
+                                                                :P2_0000094 "cross-industry" ;
+                                                                :P2_0000095 1235 ;
+                                                                :P2_0000096 "17-2010" ;
+                                                                :P2_0000097 "Aerospace Engineers"@en ;
+                                                                :P2_0000098 "broad" ;
+                                                                :P2_0000099 68440 ;
+                                                                :P2_0000100 2.3 ;
+                                                                :P2_0000105 67.88 ;
+                                                                :P2_0000106 141180 ;
+                                                                :P2_0000108 0.8 ;
+                                                                :P2_0000109 41.04 ;
+                                                                :P2_0000110 50.36 ;
+                                                                :P2_0000111 64.82 ;
+                                                                :P2_0000112 83.88 ;
+                                                                :P2_0000113 98.97 ;
+                                                                :P2_0000114 85350 ;
+                                                                :P2_0000115 104740 ;
+                                                                :P2_0000116 104740 ;
+                                                                :P2_0000117 174480 ;
+                                                                :P2_0000118 205850 ;
+                                                                rdfs:label "OCC: Aerospace Engineers (17-2010)"@en ;
+                                                                skos:definition "An OCC occupation entry associated with OCC Code 17-2010."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000120
+<http://example.org/sduesing/project2_instances.ttl/P2_0000120> rdf:type owl:NamedIndividual ;
+                                                                :P2_0000088 99 ;
+                                                                :P2_0000089 "U.S." ;
+                                                                :P2_0000090 1 ;
+                                                                :P2_0000091 "US" ;
+                                                                :P2_0000092 000000 ;
+                                                                :P2_0000093 "Cross-industry" ;
+                                                                :P2_0000094 "cross-industry" ;
+                                                                :P2_0000095 1235 ;
+                                                                :P2_0000096 "17-2011" ;
+                                                                :P2_0000097 "Aerospace Engineers"@en ;
+                                                                :P2_0000098 "detailed" ;
+                                                                :P2_0000099 68440 ;
+                                                                :P2_0000100 2.3 ;
+                                                                :P2_0000105 67.88 ;
+                                                                :P2_0000106 141180 ;
+                                                                :P2_0000108 0.8 ;
+                                                                :P2_0000109 41.04 ;
+                                                                :P2_0000110 50.36 ;
+                                                                :P2_0000111 64.82 ;
+                                                                :P2_0000112 83.88 ;
+                                                                :P2_0000113 98.97 ;
+                                                                :P2_0000114 85350 ;
+                                                                :P2_0000115 104740 ;
+                                                                :P2_0000116 104740 ;
+                                                                :P2_0000117 174480 ;
+                                                                :P2_0000118 205850 ;
+                                                                rdfs:label "OCC: Aerospace Engineers (17-2011)"@en ;
+                                                                skos:definition "An OCC occupation entry associated with OCC Code 17-2011."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000121
+<http://example.org/sduesing/project2_instances.ttl/P2_0000121> rdf:type owl:NamedIndividual ;
+                                                                :P2_0000088 99 ;
+                                                                :P2_0000089 "U.S." ;
+                                                                :P2_0000090 1 ;
+                                                                :P2_0000091 "US" ;
+                                                                :P2_0000092 000000 ;
+                                                                :P2_0000093 "Cross-industry" ;
+                                                                :P2_0000094 "cross-industry" ;
+                                                                :P2_0000095 1235 ;
+                                                                :P2_0000096 "17-3021" ;
+                                                                :P2_0000097 "Aerospace Engineering and Operations Technologists and Technicians"@en ;
+                                                                :P2_0000098 "detailed" ;
+                                                                :P2_0000099 9060 ;
+                                                                :P2_0000100 4.3 ;
+                                                                :P2_0000105 31.50 ;
+                                                                :P2_0000106 86330 ;
+                                                                :P2_0000108 1.4 ;
+                                                                :P2_0000109 25.83 ;
+                                                                :P2_0000110 31.04 ;
+                                                                :P2_0000111 38.38 ;
+                                                                :P2_0000112 49.14 ;
+                                                                :P2_0000113 57.91 ;
+                                                                :P2_0000114 53730 ;
+                                                                :P2_0000115 64570 ;
+                                                                :P2_0000116 79830 ;
+                                                                :P2_0000117 79550 ;
+                                                                :P2_0000118 120440 ;
+                                                                rdfs:label "OCC: Aerospace Engineering and Operations Technologists and Technicians (17-3021)"@en ;
+                                                                skos:definition "An OCC occupation entry associated with OCC Code 17-3021."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000122
+<http://example.org/sduesing/project2_instances.ttl/P2_0000122> rdf:type owl:NamedIndividual ,
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000016> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000197> <http://example.org/sduesing/project2_instances.ttl/P2_0000052> ;
+                                                                rdfs:label "A321-111 approach speed"@en ;
+                                                                skos:definition "An instance of a disposition inhering in an A321-111 and realized in the process of approaching the runway."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000123
+<http://example.org/sduesing/project2_instances.ttl/P2_0000123> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000636> ;
+                                                                rdfs:label "adaptability evaluation process"@en ;
+                                                                skos:definition "An instance of an Act of Appraisal in which the adaptability of an artifact is evaluated."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000124
+<http://example.org/sduesing/project2_instances.ttl/P2_0000124> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000958> ;
+                                                                :P2_0000126 68440 ;
+                                                                rdfs:label "total employment"@en ;
+                                                                skos:definition "An information content entity that is about the total employment of OCC:17-2010 Aerospace Engineers."@en ;
+                                                                <https://www.commoncoreontologies.org/ont00001808> <http://example.org/sduesing/project2_instances.ttl/P2_0000077> .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000129
+<http://example.org/sduesing/project2_instances.ttl/P2_0000129> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000057> ;
+                                                                rdfs:label "approach speed measurement 1"@en ;
+                                                                skos:definition "An instance of Act of Measuring that is part of a process of testing the approach speed of an A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000130
+<http://example.org/sduesing/project2_instances.ttl/P2_0000130> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000058> ;
+                                                                rdfs:label "approach speed measurement 2"@en ;
+                                                                skos:definition "An instance of Act of Measuring that is part of a process of testing the approach speed of an A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000131
+<http://example.org/sduesing/project2_instances.ttl/P2_0000131> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000059> ;
+                                                                rdfs:label "approach speed measurement 3"@en ;
+                                                                skos:definition "An instance of Act of Measuring that is part of a process of testing the approach speed of an A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000132
+<http://example.org/sduesing/project2_instances.ttl/P2_0000132> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000060> ;
+                                                                rdfs:label "approach speed measurement 4"@en ;
+                                                                skos:definition "An instance of Act of Measuring that is part of a process of testing the approach speed of an A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000133
+<http://example.org/sduesing/project2_instances.ttl/P2_0000133> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000139> <http://example.org/sduesing/project2_instances.ttl/P2_0000061> ;
+                                                                rdfs:label "approach speed measurement 5"@en ;
+                                                                skos:definition "An instance of Act of Measuring that is part of a process of testing the approach speed of an A321-111."@en .
+
+
+###  http://example.org/sduesing/project2_instances.ttl/P2_0000134
+<http://example.org/sduesing/project2_instances.ttl/P2_0000134> rdf:type owl:NamedIndividual ,
+                                                                         <https://www.commoncoreontologies.org/ont00000345> ;
+                                                                <http://purl.obolibrary.org/obo/BFO_0000121> <http://example.org/sduesing/project2_instances.ttl/P2_0000129> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000130> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000131> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000132> ,
+                                                                                                             <http://example.org/sduesing/project2_instances.ttl/P2_0000133> ;
+                                                                rdfs:label "five-part average approach speed measurement"@en ;
+                                                                skos:definition "An instance of Act of Measuring involving conducting five approach speed measurements and averaging the values."@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                <http://purl.obolibrary.org/obo/BFO_0000020>
+                <http://purl.obolibrary.org/obo/BFO_0000031>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/BFO_0000006>
+                <http://purl.obolibrary.org/obo/BFO_0000029>
+                <http://purl.obolibrary.org/obo/BFO_0000140>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/BFO_0000008>
+                <http://purl.obolibrary.org/obo/BFO_0000011>
+                <http://purl.obolibrary.org/obo/BFO_0000015>
+                <http://purl.obolibrary.org/obo/BFO_0000035>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/BFO_0000009>
+                <http://purl.obolibrary.org/obo/BFO_0000018>
+                <http://purl.obolibrary.org/obo/BFO_0000026>
+                <http://purl.obolibrary.org/obo/BFO_0000028>
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/BFO_0000142>
+                <http://purl.obolibrary.org/obo/BFO_0000146>
+                <http://purl.obolibrary.org/obo/BFO_0000147>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi
