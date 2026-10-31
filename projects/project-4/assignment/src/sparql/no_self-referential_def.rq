@@ -1,6 +1,29 @@
-# Title:  
+# Title:
 #    No cyclical definitions
-# Constraint Description:  
-#    No class definition should be self-referential. 
-# Severity:  
+# Constraint Description:
+#    No class definition should be self-referential.
+# Severity:
 #    Error
+#
+# A definition is self-referential when the term being defined is used in its own definiens.
+# BFO/CCO definitions often open with the definiendum ("A quality is a ...", "b is an independent
+# continuant =Def ..."), which is not circular, so that opening is stripped first. The class's
+# label must then not appear as a whole phrase in what remains. A valid ontology returns ZERO rows.
+
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?class ?label ?definition ?error
+WHERE {
+  ?class a owl:Class ;
+         rdfs:label ?label ;
+         skos:definition ?definition .
+  BIND (LCASE(STR(?label)) AS ?term)
+  BIND (LCASE(STR(?definition)) AS ?d)
+  BIND (IF(CONTAINS(?d, "=def"),
+           STRAFTER(?d, "=def"),
+           REPLACE(?d, CONCAT("^(\\(elucidation\\)\\s*)?((a|an|the|[a-z])\\s+)?", ?term, "\\s+(is|means)\\b"), "")) AS ?definiens)
+  FILTER (REGEX(?definiens, CONCAT("\\b", ?term, "\\b")))
+  BIND (CONCAT("ERROR: definition of ", STR(?class), " uses its own label '", STR(?label), "' in its definiens") AS ?error)
+}

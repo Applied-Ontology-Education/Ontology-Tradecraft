@@ -1,0 +1,206 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:   <http://www.w3.org/ns/shacl#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix ex:   <http://example.org/tradecraft/p4/> .
+@prefix exs:  <http://example.org/tradecraft/p4/shapes/> .
+
+# Shapes for the CCO measurement design pattern in src/measure_cco.ttl.
+# IRIs are the ones in cco_merged.ttl. The shipped example used the retired
+# bfo.owl#bearer_of and ontologyrepository.com CCO namespaces, which match nothing in the data.
+#   obo:BFO_0000020  specifically dependent continuant      cco:ont00000995  Material Artifact
+#   obo:BFO_0000196  bearer of                              cco:ont00001163  Measurement Information Content Entity
+#   cco:ont00001966  is a measurement of                    cco:ont00000120  Measurement Unit
+#   cco:ont00001863  uses measurement unit                  cco:ont00001769  has decimal value
+#   cco:ont00001767  has datetime value
+# run_shacl_validate.py uses RDFS inference, so subclass instances (e.g. a Temperature) count as SDCs.
+
+exs: sh:declare
+  [ sh:prefix "rdf"  ; sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ] ,
+  [ sh:prefix "rdfs" ; sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ] ,
+  [ sh:prefix "owl"  ; sh:namespace "http://www.w3.org/2002/07/owl#"^^xsd:anyURI ] ,
+  [ sh:prefix "obo"  ; sh:namespace "http://purl.obolibrary.org/obo/"^^xsd:anyURI ] ,
+  [ sh:prefix "cco"  ; sh:namespace "https://www.commoncoreontologies.org/"^^xsd:anyURI ] ,
+  [ sh:prefix "ex"   ; sh:namespace "http://example.org/tradecraft/p4/"^^xsd:anyURI ] .
+
+#################################################################
+# 1) Artifact bears at least one SDC (cardinality)
+#################################################################
+exs:ArtifactHasSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00000995 ;
+  sh:property [
+    sh:path obo:BFO_0000196 ;
+    sh:minCount 1 ;
+    sh:class obo:BFO_0000020 ;
+    sh:message "Every Artifact must bear at least one SDC (Specifically Dependent Continuant)." ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 2) SDC is measured by at least one MICE (coverage via inverse)
+#################################################################
+exs:SDCMeasuredShape
+  a sh:NodeShape ;
+  sh:targetClass obo:BFO_0000020 ;
+  sh:property [
+    sh:path [ sh:inversePath cco:ont00001966 ] ;
+    sh:minCount 1 ;
+    sh:class cco:ont00001163 ;
+    sh:message "Every SDC must be the subject of at least one Measurement Information Content Entity." ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 3) MICE measures exactly one SDC (functional)
+#################################################################
+exs:MICEMeasuresOneSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001966 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class obo:BFO_0000020 ;
+    sh:message "A MICE must be a measurement of exactly one SDC." ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 4) MICE must have one unit and one numeric value (completeness)
+#################################################################
+exs:MICECompleteShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001863 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class cco:ont00000120 ;
+    sh:message "A MICE must use exactly one Measurement Unit." ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path cco:ont00001769 ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:decimal ;
+    sh:message "A MICE must have exactly one xsd:decimal value." ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path cco:ont00001767 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:dateTime ;
+    sh:message "A MICE timestamp, if present, must be a single xsd:dateTime." ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 5) No empty values in literals
+#################################################################
+exs:NoEmptyLiteralShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf rdf:type ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:prefixes exs: ;
+    sh:message "Literal value of {?p} is empty or whitespace only." ;
+    sh:select """
+      SELECT $this ?p ?value WHERE {
+        $this ?p ?o .
+        FILTER (isLiteral(?o))
+        FILTER (STRLEN(REPLACE(STR(?o), "\\\\s", "")) = 0)
+        BIND (?o AS ?value)
+      }""" ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 6) Unit must match SDC being measured
+#################################################################
+# The unit's class must be the unit class for the SDC's kind (SHACL forbids VALUES here, hence UNION):
+#   Temperature (cco)               -> Measurement Unit of Temperature (cco:ont00000844)
+#   Fluid Pressure (ex)             -> Measurement Unit of Pressure (cco:ont00001090)
+#   Electric Potential Difference   -> Measurement Unit of Electromagnetic Force (cco:ont00001004, holds Volt)
+#   Electrical Resistance (ex)      -> Measurement Unit of Electrical Resistance (ex)
+exs:UnitMatchesSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:prefixes exs: ;
+    sh:message "Unit {?unit} is not a unit for the kind of SDC {?sdc} this MICE measures." ;
+    sh:select """
+      SELECT $this ?sdc ?unit WHERE {
+        $this cco:ont00001966 ?sdc ;
+              cco:ont00001863 ?unit .
+        FILTER NOT EXISTS {
+          { ?sdc a cco:ont00000441 .               ?unit a cco:ont00000844 . }
+          UNION { ?sdc a ex:FluidPressure .              ?unit a cco:ont00001090 . }
+          UNION { ?sdc a ex:ElectricPotentialDifference . ?unit a cco:ont00001004 . }
+          UNION { ?sdc a ex:ElectricalResistance .       ?unit a ex:MeasurementUnitOfElectricalResistance . }
+        }
+      }""" ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 7) No duplicate MICE
+#################################################################
+# Two MICE are duplicates when they measure the same SDC, in the same unit, with the same value,
+# at the same time.
+exs:NoDuplicateMICEShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:prefixes exs: ;
+    sh:message "MICE duplicates {?other}: same SDC, unit, value and time." ;
+    sh:select """
+      SELECT $this ?other WHERE {
+        $this cco:ont00001966 ?sdc ; cco:ont00001863 ?unit ; cco:ont00001769 ?v ; cco:ont00001767 ?t .
+        ?other a cco:ont00001163 ;
+               cco:ont00001966 ?sdc ; cco:ont00001863 ?unit ; cco:ont00001769 ?v2 ; cco:ont00001767 ?t2 .
+        FILTER ($this != ?other && STR(?v) = STR(?v2) && STR(?t) = STR(?t2))
+      }""" ;
+    sh:severity sh:Violation
+  ] .
+
+#################################################################
+# 8) No dangling/mistyped nodes
+#################################################################
+# Dangling: an IRI used as the object of a pattern relation that has no rdf:type of its own
+# (RDFS inference types every node as rdfs:Resource, so that type does not count).
+# Mistyped: a node typed both as an information entity (MICE or Measurement Unit) and as a
+# continuant role in the pattern (Artifact or SDC).
+exs:NoDanglingOrMistypedNodeShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf rdf:type ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:prefixes exs: ;
+    sh:message "Dangling node: {?o} is the object of {?p} but has no rdf:type." ;
+    sh:select """
+      SELECT $this ?p ?o WHERE {
+        $this ?p ?o .
+        FILTER (?p IN (obo:BFO_0000196, cco:ont00001966, cco:ont00001863))
+        FILTER NOT EXISTS { ?o a ?anyType . FILTER (?anyType NOT IN (rdfs:Resource, owl:Thing)) }
+      }""" ;
+    sh:severity sh:Violation
+  ] ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:prefixes exs: ;
+    sh:message "Mistyped node: typed as both an information entity and an artifact or SDC." ;
+    sh:select """
+      SELECT $this WHERE {
+        $this a ?info , ?cont .
+        FILTER (?info IN (cco:ont00001163, cco:ont00000120))
+        FILTER (?cont IN (cco:ont00000995, obo:BFO_0000020))
+      }""" ;
+    sh:severity sh:Violation
+  ] .

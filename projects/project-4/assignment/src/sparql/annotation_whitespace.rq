@@ -1,6 +1,21 @@
-# Title: 
+# Title:
 #    No Extra Annotation Whitespace
-# Constraint Description: 
-#    No annotation value may have leading or trailing whitespace.    
+# Constraint Description:
+#    No annotation value may have leading or trailing whitespace.
 # Severity:
-#    Error 
+#    Error
+#
+# Checks the annotation properties the graph uses for people: rdfs:label, skos:definition,
+# rdfs:comment, skos:altLabel. A valid ontology returns ZERO rows.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?element ?property ?value ?error
+WHERE {
+  VALUES ?property { rdfs:label skos:definition rdfs:comment skos:altLabel }
+  ?element ?property ?value .
+  FILTER (isLiteral(?value))
+  FILTER (REGEX(STR(?value), "^\\s") || REGEX(STR(?value), "\\s$"))
+  BIND (CONCAT("ERROR: leading/trailing whitespace in ", STR(?property), " of ", STR(?element)) AS ?error)
+}
