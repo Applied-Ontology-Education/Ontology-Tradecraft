@@ -195,7 +195,7 @@ def main():
     print("[paths] C:", IN_C)
     df_a = load_sensor_a(IN_A)
     df_b = load_sensor_b(IN_B)
-    df_c = load_sensor_b(IN_C)
+    df_c = load_sensor_a(IN_C)
 
     print(f"[normalize_readings] Input A rows: {len(df_a)}")
     print(f"[normalize_readings] Input B rows: {len(df_b)}")
