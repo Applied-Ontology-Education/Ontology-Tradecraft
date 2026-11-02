@@ -3,6 +3,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+obo:BFO_0000196 rdfs:label "bearer of" .
+
 <https://example.org/project4/P4_0000000> a cco:ont00000995 ;
     rdfs:label "Boiler-07" ;
     obo:BFO_0000196 <https://example.org/project4/P4_0000001>,
@@ -95,6 +97,12 @@
     cco:ont00001863 cco:ont00002000 ;
     cco:ont00001966 <https://example.org/project4/P4_0000023> .
 
+cco:ont00001769 rdfs:label "has decimal value" .
+
+cco:ont00001863 rdfs:label "uses measurement unit" .
+
+cco:ont00001966 rdfs:label "is a measurement of" .
+
 cco:ont00001450 a cco:ont00000120 ;
     rdfs:label "V" .
 
@@ -136,4 +144,12 @@ cco:ont00002000 a cco:ont00000120 ;
 
 cco:ont00001724 a cco:ont00000120 ;
     rdfs:label "F" .
+
+cco:ont00000120 rdfs:label "Measurement Unit" .
+
+cco:ont00000995 rdfs:label "Material Artifact" .
+
+obo:BFO_0000020 rdfs:label "specifically dependent continuant" .
+
+cco:ont00001163 rdfs:label "Measurement Information Content Entity" .
 

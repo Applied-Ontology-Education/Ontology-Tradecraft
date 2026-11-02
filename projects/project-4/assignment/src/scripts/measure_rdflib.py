@@ -67,6 +67,14 @@ def main():
     for prefix, full in prefixes.items():
         g.bind(prefix, full)
 
+    g.add((SDC, RDFS.label, Literal("specifically dependent continuant")))
+    g.add((UNIT, RDFS.label, Literal("Measurement Unit")))
+    g.add((ARTIFACT, RDFS.label, Literal("Material Artifact")))
+    g.add((MICE, RDFS.label, Literal("Measurement Information Content Entity")))
+    g.add((OBO["BFO_0000196"], RDFS.label, Literal("bearer of")))
+    g.add((CCO["ont00001769"], RDFS.label, Literal("has decimal value")))
+    g.add((CCO["ont00001863"], RDFS.label, Literal("uses measurement unit")))
+    g.add((CCO["ont00001966"], RDFS.label, Literal("is a measurement of")))
     for index, row in df.iterrows():
         artifact = str(row["artifact_id"])
         sdc = str(row["sdc_kind"])
