@@ -2,20 +2,22 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
-@prefix bfo:  <http://purl.obolibrary.org/obo/bfo.owl#> .
-@prefix cco:  <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix bfo:  <http://purl.obolibrary.org/obo/BFO_> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
 @prefix ex:   <http://example.org/shapes/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 #################################################################
 # 1) Artifact bears at least one SDC (cardinality); 
 #################################################################
 ex:ArtifactHasSDCShape
   a sh:NodeShape ;
-  sh:targetClass cco:Artifact ;
+  sh:targetClass cco:ont00000995 ; # Artifact
   sh:property [
-    sh:path bfo:bearer_of ;
+    sh:path bfo:0000196 ; # bearer of
     sh:minCount 1 ;
-    sh:class bfo:SpecificallyDependentContinuant ;
+    sh:class bfo:0000020 ; # Specifically Dependent Continuant
     sh:message "Every Artifact must bear at least one SDC (Specifically Dependent Continuant)." ;
     sh:severity sh:Violation
   ] .
@@ -23,28 +25,175 @@ ex:ArtifactHasSDCShape
 #################################################################
 # 2) SDC is measured by at least one MICE (coverage via inverse) 
 #################################################################
+ex:SDCIsMeasuredByMICEShape
+  a sh:NodeShape ;
+  sh:targetClass bfo:0000020 ; # sdc
+  sh:property [
+    sh:path [sh:inversePath cco:ont00001966] ; # is a measurement of
+    sh:minCount 1 ;
+    sh:class cco:ont00001163 ; # MICE
+    sh:message "Every SDC is measured by at least one MICE" ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 3) MICE measures exactly one SDC (functional)
 #################################################################
+ex:MICEMeasuresSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ; # MICE
+  sh:property [
+    sh:path cco:ont00001966 ; # is a measurement of
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:class obo:BFO_0000020 ; # sdc
+    sh:message "Every MICE measures exactly one SDC" ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 4) MICE must have one unit and one numeric value (completeness)
 #################################################################
+ex:MICEHas1UnitAnd1Value
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ; # MICE
+  sh:property [
+    sh:path cco:ont00001863 ; # uses measurement unit
+    sh:nodeKind sh:IRI ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Every MICE must have one unit" ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path cco:ont00001769 ; # has decimal value
+    sh:datatype xsd:decimal ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Every MICE must have one value" ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 5) No empty values in literals
 #################################################################
+ex:NoEmptyValsInLiterals
+  a sh:NodeShape ;
+  sh:targetSubjectsOf rdfs:label ;
+  sh:targetSubjectsOf cco:ont00001769 ; # has decimal value
+  sh:property [
+    sh:path rdfs:label ;
+    sh:minCount 1 ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:message "rdfs:labels must not be empty" ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path cco:ont00001769 ;
+    sh:minLength 1 ;
+    sh:pattern "\\S" ;
+    sh:message "Measurement value literals must not be empty" ;
+    sh:severity sh:Violation
+  ] .
 
 #################################################################
 # 6) Unit must match SDC being measured
 #################################################################
+ex:UnitMatchesSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:sparql [
+    sh:message "The measurement unit must be compatible with the kind of SDC being measured." ;
+    sh:select """
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      PREFIX cco: <https://www.commoncoreontologies.org/>
+
+      SELECT $this
+      WHERE {
+        $this cco:ont00001966 ?sdc ;
+              cco:ont00001863 ?unit .
+        ?sdc rdfs:label ?sdcLabel .
+        ?unit rdfs:label ?unitLabel .
+
+        FILTER (
+          (CONTAINS(LCASE(STR(?sdcLabel)), "temperature") &&
+            STR(?unitLabel) NOT IN ("C", "F")) ||
+          (CONTAINS(LCASE(STR(?sdcLabel)), "pressure") &&
+            STR(?unitLabel) NOT IN ("pounds per square inch", "kilopascal")) ||
+          (CONTAINS(LCASE(STR(?sdcLabel)), "voltage") &&
+            STR(?unitLabel) != "V") ||
+          (CONTAINS(LCASE(STR(?sdcLabel)), "resistance") &&
+            STR(?unitLabel) != "ohm")
+        )
+      }
+    """ ;
+  ] .
 
 #################################################################
 # 7) No duplicate MICE
 #################################################################
+# Given the way measure_rdflib.py generates labels for MICEs based on the SDCs, artifacts, & timestamps in the relevant rows, no duplicate labels is a proxy for measuring distinct things.
+ex:NoDuplicateMICE
+a sh:NodeShape ;
+sh:targetClass cco:ont00001163 ; # MICE
+sh:sparql [
+  sh:select """
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX cco: <https://www.commoncoreontologies.org/>
+    SELECT DISTINCT ?mice1 ?mice2 ?label
+    WHERE {
+      ?mice1 a cco:ont00001163 ;
+            rdfs:label ?label .
+      ?mice2 a cco:ont00001163 ;
+            rdfs:label ?label .
+      FILTER (!isBlank(?mice1))
+      FILTER (!isBlank(?mice2))
+      FILTER (?mice1 != ?mice2)
+    }
+  """ ;
+  sh:message "MICE must not have duplicate labels" ;
+  sh:severity sh:Violation
+] .
 
 #################################################################
 # 8) No dangling/mistyped nodes 
 #################################################################
-
+ex:NoDanglingOrMistypedNodes
+a sh:NodeShape ;
+sh:targetSubjectsOf rdf:type ;
+sh:sparql [
+  sh:select """
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    SELECT DISTINCT ?node
+    WHERE {
+      { ?node ?predicate ?object }
+      UNION
+      { ?subject ?predicate ?node }
+      FILTER (!isBlank(?node))
+      FILTER NOT EXISTS {
+          ?node a ?type .
+          FILTER (?type NOT IN (rdfs:Resource, owl:Thing))
+      }
+    }
+  """ ;
+  sh:message "Non-blank nodes must have an rdf:type" ;
+  sh:severity sh:Violation
+] ;
+sh:sparql [
+  sh:select """
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX cco: <https://www.commoncoreontologies.org/>
+    SELECT DISTINCT ?node
+    WHERE {
+      ?node rdfs:label ?nodelabel .
+      ?node a ?class .
+      FILTER (
+        CONTAINS(LCASE(STR(?nodelabel)), "measurement of") && STR(?class) NOT IN (cco:ont00001163)
+      )
+    }
+  """ ;
+  sh:message "Measurement nodes must be typed as MICEs" ;
+  sh:severity sh:Violation
+] .
