@@ -19707,6 +19707,18 @@ cco:ont00001734 rdf:type owl:NamedIndividual ,
                  cco:ont00001760 "https://www.commoncoreontologies.org/CurrencyUnitOntology"^^xsd:anyURI .
 
 
+###  https://www.commoncoreontologies.org/ont00002000
+cco:ont00002000 rdf:type owl:NamedIndividual ,
+                          cco:ont00001090 ;
+                 rdfs:label "Kilopascal Measurement Unit"@en .
+
+
+###  https://www.commoncoreontologies.org/ont00002001
+cco:ont00002001 rdf:type owl:NamedIndividual ,
+                          cco:ont00001004 ;
+                 rdfs:label "Ohm Measurement Unit"@en .
+
+
 #################################################################
 #    General axioms
 #################################################################

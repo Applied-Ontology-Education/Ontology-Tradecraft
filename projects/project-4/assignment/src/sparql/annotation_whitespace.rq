@@ -3,4 +3,14 @@
 # Constraint Description: 
 #    No annotation value may have leading or trailing whitespace.    
 # Severity:
-#    Error 
+#    Error
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT ?subj ?pred ?obj
+WHERE {
+  ?subj ?pred ?obj .
+  ?pred a owl:AnnotationProperty
+  FILTER (isLiteral(?obj))
+  FILTER (REGEX(STR(?obj), "^\\s") || REGEX (STR(?obj), "\\s^"))
+}

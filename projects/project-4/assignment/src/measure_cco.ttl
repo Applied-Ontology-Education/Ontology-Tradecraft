@@ -1,0 +1,155 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+obo:BFO_0000196 rdfs:label "bearer of" .
+
+<https://example.org/project4/P4_0000000> a cco:ont00000995 ;
+    rdfs:label "Boiler-07" ;
+    obo:BFO_0000196 <https://example.org/project4/P4_0000001>,
+        <https://example.org/project4/P4_0000003> .
+
+<https://example.org/project4/P4_0000002> a cco:ont00001163 ;
+    rdfs:label "measurement of temperature of Boiler-07 at 2024-03-17T19:03:00Z" ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000001> .
+
+<https://example.org/project4/P4_0000004> a cco:ont00001163 ;
+    rdfs:label "measurement of pressure of Boiler-07 at 2024-03-17T19:04:00Z" ;
+    cco:ont00001769 14.7 ;
+    cco:ont00001863 cco:ont00001694 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000003> .
+
+<https://example.org/project4/P4_0000005> a cco:ont00001163 ;
+    rdfs:label "measurement of temperature of Boiler-07 at 2024-03-17T23:03:00Z" ;
+    cco:ont00001769 100.0 ;
+    cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000001> .
+
+<https://example.org/project4/P4_0000006> a cco:ont00001163 ;
+    rdfs:label "measurement of pressure of Boiler-07 at 2024-03-17T23:04:00Z" ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 cco:ont00002000 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000003> .
+
+<https://example.org/project4/P4_0000007> a cco:ont00000995 ;
+    rdfs:label "Chiller 3" ;
+    obo:BFO_0000196 <https://example.org/project4/P4_0000008> .
+
+<https://example.org/project4/P4_0000009> a cco:ont00001163 ;
+    rdfs:label "measurement of temperature of Chiller 3 at 2024-03-18T08:01:00Z" ;
+    cco:ont00001769 68.0 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000008> .
+
+<https://example.org/project4/P4_0000010> a cco:ont00000995 ;
+    rdfs:label "Chiller-3" ;
+    obo:BFO_0000196 <https://example.org/project4/P4_0000011> .
+
+<https://example.org/project4/P4_0000012> a cco:ont00001163 ;
+    rdfs:label "measurement of temperature of Chiller-3 at 2024-03-18T12:01:00Z" ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000011> .
+
+<https://example.org/project4/P4_0000013> a cco:ont00000995 ;
+    rdfs:label "Chiller-4" ;
+    obo:BFO_0000196 <https://example.org/project4/P4_0000014> .
+
+<https://example.org/project4/P4_0000015> a cco:ont00001163 ;
+    rdfs:label "measurement of temperature of Chiller-4 at 2024-03-18T12:01:00Z" ;
+    cco:ont00001769 6.5 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000014> .
+
+<https://example.org/project4/P4_0000016> a cco:ont00001163 ;
+    rdfs:label "measurement of temperature of Chiller-4 at 2024-03-18T12:06:00Z" ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000014> .
+
+<https://example.org/project4/P4_0000017> a cco:ont00000995 ;
+    rdfs:label "Circuit-12" ;
+    obo:BFO_0000196 <https://example.org/project4/P4_0000018>,
+        <https://example.org/project4/P4_0000020> .
+
+<https://example.org/project4/P4_0000019> a cco:ont00001163 ;
+    rdfs:label "measurement of voltage of Circuit-12 at 2024-03-18T12:01:01Z" ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 cco:ont00001450 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000018> .
+
+<https://example.org/project4/P4_0000021> a cco:ont00001163 ;
+    rdfs:label "measurement of resistance of Circuit-12 at 2024-03-18T12:06:00Z" ;
+    cco:ont00001769 1.3 ;
+    cco:ont00001863 cco:ont00002001 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000020> .
+
+<https://example.org/project4/P4_0000022> a cco:ont00000995 ;
+    rdfs:label "Pump-A1" ;
+    obo:BFO_0000196 <https://example.org/project4/P4_0000023> .
+
+<https://example.org/project4/P4_0000024> a cco:ont00001163 ;
+    rdfs:label "measurement of pressure of Pump-A1 at 2024-03-18T08:07:00Z" ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 cco:ont00002000 ;
+    cco:ont00001966 <https://example.org/project4/P4_0000023> .
+
+cco:ont00001769 rdfs:label "has decimal value" .
+
+cco:ont00001863 rdfs:label "uses measurement unit" .
+
+cco:ont00001966 rdfs:label "is a measurement of" .
+
+cco:ont00001450 a cco:ont00000120 ;
+    rdfs:label "V" .
+
+cco:ont00001694 a cco:ont00000120 ;
+    rdfs:label "pounds per square inch" .
+
+cco:ont00002001 a cco:ont00000120 ;
+    rdfs:label "ohm" .
+
+<https://example.org/project4/P4_0000008> a obo:BFO_0000020 ;
+    rdfs:label "temperature of Chiller 3" .
+
+<https://example.org/project4/P4_0000011> a obo:BFO_0000020 ;
+    rdfs:label "temperature of Chiller-3" .
+
+<https://example.org/project4/P4_0000018> a obo:BFO_0000020 ;
+    rdfs:label "voltage of Circuit-12" .
+
+<https://example.org/project4/P4_0000020> a obo:BFO_0000020 ;
+    rdfs:label "resistance of Circuit-12" .
+
+<https://example.org/project4/P4_0000023> a obo:BFO_0000020 ;
+    rdfs:label "pressure of Pump-A1" .
+
+cco:ont00001606 a cco:ont00000120 ;
+    rdfs:label "C" .
+
+cco:ont00002000 a cco:ont00000120 ;
+    rdfs:label "kilopascal" .
+
+<https://example.org/project4/P4_0000001> a obo:BFO_0000020 ;
+    rdfs:label "temperature of Boiler-07" .
+
+<https://example.org/project4/P4_0000003> a obo:BFO_0000020 ;
+    rdfs:label "pressure of Boiler-07" .
+
+<https://example.org/project4/P4_0000014> a obo:BFO_0000020 ;
+    rdfs:label "temperature of Chiller-4" .
+
+cco:ont00001724 a cco:ont00000120 ;
+    rdfs:label "F" .
+
+cco:ont00000120 rdfs:label "Measurement Unit" .
+
+cco:ont00000995 rdfs:label "Material Artifact" .
+
+obo:BFO_0000020 rdfs:label "specifically dependent continuant" .
+
+cco:ont00001163 rdfs:label "Measurement Information Content Entity" .
+

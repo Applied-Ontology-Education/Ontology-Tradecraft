@@ -5,3 +5,18 @@
 # Severity:
 #     Warning
 
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?class
+WHERE {
+	VALUES ?type { owl:Class owl:ObjectProperty }
+	?class a ?type .
+	FILTER NOT EXISTS {
+		VALUES ?predicate { skos:definition obo:IAO_0000115 }
+		?class ?predicate ?def .
+		FILTER(langMatches(lang(?def), "en") && STRLEN(STR(?def)) > 0)
+	}
+}
+
