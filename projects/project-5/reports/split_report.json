@@ -1,0 +1,19 @@
+{
+  "seed": 42,
+  "valid_fraction": 0.2,
+  "named_subclass_pairs": 328,
+  "pool": 320,
+  "target": 66,
+  "moved_back_by_elk": 0,
+  "held_out": 66,
+  "pool_rule": "named A subClassOf B pairs with a CCO-namespace subclass that has no owl:equivalentClass definition",
+  "eligibility_rule": "every class in every held-out pair still appears in a training axiom: another named subclass pair, an existential restriction (subject or filler), an equivalence, or a disjointness",
+  "bfo_version_iri": "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+  "declared_properties": [
+    "https://www.commoncoreontologies.org/ont00001777",
+    "https://www.commoncoreontologies.org/ont00001803",
+    "https://www.commoncoreontologies.org/ont00001819",
+    "https://www.commoncoreontologies.org/ont00001936"
+  ],
+  "moved_back_pairs": []
+}

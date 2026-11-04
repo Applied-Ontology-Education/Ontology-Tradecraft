@@ -1,0 +1,10 @@
+paths:
+  module: src/EventOntology.ttl
+  bfo: src/bfo-core.ttl
+  train: src/train.ttl
+  valid: src/valid.ttl
+  split_report: reports/split_report.json
+
+split:
+  seed: 42
+  valid_fraction: 0.20
