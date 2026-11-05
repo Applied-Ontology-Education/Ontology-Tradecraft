@@ -49,6 +49,19 @@ def _to_float(x: Any) -> float | None:
         return None
 
 
+def _norm_artifact_id(a: Any) -> str | None:
+    """Collapse internal whitespace to a single hyphen, matching the hyphenated
+    naming convention already used elsewhere in the data (Boiler-07, Pump-A1,
+    Circuit-12, Chiller-4), so e.g. "Chiller 3" and "Chiller-3" become the same id."""
+    if a is None:
+        return None
+    s = str(a).strip()
+    if not s:
+        return None
+    import re as _re
+    return _re.sub(r"\s+", "-", s)
+
+
 def _norm_kind(k: Any) -> str | None:
     """Normalize reading type/kind labels (string only, no semantic conversion)."""
     if k is None:
@@ -82,11 +95,6 @@ def _norm_unit(u: Any) -> str | None:
         return "C"
     if low in {"fahrenheit", "°f", "f"}:
         return "F"
-    # pressure
-    if low == "psi":
-        return "psi"
-    if low in {"kpa", "kilopascal", "kilopascals"}:
-        return "kPa"
     # electrical
     if low in {"v", "volt", "volts"}:
         return "V"
@@ -94,6 +102,28 @@ def _norm_unit(u: Any) -> str | None:
         return "ohm"
     # pass through otherwise
     return s
+
+
+PRESSURE_TO_PA = {
+    "psi": 6894.757293168,
+    "pounds per square inch": 6894.757293168,
+    "kpa": 1000.0,
+    "kilopascal": 1000.0,
+    "kilopascals": 1000.0,
+    "pa": 1.0,
+    "pascal": 1.0,
+    "pascals": 1.0,
+}
+
+def _convert_pressure_row(sdc_kind: Any, unit_label: Any, value: Any) -> tuple:
+    """If this is a pressure reading in a recognized unit, convert value+label to Pa.
+    Otherwise, pass unit_label/value through unchanged."""
+    if sdc_kind == "pressure" and value is not None:
+        key = str(unit_label).strip().lower()
+        factor = PRESSURE_TO_PA.get(key)
+        if factor is not None:
+            return "Pa", value * factor
+    return unit_label, value
 
 
 # ---------- Loaders for each source ----------
@@ -159,11 +189,24 @@ def normalize_and_clean(df: pd.DataFrame) -> pd.DataFrame:
         df[col] = df[col].astype(str).str.strip()
 
     # Normalize labels
+    df["artifact_id"] = df["artifact_id"].apply(_norm_artifact_id)
     df["sdc_kind"] = df["sdc_kind"].apply(_norm_kind)
+
+    # Coerce value to numeric BEFORE pressure conversion (conversion needs a real float to scale)
+    df["value"] = df["value"].apply(_to_float)
+
+    # Convert pressure readings to Pa (value AND label; psi/kPa are a different scale, not just a different spelling)
+    converted = df.apply(
+        lambda row: _convert_pressure_row(row["sdc_kind"], row["unit_label"], row["value"]),
+        axis=1, result_type="expand"
+    )
+    df["unit_label"] = converted[0]
+    df["value"] = converted[1]
+
+    # Normalize everything else (temperature/electrical labels; pressure rows already say "Pa" and pass through untouched)
     df["unit_label"] = df["unit_label"].apply(_norm_unit)
 
-    # Coerce types
-    df["value"] = df["value"].apply(_to_float)
+    # Coerce remaining types
     df["timestamp"] = df["timestamp"].apply(_to_iso_utc)
 
     # Diagnostics

@@ -1,0 +1,127 @@
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix data: <http://example.org/project4/data#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/project4/data> a owl:Ontology ;
+    rdfs:label "CCO Measurement Instance Data"@en .
+
+data:artifact-boiler-07 a cco:ont00000995 ;
+    rdfs:label "Boiler-07" ;
+    bfo:BFO_0000196 data:sdc-boiler-07-pressure,
+        data:sdc-boiler-07-temperature .
+
+data:artifact-chiller-3 a cco:ont00000995 ;
+    rdfs:label "Chiller-3" ;
+    bfo:BFO_0000196 data:sdc-chiller-3-temperature .
+
+data:artifact-chiller-4 a cco:ont00000995 ;
+    rdfs:label "Chiller-4" ;
+    bfo:BFO_0000196 data:sdc-chiller-4-temperature .
+
+data:artifact-circuit-12 a cco:ont00000995 ;
+    rdfs:label "Circuit-12" ;
+    bfo:BFO_0000196 data:sdc-circuit-12-resistance,
+        data:sdc-circuit-12-voltage .
+
+data:artifact-pump-a1 a cco:ont00000995 ;
+    rdfs:label "Pump-A1" ;
+    bfo:BFO_0000196 data:sdc-pump-a1-pressure .
+
+data:mice-0000 a cco:ont00001163 ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 data:mu-f ;
+    cco:ont00001966 data:sdc-boiler-07-temperature .
+
+data:mice-0001 a cco:ont00001163 ;
+    cco:ont00001769 101352.9322095696 ;
+    cco:ont00001863 data:mu-pa ;
+    cco:ont00001966 data:sdc-boiler-07-pressure .
+
+data:mice-0002 a cco:ont00001163 ;
+    cco:ont00001769 100.0 ;
+    cco:ont00001863 data:mu-c ;
+    cco:ont00001966 data:sdc-boiler-07-temperature .
+
+data:mice-0003 a cco:ont00001163 ;
+    cco:ont00001769 101325.0 ;
+    cco:ont00001863 data:mu-pa ;
+    cco:ont00001966 data:sdc-boiler-07-pressure .
+
+data:mice-0004 a cco:ont00001163 ;
+    cco:ont00001769 68.0 ;
+    cco:ont00001863 data:mu-f ;
+    cco:ont00001966 data:sdc-chiller-3-temperature .
+
+data:mice-0005 a cco:ont00001163 ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 data:mu-c ;
+    cco:ont00001966 data:sdc-chiller-3-temperature .
+
+data:mice-0006 a cco:ont00001163 ;
+    cco:ont00001769 6.5 ;
+    cco:ont00001863 data:mu-f ;
+    cco:ont00001966 data:sdc-chiller-4-temperature .
+
+data:mice-0007 a cco:ont00001163 ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 data:mu-f ;
+    cco:ont00001966 data:sdc-chiller-4-temperature .
+
+data:mice-0008 a cco:ont00001163 ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 data:mu-v ;
+    cco:ont00001966 data:sdc-circuit-12-voltage .
+
+data:mice-0009 a cco:ont00001163 ;
+    cco:ont00001769 1.3 ;
+    cco:ont00001863 data:mu-ohm ;
+    cco:ont00001966 data:sdc-circuit-12-resistance .
+
+data:mice-0010 a cco:ont00001163 ;
+    cco:ont00001769 101325.0 ;
+    cco:ont00001863 data:mu-pa ;
+    cco:ont00001966 data:sdc-pump-a1-pressure .
+
+data:mu-ohm a cco:ont00000120 .
+
+data:mu-v a cco:ont00000120,
+        cco:ont00001450 .
+
+data:mu-c a cco:ont00000120,
+        cco:ont00001606 .
+
+data:sdc-circuit-12-resistance a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+data:sdc-circuit-12-voltage a bfo:BFO_0000019,
+        bfo:BFO_0000020 .
+
+data:sdc-pump-a1-pressure a bfo:BFO_0000019,
+        bfo:BFO_0000020,
+        cco:ont00000380 .
+
+data:mu-pa a cco:ont00000120,
+        cco:ont00001559 .
+
+data:sdc-boiler-07-pressure a bfo:BFO_0000019,
+        bfo:BFO_0000020,
+        cco:ont00000380 .
+
+data:sdc-boiler-07-temperature a bfo:BFO_0000019,
+        bfo:BFO_0000020,
+        cco:ont00000441 .
+
+data:sdc-chiller-3-temperature a bfo:BFO_0000019,
+        bfo:BFO_0000020,
+        cco:ont00000441 .
+
+data:sdc-chiller-4-temperature a bfo:BFO_0000019,
+        bfo:BFO_0000020,
+        cco:ont00000441 .
+
+data:mu-f a cco:ont00000120,
+        cco:ont00001724 .
+

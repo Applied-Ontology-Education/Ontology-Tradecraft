@@ -4,3 +4,16 @@
 #    No two ontology elements may have the exact same definition.    
 # Severity:
 #     Error 
+# A valid ontology should return ZERO rows.
+
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?e1 ?e2 ?def ?error
+WHERE {
+  VALUES ?p { <http://purl.obolibrary.org/obo/IAO_0000115> skos:definition }
+  ?e1 ?p ?def .
+  ?e2 ?p ?def .
+  FILTER (?e1 != ?e2)
+  FILTER (STR(?e1) < STR(?e2))
+  BIND (concat("ERROR: ", str(?e1), " and ", str(?e2), " share the identical definition '", str(?def), "'") AS ?error)
+}
