@@ -95,19 +95,19 @@
     rdfs:label "psi" .
 
 :sdc_Chiller-3_temperature a obo:BFO_0000020 ;
-    rdfs:label "temperature" .
+    rdfs:label "temperature of Chiller-3" .
 
 :sdc_Chiller_3_temperature a obo:BFO_0000020 ;
-    rdfs:label "temperature" .
+    rdfs:label "temperature of Chiller 3" .
 
 :sdc_Circuit-12_resistance a obo:BFO_0000020 ;
-    rdfs:label "resistance" .
+    rdfs:label "resistance of Circuit-12" .
 
 :sdc_Circuit-12_voltage a obo:BFO_0000020 ;
-    rdfs:label "voltage" .
+    rdfs:label "voltage of Circuit-12" .
 
 :sdc_Pump-A1_pressure a obo:BFO_0000020 ;
-    rdfs:label "pressure" .
+    rdfs:label "pressure of Pump-A1" .
 
 :unit_C a cco:ont00000120 ;
     rdfs:label "C" .
@@ -116,13 +116,13 @@
     rdfs:label "kPa" .
 
 :sdc_Boiler-07_pressure a obo:BFO_0000020 ;
-    rdfs:label "pressure" .
+    rdfs:label "pressure of Boiler-07" .
 
 :sdc_Boiler-07_temperature a obo:BFO_0000020 ;
-    rdfs:label "temperature" .
+    rdfs:label "temperature of Boiler-07" .
 
 :sdc_Chiller-4_temperature a obo:BFO_0000020 ;
-    rdfs:label "temperature" .
+    rdfs:label "temperature of Chiller-4" .
 
 :unit_F a cco:ont00000120 ;
     rdfs:label "F" .

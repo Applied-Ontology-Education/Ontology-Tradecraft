@@ -95,7 +95,7 @@ if __name__ == "__main__":
 
         # labels
         store.add((art,  RDFS.label, Literal(str(row["artifact_id"]))))
-        store.add((sdc,  RDFS.label, Literal(str(row["sdc_kind"]))))
+        store.add((sdc,  RDFS.label, Literal(f'{row["sdc_kind"]} of {row["artifact_id"]}')))
         store.add((unit, RDFS.label, Literal(str(row["unit_label"]))))
 
     TTL_OUT.parent.mkdir(parents=True, exist_ok=True)
