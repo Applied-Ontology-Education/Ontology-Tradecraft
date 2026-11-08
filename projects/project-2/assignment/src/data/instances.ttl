@@ -6,8 +6,9 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 
 #################################################################
-# TASK 1: Airbus A320 NEO
+# TASK 1: Airbus A320 NEO  
 #################################################################
+
 
 :A320NEO_Instance a :FixedWing ;
     rdfs:label "Airbus A320 NEO"@en ;
