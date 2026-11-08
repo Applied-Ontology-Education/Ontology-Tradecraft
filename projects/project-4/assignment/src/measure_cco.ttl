@@ -1,0 +1,129 @@
+@prefix : <https://example.org/project4/> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:artifact_Boiler-07 a cco:ont00000995 ;
+    rdfs:label "Boiler-07" ;
+    obo:BFO_0000196 :sdc_Boiler-07_pressure,
+        :sdc_Boiler-07_temperature .
+
+:artifact_Chiller-3 a cco:ont00000995 ;
+    rdfs:label "Chiller-3" ;
+    obo:BFO_0000196 :sdc_Chiller-3_temperature .
+
+:artifact_Chiller-4 a cco:ont00000995 ;
+    rdfs:label "Chiller-4" ;
+    obo:BFO_0000196 :sdc_Chiller-4_temperature .
+
+:artifact_Chiller_3 a cco:ont00000995 ;
+    rdfs:label "Chiller 3" ;
+    obo:BFO_0000196 :sdc_Chiller_3_temperature .
+
+:artifact_Circuit-12 a cco:ont00000995 ;
+    rdfs:label "Circuit-12" ;
+    obo:BFO_0000196 :sdc_Circuit-12_resistance,
+        :sdc_Circuit-12_voltage .
+
+:artifact_Pump-A1 a cco:ont00000995 ;
+    rdfs:label "Pump-A1" ;
+    obo:BFO_0000196 :sdc_Pump-A1_pressure .
+
+:mice_Boiler-07_pressure_2024-03-17T19-04-00Z a cco:ont00001163 ;
+    cco:ont00001769 14.7 ;
+    cco:ont00001863 :unit_psi ;
+    cco:ont00001966 :sdc_Boiler-07_pressure .
+
+:mice_Boiler-07_pressure_2024-03-17T23-04-00Z a cco:ont00001163 ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 :unit_kPa ;
+    cco:ont00001966 :sdc_Boiler-07_pressure .
+
+:mice_Boiler-07_temperature_2024-03-17T19-03-00Z a cco:ont00001163 ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 :unit_F ;
+    cco:ont00001966 :sdc_Boiler-07_temperature .
+
+:mice_Boiler-07_temperature_2024-03-17T23-03-00Z a cco:ont00001163 ;
+    cco:ont00001769 100.0 ;
+    cco:ont00001863 :unit_C ;
+    cco:ont00001966 :sdc_Boiler-07_temperature .
+
+:mice_Chiller-3_temperature_2024-03-18T12-01-00Z a cco:ont00001163 ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 :unit_C ;
+    cco:ont00001966 :sdc_Chiller-3_temperature .
+
+:mice_Chiller-4_temperature_2024-03-18T12-01-00Z a cco:ont00001163 ;
+    cco:ont00001769 6.5 ;
+    cco:ont00001863 :unit_F ;
+    cco:ont00001966 :sdc_Chiller-4_temperature .
+
+:mice_Chiller-4_temperature_2024-03-18T12-06-00Z a cco:ont00001163 ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 :unit_F ;
+    cco:ont00001966 :sdc_Chiller-4_temperature .
+
+:mice_Chiller_3_temperature_2024-03-18T08-01-00Z a cco:ont00001163 ;
+    cco:ont00001769 68.0 ;
+    cco:ont00001863 :unit_F ;
+    cco:ont00001966 :sdc_Chiller_3_temperature .
+
+:mice_Circuit-12_resistance_2024-03-18T12-06-00Z a cco:ont00001163 ;
+    cco:ont00001769 1.3 ;
+    cco:ont00001863 :unit_ohm ;
+    cco:ont00001966 :sdc_Circuit-12_resistance .
+
+:mice_Circuit-12_voltage_2024-03-18T12-01-01Z a cco:ont00001163 ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 :unit_V ;
+    cco:ont00001966 :sdc_Circuit-12_voltage .
+
+:mice_Pump-A1_pressure_2024-03-18T08-07-00Z a cco:ont00001163 ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 :unit_kPa ;
+    cco:ont00001966 :sdc_Pump-A1_pressure .
+
+:unit_V a cco:ont00000120 ;
+    rdfs:label "V" .
+
+:unit_ohm a cco:ont00000120 ;
+    rdfs:label "ohm" .
+
+:unit_psi a cco:ont00000120 ;
+    rdfs:label "psi" .
+
+:sdc_Chiller-3_temperature a obo:BFO_0000020 ;
+    rdfs:label "temperature" .
+
+:sdc_Chiller_3_temperature a obo:BFO_0000020 ;
+    rdfs:label "temperature" .
+
+:sdc_Circuit-12_resistance a obo:BFO_0000020 ;
+    rdfs:label "resistance" .
+
+:sdc_Circuit-12_voltage a obo:BFO_0000020 ;
+    rdfs:label "voltage" .
+
+:sdc_Pump-A1_pressure a obo:BFO_0000020 ;
+    rdfs:label "pressure" .
+
+:unit_C a cco:ont00000120 ;
+    rdfs:label "C" .
+
+:unit_kPa a cco:ont00000120 ;
+    rdfs:label "kPa" .
+
+:sdc_Boiler-07_pressure a obo:BFO_0000020 ;
+    rdfs:label "pressure" .
+
+:sdc_Boiler-07_temperature a obo:BFO_0000020 ;
+    rdfs:label "temperature" .
+
+:sdc_Chiller-4_temperature a obo:BFO_0000020 ;
+    rdfs:label "temperature" .
+
+:unit_F a cco:ont00000120 ;
+    rdfs:label "F" .
+
