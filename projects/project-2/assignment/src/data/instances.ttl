@@ -1,0 +1,363 @@
+@prefix :        <https://example.org/tradecraft/instances#> .
+@prefix core:    <https://example.org/tradecraft/core#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+<https://example.org/tradecraft/instances> a owl:Ontology ;
+    rdfs:label "Ontology Tradecraft Instances" ;
+    skos:definition "ABox of individuals for the Ontology Tradecraft projects." ;
+    owl:imports <https://example.org/tradecraft/core> .
+
+########################################
+# Task 1: Provide a BFO-conformant model of all columns of the Airbus A320 NEO row
+########################################
+
+# The organization
+:airbus a core:Organization ;
+    rdfs:label "Airbus" ;
+    skos:definition "Airbus, the aircraft manufacturer, as referenced by the FAA Aircraft Characteristics Database." ;
+    core:hasOrganizationName "AIRBUS"^^xsd:string .
+
+# The aircraft model that the design is about
+:a320neo_AircraftModel a core:AircraftModel ;
+    rdfs:label "Airbus A320 NEO Aircraft Model" ;
+    skos:definition "The Airbus A320 NEO aircraft model, the referent of the A320 NEO design specification." .
+
+# The design (the row itself, as an information artifact)
+:a320neo_Design a core:ArtifactDesign ;
+    rdfs:label "Airbus A320 NEO" ;
+    skos:definition "The design specification for the Airbus A320 NEO, as captured in the FAA Aircraft Characteristics Database row." ;
+    core:isAbout :a320neo_AircraftModel ;
+    core:hasManufacturer :airbus ;
+    core:hasContinuantPart :a320neo_Engine_1 ,
+                           :a320neo_Engine_2 ,
+                           :a320neo_FixedWing ;
+    # required-vocab datatype properties
+    core:hasModelFAA        "Airbus A320 Neo"^^xsd:string ;
+    core:hasModelBADA       "Airbus A320-271N"^^xsd:string ;
+    core:hasLengthFt        "123.3"^^xsd:decimal ;
+    core:hasTailHeightFt    "39.6"^^xsd:decimal ;
+    # identifier and classification columns
+    core:hasICAOCode        "A20N"^^xsd:string ;
+    core:hasFAADesignator   "A20N"^^xsd:string ;
+    core:hasPhysicalClassEngine "Jet"^^xsd:string ;
+    core:hasNumEngines      "2"^^xsd:integer ;
+    core:hasAAC             "C"^^xsd:string ;
+    core:hasADG             "III"^^xsd:string ;
+    core:hasTDG             "3"^^xsd:integer ;
+    core:hasApproachSpeedKnot "137"^^xsd:decimal ;
+    core:hasWingspanFtWithWingletsSharklets "117.5"^^xsd:decimal ;
+    core:hasWheelbaseFt     "41.5"^^xsd:decimal ;
+    core:hasCockpitToMainGearFt "50.2"^^xsd:decimal ;
+    core:hasMainGearWidthFt "29.4"^^xsd:decimal ;
+    core:hasMTOWLb          "174165"^^xsd:decimal ;
+    core:hasMALWLb          "148591"^^xsd:decimal ;
+    core:hasMainGearConfig  "D"^^xsd:string ;
+    core:hasICAOWTC         "Medium"^^xsd:string ;
+    core:hasParkingAreaFt2  "16358.3"^^xsd:decimal ;
+    core:hasAircraftClass   "Fixed-wing"^^xsd:string ;
+    core:hasFAAWeight       "Large"^^xsd:string ;
+    core:hasCWT             "F"^^xsd:string ;
+    core:hasOneHalfWakeCategory "D"^^xsd:string ;
+    core:hasTwoWakeCategoryAppxA "D"^^xsd:string ;
+    core:hasTwoWakeCategoryAppxB "C"^^xsd:string ;
+    core:hasSRS             "III"^^xsd:string ;
+    core:hasLAHSO           "7"^^xsd:integer ;
+    core:hasFAARegistry     "Yes"^^xsd:string ;
+    core:hasRegistrationCount "147"^^xsd:integer ;
+    core:hasTMFSOperationsFY24 "540276"^^xsd:integer ;
+    core:hasRemarks         "AAC validated by Flight Standardization Board (FSB) report."^^xsd:string .
+
+:a320neo_Engine_1 a core:JetEngine ;
+    rdfs:label "Airbus A320 NEO Engine 1" ;
+    skos:definition "First of the two jet engines specified by the Airbus A320 NEO design." .
+
+:a320neo_Engine_2 a core:JetEngine ;
+    rdfs:label "Airbus A320 NEO Engine 2" ;
+    skos:definition "Second of the two jet engines specified by the Airbus A320 NEO design." .
+
+:a320neo_FixedWing a core:FixedWing ;
+    rdfs:label "Airbus A320 NEO Fixed Wing" ;
+    skos:definition "The fixed-wing structure specified by the Airbus A320 NEO design." .
+
+########################################
+# Task 2: The Airbus A321-111 is designed to have a maximum knot approach speed of 142; after 5 approaches, an instance has obtained an average maximum knot approach speed of 139; provide a BFO-conformant model of this scenario.
+########################################
+
+# The design instance
+:a321_Design a core:ArtifactDesign ;
+    rdfs:label "Airbus A321-111" ;
+    skos:definition "The design specification for the Airbus A321-111, as identified by its BADA model designation." ;
+    core:prescribes :a321_MaxApproachSpeedSpec .
+
+# The specification the design prescribes
+:a321_MaxApproachSpeedSpec a core:MaxApproachSpeedSpecification ;
+    rdfs:label "A321-111 Maximum Approach Speed Specification" ;
+    skos:definition "The maximum approach speed value prescribed by the A321-111 design, expressed in knots." ;
+    core:hasSpeedValue "142"^^xsd:integer .
+
+# The measurement unit ("knot") linked to the specification
+:knot a core:MeasurementUnit ;
+    rdfs:label "knot" ;
+    skos:definition "A unit of speed equal to one nautical mile per hour, used in aeronautical and maritime contexts." ;
+    core:isMeasurementUnitOf :a321_MaxApproachSpeedSpec .
+
+# The overall test process
+:a321_TestProcess a core:TestProcess ;
+    rdfs:label "A321-111 Approach Speed Test Process" ;
+    skos:definition "A test process consisting of five approach sub-processes performed on an A321-111 instance to measure maximum approach speed." .
+
+# Five approach processes, each a temporal part of the test process.
+# Values: 138, 139, 139, 139, 140 -> sum 695, average 139.
+
+:a321_Approach_1 a core:ApproachProcess ;
+    rdfs:label "A321-111 Test Approach 1" ;
+    skos:definition "First of five approach sub-processes measured during the A321-111 test process." ;
+    core:isTemporalPartOf :a321_TestProcess ;
+    core:hasMeasuredMaxApproachSpeedKnot "138"^^xsd:integer .
+
+:a321_Approach_2 a core:ApproachProcess ;
+    rdfs:label "A321-111 Test Approach 2" ;
+    skos:definition "Second of five approach sub-processes measured during the A321-111 test process." ;
+    core:isTemporalPartOf :a321_TestProcess ;
+    core:hasMeasuredMaxApproachSpeedKnot "139"^^xsd:integer .
+
+:a321_Approach_3 a core:ApproachProcess ;
+    rdfs:label "A321-111 Test Approach 3" ;
+    skos:definition "Third of five approach sub-processes measured during the A321-111 test process." ;
+    core:isTemporalPartOf :a321_TestProcess ;
+    core:hasMeasuredMaxApproachSpeedKnot "139"^^xsd:integer .
+
+:a321_Approach_4 a core:ApproachProcess ;
+    rdfs:label "A321-111 Test Approach 4" ;
+    skos:definition "Fourth of five approach sub-processes measured during the A321-111 test process." ;
+    core:isTemporalPartOf :a321_TestProcess ;
+    core:hasMeasuredMaxApproachSpeedKnot "139"^^xsd:integer .
+
+:a321_Approach_5 a core:ApproachProcess ;
+    rdfs:label "A321-111 Test Approach 5" ;
+    skos:definition "Fifth of five approach sub-processes measured during the A321-111 test process." ;
+    core:isTemporalPartOf :a321_TestProcess ;
+    core:hasMeasuredMaxApproachSpeedKnot "140"^^xsd:integer .
+
+########################################
+# Task 3: Three SOC_TITLE entries mention “Aerospace Engineer”; provide a BFO-conformant model of these entries and their respective SOC definitions.
+########################################
+
+:soc_17_2010 a core:SOCEntry ;
+    rdfs:label "SOC:17-2010 Aerospace Engineers" ;
+    skos:definition "Broad-level SOC group for aerospace engineers. In the BLS 2018 SOC structure, Broad groups aggregate their child Detailed occupations and are not accompanied by natural-language definitions in the source data." ;
+    core:hasSOCCode "17-2010"^^xsd:string ;
+    core:hasSOCGroup "Broad"^^xsd:string ;
+    core:hasSOCTitle "Aerospace Engineers"^^xsd:string .
+
+:soc_17_2011 a core:SOCEntry ;
+    rdfs:label "SOC:17-2011 Aerospace Engineers" ;
+    skos:definition "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques." ;
+    core:hasSOCCode "17-2011"^^xsd:string ;
+    core:hasSOCGroup "Detailed"^^xsd:string ;
+    core:hasSOCTitle "Aerospace Engineers"^^xsd:string ;
+    core:isAbout :aerospaceEngineering_Activity ;
+    core:isAbout :a320neo_Design ;
+    core:isAbout core:ArtifactDesign .
+
+:soc_17_3021 a core:SOCEntry ;
+    rdfs:label "SOC:17-3021 Aerospace Engineering and Operations Technologists and Technicians" ;
+    skos:definition "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data." ;
+    core:hasSOCCode "17-3021"^^xsd:string ;
+    core:hasSOCGroup "Detailed"^^xsd:string ;
+    core:hasSOCTitle "Aerospace Engineering and Operations Technologists and Technicians"^^xsd:string .
+
+# The activity/output/inherence chain that the SOC 17-2011 definition describes.
+
+:aerospaceEngineering_Activity a core:ActOfAircraftProcessing ;
+    rdfs:label "Aerospace Engineering Activity" ;
+    skos:definition "An act of aircraft processing in which an aerospace engineer designs, constructs, or tests aircraft, missiles, or spacecraft." ;
+    core:realizes :adaptability_evaluation_role .
+
+:jane_doe_engineer a core:AerospaceEngineer ;
+    rdfs:label "Aerospace Engineer (bearer instance)" ;
+    skos:definition "A representative aerospace engineer individual who serves as the bearer of the adaptability-evaluation realizable entity." .
+
+:adaptability_evaluation_role a core:AdaptabilityEvaluation ;
+    rdfs:label "Adaptability Evaluation (of materials and equipment for aircraft design)" ;
+    skos:definition "The realizable capacity to evaluate the adaptability of materials and equipment to aircraft design and manufacture, as referenced in the SOC 17-2011 definition." ;
+    core:inheresIn :jane_doe_engineer .
+
+:adaptability_evaluation_report a core:ArtifactDesign ;
+    rdfs:label "Adaptability Evaluation Report" ;
+    skos:definition "An information content entity produced by an aerospace engineering activity that documents an adaptability evaluation." ;
+    core:isOutputOf :aerospaceEngineering_Activity .
+
+########################################
+# Task 4: Three OCC_TITLE entries mention “Aerospace Engineer”; provide a BFO-conformant model of all three entries and all columns associated with each.
+########################################
+
+# Shared area / ownership / group individuals reused by all three entries
+
+:area_US a core:GeographicArea ;
+    rdfs:label "U.S." ;
+    skos:definition "The United States, as the geographic area referenced by the AREA=99, AREA_TITLE='U.S.' OEWS records." ;
+    core:hasAreaCode      "99"^^xsd:string ;
+    core:hasAreaTitle     "U.S."^^xsd:string ;
+    core:hasAreaType      "1"^^xsd:string ;
+    core:hasPrimState     "US"^^xsd:string .
+
+:ownCode_1235 a core:OwnershipCategory ;
+    rdfs:label "OWN_CODE 1235" ;
+    skos:definition "The OWN_CODE 1235 ownership category as used in the BLS OEWS May 2024 estimates for cross-industry aggregations." ;
+    core:hasOwnCode       "1235"^^xsd:string .
+
+:oGroup_broad a core:OccupationGroup ;
+    rdfs:label "O_GROUP broad" ;
+    skos:definition "The Broad tier of the SOC hierarchy in the O_GROUP column of the BLS OEWS data." ;
+    core:hasOGroupValue   "broad"^^xsd:string .
+
+:oGroup_detailed a core:OccupationGroup ;
+    rdfs:label "O_GROUP detailed" ;
+    skos:definition "The Detailed tier of the SOC hierarchy in the O_GROUP column of the BLS OEWS data." ;
+    core:hasOGroupValue   "detailed"^^xsd:string .
+
+# ------------------------------------------------
+# OCC Entry 1: 17-2010 Aerospace Engineers (broad)
+# ------------------------------------------------
+
+:occ_17_2010 a core:OCCEntry ;
+    rdfs:label "OCC:17-2010 Aerospace Engineers" ;
+    skos:definition "OEWS May 2024 record for OCC_CODE 17-2010 (Aerospace Engineers, broad tier), cross-industry, U.S." ;
+    core:hasArea          :area_US ;
+    core:ownCode          :ownCode_1235 ;
+    core:oGroup           :oGroup_broad ;
+    core:hasNAICS         "000000"^^xsd:string ;
+    core:hasNAICSTitle    "Cross-industry"^^xsd:string ;
+    core:hasIGroup        "cross-industry"^^xsd:string ;
+    core:hasOCCCode       "17-2010"^^xsd:string ;
+    core:hasOCCTitle      "Aerospace Engineers"^^xsd:string ;
+    core:hasTotEmp        "68440"^^xsd:integer ;
+    core:hasEmpPrse       "2.3"^^xsd:decimal ;
+    core:hasHMean         "67.88"^^xsd:decimal ;
+    core:hasAMean         "141180"^^xsd:decimal ;
+    core:hasMeanPrse      "0.8"^^xsd:decimal ;
+    core:hasHPct10        "41.04"^^xsd:decimal ;
+    core:hasHPct25        "50.36"^^xsd:decimal ;
+    core:hasHMedian       "64.82"^^xsd:decimal ;
+    core:hasHPct75        "83.88"^^xsd:decimal ;
+    core:hasHPct90        "98.97"^^xsd:decimal ;
+    core:hasAPct10        "85350"^^xsd:decimal ;
+    core:hasAPct25        "104740"^^xsd:decimal ;
+    core:hasAMedian       "134830"^^xsd:decimal ;
+    core:hasAPct75        "174480"^^xsd:decimal ;
+    core:hasAPct90        "205850"^^xsd:decimal ;
+    core:isAbout          :population_17_2010 .
+
+:population_17_2010 a core:Population ;
+    rdfs:label "Aerospace Engineers population (SOC 17-2010, U.S., cross-industry)" ;
+    skos:definition "The aggregate of persons in the United States, cross-industry, occupying the SOC 17-2010 Aerospace Engineers broad occupation." .
+
+:totalEmployment_17_2010 a core:TotalEmployment ;
+    rdfs:label "Total Employment" ;
+    skos:definition "The Total Employment quality of the SOC 17-2010 U.S. cross-industry population, measured at 68440 for May 2024." ;
+    core:inheresIn :population_17_2010 ;
+    core:hasTotalEmploymentValue "68440"^^xsd:integer .
+
+:measuringAct_17_2010 a core:ActOfMeasuring ;
+    rdfs:label "Act of Measuring Total Employment (SOC 17-2010, May 2024)" ;
+    skos:definition "The BLS OEWS act of measuring that determined the May 2024 Total Employment value for SOC 17-2010." ;
+    core:isAbout :totalEmployment_17_2010 .
+
+# ------------------------------------------------
+# OCC Entry 2: 17-2011 Aerospace Engineers (detailed)
+# ------------------------------------------------
+
+:occ_17_2011 a core:OCCEntry ;
+    rdfs:label "OCC:17-2011 Aerospace Engineers" ;
+    skos:definition "OEWS May 2024 record for OCC_CODE 17-2011 (Aerospace Engineers, detailed tier), cross-industry, U.S." ;
+    core:hasArea          :area_US ;
+    core:ownCode          :ownCode_1235 ;
+    core:oGroup           :oGroup_detailed ;
+    core:hasNAICS         "000000"^^xsd:string ;
+    core:hasNAICSTitle    "Cross-industry"^^xsd:string ;
+    core:hasIGroup        "cross-industry"^^xsd:string ;
+    core:hasOCCCode       "17-2011"^^xsd:string ;
+    core:hasOCCTitle      "Aerospace Engineers"^^xsd:string ;
+    core:hasTotEmp        "68440"^^xsd:integer ;
+    core:hasEmpPrse       "2.3"^^xsd:decimal ;
+    core:hasHMean         "67.88"^^xsd:decimal ;
+    core:hasAMean         "141180"^^xsd:decimal ;
+    core:hasMeanPrse      "0.8"^^xsd:decimal ;
+    core:hasHPct10        "41.04"^^xsd:decimal ;
+    core:hasHPct25        "50.36"^^xsd:decimal ;
+    core:hasHMedian       "64.82"^^xsd:decimal ;
+    core:hasHPct75        "83.88"^^xsd:decimal ;
+    core:hasHPct90        "98.97"^^xsd:decimal ;
+    core:hasAPct10        "85350"^^xsd:decimal ;
+    core:hasAPct25        "104740"^^xsd:decimal ;
+    core:hasAMedian       "134830"^^xsd:decimal ;
+    core:hasAPct75        "174480"^^xsd:decimal ;
+    core:hasAPct90        "205850"^^xsd:decimal ;
+    core:isAbout          :population_17_2011 .
+
+:population_17_2011 a core:Population ;
+    rdfs:label "Aerospace Engineers population (SOC 17-2011, U.S., cross-industry)" ;
+    skos:definition "The aggregate of persons in the United States, cross-industry, occupying the SOC 17-2011 Aerospace Engineers detailed occupation." .
+
+:totalEmployment_17_2011 a core:TotalEmployment ;
+    rdfs:label "Total Employment" ;
+    skos:definition "The Total Employment quality of the SOC 17-2011 U.S. cross-industry population, measured at 68440 for May 2024." ;
+    core:inheresIn :population_17_2011 ;
+    core:hasTotalEmploymentValue "68440"^^xsd:integer .
+
+:measuringAct_17_2011 a core:ActOfMeasuring ;
+    rdfs:label "Act of Measuring Total Employment (SOC 17-2011, May 2024)" ;
+    skos:definition "The BLS OEWS act of measuring that determined the May 2024 Total Employment value for SOC 17-2011." ;
+    core:isAbout :totalEmployment_17_2011 .
+
+# ------------------------------------------------
+# OCC Entry 3: 17-3021 Aerospace Engineering and Operations Technologists and Technicians (detailed)
+# ------------------------------------------------
+
+:occ_17_3021 a core:OCCEntry ;
+    rdfs:label "OCC:17-3021 Aerospace Engineering and Operations Technologists and Technicians" ;
+    skos:definition "OEWS May 2024 record for OCC_CODE 17-3021 (Aerospace Engineering and Operations Technologists and Technicians, detailed tier), cross-industry, U.S." ;
+    core:hasArea          :area_US ;
+    core:ownCode          :ownCode_1235 ;
+    core:oGroup           :oGroup_detailed ;
+    core:hasNAICS         "000000"^^xsd:string ;
+    core:hasNAICSTitle    "Cross-industry"^^xsd:string ;
+    core:hasIGroup        "cross-industry"^^xsd:string ;
+    core:hasOCCCode       "17-3021"^^xsd:string ;
+    core:hasOCCTitle      "Aerospace Engineering and Operations Technologists and Technicians"^^xsd:string ;
+    core:hasTotEmp        "9060"^^xsd:integer ;
+    core:hasEmpPrse       "4.3"^^xsd:decimal ;
+    core:hasHMean         "41.5"^^xsd:decimal ;
+    core:hasAMean         "86330"^^xsd:decimal ;
+    core:hasMeanPrse      "1.4"^^xsd:decimal ;
+    core:hasHPct10        "25.83"^^xsd:decimal ;
+    core:hasHPct25        "31.04"^^xsd:decimal ;
+    core:hasHMedian       "38.38"^^xsd:decimal ;
+    core:hasHPct75        "49.14"^^xsd:decimal ;
+    core:hasHPct90        "57.91"^^xsd:decimal ;
+    core:hasAPct10        "53730"^^xsd:decimal ;
+    core:hasAPct25        "64570"^^xsd:decimal ;
+    core:hasAMedian       "79830"^^xsd:decimal ;
+    core:hasAPct75        "102220"^^xsd:decimal ;
+    core:hasAPct90        "120440"^^xsd:decimal ;
+    core:isAbout          :population_17_3021 .
+
+:population_17_3021 a core:Population ;
+    rdfs:label "Aerospace Engineering Technicians population (SOC 17-3021, U.S., cross-industry)" ;
+    skos:definition "The aggregate of persons in the United States, cross-industry, occupying the SOC 17-3021 Aerospace Engineering and Operations Technologists and Technicians occupation." .
+
+:totalEmployment_17_3021 a core:TotalEmployment ;
+    rdfs:label "Total Employment" ;
+    skos:definition "The Total Employment quality of the SOC 17-3021 U.S. cross-industry population, measured at 9060 for May 2024." ;
+    core:inheresIn :population_17_3021 ;
+    core:hasTotalEmploymentValue "9060"^^xsd:integer .
+
+:measuringAct_17_3021 a core:ActOfMeasuring ;
+    rdfs:label "Act of Measuring Total Employment (SOC 17-3021, May 2024)" ;
+    skos:definition "The BLS OEWS act of measuring that determined the May 2024 Total Employment value for SOC 17-3021." ;
+    core:isAbout :totalEmployment_17_3021 .
