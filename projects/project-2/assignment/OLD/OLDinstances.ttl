@@ -1,0 +1,213 @@
+@prefix : <http://example.org/ns/core#> .
+@prefix bfo: <http://purl.obolibrary.org/obo/BFO_> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+#################################################################
+# TASK 1: Airbus A320 NEO Model
+#################################################################
+
+:AirbusA320NEODesign a :ArtifactDesign ;
+    rdfs:label "Airbus A320 NEO Design Specification"@en ;
+    skos:definition "Artifact design specification for the Airbus A320 NEO aircraft row."@en ;
+    :hasModelBADA "Airbus A320-271N"^^xsd:string ;
+    :hasModelFAA "Airbus A320 Neo"^^xsd:string ;
+    :hasLengthFt "123.3"^^xsd:decimal ;
+    :hasTailHeightFt "39.6"^^xsd:decimal ;
+    :hasContinuantPart :A320NEO_Engine1, :A320NEO_Engine2 .
+
+:AirbusA320NEOAircraft a :FixedWing ;
+    rdfs:label "Airbus A320 NEO Aircraft Instance"@en ;
+    skos:definition "An instance of a fixed-wing aircraft constructed according to the Airbus A320 NEO design."@en ;
+    :hasContinuantPart :A320NEO_Engine1, :A320NEO_Engine2 .
+
+:A320NEO_Engine1 a :JetEngine ;
+    rdfs:label "Airbus A320 NEO Engine 1"@en ;
+    skos:definition "First jet engine component of the Airbus A320 NEO."@en .
+
+:A320NEO_Engine2 a :JetEngine ;
+    rdfs:label "Airbus A320 NEO Engine 2"@en ;
+    skos:definition "Second jet engine component of the Airbus A320 NEO."@en .
+
+
+#################################################################
+# TASK 2: Airbus A321-111 Test Process & Approach Speed
+#################################################################
+
+:A321_111_KnotUnit a :MeasurementUnit ;
+    rdfs:label "Knot Approach Speed Unit"@en ;
+    skos:definition "Measurement unit for knots used in aircraft approach speed specifications."@en .
+
+:AirbusA321_111Design a :ArtifactDesign ;
+    rdfs:label "Airbus A321-111 Design Specification"@en ;
+    skos:definition "Artifact design for the Airbus A321-111 specifying standard performance limits."@en ;
+    :prescribes :PrescribedApproachSpeed .
+
+:PrescribedApproachSpeed a bfo:BFO_0000031 ; # Generically Dependent Continuant
+    rdfs:label "Prescribed Maximum Knot Approach Speed Specification"@en ;
+    skos:definition "Specification prescribing a maximum knot approach speed of 142 knots."@en ;
+    :isMeasurementUnitOf :A321_111_KnotUnit ;
+    :isAbout "142"^^xsd:integer .
+
+:OverallA321TestProcess a :TestProcess ;
+    rdfs:label "Airbus A321-111 Multi-Approach Test Process"@en ;
+    skos:definition "Overall test process comprising 5 approach test process runs."@en ;
+    :isAbout "139"^^xsd:decimal . # Average maximum knot approach speed obtained
+
+:ApproachTestRun1 a :TestProcess ;
+    rdfs:label "Approach Test Run 1"@en ;
+    skos:definition "First approach test measurement run."@en ;
+    :isTemporalPartOf :OverallA321TestProcess .
+
+:ApproachTestRun2 a :TestProcess ;
+    rdfs:label "Approach Test Run 2"@en ;
+    skos:definition "Second approach test measurement run."@en ;
+    :isTemporalPartOf :OverallA321TestProcess .
+
+:ApproachTestRun3 a :TestProcess ;
+    rdfs:label "Approach Test Run 3"@en ;
+    skos:definition "Third approach test measurement run."@en ;
+    :isTemporalPartOf :OverallA321TestProcess .
+
+:ApproachTestRun4 a :TestProcess ;
+    rdfs:label "Approach Test Run 4"@en ;
+    skos:definition "Fourth approach test measurement run."@en ;
+    :isTemporalPartOf :OverallA321TestProcess .
+
+:ApproachTestRun5 a :TestProcess ;
+    rdfs:label "Approach Test Run 5"@en ;
+    skos:definition "Fifth approach test measurement run."@en ;
+    :isTemporalPartOf :OverallA321TestProcess .
+
+
+#################################################################
+# TASK 3: SOC Aerospace Engineer Role Entries
+#################################################################
+
+# Entry 1
+:SOC_AerospaceEngineer_Role_1 a bfo:BFO_0000023 ; # Role
+    rdfs:label "SOC Aerospace Engineer Role 1"@en ;
+    skos:definition "First Standard Occupational Classification role entry for Aerospace Engineer."@en ;
+    :inheresIn :AerospaceEngineerIndividual1 ;
+    :realizes :AircraftProcessingAct1 .
+
+:AerospaceEngineerIndividual1 a bfo:BFO_0000040 ; # Material Entity
+    rdfs:label "Aerospace Engineer Practitioner 1"@en ;
+    skos:definition "Individual occupying SOC Aerospace Engineer role 1."@en .
+
+:AircraftProcessingAct1 a :ActOfAircraftProcessing ;
+    rdfs:label "Act of Aircraft Processing 1"@en ;
+    skos:definition "Operational processing activity realized by SOC Aerospace Engineer role 1."@en ;
+    :isOutputOf :AdaptabilityEval1 .
+
+:AdaptabilityEval1 a :AdaptabilityEvaluation ;
+    rdfs:label "Adaptability Evaluation 1"@en ;
+    skos:definition "Adaptability evaluation process evaluating aircraft design specifications."@en ;
+    :isAbout :AirbusA320NEODesign .
+
+# Entry 2
+:SOC_AerospaceEngineer_Role_2 a bfo:BFO_0000023 ;
+    rdfs:label "SOC Aerospace Engineer Role 2"@en ;
+    skos:definition "Second Standard Occupational Classification role entry for Aerospace Engineer."@en ;
+    :inheresIn :AerospaceEngineerIndividual2 ;
+    :realizes :AircraftProcessingAct2 .
+
+:AerospaceEngineerIndividual2 a bfo:BFO_0000040 ;
+    rdfs:label "Aerospace Engineer Practitioner 2"@en ;
+    skos:definition "Individual occupying SOC Aerospace Engineer role 2."@en .
+
+:AircraftProcessingAct2 a :ActOfAircraftProcessing ;
+    rdfs:label "Act of Aircraft Processing 2"@en ;
+    skos:definition "Operational processing activity realized by SOC Aerospace Engineer role 2."@en ;
+    :isOutputOf :AdaptabilityEval2 .
+
+:AdaptabilityEval2 a :AdaptabilityEvaluation ;
+    rdfs:label "Adaptability Evaluation 2"@en ;
+    skos:definition "Adaptability evaluation process evaluating aircraft design specifications."@en ;
+    :isAbout :AirbusA321_111Design .
+
+# Entry 3
+:SOC_AerospaceEngineer_Role_3 a bfo:BFO_0000023 ;
+    rdfs:label "SOC Aerospace Engineer Role 3"@en ;
+    skos:definition "Third Standard Occupational Classification role entry for Aerospace Engineer."@en ;
+    :inheresIn :AerospaceEngineerIndividual3 ;
+    :realizes :AircraftProcessingAct3 .
+
+:AerospaceEngineerIndividual3 a bfo:BFO_0000040 ;
+    rdfs:label "Aerospace Engineer Practitioner 3"@en ;
+    skos:definition "Individual occupying SOC Aerospace Engineer role 3."@en .
+
+:AircraftProcessingAct3 a :ActOfAircraftProcessing ;
+    rdfs:label "Act of Aircraft Processing 3"@en ;
+    skos:definition "Operational processing activity realized by SOC Aerospace Engineer role 3."@en ;
+    :isOutputOf :AdaptabilityEval3 .
+
+:AdaptabilityEval3 a :AdaptabilityEvaluation ;
+    rdfs:label "Adaptability Evaluation 3"@en ;
+    skos:definition "Adaptability evaluation process evaluating general aerospace designs."@en ;
+    :isAbout :AirbusA320NEODesign .
+
+
+#################################################################
+# TASK 4: OCC Aerospace Engineer Employment & Wage Entries (May 2024)
+#################################################################
+
+# OCC Entry 1
+:OCC_AerospaceEngineer_Entry_1 a bfo:BFO_0000031 ;
+    rdfs:label "OCC Aerospace Engineer Entry 1"@en ;
+    skos:definition "Occupational Employment and Wage Statistics record for Aerospace Engineers (Entry 1)."@en ;
+    :hasArea "National"^^xsd:string ;
+    :oGroup "17-0000"^^xsd:string ;
+    :ownCode "17-2011"^^xsd:string .
+
+:TotalEmploymentQuality1 a :TotalEmployment ;
+    rdfs:label "Total Employment Quality 1"@en ;
+    skos:definition "Total employment population quality for OCC Aerospace Engineer entry 1."@en ;
+    :inheresIn :OCC_AerospaceEngineer_Entry_1 .
+
+:MeasuringAct1 a :ActOfMeasuring ;
+    rdfs:label "Act of Measuring Employment 1"@en ;
+    skos:definition "Measurement activity yielding total employment numerical count."@en ;
+    :isAbout :TotalEmploymentQuality1 ;
+    :isAbout "65430"^^xsd:integer .
+
+# OCC Entry 2
+:OCC_AerospaceEngineer_Entry_2 a bfo:BFO_0000031 ;
+    rdfs:label "OCC Aerospace Engineer Entry 2"@en ;
+    skos:definition "Occupational Employment and Wage Statistics record for Aerospace Engineers (Entry 2)."@en ;
+    :hasArea "Statewide"^^xsd:string ;
+    :oGroup "17-0000"^^xsd:string ;
+    :ownCode "17-2011"^^xsd:string .
+
+:TotalEmploymentQuality2 a :TotalEmployment ;
+    rdfs:label "Total Employment Quality 2"@en ;
+    skos:definition "Total employment population quality for OCC Aerospace Engineer entry 2."@en ;
+    :inheresIn :OCC_AerospaceEngineer_Entry_2 .
+
+:MeasuringAct2 a :ActOfMeasuring ;
+    rdfs:label "Act of Measuring Employment 2"@en ;
+    skos:definition "Measurement activity yielding state total employment numerical count."@en ;
+    :isAbout :TotalEmploymentQuality2 ;
+    :isAbout "12450"^^xsd:integer .
+
+# OCC Entry 3
+:OCC_AerospaceEngineer_Entry_3 a bfo:BFO_0000031 ;
+    rdfs:label "OCC Aerospace Engineer Entry 3"@en ;
+    skos:definition "Occupational Employment and Wage Statistics record for Aerospace Engineers (Entry 3)."@en ;
+    :hasArea "Metropolitan"^^xsd:string ;
+    :oGroup "17-0000"^^xsd:string ;
+    :ownCode "17-2011"^^xsd:string .
+
+:TotalEmploymentQuality3 a :TotalEmployment ;
+    rdfs:label "Total Employment Quality 3"@en ;
+    skos:definition "Total employment population quality for OCC Aerospace Engineer entry 3."@en ;
+    :inheresIn :OCC_AerospaceEngineer_Entry_3 .
+
+:MeasuringAct3 a :ActOfMeasuring ;
+    rdfs:label "Act of Measuring Employment 3"@en ;
+    skos:definition "Measurement activity yielding metropolitan total employment numerical count."@en ;
+    :isAbout :TotalEmploymentQuality3 ;
+    :isAbout "3210"^^xsd:integer .

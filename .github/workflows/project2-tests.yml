@@ -6,7 +6,12 @@ on:
     paths:
       - "projects/project-2/**"
       - ".github/workflows/project2-tests.yml"
-  workflow_dispatch:
+#  added push trigger to run tests on pushes to main branch     
+  push:
+    paths:
+      - "projects/project-2/**"
+      - ".github/workflows/project2-tests.yml"
+  workflow_dispatch:      
 
 jobs:
   test:
