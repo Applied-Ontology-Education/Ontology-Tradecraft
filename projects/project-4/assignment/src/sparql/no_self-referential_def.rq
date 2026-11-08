@@ -4,3 +4,15 @@
 #    No class definition should be self-referential. 
 # Severity:  
 #    Error
+# Quote: "no class should appear in a circular rdfs:subClassOf chain, because unintended cycles break reasoners like HermiT and ELK (which collapse affected classes under owl:Thing). The one exception is owl:equivalentClass, which is intentionally bidirectional and allowed."
+
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?class ?error
+WHERE {
+  ?class a owl:Class .
+  ?class owl:equivalentClass+ ?class .
+  FILTER (!isBlank(?class))
+  BIND (concat("ERROR: The following class definition is self-referential ", str(?class)) AS ?error)
+}
+ORDER BY (str(?class))

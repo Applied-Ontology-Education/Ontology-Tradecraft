@@ -4,3 +4,15 @@
 #    No annotation value may have leading or trailing whitespace.    
 # Severity:
 #    Error 
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?element ?property ?value ?error
+WHERE {
+  ?property a owl:AnnotationProperty .
+  ?element ?property ?value .
+  FILTER (isLiteral(?value))
+  FILTER (REGEX(STR(?value), "^\\s|\\s$"))
+  BIND (concat("ERROR: The following annotation value has leading or trailing whitespace ", str(?element), " ", str(?property), " '", str(?value), "'") AS ?error)
+}
+ORDER BY (str(?element))
