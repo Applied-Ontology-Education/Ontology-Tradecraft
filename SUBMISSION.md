@@ -1,8 +1,8 @@
-# Submission and Peer Review
+# Submission 
 
 This page defines the standard submission workflow for **Projects 1–6** in Ontology Tradecraft.
 
-The course is remote and asynchronous. GitHub is the primary environment for submitting technical work, receiving feedback, reviewing peer work, and documenting revisions.
+The course is remote and asynchronous. GitHub is the primary environment for submitting technical work, receiving feedback, and documenting revisions.
 
 Unless a project README explicitly states otherwise, use the workflow below.
 
@@ -214,10 +214,7 @@ Describe the tests, reasoners, queries, validation commands, or other checks you
 
 List any known limitations or unresolved problems. Write "None known" if appropriate.
 
-## Questions
-
-List any questions for reviewers.
-```
+## Pull Request
 
 A pull request is part of the assignment. It should make your work understandable to someone who did not watch you create it.
 
@@ -226,10 +223,6 @@ A pull request is part of the assignment. It should make your work understandabl
 ## 7. Check GitHub Actions
 
 If the repository runs automated checks, look at the **Checks** or **Actions** section of your pull request.
-
-### If the checks pass
-
-Proceed to peer review.
 
 ### If a check fails
 
@@ -246,80 +239,7 @@ Do not open a second pull request merely to fix the first one.
 
 ---
 
-## 8. Complete Peer Review
-
-Projects 1–5 include peer-review activity unless the project instructions say otherwise.
-
-A substantive peer review should do more than say that the work looks good or bad.
-
-A useful review might:
-
-- identify a modeling ambiguity;
-- question a class or relation choice;
-- identify a missing competency question;
-- point out an RDF, OWL, SPARQL, or SHACL issue;
-- suggest a clearer definition;
-- identify a failed or missing test;
-- question whether ontology reuse is appropriate;
-- identify an interoperability problem;
-- suggest a simpler implementation; or
-- explain why a particular design decision is strong.
-
-Be charitable, specific, and technically useful.
-
-Examples of insufficient review comments:
-
-```text
-Looks good.
-```
-
-```text
-I don't think this is right.
-```
-
-Examples of useful review comments:
-
-```text
-The competency question asks which organizations participate in the process,
-but the current model connects only persons to the process. Is the intended
-restriction deliberate? If not, the domain of `has participant` may need to be
-used more generally here.
-```
-
-```text
-The SHACL shape requires exactly one identifier, but the ontology does not
-appear to state that identifiers are unique. I would distinguish the validation
-requirement from the OWL claim and document why the closed-world constraint is
-being enforced in SHACL.
-```
-
----
-
-## 9. Respond to Feedback
-
-Peer review is not complete merely because someone commented on your pull request.
-
-You should:
-
-1. read the feedback;
-2. decide whether a revision is warranted;
-3. make appropriate changes;
-4. push those changes to the same branch; and
-5. respond to the reviewer.
-
-If you disagree with a suggestion, explain why. You are not required to accept every recommendation, but you are expected to engage seriously with substantive feedback.
-
-Useful response:
-
-```text
-I kept the relation unchanged because the competency questions require
-participation by both persons and organizations. I added documentation explaining
-that choice and a test case showing both uses.
-```
-
----
-
-## 10. Final Submission State
+## 8. Final Submission State
 
 A project is ready for final evaluation when:
 
@@ -327,7 +247,6 @@ A project is ready for final evaluation when:
 - [ ] required local tests have been run;
 - [ ] applicable automated checks pass;
 - [ ] the pull request description is complete;
-- [ ] required peer review has been completed;
 - [ ] you have responded to substantive feedback; and
 - [ ] your final revisions have been pushed to the pull request.
 
@@ -343,13 +262,13 @@ Make the change locally:
 
 ```bash
 git add .
-git commit -m "Address peer review feedback"
+git commit -m "message"
 git push
 ```
 
 The existing pull request will update automatically.
 
-This is intentional: the pull request should preserve the history of the project, review, and revision.
+This is intentional: the pull request should preserve the history of the project and revision.
 
 ---
 
@@ -541,10 +460,6 @@ push
 open pull request
    ↓
 check automated tests
-   ↓
-complete peer review
-   ↓
-respond to feedback
    ↓
 revise and push
    ↓
