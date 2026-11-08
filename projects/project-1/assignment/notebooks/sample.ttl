@@ -1,3 +1,4 @@
+
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 
 <http://example.org/AO634> rdf:type <http://example.org/Course> .
