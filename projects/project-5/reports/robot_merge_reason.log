@@ -1,0 +1,17 @@
+COMMAND
+==============================================================================
+C:\windows\robot.BAT merge --collapse-import-closure false --input C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module.ttl --input C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\accepted_el.ttl reason --reasoner ELK --remove-redundant-subclass-axioms false -D C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\elk_unsatisfiable.ttl --output C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module_augmented.ttl
+
+STDOUT
+==============================================================================
+
+C:\Users\cappa\Ontology-Tradecraft\projects\project-5>java  -jar C:\Windows\robot.jar merge --collapse-import-closure false --input C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module.ttl --input C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\accepted_el.ttl reason --reasoner ELK --remove-redundant-subclass-axioms false -D C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\elk_unsatisfiable.ttl --output C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module_augmented.ttl 
+
+
+STDERR
+==============================================================================
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.base.UnsafeAccess (file:/C:/Windows/robot.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.base.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+

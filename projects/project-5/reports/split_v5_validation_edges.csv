@@ -1,0 +1,22 @@
+subclass_label,subclass,superclass_label,superclass,remaining_rows,remaining_lhs,remaining_rhs
+Military Personnel Force,https://www.commoncoreontologies.org/ont00000426,Armed Force,https://www.commoncoreontologies.org/ont00000274,3,1,2
+Objective,https://www.commoncoreontologies.org/ont00000476,ont00000965,https://www.commoncoreontologies.org/ont00000965,3,1,2
+Skill,https://www.commoncoreontologies.org/ont00000089,Agent Capability,https://www.commoncoreontologies.org/ont00001379,3,1,2
+Eye,https://www.commoncoreontologies.org/ont00000500,Bodily Component,https://www.commoncoreontologies.org/ont00000084,4,1,3
+Agent,https://www.commoncoreontologies.org/ont00001017,BFO_0000040,http://purl.obolibrary.org/obo/BFO_0000040,12,1,11
+Division of Delimiting Domain,https://www.commoncoreontologies.org/ont00001114,ont00000472,https://www.commoncoreontologies.org/ont00000472,2,2,0
+Ethnic Group,https://www.commoncoreontologies.org/ont00000507,Group of Persons,https://www.commoncoreontologies.org/ont00000914,3,2,1
+Fourth-Order Administrative Region,https://www.commoncoreontologies.org/ont00000473,Government Domain,https://www.commoncoreontologies.org/ont00001152,3,2,1
+Geopolitical Power Role,https://www.commoncoreontologies.org/ont00000898,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023,3,2,1
+Government Organization,https://www.commoncoreontologies.org/ont00000408,Organization,https://www.commoncoreontologies.org/ont00001180,3,2,1
+Organization Member,https://www.commoncoreontologies.org/ont00000647,Person,https://www.commoncoreontologies.org/ont00001262,3,2,1
+Commercial Organization,https://www.commoncoreontologies.org/ont00000443,Organization,https://www.commoncoreontologies.org/ont00001180,4,2,2
+Commercial Role,https://www.commoncoreontologies.org/ont00000485,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023,4,2,2
+Government of a Country,https://www.commoncoreontologies.org/ont00000532,Government,https://www.commoncoreontologies.org/ont00001335,4,2,2
+Material Territory of a Government Domain,https://www.commoncoreontologies.org/ont00000662,ont00001341,https://www.commoncoreontologies.org/ont00001341,4,2,2
+Neutral Role,https://www.commoncoreontologies.org/ont00000486,Allegiance Role,https://www.commoncoreontologies.org/ont00000392,4,2,2
+Process Prohibition,https://www.commoncoreontologies.org/ont00000553,Process Regulation,https://www.commoncoreontologies.org/ont00001324,4,2,2
+Domain of a Country,https://www.commoncoreontologies.org/ont00000139,Government Domain,https://www.commoncoreontologies.org/ont00001152,5,2,3
+Government,https://www.commoncoreontologies.org/ont00001335,Organization,https://www.commoncoreontologies.org/ont00001180,5,3,2
+Agent Capability,https://www.commoncoreontologies.org/ont00001379,BFO_0000017,http://purl.obolibrary.org/obo/BFO_0000017,7,3,4
+Process Regulation,https://www.commoncoreontologies.org/ont00001324,ont00000965,https://www.commoncoreontologies.org/ont00000965,8,3,5

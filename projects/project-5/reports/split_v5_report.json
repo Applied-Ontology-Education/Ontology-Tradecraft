@@ -1,0 +1,221 @@
+{
+  "script_version": "mowl-aware-local-optimization-v5",
+  "starting_split": {
+    "closure": 196,
+    "closure_retention": 0.8711111111111111,
+    "zero_lhs": 3,
+    "weak_rows": 15,
+    "one_row": 6,
+    "minimum_rows": 1,
+    "minimum_lhs": 0,
+    "mean_rows": 2.5238095238095237,
+    "mean_lhs": 1.0476190476190477
+  },
+  "optimized_split": {
+    "improved": true,
+    "training_direct": 82,
+    "validation_direct": 21,
+    "closure": 169,
+    "closure_retention": 0.7511111111111111,
+    "zero_lhs": 0,
+    "weak_rows": 1,
+    "one_row": 0,
+    "minimum_rows": 2,
+    "minimum_lhs": 1,
+    "mean_rows": 4.333333333333333,
+    "mean_lhs": 1.9047619047619047,
+    "direct_overlap": 0,
+    "transitive_leakage": 0
+  },
+  "validation_edges": [
+    {
+      "subclass_label": "Military Personnel Force",
+      "subclass": "https://www.commoncoreontologies.org/ont00000426",
+      "superclass_label": "Armed Force",
+      "superclass": "https://www.commoncoreontologies.org/ont00000274",
+      "remaining_rows": 3,
+      "remaining_lhs": 1,
+      "remaining_rhs": 2
+    },
+    {
+      "subclass_label": "Objective",
+      "subclass": "https://www.commoncoreontologies.org/ont00000476",
+      "superclass_label": "ont00000965",
+      "superclass": "https://www.commoncoreontologies.org/ont00000965",
+      "remaining_rows": 3,
+      "remaining_lhs": 1,
+      "remaining_rhs": 2
+    },
+    {
+      "subclass_label": "Skill",
+      "subclass": "https://www.commoncoreontologies.org/ont00000089",
+      "superclass_label": "Agent Capability",
+      "superclass": "https://www.commoncoreontologies.org/ont00001379",
+      "remaining_rows": 3,
+      "remaining_lhs": 1,
+      "remaining_rhs": 2
+    },
+    {
+      "subclass_label": "Eye",
+      "subclass": "https://www.commoncoreontologies.org/ont00000500",
+      "superclass_label": "Bodily Component",
+      "superclass": "https://www.commoncoreontologies.org/ont00000084",
+      "remaining_rows": 4,
+      "remaining_lhs": 1,
+      "remaining_rhs": 3
+    },
+    {
+      "subclass_label": "Agent",
+      "subclass": "https://www.commoncoreontologies.org/ont00001017",
+      "superclass_label": "BFO_0000040",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "remaining_rows": 12,
+      "remaining_lhs": 1,
+      "remaining_rhs": 11
+    },
+    {
+      "subclass_label": "Division of Delimiting Domain",
+      "subclass": "https://www.commoncoreontologies.org/ont00001114",
+      "superclass_label": "ont00000472",
+      "superclass": "https://www.commoncoreontologies.org/ont00000472",
+      "remaining_rows": 2,
+      "remaining_lhs": 2,
+      "remaining_rhs": 0
+    },
+    {
+      "subclass_label": "Ethnic Group",
+      "subclass": "https://www.commoncoreontologies.org/ont00000507",
+      "superclass_label": "Group of Persons",
+      "superclass": "https://www.commoncoreontologies.org/ont00000914",
+      "remaining_rows": 3,
+      "remaining_lhs": 2,
+      "remaining_rhs": 1
+    },
+    {
+      "subclass_label": "Fourth-Order Administrative Region",
+      "subclass": "https://www.commoncoreontologies.org/ont00000473",
+      "superclass_label": "Government Domain",
+      "superclass": "https://www.commoncoreontologies.org/ont00001152",
+      "remaining_rows": 3,
+      "remaining_lhs": 2,
+      "remaining_rhs": 1
+    },
+    {
+      "subclass_label": "Geopolitical Power Role",
+      "subclass": "https://www.commoncoreontologies.org/ont00000898",
+      "superclass_label": "BFO_0000023",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "remaining_rows": 3,
+      "remaining_lhs": 2,
+      "remaining_rhs": 1
+    },
+    {
+      "subclass_label": "Government Organization",
+      "subclass": "https://www.commoncoreontologies.org/ont00000408",
+      "superclass_label": "Organization",
+      "superclass": "https://www.commoncoreontologies.org/ont00001180",
+      "remaining_rows": 3,
+      "remaining_lhs": 2,
+      "remaining_rhs": 1
+    },
+    {
+      "subclass_label": "Organization Member",
+      "subclass": "https://www.commoncoreontologies.org/ont00000647",
+      "superclass_label": "Person",
+      "superclass": "https://www.commoncoreontologies.org/ont00001262",
+      "remaining_rows": 3,
+      "remaining_lhs": 2,
+      "remaining_rhs": 1
+    },
+    {
+      "subclass_label": "Commercial Organization",
+      "subclass": "https://www.commoncoreontologies.org/ont00000443",
+      "superclass_label": "Organization",
+      "superclass": "https://www.commoncoreontologies.org/ont00001180",
+      "remaining_rows": 4,
+      "remaining_lhs": 2,
+      "remaining_rhs": 2
+    },
+    {
+      "subclass_label": "Commercial Role",
+      "subclass": "https://www.commoncoreontologies.org/ont00000485",
+      "superclass_label": "BFO_0000023",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "remaining_rows": 4,
+      "remaining_lhs": 2,
+      "remaining_rhs": 2
+    },
+    {
+      "subclass_label": "Government of a Country",
+      "subclass": "https://www.commoncoreontologies.org/ont00000532",
+      "superclass_label": "Government",
+      "superclass": "https://www.commoncoreontologies.org/ont00001335",
+      "remaining_rows": 4,
+      "remaining_lhs": 2,
+      "remaining_rhs": 2
+    },
+    {
+      "subclass_label": "Material Territory of a Government Domain",
+      "subclass": "https://www.commoncoreontologies.org/ont00000662",
+      "superclass_label": "ont00001341",
+      "superclass": "https://www.commoncoreontologies.org/ont00001341",
+      "remaining_rows": 4,
+      "remaining_lhs": 2,
+      "remaining_rhs": 2
+    },
+    {
+      "subclass_label": "Neutral Role",
+      "subclass": "https://www.commoncoreontologies.org/ont00000486",
+      "superclass_label": "Allegiance Role",
+      "superclass": "https://www.commoncoreontologies.org/ont00000392",
+      "remaining_rows": 4,
+      "remaining_lhs": 2,
+      "remaining_rhs": 2
+    },
+    {
+      "subclass_label": "Process Prohibition",
+      "subclass": "https://www.commoncoreontologies.org/ont00000553",
+      "superclass_label": "Process Regulation",
+      "superclass": "https://www.commoncoreontologies.org/ont00001324",
+      "remaining_rows": 4,
+      "remaining_lhs": 2,
+      "remaining_rhs": 2
+    },
+    {
+      "subclass_label": "Domain of a Country",
+      "subclass": "https://www.commoncoreontologies.org/ont00000139",
+      "superclass_label": "Government Domain",
+      "superclass": "https://www.commoncoreontologies.org/ont00001152",
+      "remaining_rows": 5,
+      "remaining_lhs": 2,
+      "remaining_rhs": 3
+    },
+    {
+      "subclass_label": "Government",
+      "subclass": "https://www.commoncoreontologies.org/ont00001335",
+      "superclass_label": "Organization",
+      "superclass": "https://www.commoncoreontologies.org/ont00001180",
+      "remaining_rows": 5,
+      "remaining_lhs": 3,
+      "remaining_rhs": 2
+    },
+    {
+      "subclass_label": "Agent Capability",
+      "subclass": "https://www.commoncoreontologies.org/ont00001379",
+      "superclass_label": "BFO_0000017",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000017",
+      "remaining_rows": 7,
+      "remaining_lhs": 3,
+      "remaining_rhs": 4
+    },
+    {
+      "subclass_label": "Process Regulation",
+      "subclass": "https://www.commoncoreontologies.org/ont00001324",
+      "superclass_label": "ont00000965",
+      "superclass": "https://www.commoncoreontologies.org/ont00000965",
+      "remaining_rows": 8,
+      "remaining_lhs": 3,
+      "remaining_rhs": 5
+    }
+  ]
+}

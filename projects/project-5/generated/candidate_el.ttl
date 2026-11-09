@@ -1,0 +1,265 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://www.commoncoreontologies.org/ont00000058> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027>,
+        <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000071> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        <https://www.commoncoreontologies.org/ont00000134>,
+        <https://www.commoncoreontologies.org/ont00000473>,
+        <https://www.commoncoreontologies.org/ont00000662>,
+        <https://www.commoncoreontologies.org/ont00001114> .
+
+<https://www.commoncoreontologies.org/ont00000084> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000089> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> .
+
+<https://www.commoncoreontologies.org/ont00000129> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000157> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000177> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016>,
+        <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000181> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> .
+
+<https://www.commoncoreontologies.org/ont00000274> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000176>,
+        <https://www.commoncoreontologies.org/ont00000408>,
+        <https://www.commoncoreontologies.org/ont00000509>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000279> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000599> .
+
+<https://www.commoncoreontologies.org/ont00000300> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000318> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> .
+
+<https://www.commoncoreontologies.org/ont00000383> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017>,
+        <https://www.commoncoreontologies.org/ont00001302> .
+
+<https://www.commoncoreontologies.org/ont00000388> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00000647>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000404> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000500> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000506> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000485>,
+        <https://www.commoncoreontologies.org/ont00000509>,
+        <https://www.commoncoreontologies.org/ont00000984> .
+
+<https://www.commoncoreontologies.org/ont00000507> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00000141>,
+        <https://www.commoncoreontologies.org/ont00001017>,
+        <https://www.commoncoreontologies.org/ont00001183> .
+
+<https://www.commoncoreontologies.org/ont00000532> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000408>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000551> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000562> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000564> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00000509>,
+        <https://www.commoncoreontologies.org/ont00001017>,
+        <https://www.commoncoreontologies.org/ont00001302> .
+
+<https://www.commoncoreontologies.org/ont00000576> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000616> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000696> .
+
+<https://www.commoncoreontologies.org/ont00000645> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000666> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000685> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001114>,
+        <https://www.commoncoreontologies.org/ont00001203> .
+
+<https://www.commoncoreontologies.org/ont00000697> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000718> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000134>,
+        <https://www.commoncoreontologies.org/ont00000473> .
+
+<https://www.commoncoreontologies.org/ont00000837> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001183> .
+
+<https://www.commoncoreontologies.org/ont00000860> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000871> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000887> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000134>,
+        <https://www.commoncoreontologies.org/ont00000405>,
+        <https://www.commoncoreontologies.org/ont00000473>,
+        <https://www.commoncoreontologies.org/ont00000662>,
+        <https://www.commoncoreontologies.org/ont00001114> .
+
+<https://www.commoncoreontologies.org/ont00000934> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000046>,
+        <https://www.commoncoreontologies.org/ont00000139>,
+        <https://www.commoncoreontologies.org/ont00000631>,
+        <https://www.commoncoreontologies.org/ont00000662>,
+        <https://www.commoncoreontologies.org/ont00001114> .
+
+<https://www.commoncoreontologies.org/ont00000976> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> .
+
+<https://www.commoncoreontologies.org/ont00000986> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000987> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000175>,
+        <https://www.commoncoreontologies.org/ont00000392> .
+
+<https://www.commoncoreontologies.org/ont00001006> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000187>,
+        <https://www.commoncoreontologies.org/ont00000984> .
+
+<https://www.commoncoreontologies.org/ont00001062> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017>,
+        <https://www.commoncoreontologies.org/ont00001183>,
+        <https://www.commoncoreontologies.org/ont00001239> .
+
+<https://www.commoncoreontologies.org/ont00001125> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00001152> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000567> .
+
+<https://www.commoncoreontologies.org/ont00001164> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000134>,
+        <https://www.commoncoreontologies.org/ont00000460>,
+        <https://www.commoncoreontologies.org/ont00001114> .
+
+<https://www.commoncoreontologies.org/ont00001262> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00001276> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00000176>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00001284> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017>,
+        <https://www.commoncoreontologies.org/ont00001180> .
+
+<https://www.commoncoreontologies.org/ont00001312> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000408>,
+        <https://www.commoncoreontologies.org/ont00000426>,
+        <https://www.commoncoreontologies.org/ont00001017>,
+        <https://www.commoncoreontologies.org/ont00001302> .
+
+<urn:project5:candidate-el> a owl:Ontology .
+
+<https://www.commoncoreontologies.org/ont00000046> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00000631>,
+        <https://www.commoncoreontologies.org/ont00000662>,
+        <https://www.commoncoreontologies.org/ont00001114> .
+
+<https://www.commoncoreontologies.org/ont00000126> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000139>,
+        <https://www.commoncoreontologies.org/ont00001114> .
+
+<https://www.commoncoreontologies.org/ont00000392> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000599> .
+
+<https://www.commoncoreontologies.org/ont00000426> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000010>,
+        <https://www.commoncoreontologies.org/ont00000408>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000898> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017>,
+        <https://www.commoncoreontologies.org/ont00000187> .
+
+<https://www.commoncoreontologies.org/ont00000914> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00001180> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00001203> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000567> .
+
+<https://www.commoncoreontologies.org/ont00001239> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00001335> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000010>,
+        <https://www.commoncoreontologies.org/ont00000176>,
+        <https://www.commoncoreontologies.org/ont00000408>,
+        <https://www.commoncoreontologies.org/ont00000509>,
+        <https://www.commoncoreontologies.org/ont00001302> .
+
+<https://www.commoncoreontologies.org/ont00000139> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000187> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000175>,
+        <https://www.commoncoreontologies.org/ont00000898>,
+        <https://www.commoncoreontologies.org/ont00000984> .
+
+<https://www.commoncoreontologies.org/ont00000405> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000460>,
+        <https://www.commoncoreontologies.org/ont00001114> .
+
+<https://www.commoncoreontologies.org/ont00000443> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000010>,
+        <https://www.commoncoreontologies.org/ont00000509>,
+        <https://www.commoncoreontologies.org/ont00001017>,
+        <https://www.commoncoreontologies.org/ont00001302> .
+
+<https://www.commoncoreontologies.org/ont00000631> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        <http://purl.obolibrary.org/obo/BFO_0000027>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000647> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000984> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000175>,
+        <https://www.commoncoreontologies.org/ont00000485>,
+        <https://www.commoncoreontologies.org/ont00000599> .
+
+<https://www.commoncoreontologies.org/ont00001183> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00000914> .
+
+<https://www.commoncoreontologies.org/ont00000010> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000443>,
+        <https://www.commoncoreontologies.org/ont00001017>,
+        <https://www.commoncoreontologies.org/ont00001302> .
+
+<https://www.commoncoreontologies.org/ont00000176> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00000408>,
+        <https://www.commoncoreontologies.org/ont00001017>,
+        <https://www.commoncoreontologies.org/ont00001335> .
+
+<https://www.commoncoreontologies.org/ont00000460> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000126>,
+        <https://www.commoncoreontologies.org/ont00000134>,
+        <https://www.commoncoreontologies.org/ont00000405>,
+        <https://www.commoncoreontologies.org/ont00000473>,
+        <https://www.commoncoreontologies.org/ont00001114> .
+
+<https://www.commoncoreontologies.org/ont00000473> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <https://www.commoncoreontologies.org/ont00000460>,
+        <https://www.commoncoreontologies.org/ont00001114> .
+
+<https://www.commoncoreontologies.org/ont00000134> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        <https://www.commoncoreontologies.org/ont00000460>,
+        <https://www.commoncoreontologies.org/ont00000662>,
+        <https://www.commoncoreontologies.org/ont00001114> .
+
+<https://www.commoncoreontologies.org/ont00000662> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024>,
+        <http://purl.obolibrary.org/obo/BFO_0000027>,
+        <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000408> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000176>,
+        <https://www.commoncoreontologies.org/ont00000509>,
+        <https://www.commoncoreontologies.org/ont00000647>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00000509> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00000010>,
+        <https://www.commoncoreontologies.org/ont00000443>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+
+<https://www.commoncoreontologies.org/ont00001302> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+

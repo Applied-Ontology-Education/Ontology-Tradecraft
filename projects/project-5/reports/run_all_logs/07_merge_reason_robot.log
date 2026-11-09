@@ -1,0 +1,63 @@
+COMMAND
+==============================================================================
+C:\Users\cappa\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe C:\Users\cappa\Ontology-Tradecraft\projects\project-5\scripts\merge_reason_robot.py
+
+OUTPUT
+==============================================================================
+ROBOT_MERGE_VERSION    : robot-merge-elk-v2-preserve-accepted-subclass-axioms
+
+==============================================================================
+PROJECT 5 - ROBOT MERGE + ELK REASONING
+==============================================================================
+
+Base ontology           : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module.ttl
+Accepted EL axioms      : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\accepted_el.ttl
+Final ontology          : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module_augmented.ttl
+
+Validating Turtle inputs...
+Base triples            : 1225
+Accepted triples        : 22
+Accepted subclass axioms: 22
+Input validation        : PASS
+
+ROBOT                   : Executable: C:\windows\robot.BAT
+
+Running ROBOT merge + ELK...
+
+Command:
+C:\windows\robot.BAT merge --collapse-import-closure false --input C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module.ttl --input C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\accepted_el.ttl reason --reasoner ELK --remove-redundant-subclass-axioms false -D C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\elk_unsatisfiable.ttl --output C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module_augmented.ttl
+
+
+C:\Users\cappa\Ontology-Tradecraft\projects\project-5>java  -jar C:\Windows\robot.jar merge --collapse-import-closure false --input C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module.ttl --input C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\accepted_el.ttl reason --reasoner ELK --remove-redundant-subclass-axioms false -D C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\elk_unsatisfiable.ttl --output C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module_augmented.ttl 
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.base.UnsafeAccess (file:/C:/Windows/robot.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.base.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+
+
+Verifying accepted subclass axioms...
+Accepted expected       : 22
+Accepted retained       : 22
+Accepted missing        : 0
+Accepted-axiom check   : PASS
+
+==============================================================================
+ROBOT + ELK RESULTS
+==============================================================================
+
+ROBOT exit code         : 0
+ELK logical validation  : PASS
+ELK reasoning           : PASS
+Accepted axioms retained: 22/22
+Final triples           : 1811
+Named subclass axioms   : 689
+
+FINAL ONTOLOGY:
+  C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module_augmented.ttl
+
+REPORT:
+  C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\robot_merge_reason_report.json
+
+ROBOT LOG:
+  C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\robot_merge_reason.log

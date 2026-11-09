@@ -1,0 +1,104 @@
+subclass_iri,subclass_label,status,candidate_count
+https://www.commoncoreontologies.org/ont00000751,Action Permission,complete,0
+https://www.commoncoreontologies.org/ont00000177,Affordance,complete,2
+https://www.commoncoreontologies.org/ont00001017,Agent,complete,0
+https://www.commoncoreontologies.org/ont00001379,Agent Capability,complete,0
+https://www.commoncoreontologies.org/ont00000392,Allegiance Role,complete,1
+https://www.commoncoreontologies.org/ont00000860,Allied Person,complete,2
+https://www.commoncoreontologies.org/ont00000587,Ally Role,complete,0
+https://www.commoncoreontologies.org/ont00000562,Animal,complete,2
+https://www.commoncoreontologies.org/ont00000274,Armed Force,complete,3
+https://www.commoncoreontologies.org/ont00000187,Authority Role,complete,3
+https://www.commoncoreontologies.org/ont00001033,Biological Sex,complete,0
+https://www.commoncoreontologies.org/ont00000084,Bodily Component,complete,1
+https://www.commoncoreontologies.org/ont00001276,Carrier Air Wing,complete,3
+https://www.commoncoreontologies.org/ont00000388,Citizen,complete,3
+https://www.commoncoreontologies.org/ont00000987,Citizen Role,complete,1
+https://www.commoncoreontologies.org/ont00000887,City,complete,5
+https://www.commoncoreontologies.org/ont00001302,Civil Organization,complete,2
+https://www.commoncoreontologies.org/ont00000173,Civilian Role,complete,0
+https://www.commoncoreontologies.org/ont00000443,Commercial Organization,complete,4
+https://www.commoncoreontologies.org/ont00000485,Commercial Role,complete,0
+https://www.commoncoreontologies.org/ont00000934,Constituent State,complete,5
+https://www.commoncoreontologies.org/ont00000506,Contractor Role,complete,3
+https://www.commoncoreontologies.org/ont00001164,County,complete,3
+https://www.commoncoreontologies.org/ont00001284,Crew,complete,3
+https://www.commoncoreontologies.org/ont00001203,Delimiting Domain,complete,1
+https://www.commoncoreontologies.org/ont00000377,Disability,complete,0
+https://www.commoncoreontologies.org/ont00000318,Disease,complete,1
+https://www.commoncoreontologies.org/ont00001114,Division of Delimiting Domain,complete,0
+https://www.commoncoreontologies.org/ont00000139,Domain of a Country,complete,2
+https://www.commoncoreontologies.org/ont00000564,Educational Organization,complete,5
+https://www.commoncoreontologies.org/ont00000697,Enemy Person,complete,2
+https://www.commoncoreontologies.org/ont00000279,Enemy Role,complete,1
+https://www.commoncoreontologies.org/ont00000507,Ethnic Group,complete,4
+https://www.commoncoreontologies.org/ont00000780,Ethnicity,complete,0
+https://www.commoncoreontologies.org/ont00000500,Eye,complete,2
+https://www.commoncoreontologies.org/ont00000044,Eye Color,complete,0
+https://www.commoncoreontologies.org/ont00000157,Facial Hair,complete,2
+https://www.commoncoreontologies.org/ont00000837,Family,complete,2
+https://www.commoncoreontologies.org/ont00001212,Female Sex,complete,0
+https://www.commoncoreontologies.org/ont00000608,Financial Value,complete,0
+https://www.commoncoreontologies.org/ont00001073,Financial Value of Property,complete,0
+https://www.commoncoreontologies.org/ont00000126,First-Order Administrative Region,complete,2
+https://www.commoncoreontologies.org/ont00000473,Fourth-Order Administrative Region,complete,4
+https://www.commoncoreontologies.org/ont00000176,Geopolitical Organization,complete,4
+https://www.commoncoreontologies.org/ont00000898,Geopolitical Power Role,complete,2
+https://www.commoncoreontologies.org/ont00001335,Government,complete,5
+https://www.commoncoreontologies.org/ont00001152,Government Domain,complete,1
+https://www.commoncoreontologies.org/ont00000685,Government Domain Border,complete,2
+https://www.commoncoreontologies.org/ont00000408,Government Organization,complete,4
+https://www.commoncoreontologies.org/ont00000532,Government of a Country,complete,2
+https://www.commoncoreontologies.org/ont00000300,Group of Agents,complete,2
+https://www.commoncoreontologies.org/ont00001239,Group of Organizations,complete,1
+https://www.commoncoreontologies.org/ont00000914,Group of Persons,complete,1
+https://www.commoncoreontologies.org/ont00000026,Hair Color,complete,0
+https://www.commoncoreontologies.org/ont00000696,Ideology,complete,0
+https://www.commoncoreontologies.org/ont00000010,Incorporated Organization,complete,3
+https://www.commoncoreontologies.org/ont00001062,International Community,complete,4
+https://www.commoncoreontologies.org/ont00000599,Interpersonal Relationship Role,complete,0
+https://www.commoncoreontologies.org/ont00000404,Iris,complete,1
+https://www.commoncoreontologies.org/ont00000181,Language Skill,complete,1
+https://www.commoncoreontologies.org/ont00000460,Local Administrative Region,complete,5
+https://www.commoncoreontologies.org/ont00001363,Male Sex,complete,0
+https://www.commoncoreontologies.org/ont00000631,Material Territory of a Country,complete,3
+https://www.commoncoreontologies.org/ont00000662,Material Territory of a Government Domain,complete,4
+https://www.commoncoreontologies.org/ont00000426,Military Personnel Force,complete,3
+https://www.commoncoreontologies.org/ont00000666,Neutral Person,complete,2
+https://www.commoncoreontologies.org/ont00000486,Neutral Role,complete,0
+https://www.commoncoreontologies.org/ont00000383,Nuclear Family,complete,3
+https://www.commoncoreontologies.org/ont00000476,Objective,complete,0
+https://www.commoncoreontologies.org/ont00000984,Occupation Role,complete,3
+https://www.commoncoreontologies.org/ont00000567,Operational Area,complete,0
+https://www.commoncoreontologies.org/ont00001006,Operator Role,complete,2
+https://www.commoncoreontologies.org/ont00000551,Organism,complete,1
+https://www.commoncoreontologies.org/ont00001180,Organization,complete,2
+https://www.commoncoreontologies.org/ont00000568,Organization Capability,complete,0
+https://www.commoncoreontologies.org/ont00000647,Organization Member,complete,2
+https://www.commoncoreontologies.org/ont00000175,Organization Member Role,complete,0
+https://www.commoncoreontologies.org/ont00001312,Paramilitary Force,complete,4
+https://www.commoncoreontologies.org/ont00000645,Permanent Resident,complete,2
+https://www.commoncoreontologies.org/ont00000917,Permanent Resident Role,complete,0
+https://www.commoncoreontologies.org/ont00001262,Person,complete,2
+https://www.commoncoreontologies.org/ont00000974,Plan,complete,0
+https://www.commoncoreontologies.org/ont00000871,Plant,complete,1
+https://www.commoncoreontologies.org/ont00000976,Political Orientation,complete,1
+https://www.commoncoreontologies.org/ont00000141,Populace,complete,0
+https://www.commoncoreontologies.org/ont00000553,Process Prohibition,complete,0
+https://www.commoncoreontologies.org/ont00001324,Process Regulation,complete,0
+https://www.commoncoreontologies.org/ont00001224,Process Requirement,complete,0
+https://www.commoncoreontologies.org/ont00000046,Province,complete,5
+https://www.commoncoreontologies.org/ont00000616,Religion,complete,1
+https://www.commoncoreontologies.org/ont00000576,Scalp,complete,2
+https://www.commoncoreontologies.org/ont00000058,Scalp Hair,complete,3
+https://www.commoncoreontologies.org/ont00000986,Scar,complete,2
+https://www.commoncoreontologies.org/ont00000405,Second-Order Administrative Region,complete,2
+https://www.commoncoreontologies.org/ont00000509,Service Provider,complete,5
+https://www.commoncoreontologies.org/ont00001125,Set of Eyes,complete,2
+https://www.commoncoreontologies.org/ont00000089,Skill,complete,1
+https://www.commoncoreontologies.org/ont00000102,Skin Type,complete,0
+https://www.commoncoreontologies.org/ont00001183,Social Network,complete,2
+https://www.commoncoreontologies.org/ont00000129,Tattoo,complete,2
+https://www.commoncoreontologies.org/ont00000134,Third-Order Administrative Region,complete,4
+https://www.commoncoreontologies.org/ont00000071,Town,complete,5
+https://www.commoncoreontologies.org/ont00000718,Village,complete,2

@@ -1,0 +1,22 @@
+subclass_label,subclass,superclass_label,superclass,remaining_logical_support,individual_closure_damage,individual_closure_lost,marginal_closure_restored
+Eye Color,https://www.commoncoreontologies.org/ont00000044,BFO_0000019,http://purl.obolibrary.org/obo/BFO_0000019,1,1,1,1
+Civilian Role,https://www.commoncoreontologies.org/ont00000173,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023,1,1,1,1
+Organization Member Role,https://www.commoncoreontologies.org/ont00000175,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023,1,1,1,1
+Objective,https://www.commoncoreontologies.org/ont00000476,ont00000965,https://www.commoncoreontologies.org/ont00000965,1,1,1,1
+Commercial Role,https://www.commoncoreontologies.org/ont00000485,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023,1,1,1,1
+Ethnicity,https://www.commoncoreontologies.org/ont00000780,BFO_0000019,http://purl.obolibrary.org/obo/BFO_0000019,1,1,1,1
+Geopolitical Power Role,https://www.commoncoreontologies.org/ont00000898,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023,2,1,1,1
+Permanent Resident Role,https://www.commoncoreontologies.org/ont00000917,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023,1,1,1,1
+Plan,https://www.commoncoreontologies.org/ont00000974,ont00000965,https://www.commoncoreontologies.org/ont00000965,1,1,1,1
+Citizen Role,https://www.commoncoreontologies.org/ont00000987,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023,1,1,1,1
+Agent,https://www.commoncoreontologies.org/ont00001017,BFO_0000040,http://purl.obolibrary.org/obo/BFO_0000040,23,1,1,1
+Division of Delimiting Domain,https://www.commoncoreontologies.org/ont00001114,ont00000472,https://www.commoncoreontologies.org/ont00000472,2,1,1,1
+Material Territory of a Country,https://www.commoncoreontologies.org/ont00000631,Material Territory of a Government Domain,https://www.commoncoreontologies.org/ont00000662,1,2,2,1
+Material Territory of a Government Domain,https://www.commoncoreontologies.org/ont00000662,ont00001341,https://www.commoncoreontologies.org/ont00001341,2,2,2,1
+Iris,https://www.commoncoreontologies.org/ont00000404,Bodily Component,https://www.commoncoreontologies.org/ont00000084,2,2,2,2
+Eye,https://www.commoncoreontologies.org/ont00000500,Bodily Component,https://www.commoncoreontologies.org/ont00000084,2,2,2,2
+Ally Role,https://www.commoncoreontologies.org/ont00000587,Allegiance Role,https://www.commoncoreontologies.org/ont00000392,1,2,2,2
+Financial Value,https://www.commoncoreontologies.org/ont00000608,BFO_0000019,http://purl.obolibrary.org/obo/BFO_0000019,1,2,2,2
+Ideology,https://www.commoncoreontologies.org/ont00000696,ont00000958,https://www.commoncoreontologies.org/ont00000958,1,2,2,2
+Process Requirement,https://www.commoncoreontologies.org/ont00001224,Process Regulation,https://www.commoncoreontologies.org/ont00001324,1,2,2,2
+Group of Organizations,https://www.commoncoreontologies.org/ont00001239,Group of Agents,https://www.commoncoreontologies.org/ont00000300,2,2,2,2

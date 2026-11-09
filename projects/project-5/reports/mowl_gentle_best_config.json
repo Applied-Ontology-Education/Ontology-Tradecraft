@@ -1,0 +1,12 @@
+{
+  "script_version": "broad-vocab-local-axioms-gentle-closure-v4",
+  "selected_stage": "gentle_closure",
+  "mean_cos": 0.5572960902165335,
+  "median_cos": 0.6453562114589834,
+  "alignment_lambda": 0.5,
+  "finetune_epochs": 200,
+  "finetune_lr": 0.00025,
+  "previous_local_best": 0.4108,
+  "beats_previous_local_best": true,
+  "selected_tau": null
+}

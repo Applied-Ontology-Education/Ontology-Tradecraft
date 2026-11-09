@@ -1,0 +1,82 @@
+{
+  "script_version": "local-module-positive-closure-v1",
+  "selected_stage": "closure_positive",
+  "selected_mean_cos": 0.410808,
+  "historical_best_mean_cos": 0.3965,
+  "beats_historical_best": true,
+  "native_configuration": {
+    "embed_dim": 50,
+    "epochs": 1000,
+    "learning_rate": 0.001,
+    "seed": 101,
+    "batch_size": 128
+  },
+  "selected_finetune_configuration": {
+    "family": "closure",
+    "run_id": 5,
+    "alignment_lambda": 0.5,
+    "finetune_epochs": 300,
+    "finetune_lr": 0.0005,
+    "training_pairs": 158,
+    "mean_cos": 0.410808,
+    "median_cos": 0.671428,
+    "min_cos": -0.42251,
+    "max_cos": 0.979076,
+    "std_cos": 0.429927,
+    "missing_embeddings": 0,
+    "beats_historical_best": true,
+    "meets_target": false,
+    "training_history": [
+      {
+        "epoch": 1,
+        "native_loss": 0.060729727149009705,
+        "cosine_loss": 0.2086111605167389,
+        "combined_loss": 0.16503530740737915,
+        "training_mean_cos": 0.7913888096809387
+      },
+      {
+        "epoch": 50,
+        "native_loss": 0.055179379880428314,
+        "cosine_loss": 0.15283186733722687,
+        "combined_loss": 0.13159531354904175,
+        "training_mean_cos": 0.8471681475639343
+      },
+      {
+        "epoch": 100,
+        "native_loss": 0.08756513148546219,
+        "cosine_loss": 0.11890755593776703,
+        "combined_loss": 0.1470189094543457,
+        "training_mean_cos": 0.8810924887657166
+      },
+      {
+        "epoch": 150,
+        "native_loss": 0.06635928153991699,
+        "cosine_loss": 0.09613316506147385,
+        "combined_loss": 0.11442586779594421,
+        "training_mean_cos": 0.9038668274879456
+      },
+      {
+        "epoch": 200,
+        "native_loss": 0.044892530888319016,
+        "cosine_loss": 0.07951369136571884,
+        "combined_loss": 0.08464937657117844,
+        "training_mean_cos": 0.920486330986023
+      },
+      {
+        "epoch": 250,
+        "native_loss": 0.05984024330973625,
+        "cosine_loss": 0.06718192994594574,
+        "combined_loss": 0.09343120455741882,
+        "training_mean_cos": 0.9328181743621826
+      },
+      {
+        "epoch": 300,
+        "native_loss": 0.05482330545783043,
+        "cosine_loss": 0.05838949978351593,
+        "combined_loss": 0.0840180516242981,
+        "training_mean_cos": 0.9416105151176453
+      }
+    ]
+  },
+  "selected_tau": null
+}
