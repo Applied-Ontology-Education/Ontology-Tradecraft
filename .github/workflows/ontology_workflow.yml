@@ -26,6 +26,7 @@ jobs:
       - name: Detect exactly one newly ADDED file under src/data/**
         id: detect
         shell: bash
+        working-directory: ${{ github.workspace }}
         run: |
           BEFORE_SHA="${{ github.event.before }}"
           AFTER_SHA="${{ github.sha }}"
@@ -50,6 +51,7 @@ jobs:
             ONE_FILE=$(printf "%s\n" "$ADDED" | head -n1)
             echo "added_file=$ONE_FILE" >> "$GITHUB_OUTPUT"
           fi
+
 
       - name: Skip if no new dataset
         if: steps.detect.outputs.added_count == '0'
