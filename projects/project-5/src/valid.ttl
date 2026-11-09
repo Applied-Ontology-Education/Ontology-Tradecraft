@@ -1,0 +1,1058 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+cco:ont00000005 a owl:Class ;
+    rdfs:label "Act"@en ;
+    rdfs:subClassOf obo:BFO_0000015 .
+
+cco:ont00000006 a owl:Class ;
+    rdfs:label "Upper Midrange Frequency"@en .
+
+cco:ont00000011 a owl:Class ;
+    rdfs:label "Nominal Stasis"@en .
+
+cco:ont00000013 a owl:Class ;
+    rdfs:label "Gain of Generically Dependent Continuant"@en ;
+    rdfs:subClassOf cco:ont00000554 .
+
+cco:ont00000016 a owl:Class ;
+    rdfs:label "Triangular Waveform"@en .
+
+cco:ont00000024 a owl:Class ;
+    rdfs:label "Act of Advising"@en .
+
+cco:ont00000027 a owl:Class ;
+    rdfs:label "Mailing"@en .
+
+cco:ont00000033 a owl:Class ;
+    rdfs:label "Decrease of Role"@en .
+
+cco:ont00000035 a owl:Class ;
+    rdfs:label "Soft X-ray Frequency"@en .
+
+cco:ont00000037 a owl:Class ;
+    rdfs:label "Act of Observation"@en .
+
+cco:ont00000051 a owl:Class ;
+    rdfs:label "Act of Construction"@en .
+
+cco:ont00000078 a owl:Class ;
+    rdfs:label "Act of Estimation"@en .
+
+cco:ont00000079 a owl:Class ;
+    rdfs:label "Act of Social Movement"@en .
+
+cco:ont00000083 a owl:Class ;
+    rdfs:label "Process Ending"@en .
+
+cco:ont00000100 a owl:Class ;
+    rdfs:label "Stasis of Partially Mission Capable"@en ;
+    rdfs:subClassOf cco:ont00001132 .
+
+cco:ont00000106 a owl:Class ;
+    rdfs:label "End of Life Stasis"@en .
+
+cco:ont00000107 a owl:Class ;
+    rdfs:label "Increase of Generically Dependent Continuant"@en .
+
+cco:ont00000109 a owl:Class ;
+    rdfs:label "Act of Military Force"@en .
+
+cco:ont00000110 a owl:Class ;
+    rdfs:label "Mechanical Process"@en .
+
+cco:ont00000115 a owl:Class ;
+    rdfs:label "Stasis of Disposition"@en .
+
+cco:ont00000121 a owl:Class ;
+    rdfs:label "Act of Conducting Mass Media Interview"@en .
+
+cco:ont00000123 a owl:Class ;
+    rdfs:label "Act of Expressive Communication"@en ;
+    rdfs:subClassOf cco:ont00000402 .
+
+cco:ont00000131 a owl:Class ;
+    rdfs:label "Increase of Quality"@en .
+
+cco:ont00000133 a owl:Class ;
+    rdfs:label "Act of Directive Communication"@en ;
+    rdfs:subClassOf cco:ont00000402 .
+
+cco:ont00000137 a owl:Class ;
+    rdfs:label "Act of Financial Deposit"@en .
+
+cco:ont00000138 a owl:Class ;
+    rdfs:label "Maximum Power"@en .
+
+cco:ont00000142 a owl:Class ;
+    rdfs:label "Act of Government"@en .
+
+cco:ont00000144 a owl:Class ;
+    rdfs:label "Act of Meeting"@en .
+
+cco:ont00000148 a owl:Class ;
+    rdfs:label "Clockwise Rotational Motion"@en .
+
+cco:ont00000149 a owl:Class ;
+    rdfs:label "Instant Messaging"@en .
+
+cco:ont00000151 a owl:Class ;
+    rdfs:label "Act of Reporting"@en .
+
+cco:ont00000155 a owl:Class ;
+    rdfs:label "Near Infrared Light Frequency"@en .
+
+cco:ont00000165 a owl:Class ;
+    rdfs:label "Criminal Act"@en .
+
+cco:ont00000166 a owl:Class ;
+    rdfs:label "Wave Cycle"@en .
+
+cco:ont00000168 a owl:Class ;
+    rdfs:label "Act of Interpersonal Relationship"@en .
+
+cco:ont00000169 a owl:Class ;
+    rdfs:label "Very High Frequency"@en ;
+    rdfs:subClassOf cco:ont00000150 .
+
+cco:ont00000179 a owl:Class ;
+    rdfs:label "Thrust"@en .
+
+cco:ont00000182 a owl:Class ;
+    rdfs:label "Act of Thanking"@en .
+
+cco:ont00000191 a owl:Class ;
+    rdfs:label "Act of Homicide"@en ;
+    rdfs:subClassOf cco:ont00001147 .
+
+cco:ont00000197 a owl:Class ;
+    rdfs:label "Process Beginning"@en .
+
+cco:ont00000200 a owl:Class ;
+    rdfs:label "Act of Pilgrimage"@en .
+
+cco:ont00000201 a owl:Class ;
+    rdfs:label "Act of Change of Residence"@en .
+
+cco:ont00000202 a owl:Class ;
+    rdfs:label "Act of Terrorist Training Instruction"@en .
+
+cco:ont00000208 a owl:Class ;
+    rdfs:label "Act of Congratulating"@en .
+
+cco:ont00000209 a owl:Class ;
+    rdfs:label "Sound Wavelength"@en .
+
+cco:ont00000222 a owl:Class ;
+    rdfs:label "Presence Frequency"@en .
+
+cco:ont00000235 a owl:Class ;
+    rdfs:label "Act of Vocational Training Acquisition"@en .
+
+cco:ont00000237 a owl:Class ;
+    rdfs:label "Act of Terrorist Training Acquisition"@en .
+
+cco:ont00000240 a owl:Class ;
+    rdfs:label "Act of Oath Taking"@en .
+
+cco:ont00000260 a owl:Class ;
+    rdfs:label "Muzzle Blast"@en .
+
+cco:ont00000261 a owl:Class ;
+    rdfs:label "Gamma Ray Frequency"@en .
+
+cco:ont00000265 a owl:Class ;
+    rdfs:label "Election"@en .
+
+cco:ont00000272 a owl:Class ;
+    rdfs:label "Combustion"@en .
+
+cco:ont00000278 a owl:Class ;
+    rdfs:label "Momentum"@en .
+
+cco:ont00000286 a owl:Class ;
+    rdfs:label "Stasis of Partially Mission Capable Maintenance"@en .
+
+cco:ont00000290 a owl:Class ;
+    rdfs:label "Decrease of Specifically Dependent Continuant"@en ;
+    rdfs:subClassOf cco:ont00000726 .
+
+cco:ont00000291 a owl:Class ;
+    rdfs:label "Act of Decoy Use"@en .
+
+cco:ont00000296 a owl:Class ;
+    rdfs:label "Angular Velocity"@en .
+
+cco:ont00000305 a owl:Class ;
+    rdfs:label "Sound Pressure"@en .
+
+cco:ont00000308 a owl:Class ;
+    rdfs:label "Act of Military Service"@en .
+
+cco:ont00000312 a owl:Class ;
+    rdfs:label "Propulsion Process"@en .
+
+cco:ont00000313 a owl:Class ;
+    rdfs:label "Wavelength"@en .
+
+cco:ont00000320 a owl:Class ;
+    rdfs:label "Act of Reconnaissance"@en .
+
+cco:ont00000322 a owl:Class ;
+    rdfs:label "Act of Funding"@en .
+
+cco:ont00000335 a owl:Class ;
+    rdfs:label "Stasis of Generically Dependent Continuant"@en ;
+    rdfs:subClassOf cco:ont00000819 .
+
+cco:ont00000345 a owl:Class ;
+    rdfs:label "Act of Measuring"@en ;
+    rdfs:subClassOf cco:ont00000228 .
+
+cco:ont00000351 a owl:Class ;
+    rdfs:label "Act of Commanding"@en .
+
+cco:ont00000354 a owl:Class ;
+    rdfs:label "Act of Testifying"@en .
+
+cco:ont00000356 a owl:Class ;
+    rdfs:label "Act of Publishing Mass Media Article"@en .
+
+cco:ont00000357 a owl:Class ;
+    rdfs:label "Act of Motion"@en .
+
+cco:ont00000360 a owl:Class ;
+    rdfs:label "Wounded Stasis"@en .
+
+cco:ont00000361 a owl:Class ;
+    rdfs:label "Increase of Function"@en .
+
+cco:ont00000366 a owl:Class ;
+    rdfs:label "Act of Information Processing"@en ;
+    rdfs:subClassOf cco:ont00000228 .
+
+cco:ont00000367 a owl:Class ;
+    rdfs:label "Act of Military Training Instruction"@en .
+
+cco:ont00000368 a owl:Class ;
+    rdfs:label "Rotational Motion"@en ;
+    rdfs:subClassOf cco:ont00001133 .
+
+cco:ont00000370 a owl:Class ;
+    rdfs:label "Act of Condoling"@en .
+
+cco:ont00000371 a owl:Class ;
+    rdfs:label "Act of Prediction"@en .
+
+cco:ont00000379 a owl:Class ;
+    rdfs:label "Act of Representative Communication"@en ;
+    rdfs:subClassOf cco:ont00000402 .
+
+cco:ont00000380 a owl:Class ;
+    rdfs:label "Pressure"@en ;
+    rdfs:subClassOf cco:ont00000570 .
+
+cco:ont00000384 a owl:Class ;
+    rdfs:label "Rectilinear Motion"@en .
+
+cco:ont00000386 a owl:Class ;
+    rdfs:label "Webcast"@en .
+
+cco:ont00000389 a owl:Class ;
+    rdfs:label "Act of Buying"@en .
+
+cco:ont00000391 a owl:Class ;
+    rdfs:label "Tremendously High Frequency"@en .
+
+cco:ont00000396 a owl:Class ;
+    rdfs:label "Extremely Low Frequency"@en .
+
+cco:ont00000401 a owl:Class ;
+    rdfs:label "Fundamental Frequency"@en .
+
+cco:ont00000414 a owl:Class ;
+    rdfs:label "Square Waveform"@en .
+
+cco:ont00000416 a owl:Class ;
+    rdfs:label "Act of Publishing Mass Media Press Release"@en .
+
+cco:ont00000418 a owl:Class ;
+    rdfs:label "Biographical Life"@en .
+
+cco:ont00000430 a owl:Class ;
+    rdfs:label "Stable Orientation"@en .
+
+cco:ont00000438 a owl:Class ;
+    rdfs:label "Act of Official Documentation"@en .
+
+cco:ont00000449 a owl:Class ;
+    rdfs:label "Act of Remuneration"@en .
+
+cco:ont00000455 a owl:Class ;
+    rdfs:label "Act of Ceremony"@en ;
+    rdfs:subClassOf cco:ont00001327 .
+
+cco:ont00000462 a owl:Class ;
+    rdfs:label "Gain of Function"@en ;
+    rdfs:subClassOf cco:ont00000609 .
+
+cco:ont00000463 a owl:Class ;
+    rdfs:label "Act of Educational Training Instruction"@en .
+
+cco:ont00000490 a owl:Class ;
+    rdfs:label "X-ray Frequency"@en .
+
+cco:ont00000492 a owl:Class ;
+    rdfs:label "Email Messaging"@en ;
+    rdfs:subClassOf cco:ont00002076 .
+
+cco:ont00000501 a owl:Class ;
+    rdfs:label "Act of Financial Withdrawal"@en .
+
+cco:ont00000503 a owl:Class ;
+    rdfs:label "Power"@en .
+
+cco:ont00000508 a owl:Class ;
+    rdfs:label "Near Ultraviolet Light Frequency"@en .
+
+cco:ont00000511 a owl:Class ;
+    rdfs:label "Act of Planning"@en .
+
+cco:ont00000513 a owl:Class ;
+    rdfs:label "Act of Tool Use"@en .
+
+cco:ont00000514 a owl:Class ;
+    rdfs:label "Transverse Wave Profile"@en .
+
+cco:ont00000515 a owl:Class ;
+    rdfs:label "Act of Vehicle Use"@en .
+
+cco:ont00000517 a owl:Class ;
+    rdfs:label "Act of Communication by Movement of Information Bearing Artifact"@en .
+
+cco:ont00000519 a owl:Class ;
+    rdfs:label "Extremely High Frequency"@en .
+
+cco:ont00000520 a owl:Class ;
+    rdfs:label "Act of Departure"@en .
+
+cco:ont00000521 a owl:Class ;
+    rdfs:label "Act of Assassination"@en .
+
+cco:ont00000523 a owl:Class ;
+    rdfs:label "Loudness"@en .
+
+cco:ont00000530 a owl:Class ;
+    rdfs:label "Sonic Frequency"@en ;
+    rdfs:subClassOf cco:ont00000008 .
+
+cco:ont00000535 a owl:Class ;
+    rdfs:label "Decrease of Quality"@en .
+
+cco:ont00000542 a owl:Class ;
+    rdfs:label "Loss of Generically Dependent Continuant"@en .
+
+cco:ont00000543 a owl:Class ;
+    rdfs:label "Decrease of Disposition"@en ;
+    rdfs:subClassOf cco:ont00000854 .
+
+cco:ont00000544 a owl:Class ;
+    rdfs:label "Target"@en .
+
+cco:ont00000546 a owl:Class ;
+    rdfs:label "Unplanned Act"@en .
+
+cco:ont00000555 a owl:Class ;
+    rdfs:label "Enhanced Stasis"@en .
+
+cco:ont00000557 a owl:Class ;
+    rdfs:label "Stasis of Non-Mission Capable"@en ;
+    rdfs:subClassOf cco:ont00001132 .
+
+cco:ont00000558 a owl:Class ;
+    rdfs:label "Visible Light Reflection Process"@en ;
+    rdfs:subClassOf cco:ont00000099 .
+
+cco:ont00000566 a owl:Class ;
+    rdfs:label "Act of Artifact Employment"@en ;
+    rdfs:subClassOf cco:ont00000228 .
+
+cco:ont00000572 a owl:Class ;
+    rdfs:label "Sound Production"@en .
+
+cco:ont00000573 a owl:Class ;
+    rdfs:label "Act of Religious Training Acquisition"@en .
+
+cco:ont00000580 a owl:Class ;
+    rdfs:label "Sine Waveform"@en .
+
+cco:ont00000584 a owl:Class ;
+    rdfs:label "Act of Position Change"@en .
+
+cco:ont00000585 a owl:Class ;
+    rdfs:label "Sawtooth Waveform"@en .
+
+cco:ont00000594 a owl:Class ;
+    rdfs:label "Ignition Process"@en .
+
+cco:ont00000595 a owl:Class ;
+    rdfs:label "Act of Cargo Transportation"@en .
+
+cco:ont00000610 a owl:Class ;
+    rdfs:label "Ultraviolet Light Frequency"@en ;
+    rdfs:subClassOf cco:ont00000754 .
+
+cco:ont00000612 a owl:Class ;
+    rdfs:label "Act of Weapon Use"@en .
+
+cco:ont00000613 a owl:Class ;
+    rdfs:label "Loss of Role"@en .
+
+cco:ont00000615 a owl:Class ;
+    rdfs:label "Act of Encounter"@en .
+
+cco:ont00000621 a owl:Class ;
+    rdfs:label "Inverse Sawtooth Waveform"@en .
+
+cco:ont00000622 a owl:Class ;
+    rdfs:label "Stasis of Fully Mission Capable"@en .
+
+cco:ont00000636 a owl:Class ;
+    rdfs:label "Act of Appraisal"@en .
+
+cco:ont00000642 a owl:Class ;
+    rdfs:label "Gain of Realizable Entity"@en .
+
+cco:ont00000643 a owl:Class ;
+    rdfs:label "Low Frequency"@en .
+
+cco:ont00000644 a owl:Class ;
+    rdfs:label "Oscillation Process"@en ;
+    rdfs:subClassOf cco:ont00000004 .
+
+cco:ont00000654 a owl:Class ;
+    rdfs:label "Act of Terrorism"@en .
+
+cco:ont00000660 a owl:Class ;
+    rdfs:label "Effect"@en .
+
+cco:ont00000672 a owl:Class ;
+    rdfs:label "Super Low Frequency"@en .
+
+cco:ont00000675 a owl:Class ;
+    rdfs:label "Sound Wave Process"@en ;
+    rdfs:subClassOf cco:ont00001028 .
+
+cco:ont00000676 a owl:Class ;
+    rdfs:label "Act of Inhabitancy"@en .
+
+cco:ont00000684 a owl:Class ;
+    rdfs:label "Act of Contract Formation"@en .
+
+cco:ont00000687 a owl:Class ;
+    rdfs:label "Act of Training Acquisition"@en ;
+    rdfs:subClassOf cco:ont00000234 .
+
+cco:ont00000712 a owl:Class ;
+    rdfs:label "Acceleration"@en ;
+    rdfs:subClassOf obo:BFO_0000144 .
+
+cco:ont00000725 a owl:Class ;
+    rdfs:label "Wedding"@en .
+
+cco:ont00000732 a owl:Class ;
+    rdfs:label "Microwave Frequency"@en ;
+    rdfs:subClassOf cco:ont00000150 .
+
+cco:ont00000739 a owl:Class ;
+    rdfs:label "Act of Sojourn"@en .
+
+cco:ont00000741 a owl:Class ;
+    rdfs:label "Act of Targeting"@en .
+
+cco:ont00000744 a owl:Class ;
+    rdfs:label "Act of Social Group Membership"@en .
+
+cco:ont00000750 a owl:Class ;
+    rdfs:label "Text Messaging"@en .
+
+cco:ont00000753 a owl:Class ;
+    rdfs:label "Ultra Low Frequency"@en .
+
+cco:ont00000760 a owl:Class ;
+    rdfs:label "Surface Wave Profile"@en .
+
+cco:ont00000763 a owl:Class ;
+    rdfs:label "Velocity"@en ;
+    rdfs:subClassOf obo:BFO_0000144 .
+
+cco:ont00000765 a owl:Class ;
+    rdfs:label "Wave Production"@en ;
+    rdfs:subClassOf cco:ont00000007 .
+
+cco:ont00000769 a owl:Class ;
+    rdfs:label "Act of Requesting"@en .
+
+cco:ont00000772 a owl:Class ;
+    rdfs:label "Impulsive Force"@en .
+
+cco:ont00000773 a owl:Class ;
+    rdfs:label "Curvilinear Motion"@en .
+
+cco:ont00000783 a owl:Class ;
+    rdfs:label "Stasis of Non-Mission Capable Maintenance"@en .
+
+cco:ont00000786 a owl:Class ;
+    rdfs:label "Increase of Role"@en .
+
+cco:ont00000789 a owl:Class ;
+    rdfs:label "Translational Motion"@en .
+
+cco:ont00000812 a owl:Class ;
+    rdfs:label "Electromagnetic Pulse"@en .
+
+cco:ont00000820 a owl:Class ;
+    rdfs:label "Stasis of Function"@en .
+
+cco:ont00000821 a owl:Class ;
+    rdfs:label "Act of Promising"@en ;
+    rdfs:subClassOf cco:ont00001162 .
+
+cco:ont00000822 a owl:Class ;
+    rdfs:label "Very Low Frequency"@en .
+
+cco:ont00000824 a owl:Class ;
+    rdfs:label "Stasis of Role"@en .
+
+cco:ont00000830 a owl:Class ;
+    rdfs:label "Speed"@en .
+
+cco:ont00000834 a owl:Class ;
+    rdfs:label "Mid Infrared Light Frequency"@en .
+
+cco:ont00000836 a owl:Class ;
+    rdfs:label "Act of Financial Instrument Use"@en .
+
+cco:ont00000839 a owl:Class ;
+    rdfs:label "Act of Donating"@en .
+
+cco:ont00000842 a owl:Class ;
+    rdfs:label "Sub-Bass Frequency"@en .
+
+cco:ont00000847 a owl:Class ;
+    rdfs:label "Active Stasis"@en ;
+    rdfs:subClassOf cco:ont00001213 .
+
+cco:ont00000850 a owl:Class ;
+    rdfs:label "Stasis of Quality"@en .
+
+cco:ont00000855 a owl:Class ;
+    rdfs:label "Effect of Location Change"@en .
+
+cco:ont00000859 a owl:Class ;
+    rdfs:label "Television Broadcast"@en .
+
+cco:ont00000862 a owl:Class ;
+    rdfs:label "Sound Process Profile"@en .
+
+cco:ont00000863 a owl:Class ;
+    rdfs:label "Act of Confessing"@en .
+
+cco:ont00000865 a owl:Class ;
+    rdfs:label "Loss of Specifically Dependent Continuant"@en .
+
+cco:ont00000866 a owl:Class ;
+    rdfs:label "Radio Broadcast"@en .
+
+cco:ont00000875 a owl:Class ;
+    rdfs:label "Act of Personal Communication"@en .
+
+cco:ont00000876 a owl:Class ;
+    rdfs:label "Loss of Dependent Continuant"@en ;
+    rdfs:subClassOf cco:ont00000004 .
+
+cco:ont00000879 a owl:Class ;
+    rdfs:label "Act of Religious Group Affiliation"@en .
+
+cco:ont00000883 a owl:Class ;
+    rdfs:label "Act of Inviting"@en .
+
+cco:ont00000884 a owl:Class ;
+    rdfs:label "Act of Loaning"@en .
+
+cco:ont00000889 a owl:Class ;
+    rdfs:label "Visible Observation"@en .
+
+cco:ont00000890 a owl:Class ;
+    rdfs:label "Act of Travel"@en ;
+    rdfs:subClassOf cco:ont00000065 .
+
+cco:ont00000895 a owl:Class ;
+    rdfs:label "Married"@en .
+
+cco:ont00000902 a owl:Class ;
+    rdfs:label "Act of Facility Use"@en .
+
+cco:ont00000908 a owl:Class ;
+    rdfs:label "Act of Material Artifact Processing"@en ;
+    rdfs:subClassOf cco:ont00000228 .
+
+cco:ont00000910 a owl:Class ;
+    rdfs:label "Amplitude"@en .
+
+cco:ont00000920 a owl:Class ;
+    rdfs:label "Death"@en ;
+    rdfs:subClassOf cco:ont00000007 .
+
+cco:ont00000922 a owl:Class ;
+    rdfs:label "Act of Arrival"@en .
+
+cco:ont00000924 a owl:Class ;
+    rdfs:label "Beginning of Life Stasis"@en .
+
+cco:ont00000925 a owl:Class ;
+    rdfs:label "Act of Military Training Acquisition"@en .
+
+cco:ont00000926 a owl:Class ;
+    rdfs:label "Act of Apologizing"@en .
+
+cco:ont00000927 a owl:Class ;
+    rdfs:label "Bass Frequency"@en .
+
+cco:ont00000935 a owl:Class ;
+    rdfs:label "Act of Legal Instrument Use"@en .
+
+cco:ont00000936 a owl:Class ;
+    rdfs:label "Deactivated Stasis"@en .
+
+cco:ont00000948 a owl:Class ;
+    rdfs:label "Act of Religious Worship"@en .
+
+cco:ont00000949 a owl:Class ;
+    rdfs:label "Act of Consumption"@en .
+
+cco:ont00000950 a owl:Class ;
+    rdfs:label "Act of Maintenance"@en ;
+    rdfs:subClassOf cco:ont00000970 .
+
+cco:ont00000951 a owl:Class ;
+    rdfs:label "Electromagnetic Wave Process"@en ;
+    rdfs:subClassOf cco:ont00000099 .
+
+cco:ont00000953 a owl:Class ;
+    rdfs:label "Pitch"@en .
+
+cco:ont00000955 a owl:Class ;
+    rdfs:label "Angular Momentum"@en .
+
+cco:ont00000960 a owl:Class ;
+    rdfs:label "Fixed Line Network Telephone Call"@en .
+
+cco:ont00000964 a owl:Class ;
+    rdfs:label "Medium Frequency"@en .
+
+cco:ont00000971 a owl:Class ;
+    rdfs:label "Act of Deceptive Communication"@en .
+
+cco:ont00000977 a owl:Class ;
+    rdfs:label "Act of Publishing Mass Media Documentary"@en .
+
+cco:ont00000978 a owl:Class ;
+    rdfs:label "Cause"@en .
+
+cco:ont00000981 a owl:Class ;
+    rdfs:label "Act of Portion of Material Consumption"@en .
+
+cco:ont00000982 a owl:Class ;
+    rdfs:label "Decrease of Function"@en .
+
+cco:ont00000983 a owl:Class ;
+    rdfs:label "Shear Wave Process"@en .
+
+cco:ont00000989 a owl:Class ;
+    rdfs:label "Super High Frequency"@en .
+
+cco:ont00000999 a owl:Class ;
+    rdfs:label "Defunct Stasis"@en .
+
+cco:ont00001021 a owl:Class ;
+    rdfs:label "Act of Denying"@en .
+
+cco:ont00001031 a owl:Class ;
+    rdfs:label "Act of Volunteering"@en .
+
+cco:ont00001032 a owl:Class ;
+    rdfs:label "Act of Assignment"@en .
+
+cco:ont00001039 a owl:Class ;
+    rdfs:label "Act of Repayment"@en .
+
+cco:ont00001048 a owl:Class ;
+    rdfs:label "Increase of Dependent Continuant"@en .
+
+cco:ont00001053 a owl:Class ;
+    rdfs:label "Act of Collision"@en .
+
+cco:ont00001056 a owl:Class ;
+    rdfs:label "Visible Light Frequency"@en .
+
+cco:ont00001057 a owl:Class ;
+    rdfs:label "Act of Issuing Mass Media Press Release"@en .
+
+cco:ont00001066 a owl:Class ;
+    rdfs:label "Loss of Disposition"@en ;
+    rdfs:subClassOf cco:ont00000250 .
+
+cco:ont00001068 a owl:Class ;
+    rdfs:label "Gain of Quality"@en ;
+    rdfs:subClassOf cco:ont00000395 .
+
+cco:ont00001072 a owl:Class ;
+    rdfs:label "FM Radio Broadcast Frequency"@en .
+
+cco:ont00001074 a owl:Class ;
+    rdfs:label "Act of Educational Training Acquisition"@en .
+
+cco:ont00001075 a owl:Class ;
+    rdfs:label "Act of Training Instruction"@en .
+
+cco:ont00001080 a owl:Class ;
+    rdfs:label "Far Infrared Light Frequency"@en .
+
+cco:ont00001094 a owl:Class ;
+    rdfs:label "Act of Espionage"@en .
+
+cco:ont00001108 a owl:Class ;
+    rdfs:label "Ultra High Frequency"@en .
+
+cco:ont00001109 a owl:Class ;
+    rdfs:label "Counter-Clockwise Rotational Motion"@en .
+
+cco:ont00001111 a owl:Class ;
+    rdfs:label "Low Midrange Frequency"@en .
+
+cco:ont00001112 a owl:Class ;
+    rdfs:label "Proper Acceleration"@en .
+
+cco:ont00001115 a owl:Class ;
+    rdfs:label "Private Network Telephone Call"@en .
+
+cco:ont00001120 a owl:Class ;
+    rdfs:label "Act of Religious Training Instruction"@en .
+
+cco:ont00001122 a owl:Class ;
+    rdfs:label "Radio Interference"@en .
+
+cco:ont00001127 a owl:Class ;
+    rdfs:label "Loss of Quality"@en .
+
+cco:ont00001128 a owl:Class ;
+    rdfs:label "Act of Residing"@en .
+
+cco:ont00001136 a owl:Class ;
+    rdfs:label "Ultrasonic Frequency"@en .
+
+cco:ont00001143 a owl:Class ;
+    rdfs:label "Facsimile Transmission"@en .
+
+cco:ont00001144 a owl:Class ;
+    rdfs:label "Act of Entertainment"@en .
+
+cco:ont00001158 a owl:Class ;
+    rdfs:label "Act of Data Transformation"@en .
+
+cco:ont00001167 a owl:Class ;
+    rdfs:label "Midrange Frequency"@en .
+
+cco:ont00001170 a owl:Class ;
+    rdfs:label "Hard X-ray Frequency"@en .
+
+cco:ont00001171 a owl:Class ;
+    rdfs:label "Wireless Network Telephone Call"@en .
+
+cco:ont00001184 a owl:Class ;
+    rdfs:label "Spinning Motion"@en .
+
+cco:ont00001190 a owl:Class ;
+    rdfs:label "Telephone Call"@en ;
+    rdfs:subClassOf cco:ont00002076 .
+
+cco:ont00001191 a owl:Class ;
+    rdfs:label "Operational Stasis"@en ;
+    rdfs:subClassOf cco:ont00001213 .
+
+cco:ont00001194 a owl:Class ;
+    rdfs:label "Gain of Role"@en .
+
+cco:ont00001196 a owl:Class ;
+    rdfs:label "Act of Artifact Assembly"@en .
+
+cco:ont00001208 a owl:Class ;
+    rdfs:label "High Frequency"@en .
+
+cco:ont00001214 a owl:Class ;
+    rdfs:label "Increase of Specifically Dependent Continuant"@en .
+
+cco:ont00001215 a owl:Class ;
+    rdfs:label "Funeral"@en .
+
+cco:ont00001219 a owl:Class ;
+    rdfs:label "Delta-v"@en .
+
+cco:ont00001226 a owl:Class ;
+    rdfs:label "Act of Employment by an Organization"@en .
+
+cco:ont00001227 a owl:Class ;
+    rdfs:label "Longitudinal Wave Profile"@en ;
+    rdfs:subClassOf cco:ont00000752 .
+
+cco:ont00001231 a owl:Class ;
+    rdfs:label "Brilliance Frequency"@en .
+
+cco:ont00001232 a owl:Class ;
+    rdfs:label "Act of Possession"@en ;
+    rdfs:subClassOf cco:ont00000228 .
+
+cco:ont00001236 a owl:Class ;
+    rdfs:label "Act of Suicide"@en .
+
+cco:ont00001237 a owl:Class ;
+    rdfs:label "Birth"@en .
+
+cco:ont00001244 a owl:Class ;
+    rdfs:label "Act of Issuing Mass Media Article"@en .
+
+cco:ont00001246 a owl:Class ;
+    rdfs:label "Under Active Control"@en .
+
+cco:ont00001251 a owl:Class ;
+    rdfs:label "Act of Intelligence Gathering"@en ;
+    rdfs:subClassOf cco:ont00000228 .
+
+cco:ont00001261 a owl:Class ;
+    rdfs:label "Act of Identifying"@en .
+
+cco:ont00001263 a owl:Class ;
+    rdfs:label "Act of Issuing Mass Media Documentary"@en .
+
+cco:ont00001266 a owl:Class ;
+    rdfs:label "Act of Vocational Training Instruction"@en .
+
+cco:ont00001267 a owl:Class ;
+    rdfs:label "Act of Propaganda"@en .
+
+cco:ont00001269 a owl:Class ;
+    rdfs:label "Act of Warning"@en .
+
+cco:ont00001272 a owl:Class ;
+    rdfs:label "Act of Murder"@en .
+
+cco:ont00001274 a owl:Class ;
+    rdfs:label "Infrasonic Frequency"@en .
+
+cco:ont00001279 a owl:Class ;
+    rdfs:label "Vibration Motion"@en .
+
+cco:ont00001285 a owl:Class ;
+    rdfs:label "Revolving Motion"@en .
+
+cco:ont00001286 a owl:Class ;
+    rdfs:label "Waveform"@en .
+
+cco:ont00001289 a owl:Class ;
+    rdfs:label "Damaged Stasis"@en ;
+    rdfs:subClassOf cco:ont00000135 .
+
+cco:ont00001305 a owl:Class ;
+    rdfs:label "Loss of Function"@en .
+
+cco:ont00001314 a owl:Class ;
+    rdfs:label "Legal System Act"@en .
+
+cco:ont00001322 a owl:Class ;
+    rdfs:label "Decrease of Generically Dependent Continuant"@en .
+
+cco:ont00001325 a owl:Class ;
+    rdfs:label "Act of Renting"@en .
+
+cco:ont00001330 a owl:Class ;
+    rdfs:label "Telemetry Process"@en .
+
+cco:ont00001332 a owl:Class ;
+    rdfs:label "Extreme Ultraviolet Light Frequency"@en .
+
+cco:ont00001334 a owl:Class ;
+    rdfs:label "Act of Purchasing"@en .
+
+cco:ont00001336 a owl:Class ;
+    rdfs:label "Act of Ownership"@en .
+
+cco:ont00001337 a owl:Class ;
+    rdfs:label "Infrared Light Frequency"@en .
+
+cco:ont00001338 a owl:Class ;
+    rdfs:label "Timbre"@en .
+
+cco:ont00001339 a owl:Class ;
+    rdfs:label "Act of Walking"@en .
+
+cco:ont00001347 a owl:Class ;
+    rdfs:label "Behavior"@en .
+
+cco:ont00001356 a owl:Class ;
+    rdfs:label "Increase of Disposition"@en ;
+    rdfs:subClassOf cco:ont00000611 .
+
+cco:ont00001359 a owl:Class ;
+    rdfs:label "Act of Manufacturing"@en .
+
+cco:ont00001374 a owl:Class ;
+    rdfs:label "Act of Declarative Communication"@en .
+
+cco:ont00001376 a owl:Class ;
+    rdfs:label "Torque"@en .
+
+cco:ont00002071 a owl:Class ;
+    rdfs:label "Act of Employment"@en ;
+    rdfs:subClassOf cco:ont00000433 .
+
+cco:ont00002077 a owl:Class ;
+    rdfs:label "Act of Publishing"@en ;
+    rdfs:subClassOf cco:ont00000588 .
+
+cco:ont00002078 a owl:Class ;
+    rdfs:label "Act of Issuing"@en ;
+    rdfs:subClassOf cco:ont00000588 .
+
+cco:ont00002082 a owl:Class ;
+    rdfs:label "Act of Refrain"@en .
+
+cco:ont00002083 a owl:Class ;
+    rdfs:label "Act of Censuring"@en .
+
+cco:ont00000008 a owl:Class ;
+    rdfs:label "Sound Frequency"@en ;
+    rdfs:subClassOf cco:ont00001047 .
+
+cco:ont00000065 a owl:Class ;
+    rdfs:label "Act of Location Change"@en .
+
+cco:ont00000135 a owl:Class ;
+    rdfs:label "Stasis of Specifically Dependent Continuant"@en .
+
+cco:ont00000234 a owl:Class ;
+    rdfs:label "Act of Training"@en ;
+    rdfs:subClassOf cco:ont00000228 .
+
+cco:ont00000250 a owl:Class ;
+    rdfs:label "Loss of Realizable Entity"@en .
+
+cco:ont00000395 a owl:Class ;
+    rdfs:label "Gain of Specifically Dependent Continuant"@en ;
+    rdfs:subClassOf cco:ont00000554 .
+
+cco:ont00000433 a owl:Class ;
+    rdfs:label "Act of Association"@en .
+
+cco:ont00000570 a owl:Class ;
+    rdfs:label "Force"@en ;
+    rdfs:subClassOf obo:BFO_0000144 .
+
+cco:ont00000609 a owl:Class ;
+    rdfs:label "Gain of Disposition"@en .
+
+cco:ont00000611 a owl:Class ;
+    rdfs:label "Increase of Realizable Entity"@en .
+
+cco:ont00000726 a owl:Class ;
+    rdfs:label "Decrease of Dependent Continuant"@en ;
+    rdfs:subClassOf cco:ont00000004 .
+
+cco:ont00000752 a owl:Class ;
+    rdfs:label "Wave Process Profile"@en .
+
+cco:ont00000754 a owl:Class ;
+    rdfs:label "Electromagnetic Radiation Frequency"@en .
+
+cco:ont00000819 a owl:Class ;
+    rdfs:label "Stasis"@en ;
+    rdfs:subClassOf obo:BFO_0000015 .
+
+cco:ont00000854 a owl:Class ;
+    rdfs:label "Decrease of Realizable Entity"@en .
+
+cco:ont00000970 a owl:Class ;
+    rdfs:label "Act of Artifact Modification"@en .
+
+cco:ont00001028 a owl:Class ;
+    rdfs:label "Mechanical Wave Process"@en ;
+    rdfs:subClassOf cco:ont00000099 .
+
+cco:ont00001047 a owl:Class ;
+    rdfs:label "Frequency"@en .
+
+cco:ont00001133 a owl:Class ;
+    rdfs:label "Motion"@en ;
+    rdfs:subClassOf cco:ont00000007 .
+
+cco:ont00001147 a owl:Class ;
+    rdfs:label "Act of Violence"@en ;
+    rdfs:subClassOf cco:ont00000228 .
+
+cco:ont00001162 a owl:Class ;
+    rdfs:label "Act of Commissive Communication"@en ;
+    rdfs:subClassOf cco:ont00000402 .
+
+cco:ont00001327 a owl:Class ;
+    rdfs:label "Social Act"@en ;
+    rdfs:subClassOf cco:ont00000228 .
+
+cco:ont00000150 a owl:Class ;
+    rdfs:label "Radio Frequency"@en .
+
+cco:ont00000246 a owl:Class ;
+    rdfs:label "Stasis of Realizable Entity"@en .
+
+cco:ont00000554 a owl:Class ;
+    rdfs:label "Gain of Dependent Continuant"@en .
+
+cco:ont00000588 a owl:Class ;
+    rdfs:label "Act of Mass Media Communication"@en .
+
+cco:ont00001132 a owl:Class ;
+    rdfs:label "Stasis of Mission Capability"@en ;
+    rdfs:subClassOf cco:ont00000246 .
+
+cco:ont00001213 a owl:Class ;
+    rdfs:label "Stasis of Artifact Operationality"@en ;
+    rdfs:subClassOf cco:ont00000246 .
+
+cco:ont00002076 a owl:Class ;
+    rdfs:label "Act of Communication Mediated by Artifact"@en ;
+    rdfs:subClassOf cco:ont00000402 .
+
+obo:BFO_0000015 a owl:Class ;
+    rdfs:label "process"@en .
+
+obo:BFO_0000144 a owl:Class ;
+    rdfs:label "Process Profile"@en .
+
+cco:ont00000004 a owl:Class ;
+    rdfs:label "Change"@en ;
+    rdfs:subClassOf obo:BFO_0000015 .
+
+cco:ont00000007 a owl:Class ;
+    rdfs:label "Natural Process"@en .
+
+cco:ont00000099 a owl:Class ;
+    rdfs:label "Wave Process"@en .
+
+cco:ont00000402 a owl:Class ;
+    rdfs:label "Act of Communication"@en ;
+    rdfs:subClassOf cco:ont00000228 .
+
+cco:ont00000228 a owl:Class ;
+    rdfs:label "Planned Act"@en .
+

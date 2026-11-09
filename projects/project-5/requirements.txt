@@ -1,6 +1,11 @@
 # Core
-mowl==1.0.2
-JPype1==1.6.0
-torch>=2.2,<3
+# mowl-borg: pinned to the exact GitHub commit the pipeline was developed and tested on
+# (reports itself as 2.1.1.dev8; the PyPI release 2.1.0 was not tested). Needs git on PATH.
+mowl-borg @ git+https://github.com/bio-ontology-research-group/mowl@b83c067eab5d54e9d001f1e3170b63ffaff3bb34
+JPype1==1.7.1
+torch==2.14.1
 rdflib==7.0.0
-pandas==2.2.2
+pandas==3.1.0
+anthropic==2.3.0
+python-dotenv==1.2.4
+pyyaml==6.0.3

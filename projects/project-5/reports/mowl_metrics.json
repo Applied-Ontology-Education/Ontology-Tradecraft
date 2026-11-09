@@ -1,0 +1,17 @@
+{
+  "mean_cos_all": 0.1513,
+  "chosen_tau": 0.6,
+  "mean_cos_at_tau": 0.8376,
+  "coverage_at_tau": 0.1212,
+  "baseline_mean_cos": 0.0542,
+  "n_valid_pairs": 66,
+  "hybrid": {
+    "w_cos": 0.7,
+    "w_llm": 0.3,
+    "llm_floor": 0.5,
+    "n_candidates": 125,
+    "n_accepted": 33,
+    "llm_contribution_rate": 0.1515
+  },
+  "consistent": true
+}

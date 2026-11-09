@@ -1,0 +1,1064 @@
+{
+ "0304e963a53850420ad1bc4df896bfb86806b39361b512e4f480aca6279f3921": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00002076",
+   "https://www.commoncoreontologies.org/ont00001777",
+   "https://www.commoncoreontologies.org/ont00000566"
+  ],
+  "reason": "The definition says technology is used to create the copy, which implies the communication includes an agent's use of an artifact, so having some Act of Artifact Employment as a process part fits the definition and is a valid process-to-process relation.",
+  "score": 0.77
+ },
+ "034a41ee7d622ac3aa1b493dbbd8f40cd533b2832234b9a41db0e37aec71b0a1": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001066",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says an Independent Continuant ceases to bear a Disposition, which implies that bearer participates in the loss, though in BFO a loss is arguably a process boundary rather than a process, which strains the domain of 'has participant'.",
+  "score": 0.88
+ },
+ "053c2f3d7376e7fdb1cb5abfb4323486b2eb8e980b9ec125e088a883b443481e": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001068",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says an Independent Continuant becomes the bearer of a Quality in the gain, so that bearer must take part in the process, and the axiom fits the domain (Gain of Quality is a process) and range (Independent Continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "0941d25a8f760cbacd6f1f4c8e2eba4f0c157be27e19dec8eb58db343938794a": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000535",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says that in every Decrease of Quality some Independent Continuant has a decrease in a Quality it bears, so that bearer participates in the process, and the axiom fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "0ac888425d07f53a25d88ffa95679a779d142dd6e5bbb544f2a33f307873cc36": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001120",
+   "http://purl.obolibrary.org/obo/BFO_0000055",
+   "http://purl.obolibrary.org/obo/BFO_0000017"
+  ],
+  "reason": "The definition explicitly says the performing Agent realizes a capacity, and a capacity is a realizable entity; an act is a process, so saying the act realizes some realizable entity is well supported and fits the domain and range of 'realizes'.",
+  "score": 0.93
+ },
+ "0c2c9c95636fad9a2f2668acbda36ff0967b1676332ad8f6ab320dfc51a22515": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000368",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition states that in a Rotational Motion an Object moves around an axis, so every instance has some object as a participant, and this fits the property's domain (process) and range (independent continuant).",
+  "score": 0.93
+ },
+ "105b2ee971fddc677bcd6e1d7301de256ae2faa112af08e720be26d46b58bcd4": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000335",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant bears the unchanging Generically Dependent Continuant during the stasis, so that bearer plausibly participates in the stasis (a BFO process), which fits the property's domain and range, though the definition implies participation rather than stating it outright.",
+  "score": 0.88
+ },
+ "11746baea8aa221fc85fa194437503a5c4a2bad4fa81362b1057883999e00e5c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000542",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000031"
+  ],
+  "reason": "The definition states that an independent continuant ceases to carry some generically dependent continuant, so that GDC is plausibly a participant in the loss, and BFO's 'has participant' range allows generically dependent continuants, though treating a GDC as a participant is slightly debatable.",
+  "score": 0.82
+ },
+ "11f80957fb2ac8ccdb39205f19075d34af45a9af28f2cfd36cf7090b7c9e3a59": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000107",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant has an increase of a Generically Dependent Continuant, so that continuant participates in the process; this holds for every instance, and the axiom fits the property's domain (process) and range (independent continuant).",
+  "score": 0.93
+ },
+ "12c5f796d12fc9812f5983def671a93c26639b443cfebd485c12661b47b9c7b0": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000820",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says an Independent Continuant bears the Function that stays unchanged during the stasis, so that bearer participates in it; a Stasis is a BFO process, which fits the domain of 'has participant', and independent continuant is within its range.",
+  "score": 0.9
+ },
+ "13a7d4c80a08b1d86e965b1d2e9000fc4678380689bae75e63244232aa0d3ac9": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000558",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000040"
+  ],
+  "reason": "The definition says visible light is reflected off a portion of matter, so every instance involves a material entity as participant, and this fits the property's domain (process) and range (independent continuant).",
+  "score": 0.88
+ },
+ "15849c95ced4c66d13a4a78e7f6350604c0955816a65c25b3d9310ece1d9890c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000850",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000019"
+  ],
+  "reason": "The definition makes a Quality that remains unchanged the core of the stasis, and CCO models stases of SDCs as processes that have the dependent continuant as a participant, which the property's range (including specifically dependent continuants) allows.",
+  "score": 0.87
+ },
+ "15d19ce4b199388912d910a19a5c607612ed87a2b9ee772de70589e56e185d1d": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000463",
+   "http://purl.obolibrary.org/obo/BFO_0000055",
+   "http://purl.obolibrary.org/obo/BFO_0000017"
+  ],
+  "reason": "The definition states that the performing agent realizes a capacity derived from affiliation with an Educational Organization, and a capacity is a realizable entity, so the axiom follows (if loosely) from the definition and fits BFO, since the act is a process and capacities are realizable entities.",
+  "score": 0.88
+ },
+ "18d0a3ea0acaf95e55ee3b4bf5855ea88d8b1459e28cf83f2b9738d36e183bf5": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001028",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000040"
+  ],
+  "reason": "The definition says a mechanical wave involves oscillation of a portion of matter and transfer of energy through a material medium, so every instance must have some material entity (the medium) as participant, which fits the domain process and the independent-continuant range.",
+  "score": 0.93
+ },
+ "1c4a003ebe46c23c9c074910eb97d1f08e14dc5903df7b1d5353bd98bece4318": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001285",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition describes Revolving Motion as the rotational motion of an Object, so every instance necessarily has an Object participant, and this fits BFO since the motion is a process and an object is an independent continuant.",
+  "score": 0.95
+ },
+ "2c93bdd6b19d5ad1cfd85501848d6273d1de231e36f606f7e46e486b6a682026": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000361",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that an Independent Continuant undergoes the increase of a Function it bears, so every Increase of Function (a process, which fits the property's domain) has some independent continuant as participant, which fits the property's range.",
+  "score": 0.93
+ },
+ "2f6296880d1edec1b5992a29d9c2aa4239b0a1cea6a7c039052791740a55e00d": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000517",
+   null,
+   "https://www.commoncoreontologies.org/ont00002076"
+  ],
+  "reason": "The definition says a Material Artifact is used to transfer the information, so every instance is by definition an act of communication mediated by an artifact, making the subsumption semantically well supported, though it is not stated explicitly in the original asserted hierarchy.",
+  "score": 0.82
+ },
+ "2fa2f7a72a7abaa11e2fa90852a65c8781ef6a1fa80bf2a0c94231487d6ebc00": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000520",
+   "http://purl.obolibrary.org/obo/BFO_0000132",
+   "https://www.commoncoreontologies.org/ont00000065"
+  ],
+  "reason": "The definition describes an Act of Departure as the initiating portion of a 'larger Act of Location Change', which directly supports its being an occurrent part of some Act of Location Change, and both classes are occurrents, so the property's domain and range fit.",
+  "score": 0.9
+ },
+ "303c579e5070b8076b85ade6fb20a0bc6393d819a94b9bc49dcc207da3b6c384": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000065",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition says some Object's location is changed in every Act of Location Change, so an object necessarily participates, and a process with a continuant participant fits the property's domain and range.",
+  "score": 0.95
+ },
+ "33aae11fb496803d6f9d449b5636113aedb5a3ce50df990da1cf19a7c393fb4a": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001039",
+   "http://purl.obolibrary.org/obo/BFO_0000062",
+   "https://www.commoncoreontologies.org/ont00000884"
+  ],
+  "reason": "The definition explicitly says the repayment reduces a debt arising 'from an earlier Act of Loaning', so every repayment is preceded by some loaning act, and both classes are occurrents, which fits the domain and range of 'preceded by'.",
+  "score": 0.92
+ },
+ "34f66a018c9da2625b033478d3ae7fb81cade253503c457a416265d26688e1e2": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000555",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant bears the enhanced quality or realizable entity during the stasis, so that bearer participates in it; this holds for every instance, and Stasis, as a BFO process, fits the property's domain while independent continuant fits its range.",
+  "score": 0.88
+ },
+ "3550c0335466bdc99ca4ca68c79a2ee3eaf3dfd3693e36bc9dc5f6b507ca4ea9": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000197",
+   "http://purl.obolibrary.org/obo/BFO_0000132",
+   "http://purl.obolibrary.org/obo/BFO_0000015"
+  ],
+  "reason": "The definition states that a Process Beginning is a Process Boundary that is part of a Process, and in BFO process boundaries are occurrent parts of processes, so the axiom holds for every instance and fits the property's domain and range.",
+  "score": 0.95
+ },
+ "38e0db31c47a7a3023bdc832e580a60e4f6509d86b3008613e4dd58f714d9766": {
+  "candidate": [
+   "http://purl.obolibrary.org/obo/BFO_0000144",
+   "http://purl.obolibrary.org/obo/BFO_0000132",
+   "http://purl.obolibrary.org/obo/BFO_0000015"
+  ],
+  "reason": "The definition explicitly states that a Process Profile is an occurrent part of some process, and this fits BFO since both the profile and the process are occurrents, matching the property's domain and range.",
+  "score": 0.95
+ },
+ "39ef5958ded555630fe009835e6cbc9e66a87700fc80928b20a428eadf71850c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000115",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000016"
+  ],
+  "reason": "The definition centers on a disposition that stays unchanged during the stasis, so saying the stasis has some disposition as participant is supported; it also fits CCO's pattern of using has participant for the dependent continuant in Stasis classes, and a disposition (a specifically dependent continuant) falls within the property's range.",
+  "score": 0.8
+ },
+ "3b04929576d0f391097b1d1bd2a792044532f518e5476dbd52bc08dff9e83cbd": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000660",
+   "https://www.commoncoreontologies.org/ont00001819",
+   "http://purl.obolibrary.org/obo/BFO_0000015"
+  ],
+  "reason": "The definition states that an Effect is a Process caused by some previous Process, so 'caused by some process' follows directly from it and holds for every instance, and both classes are occurrents, which fits the property's domain and range.",
+  "score": 0.95
+ },
+ "3b115ec920e11361485872de5c8fabc7d391ec56b6dd2679d9d4593ef3c47554": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000250",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000017"
+  ],
+  "reason": "The definition implies that a realizable entity is lost in every instance, and the property's range allows specifically dependent continuants, but whether the lost realizable entity counts as a participant (rather than merely being affected via its bearer) is somewhat contested in BFO.",
+  "score": 0.65
+ },
+ "3ead9fc946651c3a19331cff7fdc3c623fb3a6e937802ba72905cb6a3dff08ca": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001322",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant undergoes the decrease, so it participates in the process, which fits the domain (process) and range (independent continuant) of 'has participant'; the only wrinkle is that GDCs are strictly borne via concretization, which makes 'bears' slightly loose without undermining participation.",
+  "score": 0.88
+ },
+ "3ebec618c2bdd194af2c4d4acf47ebae52b1f3fbe785d2e395fe6742af400d97": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000250",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant ceases to bear a Realizable Entity in the loss process, so that bearer participates in it; this holds for every instance and fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "3fe3b0c5e47f13c5d8f906d843740d0c1fcbea9fafe268afd2ed2274c76ef4bd": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000924",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000040"
+  ],
+  "reason": "A Beginning of Life Stasis is a process (a stasis) in which a Material Artifact, itself a material entity, participates while in its initial operational state, so the definition directly supports the axiom and it fits the property's domain and range.",
+  "score": 0.9
+ },
+ "402c3d84afd93db326ad3fc778e2b0cfa4e649758c1afa74e89f944806f30921": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000978",
+   "https://www.commoncoreontologies.org/ont00001803",
+   "http://purl.obolibrary.org/obo/BFO_0000015"
+  ],
+  "reason": "The definition states that a Cause is a Process that causes some other Process, which directly supports the existential restriction that every Cause is cause of some process, and this fits the property's process domain and range.",
+  "score": 0.95
+ },
+ "40b6dd3957040f194fcb25439253e5b5946159cf33d66821091234828cd3c1e3": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000135",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says the stasis involves an Independent Continuant bearing an unchanging Specifically Dependent Continuant, so that bearer plausibly participates in the stasis (a BFO process), which fits the property's domain and range.",
+  "score": 0.86
+ },
+ "40d22b81c03db07a5ceaeda91c4cb03b2e13cdbe3fc4190e3f80ec6c8919962c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000290",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant undergoes the decrease in an SDC it bears, so that bearer participates in the process; this holds for every instance and fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "4156dc62202577c8b670b044c14d9e9709055260f406c08ff9808225736d7675": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001127",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that in every Loss of Quality some Independent Continuant ceases to bear a Quality, so that bearer participates in the process, and the axiom is consistent with the property's process domain and continuant range.",
+  "score": 0.9
+ },
+ "416cb30f1d8a6d747d010d0fc30881b9d8a3b2e4051afdb10ea2f8df0c0f3328": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000501",
+   "http://purl.obolibrary.org/obo/BFO_0000062",
+   "https://www.commoncoreontologies.org/ont00000137"
+  ],
+  "reason": "The definition states that the withdrawal draws on an account created by an earlier Act of Financial Deposit, which directly supports a 'preceded by' relation between two occurrents and fits the property's domain and range.",
+  "score": 0.9
+ },
+ "42cc7791423b36a10362203db6828757f6bd40f6191745db2568c02795a42e1a": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000642",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant becomes the bearer of the gained Realizable Entity, so that bearer participates in the change; this holds for every instance and fits the domain (process/event) and the range of 'has participant'.",
+  "score": 0.88
+ },
+ "4366ad1fa2bfa4e8293f7a2a5975328995154ed2ec553622cff37f8e998e93d0": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001347",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition explicitly states that an Independent Continuant participates as an Agent in the Behavior, which is a process (an Act), so the axiom follows directly and fits the property's domain and range.",
+  "score": 0.95
+ },
+ "43975c1b0e945520a2d38d39520a7d889ba70b7d2de85d50621ff7146be4374a": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001314",
+   "http://purl.obolibrary.org/obo/BFO_0000055",
+   "http://purl.obolibrary.org/obo/BFO_0000023"
+  ],
+  "reason": "The definition says a Legal System Act is performed by an Agent and realizes that Agent's role within a legal system, so every instance realizes some role; this fits BFO, since an act is a process and a role is a realizable entity, matching the property's domain and range.",
+  "score": 0.88
+ },
+ "45a9f5c221734d9a499cd93234c34174cd6ee9cb893b52c37453e67d3cc4010e": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000542",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that an Independent Continuant ceases to be the carrier of a Generically Dependent Continuant, so that carrier participates in every such loss process, and the axiom fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "45ac5a2db5ab106476eb5aa1b755e430fe7ea85447e5834a5bdeabd7fc814603": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001237",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000040"
+  ],
+  "reason": "Birth is a process of bringing forth offspring, which necessarily involves material entities (the parent organism and the offspring) as participants, and this fits BFO's has participant domain and range.",
+  "score": 0.93
+ },
+ "46ae75e796476876b54c1b03e9fb08d7856f7459e3ab20986b680ba9ba2a201d": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000395",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant becomes the bearer of a Specifically Dependent Continuant, so that bearer takes part in the gain process, and the independent continuant fits the range of 'has participant'.",
+  "score": 0.93
+ },
+ "4ee26f3aa99ca17e41dc9c97cc9470723e71252c171cc69ac250f04c435109cc": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001289",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says that in every Damaged Stasis some Independent Continuant bears the impaired quality or realizable entity, so it participates, and Stasis is a process, which fits the domain and range of has participant.",
+  "score": 0.93
+ },
+ "5278e5b35dde3d143574ecc08f1bb3ecbc82252151eaa3e75df7368f4d3f1456": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000584",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition says the position of some Object (or of its parts) is changed, so every instance has an Object as participant, which fits the process domain and independent continuant range of 'has participant'.",
+  "score": 0.93
+ },
+ "52e41d9cce166d197a7f70f64c3dcbebd65311a906770c32ed46700ad01c925c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000228",
+   "http://purl.obolibrary.org/obo/BFO_0000055",
+   "http://purl.obolibrary.org/obo/BFO_0000023"
+  ],
+  "reason": "The definition says an Agent 'plays a causative role' in the act, which loosely suggests the act realizes a role, but the phrase is informal and an agent's causal contribution is more naturally a disposition or capability than a BFO role, so the axiom is only partly supported.",
+  "score": 0.55
+ },
+ "5a994e37f71d6d4f6b1c8bfb455fab81c255b4f5cb5d7c85c9c084cbd88d558b": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000675",
+   "http://purl.obolibrary.org/obo/BFO_0000117",
+   "https://www.commoncoreontologies.org/ont00001227"
+  ],
+  "reason": "The definition describes displacement parallel to the propagation direction, which is a longitudinal wave, and modeling this as a Longitudinal Wave Profile occurrent part fits the BFO and CCO treatment of process profiles as parts of processes.",
+  "score": 0.86
+ },
+ "5c462c6bdd5ad8e3522cd0cf2c19111190492fcd6ff9bfe8a444ffbfd1808292": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000920",
+   "http://purl.obolibrary.org/obo/BFO_0000117",
+   "https://www.commoncoreontologies.org/ont00001305"
+  ],
+  "reason": "Since Death is defined as the process in which all sustaining biological functions cease, each function's cessation is plausibly a Loss of Function occurring as part of it, and both are occurrents; one could argue, though, that Death is itself a Loss of Function rather than having one as a part.",
+  "score": 0.75
+ },
+ "5cf78d1cd2656698b592cc0fc88c99d340f74a6f06803a16fa677a341ef842b1": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000011",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant bears the quality or realizable entity in the stasis, so that continuant participates in it; a stasis is a BFO process, which satisfies the domain of 'has participant', and an independent continuant is within its range.",
+  "score": 0.93
+ },
+ "5ecfa49d01d7917b6974efff77e609c24477b57f83630cee72f7ef60048f2e34": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000726",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant undergoes the decrease, so it necessarily participates in the Change, which is a process, and an independent continuant falls within the range of 'has participant'.",
+  "score": 0.93
+ },
+ "632721350f5720b345bc473fff579c2a05c800956c6353737157a2c9c1a54595": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001374",
+   "https://www.commoncoreontologies.org/ont00001803",
+   "https://www.commoncoreontologies.org/ont00000004"
+  ],
+  "reason": "The definition says the act 'changes the reality' to match the declaration's content, which supports it causing some Change (a process), fitting the process-to-process domain and range; however, the change could arguably be part of the act rather than a separate effect, and failed declarations make 'every instance' slightly uncertain.",
+  "score": 0.77
+ },
+ "64beea660ab2b929949a3909e8d17a5a25cbd8731b118065f55d5cbfbd5a1e8c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000083",
+   "http://purl.obolibrary.org/obo/BFO_0000132",
+   "http://purl.obolibrary.org/obo/BFO_0000015"
+  ],
+  "reason": "The definition says outright that a Process Ending is a Process Boundary that is part of a Process, and BFO process boundaries are always occurrent parts of some process, so the axiom fits both the definition and the property's occurrent domain and range.",
+  "score": 0.93
+ },
+ "674fbafe14470a9e0237c4ef67aa6255fff9df87571f00509d1e5aa5bd624a21": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000290",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000020"
+  ],
+  "reason": "The definition says every such decrease involves a decrease in some specifically dependent continuant borne by an independent continuant, so the specifically dependent continuant plausibly participates in the process, and BFO's 'has participant' range explicitly allows specifically dependent continuants.",
+  "score": 0.8
+ },
+ "6758c27d249e33023bdd162d6d0abf39489300f4363442bb13891de2a88eca2b": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000850",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant bears the unchanging Quality during the stasis, so that bearer plausibly participates in the stasis (a BFO process), which fits the property's domain and range, though the definition does not state participation explicitly.",
+  "score": 0.88
+ },
+ "6c0c5dee4230292b9181f8ba7179572fe97fa4ea866e9165a1c971302f7fbd34": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000609",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says an Independent Continuant becomes the bearer of the gained Disposition, so that bearer participates in the process, and the axiom fits BFO since Gain of Disposition is a process and independent continuant is within the property's range.",
+  "score": 0.93
+ },
+ "73ba2876a5587df08b4a8cd2616c5134566d612096bcb9baf1f0d9bad7771648": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001191",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000040"
+  ],
+  "reason": "The definition says an Operational Stasis holds while a Material Artifact maintains its functions, so the artifact (a material entity) participates in every instance, and since a Stasis is a BFO process it fits the domain of 'has participant'.",
+  "score": 0.93
+ },
+ "75fe6bbbc7dfbcf6dd09d57770dbe8ccde7d73f2c9c62cde9c1ed41ed945cda6": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000660",
+   "http://purl.obolibrary.org/obo/BFO_0000062",
+   "http://purl.obolibrary.org/obo/BFO_0000015"
+  ],
+  "reason": "The definition says an Effect is a Process that follows some previous Process, which directly entails that every Effect is preceded by some process, and both classes are occurrents, so the property's domain and range fit.",
+  "score": 0.93
+ },
+ "78ad666e8c7643934ad4af424d29c0f2019b709c985dc2ba9294285e4e87f43f": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000572",
+   "https://www.commoncoreontologies.org/ont00001803",
+   "https://www.commoncoreontologies.org/ont00000675"
+  ],
+  "reason": "The definition says a Sound Production produces a sound wave, which can reasonably be read as causing a Sound Wave Process, and both domain and range are processes, so the axiom fits well.",
+  "score": 0.85
+ },
+ "79b860d7ea52c0f0efa17f8c5cdf8e0ce0fc154f48b3defb8252cc8e6dc3e1c2": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000819",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says a Stasis is a Process in which one or more Independent Continuants endure unchanged, so every Stasis has at least one independent continuant participant, which also fits the domain (process) and range of 'has participant'.",
+  "score": 0.93
+ },
+ "7fe7d12dfe37b9cfa83ee1bdf2ba78563a137217d0a1ad500d78b0057257cd62": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001330",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000040"
+  ],
+  "reason": "The definition describes a mechanical process involving receiving equipment and measuring devices, which are material entities, and every BFO process has some material participant, so the axiom holds and fits the property's domain and range, though the definition does not state it explicitly.",
+  "score": 0.88
+ },
+ "80b580151b108f7ab3e8d35271fe7d31b2e76786126db135f7bbf4d6f05aaf07": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000862",
+   "http://purl.obolibrary.org/obo/BFO_0000132",
+   "http://purl.obolibrary.org/obo/BFO_0000015"
+  ],
+  "reason": "The definition states that a Sound Process Profile is part of a sound reception process, and BFO treats process profiles as occurrent parts of processes, so the axiom holds for every instance and fits the property's occurrent domain and range, though it is more general than the definition warrants.",
+  "score": 0.93
+ },
+ "859b6b94a80849f8398894eacce0a97b4713ca3257b548eeb535df87c4fb2f1b": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000544",
+   "https://www.commoncoreontologies.org/ont00001936",
+   "https://www.commoncoreontologies.org/ont00000741"
+  ],
+  "reason": "The definition states that a Target is a Material Entity that is the object of an Act of Targeting, so the axiom restates it directly and fits the domain (independent continuant) and range (process); the 'every instance' condition is somewhat loose, since a target might not yet be the object of an actual targeting act, which slightly lowers confidence.",
+  "score": 0.88
+ },
+ "89b0fe3f2596a4ab045c577c03a1e30efd807fc173ed8aaca575c34cb0bc3642": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000554",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says that in every such Change an Independent Continuant comes to bear or carry a Dependent Continuant, so that continuant takes part in the process; the Change is a process, satisfying the domain, and independent continuant fits the range.",
+  "score": 0.93
+ },
+ "8b46fd15a5139e224a81e4c639a810a70d0d1d8b92d1d602fa5d38d1845f7298": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000789",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition explicitly states that a participating Object changes its position, so every Translational Motion has some object as participant, and this fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "8bd98679f8ebd41ec09c8504664f0cd20458974fcecba7ae6532052aefbd7d6b": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001194",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant becomes the bearer of a Role, so it participates in the gain, and treating the Gain of Role as a process fits the domain and range of 'has participant'.",
+  "score": 0.95
+ },
+ "8cb4ce5bb7ac5bc9ef5642d4116bcad611afaf1a644232321054e6184338dd6a": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000033",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant undergoes the decrease of a Role it bears, so it participates in that process; this holds for every instance and fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "8d1ef2950f64b3df9c3d190478f98d1fbd772853f8f0eb2e5e1ababa76a9558c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000131",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant undergoes the increase of a Quality it bears, so that bearer participates in the process, and an independent continuant is a valid filler for the range of 'has participant'.",
+  "score": 0.93
+ },
+ "941ce92abf795ab77dc147200ca5f2c6be1dfeb4c394c4a712bb6bc887fdb537": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000883",
+   "http://purl.obolibrary.org/obo/BFO_0000117",
+   "https://www.commoncoreontologies.org/ont00000769"
+  ],
+  "reason": "The definition says an invitation is 'performed by requesting' presence or participation, which supports treating a request as a component act. But CCO classifies inviting as commissive rather than directive, so it is unclear whether every invitation contains a separate Act of Requesting as an occurrent part or simply is that request.",
+  "score": 0.62
+ },
+ "969bcbaec123ad417d4b423ca90dc26ec9f9d0027f639bfa942c777cba40ad23": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000773",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition says an Object moves along a curved path, so every Curvilinear Motion, being a process, has some object participant, which fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "9d99532012773a5aef20f86f5edbe4409dfa97253f41f4b796a6341b0ff36c18": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000389",
+   "http://purl.obolibrary.org/obo/BFO_0000117",
+   "https://www.commoncoreontologies.org/ont00000836"
+  ],
+  "reason": "The definition says every Act of Buying involves an Agent using a Financial Instrument, so having an Act of Financial Instrument Use as an occurrent part is well supported, though in CCO Act of Purchasing is arguably itself a kind of financial instrument use, which makes subclassing the more natural relation than parthood.",
+  "score": 0.75
+ },
+ "9df71515efbb447271e0e20f627b9b27913324957de7173059df48ddadf2dd7f": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001127",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000019"
+  ],
+  "reason": "The definition centres on an independent continuant ceasing to bear some quality, so the lost quality is plausibly a participant, and BFO's 'has participant' range explicitly allows specifically dependent continuants such as qualities, though the definition does not state this participation outright.",
+  "score": 0.78
+ },
+ "9e0d44e78fef19d0b49b56c42090f39d2d5d630d7f664e8ded93ea3fcf55af3e": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000367",
+   "http://purl.obolibrary.org/obo/BFO_0000055",
+   "http://purl.obolibrary.org/obo/BFO_0000017"
+  ],
+  "reason": "The definition says the act is performed by an Agent who realizes a capacity derived from military affiliation, and since processes are what realize realizable entities in BFO (process domain, realizable entity range), it fits that every such act realizes some realizable entity, though the definition attributes the realizing to the agent rather than stating it of the act directly.",
+  "score": 0.88
+ },
+ "a03defeb9b25132ce565685feececfaf40f8339ad8a04dfda9709152dc080c4f": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000876",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant ceases to bear a Dependent Continuant, so that continuant takes part in the change, and Change is a process, which fits the property's domain and range.",
+  "score": 0.93
+ },
+ "a06f153cdda9e529e24a5ef90e8ad099a97d12d83637d3eb107dffd6a63b3520": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000115",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant bears the Disposition throughout the stasis, so that bearer plausibly participates in this process (a Stasis is a BFO process, fitting the domain and range), though the definition implies participation through bearing rather than stating it outright.",
+  "score": 0.88
+ },
+ "a2b8e2b659a9e24e691a9753a1aa846f4daad7cfb653654740061b5b0c5c6b54": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000765",
+   "https://www.commoncoreontologies.org/ont00001803",
+   "https://www.commoncoreontologies.org/ont00000099"
+  ],
+  "reason": "The definition says a Wave Process is 'generated' in a Wave Production, which reasonably implies the production causes a Wave Process, and the domain and range (both processes) fit, although 'in which' could also be read as the wave being a part rather than an effect.",
+  "score": 0.75
+ },
+ "a6bd5739bc0993ae48cd3b9a28a21f9841d6c2eaf6c52b2ff56f6febf5b3f288": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000865",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant stops bearing a Specifically Dependent Continuant, so that bearer takes part in the loss process, and the axiom's process domain and independent continuant range fit BFO.",
+  "score": 0.92
+ },
+ "a6bda4eef9ce86c13b75a42682fb580334a81700e2f9abbf22b814b803c360d8": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001286",
+   "http://purl.obolibrary.org/obo/BFO_0000132",
+   "https://www.commoncoreontologies.org/ont00000099"
+  ],
+  "reason": "A Waveform is a Wave Process Profile, and BFO treats a process profile as an occurrent part of the process it profiles, so each Waveform being an occurrent part of some Wave Process fits the definition and the property's occurrent domain and range.",
+  "score": 0.85
+ },
+ "a6ce33c26884ac881227ba2c6aad89ec7339bc0627b529af7aef5ad65070e516": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001214",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant undergoes an increase in a Specifically Dependent Continuant it bears, so that bearer participates in the process; this fits has participant, whose domain is process and whose range includes independent continuant.",
+  "score": 0.93
+ },
+ "a70d344f798b3f32c29af2a460a46cc26d8075c102f115c8413dab7a63ffa1d2": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000166",
+   "http://purl.obolibrary.org/obo/BFO_0000132",
+   "https://www.commoncoreontologies.org/ont00000099"
+  ],
+  "reason": "The definition describes a Wave Cycle as a portion of a Wave Process, so every Wave Cycle is an occurrent part of some Wave Process, and both classes are processes, which fits the property's occurrent domain and range.",
+  "score": 0.93
+ },
+ "a7b0e9661eb873053be8f341ef06b2cfa69c0f955ff209afcd0c0e4c6438d4a6": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000543",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant undergoes the decrease of a Disposition it bears, so that bearer participates in the process, which fits has participant's process domain and independent continuant range.",
+  "score": 0.88
+ },
+ "a8944ae02d615e391f8748e71bdee34d84da7e93ed9defa1ed6eb7ddf6e665af": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001219",
+   "http://purl.obolibrary.org/obo/BFO_0000132",
+   "https://www.commoncoreontologies.org/ont00001133"
+  ],
+  "reason": "Delta-v is defined as a Process Profile of an object's Motion, and in BFO a process profile is a proper occurrent part of the process it profiles, so every Delta-v is plausibly an occurrent part of some Motion, though CCO would more typically express this with 'process profile of'.",
+  "score": 0.8
+ },
+ "ab11b754f3d3fe313cb14c4c645e47e348d6250268cec885af326d01fc9ea11a": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000272",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000040"
+  ],
+  "reason": "The definition states that in Combustion a Portion of Fuel or other Material Entity is burned, so every Combustion has some material entity as participant, which fits the property's domain (process) and range (independent continuant).",
+  "score": 0.95
+ },
+ "ae48ad7b16d9a92a252c029bd3798803c4302d3494c2165412828265b2d0110c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000131",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000019"
+  ],
+  "reason": "The definition centres on a borne quality that undergoes an increase, so the quality plausibly participates in the process, and BFO's 'has participant' range allows specifically dependent continuants such as qualities, though the definition frames the independent continuant as the main participant.",
+  "score": 0.8
+ },
+ "b02f72b0386e3b5ab14a17a2d3b4dda47ac3c33ca109c36ed46d5ada09db434d": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000099",
+   "http://purl.obolibrary.org/obo/BFO_0000117",
+   "https://www.commoncoreontologies.org/ont00000644"
+  ],
+  "reason": "The definition says a Wave Process 'involves Oscillation', and since Oscillation Process is an occurrent, reading this as occurrent parthood fits BFO and the property's domain and range, though 'involves' is a looser term than strict parthood.",
+  "score": 0.8
+ },
+ "b035e0916aa40a505e0bfb99f145e988faa0c47cd92f6369d7d0f68150c0b91d": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000847",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000040"
+  ],
+  "reason": "An Active Stasis is a Stasis, which is a process, and by definition it holds while a Material Artifact (a material entity) realizes its functions, so it must have that artifact as a participant; this fits the domain and range of 'has participant'.",
+  "score": 0.93
+ },
+ "b04fdec070130be2bbce5e28c2182d2e97a52e397a36a3d29df8120f83186337": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000865",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000020"
+  ],
+  "reason": "The definition centres on an independent continuant ceasing to bear a specifically dependent continuant, so that lost SDC is plausibly a participant in the loss process, and BFO's range for 'has participant' allows SDCs; however, the definition does not state this participation explicitly.",
+  "score": 0.75
+ },
+ "b119f85e8e076c737c8f3f6f34464406169a1f911780f2ac6f9557ab22206345": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000013",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says an Independent Continuant becomes the carrier of the generically dependent continuant, so every such gain has that bearer as a participant, which fits the domain (process) and range of 'has participant'.",
+  "score": 0.93
+ },
+ "b4117440beef2c9eac35773ec87e448059e7d9bcfd2ff3867b288ac7d18789b8": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00002077",
+   "https://www.commoncoreontologies.org/ont00001777",
+   "https://www.commoncoreontologies.org/ont00002078"
+  ],
+  "reason": "The definition explicitly says publishing involves the public issuance of information, so having an issuing act as a process part is well supported and fits the process-to-process domain and range, though how 'Act of Issuing' is defined in CCO leaves some uncertainty.",
+  "score": 0.75
+ },
+ "b797d95d5723eab65cde4b4653d4953682503431862c55f3004fa8573411a59a": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000004",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that in every Change some independent continuant endures and gains, loses, or changes the intensity of a dependent entity, which means an independent continuant participates; the axiom also fits the domain (process) and range of 'has participant'.",
+  "score": 0.9
+ },
+ "b9647553b4a07e4c586914d03e7b35c554ebd975e817adc7d2d4c657e6b79c62": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000462",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says that in every Gain of Function some Independent Continuant becomes the bearer of a Function, so that bearer participates in the process, which fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "bb21dd6f4882ab87d419064495321786b840bd7c0374f851fc61a48a55eb0fda": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000555",
+   "http://purl.obolibrary.org/obo/BFO_0000062",
+   "https://www.commoncoreontologies.org/ont00000004"
+  ],
+  "reason": "The definition says the improvement resulted from a previous action or event, and an increase or gain in a quality or realizable entity is itself a Change, so every Enhanced Stasis is plausibly preceded by some Change, which fits the occurrent domain and range of 'preceded by'.",
+  "score": 0.8
+ },
+ "bbde01ba6c88c56a7f3036a062809ea2a93b260d9028fae595d0ba10c3f60adf": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000922",
+   "http://purl.obolibrary.org/obo/BFO_0000132",
+   "https://www.commoncoreontologies.org/ont00000065"
+  ],
+  "reason": "The definition explicitly calls the arrival the completion of a 'larger Act of Location Change', so every Act of Arrival is an occurrent part of some Act of Location Change, and both classes are processes, which fits the occurrent domain and range.",
+  "score": 0.9
+ },
+ "bef7e3e42339bbd4ca3a6c257c36398bdba61eb04d899def1266b61b48495b0c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000611",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant has an increase of a Realizable Entity it bears, so that bearer participates in the process, which fits BFO's has participant domain (process) and range (independent continuant).",
+  "score": 0.93
+ },
+ "c4ff85792ba77d4431cbe6ac92d3439a9f48f1d8213bf056f25467fa4aa8e2f3": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000246",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some independent continuant bears the unchanged realizable entity during the stasis, so it is clearly a participant, and this fits a stasis being a BFO process within the property's domain and range.",
+  "score": 0.9
+ },
+ "c6236b75a518767f42b778a65d2626f72d62115563bf5e8f66e8e5d04bf417fe": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000305",
+   "https://www.commoncoreontologies.org/ont00001819",
+   "https://www.commoncoreontologies.org/ont00000675"
+  ],
+  "reason": "The definition explicitly states that Sound Pressure is caused by a Sound Wave, and since Sound Pressure sits in the Event module as an occurrent (a pressure process profile), relating it to a Sound Wave Process via 'caused by' fits the occurrent domain and range.",
+  "score": 0.85
+ },
+ "c66a67445445baaa87ec76cbdda7f28505146035a3aff4ee4fcb7a8ecdd2d5c0": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000594",
+   "https://www.commoncoreontologies.org/ont00001803",
+   "https://www.commoncoreontologies.org/ont00000272"
+  ],
+  "reason": "The definition says an Ignition Process initiates a Combustion process, which directly supports a causal 'is cause of' relation between two processes, consistent with the property's process domain and range.",
+  "score": 0.86
+ },
+ "c6b2a33d39d1c0d2814cfed6beabfd48bf7518b549da8e6d151c1cdc3699f625": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000566",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000040"
+  ],
+  "reason": "The definition says the act uses a Material Artifact, which is a material entity, so every instance has some material entity as participant; this fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.95
+ },
+ "c821a227a211406c2863695532114cc5393f7a3dfb21fb9ea97abd692e1c425d": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001356",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition explicitly states that some Independent Continuant has an increase in a disposition it bears, so every instance (a BFO process) has that bearer as a participant, and this fits the property's domain and range.",
+  "score": 0.93
+ },
+ "c8f9f16713534b22808529c6fc5e8a4f18a7a65e189dfa610ad8b98e1bb76fe6": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000110",
+   "http://purl.obolibrary.org/obo/BFO_0000055",
+   "http://purl.obolibrary.org/obo/BFO_0000016"
+  ],
+  "reason": "The definition makes every Mechanical Process the realization of some Disposition, so the axiom follows directly, and process-realizes-disposition matches the property's process domain and realizable-entity range.",
+  "score": 0.95
+ },
+ "cf06a1a210c9cc0b62938c5cc73511fcff150c361caaab699f87e317ccf613a2": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000246",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000017"
+  ],
+  "reason": "The definition says the stasis involves a realizable entity that remains unchanged, and CCO formalizes such stases with has participant some realizable entity, which fits the property's range of specifically dependent continuants.",
+  "score": 0.88
+ },
+ "d1faa7096a91755b7379c6f43a343ad6f2f30901f3c603fdb3e79ef4d712bb5d": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001028",
+   "http://purl.obolibrary.org/obo/BFO_0000117",
+   "https://www.commoncoreontologies.org/ont00000644"
+  ],
+  "reason": "The definition says a Mechanical Wave Process involves Oscillation of a portion of matter, which fits reading the oscillation as an occurrent part, and both classes are processes, so the domain and range are satisfied; the only doubt is whether 'involves' means parthood rather than some other relation.",
+  "score": 0.85
+ },
+ "d2b23cadfd47744d082d9775dba0cab84a3f0b7bbdbf63ef3623abbc0aa7f1c1": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000786",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says that in every Increase of Role some Independent Continuant has an increase of a role it bears, so that bearer participates in the process, which fits has participant's process domain and its range that includes independent continuant.",
+  "score": 0.93
+ },
+ "d3d2f190e2ec554dd67ef0cc7f4bd256abb7fe88d824a4073a3899b661696b19": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000908",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000040"
+  ],
+  "reason": "The definition requires physical operations performed on a material artifact, which is a material entity, so every instance has some material entity as participant, and this fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.95
+ },
+ "d6ff7e57ef712c85b15c6a2bb5aad093b597621a99ac366466359db7bf95b305": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000982",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant undergoes a decrease of a Function it bears, so it participates in that process, which fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.9
+ },
+ "d7f23f24c7f4834f697cd7438be5935a6090a41f2627cd7dc50c3b1421b23e87": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001048",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant undergoes the increase in a Dependent Continuant it bears, so that bearer participates in every such Change (a process), and an independent continuant fits the property's range.",
+  "score": 0.95
+ },
+ "d889ce55d6f39fef4c974fb2737c3c931d2cddb0f6801f5ce82fdff38316c861": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001053",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition explicitly says an Act of Collision involves the movement of one object colliding with another, so every instance has at least one object (an independent continuant) as participant, and this matches the domain and range of 'has participant'.",
+  "score": 0.95
+ },
+ "d89d3f49e49c4a35bbfd480afd7c24e2ba1f608756ac27563f7cfd2c5a4c89e8": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000027",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition says mailing delivers information carried by tangible objects (e.g., written documents) to recipients, so every mailing involves at least one material object (the mailed item or a recipient person), and this fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "da13ec932680b0c9788aae45840dd56152569c9a060777601703248dcc4113ee": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000824",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says an Independent Continuant bears the unchanging Role during the stasis, so that bearer participates in it; a stasis is a process, so the domain fits, and an independent continuant is within the range.",
+  "score": 0.93
+ },
+ "e18c607618c9e78f803bc5c7e98399983e860d44654fbc251a8ef72397319d80": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001184",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition makes Spinning Motion a rotational motion of an Object, so every instance has an object participant, and this fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "e55caeaaf46115c92f1c525d7e9ab281aa8c8015a04ad8c0c7691286ed20454c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000357",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition states that an Act of Motion changes the position or location of some Object, so every instance has an Object as participant, and this fits BFO since a Planned Act is a process and an Object is an independent continuant within the property's range.",
+  "score": 0.93
+ },
+ "e85ed874ca713738778ef3b8de10bb4eb381162b0f124b02ea327b4b8f114bc3": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000260",
+   "https://www.commoncoreontologies.org/ont00001819",
+   "https://www.commoncoreontologies.org/ont00000312"
+  ],
+  "reason": "The definition says a muzzle blast is caused by a projectile being pushed from a firearm barrel by an explosive charge, which is reasonably read as a propulsion process, and both classes are occurrents so the domain and range fit, though the definition never uses the term 'Propulsion Process' explicitly.",
+  "score": 0.75
+ },
+ "ec568dcadd65964a56867851f8a3838cf14c772170c4bf20e60df83539bffb30": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000430",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition states that an object maintains the same Spatial Orientation during the stasis, which implies the object participates in it; a Stasis is a process and an object is an independent continuant, so the axiom fits the property's domain and range, though 'object' may be meant loosely rather than strictly in the BFO sense.",
+  "score": 0.86
+ },
+ "f054286f8897e8ce62bf4acc19b67f0d32846ea29d0bca2cf0221609aef275a1": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000312",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000030"
+  ],
+  "reason": "The definition explicitly requires a participating Object to which forces are applied, so every Propulsion Process has some object participant, and Object, as an independent continuant, fits the range of 'has participant'.",
+  "score": 0.95
+ },
+ "f20ba1619e7e7b55255b1b1304df2a2ddfe7e7ad73a562f6f9600781f52597ba": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001215",
+   "http://purl.obolibrary.org/obo/BFO_0000062",
+   "https://www.commoncoreontologies.org/ont00000920"
+  ],
+  "reason": "The definition specifies that a funeral concerns a person who has died, so some death (an occurrent) must precede it, which fits the occurrent domain and range of 'preceded by'; slight doubt remains over memorials for persons only presumed dead and over how Death is modeled in CCO.",
+  "score": 0.82
+ },
+ "f2e9221a0ea0e9fababd02e7a0bc02c945f64355831942b52b31434833506236": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000558",
+   null,
+   "https://www.commoncoreontologies.org/ont00000951"
+  ],
+  "reason": "The definition says this is a Wave Process involving an Electromagnetic Wave at a visible light frequency, so classifying it as an Electromagnetic Wave Process is a natural and well-supported specialization, though the definition names only Wave Process as its direct genus.",
+  "score": 0.82
+ },
+ "f56df96526d2c795ed2fa9a0ceecf9d05748aa5a208a35d1a58c7afea9ef829c": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00001305",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition says some Independent Continuant ceases to bear a Function, so that bearer participates in the Loss of Function (a process/change event), which fits the property's domain and range.",
+  "score": 0.93
+ },
+ "f6c9acb7ab3b3f816cdd027d3468316e0f9a44323a5fd741285c847a55c7b876": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000951",
+   "http://purl.obolibrary.org/obo/BFO_0000117",
+   "https://www.commoncoreontologies.org/ont00000514"
+  ],
+  "reason": "The definition says every electromagnetic wave process has a Transverse Wave Profile, and in CCO process profiles are treated as occurrent parts of the processes they profile, so the axiom matches the definition and fits the property's domain and range.",
+  "score": 0.86
+ },
+ "f8a0369006b00d0ee272a76ea90b0527b6124436fa969876e057acf54533e92a": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000752",
+   "http://purl.obolibrary.org/obo/BFO_0000132",
+   "https://www.commoncoreontologies.org/ont00000099"
+  ],
+  "reason": "In BFO, a process profile is a proper occurrent part of the process it profiles, so a profile of a Wave Process is necessarily an occurrent part of some Wave Process, which the definition supports and which fits the property's domain and range.",
+  "score": 0.85
+ },
+ "fa56b04c2dec8083532458b119cc9485dccbfa4a4ec421301bc48f083e7c923e": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000854",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant undergoes the decrease of a Realizable Entity it bears, so that bearer participates in the process; the axiom therefore holds for every instance and fits the domain (process) and range of 'has participant'.",
+  "score": 0.93
+ },
+ "fcd62c8697a7558ef7f1f5f4b6bd98effa15eb3e0831e5a3844686848c025553": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000613",
+   "http://purl.obolibrary.org/obo/BFO_0000057",
+   "http://purl.obolibrary.org/obo/BFO_0000004"
+  ],
+  "reason": "The definition states that some Independent Continuant ceases to bear a Role, so that bearer necessarily participates in the Loss of Role process, which fits the domain (process) and range (independent continuant) of 'has participant'.",
+  "score": 0.93
+ },
+ "fdd8d4256f4aa86488aa519a8693302dfd2990b48a8d3a9243cc38fbfe53d9de": {
+  "candidate": [
+   "https://www.commoncoreontologies.org/ont00000983",
+   "http://purl.obolibrary.org/obo/BFO_0000117",
+   "https://www.commoncoreontologies.org/ont00000514"
+  ],
+  "reason": "The definition says a Shear Wave Process has a Transverse Wave Profile, and since a wave profile is a BFO process profile, which is an occurrent part of the process it profiles, the occurrent-to-occurrent axiom fits the definition and the property's domain and range.",
+  "score": 0.8
+ }
+}

@@ -1,0 +1,2423 @@
+{
+ "0056fe0c04b683664555d2c552ffc24a2b54f0082037ccb3385bf4eb5d5d7ab8": {
+  "iri": "https://www.commoncoreontologies.org/ont00001232",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "0079412e7fa63b1151046e9e46fe04b1d78148bc4307a312adaf32c84f1f2851": {
+  "iri": "https://www.commoncoreontologies.org/ont00001144",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "00ee7758a3fd0083eea5e1df97a00fd92d6304ef66c435bc7ab0a19ed43c0ed2": {
+  "iri": "https://www.commoncoreontologies.org/ont00001167",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "027ca1a2f7cb91b9c6a138d13fd123a6e294dbb67f3c3d1e6bd91bfc493d41f4": {
+  "iri": "https://www.commoncoreontologies.org/ont00000687",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "037ee6846565e52094f7bd3884626834e372290c669c40eecc5ac7a11b7d16bb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000542",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says the loss \"involves some independent continuant ceasing to be the carrier of some generically dependent continuant\"."
+   },
+   {
+    "filler": "generically dependent continuant",
+    "property": "has participant",
+    "rationale": "The definition says the loss involves an independent continuant \"ceasing to be the carrier of some generically dependent continuant\", so that continuant is also involved."
+   }
+  ],
+  "subclass_of": []
+ },
+ "04a941fd254d1686e337c45f5f0028320466a7e92563b52d00500f654b55407b": {
+  "iri": "https://www.commoncoreontologies.org/ont00000357",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition states the act is used \"to cause the position or location of some Object to change\", so some object participates in every Act of Motion."
+   }
+  ],
+  "subclass_of": []
+ },
+ "057b2fafc4b8f51e2fc3bf4467fd057b50bff2e1a0598aceda2192d99df7b85e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000418",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "0672ddf1f9f597886b51148e074f3ca5c31500aac2a7d6c16315bf0dfc227752": {
+  "iri": "https://www.commoncoreontologies.org/ont00000371",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "069dd0f8188167cf34eb72d93a9fe6da70ae7bd9ad8936bf26baf1b0fae19575": {
+  "iri": "https://www.commoncoreontologies.org/ont00000065",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition states it is one \"in which the location of some Object is changed\", so every instance involves some object as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "06a2b2445ae11e4703a103268639db1828e8e585c71aff4a45427c512726d17e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000535",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is one \"in which some Independent Continuant has a decrease of some Quality that it bears,\" so every instance involves an independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "06c57fa5928c1216ccd4b2e47fb19e1a7e412f25834e40f9be5efdbc4e009ed8": {
+  "iri": "https://www.commoncoreontologies.org/ont00000511",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "075cc45b74e1c39bc1e7b202bf89314609706b5d80de3eb4411d88b082942b45": {
+  "iri": "https://www.commoncoreontologies.org/ont00000121",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "087aba8c42ee85d46da358083f0b5bf9c70c0c9eda4e1be91451e096de1ae965": {
+  "iri": "https://www.commoncoreontologies.org/ont00000754",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "08c3920e743fe34f318b6db8a877d55172534eceeffa042d86f2d3b280fdeea7": {
+  "iri": "https://www.commoncoreontologies.org/ont00000079",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "08e6fba7fd6845e3fd33be7277369454e4a4b9607c4cabe1190359e0f3d37eb6": {
+  "iri": "https://www.commoncoreontologies.org/ont00000312",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition states Forces are \"applied to a participating Object such that the Object is set in Motion\", so every Propulsion Process has some participating object."
+   }
+  ],
+  "subclass_of": []
+ },
+ "0933091952a2bfeaff8112e5d07f2db4b5501fc9da03d9789fbe258b1b70772f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000520",
+  "some_values_from": [
+   {
+    "filler": "Act of Location Change",
+    "property": "occurrent part of",
+    "rationale": "The definition says the departure is the leaving of the starting location \"such that the larger Act of Location Change is initiated\", so it is part of a larger Act of Location Change."
+   }
+  ],
+  "subclass_of": []
+ },
+ "09695b2b7810996892e3e9a44ffbabb755f29d90da247925f8ec374594823381": {
+  "iri": "https://www.commoncoreontologies.org/ont00001208",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "09d225c4fbdc81a735f640870d267e99658b7765e52d3c42c271d8751a7f5f61": {
+  "iri": "https://www.commoncoreontologies.org/ont00000142",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "0a3c2e698e2cfc482d5b071bfc9d4252d119e768fdd2ed86cc07e87f5af6c31d": {
+  "iri": "https://www.commoncoreontologies.org/ont00000008",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "0b730e270a90b07e673ba0b87f811fbfb8a1729563ad7d946c0586d10927e337": {
+  "iri": "https://www.commoncoreontologies.org/ont00001196",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "0d2d76354589fdc0b1c7aaf120eeac038ed03887d92065bf526aae9659092647": {
+  "iri": "https://www.commoncoreontologies.org/ont00001215",
+  "some_values_from": [
+   {
+    "filler": "Death",
+    "property": "preceded by",
+    "rationale": "The definition says a funeral remembers \"the life of a person who has died\", so that person's death must already have happened before the funeral."
+   }
+  ],
+  "subclass_of": []
+ },
+ "0d4c2d8ccbd1991b97c47e0d3539a6c42120ae5a1ea6ab2e2a7ad0cabd81e5ba": {
+  "iri": "https://www.commoncoreontologies.org/ont00000902",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "0dce6832486a68c9d40ab89603ca8cf1b6b0d257d6f974bdb42d750f799e89f4": {
+  "iri": "https://www.commoncoreontologies.org/ont00000115",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says the stasis is one where \"some Independent Continuant bears some Disposition that remains unchanged\", so an independent continuant takes part in it."
+   },
+   {
+    "filler": "disposition",
+    "property": "has participant",
+    "rationale": "The definition describes the stasis as one in which \"some Disposition ... remains unchanged during a Temporal Interval\", so a disposition takes part in it."
+   }
+  ],
+  "subclass_of": []
+ },
+ "0dd407e405d6030fa7c30849a8baa4aab25f150c399e0a36f92c7764f79cb073": {
+  "iri": "https://www.commoncoreontologies.org/ont00000744",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "0e8fb2f49b2fb102f9e9f8c4826fee400e4d521ce3cde8bb4b0790d775cd1762": {
+  "iri": "https://www.commoncoreontologies.org/ont00001127",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states that \"some Independent Continuant ceases to be the bearer of some Quality\", so an independent continuant takes part in every such loss."
+   },
+   {
+    "filler": "quality",
+    "property": "has participant",
+    "rationale": "The definition states that the bearer \"ceases to be the bearer of some Quality\", so a quality is involved in every such loss."
+   }
+  ],
+  "subclass_of": []
+ },
+ "0f3f88dc4bfb8c211993b137175417c1ad55225a14fcb43431a46dd3a69b5afe": {
+  "iri": "https://www.commoncoreontologies.org/ont00001108",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "1052c70d53cf856f5d0ebc9d0f681210eedfcaa7af68d6f9146a556e3a7f277a": {
+  "iri": "https://www.commoncoreontologies.org/ont00001266",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "107b013669d2aa122a0cbb8551e5e18ae95d2eacaef2b113c44b5c29bc477d4a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000240",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "10a07f703ce066e920c2a2432845b29a7be388eff98ee2bdd059da03ff165e69": {
+  "iri": "https://www.commoncoreontologies.org/ont00001261",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "10b5e9b7b460aca4678570617c39c30b0331b23281065c9fd0c8e8c6a512b5a8": {
+  "iri": "https://www.commoncoreontologies.org/ont00000438",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "1108c22cce606740e3abbc935d74893d5623030a29b51a585164860f96b25a7a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000875",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "12b72bf2d9dcf4ca8c9c6f3be866689a43031b5f11c82148749822916ad6a49b": {
+  "iri": "https://www.commoncoreontologies.org/ont00000763",
+  "some_values_from": [
+   {
+    "filler": "Motion",
+    "property": "occurrent part of",
+    "rationale": "The definition says a Velocity is a \"Process Profile that is of an object's Motion\", and a process profile is a part of the process it profiles."
+   }
+  ],
+  "subclass_of": []
+ },
+ "1354b77a7086a9f758b470c66536fe4d606211eec42c924602b7638486bddb6f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000515",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "13b7f3adbdcbf58d125f991ecc3dbd997d75a6fa91c32605bcc1450e064c7f49": {
+  "iri": "https://www.commoncoreontologies.org/ont00000824",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says a Stasis of Role is one in which \"some independent continuant bears some role that remains unchanged during a temporal interval,\" so every instance involves an independent continuant as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "13d9c9aca6122c2ab95b7f0ebd3338cb741ec82deb2a899f66a0299461ddf152": {
+  "iri": "https://www.commoncoreontologies.org/ont00000960",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "14e45d5c037decb79d042354f43c5ac5cf6095a1fe294d92bbc11a295927ac7f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000936",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "1860e1f0ff90522f4138e42e42818d5e22d03b02c1decc3db799a54a7734d522": {
+  "iri": "https://www.commoncoreontologies.org/ont00000786",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is one \"in which some Independent Continuant has an increase of some Role that it bears,\" so every instance involves an independent continuant as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "18e87183f464df26a845545d601c9ea72eb3ae48d2a4a1747d30f6863531f070": {
+  "iri": "https://www.commoncoreontologies.org/ont00000789",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition says the motion is \"characterized by the participating object changing its position from one portion of space to another,\" which implies every instance has an object as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "18f3b66e31b66e49023f586e92f91e14ec6de804c6e2fbc5af0bfe78d4c30468": {
+  "iri": "https://www.commoncoreontologies.org/ont00000920",
+  "some_values_from": [
+   {
+    "filler": "Loss of Function",
+    "property": "has occurrent part",
+    "rationale": "The definition says a death \"involves the cessation of all biological functions that sustain a living organism\", and a cessation of functions is a loss of function."
+   }
+  ],
+  "subclass_of": []
+ },
+ "1afa24b30ecc578f7b7e652aa628139f6b4179ca52b41b83214a884fbcfca782": {
+  "iri": "https://www.commoncoreontologies.org/ont00001214",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is \"one in which some Independent Continuant has an increase of some Specifically Dependent Continuant that it bears\", so every instance involves an independent continuant as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "1b7e5424897fed1d7ec5a1ebb413f6a6ff93f0f8cb7da193d7df0b0fe2febd4d": {
+  "iri": "https://www.commoncoreontologies.org/ont00001269",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "1c05d7a2a39be9257f1a46015a40eec28689b2d319a7401e52889f538de5626e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000760",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "1c5691ed17820c186702ca1666ba0a3b3ab435721610523d8fc18e17e956b0b3": {
+  "iri": "https://www.commoncoreontologies.org/ont00000402",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "1dda9ab6b3adddc24fc724f9d742e33bfeaa29160249ea7346d846b4c63d7e3d": {
+  "iri": "https://www.commoncoreontologies.org/ont00000462",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is one \"in which some Independent Continuant becomes the bearer of some Function\", so every such gain involves an independent continuant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "1e36cbc1b745a6f7ed62eab8948ba8e95b116190a591dea77a2c95bdae4d4878": {
+  "iri": "https://www.commoncoreontologies.org/ont00000237",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "1e3f74fcf95842beb2c03c106fd88c25be7335bda5eae9d40eee0b93559a6da0": {
+  "iri": "https://www.commoncoreontologies.org/ont00001190",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "1ea73a0180c073ac648086a636c99b15d4441f373266f99380ec1cf29f09d95c": {
+  "iri": "https://www.commoncoreontologies.org/ont00000100",
+  "some_values_from": [
+   {
+    "filler": "continuant",
+    "property": "has participant",
+    "rationale": "The definition says the stasis \"obtains while the participating Continuant is capable of performing some but not all of its primary functions\", so every instance has a continuant participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "1ee12683730b9c82d0bca1e666a7a10d87f6178a04805ac071adcf340ffca0ae": {
+  "iri": "https://www.commoncoreontologies.org/ont00001337",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "20c1cf2227fa4a7a283e3993822ded73f2fe049f32d8001ebf08095c008208e3": {
+  "iri": "https://www.commoncoreontologies.org/ont00000821",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "21332343fe11e297276e4ec3308a3457676600fbbc244072da4dd5d6599a0ab1": {
+  "iri": "https://www.commoncoreontologies.org/ont00000367",
+  "some_values_from": [
+   {
+    "filler": "realizable entity",
+    "property": "realizes",
+    "rationale": "The definition says the act is performed by an Agent \"who realizes a capacity derived from the Agent's affiliation with some Military Organization by imparting knowledge\", and a capacity is a realizable entity."
+   }
+  ],
+  "subclass_of": []
+ },
+ "21e9730b067fc9b5ae36ed0870d2df174e4c124e0aedaea23b1de48c8a97a6ae": {
+  "iri": "https://www.commoncoreontologies.org/ont00000530",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "221aae70ba9995ee8437b543dc161f8dea55f750dc7476dcc1dc43097cddcac9": {
+  "iri": "https://www.commoncoreontologies.org/ont00000286",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "261c54b27dffb6fcc9d62e5070fb9459beaba41679400de4e68f996ce8de4e04": {
+  "iri": "https://www.commoncoreontologies.org/ont00001226",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "274f0a7b74db6052f1214a404bc9d53da467a8ea7851adeb0c71c820a4477493": {
+  "iri": "https://www.commoncoreontologies.org/ont00001053",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition states the act \"involves the movement of one object such that it collides with another object,\" so every collision has an object as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "2808471299e6b4334ef721c67f0170f2e6c936d8c1bccf53509237d05f6b9304": {
+  "iri": "https://www.commoncoreontologies.org/ont00000389",
+  "some_values_from": [
+   {
+    "filler": "Act of Financial Instrument Use",
+    "property": "has occurrent part",
+    "rationale": "The definition states the act \"involves a Financial Instrument being used by an Agent (the Buyer)\", so every buying includes an act of using a financial instrument."
+   }
+  ],
+  "subclass_of": []
+ },
+ "291d4f802a960191a74d15c15d0beaf719d68d9b301add17a4dc92cbbd01d470": {
+  "iri": "https://www.commoncoreontologies.org/ont00000384",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "2974f55269972e301d27f8d2552f4cb75cfd346a3437305fec070f72f908aae7": {
+  "iri": "https://www.commoncoreontologies.org/ont00000148",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "2a8ca4c71184a2000131a3e7521e26cb4b01f8fbcbad440f52d651a229cf35dc": {
+  "iri": "https://www.commoncoreontologies.org/ont00000951",
+  "some_values_from": [
+   {
+    "filler": "Transverse Wave Profile",
+    "property": "has occurrent part",
+    "rationale": "The definition states the electromagnetic wave process oscillates 'such that it has a Transverse Wave Profile', and a process profile is an occurrent part of the process it profiles."
+   }
+  ],
+  "subclass_of": []
+ },
+ "2ab69a425855684ceaf1bbe7ce6041856e7901637a46f946f7a0a51a68a11f5f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000490",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "2bad65232c757ebecfa5f99234ce535669f7d3bb96cb3f8b121671b312fefdec": {
+  "iri": "https://www.commoncoreontologies.org/ont00000863",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "2bfa8e20bb507ba8c342525de4ac0cb3b0ebc3bb12ccf746e7e6a2f7e711e44a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000380",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "2d11091334d6755f372f2f664c7896045fd92dee52ee2df13373e8aac5a97944": {
+  "iri": "https://www.commoncoreontologies.org/ont00002082",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "2fb1362b34131c4bdf4eb054cd135954e50817dbb673136d6988fd86559c2fe0": {
+  "iri": "https://www.commoncoreontologies.org/ont00002071",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "2ff9511e9992e403230617479d2f078dc4871cec8b531ecd8980923a5e3cbec7": {
+  "iri": "https://www.commoncoreontologies.org/ont00000595",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "303ba2c93edc798677b3b489ca5e04a57b2f64f2ddcc274da87a66071baf03ac": {
+  "iri": "https://www.commoncoreontologies.org/ont00001191",
+  "some_values_from": [
+   {
+    "filler": "material entity",
+    "property": "has participant",
+    "rationale": "The definition says the stasis holds \"when a material artifact maintains its designed set of artifact functions\", so every instance involves a material artifact, which is a material entity."
+   }
+  ],
+  "subclass_of": []
+ },
+ "307edcde774384fb7b16528ce96e036dd41b4152c310770abe15626c5d4f75f7": {
+  "iri": "https://www.commoncoreontologies.org/ont00000208",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "313cbacf0fb578390dbfbf03af20e5a9dd98a3f80df465d14de9f1ca8f470d8f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000182",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "32c920c9c9f6e374baca30300b9e036e95d8ab1bc38b663eaa7eec7b25425f43": {
+  "iri": "https://www.commoncoreontologies.org/ont00000345",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "33e093f0b9ab5ff344e7d27ee8b5f5bcfe262c317ebbdc60059ff5ac3e2dcea4": {
+  "iri": "https://www.commoncoreontologies.org/ont00001334",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "3466f040782ba42a61e58115f725d94077bca58bf1d39e1b070ed2b7016a106b": {
+  "iri": "https://www.commoncoreontologies.org/ont00000110",
+  "some_values_from": [
+   {
+    "filler": "disposition",
+    "property": "realizes",
+    "rationale": "The definition states a Mechanical Process 'is the realization of some Disposition of a Material Artifact'; Material Artifact is not in the allowed list, so the filler is just disposition."
+   }
+  ],
+  "subclass_of": []
+ },
+ "35dbeb8abb6b42f7204fe09d5daf55c38c05c6d0b2f23bf0c3ab4c2fb99463f4": {
+  "iri": "https://www.commoncoreontologies.org/ont00000305",
+  "some_values_from": [
+   {
+    "filler": "Sound Wave Process",
+    "property": "caused by",
+    "rationale": "The definition states a Sound Pressure is a Pressure \"that is caused by a Sound Wave\"."
+   }
+  ],
+  "subclass_of": []
+ },
+ "3686a703f1aa1b4c948846d987b3a694f0ac7a54ab01e7df0b14a57c90c19db4": {
+  "iri": "https://www.commoncoreontologies.org/ont00001314",
+  "some_values_from": [
+   {
+    "filler": "role",
+    "property": "realizes",
+    "rationale": "The definition states the act is \"performed by an agent that realizes their role within the context of a legal system\", so every such act realizes some role."
+   }
+  ],
+  "subclass_of": []
+ },
+ "373dfcb5b6e88a22696718a61a6a58d171c880d9e7876c78a4859ff47edd532b": {
+  "iri": "https://www.commoncoreontologies.org/ont00000131",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is one \"in which some Independent Continuant has an increase of some Quality that it bears,\" so an independent continuant participates."
+   },
+   {
+    "filler": "quality",
+    "property": "has participant",
+    "rationale": "The definition specifies \"an increase of some Quality,\" so a quality is what undergoes the increase."
+   }
+  ],
+  "subclass_of": []
+ },
+ "375eb70a530afe9693ad683ef2322f42f0d9ed3eccb4e2c9aaa9059c229cd357": {
+  "iri": "https://www.commoncoreontologies.org/ont00000672",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "388322aa7b7eac8714a2b0f7b4d981647b15bae9c43c188bedb02a9f7b9273f6": {
+  "iri": "https://www.commoncoreontologies.org/ont00000191",
+  "some_values_from": [
+   {
+    "filler": "Death",
+    "property": "is cause of",
+    "rationale": "The definition says it \"causes the unlawful killing of another person\", and a killing results in that person's death."
+   }
+  ],
+  "subclass_of": []
+ },
+ "38eeab081f41a8e716d9f7c2513430b060467a6199b32a1d0d463345f0c3e08e": {
+  "iri": "https://www.commoncoreontologies.org/ont00001327",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "3a12666a612481640fc08e95b411f80182adafba8d45a8c84b2547d3c4f5603a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000842",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "3b8d3d39df39d72021e270fc148651ce7e998fd720be51b61a32a7ab6d119201": {
+  "iri": "https://www.commoncoreontologies.org/ont00000643",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "3ce4a45e4c5d0d2d9a37445fdca0bf42870f4af1f8f07066d756c31d1c6c2900": {
+  "iri": "https://www.commoncoreontologies.org/ont00000847",
+  "some_values_from": [
+   {
+    "filler": "material entity",
+    "property": "has participant",
+    "rationale": "The definition says the stasis holds \"when a material artifact is realizing one or more of its designed artifact functions\", so every Active Stasis involves a material artifact as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "3ce7067cbafc51047a6d5bb217bd6f1ee921fe6fb7b3300ed9f6ffdd96adfe03": {
+  "iri": "https://www.commoncoreontologies.org/ont00000769",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "3ce72f8b04d9bba637db582ad96395f69dbf6ff056e403b20e63c6284976981e": {
+  "iri": "https://www.commoncoreontologies.org/ont00002077",
+  "some_values_from": [
+   {
+    "filler": "Act of Issuing",
+    "property": "has process part",
+    "rationale": "The definition states that an Act of Publishing \"involves the preparation and public issuance of information,\" so every instance includes an issuance act as a part."
+   }
+  ],
+  "subclass_of": []
+ },
+ "3d01089a5d6b27416ce85d2e83bd001f6cb699f9e8019f0649712690287b1c0f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000202",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "3dc15369d27accf0ef25ae99b40484fac7188200a56a9581ff4b8c7834519420": {
+  "iri": "https://www.commoncoreontologies.org/ont00000320",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "3f2977d2d115d2b232194054b230f9d0dcbc3737e57b0e168588cc420d35ee76": {
+  "iri": "https://www.commoncoreontologies.org/ont00000035",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "4096ec88e3b088eb1c549aacc7df6734fc5ab1466432c4cfaf3839e912dfadd5": {
+  "iri": "https://www.commoncoreontologies.org/ont00001112",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "413f24500c644025c64e797464430c48b7126fbeaa58bb10106c6c103d6ebd79": {
+  "iri": "https://www.commoncoreontologies.org/ont00000971",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "421afc2a1c10dd2a45c8ede1dbf4139c2e32f2bed81b3027642f08e4f23fa67f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000006",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "4341bb19774deef61b41458cd254721bcfd2e6a91562abc3b3a01a6ab710afb2": {
+  "iri": "https://www.commoncoreontologies.org/ont00000927",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "4385e39d049bd09d172c96d737d7edbd386ea21e1ed6bcca1282e0d876111996": {
+  "iri": "https://www.commoncoreontologies.org/ont00000924",
+  "some_values_from": [
+   {
+    "filler": "material entity",
+    "property": "has participant",
+    "rationale": "The definition says the stasis holds \"when a Material Artifact is first put into operational use\", so every instance involves a material artifact, which is a material entity."
+   }
+  ],
+  "subclass_of": []
+ },
+ "43d11c6353c484725c84ab1d8fa336a691aa7c33225293f94c9f12ad5ea84d26": {
+  "iri": "https://www.commoncoreontologies.org/ont00000137",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "441cdcd886066a33ba267adf253842b9a0b3c92fe7c271175c99ba561b7e8f85": {
+  "iri": "https://www.commoncoreontologies.org/ont00001162",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "4457cf0ab88aa973885861c15c4be52ef7bc11a4ebf65b55ea479cb9487bbc03": {
+  "iri": "https://www.commoncoreontologies.org/ont00000508",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "4496f0f76c95e48951ee966175ca2d85f053e0058e7572da3055b088fbef6b2a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000335",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states the stasis is \"such that some Independent Continuant bears some Generically Dependent Continuant that remains unchanged,\" so an independent continuant is involved in every such stasis."
+   }
+  ],
+  "subclass_of": []
+ },
+ "44d06fc3f50015d5fa83fa7d5b407dd39981e6f123fd13f34d22c2dcd7db5539": {
+  "iri": "https://www.commoncoreontologies.org/ont00000926",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "45fdd7191d670558cbe391edd1958f520d2a22ec0e04e6d0aeff5ca732f681ea": {
+  "iri": "https://www.commoncoreontologies.org/ont00000615",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "468b88a811f6e9fdf4cb71ef208a351e99178384ba5b9db84bc538692a957c89": {
+  "iri": "https://www.commoncoreontologies.org/ont00001074",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "48ef590a1349c673713fdf2f319ae6e4f865212a10bacfcd014ee3d97abe9255": {
+  "iri": "https://www.commoncoreontologies.org/ont00000948",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "49aeb4cec1c26ce1765aa96f954a6ccc6bbd8cc47cd16b9d3e0d9db5f82c7f22": {
+  "iri": "https://www.commoncoreontologies.org/ont00000354",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "4b4db5e386b77b8ddd61d8d3385f86b9a35b40985c8ac85fd8d423c847ef1add": {
+  "iri": "https://www.commoncoreontologies.org/ont00000609",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is one \"in which some Independent Continuant becomes the bearer of some Disposition\", so every instance involves an independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "4bc26b41329f1b5b283b5d2906fa8b5023c77883c7f329c8d1bc0507533a6830": {
+  "iri": "https://www.commoncoreontologies.org/ont00000544",
+  "some_values_from": [
+   {
+    "filler": "Act of Targeting",
+    "property": "is object of",
+    "rationale": "The definition states a Target is a Material Entity \"that is the object of an Act of Targeting.\""
+   }
+  ],
+  "subclass_of": []
+ },
+ "4ff9b6eb6e9e47cba719cb166ea657057404194c1e95cad3b684c2d3750d576d": {
+  "iri": "https://www.commoncoreontologies.org/ont00000078",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "5064f39d48f7599618afe241195ee6e0cfd70194f33e983e08d998bb890f1ab2": {
+  "iri": "https://www.commoncoreontologies.org/ont00000005",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "51f3b14610527b709e5a951440c9610d3ed0c5af7f483e5542c503edafb4688a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000099",
+  "some_values_from": [
+   {
+    "filler": "Oscillation Process",
+    "property": "has occurrent part",
+    "rationale": "The definition states a Wave Process is a natural process that \"involves oscillation\", so every wave process includes some oscillation process as a part."
+   }
+  ],
+  "subclass_of": []
+ },
+ "5273a71b5e67d2ba86877d60a6be62758a78c05866dfc1fb829b30dffe881e4b": {
+  "iri": "https://www.commoncoreontologies.org/ont00001170",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "53583d8f7440eea9f70457a401482a62078fbc8fbfb8d0e3ed0eb3f8aae50a7b": {
+  "iri": "https://www.commoncoreontologies.org/ont00001122",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "53fe6a8099f5b19c982b426db25f47f8d697c05e2579048b0e26bbea0fdd4a2a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000555",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says the stasis is \"one in which some independent continuant bears a quality or realizable entity\", so an independent continuant participates in it."
+   },
+   {
+    "filler": "Change",
+    "property": "preceded by",
+    "rationale": "The definition says the quality or realizable entity \"has undergone improvement (that is, an increase or gain) due to a previous action or event\", so the stasis is preceded by a change (an increase or a gain)."
+   }
+  ],
+  "subclass_of": []
+ },
+ "54c64cd7e9db167ded09a9159fe58e99144f2b39ddc2c81b6418f087bb59ca39": {
+  "iri": "https://www.commoncoreontologies.org/ont00000854",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states \"some Independent Continuant has a decrease of some Realizable Entity that it bears\", so every such decrease involves an independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "54f7cbcf4faa1492b62a0aef06637249cea8c3a262138a4e4699ae4500db3180": {
+  "iri": "https://www.commoncoreontologies.org/ont00000278",
+  "some_values_from": [
+   {
+    "filler": "Motion",
+    "property": "occurrent part of",
+    "rationale": "The definition says a Momentum is a Process Profile 'that is of an object in Motion', and a process profile is an occurrent part of the process it profiles, here a Motion."
+   }
+  ],
+  "subclass_of": []
+ },
+ "550affb347689469a0dd728c5cbb3e19245715a1c098f14d8479c8e4ba26de01": {
+  "iri": "https://www.commoncoreontologies.org/ont00001237",
+  "some_values_from": [
+   {
+    "filler": "material entity",
+    "property": "has participant",
+    "rationale": "The definition says birth is a process that \"brings forth offspring\", so every birth has the offspring, a material entity, as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "557faf4e1742a9a0edec64a5ce8735d4d793d0910d70098b661db8a91aa672fd": {
+  "iri": "https://www.commoncoreontologies.org/ont00001075",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "57478e8132e1264593c34e51dc92e6ac92d9c364cfbf7d607cf9490f36bd699f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000949",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "5831af90bb7c7aaa93ad3c982beffbbec033b09fdae4091c47ced34413397cb0": {
+  "iri": "https://www.commoncoreontologies.org/ont00002078",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "58439c64197e4ae3540973e2a917b83196b773e00ec13f1fafaf232e40106f9f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000503",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "596d51f65a409c021528da559b1e656c31b62e28333d8fc596950c54b6b2fe16": {
+  "iri": "https://www.commoncoreontologies.org/ont00000712",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "5af5642ec2a48c9becafda21b6f059a2f418f45bc03b586a784c047d22f36b89": {
+  "iri": "https://www.commoncoreontologies.org/ont00000642",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states this is a gain \"in which some independent continuant becomes the bearer of some realizable entity,\" so every instance involves an independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "5b6fcb61504b96ebd4d59182ad52392e1be9b9a68601fb9328acc369fee682b3": {
+  "iri": "https://www.commoncoreontologies.org/ont00000982",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it \"involves some independent continuant having a decrease of some function that it bears.\""
+   }
+  ],
+  "subclass_of": []
+ },
+ "5df367a1429b8c9fcf5ab30ca768c39ce6cb0ee503b04a91158f6bdfb9b4e91d": {
+  "iri": "https://www.commoncoreontologies.org/ont00001120",
+  "some_values_from": [
+   {
+    "filler": "realizable entity",
+    "property": "realizes",
+    "rationale": "The definition says the act is performed by an Agent who \"realizes a capacity derived from the Agent's affiliation with some Religious Organization,\" and a capacity is a realizable entity realized in this act."
+   }
+  ],
+  "subclass_of": []
+ },
+ "5dff687bdcda7e8daa1c72eb0dc15ee4897048c24eb7d601b8cf9f39651594f3": {
+  "iri": "https://www.commoncoreontologies.org/ont00000083",
+  "some_values_from": [
+   {
+    "filler": "process",
+    "property": "occurrent part of",
+    "rationale": "The definition refers to \"the Process, of which the Process Boundary is a part\", so every Process Ending is an occurrent part of some process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "5e673d52b1658b96a53556a4016d4807820f18ba4879be943de427fe30f0321c": {
+  "iri": "https://www.commoncoreontologies.org/ont00000149",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "5f7cbee2a92015f266e0bb47d6003bb467bb326a37b1777c0c84c05eec8f2a51": {
+  "iri": "https://www.commoncoreontologies.org/ont00001057",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "5f97bab44df0739104833ef2f94026d7ed7b139e8541db03cfc95814c630a25e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000644",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "609fce394ac82317a1f71158e9133cc43b66a33c135cddea522db5206cba2423": {
+  "iri": "https://www.commoncoreontologies.org/ont00000514",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "60c1b6c23d22fe3383c4a6bac4a73360ea2dd8f704f28680a03b367e579fe75e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000016",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "60cef2ed04f7ddad3a87c0a3b754dbf0af046c78122cf249d8e06f0c201e50e2": {
+  "iri": "https://www.commoncoreontologies.org/ont00000296",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "615f3c6ce6c49db5e3a4ba1598b2286640c095b1c593801920fe7d9c95eb2233": {
+  "iri": "https://www.commoncoreontologies.org/ont00000588",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "633fe0d7a003377e12f1348b14aee0edc9d8ca621ec7e18bdea5e00dae676419": {
+  "iri": "https://www.commoncoreontologies.org/ont00000585",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "634d58938948b4a2f32527ed238bfe1067060580ded2da1fe33fa709e43aa736": {
+  "iri": "https://www.commoncoreontologies.org/ont00001115",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "63624f4edf87a3ae1ed0fd94b5b2d4b303560c48cc598cb633e17dc03e60d2c9": {
+  "iri": "https://www.commoncoreontologies.org/ont00000260",
+  "some_values_from": [
+   {
+    "filler": "Propulsion Process",
+    "property": "caused by",
+    "rationale": "The definition states it \"is caused by a projectile being pushed from the barrel of a firearm by an explosive charge\", and that pushing is a propulsion process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "636cb4d5f267dbac9d416e51013a938250ba3a119f239323cc11015cbd59c172": {
+  "iri": "https://www.commoncoreontologies.org/ont00001336",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "654d1f00758cc285810a73c25ba17e840e5d097f2cbfb11792a6463ae0a48d21": {
+  "iri": "https://www.commoncoreontologies.org/ont00000953",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "65a5afb5ffb377bebbab3aa796171b15e4ec376b0e5a5d5725f605a3b68852b2": {
+  "iri": "https://www.commoncoreontologies.org/ont00000925",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "66a7ee4123b15eba45e060992a961221ff2d91f958939ec870bb9f9e3f88f87d": {
+  "iri": "https://www.commoncoreontologies.org/ont00000222",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "66bd658538ea42ecdaf5eaff477086aa168ef4abbf45b49b7055d903ab24d661": {
+  "iri": "https://www.commoncoreontologies.org/ont00001272",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "67ca07fcfab63cd17d943ff0d428a6fd9aeee3573e73aa08919944c014fdb71d": {
+  "iri": "https://www.commoncoreontologies.org/ont00000850",
+  "some_values_from": [
+   {
+    "filler": "quality",
+    "property": "has participant",
+    "rationale": "The definition says the stasis is one in which an independent continuant \"bears some quality that remains unchanged during a temporal interval\", so the unchanging quality takes part in the stasis."
+   },
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says the stasis is one \"in which some independent continuant bears some quality that remains unchanged\"."
+   }
+  ],
+  "subclass_of": []
+ },
+ "685dd6a5a625a75a3995c5034af13839c35b3416cba343a79dfdae834cde0bae": {
+  "iri": "https://www.commoncoreontologies.org/ont00001251",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "69962bd01cc76df1e5be4f5d9e7eac87ceba0d6ad32363fc16f69b24c414c9cb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000636",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "69b9d134c6e43b463203f31c4e523b9d5696593527a200988ed1b92e978b5601": {
+  "iri": "https://www.commoncoreontologies.org/ont00001231",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "69e7d3a2ea7860b307f6cb72c75cb57e730b4725562126c822d068422525c8eb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000950",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "6a48a950db12ecf3808fddacfe1562c2e8c13de972372db9b1bf0ea23720540f": {
+  "iri": "https://www.commoncoreontologies.org/ont00001267",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "6aab6a3347a1e49935e7f135fed1290a80c004302001e16dbd0f160c9fadb558": {
+  "iri": "https://www.commoncoreontologies.org/ont00000168",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "6b84bb5f6f8a09945d970371bdf4fc7a42d529e8faff7c3126c43073a892e890": {
+  "iri": "https://www.commoncoreontologies.org/ont00000675",
+  "some_values_from": [
+   {
+    "filler": "Longitudinal Wave Profile",
+    "property": "has occurrent part",
+    "rationale": "The definition states the process involves \"displacement that is parallel to the propagation direction of the wave process through a medium\", which describes a longitudinal wave profile."
+   }
+  ],
+  "subclass_of": []
+ },
+ "6c81dcfa7ac02a4e8359279262662bf684569bc68a028e61a73118a3256e8f42": {
+  "iri": "https://www.commoncoreontologies.org/ont00000356",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "6ca31ea8bcd84fff79534fe11a64da9837b9470093a0970fa4b65425616408cc": {
+  "iri": "https://www.commoncoreontologies.org/ont00000862",
+  "some_values_from": [
+   {
+    "filler": "process",
+    "property": "occurrent part of",
+    "rationale": "The definition states it \"is part of a sound reception process\"; no sound reception class is available, so the most specific allowed filler is process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "6cb66fa9e95d59ba70b92e92f7b12598b83203acad8601e02be54ba3097f5aa8": {
+  "iri": "https://www.commoncoreontologies.org/ont00000370",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "6cc38a53bff92bbd4c4c237ba258c3e0a40a8078e20dc36f36fa611a4f0aef01": {
+  "iri": "https://www.commoncoreontologies.org/ont00001339",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "6e1cde99a874bc0aaa17dae0ea88d16fdfeedb47331192dbbf2c2c4cdecac2fb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000521",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "6e6dee11c49e5f8766fa2edd51b133ace00427125b425485d9d880367e038939": {
+  "iri": "https://www.commoncoreontologies.org/ont00001158",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "6ffe06eaaf595b875702c910b0343630c7b77cb3fdacbacb97f246357e608823": {
+  "iri": "https://www.commoncoreontologies.org/ont00000265",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "7065ec5c574b4e08d2076f36a958c79232ca7f19ad88c3fdd7a4f117fa676010": {
+  "iri": "https://www.commoncoreontologies.org/ont00001072",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "709e101615f0f66e41cee5912997f74caace94fae1727ce0ba5fbab06f8241b8": {
+  "iri": "https://www.commoncoreontologies.org/ont00000414",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "70ec36ecb9affb46ea951f67b12da623b5f3a13b6b14291dff307ca3c1a3decf": {
+  "iri": "https://www.commoncoreontologies.org/ont00000772",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "7131413e509a5566f5561413893c11a002b73207102ec90640dc6f815e3c78b2": {
+  "iri": "https://www.commoncoreontologies.org/ont00000612",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "7166a29d039d49d15d584adff93d926781c3f5a46013a486ac231c660873fab5": {
+  "iri": "https://www.commoncoreontologies.org/ont00000621",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "72b67258d71bcf4d822a219a001d0d60c89e1d25a448cf8b793e06f5e95db883": {
+  "iri": "https://www.commoncoreontologies.org/ont00000819",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states a Stasis is a process \"in which one or more Independent Continuants endure in an unchanging condition\", so every stasis has at least one independent continuant participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "73f27df6f69f9c6706140c155da489a91d392c6d32cf8b73eb2fea676d5f749e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000011",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says the stasis 'obtains when some Independent Continuant bears a Quality or Realizable Entity' at a normal level, so every such stasis involves an independent continuant as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "7429aa43b0eb0fb76969d604cf1f543e4afc23af332959cc6812bae4ba8337e8": {
+  "iri": "https://www.commoncoreontologies.org/ont00000209",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "775693eb32a1e3aa2c569ea38c7cdfbaea3ea42272f106b12e3cd8cb7947f01d": {
+  "iri": "https://www.commoncoreontologies.org/ont00000783",
+  "some_values_from": [
+   {
+    "filler": "Act of Maintenance",
+    "property": "caused by",
+    "rationale": "The definition states the continuant is not mission capable \"due to participating in an Act Of Maintenance\", so every such stasis is caused by an Act of Maintenance."
+   }
+  ],
+  "subclass_of": []
+ },
+ "778c525aec17de9bbf68243ba90ad6a3ec9a9d456571890b45231cb9389273fe": {
+  "iri": "https://www.commoncoreontologies.org/ont00000855",
+  "some_values_from": [
+   {
+    "filler": "Act of Location Change",
+    "property": "caused by",
+    "rationale": "The definition states it is an Effect \"that is caused by some Act of Location Change\"."
+   }
+  ],
+  "subclass_of": []
+ },
+ "78cccf507460ebd328ba544620985b51e0b7fe06746076ef408b0a89e3a716be": {
+  "iri": "https://www.commoncoreontologies.org/ont00001094",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "792d6bc77de57d1571409b768897709c6702c08c773928820be44d416f7ae491": {
+  "iri": "https://www.commoncoreontologies.org/ont00001285",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition states the motion is \"of an Object around an Axis of Rotation\", so every Revolving Motion has an Object participating in it."
+   }
+  ],
+  "subclass_of": []
+ },
+ "79b21b6cf363fe224acaa0a27d515ccc810bc6f6f794293a1ffea7dde615eef3": {
+  "iri": "https://www.commoncoreontologies.org/ont00000580",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "7b15eccabf7740f0fe65da94544ac0696d31ada7b37670c49cc6e857b291f024": {
+  "iri": "https://www.commoncoreontologies.org/ont00000165",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "7b67e1d3ddee806e2fde40b531b0e8df0167624916d7fd304064e02c2b06fbf4": {
+  "iri": "https://www.commoncoreontologies.org/ont00000144",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "7baa08d2e4a5ccc2269e54b88358957d97f3175f9755dfa875c831fe044bcb40": {
+  "iri": "https://www.commoncoreontologies.org/ont00000517",
+  "some_values_from": [],
+  "subclass_of": [
+   {
+    "rationale": "The definition says it is an Act of Communication that \"involves some Material Artifact being used to transfer an Information Bearing Entity\", so the communication is mediated by an artifact.",
+    "superclass": "Act of Communication Mediated by Artifact"
+   }
+  ]
+ },
+ "7c056abc395ddeace607120cd5562456a77ed0a43b4ba2cbba016087a2c37eef": {
+  "iri": "https://www.commoncoreontologies.org/ont00002083",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "7d40d25d948c082ce1f91925d9fe2259650de93ca176cb51419ed6512cb4bb77": {
+  "iri": "https://www.commoncoreontologies.org/ont00000584",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition says it \"changes the position ... of some Object or of one or more of an Object's parts\", so some object participates in every instance."
+   }
+  ],
+  "subclass_of": []
+ },
+ "7e30a8a8d4f1709277da063adcae940d574f8efce9fa4ae7d0a23ec8cbbe1f3a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000830",
+  "some_values_from": [
+   {
+    "filler": "Motion",
+    "property": "occurrent part of",
+    "rationale": "The definition says a Speed is a process profile \"characterized by the magnitude of an object's motion\", so it is a profile, and therefore an occurrent part, of some Motion process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "7e4b11cf9f73233bc9d81ba3f72af204c261adbf17596b54086e330f578f77c7": {
+  "iri": "https://www.commoncoreontologies.org/ont00000024",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "7e7a35b498ab7154216603deab9b7fb66e213b33f43da439b1b44f7c24286ae5": {
+  "iri": "https://www.commoncoreontologies.org/ont00000834",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "7f50bd14fb6387e2e4c127166516724b8e889600cd1db19de4e134c456904501": {
+  "iri": "https://www.commoncoreontologies.org/ont00000013",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states that in this gain \"some Independent Continuant becomes the carrier of some Generically Dependent Continuant\", so every instance involves an independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "8054fad92f3833633e7b27138baeb5073c65abf076c2d392e0ccb625bb98607a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000396",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "8149fe14e0be437b7658374667e1b20d724e4812898b689dc967ef7d8c6705a3": {
+  "iri": "https://www.commoncoreontologies.org/ont00001359",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "8169c76f521105804beb3351f4a8ce2df83cc2ca73fa62a42c7756a99d44abd5": {
+  "iri": "https://www.commoncoreontologies.org/ont00001056",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "817418e711b63b7fa695602ba9d97717a5d1b1413a14e91d4c00f80da784aa09": {
+  "iri": "https://www.commoncoreontologies.org/ont00001227",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "823519658eec6b2b621e66b5b6952fc6b97bf5c1730c835f6bbcbb86d4db8109": {
+  "iri": "https://www.commoncoreontologies.org/ont00001332",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "827ae11dd48b9c5c7fd7a0a7991ab76fa7e5dc6a5504aee21013429825ce53ba": {
+  "iri": "https://www.commoncoreontologies.org/ont00000820",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says it is a stasis \"in which some independent continuant bears some function that remains unchanged\", so every such stasis involves an independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "82b7d72da9f7d47584ffbaf46300b9c01aa299798ee5769b67d714ed9b590196": {
+  "iri": "https://www.commoncoreontologies.org/ont00000004",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states a change is a process \"that involves some independent continuant enduring\", so every change has some independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "840ce4ee3eb59d2ebe009116346250022994a1eb26ef3e15f806508e66971a89": {
+  "iri": "http://purl.obolibrary.org/obo/BFO_0000144",
+  "some_values_from": [
+   {
+    "filler": "process",
+    "property": "occurrent part of",
+    "rationale": "The definition states a Process Profile \"is an occurrent part of some process\"."
+   }
+  ],
+  "subclass_of": []
+ },
+ "84459aea6c0864e7dd5bd94bdab86e481f43e267128f9deb871cf86354220e1f": {
+  "iri": "https://www.commoncoreontologies.org/ont00001039",
+  "some_values_from": [
+   {
+    "filler": "Act of Loaning",
+    "property": "preceded by",
+    "rationale": "The definition says the repayment decreases \"the amount the Debtor owes to the Creditor from an earlier Act of Loaning\", so every repayment comes after some Act of Loaning."
+   }
+  ],
+  "subclass_of": []
+ },
+ "84f2c9baf0b788ce560339948e64fb37cf451f40944b1f65064dfff5e13bde1f": {
+  "iri": "https://www.commoncoreontologies.org/ont00001068",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is one \"in which an independent continuant becomes the bearer of some quality\", so every instance involves an independent continuant as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "8524534ec08391e09a346b224858e2350cb49e4b3807e07a5a40ee9f4c684d00": {
+  "iri": "https://www.commoncoreontologies.org/ont00000884",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "856ee33968e379fd5681aa7d4b62781cf9cce0d956d4ce1ef5b27b5855ed240d": {
+  "iri": "https://www.commoncoreontologies.org/ont00000379",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "8696dc818073db5c73e5f0c31ec685c288097aa282be0e832153514b04fe8a52": {
+  "iri": "https://www.commoncoreontologies.org/ont00000750",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "86f0b7ab163ed37841a5b1586b5272e5e7637a3d769ffec0051ef63773af3fe0": {
+  "iri": "https://www.commoncoreontologies.org/ont00000179",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "873dad4bfe309a1738deca6cd0aaa523d30a363773f4d094c534be883037ec7f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000395",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is one \"in which some Independent Continuant becomes the bearer of some Specifically Dependent Continuant\", so an independent continuant takes part in every such gain."
+   }
+  ],
+  "subclass_of": []
+ },
+ "87548e1bb09e1c3528b67129f0b9a28645bbd7ef4df013347ea9a87120794b73": {
+  "iri": "https://www.commoncoreontologies.org/ont00000753",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "889ae78daa05b98b111378b0b577489050e8a2328510fd03eaaeb8dfe201165e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000228",
+  "some_values_from": [
+   {
+    "filler": "role",
+    "property": "realizes",
+    "rationale": "The definition says a Planned Act \"involves at least one Agent playing a causative role\", so the act realizes some role."
+   }
+  ],
+  "subclass_of": []
+ },
+ "894f42b1e0a8827df7990796d6cf1f6a1ca9403bb4b228b7a8a1700fb6245089": {
+  "iri": "https://www.commoncoreontologies.org/ont00000883",
+  "some_values_from": [
+   {
+    "filler": "Act of Requesting",
+    "property": "has occurrent part",
+    "rationale": "The definition says it 'is performed by requesting the presence or participation of the audience', so every invitation includes a request, whether as a proper or improper part."
+   }
+  ],
+  "subclass_of": []
+ },
+ "89f7a89deecd1a4ad94219da49532659d2a1a4e9efbf14660f7a205fe0b2a6a6": {
+  "iri": "https://www.commoncoreontologies.org/ont00001184",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition states it is \"A Rotational Motion of an Object around an Axis of Rotation\", so every spinning motion involves an object that participates in it."
+   }
+  ],
+  "subclass_of": []
+ },
+ "8b11b7aeb2ff9e315c374f178eba4e649bc43dd1b4c615d7ce445e6066f061f2": {
+  "iri": "https://www.commoncoreontologies.org/ont00001133",
+  "some_values_from": [
+   {
+    "filler": "continuant",
+    "property": "has participant",
+    "rationale": "The definition states a motion is a process that \"involves a continuant changing its location or spatial orientation\", so every motion has some continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "8c301c9571c6fca0a46f1195e22a3479c8d4b16d4cade3498899784ad5ec3357": {
+  "iri": "https://www.commoncoreontologies.org/ont00000676",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "8c9f12aa728c0d2ed557ba3e621aa1ce96606a42f10fdaf76695680faf4baf40": {
+  "iri": "https://www.commoncoreontologies.org/ont00000368",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition states it is \"characterized by an object moving in a circular or elliptical path around an axis of rotation\", so every rotational motion involves a moving object as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "8e29778af6ec0f24e5b9c00e8a87280d9d202ac0b96872fb4f883c31958b86b9": {
+  "iri": "https://www.commoncoreontologies.org/ont00000322",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "93ae19c0727bf9f1e6408b440b29b1579bb0a06540e73c3476292c6fa63f6a3a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000889",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "945207d3d0e5079e08e8735aa117e65a4734332c7592b000cf2339212c47b708": {
+  "iri": "https://www.commoncoreontologies.org/ont00000250",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states that \"some independent continuant ceases to be the bearer of some realizable entity\", so an independent continuant takes part in every such loss."
+   },
+   {
+    "filler": "realizable entity",
+    "property": "has participant",
+    "rationale": "The definition centers on the independent continuant ceasing \"to be the bearer of some realizable entity\", so a realizable entity is involved in every such loss."
+   }
+  ],
+  "subclass_of": []
+ },
+ "94ff753741cbe21d3c12185027fc167d418b58f205f0b94fb2528191806ae300": {
+  "iri": "https://www.commoncoreontologies.org/ont00002076",
+  "some_values_from": [
+   {
+    "filler": "Act of Artifact Employment",
+    "property": "has process part",
+    "rationale": "The definition states that \"technology is used to create a new copy of the Information Content Entity in the recipient\", so every such act includes the use of an artifact."
+   }
+  ],
+  "subclass_of": []
+ },
+ "9527fb42c3beac8f0a2b19b5cbf1eb88004bf10a84ccd8fe68c5082884565644": {
+  "iri": "https://www.commoncoreontologies.org/ont00000739",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "9569011ad95b8ba1d71cb720720c0c8c95eacd048b7d51e475e3762e235594e7": {
+  "iri": "https://www.commoncoreontologies.org/ont00001028",
+  "some_values_from": [
+   {
+    "filler": "Oscillation Process",
+    "property": "has occurrent part",
+    "rationale": "The definition states it \"involves Oscillation of a portion of matter\", so every instance includes an oscillation process."
+   },
+   {
+    "filler": "material entity",
+    "property": "has participant",
+    "rationale": "The definition says it involves oscillation of \"a portion of matter\" through \"the material medium\", so a material entity participates."
+   }
+  ],
+  "subclass_of": []
+ },
+ "962ccb5e3e643fc949d4048dbbeb6659d7c65e61c619144934a93672cf0f0e65": {
+  "iri": "https://www.commoncoreontologies.org/ont00000558",
+  "some_values_from": [
+   {
+    "filler": "material entity",
+    "property": "has participant",
+    "rationale": "The definition says the wave is \"being reflected off a portion of matter\", so a material entity takes part in every such process."
+   }
+  ],
+  "subclass_of": [
+   {
+    "rationale": "The definition says it is a wave process that \"involves an electromagnetic wave with a visible light frequency\", which makes it an electromagnetic wave process.",
+    "superclass": "Electromagnetic Wave Process"
+   }
+  ]
+ },
+ "976f3b8f45181b75967bccaa3c40ca2fc67328caae8c0a227f7d3c8db198111a": {
+  "iri": "https://www.commoncoreontologies.org/ont00001374",
+  "some_values_from": [
+   {
+    "filler": "Change",
+    "property": "is cause of",
+    "rationale": "The definition says it is an act that \"changes the reality in accord with the content of the declaration\", so every instance causes some change."
+   }
+  ],
+  "subclass_of": []
+ },
+ "9840e67a39aa64626c30bf0cbbfa110a32c619c17fe8b2d908aa5888a8f3de72": {
+  "iri": "https://www.commoncoreontologies.org/ont00000622",
+  "some_values_from": [
+   {
+    "filler": "continuant",
+    "property": "has participant",
+    "rationale": "The definition refers to \"the participating Continuant\" that \"is capable of performing all of its primary functions for the specified Mission.\""
+   }
+  ],
+  "subclass_of": []
+ },
+ "9cb8fc187e42b24b9ae91c530dc85ed30d671259657fb69a9086b6a58bba4af3": {
+  "iri": "https://www.commoncoreontologies.org/ont00000366",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "9d16402a4815dc2ea9088e6c8829786020f858d6de149c07b0774032bb57d242": {
+  "iri": "https://www.commoncoreontologies.org/ont00000360",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "9e0b4e368c097038be9fda7e106de11326bb577a60f1c305d5bc98e7537863a6": {
+  "iri": "https://www.commoncoreontologies.org/ont00001376",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "9e7f6c73f2bf73ff530e3e96a95e8c643541ddff7b850283531c39ce0bf7b6df": {
+  "iri": "https://www.commoncoreontologies.org/ont00000523",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "9f921db58d08bfa9d3cf19f4009c9cf67a9dc0a300b81afa1cf919068afed174": {
+  "iri": "https://www.commoncoreontologies.org/ont00000133",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "9fcdec812128f80899687b132fe93c56bdb282e1cf00c4651c752c95b6406b9e": {
+  "iri": "https://www.commoncoreontologies.org/ont00001021",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "a096a431f3179c1f598fe55180503445d16789ffa1e37b60a0128e51db9f1c65": {
+  "iri": "https://www.commoncoreontologies.org/ont00001066",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states this is a loss in which \"some Independent Continuant ceases to be the bearer of some Disposition,\" so an independent continuant participates in every such process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "a0b1e369f31eefda1923305e1872294b0602e223b3f8b269715a9d70121bc5cd": {
+  "iri": "https://www.commoncoreontologies.org/ont00000401",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "a3b1e8e5b567a7351c4d9e0a57408f4f47b6822287f712348069d300a8da7b56": {
+  "iri": "https://www.commoncoreontologies.org/ont00001236",
+  "some_values_from": [
+   {
+    "filler": "Death",
+    "property": "is cause of",
+    "rationale": "The definition states the act involves an Agent \"intentionally and voluntarily causing their own death\", so every Act of Suicide is a cause of some Death."
+   }
+  ],
+  "subclass_of": []
+ },
+ "a41c40fb1d25e2aa05a664d9f89eefec779b64a82a530803ba731409ecfff4ff": {
+  "iri": "https://www.commoncoreontologies.org/ont00000732",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "a47462161cde64db0d3a96085605633c6af8bbe5d7d30f557809feeca489b59d": {
+  "iri": "https://www.commoncoreontologies.org/ont00000890",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "a6341a3b61123b445560996d426a5197aa4f780a2247186c534d96d1945be653": {
+  "iri": "https://www.commoncoreontologies.org/ont00001143",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "a7538bc94922eba7c5b6cb4a5f9f984e7744a357d4b3ae482105047c3601177f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000501",
+  "some_values_from": [
+   {
+    "filler": "Act of Financial Deposit",
+    "property": "preceded by",
+    "rationale": "The definition says the withdrawal is from \"an account created by an earlier Act of Financial Deposit performed by the Depositor,\" so every withdrawal is preceded by such a deposit."
+   }
+  ],
+  "subclass_of": []
+ },
+ "a8218d4d32802110f93897c66692aaf681ef5113f847034d0a6dcc3e69f22821": {
+  "iri": "https://www.commoncoreontologies.org/ont00000543",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is one in which \"some Independent Continuant has a decrease of some Disposition it bears\", so an independent continuant takes part in every such process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "a9ac0114e670fd9917f990b55adbaf0eeb6c62ad53dc192cc295d3149944b789": {
+  "iri": "https://www.commoncoreontologies.org/ont00000866",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "ab9fe3a84e2b22aacde45151923b128916a130a036f8d168dba8e9f349aac418": {
+  "iri": "https://www.commoncoreontologies.org/ont00001111",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "aca8d93318fc98efaa82961883b3fe91f1fa9b8a56639efd3119df3bcf48aafb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000546",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "adf2ce13a8307ecab23bd33e1a6e9ff2941b7254fc854a424b11a05bab76a618": {
+  "iri": "https://www.commoncoreontologies.org/ont00000660",
+  "some_values_from": [
+   {
+    "filler": "process",
+    "property": "caused by",
+    "rationale": "The definition states an Effect \"is caused by some previous Process\"."
+   },
+   {
+    "filler": "process",
+    "property": "preceded by",
+    "rationale": "The definition states an Effect \"follows ... some previous Process\"."
+   }
+  ],
+  "subclass_of": []
+ },
+ "ae3e4327d19da0d289e5fa323d20134e98ba3f1983d83dcddecd03d77baafa68": {
+  "iri": "https://www.commoncoreontologies.org/ont00000138",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "b15ef016515121bd7d2411fd32fa23089f6c5d5e32f77493ddd4807d52d75ae8": {
+  "iri": "https://www.commoncoreontologies.org/ont00000554",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states the change \"involves an independent continuant becoming the bearer or carrier of some dependent continuant\", so every such change has an independent continuant as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "b4b4c46f7c5a3ef2bceeab3f53f43183a3a28b1ca199ef764ac6533b8f14fcb9": {
+  "iri": "https://www.commoncoreontologies.org/ont00000492",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "b584d462a764d1a29830220641c42c388b8f4f97d999dac8ef14bc0b431962ca": {
+  "iri": "https://www.commoncoreontologies.org/ont00001128",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "b5fca584fa603e5ca2f568c3bd1944866dc8463ea177f884b5c0b6644887776b": {
+  "iri": "https://www.commoncoreontologies.org/ont00001047",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "b70007320cf190f6e75e21d67af3aee61420506ae0d5391fe753ca4d7c08ea83": {
+  "iri": "https://www.commoncoreontologies.org/ont00000654",
+  "some_values_from": [],
+  "subclass_of": [
+   {
+    "rationale": "The definition states the act 'is prescribed by religious, political, or ideological objectives', which matches a Planned Act, an act prescribed by objectives held by its agents.",
+    "superclass": "Planned Act"
+   }
+  ]
+ },
+ "b9fab1631b03f948a0c341467e67266de30da5d734c51b20256acfeec1fd7a59": {
+  "iri": "https://www.commoncoreontologies.org/ont00000964",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "ba1b043bebaa6db506afe89981027d44deec69db76d4b6607bee88f695f9cde3": {
+  "iri": "https://www.commoncoreontologies.org/ont00000201",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "bb9791585777da48647ca46db32b47b9e440a950fe18b3111c9fe8ae2ce0bbe5": {
+  "iri": "https://www.commoncoreontologies.org/ont00001279",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "bca6d33147dc30d178042abac52da1b8b5f3d4419be82aef30c5f3fb701706ad": {
+  "iri": "https://www.commoncoreontologies.org/ont00001325",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "bd019071dbe285bc99bbf903c911f7bbbd04105c3766f3d7631a334677419796": {
+  "iri": "https://www.commoncoreontologies.org/ont00000726",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is \"a change that involves some independent continuant having a decrease in the level of some dependent continuant that it bears.\""
+   }
+  ],
+  "subclass_of": []
+ },
+ "c05f1ab4bdd4284b7f3169ee7b948d5246cd5e8413e38ff817b6a4ba5b0bbb84": {
+  "iri": "https://www.commoncoreontologies.org/ont00000812",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "c1d30c22e42c02de59b9fec607b8688e728af96fb06d9f5a153aa4eb9f508ce6": {
+  "iri": "https://www.commoncoreontologies.org/ont00001338",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "c249fc0a312fec38a994ee94980069fc315d10b3caf7d3c5b1dfdb0a1d387a9f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000879",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "c2a612c09cfe1607abe5aab7d8486882160de7f78066c03e51137e141e12687f": {
+  "iri": "https://www.commoncoreontologies.org/ont00001219",
+  "some_values_from": [
+   {
+    "filler": "Motion",
+    "property": "occurrent part of",
+    "rationale": "The definition states it is a Process Profile that is \"the total change in Velocity of an object's Motion\", and a process profile is an occurrent part of the process it profiles."
+   }
+  ],
+  "subclass_of": []
+ },
+ "c3070fbd736545f3c8c068158cf8eb7910aa49065e8619173f6bb287344ac5ba": {
+  "iri": "https://www.commoncoreontologies.org/ont00000741",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "c3969e48d9983187a2e91261a6ff5378dddb114d2850e23f3b7c12309f11d8dd": {
+  "iri": "https://www.commoncoreontologies.org/ont00000291",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "c4195de07f1378ea3baf8678de3762ddc6edd260661daa492e00479c96fb26b1": {
+  "iri": "https://www.commoncoreontologies.org/ont00000106",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "c48b7e89152dd6f3835e52839b94f94e2dce5e4de700e0578c4ddd76846e1412": {
+  "iri": "https://www.commoncoreontologies.org/ont00000107",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states that \"some Independent Continuant has an increase of some Generically Dependent Continuant that it bears\", so every such increase involves an independent continuant as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "c6f0f5bdf5134aa84282247e9ebc21eae047037190e1a2171f94a1c48366b19c": {
+  "iri": "https://www.commoncoreontologies.org/ont00001246",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "c70f2c0fefdcf29cc649133fb5c15f53fe8206fd4dec7174bb9569f3a42ae475": {
+  "iri": "https://www.commoncoreontologies.org/ont00001048",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is a change \"in which some independent continuant has an increase in the level of some dependent continuant that it bears\", so an independent continuant participates in every instance."
+   }
+  ],
+  "subclass_of": []
+ },
+ "c72949a16d523b5a1c501f7ca073e8d8cb67c9d7e0c09c6b7ff22f88b275ae2f": {
+  "iri": "https://www.commoncoreontologies.org/ont00001109",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "c73da00c06beac71c8ff13dab28e015d6ec0cff7983e7337635eafa6a199defb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000200",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "c82f63411a0a075e53b139faea125933ee5246cde9b29ce164e6fc6412ac5186": {
+  "iri": "https://www.commoncoreontologies.org/ont00000166",
+  "some_values_from": [
+   {
+    "filler": "Wave Process",
+    "property": "occurrent part of",
+    "rationale": "The definition says a Wave Cycle \"consists of a portion of a Wave Process\", so every Wave Cycle is an occurrent part of some Wave Process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "c9887f94431336a4cbe5638893cddfcaaca23ddabbdd9df1c4796744fd6d192b": {
+  "iri": "https://www.commoncoreontologies.org/ont00000822",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "cb3ddbb92b35f28b551547512e72e50166a6d1160b2f07b54eb90b2106ffa14a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000449",
+  "some_values_from": [],
+  "subclass_of": [
+   {
+    "rationale": "The definition states it \"involves a Financial Instrument being used by an Agent (the Employer) to compensate another Agent\", so the act is itself a use of a financial instrument.",
+    "superclass": "Act of Financial Instrument Use"
+   }
+  ]
+ },
+ "cbf24ac3f0e5a46404bdf5967b527babd57965c0e15a6be0e62f72ffac6b6c01": {
+  "iri": "https://www.commoncoreontologies.org/ont00000033",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it \"involves some Independent Continuant that has a decrease of some Role that it bears.\""
+   }
+  ],
+  "subclass_of": []
+ },
+ "cc414053fc6b53edccab5ec80c8539be6eecd835a396032f7f96e537d4ad3565": {
+  "iri": "https://www.commoncoreontologies.org/ont00000570",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "cc6a38a643c770546e27ee9ae5edff00a8b1215860f861391d5027429cf08b63": {
+  "iri": "https://www.commoncoreontologies.org/ont00000386",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "cd3a7e67a42bc409ba693c1e07a09e814848e61e9a0ba32454bc4b6562655f64": {
+  "iri": "https://www.commoncoreontologies.org/ont00001305",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says the process is one in which \"some Independent Continuant ceases to be the bearer of some Function\", so an independent continuant takes part in every such loss."
+   }
+  ],
+  "subclass_of": []
+ },
+ "ce1d2736040b52d2b2cc072af0059bcea156660e06bbbc4290098982cc92e89b": {
+  "iri": "https://www.commoncoreontologies.org/ont00001171",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "cec80389ce65d180040e4934e540ba5230b17bcf4081bd136b1c70ae173e00de": {
+  "iri": "https://www.commoncoreontologies.org/ont00000752",
+  "some_values_from": [
+   {
+    "filler": "Wave Process",
+    "property": "occurrent part of",
+    "rationale": "The definition says it is a Process Profile \"that is of a Wave Process\", and a process profile is an occurrent part of the process it profiles."
+   }
+  ],
+  "subclass_of": []
+ },
+ "cee79c71a6104f35e4508b9e2cb9b8171c4c04bb6ae34d920d6805960073bddf": {
+  "iri": "https://www.commoncoreontologies.org/ont00000839",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "cfddc56a54354b3a765ce1351d367d3989a6dbe462303a6f2a5e7ea56c20de43": {
+  "iri": "https://www.commoncoreontologies.org/ont00000051",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "d01363bb06e65ba7fe1600c76deb3599e5cd86ae70109feddcd5d84b521bac1e": {
+  "iri": "https://www.commoncoreontologies.org/ont00001136",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "d0904e1c19b2d7f27030c971c9cc97114a3d4c63b88d511691eadd054c903338": {
+  "iri": "https://www.commoncoreontologies.org/ont00000989",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "d2b814493e6bf72462a17d9ebda45acb62bd2b21652c1c57b6106dcc416c1bda": {
+  "iri": "https://www.commoncoreontologies.org/ont00000351",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "d3938c3def8a31077061ccd96a963c22a86ee7be535d64951de42106b9825aa0": {
+  "iri": "https://www.commoncoreontologies.org/ont00000611",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says it is one \"in which some Independent Continuant has an increase of some Realizable Entity that it bears,\" so every instance involves an independent continuant as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "d3dd05dfa573e14705dd5f1d8745e484516a9a7074d3a304650a5dc10d4777ed": {
+  "iri": "https://www.commoncoreontologies.org/ont00001286",
+  "some_values_from": [
+   {
+    "filler": "Wave Process",
+    "property": "occurrent part of",
+    "rationale": "The definition says a Waveform is the shape of the Wave Cycles 'of the Wave Process', and as a process profile it is an occurrent part of that Wave Process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "d4a725c68e83e7b3ed4128ac69d666bf585f199817a0307a1c020f429663e346": {
+  "iri": "https://www.commoncoreontologies.org/ont00000433",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "d4fcb16846b36ab16a8e1297ea8d4022e69bb900a12d4e52e8ad53c709f84be4": {
+  "iri": "https://www.commoncoreontologies.org/ont00001213",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "d52459d819a79add529326537c34d3bee7fcbd07092d62a5d628770da4d5fd3f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000313",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "d5e3934bd0d5628f5037ec656cd16d8f4c5c6d9a5b2a2ab02974cef2a8d28bc7": {
+  "iri": "https://www.commoncoreontologies.org/ont00000983",
+  "some_values_from": [
+   {
+    "filler": "Transverse Wave Profile",
+    "property": "has occurrent part",
+    "rationale": "The definition states it is a mechanical wave \"that has a transverse wave profile\", and in BFO a process profile is an occurrent part of the process it profiles."
+   }
+  ],
+  "subclass_of": []
+ },
+ "d6fc4980c5881d237832377e5d088299513525af769a2c27255bb9e546a9bb47": {
+  "iri": "https://www.commoncoreontologies.org/ont00000594",
+  "some_values_from": [
+   {
+    "filler": "Combustion",
+    "property": "is cause of",
+    "rationale": "The definition states an Ignition Process is a natural process \"that initiates a combustion process\", so every ignition process brings about some combustion."
+   }
+  ],
+  "subclass_of": []
+ },
+ "d7ea9c15c029eb25a2086d42f9f28ae1d01ef2435aa0ed91cc33669932fc02ad": {
+  "iri": "https://www.commoncoreontologies.org/ont00000455",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "d878cbd92891426e754f93e6e57522dc08b048c5b05b9ae09e61d8015a153f15": {
+  "iri": "https://www.commoncoreontologies.org/ont00000572",
+  "some_values_from": [
+   {
+    "filler": "Sound Wave Process",
+    "property": "is cause of",
+    "rationale": "The definition states it is a wave production process \"that produces a sound wave\", so each instance causes some sound wave process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "d8a2b596d667f54073bd70ecff3b51f400c9e91f756c00fea13834d5fddba0a7": {
+  "iri": "https://www.commoncoreontologies.org/ont00001274",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "d90c75aa5da9fc8a2ce1a3f01ef4d948ac7ec57bfcb3ce796ea01acc01010d01": {
+  "iri": "https://www.commoncoreontologies.org/ont00001194",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is \"one in which some Independent Continuant becomes bearer of some Role\", so every instance involves an independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "dc597dd4961cb38716612b036f65e17afb8f96b96c034bb72bd87cd3805e1bfb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000836",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "ddc79dca46dfb9fd44884b45ecba8c40e80e712eef2726d30277ab03ce9500a6": {
+  "iri": "https://www.commoncoreontologies.org/ont00000234",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "de1e9cdef0cc21d4f8a77d0d53c3fc1dc4b3398b83aca40c40973f11ae4970e7": {
+  "iri": "https://www.commoncoreontologies.org/ont00001032",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "dee82401dca6d9bbbd50a71526d41b87a00d77d2ecbc3f6a1e1eaf73d390f9bb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000981",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "df5d7b30188ff9b621801d9211344938583a2921db43fafb0a334481d5a15367": {
+  "iri": "https://www.commoncoreontologies.org/ont00000970",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "df74abb20be36dfa28f8a3a0e13f0f4d51547ba48e7e7372fdb8adcd3e203e8c": {
+  "iri": "https://www.commoncoreontologies.org/ont00000999",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "df94dfac7317077f4ebbb9ddf93096326860c1333f99b0d13f887a525b8b4cfb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000684",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "dfc24b1f754e54f9b46fa438f0f642e08cdb1dd7b5cd494d87c0c76a175b547d": {
+  "iri": "https://www.commoncoreontologies.org/ont00000935",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "e05b6b3837ffac30c3ba4f5e2292d09526f23828c30863cd0a6f7218719a7d72": {
+  "iri": "https://www.commoncoreontologies.org/ont00001289",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says it is a stasis \"in which some Independent Continuant bears a Quality or Realizable Entity that has suffered impairment\", so that bearer takes part in the stasis."
+   }
+  ],
+  "subclass_of": []
+ },
+ "e06a3e65e2c5805bd0873f208b2fbcc17bb37c833d88a774614772dec73e0bc8": {
+  "iri": "https://www.commoncoreontologies.org/ont00001132",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "e1435d3e67755bb119ca2d71f4217e3adf20106e218de6d315436e3b83cf054e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000859",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "e16b69f220cea7e978a6000100375cb08fe27150b73dc3e4fcec3359b0e1f808": {
+  "iri": "https://www.commoncoreontologies.org/ont00000150",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "e1d8d3618de12523e5ff2876fb69938d4e2a1930335763f30ab83446b4de696c": {
+  "iri": "https://www.commoncoreontologies.org/ont00000430",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition states it holds \"when an object maintains the same spatial orientation\", so every instance involves an object as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "e28133b329ee713ef7d95f750a267d742ec8527fc26fdd35a0e5281341683f8f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000272",
+  "some_values_from": [
+   {
+    "filler": "material entity",
+    "property": "has participant",
+    "rationale": "The definition states combustion \"involves a portion of fuel or other material entity being burned\", so every combustion has some material entity participating."
+   }
+  ],
+  "subclass_of": []
+ },
+ "e32567cf01326abce27e8d26924f73e21ff82002aeb78c937a7390b607062186": {
+  "iri": "https://www.commoncoreontologies.org/ont00001356",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is one \"in which some Independent Continuant has an increase of some Disposition that it bears\", so an independent continuant participates in every such increase."
+   }
+  ],
+  "subclass_of": []
+ },
+ "e58dfc6bdebff9f5bb3d4c59f6383c3661d1d59cd950d7b77a222081d06e3b4a": {
+  "iri": "https://www.commoncoreontologies.org/ont00000610",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "e5ba2c4f3ffe3bc1a1e9a5c43b26d72410f16f3c3e5c4d0e5184c1051461b7db": {
+  "iri": "https://www.commoncoreontologies.org/ont00000391",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "e65c74dbc4e10c14122bd477040f471fb09c620923be8390ea169c2589f704f0": {
+  "iri": "https://www.commoncoreontologies.org/ont00000977",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "e6c39d128da5365fc3307e0d8e297f75c6afe0417d3cc7078f59a2ef215f25f3": {
+  "iri": "https://www.commoncoreontologies.org/ont00000566",
+  "some_values_from": [
+   {
+    "filler": "material entity",
+    "property": "has participant",
+    "rationale": "The definition says the act \"uses a material artifact\", and every material artifact is a material entity that participates in the act; Material Artifact itself is not in the allowed list, so this uses its allowed superclass."
+   }
+  ],
+  "subclass_of": []
+ },
+ "e7b58e7b1c3a5cf9ae2c3429e1ac3f08695927f7754ba5f2cb2e5b7e71a3c81c": {
+  "iri": "https://www.commoncoreontologies.org/ont00000135",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says this stasis is one in which \"some Independent Continuant bears some Specifically Dependent Continuant that remains unchanged\", so that bearer takes part in the stasis."
+   }
+  ],
+  "subclass_of": []
+ },
+ "e7eaf4ddb048ce4c461de82c38d6a6bf1356db1ad54037830942713abb2d400d": {
+  "iri": "https://www.commoncoreontologies.org/ont00000519",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "e8c00e8341d494c8e5fe630af63b47e97c0978afc0ccb8233d684f6508766c64": {
+  "iri": "https://www.commoncoreontologies.org/ont00000109",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "ea1c39063053ca2a521d6675842319ff1386bf41eec0c830a8d3b13715465640": {
+  "iri": "https://www.commoncoreontologies.org/ont00000876",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states the change \"consists in some Independent Continuant ceasing to be the bearer or carrier of some Dependent Continuant,\" so every such change has an independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "ea3176ab8c514a918a387a10c75f1a3b10a8c4d78974e302b6e21ae3cda75c9e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000613",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states that in a Loss of Role \"some Independent Continuant ceases to be the bearer of some Role\", so that continuant takes part in the process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "ea4ce05c75fbfccb82553ed230421c96e5dcb9611eb160b06743572ad6cf6e29": {
+  "iri": "https://www.commoncoreontologies.org/ont00000416",
+  "some_values_from": [],
+  "subclass_of": [
+   {
+    "rationale": "The definition says the act \"publishes an official statement to one or more members of the media\", which makes it communication directed at the mass media.",
+    "superclass": "Act of Mass Media Communication"
+   }
+  ]
+ },
+ "eaab4b7cfd74590b430f2a32b4bebefcaf0c1200f176946b2dcb7e38636305c0": {
+  "iri": "https://www.commoncoreontologies.org/ont00000908",
+  "some_values_from": [
+   {
+    "filler": "material entity",
+    "property": "has participant",
+    "rationale": "The definition says the act \"performs a series of physical operations on a material artifact\", so every instance has a material artifact, which is a material entity, as a participant; Material Artifact itself is not in the allowed list."
+   }
+  ],
+  "subclass_of": []
+ },
+ "eb13969976f2d1b2364b7dbdf2e248efac51b9e7a1d77bacf5f3dd018fcf2d6f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000123",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "eb5a986d81b9ab4dc20db16c5f824c91ab0f105bba6c84f3d2122bd98be7321f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000308",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "eb92a15b6ddd6b390083c2ac83adc2dcd816063de9ab71c7687dab2799e6fb19": {
+  "iri": "https://www.commoncoreontologies.org/ont00000955",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "ed0a6159017987cf2bfc2553b1889678e5f9780e220d6380a413e5fabe372b69": {
+  "iri": "https://www.commoncoreontologies.org/ont00000773",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition states that curvilinear motion \"involves an object moving along a curved path,\" so every instance has some object as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "eda43bf04e0ec22cccd548b0a97b52d47dc523d06f3ab25e0e8712159b71ac6b": {
+  "iri": "https://www.commoncoreontologies.org/ont00000910",
+  "some_values_from": [
+   {
+    "filler": "Oscillation Process",
+    "property": "occurrent part of",
+    "rationale": "The definition states an Amplitude is \"a Process Profile of an Oscillation Process\", and a process profile is an occurrent part of the process it profiles."
+   }
+  ],
+  "subclass_of": []
+ },
+ "edc55d60f260c42bb1030c1fd436b281e4ec896f001ac11d25623cabc044220c": {
+  "iri": "https://www.commoncoreontologies.org/ont00000246",
+  "some_values_from": [
+   {
+    "filler": "realizable entity",
+    "property": "has participant",
+    "rationale": "The definition says the stasis is one in which \"some Realizable Entity ... remains unchanged during a Temporal Interval\", so the unchanging realizable entity takes part in the stasis."
+   },
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says the stasis is one \"in which some Independent Continuant bears some Realizable Entity\", so the bearer takes part in the stasis."
+   }
+  ],
+  "subclass_of": []
+ },
+ "eeef79b5626260bbeef886add3f6d9f385a59c3ea0e0b41b613edc9e78bb4ce2": {
+  "iri": "https://www.commoncoreontologies.org/ont00001263",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "ef5018f94d7092a142dd6e3f56546a2264b692c002722edaaabe8dd9766f2f7b": {
+  "iri": "https://www.commoncoreontologies.org/ont00000361",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition says an increase of function \"involves some independent continuant having an increase of some function that it bears.\""
+   }
+  ],
+  "subclass_of": []
+ },
+ "f09303340e1626c41c8bf920597f46e7eb9ff04588dbf1ca4fad7248d75b6a23": {
+  "iri": "https://www.commoncoreontologies.org/ont00000151",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "f13896e3ac15dae8f4886eda35c45e6e88782f97055831184a7a239389becc1e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000865",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states it is one \"in which some independent continuant ceases to be the bearer\", so an independent continuant takes part in every such loss."
+   },
+   {
+    "filler": "specifically dependent continuant",
+    "property": "has participant",
+    "rationale": "The definition says the independent continuant \"ceases to be the bearer of some specifically dependent continuant\", so a specifically dependent continuant takes part in every such loss."
+   }
+  ],
+  "subclass_of": []
+ },
+ "f175a9bb282ea37945ec84fc609a4ef5ac6603dacba7dba096b64d94feced184": {
+  "iri": "https://www.commoncoreontologies.org/ont00000463",
+  "some_values_from": [
+   {
+    "filler": "realizable entity",
+    "property": "realizes",
+    "rationale": "The definition says the act is performed by an Agent \"who realizes a capacity derived from the Agent's affiliation with some Educational Organization by imparting knowledge\"; Capacity is not in the allowed list, so the axiom uses the more general class realizable entity."
+   }
+  ],
+  "subclass_of": []
+ },
+ "f2132ca27ed2929e12e11574a3d17902a09da4bbaddcfd607736a2781a22a1a0": {
+  "iri": "https://www.commoncoreontologies.org/ont00000197",
+  "some_values_from": [
+   {
+    "filler": "process",
+    "property": "occurrent part of",
+    "rationale": "The definition refers to \"the Process, of which the Process Boundary is a part\", so every Process Beginning is part of some process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "f350fed7d1922c14eae120a69f0493900a92d62cf896c82873c030802b1f475c": {
+  "iri": "https://www.commoncoreontologies.org/ont00001244",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "f3c6218d81342c193ffa0a315eb389204a168e5aba13b248fc4a4b4c29292d71": {
+  "iri": "https://www.commoncoreontologies.org/ont00000037",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "f43ab63fc9f00acbe24439cf7ea22ae127612a9d7d753417be640be780e201d7": {
+  "iri": "https://www.commoncoreontologies.org/ont00001147",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "f50acc61a9c1c1fc41515889cee3bdde6cf5481d9d17188f26824a2cd5906d36": {
+  "iri": "https://www.commoncoreontologies.org/ont00001031",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "f666b2c46341dd5034a04a395a05a1081f09013fbe7b1803cd775756ec230e5f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000261",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "f67707e129d7b9d3968e386e3228fb1193bc2fab60446a8bc9ed11b5054997d7": {
+  "iri": "https://www.commoncoreontologies.org/ont00000169",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "f6bd74d42a3f2b0c5d37ea243ec53f52d47a12af8a5c79165672a4223cbefd3f": {
+  "iri": "https://www.commoncoreontologies.org/ont00000557",
+  "some_values_from": [
+   {
+    "filler": "continuant",
+    "property": "has participant",
+    "rationale": "The definition refers to \"the participating Continuant\" that is not capable of performing its primary functions, so every instance has a continuant participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "f6fd02bd394bfa7f4c4153bfc05848a73c611aef1649509c8ce986f4208e9944": {
+  "iri": "https://www.commoncoreontologies.org/ont00000978",
+  "some_values_from": [
+   {
+    "filler": "process",
+    "property": "is cause of",
+    "rationale": "The definition states a Cause is a Process \"that is the cause of or one of the causes of some other Process.\""
+   }
+  ],
+  "subclass_of": []
+ },
+ "f71b7cf9e14c14c7bc995e1573a7adde59f903501e6fd8090c3364516255d00e": {
+  "iri": "https://www.commoncoreontologies.org/ont00000573",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "f8348ac57e75068092136170af57227bead02c432886c603d284762b4eeb3771": {
+  "iri": "https://www.commoncoreontologies.org/ont00001080",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "f8801e5ccde66e4ca6a9a0db74b5f24e44753894cc8434f98ceec4c1044c467c": {
+  "iri": "https://www.commoncoreontologies.org/ont00000922",
+  "some_values_from": [
+   {
+    "filler": "Act of Location Change",
+    "property": "occurrent part of",
+    "rationale": "The definition says the arrival is the reaching of the destination \"such that the larger act of location change is completed\", which makes it a part of a larger act of location change."
+   }
+  ],
+  "subclass_of": []
+ },
+ "f892cad33f9984513399872debaae658abc761abfa8d885a7c8e0a2db2dec7d8": {
+  "iri": "https://www.commoncoreontologies.org/ont00000895",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "fadcdc4ac83ae395709c63104604d2e1a6148d14b8acea43d653ee42dbb6b944": {
+  "iri": "https://www.commoncoreontologies.org/ont00000007",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "fbff76e0ab7878c8a982a57950d3aab285e79d012f1ccd1e66da1d596a31a2f6": {
+  "iri": "https://www.commoncoreontologies.org/ont00000155",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "fc275c5941c5bc0bba2f1ae6abc8dbce053acdb873e4feb24f2d7ff052f6193b": {
+  "iri": "https://www.commoncoreontologies.org/ont00000027",
+  "some_values_from": [
+   {
+    "filler": "object",
+    "property": "has participant",
+    "rationale": "The definition says information is \"concretized in tangible objects\" that \"are delivered to recipients\", so every mailing involves a tangible object as participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "fdde235037df376dced73137a0fc885da1ca47363f7c6c6b78295f17357bdaba": {
+  "iri": "https://www.commoncoreontologies.org/ont00001322",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states that \"some Independent Continuant has a decrease in the level of a Generically Dependent Continuant that it bears,\" so every such decrease involves an independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "fe146c6bf2fe5736b80a68bb0253d8facc24fc5fb106d0ee282f21fbdfd193d1": {
+  "iri": "https://www.commoncoreontologies.org/ont00001347",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states a Behavior is an Act \"that an Independent Continuant participates in as an Agent\", so every Behavior has some independent continuant as a participant."
+   }
+  ],
+  "subclass_of": []
+ },
+ "feaeb166e46ac4c422df16ef09215adaf84e10f372a4ece7d51107141b184940": {
+  "iri": "https://www.commoncoreontologies.org/ont00000725",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "feb35b6a3797cb2b91154c6c5ff5a54adb44b69d6e88933ca84a7b90f1bdb6bb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000235",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "ff1d64493fc89ac44ff0b8bca4419b1ad8e24f90a1258db872ffd0e828ed58bb": {
+  "iri": "https://www.commoncoreontologies.org/ont00000290",
+  "some_values_from": [
+   {
+    "filler": "independent continuant",
+    "property": "has participant",
+    "rationale": "The definition states the process \"involves some Independent Continuant having a decrease\"."
+   },
+   {
+    "filler": "specifically dependent continuant",
+    "property": "has participant",
+    "rationale": "The definition states the process involves \"a decrease in some Specifically Dependent Continuant that it bears\", so that continuant takes part in the process."
+   }
+  ],
+  "subclass_of": []
+ },
+ "ff3e34569e718cb22820d918b3e24a92f8023ded1aeb1b8f5aa360001c0d85d6": {
+  "iri": "https://www.commoncoreontologies.org/ont00000513",
+  "some_values_from": [],
+  "subclass_of": []
+ },
+ "ff9c3e2f0fd5e87391d123be237dd00cfea89b403b4f1616cd1eb66846ceadae": {
+  "iri": "https://www.commoncoreontologies.org/ont00001330",
+  "some_values_from": [
+   {
+    "filler": "material entity",
+    "property": "has participant",
+    "rationale": "The definition says data is \"transmitted to receiving equipment\", so every telemetry process involves receiving equipment, which is a material entity."
+   }
+  ],
+  "subclass_of": []
+ },
+ "fff2de7232b20262bdc6a23c3a14d902ecb3fe7fe8dfbcd5b2fc2e15fe12c770": {
+  "iri": "https://www.commoncoreontologies.org/ont00000765",
+  "some_values_from": [
+   {
+    "filler": "Wave Process",
+    "property": "is cause of",
+    "rationale": "The definition states it is a natural process that \"generates a Wave Process\", so every instance causes some Wave Process."
+   }
+  ],
+  "subclass_of": []
+ }
+}
