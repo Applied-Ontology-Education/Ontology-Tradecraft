@@ -4,3 +4,17 @@
 #     Any owl:Ontology must have an rdfs:label.
 # Severity:
 #     Warning
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?ontology ?error
+WHERE {
+  ?ontology a owl:Ontology .
+  FILTER (!isBlank(?ontology))
+  FILTER NOT EXISTS {
+    ?ontology rdfs:label ?label .
+  }
+  BIND (concat("WARNING: The following owl:Ontology has no rdfs:label ", str(?ontology)) AS ?error)
+}
+ORDER BY (str(?ontology))

@@ -26,6 +26,7 @@ jobs:
       - name: Detect exactly one newly ADDED file under src/data/**
         id: detect
         shell: bash
+        working-directory: ${{ github.workspace }}
         run: |
           BEFORE_SHA="${{ github.event.before }}"
           AFTER_SHA="${{ github.sha }}"
@@ -41,7 +42,7 @@ jobs:
 
           echo "Diff range: $BEFORE_SHA..$AFTER_SHA"
 
-          ADDED=$(git diff --name-status "$BEFORE_SHA" "$AFTER_SHA" -- "projects/project-4/assignment/src/data/**" | awk '$1=="A"{print $2}')
+          ADDED=$(git diff --name-status "$BEFORE_SHA" "$AFTER_SHA" -- "projects/project-4/assignment/src/data/" | awk '$1=="A"{print $2}')
           COUNT=$(printf "%s\n" "$ADDED" | grep -c . || true)
 
           echo "Newly added files:"; printf "%s\n" "$ADDED"
@@ -50,6 +51,7 @@ jobs:
             ONE_FILE=$(printf "%s\n" "$ADDED" | head -n1)
             echo "added_file=$ONE_FILE" >> "$GITHUB_OUTPUT"
           fi
+
 
       - name: Skip if no new dataset
         if: steps.detect.outputs.added_count == '0'

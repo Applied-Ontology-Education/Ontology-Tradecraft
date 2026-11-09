@@ -5,3 +5,21 @@
 # Severity:
 #     Warning
 
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?element
+WHERE {
+  { ?element a owl:Class . }
+  UNION
+  { ?element a owl:ObjectProperty . }
+  FILTER (!isBlank(?element))
+  FILTER NOT EXISTS {
+    ?element skos:definition ?def .
+    FILTER (LANG(?def) = "en")
+    FILTER (STR(?def) != "") # non-empty
+  }
+  BIND (concat("WARNING: The following element has no English skos:definition ", str(?element)) AS ?error)
+}
+ORDER BY (str(?element))
