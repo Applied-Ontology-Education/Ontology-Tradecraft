@@ -1,0 +1,16 @@
+{
+  "stage": "projection",
+  "learning_rate": 0.005,
+  "epochs": 200,
+  "identity_weight": 0.15,
+  "ranking_weight": 0.0,
+  "ranking_margin": 0.0,
+  "direct_train_cosine": 0.9890167713165283,
+  "validation_mean": 0.6713281358991351,
+  "validation_median": 0.8117913007736206,
+  "validation_minimum": -0.2766198217868805,
+  "validation_maximum": 0.9840813875198364,
+  "validation_below_0_20": 3,
+  "validation_at_or_above_0_70": 14,
+  "selected_tau": 0.6
+}

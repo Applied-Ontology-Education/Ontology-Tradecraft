@@ -1,0 +1,42 @@
+PROJECT 5 - VALIDATION SUPPORT AUDIT
+============================================================================
+
+Score file: C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\mowl_gentle_best_validation_pairs.csv
+Pairs audited: 21
+Poor pairs: 9
+Structurally isolated subclasses: 5
+Declaration-only subclasses: 5
+
+Worst -> best validation pairs
+----------------------------------------------------------------------------
+-0.3762  VERY_WEAK          1       1     1        5  Family -> Group of Persons
+-0.1939  VERY_WEAK          1       1     1        6  Military Personnel Force -> Armed Force
+-0.1714  ISOLATED           0       0     0       10  International Community -> Group of Agents
+-0.1274  ISOLATED           0       0     0        5  Tattoo -> Bodily Component
+-0.0463  ISOLATED           0       0     0        5  Educational Organization -> Organization
+ 0.0123  WEAK               1       2     1        6  Ethnic Group -> Group of Persons
+ 0.0285  WEAK               2       2     2        6  Organism -> BFO_0000030
+ 0.0935  ISOLATED           0       0     0        4  Scalp -> Bodily Component
+ 0.1083  ISOLATED           0       0     0        4  Hair Color -> BFO_0000019
+ 0.6649  VERY_WEAK          1       1     0        5  Allied Person -> Person
+ 0.6817  VERY_WEAK          1       1     0       10  Permanent Resident Role -> BFO_0000023
+ 0.6897  VERY_WEAK          1       1     0        5  Commercial Organization -> Organization
+ 0.7058  WEAK               3       2     1       11  Material Territory of a Government Domain -> ont00001341
+ 0.7121  VERY_WEAK          1       1     0        5  Civilian Role -> BFO_0000023
+ 0.7193  VERY_WEAK          1       1     0        5  Commercial Role -> BFO_0000023
+ 0.7352  VERY_WEAK          1       1     0        6  Citizen Role -> BFO_0000023
+ 0.7366  VERY_WEAK          1       1     0        8  Permanent Resident -> Person
+ 0.7525  VERY_WEAK          1       1     0        5  Process Prohibition -> Process Regulation
+ 0.8318  WEAK               3       3     0       28  Agent -> BFO_0000040
+ 0.9558  WEAK               2       3     1        7  Second-Order Administrative Region -> Government Domain
+ 0.9736  MODERATE           4       5     3       10  First-Order Administrative Region -> Government Domain
+
+Correlations
+----------------------------------------------------------------------------
+pearson_cos_vs_logical_support: 0.5765171827078155
+spearman_cos_vs_logical_support: 0.6019104085456194
+pearson_cos_vs_structural_support: 0.5442243333425296
+spearman_cos_vs_structural_support: 0.5652367154498587
+pearson_cos_vs_hierarchy_degree: 0.005614763322726425
+spearman_cos_vs_hierarchy_degree: -0.06012506527379745
+pearson_cos_vs_raw_mentions: 0.32019214230409254

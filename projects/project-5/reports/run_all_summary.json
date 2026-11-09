@@ -1,0 +1,212 @@
+{
+  "script_version": "project-5-sequential-clean-room-driver-v6-java-preflight",
+  "status": "PASS",
+  "source_module": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\module.ttl",
+  "backup": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\.run_all_backups\\20261109_095015_224445",
+  "mean_cos": 0.7134455018455074,
+  "chosen_tau": 0.6,
+  "accepted_axioms": 22,
+  "cosine_contribution_rate": 0.7,
+  "llm_contribution_rate": 0.3,
+  "llm_decision_impact": {
+    "scored_candidates": 187,
+    "decision_changes": 91,
+    "decision_impact_rate": 0.48663101604278075,
+    "rescued": 13,
+    "vetoed": 78
+  },
+  "consistency_status": "PASS",
+  "robot_exit_code": 0,
+  "accepted_axioms_preserved": true,
+  "split": {
+    "script_version": "project-5-frozen-clean-room-split-v6",
+    "status": "PASS",
+    "source_module": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\module.ttl",
+    "module_named_subclass_axioms": 103,
+    "training_named_subclass_axioms": 82,
+    "validation_named_subclass_axioms": 21,
+    "direct_overlap": 0,
+    "entailed_validation_axioms": 0,
+    "full_module_closure": 225,
+    "training_closure": 169,
+    "closure_retention": 0.7511111111111111,
+    "train_file": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\train.ttl",
+    "valid_file": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\valid.ttl",
+    "validation_pairs": [
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000089",
+        "superclass": "https://www.commoncoreontologies.org/ont00001379"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000139",
+        "superclass": "https://www.commoncoreontologies.org/ont00001152"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000408",
+        "superclass": "https://www.commoncoreontologies.org/ont00001180"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000426",
+        "superclass": "https://www.commoncoreontologies.org/ont00000274"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000443",
+        "superclass": "https://www.commoncoreontologies.org/ont00001180"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000473",
+        "superclass": "https://www.commoncoreontologies.org/ont00001152"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000476",
+        "superclass": "https://www.commoncoreontologies.org/ont00000965"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000485",
+        "superclass": "http://purl.obolibrary.org/obo/BFO_0000023"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000486",
+        "superclass": "https://www.commoncoreontologies.org/ont00000392"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000500",
+        "superclass": "https://www.commoncoreontologies.org/ont00000084"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000507",
+        "superclass": "https://www.commoncoreontologies.org/ont00000914"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000532",
+        "superclass": "https://www.commoncoreontologies.org/ont00001335"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000553",
+        "superclass": "https://www.commoncoreontologies.org/ont00001324"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000647",
+        "superclass": "https://www.commoncoreontologies.org/ont00001262"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000662",
+        "superclass": "https://www.commoncoreontologies.org/ont00001341"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00000898",
+        "superclass": "http://purl.obolibrary.org/obo/BFO_0000023"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00001017",
+        "superclass": "http://purl.obolibrary.org/obo/BFO_0000040"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00001114",
+        "superclass": "https://www.commoncoreontologies.org/ont00000472"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00001324",
+        "superclass": "https://www.commoncoreontologies.org/ont00000965"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00001335",
+        "superclass": "https://www.commoncoreontologies.org/ont00001180"
+      },
+      {
+        "subclass": "https://www.commoncoreontologies.org/ont00001379",
+        "superclass": "http://purl.obolibrary.org/obo/BFO_0000017"
+      }
+    ]
+  },
+  "final_ontology": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\module_augmented.ttl",
+  "final_triples": 1811,
+  "elapsed_seconds": 12309.825319051743,
+  "stages": [
+    {
+      "stage": 1,
+      "name": "Extract definitions from module.ttl",
+      "script": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\scripts\\extract_definitions.py",
+      "status": "PASS",
+      "elapsed_seconds": 18.218557357788086,
+      "log": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\run_all_logs\\01_extract_definitions.log",
+      "outputs": [
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\data\\definitions.csv"
+      ]
+    },
+    {
+      "stage": 2,
+      "name": "Preprocess extracted definitions with LLM",
+      "script": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\scripts\\preprocess_definitions_llm.py",
+      "status": "PASS",
+      "elapsed_seconds": 1752.059411764145,
+      "log": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\run_all_logs\\02_preprocess_definitions_llm.log",
+      "outputs": [
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\data\\definitions_enriched.csv"
+      ]
+    },
+    {
+      "stage": 3,
+      "name": "Generate OWL 2 EL candidate axioms",
+      "script": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\scripts\\generate_candidates_llm.py",
+      "status": "PASS",
+      "elapsed_seconds": 1.8392109870910645,
+      "log": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\run_all_logs\\03_generate_candidates_llm.log",
+      "outputs": [
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\generated\\candidate_el.ttl"
+      ]
+    },
+    {
+      "stage": 4,
+      "name": "Split module.ttl into train.ttl and valid.ttl",
+      "script": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\scripts\\split_train_valid.py",
+      "status": "PASS",
+      "elapsed_seconds": 0.2569084167480469,
+      "log": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\run_all_logs\\04_split_train_valid.log",
+      "outputs": [
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\train.ttl",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\valid.ttl",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\split_train_valid_report.json"
+      ]
+    },
+    {
+      "stage": 5,
+      "name": "Train and evaluate mOWL",
+      "script": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\scripts\\train_mowl.py",
+      "status": "PASS",
+      "elapsed_seconds": 101.59565472602844,
+      "log": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\run_all_logs\\05_train_mowl.log",
+      "outputs": [
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_metrics.json",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\elembeddings_v8_native.pt",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_v8_residual_projection_best.pt",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_v8_best_config.json",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_v8_best_validation_pairs.csv"
+      ]
+    },
+    {
+      "stage": 6,
+      "name": "Filter candidates with mOWL + LLM",
+      "script": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\scripts\\filter_candidates_hybrid.py",
+      "status": "PASS",
+      "elapsed_seconds": 10428.05825972557,
+      "log": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\run_all_logs\\06_filter_candidates_hybrid.log",
+      "outputs": [
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\generated\\accepted_el.ttl",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\generated\\hybrid_candidate_scores.csv"
+      ]
+    },
+    {
+      "stage": 7,
+      "name": "Merge accepted axioms and reason with ELK",
+      "script": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\scripts\\merge_reason_robot.py",
+      "status": "PASS",
+      "elapsed_seconds": 7.742478609085083,
+      "log": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\run_all_logs\\07_merge_reason_robot.log",
+      "outputs": [
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\module_augmented.ttl",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\robot_merge_reason_report.json"
+      ]
+    }
+  ]
+}
