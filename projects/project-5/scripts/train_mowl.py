@@ -146,6 +146,15 @@ metrics = {
     "hybrid": None,   # filled in by filter_candidates_hybrid.py (step 6)
 }
 
+# Save class and property vectors for step 6 (filter_candidates_hybrid.py).
+rel = model.object_property_embeddings
+emb_path = PROJECT_DIR / cfg["paths"]["embeddings"]
+emb_path.parent.mkdir(parents=True, exist_ok=True)
+np.savez(emb_path,
+         class_iris=np.array(list(emb.keys())), class_vecs=np.stack(list(emb.values())),
+         prop_iris=np.array(list(rel.keys())), prop_vecs=np.stack(list(rel.values())))
+print(f"\nWrote {emb_path.relative_to(PROJECT_DIR)}  ({len(emb)} classes, {len(rel)} properties)")
+
 out = PROJECT_DIR / cfg["paths"]["mowl_metrics"]
 out.parent.mkdir(parents=True, exist_ok=True)
 out.write_text(json.dumps(metrics, indent=2), encoding="utf-8")

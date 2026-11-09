@@ -5,6 +5,11 @@ paths:
   valid: src/valid.ttl
   split_report: reports/split_report.json
   mowl_metrics: reports/mowl_metrics.json
+  definitions_enriched: data/definitions_enriched.csv
+  candidates: generated/candidate_el.ttl
+  candidates_log: reports/candidates_log.csv
+  llm_cache_candidates: generated/llm_cache_candidates.json
+  embeddings: generated/embeddings.npz
 
 split:
   seed: 42
@@ -17,3 +22,18 @@ train:
   epochs: 2000
   tau_candidates: [0.60, 0.65, 0.70, 0.75, 0.80]
   target_mean_cos: 0.70
+
+candidates:
+  model: claude-opus-5-5
+  effort: high
+  workers: 8
+  # USD per million tokens for the model above (used only to print a cost estimate)
+  price_per_mtok: {input: 4.00, output: 20.00, cache_write: 5.00, cache_read: 0.20}
+  max_candidates_per_class: 3
+  # Labels for CCO properties used in the module but declared in
+  # ExtendedRelationOntology (not merged locally). Taken from CCO develop branch.
+  cco_property_labels:
+    https://www.commoncoreontologies.org/ont00001777: "has process part"
+    https://www.commoncoreontologies.org/ont00001803: "is cause of"
+    https://www.commoncoreontologies.org/ont00001819: "caused by"
+    https://www.commoncoreontologies.org/ont00001936: "is object of"
