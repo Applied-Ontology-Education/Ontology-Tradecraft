@@ -3,7 +3,6 @@ mowl.init_jvm("4g")          # must run before the other mowl imports
 
 import json
 import random
-from importlib.metadata import version
 from pathlib import Path
 
 import numpy as np
@@ -123,26 +122,14 @@ chosen = passing[0] if passing else None
 print(f"\nchosen_tau: {chosen['tau'] if chosen else None}")
 
 
+# Kept short on purpose: diagnostics are printed above, settings live in config.yaml.
 metrics = {
     "mean_cos_all": round(mean_cos_all, 4),
+    "chosen_tau": chosen["tau"] if chosen else None,
     "mean_cos_at_tau": round(chosen["mean_cos_at_tau"], 4) if chosen else None,
     "coverage_at_tau": round(chosen["coverage"], 4) if chosen else None,
-    "chosen_tau": chosen["tau"] if chosen else None,
-    "target_mean_cos": tcfg["target_mean_cos"],
     "baseline_mean_cos": round(baseline_mean_cos, 4),
-    "train_mean_cos": round(float(np.mean(train_scores)), 4),
     "n_valid_pairs": len(valid_pairs),
-    "n_missing_embeddings": len(missing),
-    "tau_table": tau_table,
-    "gci_counts": {name: len(ds) for name, ds in model.training_datasets.items()},
-    "model": {
-        "name": "ELEmbeddings",
-        "mowl_version": version("mowl-borg"),
-        "embed_dim": tcfg["embed_dim"],
-        "learning_rate": tcfg["learning_rate"],
-        "epochs": tcfg["epochs"],
-        "seed": seed,
-    },
     "hybrid": None,   # filled in by filter_candidates_hybrid.py (step 6)
 }
 

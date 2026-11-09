@@ -120,6 +120,8 @@ def elk_entailed(train_path, held_out):
              "--input", str(train_path),
              "--axiom-generators", "SubClass",
              "--include-indirect", "true",
+             # ROBOT's default (true) deletes the indirect links again
+             "--remove-redundant-subclass-axioms", "false",
              "--output", str(inferred_path)],
             check=True,
         )
