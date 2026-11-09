@@ -92,13 +92,84 @@ ex:NoEmptyLabelsShape
 
 #################################################################
 # 6) Unit must match SDC being measured
+# Purpose: For every MICE instance, check that it points to exactly one SDC and exactly one measurement unit, and that both have an rdfs:label so the match can be inspected. 
 #################################################################
-
+ex:UnitMatchesSDCShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path ( cco:ont00001966 rdfs:label ) ;
+    sh:minCount 1 ;
+    sh:message "MICE's SDC must have an rdfs:label." ;
+    sh:severity sh:Violation
+  ] ;
+  sh:property [
+    sh:path ( cco:ont00001863 rdfs:label ) ;
+    sh:minCount 1 ;
+    sh:message "MICE's unit must have an rdfs:label." ;
+    sh:severity sh:Violation
+  ] .
 #################################################################
 # 7) No duplicate MICE
+# Reminder: https://www.w3.org/TR/shacl12-sparql/ 
 #################################################################
-
+ex:NoDuplicateMICEShape
+  a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "No two MICEs may share the same SDC and value." ;
+    sh:select """
+      SELECT $this ?dup
+      WHERE {
+        $this <https://www.commoncoreontologies.org/ont00001966> ?sdc ;
+              <https://www.commoncoreontologies.org/ont00001769> ?value .
+        ?dup <https://www.commoncoreontologies.org/ont00001966> ?sdc ;
+               <https://www.commoncoreontologies.org/ont00001769> ?value .
+        FILTER ($this != ?dup)
+      }
+    """
+  ] .
 #################################################################
 # 8) No dangling/mistyped nodes 
 #################################################################
+ex:NoDanglingBearerOfShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf obo:BFO_0000196 ;
+  sh:nodeKind sh:IRI ;
+  sh:property [
+    sh:path rdf:type ;
+    sh:minCount 1 ;
+    sh:message "Objects of bfo:bearer_of must be typed." ;
+    sh:severity sh:Violation
+  ] .
 
+ex:NoDanglingIsMeasurementOfShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf cco:ont00001966 ;
+  sh:nodeKind sh:IRI ;
+  sh:property [
+    sh:path rdf:type ;
+    sh:minCount 1 ;
+    sh:message "Objects of cco:is_measurement_of must be typed." ;
+    sh:severity sh:Violation
+  ] .
+
+ex:NoDanglingUsesMUShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf cco:ont00001863 ;
+  sh:nodeKind sh:IRI ;
+  sh:property [
+    sh:path rdf:type ;
+    sh:minCount 1 ;
+    sh:message "Objects of cco:uses_measurement_unit must be typed." ;
+    sh:severity sh:Violation
+  ] .
+  
+ex:HasDecimalValueIsLiteralShape
+  a sh:NodeShape ;
+  sh:targetObjectsOf cco:ont00001769 ;
+  sh:nodeKind sh:Literal ;
+  sh:datatype xsd:decimal ;
+  sh:message "Objects of cco:has_decimal_value must be xsd:decimal literals." ;
+  sh:severity sh:Violation .
