@@ -3,14 +3,13 @@ paths:
   bfo: src/bfo-core.ttl
   train: src/train.ttl
   valid: src/valid.ttl
-  split_report: reports/split_report.json
   mowl_metrics: reports/mowl_metrics.json
   definitions_enriched: data/definitions_enriched.csv
   candidates: generated/candidate_el.ttl
-  candidates_log: reports/candidates_log.csv
   llm_cache_candidates: generated/llm_cache_candidates.json
   embeddings: generated/embeddings.npz
   accepted: generated/accepted_el.ttl
+  augmented: src/event-augmented.ttl
   llm_cache_plausibility: generated/llm_cache_plausibility.json
   definitions: data/definitions.csv
 

@@ -1,5 +1,6 @@
 import csv
 from concurrent.futures import ThreadPoolExecutor
+from pathlib import Path
 import anthropic
 from dotenv import load_dotenv
 
@@ -35,11 +36,28 @@ def enrich(row):
         raise RuntimeError(f"no text block in response for {row['IRI']} ({row['label']})")
     return row
 
+def load_previous(path):
+    """Earlier rewrites, keyed by (IRI, original definition), so unchanged rows are reused."""
+    p = Path(path)
+    if not p.exists():
+        return {}
+    with open(p, newline="", encoding="utf-8") as f:
+        return {(r["IRI"], r["definition"]): r["definition_enriched"] for r in csv.DictReader(f)}
+
 def main(in_path="data/definitions.csv", out_path="data/definitions_enriched.csv", workers=16):
     with open(in_path, newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
+    previous = load_previous(out_path)
+
+    def enrich_or_reuse(row):
+        old = previous.get((row["IRI"], row["definition"]))
+        if old:
+            row["definition_enriched"] = old
+            return row
+        return enrich(row)
+
     with ThreadPoolExecutor(max_workers=workers) as pool:
-        rows = list(pool.map(enrich, rows))   # preserves row order
+        rows = list(pool.map(enrich_or_reuse, rows))   # preserves row order
     with open(out_path, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=["IRI", "label", "definition", "definition_enriched"])
         writer.writeheader()

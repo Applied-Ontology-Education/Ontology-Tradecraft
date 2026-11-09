@@ -1,2 +1,3 @@
 CLAUDE.md
 scripts/__pycache__/
+generated/embeddings.npz

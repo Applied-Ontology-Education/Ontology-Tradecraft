@@ -12,5 +12,6 @@
     "n_candidates": 125,
     "n_accepted": 33,
     "llm_contribution_rate": 0.1515
-  }
+  },
+  "consistent": true
 }

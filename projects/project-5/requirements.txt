@@ -1,7 +1,7 @@
 # Core
-# mowl-borg: installed as dev build 2.1.1.dev8 (git commit b83c067) during development;
-# pinned here to the nearest PyPI release for a normal, reproducible `pip install`.
-mowl-borg==2.1.0
+# mowl-borg: pinned to the exact GitHub commit the pipeline was developed and tested on
+# (reports itself as 2.1.1.dev8; the PyPI release 2.1.0 was not tested). Needs git on PATH.
+mowl-borg @ git+https://github.com/bio-ontology-research-group/mowl@b83c067eab5d54e9d001f1e3170b63ffaff3bb34
 JPype1==1.7.1
 torch==2.14.1
 rdflib==7.0.0

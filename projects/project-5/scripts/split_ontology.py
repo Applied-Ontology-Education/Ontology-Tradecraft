@@ -1,4 +1,3 @@
-import json
 import random
 import shutil
 import subprocess
@@ -129,12 +128,6 @@ def elk_entailed(train_path, held_out):
     return {(a, b) for a, b in held_out if (a, RDFS.subClassOf, b) in inferred}
 
 
-def write_report(path, report):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(report, f, indent=2)
-
-
 def main():
     cfg = load_config()
     module_path = PROJECT_DIR / cfg["paths"]["module"]
@@ -198,27 +191,8 @@ def main():
         valid.serialize(valid_path, format="turtle")
     print(f"moved back by ELK: {len(moved_back)}")
 
-    bfo_header = next(bfo.subjects(RDF.type, OWL.Ontology))
-    report = {
-        "seed": cfg["split"]["seed"],
-        "valid_fraction": cfg["split"]["valid_fraction"],
-        "named_subclass_pairs": len(named_pairs),
-        "pool": len(pool),
-        "target": n_target,
-        "moved_back_by_elk": len(moved_back),
-        "held_out": len(held_out),
-        "pool_rule": "named A subClassOf B pairs with a CCO-namespace subclass "
-                     "that has no owl:equivalentClass definition",
-        "eligibility_rule": "every class in every held-out pair still appears in a "
-                            "training axiom: another named subclass pair, an existential "
-                            "restriction (subject or filler), an equivalence, or a disjointness",
-        "bfo_version_iri": str(bfo.value(bfo_header, OWL.versionIRI)),
-        "declared_properties": sorted(str(p) for p in missing_props),
-        "moved_back_pairs": sorted([str(a), str(b)] for a, b in moved_back),
-    }
-    report_path = PROJECT_DIR / cfg["paths"]["split_report"]
-    write_report(report_path, report)
-    print(f"wrote {report_path.name}")
+    print(f"named subclass pairs: {len(named_pairs)}  pool: {len(pool)}  "
+          f"target: {n_target}  held out: {len(held_out)}")
 
 
 if __name__ == "__main__":

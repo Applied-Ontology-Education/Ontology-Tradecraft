@@ -254,14 +254,6 @@ def write_candidates_ttl(kept, path):
     g.serialize(path, format="turtle")
 
 
-def write_log(log, path):
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with open(path, "w", newline="", encoding="utf-8") as f:
-        w = csv.DictWriter(f, fieldnames=["IRI", "kind", "property", "target", "status", "rationale"])
-        w.writeheader()
-        w.writerows(log)
-
-
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--limit", type=int, help="only process the first N classes (for testing)")
@@ -294,7 +286,6 @@ def main():
     kept, log = build_candidates(results, class_index, prop_index, module,
                                  ccfg["max_candidates_per_class"])
     write_candidates_ttl(kept, PROJECT_DIR / paths["candidates"])
-    write_log(log, PROJECT_DIR / paths["candidates_log"])
     counts = Counter(r["status"] for r in log)
     print(f"Candidates kept: {len(kept)}  " + "  ".join(f"{k}={v}" for k, v in sorted(counts.items())))
 
