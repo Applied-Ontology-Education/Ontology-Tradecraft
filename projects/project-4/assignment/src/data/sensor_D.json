@@ -1,0 +1,34 @@
+{
+  "site": "Example-D",
+  "stream_id": "d-stream-44",
+  "readings": [
+    {
+      "entity_id": "Circuit-66",
+      "data": [
+        {"kind": "temp", "value": 450.5, "unit": "C", "time": "2024-03-22T08:15:00Z"},
+        {"kind": "pressure", "value": 88.7, "unit": "kPa", "time": "2024-03-22T08:16:00Z"}
+      ]
+    },
+    {
+      "entity_id": "Circuit-89",
+      "data": [
+        {"kind": "temp", "value": 32.1, "unit": "C", "time": "2024-03-22T09:30:00Z"},
+        {"kind": "pressure", "value": 45.8, "unit": "psi", "time": "2024-03-22T09:31:00Z"}
+      ]
+    },
+    {
+      "entity_id": "Valve-11",
+      "data": [
+        {"kind": "temp", "value": 78.3, "unit": "F", "time": "2024-03-22T10:00:00Z"},
+        {"kind": "pressure", "value": null, "unit": "psi", "time": "2024-03-22T10:01:00Z"}
+      ]
+    },
+    {
+      "entity_id": "Circuit-22",
+      "data": [
+        {"kind": "voltage", "value": 12.5, "unit": "volt", "time": "2024-03-22T11:45:00Z"},
+        {"kind": "resistance", "value": 4.7, "unit": "ohm", "time": "2024-03-22T11:46:00Z"}
+      ]
+    }
+  ]
+}
