@@ -1,0 +1,61 @@
+{
+  "mean_cos_all": 0.1513,
+  "mean_cos_at_tau": 0.8376,
+  "coverage_at_tau": 0.1212,
+  "chosen_tau": 0.6,
+  "target_mean_cos": 0.7,
+  "baseline_mean_cos": 0.0542,
+  "train_mean_cos": 0.9046,
+  "n_valid_pairs": 66,
+  "n_missing_embeddings": 0,
+  "tau_table": [
+    {
+      "tau": 0.6,
+      "n_above": 8,
+      "coverage": 0.12121212121212122,
+      "mean_cos_at_tau": 0.837622694671154
+    },
+    {
+      "tau": 0.65,
+      "n_above": 8,
+      "coverage": 0.12121212121212122,
+      "mean_cos_at_tau": 0.837622694671154
+    },
+    {
+      "tau": 0.7,
+      "n_above": 7,
+      "coverage": 0.10606060606060606,
+      "mean_cos_at_tau": 0.8598162702151707
+    },
+    {
+      "tau": 0.75,
+      "n_above": 6,
+      "coverage": 0.09090909090909091,
+      "mean_cos_at_tau": 0.8846647342046102
+    },
+    {
+      "tau": 0.8,
+      "n_above": 5,
+      "coverage": 0.07575757575757576,
+      "mean_cos_at_tau": 0.9103407621383667
+    }
+  ],
+  "gci_counts": {
+    "gci0": 304,
+    "gci1": 6,
+    "gci2": 48,
+    "gci3": 34,
+    "gci0_bot": 0,
+    "gci1_bot": 28,
+    "gci3_bot": 0
+  },
+  "model": {
+    "name": "ELEmbeddings",
+    "mowl_version": "2.1.1.dev8",
+    "embed_dim": 32,
+    "learning_rate": 0.01,
+    "epochs": 2000,
+    "seed": 42
+  },
+  "hybrid": null
+}

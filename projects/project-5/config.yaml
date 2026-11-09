@@ -4,7 +4,16 @@ paths:
   train: src/train.ttl
   valid: src/valid.ttl
   split_report: reports/split_report.json
+  mowl_metrics: reports/mowl_metrics.json
 
 split:
   seed: 42
   valid_fraction: 0.20
+
+train:
+  seed: 42
+  embed_dim: 32
+  learning_rate: 0.01
+  epochs: 2000
+  tau_candidates: [0.60, 0.65, 0.70, 0.75, 0.80]
+  target_mean_cos: 0.70
