@@ -41,7 +41,7 @@ jobs:
 
           echo "Diff range: $BEFORE_SHA..$AFTER_SHA"
 
-          ADDED=$(git diff --name-status "$BEFORE_SHA" "$AFTER_SHA" -- "projects/project-4/assignment/src/data/**" | awk '$1=="A"{print $2}')
+          ADDED=$(git diff --name-status "$BEFORE_SHA" "$AFTER_SHA" -- "projects/project-4/assignment/src/data/" | awk '$1=="A"{print $2}')
           COUNT=$(printf "%s\n" "$ADDED" | grep -c . || true)
 
           echo "Newly added files:"; printf "%s\n" "$ADDED"
