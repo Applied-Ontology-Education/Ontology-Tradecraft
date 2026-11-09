@@ -1,0 +1,7 @@
+Device Name,Reading Type,Reading Value,Units,Time (Local)
+Compressor-02,Pressure,125.4,psi,3/21/24 14:22
+Motor-15,Voltage,480,Volt,3/21/24 14:23
+Reactor-A,Temperature,185,Celsius,3/21/24 14:24
+Reactor-A,Pressure,2.5,kPa,3/21/24 14:25
+Chiller 7,Temperature,65.5,F,3/21/24 14:26
+Pipe-33,Pressure,abc,psi,3/21/24 14:27
