@@ -1,0 +1,48 @@
+PROJECT 5 - ACTUAL MOWL TRAINING COVERAGE AUDIT
+==============================================================================
+
+Mode: scored
+Module closure: 225
+Training closure: 169
+Closure lost: 56
+Closure retention: 75.1%
+Zero mOWL subclass support: 0
+
+Validation pairs
+------------------------------------------------------------------------------
+ -0.2823    3   3   1   2  1  1  0  1     8       8  Military Personnel Force -> Armed Force
+ -0.0259    2   2   2   0  0  0  1  0     1       1  Division of Delimiting Domain -> ont00000472
+ +0.1151    8   8   3   5  2  2  1  3     4       2  Agent Capability -> BFO_0000017
+ +0.3972    9   9   3   6  3  3  0  3     4       3  Process Regulation -> ont00000965
+ +0.4063    3   3   2   1  0  1  1  1     3       3  Ethnic Group -> Group of Persons
+ +0.6967    3   3   1   2  0  1  1  1     1       1  Objective -> ont00000965
+ +0.7317    5   5   3   2  2  2  1  0     2       2  Material Territory of a Government Domain -> ont00001341
+ +0.7951    4   4   2   2  2  1  1  0     4       2  Skill -> Agent Capability
+ +0.8619    3   3   2   1  0  1  1  1     3       3  Fourth-Order Administrative Region -> Government Domain
+ +0.8798   13  13   2  11  1  1  1 10     1       1  Agent -> BFO_0000040
+ +0.8903    4   4   1   3  0  1  2  1     2       2  Eye -> Bodily Component
+ +0.9050    4   4   2   2  0  1  1  2     1       1  Commercial Role -> BFO_0000023
+ +0.9250    4   4   2   2  0  1  1  2     2       2  Neutral Role -> Allegiance Role
+ +0.9310    3   3   2   1  0  0  2  1     1       1  Geopolitical Power Role -> BFO_0000023
+ +0.9410    5   5   3   2  1  2  1  1     3       3  Commercial Organization -> Organization
+ +0.9540    3   3   2   1  0  1  1  1     3       3  Government Organization -> Organization
+ +0.9570    5   5   2   3  0  0  3  2     3       3  Domain of a Country -> Government Domain
+ +0.9575    5   5   3   2  1  2  1  1     2       1  Process Prohibition -> Process Regulation
+ +0.9632    4   4   3   1  1  1  2  0     4       4  Organization Member -> Person
+ +0.9867    6   6   3   3  1  1  3  1     6       3  Government -> Organization
+ +0.9961    5   5   3   2  1  2  1  1     4       1  Government of a Country -> Government
+
+Correlations
+------------------------------------------------------------------------------
+pearson_cos_vs_sub_mowl_total_occurrences: 0.06821615635873195
+spearman_cos_vs_sub_mowl_total_occurrences: 0.26297709455911616
+pearson_cos_vs_sub_mowl_unique_training_rows: 0.06821615635873195
+spearman_cos_vs_sub_mowl_unique_training_rows: 0.26297709455911616
+pearson_cos_vs_sub_mowl_lhs_occurrences: 0.2340949952852301
+spearman_cos_vs_sub_mowl_lhs_occurrences: 0.38143861062723033
+pearson_cos_vs_sub_mowl_rhs_occurrences: 0.00344209660978048
+spearman_cos_vs_sub_mowl_rhs_occurrences: -0.01773251265293268
+pearson_cos_vs_individual_closure_pairs_lost: -0.3607271247154872
+spearman_cos_vs_individual_closure_pairs_lost: 0.07776189472615792
+pearson_cos_vs_marginal_closure_pairs_restored: -0.44842579940831395
+spearman_cos_vs_marginal_closure_pairs_restored: -0.016298571945469006

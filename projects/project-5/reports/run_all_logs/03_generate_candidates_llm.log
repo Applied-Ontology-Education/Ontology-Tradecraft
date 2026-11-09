@@ -1,0 +1,140 @@
+COMMAND
+==============================================================================
+C:\Users\cappa\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe C:\Users\cappa\Ontology-Tradecraft\projects\project-5\scripts\generate_candidates_llm.py
+
+OUTPUT
+==============================================================================
+========================================================================
+PROJECT 5 - LLM CANDIDATE AXIOM GENERATION
+========================================================================
+
+Module          : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module.ttl
+Definitions     : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\data\definitions_enriched.csv
+Candidate TTL   : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\candidate_el.ttl
+Audit CSV       : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\candidate_el_candidates.csv
+Progress CSV    : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\candidate_generation_progress.csv
+xAI model       : grok-4.7
+Candidate pool  : 50
+Max per class   : 5
+
+Enriched definitions       : 139
+Candidate named classes    : 117
+Existing named subclass axioms : 103
+Eligible target classes    : 103
+
+Previously completed classes: 103
+
+[1/103] Already complete: Action Permission
+[2/103] Already complete: Affordance
+[3/103] Already complete: Agent
+[4/103] Already complete: Agent Capability
+[5/103] Already complete: Allegiance Role
+[6/103] Already complete: Allied Person
+[7/103] Already complete: Ally Role
+[8/103] Already complete: Animal
+[9/103] Already complete: Armed Force
+[10/103] Already complete: Authority Role
+[11/103] Already complete: Biological Sex
+[12/103] Already complete: Bodily Component
+[13/103] Already complete: Carrier Air Wing
+[14/103] Already complete: Citizen
+[15/103] Already complete: Citizen Role
+[16/103] Already complete: City
+[17/103] Already complete: Civil Organization
+[18/103] Already complete: Civilian Role
+[19/103] Already complete: Commercial Organization
+[20/103] Already complete: Commercial Role
+[21/103] Already complete: Constituent State
+[22/103] Already complete: Contractor Role
+[23/103] Already complete: County
+[24/103] Already complete: Crew
+[25/103] Already complete: Delimiting Domain
+[26/103] Already complete: Disability
+[27/103] Already complete: Disease
+[28/103] Already complete: Division of Delimiting Domain
+[29/103] Already complete: Domain of a Country
+[30/103] Already complete: Educational Organization
+[31/103] Already complete: Enemy Person
+[32/103] Already complete: Enemy Role
+[33/103] Already complete: Ethnic Group
+[34/103] Already complete: Ethnicity
+[35/103] Already complete: Eye
+[36/103] Already complete: Eye Color
+[37/103] Already complete: Facial Hair
+[38/103] Already complete: Family
+[39/103] Already complete: Female Sex
+[40/103] Already complete: Financial Value
+[41/103] Already complete: Financial Value of Property
+[42/103] Already complete: First-Order Administrative Region
+[43/103] Already complete: Fourth-Order Administrative Region
+[44/103] Already complete: Geopolitical Organization
+[45/103] Already complete: Geopolitical Power Role
+[46/103] Already complete: Government
+[47/103] Already complete: Government Domain
+[48/103] Already complete: Government Domain Border
+[49/103] Already complete: Government Organization
+[50/103] Already complete: Government of a Country
+[51/103] Already complete: Group of Agents
+[52/103] Already complete: Group of Organizations
+[53/103] Already complete: Group of Persons
+[54/103] Already complete: Hair Color
+[55/103] Already complete: Ideology
+[56/103] Already complete: Incorporated Organization
+[57/103] Already complete: International Community
+[58/103] Already complete: Interpersonal Relationship Role
+[59/103] Already complete: Iris
+[60/103] Already complete: Language Skill
+[61/103] Already complete: Local Administrative Region
+[62/103] Already complete: Male Sex
+[63/103] Already complete: Material Territory of a Country
+[64/103] Already complete: Material Territory of a Government Domain
+[65/103] Already complete: Military Personnel Force
+[66/103] Already complete: Neutral Person
+[67/103] Already complete: Neutral Role
+[68/103] Already complete: Nuclear Family
+[69/103] Already complete: Objective
+[70/103] Already complete: Occupation Role
+[71/103] Already complete: Operational Area
+[72/103] Already complete: Operator Role
+[73/103] Already complete: Organism
+[74/103] Already complete: Organization
+[75/103] Already complete: Organization Capability
+[76/103] Already complete: Organization Member
+[77/103] Already complete: Organization Member Role
+[78/103] Already complete: Paramilitary Force
+[79/103] Already complete: Permanent Resident
+[80/103] Already complete: Permanent Resident Role
+[81/103] Already complete: Person
+[82/103] Already complete: Plan
+[83/103] Already complete: Plant
+[84/103] Already complete: Political Orientation
+[85/103] Already complete: Populace
+[86/103] Already complete: Process Prohibition
+[87/103] Already complete: Process Regulation
+[88/103] Already complete: Process Requirement
+[89/103] Already complete: Province
+[90/103] Already complete: Religion
+[91/103] Already complete: Scalp
+[92/103] Already complete: Scalp Hair
+[93/103] Already complete: Scar
+[94/103] Already complete: Second-Order Administrative Region
+[95/103] Already complete: Service Provider
+[96/103] Already complete: Set of Eyes
+[97/103] Already complete: Skill
+[98/103] Already complete: Skin Type
+[99/103] Already complete: Social Network
+[100/103] Already complete: Tattoo
+[101/103] Already complete: Third-Order Administrative Region
+[102/103] Already complete: Town
+[103/103] Already complete: Village
+========================================================================
+CANDIDATE GENERATION COMPLETE
+========================================================================
+
+Classes processed : 103
+Classes with zero candidates : 30
+Candidate axioms  : 187
+
+OWL 2 EL file     : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\candidate_el.ttl
+Audit CSV         : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\candidate_el_candidates.csv
+Progress CSV      : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\candidate_generation_progress.csv
