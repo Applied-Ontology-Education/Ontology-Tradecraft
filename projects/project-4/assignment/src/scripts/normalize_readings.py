@@ -11,9 +11,6 @@ import datetime as _dt
 SCRIPT_DIR = Path(__file__).resolve().parent          # .../src/scripts
 SRC_DIR    = SCRIPT_DIR.parent                         # .../src
 DATA_DIR   = SRC_DIR / "data"                          # .../src/data
-IN_A       = DATA_DIR / "sensor_A.csv"
-IN_B       = DATA_DIR / "sensor_B.json"
-IN_C       = DATA_DIR / "sensor_C.csv"
 OUT        = DATA_DIR / "readings_normalized.csv"
 
 CANON = ["artifact_id", "sdc_kind", "unit_label", "value", "timestamp"]
@@ -188,20 +185,20 @@ def normalize_and_clean(df: pd.DataFrame) -> pd.DataFrame:
     df = df[CANON]
     return df
 
-
 def main():
-    print("[paths] A:", IN_A)
-    print("[paths] B:", IN_B)
-    print("[paths] C:", IN_C)
-    df_a = load_sensor_a(IN_A)
-    df_b = load_sensor_b(IN_B)
-    df_c = load_sensor_a(IN_C)
+    dfs = []
 
-    print(f"[normalize_readings] Input A rows: {len(df_a)}")
-    print(f"[normalize_readings] Input B rows: {len(df_b)}")
-    print(f"[normalize_readings] Input C rows: {len(df_c)}")
+    for csv_path in sorted(DATA_DIR.glob("sensor_*.csv")):
+        df = load_sensor_a(csv_path)
+        print(f"[normalize_readings] {csv_path.name}: {len(df)} rows")
+        dfs.append(df)
 
-    combined = pd.concat([df_a, df_b, df_c], ignore_index=True)
+    for json_path in sorted(DATA_DIR.glob("sensor_*.json")):
+        df = load_sensor_b(json_path)
+        print(f"[normalize_readings] {json_path.name}: {len(df)} rows")
+        dfs.append(df)
+
+    combined = pd.concat(dfs, ignore_index=True)
     cleaned = normalize_and_clean(combined)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
