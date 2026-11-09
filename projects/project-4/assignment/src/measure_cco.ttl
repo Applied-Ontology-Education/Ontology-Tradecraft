@@ -9,6 +9,10 @@
     obo:BFO_0000196 :sdc_Boiler-07_pressure,
         :sdc_Boiler-07_temperature .
 
+:artifact_Boiler-09 a cco:ont00000995 ;
+    rdfs:label "Boiler-09" ;
+    obo:BFO_0000196 :sdc_Boiler-09_pressure .
+
 :artifact_Chiller-3 a cco:ont00000995 ;
     rdfs:label "Chiller-3" ;
     obo:BFO_0000196 :sdc_Chiller-3_temperature .
@@ -21,6 +25,10 @@
     rdfs:label "Chiller 3" ;
     obo:BFO_0000196 :sdc_Chiller_3_temperature .
 
+:artifact_Circuit-07 a cco:ont00000995 ;
+    rdfs:label "Circuit-07" ;
+    obo:BFO_0000196 :sdc_Circuit-07_voltage .
+
 :artifact_Circuit-12 a cco:ont00000995 ;
     rdfs:label "Circuit-12" ;
     obo:BFO_0000196 :sdc_Circuit-12_resistance,
@@ -30,14 +38,18 @@
     rdfs:label "Pump-A1" ;
     obo:BFO_0000196 :sdc_Pump-A1_pressure .
 
+:artifact_Pump-A2 a cco:ont00000995 ;
+    rdfs:label "Pump-A2" ;
+    obo:BFO_0000196 :sdc_Pump-A2_pressure .
+
 :mice_Boiler-07_pressure_2024-03-17T19-04-00Z a cco:ont00001163 ;
     cco:ont00001769 14.7 ;
-    cco:ont00001863 :unit_psi ;
+    cco:ont00001863 :unit_Pa_\(ori-_psi\) ;
     cco:ont00001966 :sdc_Boiler-07_pressure .
 
 :mice_Boiler-07_pressure_2024-03-17T23-04-00Z a cco:ont00001163 ;
     cco:ont00001769 101.325 ;
-    cco:ont00001863 :unit_kPa ;
+    cco:ont00001863 :unit_Pa_\(ori-_kPa\) ;
     cco:ont00001966 :sdc_Boiler-07_pressure .
 
 :mice_Boiler-07_temperature_2024-03-17T19-03-00Z a cco:ont00001163 ;
@@ -49,6 +61,11 @@
     cco:ont00001769 100.0 ;
     cco:ont00001863 :unit_C ;
     cco:ont00001966 :sdc_Boiler-07_temperature .
+
+:mice_Boiler-09_pressure_2024-03-18T19-06-00Z a cco:ont00001163 ;
+    cco:ont00001769 13.7 ;
+    cco:ont00001863 :unit_Pa_\(ori-_psi\) ;
+    cco:ont00001966 :sdc_Boiler-09_pressure .
 
 :mice_Chiller-3_temperature_2024-03-18T12-01-00Z a cco:ont00001163 ;
     cco:ont00001769 19.5 ;
@@ -70,6 +87,16 @@
     cco:ont00001863 :unit_F ;
     cco:ont00001966 :sdc_Chiller_3_temperature .
 
+:mice_Chiller_3_temperature_2024-03-19T09-01-00Z a cco:ont00001163 ;
+    cco:ont00001769 70.0 ;
+    cco:ont00001863 :unit_F ;
+    cco:ont00001966 :sdc_Chiller_3_temperature .
+
+:mice_Circuit-07_voltage_2024-03-18T19-05-00Z a cco:ont00001163 ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 :unit_V ;
+    cco:ont00001966 :sdc_Circuit-07_voltage .
+
 :mice_Circuit-12_resistance_2024-03-18T12-06-00Z a cco:ont00001163 ;
     cco:ont00001769 1.3 ;
     cco:ont00001863 :unit_ohm ;
@@ -82,23 +109,25 @@
 
 :mice_Pump-A1_pressure_2024-03-18T08-07-00Z a cco:ont00001163 ;
     cco:ont00001769 101.325 ;
-    cco:ont00001863 :unit_kPa ;
+    cco:ont00001863 :unit_Pa_\(ori-_kPa\) ;
     cco:ont00001966 :sdc_Pump-A1_pressure .
 
-:unit_V a cco:ont00000120 ;
-    rdfs:label "V" .
+:mice_Pump-A2_pressure_2024-03-19T09-07-00Z a cco:ont00001163 ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 :unit_Pa_\(ori-_kPa\) ;
+    cco:ont00001966 :sdc_Pump-A2_pressure .
 
 :unit_ohm a cco:ont00000120 ;
     rdfs:label "ohm" .
 
-:unit_psi a cco:ont00000120 ;
-    rdfs:label "psi" .
+:sdc_Boiler-09_pressure a obo:BFO_0000020 ;
+    rdfs:label "pressure of Boiler-09" .
 
 :sdc_Chiller-3_temperature a obo:BFO_0000020 ;
     rdfs:label "temperature of Chiller-3" .
 
-:sdc_Chiller_3_temperature a obo:BFO_0000020 ;
-    rdfs:label "temperature of Chiller 3" .
+:sdc_Circuit-07_voltage a obo:BFO_0000020 ;
+    rdfs:label "voltage of Circuit-07" .
 
 :sdc_Circuit-12_resistance a obo:BFO_0000020 ;
     rdfs:label "resistance of Circuit-12" .
@@ -109,11 +138,17 @@
 :sdc_Pump-A1_pressure a obo:BFO_0000020 ;
     rdfs:label "pressure of Pump-A1" .
 
+:sdc_Pump-A2_pressure a obo:BFO_0000020 ;
+    rdfs:label "pressure of Pump-A2" .
+
 :unit_C a cco:ont00000120 ;
     rdfs:label "C" .
 
-:unit_kPa a cco:ont00000120 ;
-    rdfs:label "kPa" .
+:unit_Pa_\(ori-_psi\) a cco:ont00000120 ;
+    rdfs:label "Pa (ori: psi)" .
+
+:unit_V a cco:ont00000120 ;
+    rdfs:label "V" .
 
 :sdc_Boiler-07_pressure a obo:BFO_0000020 ;
     rdfs:label "pressure of Boiler-07" .
@@ -123,6 +158,12 @@
 
 :sdc_Chiller-4_temperature a obo:BFO_0000020 ;
     rdfs:label "temperature of Chiller-4" .
+
+:sdc_Chiller_3_temperature a obo:BFO_0000020 ;
+    rdfs:label "temperature of Chiller 3" .
+
+:unit_Pa_\(ori-_kPa\) a cco:ont00000120 ;
+    rdfs:label "Pa (ori: kPa)" .
 
 :unit_F a cco:ont00000120 ;
     rdfs:label "F" .
