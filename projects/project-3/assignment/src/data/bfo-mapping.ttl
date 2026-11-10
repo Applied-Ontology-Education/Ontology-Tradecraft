@@ -1,0 +1,21 @@
+# ============================================================
+# Mapping: BFO ↔ IES Ontology
+#
+# Finding from structural matching: 
+# IES does not use any class expressions, so there were no structural matches. 
+# A structural match was produced by enriching IES with a class restriction.
+# The 19 resulting candidates (State paired with BFO classes having universal restrictions) were rejected: none is a superclass or equivalent of a 4D state. The mappings below target bfo:occurrent directly
+# ============================================================
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix a:    <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix b:    <http://purl.obolibrary.org/obo/> .
+
+# A fundamental mismatch between BFO and IES is that BFO treats temporal and spaciotemporal regions as distinct from the continuants and occurrents that may happen within them.
+# IES treats space and time and the processes and things it contains as a single unit. 
+# This produced a mapping of both ies:State and ies:Element as subclasses bfo:Occurrent - this is broad enough to permit the relationship without contradicting IES' core premises.
+
+a:State rdfs:subClassOf b:BFO_0000003 .
+
+a:Element rdfs:subClassOf b:BFO_0000003 .
