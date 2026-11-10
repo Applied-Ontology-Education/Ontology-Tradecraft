@@ -1,0 +1,15 @@
+# ============================================================
+# Mapping: CCOM ↔ QUDT Ontology
+#
+# Finding from structural matching: the two ontologies both contain units of measurement. QUDT classifies units into discipline categories (Biomedical, Financial, Science and Engineering, etc.) via subclassing., while CCOM does not. For CCOM: Measurement Unit of Time,, the most faithful mapping was to a high level 'Unit' class in QUDT. Otherwise, a seemingly relevant mapping to "Space and Time Unit" would commit Measurement Unit of Time, to being a "Science and Engineering Unit", which is overly restrictive.
+# All 15 candidates were QUDT unit categories; none was retained
+# ============================================================
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix a:    <https://www.commoncoreontologies.org/> .
+@prefix b:    <http://qudt.org/schema/qudt#> .
+
+
+a:ont00001357 rdfs:subClassOf b:Unit .
+
