@@ -1,0 +1,33 @@
+# ============================================================
+# Mapping: CCOT ↔ W3C Time Ontology
+#
+# Finding from structural matching: 
+# CCOT treats time entities (e.g., day, month, year) as the intervals of time themselves, 
+# whereas W3C Time treats these as descriptions or measurements of these intervals. 
+# 
+# ============================================================
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix a:    <https://www.commoncoreontologies.org/> .
+@prefix b:    <http://www.w3.org/2006/time#> .
+
+# Second → ProperInterval
+# CCOT defines a second as a temporal interval with a specific duration; 
+# W3C Time defines ProperInterval as temporal entity with non-zero extent or duration. 
+# So the interval of a second is a kind of proper interval. 
+# Not every Proper Interval is a second, so the two classes are not equivalent.
+a:ont00000992  rdfs:subClassOf  b:ProperInterval .
+
+# Minute → ProperInterval
+# CCOT defines a minute as a temporal interval with a specific duration; 
+# W3C Time defines ProperInterval as temporal entity with non-zero extent or duration. 
+# So the interval of a minute is a kind of proper interval. 
+# Not every Proper Interval is a minute, so the two classes are not equivalent.
+a:ont00000085  rdfs:subClassOf  b:ProperInterval .
+
+# Time of Day → Instant
+# In CCOT, Time of Day is a subclass of Temporal Instant that is part of a day; a Temporal Instant is a region of time with no extent.
+# W3C Time defines Instant as a temporal entity with zero extent or duration.
+# CCO asserts this only as a subclass; equivalence is not supported by the definitions.
+a:ont00000223  rdfs:subClassOf  b:Instant .

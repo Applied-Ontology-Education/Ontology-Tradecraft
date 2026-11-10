@@ -6,6 +6,10 @@ on:
     paths:
       - "projects/project-1/**"
       - ".github/workflows/autograde-project-1.yml"
+  push:
+    paths:
+      - "projects/project-1/**"
+      - ".github/workflows/project1-tests.yml"
   workflow_dispatch:
 
 jobs:
