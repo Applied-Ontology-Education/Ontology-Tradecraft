@@ -1,0 +1,3 @@
+child_iri,parent_iri,cosine_similarity,stage
+https://www.commoncoreontologies.org/ont00000041,https://www.commoncoreontologies.org/ont00000180,0.9574930667877197,candidate
+https://www.commoncoreontologies.org/ont00000332,https://www.commoncoreontologies.org/ont00000270,0.9415290355682373,candidate

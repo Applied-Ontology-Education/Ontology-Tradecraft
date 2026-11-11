@@ -1,0 +1,17 @@
+
+# Python virtual environments
+.venv/
+.venv-*/
+venv/
+
+# ROBOT executables
+projects/project-5/tools/*.jar
+
+# Python cache
+__pycache__/
+*.py[cod]
+
+# Credentials
+.env
+.env.*
+!.env.example

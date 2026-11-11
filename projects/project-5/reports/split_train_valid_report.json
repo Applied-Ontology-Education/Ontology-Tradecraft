@@ -1,0 +1,89 @@
+{
+  "status": "PASS (named-subclass graph checks)",
+  "source_triples": 563,
+  "source_named_subclass_axioms": 91,
+  "training_subclass_axioms": 75,
+  "validation_subclass_axioms": 16,
+  "target_validation_axioms": 18,
+  "target_met": false,
+  "train_triples": 547,
+  "validation_triples": 115,
+  "direct_overlap": 0,
+  "validation_reachable_from_training": 0,
+  "source_transitive_closure_size": 166,
+  "training_transitive_closure_size": 125,
+  "closure_retention": 0.75301,
+  "training_endpoint_coverage": "91/92",
+  "endpoint_coverage_fraction": 0.98913,
+  "min_closure_retention": 0.75,
+  "min_endpoint_coverage": 0.95,
+  "attempts": 24,
+  "seed": 42,
+  "validation_pairs": [
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000055",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000108",
+      "parent": "https://www.commoncoreontologies.org/ont00000226"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000226",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000270",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000330",
+      "parent": "https://www.commoncoreontologies.org/ont00001076"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000332",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000339",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000479",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000531",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000641",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000655",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000946",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001078",
+      "parent": "https://www.commoncoreontologies.org/ont00000226"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001258",
+      "parent": "https://www.commoncoreontologies.org/ont00000226"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001315",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001375",
+      "parent": "https://www.commoncoreontologies.org/ont00000192"
+    }
+  ],
+  "check_scope": "Transitive reachability of named-class rdfs:subClassOf edges ONLY; full OWL reasoning/import entailments not checked."
+}

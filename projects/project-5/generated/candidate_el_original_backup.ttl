@@ -1,0 +1,8 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://www.commoncoreontologies.org/ont00000245> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000248> .
+
+<https://www.commoncoreontologies.org/ont00000332> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000270> .
+
+<https://www.commoncoreontologies.org/ont00000717> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000330> .
+

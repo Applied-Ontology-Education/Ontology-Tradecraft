@@ -1,0 +1,73 @@
+{
+  "stage": 7,
+  "status": "PASS",
+  "completed_utc": "2026-11-10T01:05:55.503216+00:00",
+  "reasoner": "ELK (via ROBOT command-line)",
+  "merge_tool": "ROBOT merge",
+  "robot_location": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\tools\\robot.jar",
+  "source_file": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\src\\module.ttl",
+  "accepted_file": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\generated\\accepted_el.ttl",
+  "augmented_file": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\src\\module_augmented.ttl",
+  "original_triples": 563,
+  "augmented_triples": 565,
+  "new_local_triples": 2,
+  "robot_serialization_extra_triples_excluded": 4,
+  "robot_serialization_extras": [
+    [
+      "http://purl.org/dc/terms/license",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    [
+      "http://www.w3.org/2004/02/skos/core#altLabel",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    [
+      "http://www.w3.org/2004/02/skos/core#definition",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ],
+    [
+      "http://www.w3.org/2004/02/skos/core#example",
+      "http://www.w3.org/1999/02/22-rdf-syntax-ns#type",
+      "http://www.w3.org/2002/07/owl#AnnotationProperty"
+    ]
+  ],
+  "accepted_axioms_from_step_6": 2,
+  "axioms_added": [
+    {
+      "child_iri": "https://www.commoncoreontologies.org/ont00000041",
+      "parent_iri": "https://www.commoncoreontologies.org/ont00000180"
+    },
+    {
+      "child_iri": "https://www.commoncoreontologies.org/ont00000332",
+      "parent_iri": "https://www.commoncoreontologies.org/ont00000270"
+    }
+  ],
+  "already_asserted_before_merge": 0,
+  "already_entailed_before_merge_by_elk": 0,
+  "baseline": {
+    "consistent": true,
+    "unsatisfiable_named_classes": []
+  },
+  "augmented": {
+    "consistent": true,
+    "unsatisfiable_named_classes": []
+  },
+  "baseline_elk_classification": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\augmentation_elk_baseline_reasoned.ttl",
+  "augmented_elk_classification": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\augmentation_elk_reasoned.ttl",
+  "reasoned_difference_triples": 1268,
+  "inferred_difference_triples_not_explicit_additions": 1266,
+  "import_snapshot": {
+    "direct_imports": [
+      "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+      "https://www.commoncoreontologies.org/ArtifactOntology"
+    ],
+    "snapshot_sha256": "ea3b43903717103d606d41e4dcf9f44e72f20a0a4240ed7691667b9f07fedb65",
+    "imported_ontologies": 6,
+    "imported_axioms": 6648,
+    "snapshot_path": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_import_cache\\imported_axioms.owl"
+  },
+  "limitations": "ELK checks consistency and coherence for OWL 2 EL constructs it supports; it does not replace HermiT for arbitrary OWL 2 DL. Structural novelty is not proof that a proposed axiom was not already entailed by the baseline. ROBOT materializes inferred axioms into separately saved classification artifacts, not the published local ontology. Reasoned differences need not be independent axioms."
+}
