@@ -1,0 +1,151 @@
+{
+  "status": "PASS",
+  "mean_cos": 0.9122951957914565,
+  "chosen_tau": 0.6,
+  "architecture": "ELEmbeddings + pretrained text + crossfit masked prototypes",
+  "split_integrity": {
+    "source_pairs": 91,
+    "training_pairs": 73,
+    "validation_pairs": 18,
+    "validation_fraction": 0.1978021978021978,
+    "source_declarations_preserved": 96
+  },
+  "selected_configuration": {
+    "adapter_lr": 0.001,
+    "native_weight": 0.0,
+    "hard_alpha": 2.0,
+    "prototype_mix": 0.25,
+    "preservation": 0.12
+  },
+  "selected_development_mean_cos": 0.9258868396282196,
+  "selected_development_minus_control": 0.7172973890788853,
+  "outer_validation": {
+    "count": 18,
+    "mean": 0.9122951957914565,
+    "minimum": 0.7049359083175659,
+    "maximum": 0.9539655447006226,
+    "at_or_above_0_60": 18,
+    "at_or_above_0_70": 18
+  },
+  "outer_control": {
+    "count": 120,
+    "mean": 0.20919871743923674,
+    "minimum": -0.052581317722797394,
+    "maximum": 0.9146589636802673,
+    "at_or_above_0_60": 1,
+    "at_or_above_0_70": 1
+  },
+  "outer_validation_minus_control": 0.7030964783522198,
+  "masked_reconstruction_training_pairs": 73,
+  "final_masked_reconstruction_loss": 0.004379010293632746,
+  "enriched_definitions_loaded": 91,
+  "classes_with_text": 868,
+  "pretrained_semantic_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "candidate_count": 2,
+  "threshold_evaluations": [
+    {
+      "tau": 0.6,
+      "retained": 18
+    },
+    {
+      "tau": 0.61,
+      "retained": 18
+    },
+    {
+      "tau": 0.62,
+      "retained": 18
+    },
+    {
+      "tau": 0.63,
+      "retained": 18
+    },
+    {
+      "tau": 0.64,
+      "retained": 18
+    },
+    {
+      "tau": 0.65,
+      "retained": 18
+    },
+    {
+      "tau": 0.66,
+      "retained": 18
+    },
+    {
+      "tau": 0.67,
+      "retained": 18
+    },
+    {
+      "tau": 0.68,
+      "retained": 18
+    },
+    {
+      "tau": 0.69,
+      "retained": 18
+    },
+    {
+      "tau": 0.7,
+      "retained": 18
+    },
+    {
+      "tau": 0.71,
+      "retained": 17
+    },
+    {
+      "tau": 0.72,
+      "retained": 17
+    },
+    {
+      "tau": 0.73,
+      "retained": 17
+    },
+    {
+      "tau": 0.74,
+      "retained": 17
+    },
+    {
+      "tau": 0.75,
+      "retained": 17
+    },
+    {
+      "tau": 0.76,
+      "retained": 17
+    },
+    {
+      "tau": 0.77,
+      "retained": 17
+    },
+    {
+      "tau": 0.78,
+      "retained": 17
+    },
+    {
+      "tau": 0.79,
+      "retained": 17
+    },
+    {
+      "tau": 0.8,
+      "retained": 17
+    }
+  ],
+  "threshold_rule": "Mean across ALL outer validation pairs >= 0.70; smallest tau in 0.60..0.80 retaining at least one",
+  "seed": 101,
+  "training_epochs": 1000,
+  "crossfit_epochs": 300,
+  "adapter_epochs": 250,
+  "warnings": [
+    "Cosine similarity is not OWL entailment.",
+    "Unlabeled controls are not established negative axioms.",
+    "The outer validation has been examined in earlier experiments.",
+    "Superclass prototypes exclude each masked target edge.",
+    "Semantic definitions may include taxonomy clues to hidden axioms."
+  ],
+  "files": {
+    "model": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\elembeddings_model.pt",
+    "projection": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_projection_best.pt",
+    "validation": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_validation_cosines.csv",
+    "candidates": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_candidate_scores.csv",
+    "sweep": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_projection_sweep.csv",
+    "leakage": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_import_leakage.json"
+  }
+}

@@ -1,0 +1,76 @@
+child_iri,parent_iri,decision,child_label,parent_label
+https://www.commoncoreontologies.org/ont00000032,https://www.commoncoreontologies.org/ont00000052,ALREADY_REACHABLE,Church,Religious Facility
+https://www.commoncoreontologies.org/ont00000040,https://www.commoncoreontologies.org/ont00001102,ALREADY_REACHABLE,Grocery Store,Commercial Facility
+https://www.commoncoreontologies.org/ont00000041,https://www.commoncoreontologies.org/ont00000410,ALREADY_REACHABLE,Hostel,Residential Facility
+https://www.commoncoreontologies.org/ont00000041,https://www.commoncoreontologies.org/ont00000180,ADDED_PROVISIONAL,Hostel,Hotel
+https://www.commoncoreontologies.org/ont00000045,https://www.commoncoreontologies.org/ont00000881,ALREADY_REACHABLE,Petroleum Depot,Storage Facility
+https://www.commoncoreontologies.org/ont00000060,https://www.commoncoreontologies.org/ont00000639,ALREADY_REACHABLE,Open Pit Mine,Mine
+https://www.commoncoreontologies.org/ont00000094,https://www.commoncoreontologies.org/ont00000946,ALREADY_REACHABLE,Seat of National Government,Government Building
+https://www.commoncoreontologies.org/ont00000104,https://www.commoncoreontologies.org/ont00000639,ALREADY_REACHABLE,Underwater Mine,Mine
+https://www.commoncoreontologies.org/ont00000108,https://www.commoncoreontologies.org/ont00000226,ALREADY_REACHABLE,Rail Facility,Transportation Facility
+https://www.commoncoreontologies.org/ont00000172,https://www.commoncoreontologies.org/ont00001052,ALREADY_REACHABLE,Base of Operations,Military Facility
+https://www.commoncoreontologies.org/ont00000172,https://www.commoncoreontologies.org/ont00000483,ALREADY_REACHABLE,Base of Operations,Military Base
+https://www.commoncoreontologies.org/ont00000180,https://www.commoncoreontologies.org/ont00000410,ALREADY_REACHABLE,Hotel,Residential Facility
+https://www.commoncoreontologies.org/ont00000195,https://www.commoncoreontologies.org/ont00001078,ALREADY_REACHABLE,Heliport,Airport
+https://www.commoncoreontologies.org/ont00000195,https://www.commoncoreontologies.org/ont00000226,ALREADY_REACHABLE,Heliport,Transportation Facility
+https://www.commoncoreontologies.org/ont00000220,https://www.commoncoreontologies.org/ont00000881,ALREADY_REACHABLE,Ammunition Depot,Storage Facility
+https://www.commoncoreontologies.org/ont00000232,https://www.commoncoreontologies.org/ont00000677,ALREADY_REACHABLE,Pumping Station,Product Transport Facility
+https://www.commoncoreontologies.org/ont00000245,https://www.commoncoreontologies.org/ont00000782,ALREADY_REACHABLE,Petroleum Manufacturing Facility,Factory
+https://www.commoncoreontologies.org/ont00000248,https://www.commoncoreontologies.org/ont00000782,ALREADY_REACHABLE,Chemical Manufacturing Facility,Factory
+https://www.commoncoreontologies.org/ont00000262,https://www.commoncoreontologies.org/ont00001102,ALREADY_REACHABLE,Shop,Commercial Facility
+https://www.commoncoreontologies.org/ont00000271,https://www.commoncoreontologies.org/ont00000639,ALREADY_REACHABLE,Underground Mine,Mine
+https://www.commoncoreontologies.org/ont00000330,https://www.commoncoreontologies.org/ont00001076,ALREADY_REACHABLE,Thermal Power Plant,Electric Power Station
+https://www.commoncoreontologies.org/ont00000331,https://www.commoncoreontologies.org/ont00000410,ALREADY_REACHABLE,House,Residential Facility
+https://www.commoncoreontologies.org/ont00000332,https://www.commoncoreontologies.org/ont00000270,ADDED_PROVISIONAL,Training Camp,Educational Facility
+https://www.commoncoreontologies.org/ont00000336,https://www.commoncoreontologies.org/ont00000410,ALREADY_REACHABLE,Apartment Building,Residential Facility
+https://www.commoncoreontologies.org/ont00000349,https://www.commoncoreontologies.org/ont00000479,ALREADY_REACHABLE,Police Station,Public Safety Facility
+https://www.commoncoreontologies.org/ont00000375,https://www.commoncoreontologies.org/ont00000881,ALREADY_REACHABLE,Warehouse,Storage Facility
+https://www.commoncoreontologies.org/ont00000381,https://www.commoncoreontologies.org/ont00000782,ALREADY_REACHABLE,Weapon Manufacturing Facility,Factory
+https://www.commoncoreontologies.org/ont00000421,https://www.commoncoreontologies.org/ont00000330,ALREADY_REACHABLE,Nuclear Power Plant,Thermal Power Plant
+https://www.commoncoreontologies.org/ont00000421,https://www.commoncoreontologies.org/ont00001076,ALREADY_REACHABLE,Nuclear Power Plant,Electric Power Station
+https://www.commoncoreontologies.org/ont00000423,https://www.commoncoreontologies.org/ont00000782,ALREADY_REACHABLE,Motor Vehicle Manufacturing Facility,Factory
+https://www.commoncoreontologies.org/ont00000432,https://www.commoncoreontologies.org/ont00001052,ALREADY_REACHABLE,Missile Launch Site,Military Facility
+https://www.commoncoreontologies.org/ont00000468,https://www.commoncoreontologies.org/ont00001102,ALREADY_REACHABLE,Office Building,Commercial Facility
+https://www.commoncoreontologies.org/ont00000483,https://www.commoncoreontologies.org/ont00001052,ALREADY_REACHABLE,Military Base,Military Facility
+https://www.commoncoreontologies.org/ont00000510,https://www.commoncoreontologies.org/ont00000052,ALREADY_REACHABLE,Mosque,Religious Facility
+https://www.commoncoreontologies.org/ont00000545,https://www.commoncoreontologies.org/ont00000946,ALREADY_REACHABLE,Seat of Local Government,Government Building
+https://www.commoncoreontologies.org/ont00000583,https://www.commoncoreontologies.org/ont00000180,ALREADY_REACHABLE,Motel,Hotel
+https://www.commoncoreontologies.org/ont00000664,https://www.commoncoreontologies.org/ont00000531,ALREADY_REACHABLE,Radio Relay Station,Communications Facility
+https://www.commoncoreontologies.org/ont00000667,https://www.commoncoreontologies.org/ont00001052,ALREADY_REACHABLE,Combat Outpost,Military Facility
+https://www.commoncoreontologies.org/ont00000670,https://www.commoncoreontologies.org/ont00001258,ALREADY_REACHABLE,Distribution Port,Port
+https://www.commoncoreontologies.org/ont00000680,https://www.commoncoreontologies.org/ont00000881,ALREADY_REACHABLE,Medical Depot,Storage Facility
+https://www.commoncoreontologies.org/ont00000705,https://www.commoncoreontologies.org/ont00000677,ALREADY_REACHABLE,Power Transmission Line,Product Transport Facility
+https://www.commoncoreontologies.org/ont00000708,https://www.commoncoreontologies.org/ont00000881,ALREADY_REACHABLE,Water Tower,Storage Facility
+https://www.commoncoreontologies.org/ont00000710,https://www.commoncoreontologies.org/ont00001052,ALREADY_REACHABLE,Command Post Facility,Military Facility
+https://www.commoncoreontologies.org/ont00000717,https://www.commoncoreontologies.org/ont00001076,ALREADY_REACHABLE,Fossil Fuel Power Plant,Electric Power Station
+https://www.commoncoreontologies.org/ont00000737,https://www.commoncoreontologies.org/ont00000483,ALREADY_REACHABLE,Forward Operations Base,Military Base
+https://www.commoncoreontologies.org/ont00000737,https://www.commoncoreontologies.org/ont00001052,ALREADY_REACHABLE,Forward Operations Base,Military Facility
+https://www.commoncoreontologies.org/ont00000757,https://www.commoncoreontologies.org/ont00000052,ALREADY_REACHABLE,Synagogue,Religious Facility
+https://www.commoncoreontologies.org/ont00000761,https://www.commoncoreontologies.org/ont00000226,ALREADY_REACHABLE,Pier,Transportation Facility
+https://www.commoncoreontologies.org/ont00000778,https://www.commoncoreontologies.org/ont00000881,ALREADY_REACHABLE,Chemical Depot,Storage Facility
+https://www.commoncoreontologies.org/ont00000802,https://www.commoncoreontologies.org/ont00000641,ALREADY_REACHABLE,Stage,Entertainment Facility
+https://www.commoncoreontologies.org/ont00000846,https://www.commoncoreontologies.org/ont00001076,ALREADY_REACHABLE,Hydroelectric Power Plant,Electric Power Station
+https://www.commoncoreontologies.org/ont00000867,https://www.commoncoreontologies.org/ont00000677,ALREADY_REACHABLE,Pipeline,Product Transport Facility
+https://www.commoncoreontologies.org/ont00000882,https://www.commoncoreontologies.org/ont00001076,ALREADY_REACHABLE,Wind Farm,Electric Power Station
+https://www.commoncoreontologies.org/ont00000901,https://www.commoncoreontologies.org/ont00001375,ALREADY_REACHABLE,Decontamination Facility,Washing Facility
+https://www.commoncoreontologies.org/ont00000905,https://www.commoncoreontologies.org/ont00000655,ALREADY_REACHABLE,Post Office,Mailing Facility
+https://www.commoncoreontologies.org/ont00000957,https://www.commoncoreontologies.org/ont00000881,ALREADY_REACHABLE,Reservoir,Storage Facility
+https://www.commoncoreontologies.org/ont00001078,https://www.commoncoreontologies.org/ont00000226,ALREADY_REACHABLE,Airport,Transportation Facility
+https://www.commoncoreontologies.org/ont00001089,https://www.commoncoreontologies.org/ont00001283,ALREADY_REACHABLE,Petrochemical Refinery,Refinery
+https://www.commoncoreontologies.org/ont00001089,https://www.commoncoreontologies.org/ont00000782,ALREADY_REACHABLE,Petrochemical Refinery,Factory
+https://www.commoncoreontologies.org/ont00001091,https://www.commoncoreontologies.org/ont00001052,ALREADY_REACHABLE,Fort,Military Facility
+https://www.commoncoreontologies.org/ont00001098,https://www.commoncoreontologies.org/ont00000055,ALREADY_REACHABLE,Hospital,Healthcare Facility
+https://www.commoncoreontologies.org/ont00001107,https://www.commoncoreontologies.org/ont00001315,ALREADY_REACHABLE,Landfill,Waste Management Facility
+https://www.commoncoreontologies.org/ont00001165,https://www.commoncoreontologies.org/ont00000332,ALREADY_REACHABLE,Terrorist Training Camp,Training Camp
+https://www.commoncoreontologies.org/ont00001257,https://www.commoncoreontologies.org/ont00000881,ALREADY_REACHABLE,Nuclear Storage Depot,Storage Facility
+https://www.commoncoreontologies.org/ont00001258,https://www.commoncoreontologies.org/ont00000226,ALREADY_REACHABLE,Port,Transportation Facility
+https://www.commoncoreontologies.org/ont00001283,https://www.commoncoreontologies.org/ont00000782,ALREADY_REACHABLE,Refinery,Factory
+https://www.commoncoreontologies.org/ont00001297,https://www.commoncoreontologies.org/ont00001052,ALREADY_REACHABLE,Military Headquarters Facility,Military Facility
+https://www.commoncoreontologies.org/ont00001308,https://www.commoncoreontologies.org/ont00001315,ALREADY_REACHABLE,Sewage Treatment Facility,Waste Management Facility
+https://www.commoncoreontologies.org/ont00001311,https://www.commoncoreontologies.org/ont00000782,ALREADY_REACHABLE,Aircraft Manufacturing Facility,Factory
+https://www.commoncoreontologies.org/ont00001344,https://www.commoncoreontologies.org/ont00000881,ALREADY_REACHABLE,Biological Depot,Storage Facility
+https://www.commoncoreontologies.org/ont00001358,https://www.commoncoreontologies.org/ont00000270,ALREADY_REACHABLE,School,Educational Facility
+https://www.commoncoreontologies.org/ont00001362,https://www.commoncoreontologies.org/ont00001283,ALREADY_REACHABLE,Gas Processing Facility,Refinery
+https://www.commoncoreontologies.org/ont00001362,https://www.commoncoreontologies.org/ont00000782,ALREADY_REACHABLE,Gas Processing Facility,Factory
+https://www.commoncoreontologies.org/ont00001380,https://www.commoncoreontologies.org/ont00000339,ALREADY_REACHABLE,Farm,Agricultural Facility
+https://www.commoncoreontologies.org/ont00001383,https://www.commoncoreontologies.org/ont00000479,ALREADY_REACHABLE,Fire Station,Public Safety Facility

@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "source_file": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\src\\module.ttl",
+  "train_file": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\src\\train.ttl",
+  "validation_file": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\src\\valid.ttl",
+  "source_triples": 563,
+  "training_triples": 545,
+  "validation_triples": 114,
+  "source_named_subclass_axioms": 91,
+  "training_named_subclass_axioms": 73,
+  "validation_named_subclass_axioms": 18,
+  "target_validation_axioms": 18,
+  "target_validation_fraction": 0.2,
+  "achieved_validation_fraction": 0.1978021978021978,
+  "original_declaration_count": 96,
+  "training_declarations_preserved": true,
+  "validation_declarations_preserved": true,
+  "source_subclass_endpoints": 92,
+  "all_source_subclass_endpoints_in_training": true,
+  "local_direct_or_transitive_leaks": 0,
+  "distinct_source_superclasses": 28,
+  "distinct_validation_superclasses": 6,
+  "validation_superclass_distribution": {
+    "https://www.commoncoreontologies.org/ont00000192": 12,
+    "https://www.commoncoreontologies.org/ont00000226": 2,
+    "https://www.commoncoreontologies.org/ont00000410": 1,
+    "https://www.commoncoreontologies.org/ont00000782": 1,
+    "https://www.commoncoreontologies.org/ont00001052": 1,
+    "https://www.commoncoreontologies.org/ont00001076": 1
+  },
+  "seed": 42,
+  "restarts": 250,
+  "limitations": [
+    "Local graph reachability is not a complete OWL entailment check.",
+    "Imports and complex axioms are not proven leak-free.",
+    "Validation contains declarations and withheld named subclass axioms.",
+    "Other source logical axioms remain in training only.",
+    "Parent balancing is constrained by endpoint coverage."
+  ]
+}

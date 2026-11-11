@@ -1,0 +1,1123 @@
+Project 5 pipeline started 2026-11-09T23:48:44.829454+00:00
+
+============================================================================
+[2026-11-09T23:48:44.833347+00:00] STEP 1: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe -u C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\scripts\extract_definitions.py
+=================================================================
+PROJECT 5 - STEP 1: EXTRACT ONTOLOGY DEFINITIONS
+=================================================================
+Project root : C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5
+Source dir   : C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\src
+Data dir     : C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\data
+Input file   : C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\src\module.ttl
+Output file  : C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\data\definitions.csv
+
+Loading ontology: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\src\module.ttl
+RDF triples loaded: 563
+Executing SPARQL query...
+C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\scripts\extract_definitions.py:114: Pandas4Warning: The inplace keyword in DataFrame.drop_duplicates is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.drop_duplicates(inplace=True)
+C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\scripts\extract_definitions.py:117: Pandas4Warning: The inplace keyword in DataFrame.sort_values is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.sort_values(
+C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\scripts\extract_definitions.py:123: Pandas4Warning: The inplace keyword in DataFrame.reset_index is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  df.reset_index(drop=True, inplace=True)
+
+Definition records extracted: 91
+
+CSV successfully generated.
+Saved to: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\data\definitions.csv
+
+First five extracted records:
+                                             iri                           label                                                                                                                                                                                                                            definition
+https://www.commoncoreontologies.org/ont00000339           Agricultural Facility A Facility that is designed as a building or campus for agricultural processes with the aim of cultivating animals, plants, or fungi for food, fiber, biofuel, medicinal plants, or other products to sustain and enhance human life.
+https://www.commoncoreontologies.org/ont00001311 Aircraft Manufacturing Facility                                                                                                                                                                                   A Factory that is designed to manufacture Aircraft.
+https://www.commoncoreontologies.org/ont00001078                         Airport                                                                                                                                            A Transportation Facility that is designed for launching, receiving, and housing Aircraft.
+https://www.commoncoreontologies.org/ont00000220                Ammunition Depot                                                                                                                                                                  A Storage Facility that is designed to store Portions of Ammunition.
+https://www.commoncoreontologies.org/ont00000336              Apartment Building                                                                                                                       A Residential Facility that is designed to contain multiple permanent residences comprised of a suite of rooms.
+
+=================================================================
+STEP 1 STATUS: PASS
+=================================================================
+
+============================================================================
+[2026-11-09T23:48:46.504030+00:00] STEP 2: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe -u C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\scripts\preprocess_definitions_llm.py
+=================================================================
+PROJECT 5 - STEP 2: LLM DEFINITION ENRICHMENT
+=================================================================
+Source records: 91
+Records selected: 91
+Model: grok-4.7
+Minimum interval between API requests: 10s
+Output: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\data\definitions_enriched.csv
+
+[1/91] CACHED
+[2/91] CACHED
+[3/91] CACHED
+[4/91] CACHED
+[5/91] CACHED
+[6/91] CACHED
+[7/91] CACHED
+[8/91] CACHED
+[9/91] CACHED
+[10/91] CACHED
+[11/91] CACHED
+[12/91] CACHED
+[13/91] CACHED
+[14/91] CACHED
+[15/91] CACHED
+[16/91] CACHED
+[17/91] CACHED
+[18/91] CACHED
+[19/91] CACHED
+[20/91] CACHED
+[21/91] CACHED
+[22/91] CACHED
+[23/91] CACHED
+[24/91] CACHED
+[25/91] CACHED
+[26/91] CACHED
+[27/91] CACHED
+[28/91] CACHED
+[29/91] CACHED
+[30/91] CACHED
+[31/91] CACHED
+[32/91] CACHED
+[33/91] CACHED
+[34/91] CACHED
+[35/91] CACHED
+[36/91] CACHED
+[37/91] CACHED
+[38/91] CACHED
+[39/91] CACHED
+[40/91] CACHED
+[41/91] CACHED
+[42/91] CACHED
+[43/91] CACHED
+[44/91] CACHED
+[45/91] CACHED
+[46/91] CACHED
+[47/91] CACHED
+[48/91] CACHED
+[49/91] CACHED
+[50/91] CACHED
+[51/91] CACHED
+[52/91] CACHED
+[53/91] CACHED
+[54/91] CACHED
+[55/91] CACHED
+[56/91] CACHED
+[57/91] CACHED
+[58/91] CACHED
+[59/91] CACHED
+[60/91] CACHED
+[61/91] CACHED
+[62/91] CACHED
+[63/91] CACHED
+[64/91] CACHED
+[65/91] CACHED
+[66/91] CACHED
+[67/91] CACHED
+[68/91] CACHED
+[69/91] CACHED
+[70/91] CACHED
+[71/91] CACHED
+[72/91] CACHED
+[73/91] CACHED
+[74/91] CACHED
+[75/91] CACHED
+[76/91] CACHED
+[77/91] CACHED
+[78/91] CACHED
+[79/91] CACHED
+[80/91] CACHED
+[81/91] CACHED
+[82/91] CACHED
+[83/91] CACHED
+[84/91] CACHED
+[85/91] CACHED
+[86/91] CACHED
+[87/91] CACHED
+[88/91] CACHED
+[89/91] CACHED
+[90/91] CACHED
+[91/91] CACHED
+
+Saved records: 91
+Output: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\data\definitions_enriched.csv
+STEP 2 STATUS: PASS
+
+============================================================================
+[2026-11-09T23:48:46.891942+00:00] STEP 3: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe -u C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\scripts\generate_candidates_llm.py --all
+Original candidate axioms: 0
+Eligible classes: 91
+Classes to process: 91
+xAI minimum request interval: 10s; retry attempts: 6
+[1/91] Church
+  xAI pacing: waiting 10.0s before request
+[2/91] Grocery Store
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[3/91] Hostel
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[4/91] Petroleum Depot
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[5/91] Religious Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[6/91] Healthcare Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[7/91] Open Pit Mine
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[8/91] Seat of National Government
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[9/91] Underwater Mine
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 1/5 after 16.1s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+[10/91] Rail Facility
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 1/5 after 15.0s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[11/91] Base of Operations
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 1/5 after 15.3s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 2/5 after 31.1s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 3/5 after 60.8s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+[12/91] Hotel
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[13/91] Heliport
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 1/5 after 16.3s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 2/5 after 31.3s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[14/91] Ammunition Depot
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[15/91] Transportation Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[16/91] Pumping Station
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[17/91] Petroleum Manufacturing Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[18/91] Chemical Manufacturing Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[19/91] Shop
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[20/91] Educational Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[21/91] Underground Mine
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[22/91] Thermal Power Plant
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 1/5 after 16.3s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[23/91] House
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[24/91] Training Camp
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[25/91] Apartment Building
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[26/91] Agricultural Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[27/91] Police Station
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 1/5 after 15.3s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 2/5 after 30.2s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[28/91] Warehouse
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 1/5 after 15.7s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 2/5 after 31.5s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 3/5 after 60.2s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+[29/91] Weapon Manufacturing Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[30/91] Residential Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[31/91] Nuclear Power Plant
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[32/91] Motor Vehicle Manufacturing Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[33/91] Missile Launch Site
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[34/91] Office Building
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[35/91] Public Safety Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[36/91] Military Base
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[37/91] Mosque
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[38/91] Communications Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[39/91] Seat of Local Government
+  xAI pacing: waiting 10.0s before request
+  xAI HTTP 429; retry 1/5 after 15.0s; response: {"code":"resource-exhausted","error":"The model is currently at capacity due to high demand. Please try again in a few minutes, or use a higher service tier for priority processing: https://docs.x.ai/developers/advanced-api-usage/priority-processing"
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[40/91] Motel
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[41/91] Mine
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[42/91] Entertainment Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[43/91] Mailing Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[44/91] Radio Relay Station
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[45/91] Combat Outpost
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[46/91] Distribution Port
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[47/91] Product Transport Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[48/91] Medical Depot
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[49/91] Power Transmission Line
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[50/91] Water Tower
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[51/91] Command Post Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[52/91] Fossil Fuel Power Plant
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[53/91] Forward Operations Base
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[54/91] Synagogue
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[55/91] Pier
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[56/91] Chemical Depot
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[57/91] Factory
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[58/91] Stage
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[59/91] Water Treatment Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[60/91] Hydroelectric Power Plant
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[61/91] Pipeline
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[62/91] Storage Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[63/91] Wind Farm
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[64/91] Decontamination Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[65/91] Post Office
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[66/91] Government Building
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[67/91] Reservoir
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[68/91] Military Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[69/91] Electric Power Station
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[70/91] Airport
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[71/91] Petrochemical Refinery
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[72/91] Fort
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[73/91] Hospital
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[74/91] Commercial Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[75/91] Landfill
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[76/91] Terrorist Training Camp
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[77/91] Nuclear Storage Depot
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[78/91] Port
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[79/91] Refinery
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[80/91] Maintenance Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[81/91] Financial Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[82/91] Military Headquarters Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[83/91] Sewage Treatment Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[84/91] Aircraft Manufacturing Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[85/91] Waste Management Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[86/91] Biological Depot
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[87/91] School
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[88/91] Gas Processing Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[89/91] Washing Facility
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[90/91] Farm
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+[91/91] Fire Station
+  xAI pacing: waiting 10.0s before request
+  xAI pacing: waiting 10.0s before request
+
+=================================================================
+EXPANDED CANDIDATE GENERATION RESULTS
+=================================================================
+Original axioms preserved: 0
+New provisional axioms: 2
+Total candidate axioms: 2
+Already present/reachable: 73
+Cycle proposals rejected: 0
+Options not selected by LLM: 3201
+Ontology output: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\generated\candidate_el.ttl
+Audit output: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\generated\candidate_expansion_audit.csv
+Preservation check: PASS
+STEP 3 STATUS: PASS
+
+============================================================================
+[2026-11-10T01:00:28.069367+00:00] STEP 4: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe -u C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\scripts\split_train_valid.py
+===================================================================
+STEP 4: REPRODUCIBLE HIERARCHY-AWARE TRAIN/VALID SPLIT
+===================================================================
+Original named subclass pairs: 91
+Training named subclass pairs: 73
+Validation named subclass pairs: 18
+Validation fraction: 19.8%
+Target fraction: 20.0%
+Declarations preserved in both outputs: 96
+Source endpoints represented in training: 92
+Distinct validation superclasses: 6
+Local subclass reachability leakage: 0
+Train file: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\src\train.ttl
+Validation file: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\src\valid.ttl
+Summary: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\reports\split_summary.json
+STEP 4 STATUS: PASS
+
+============================================================================
+[2026-11-10T01:00:31.844418+00:00] STEP 5: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe -u C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\scripts\train_mowl.py
+========================================================================
+STEP 5: IMPORTED EL + PRETRAINED TEXT + MASKED SUPERCLASS PROTOTYPES
+========================================================================
+Source/train/outer validation: 91 73 18
+Candidate axioms (unchanged): 2
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.jpype.JPypeContext in an unnamed module (file:/C:/Users/calle/Documents/School%20Work/UB%20Ontology%20Program/Repos/Ontology-Tradecraft/.venv-mowl/Lib/site-packages/org.jpype.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.cache.UnsafeAccess (file:/C:/Users/calle/Documents/School%20Work/UB%20Ontology%20Program/Repos/Ontology-Tradecraft/.venv-mowl/Lib/site-packages/mowl/lib/caffeine-2.8.6.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.cache.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+IMPORT CACHE: using local snapshot C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\reports\mowl_import_cache\imported_axioms.owl
+LOCAL ROOT: train.ttl; removed 2 imports directives
+Imported ontology classes with annotation text: 868
+Pretrained semantic texts: 868/870
+SentenceTransformer model: sentence-transformers/all-MiniLM-L6-v2
+
+Loading weights:   0%|          | 0/103 [00:00<?, ?it/s]
+Loading weights: 100%|##########| 103/103 [00:00<00:00, 4576.80it/s]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+WARNING:huggingface_hub.utils._http:Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Batches:   0%|          | 0/28 [00:00<?, ?it/s]
+Batches:   4%|3         | 1/28 [00:01<00:35,  1.33s/it]
+Batches:   7%|7         | 2/28 [00:02<00:26,  1.01s/it]
+Batches:  11%|#         | 3/28 [00:02<00:20,  1.23it/s]
+Batches:  14%|#4        | 4/28 [00:03<00:16,  1.45it/s]
+Batches:  18%|#7        | 5/28 [00:03<00:14,  1.60it/s]
+Batches:  21%|##1       | 6/28 [00:04<00:12,  1.80it/s]
+Batches:  25%|##5       | 7/28 [00:04<00:11,  1.91it/s]
+Batches:  29%|##8       | 8/28 [00:04<00:09,  2.05it/s]
+Batches:  32%|###2      | 9/28 [00:05<00:08,  2.17it/s]
+Batches:  36%|###5      | 10/28 [00:05<00:07,  2.33it/s]
+Batches:  39%|###9      | 11/28 [00:06<00:06,  2.43it/s]
+Batches:  43%|####2     | 12/28 [00:06<00:06,  2.64it/s]
+Batches:  46%|####6     | 13/28 [00:06<00:05,  2.64it/s]
+Batches:  50%|#####     | 14/28 [00:07<00:05,  2.61it/s]
+Batches:  54%|#####3    | 15/28 [00:07<00:04,  2.64it/s]
+Batches:  57%|#####7    | 16/28 [00:07<00:04,  2.79it/s]
+Batches:  61%|######    | 17/28 [00:08<00:03,  2.99it/s]
+Batches:  64%|######4   | 18/28 [00:08<00:03,  3.15it/s]
+Batches:  68%|######7   | 19/28 [00:08<00:02,  3.45it/s]
+Batches:  71%|#######1  | 20/28 [00:08<00:02,  3.72it/s]
+Batches:  75%|#######5  | 21/28 [00:09<00:01,  3.89it/s]
+Batches:  79%|#######8  | 22/28 [00:09<00:01,  3.92it/s]
+Batches:  82%|########2 | 23/28 [00:09<00:01,  4.11it/s]
+Batches:  86%|########5 | 24/28 [00:09<00:00,  4.31it/s]
+Batches:  89%|########9 | 25/28 [00:09<00:00,  4.58it/s]
+Batches:  93%|#########2| 26/28 [00:10<00:00,  5.01it/s]
+Batches:  96%|#########6| 27/28 [00:10<00:00,  5.43it/s]
+Batches: 100%|##########| 28/28 [00:10<00:00,  2.72it/s]
+Indexed classes: 870 pretrained embedding dimension: 384
+Inner development split: 61 / 12
+LOCAL ROOT: mowl_inner_fold_1_training.ttl; removed 2 imports directives
+inner_fold_1: native ELEmbeddings 300 epochs; import closure=7
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 819
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 819
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  3%|3         | 10/300 [00:00<00:03, 92.80it/s]
+  7%|7         | 21/300 [00:00<00:02, 102.30it/s]
+ 11%|#1        | 33/300 [00:00<00:02, 108.21it/s]
+ 15%|#4        | 44/300 [00:00<00:02, 108.38it/s]
+ 19%|#8        | 56/300 [00:00<00:02, 109.58it/s]
+ 23%|##2       | 68/300 [00:00<00:02, 109.91it/s]
+ 26%|##6       | 79/300 [00:00<00:02, 109.68it/s]
+ 30%|###       | 91/300 [00:00<00:01, 111.23it/s]
+ 34%|###4      | 103/300 [00:00<00:01, 110.87it/s]
+ 38%|###8      | 115/300 [00:01<00:01, 112.07it/s]
+ 42%|####2     | 127/300 [00:01<00:01, 113.20it/s]
+ 46%|####6     | 139/300 [00:01<00:01, 113.69it/s]
+ 50%|#####     | 151/300 [00:01<00:01, 113.81it/s]
+ 54%|#####4    | 163/300 [00:01<00:01, 112.48it/s]
+ 58%|#####8    | 175/300 [00:01<00:01, 113.33it/s]
+ 62%|######2   | 187/300 [00:01<00:00, 113.40it/s]
+ 66%|######6   | 199/300 [00:01<00:00, 112.11it/s]
+ 70%|#######   | 211/300 [00:01<00:00, 112.83it/s]
+ 74%|#######4  | 223/300 [00:02<00:00, 111.93it/s]
+ 78%|#######8  | 235/300 [00:02<00:00, 112.03it/s]
+ 82%|########2 | 247/300 [00:02<00:00, 112.53it/s]
+ 86%|########6 | 259/300 [00:02<00:00, 112.86it/s]
+ 90%|######### | 271/300 [00:02<00:00, 110.95it/s]
+ 94%|#########4| 283/300 [00:02<00:00, 110.84it/s]
+ 98%|#########8| 295/300 [00:02<00:00, 111.08it/s]Epoch 300: Train loss: 0.786092221736908
+
+100%|##########| 300/300 [00:02<00:00, 111.29it/s]
+LOCAL ROOT: mowl_inner_fold_2_training.ttl; removed 2 imports directives
+inner_fold_2: native ELEmbeddings 300 epochs; import closure=7
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 820
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 820
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  4%|3         | 11/300 [00:00<00:02, 106.59it/s]
+  7%|7         | 22/300 [00:00<00:02, 107.26it/s]
+ 11%|#1        | 33/300 [00:00<00:02, 108.38it/s]
+ 15%|#5        | 45/300 [00:00<00:02, 110.21it/s]
+ 19%|#9        | 57/300 [00:00<00:02, 103.85it/s]
+ 23%|##2       | 68/300 [00:00<00:02, 102.69it/s]
+ 26%|##6       | 79/300 [00:00<00:02, 100.18it/s]
+ 30%|###       | 90/300 [00:00<00:02, 96.93it/s] 
+ 34%|###3      | 101/300 [00:00<00:01, 100.29it/s]
+ 38%|###7      | 113/300 [00:01<00:01, 103.99it/s]
+ 42%|####1     | 125/300 [00:01<00:01, 106.16it/s]
+ 46%|####5     | 137/300 [00:01<00:01, 107.19it/s]
+ 50%|####9     | 149/300 [00:01<00:01, 108.47it/s]
+ 54%|#####3    | 161/300 [00:01<00:01, 110.16it/s]
+ 58%|#####7    | 173/300 [00:01<00:01, 110.57it/s]
+ 62%|######1   | 185/300 [00:01<00:01, 111.82it/s]
+ 66%|######5   | 197/300 [00:01<00:00, 111.33it/s]
+ 70%|######9   | 209/300 [00:01<00:00, 111.63it/s]
+ 74%|#######3  | 221/300 [00:02<00:00, 112.08it/s]
+ 78%|#######7  | 233/300 [00:02<00:00, 111.55it/s]
+ 82%|########1 | 245/300 [00:02<00:00, 111.55it/s]
+ 86%|########5 | 257/300 [00:02<00:00, 110.90it/s]
+ 90%|########9 | 269/300 [00:02<00:00, 112.00it/s]
+ 94%|#########3| 281/300 [00:02<00:00, 112.39it/s]
+ 98%|#########7| 293/300 [00:02<00:00, 113.10it/s]Epoch 300: Train loss: 0.7892943620681763
+
+100%|##########| 300/300 [00:02<00:00, 108.70it/s]
+LOCAL ROOT: mowl_inner_fold_3_training.ttl; removed 2 imports directives
+inner_fold_3: native ELEmbeddings 300 epochs; import closure=7
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 826
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 826
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  4%|3         | 11/300 [00:00<00:02, 104.14it/s]
+  7%|7         | 22/300 [00:00<00:02, 106.59it/s]
+ 11%|#1        | 34/300 [00:00<00:02, 108.74it/s]
+ 15%|#5        | 46/300 [00:00<00:02, 109.99it/s]
+ 19%|#9        | 57/300 [00:00<00:02, 109.03it/s]
+ 23%|##2       | 68/300 [00:00<00:02, 105.96it/s]
+ 26%|##6       | 79/300 [00:00<00:02, 102.69it/s]
+ 30%|###       | 90/300 [00:00<00:02, 104.67it/s]
+ 34%|###4      | 102/300 [00:00<00:01, 106.42it/s]
+ 38%|###7      | 113/300 [00:01<00:01, 107.30it/s]
+ 41%|####1     | 124/300 [00:01<00:01, 107.03it/s]
+ 45%|####5     | 135/300 [00:01<00:01, 84.76it/s] 
+ 48%|####8     | 145/300 [00:01<00:01, 83.94it/s]
+ 52%|#####1    | 155/300 [00:01<00:01, 86.97it/s]
+ 55%|#####5    | 166/300 [00:01<00:01, 91.82it/s]
+ 59%|#####8    | 176/300 [00:01<00:01, 93.76it/s]
+ 62%|######2   | 187/300 [00:01<00:01, 96.50it/s]
+ 66%|######6   | 198/300 [00:01<00:01, 99.58it/s]
+ 70%|######9   | 209/300 [00:02<00:00, 100.31it/s]
+ 73%|#######3  | 220/300 [00:02<00:00, 100.59it/s]
+ 77%|#######7  | 231/300 [00:02<00:00, 101.33it/s]
+ 81%|########1 | 243/300 [00:02<00:00, 104.99it/s]
+ 85%|########4 | 254/300 [00:02<00:00, 105.97it/s]
+ 89%|########8 | 266/300 [00:02<00:00, 107.30it/s]
+ 92%|#########2| 277/300 [00:02<00:00, 107.00it/s]
+ 96%|#########6| 288/300 [00:02<00:00, 105.18it/s]
+100%|#########9| 299/300 [00:03<00:00, 72.35it/s] Epoch 300: Train loss: 0.8007426857948303
+
+100%|##########| 300/300 [00:03<00:00, 96.10it/s]
+LOCAL ROOT: mowl_internal_dev_training.ttl; removed 2 imports directives
+inner_evaluation: native ELEmbeddings 300 epochs; import closure=7
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 842
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 842
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  4%|3         | 11/300 [00:00<00:02, 107.12it/s]
+  8%|7         | 23/300 [00:00<00:02, 110.94it/s]
+ 12%|#1        | 35/300 [00:00<00:02, 109.84it/s]
+ 16%|#5        | 47/300 [00:00<00:02, 110.10it/s]
+ 20%|#9        | 59/300 [00:00<00:02, 108.99it/s]
+ 24%|##3       | 71/300 [00:00<00:02, 109.87it/s]
+ 28%|##7       | 83/300 [00:00<00:01, 110.94it/s]
+ 32%|###1      | 95/300 [00:00<00:01, 110.35it/s]
+ 36%|###5      | 107/300 [00:00<00:01, 110.10it/s]
+ 40%|###9      | 119/300 [00:01<00:01, 109.96it/s]
+ 43%|####3     | 130/300 [00:01<00:01, 109.33it/s]
+ 47%|####7     | 142/300 [00:01<00:01, 110.34it/s]
+ 51%|#####1    | 154/300 [00:01<00:01, 111.68it/s]
+ 55%|#####5    | 166/300 [00:01<00:01, 110.61it/s]
+ 59%|#####9    | 178/300 [00:01<00:01, 110.91it/s]
+ 63%|######3   | 190/300 [00:01<00:00, 112.05it/s]
+ 67%|######7   | 202/300 [00:01<00:00, 112.57it/s]
+ 71%|#######1  | 214/300 [00:01<00:00, 111.96it/s]
+ 75%|#######5  | 226/300 [00:02<00:00, 110.69it/s]
+ 79%|#######9  | 238/300 [00:02<00:00, 111.08it/s]
+ 83%|########3 | 250/300 [00:02<00:00, 111.42it/s]
+ 87%|########7 | 262/300 [00:02<00:00, 111.77it/s]
+ 91%|#########1| 274/300 [00:02<00:00, 111.10it/s]
+ 95%|#########5| 286/300 [00:02<00:00, 110.41it/s]
+ 99%|#########9| 298/300 [00:02<00:00, 110.13it/s]Epoch 300: Train loss: 0.7594460248947144
+
+100%|##########| 300/300 [00:02<00:00, 110.65it/s]
+Inner tuning 1/8: mean=0.846328; control=0.205313
+Inner tuning 2/8: mean=0.921244; control=0.205096
+Inner tuning 3/8: mean=0.872523; control=0.209543
+Inner tuning 4/8: mean=0.844677; control=0.205254
+Inner tuning 5/8: mean=0.919349; control=0.206879
+Inner tuning 6/8: mean=0.912045; control=0.203855
+Inner tuning 7/8: mean=0.925887; control=0.208589
+Inner tuning 8/8: mean=0.909772; control=0.203610
+Selected inner-development configuration: {'adapter_lr': 0.001, 'native_weight': 0.0, 'hard_alpha': 2.0, 'prototype_mix': 0.25, 'preservation': 0.12}
+LOCAL ROOT: mowl_final_fold_1_training.ttl; removed 2 imports directives
+final_fold_1: native ELEmbeddings 300 epochs; import closure=7
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 830
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 830
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  3%|3         | 10/300 [00:00<00:02, 97.27it/s]
+  7%|7         | 22/300 [00:00<00:02, 105.85it/s]
+ 11%|#1        | 33/300 [00:00<00:02, 107.42it/s]
+ 15%|#5        | 45/300 [00:00<00:02, 108.54it/s]
+ 19%|#9        | 57/300 [00:00<00:02, 109.47it/s]
+ 23%|##3       | 69/300 [00:00<00:02, 111.23it/s]
+ 27%|##7       | 81/300 [00:00<00:01, 110.69it/s]
+ 31%|###1      | 93/300 [00:00<00:01, 110.23it/s]
+ 35%|###5      | 105/300 [00:00<00:01, 110.16it/s]
+ 39%|###9      | 117/300 [00:01<00:01, 110.91it/s]
+ 43%|####3     | 129/300 [00:01<00:01, 111.83it/s]
+ 47%|####6     | 141/300 [00:01<00:01, 111.67it/s]
+ 51%|#####1    | 153/300 [00:01<00:01, 111.84it/s]
+ 55%|#####5    | 165/300 [00:01<00:01, 111.75it/s]
+ 59%|#####8    | 177/300 [00:01<00:01, 111.39it/s]
+ 63%|######3   | 189/300 [00:01<00:01, 110.97it/s]
+ 67%|######7   | 201/300 [00:01<00:00, 110.10it/s]
+ 71%|#######1  | 213/300 [00:01<00:00, 110.94it/s]
+ 75%|#######5  | 225/300 [00:02<00:00, 111.29it/s]
+ 79%|#######9  | 237/300 [00:02<00:00, 112.01it/s]
+ 83%|########2 | 249/300 [00:02<00:00, 111.25it/s]
+ 87%|########7 | 261/300 [00:02<00:00, 111.11it/s]
+ 91%|#########1| 273/300 [00:02<00:00, 111.32it/s]
+ 95%|#########5| 285/300 [00:02<00:00, 111.31it/s]
+ 99%|#########9| 297/300 [00:02<00:00, 112.01it/s]Epoch 300: Train loss: 0.7822603583335876
+
+100%|##########| 300/300 [00:02<00:00, 110.70it/s]
+LOCAL ROOT: mowl_final_fold_2_training.ttl; removed 2 imports directives
+final_fold_2: native ELEmbeddings 300 epochs; import closure=7
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 829
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 829
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  4%|3         | 11/300 [00:00<00:02, 102.25it/s]
+  7%|7         | 22/300 [00:00<00:02, 105.85it/s]
+ 11%|#1        | 34/300 [00:00<00:02, 108.74it/s]
+ 15%|#5        | 46/300 [00:00<00:02, 109.87it/s]
+ 19%|#9        | 58/300 [00:00<00:02, 110.02it/s]
+ 23%|##3       | 70/300 [00:00<00:02, 109.87it/s]
+ 27%|##7       | 82/300 [00:00<00:01, 109.69it/s]
+ 31%|###1      | 93/300 [00:00<00:01, 109.27it/s]
+ 35%|###5      | 105/300 [00:00<00:01, 110.01it/s]
+ 39%|###9      | 117/300 [00:01<00:01, 111.12it/s]
+ 43%|####3     | 129/300 [00:01<00:01, 110.64it/s]
+ 47%|####6     | 141/300 [00:01<00:01, 110.07it/s]
+ 51%|#####1    | 153/300 [00:01<00:01, 111.24it/s]
+ 55%|#####5    | 165/300 [00:01<00:01, 112.27it/s]
+ 59%|#####8    | 177/300 [00:01<00:01, 111.19it/s]
+ 63%|######3   | 189/300 [00:01<00:00, 112.45it/s]
+ 67%|######7   | 201/300 [00:01<00:00, 110.74it/s]
+ 71%|#######1  | 213/300 [00:01<00:00, 111.71it/s]
+ 75%|#######5  | 225/300 [00:02<00:00, 112.61it/s]
+ 79%|#######9  | 237/300 [00:02<00:00, 112.92it/s]
+ 83%|########2 | 249/300 [00:02<00:00, 112.46it/s]
+ 87%|########7 | 261/300 [00:02<00:00, 112.34it/s]
+ 91%|#########1| 273/300 [00:02<00:00, 112.75it/s]
+ 95%|#########5| 285/300 [00:02<00:00, 112.52it/s]
+ 99%|#########9| 297/300 [00:02<00:00, 111.01it/s]Epoch 300: Train loss: 0.7735764384269714
+
+100%|##########| 300/300 [00:02<00:00, 110.93it/s]
+LOCAL ROOT: mowl_final_fold_3_training.ttl; removed 2 imports directives
+final_fold_3: native ELEmbeddings 300 epochs; import closure=7
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 829
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 829
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+
+  0%|          | 0/300 [00:00<?, ?it/s]
+  4%|3         | 11/300 [00:00<00:02, 105.14it/s]
+  7%|7         | 22/300 [00:00<00:02, 107.00it/s]
+ 11%|#1        | 34/300 [00:00<00:02, 108.96it/s]
+ 15%|#5        | 45/300 [00:00<00:02, 108.02it/s]
+ 19%|#9        | 57/300 [00:00<00:02, 109.68it/s]
+ 23%|##3       | 69/300 [00:00<00:02, 111.04it/s]
+ 27%|##7       | 81/300 [00:00<00:01, 110.55it/s]
+ 31%|###1      | 93/300 [00:00<00:01, 109.41it/s]
+ 35%|###5      | 105/300 [00:00<00:01, 110.60it/s]
+ 39%|###9      | 117/300 [00:01<00:01, 111.72it/s]
+ 43%|####3     | 129/300 [00:01<00:01, 111.33it/s]
+ 47%|####6     | 141/300 [00:01<00:01, 110.84it/s]
+ 51%|#####1    | 153/300 [00:01<00:01, 110.80it/s]
+ 55%|#####5    | 165/300 [00:01<00:01, 111.59it/s]
+ 59%|#####8    | 177/300 [00:01<00:01, 112.19it/s]
+ 63%|######3   | 189/300 [00:01<00:00, 111.67it/s]
+ 67%|######7   | 201/300 [00:01<00:00, 112.25it/s]
+ 71%|#######1  | 213/300 [00:01<00:00, 110.96it/s]
+ 75%|#######5  | 225/300 [00:02<00:00, 111.14it/s]
+ 79%|#######9  | 237/300 [00:02<00:00, 111.93it/s]
+ 83%|########2 | 249/300 [00:02<00:00, 110.88it/s]
+ 87%|########7 | 261/300 [00:02<00:00, 110.90it/s]
+ 91%|#########1| 273/300 [00:02<00:00, 110.60it/s]
+ 95%|#########5| 285/300 [00:02<00:00, 110.57it/s]
+ 99%|#########9| 297/300 [00:02<00:00, 110.54it/s]Epoch 300: Train loss: 0.7640241980552673
+
+100%|##########| 300/300 [00:02<00:00, 110.73it/s]
+final_outer_evaluation: native ELEmbeddings 1000 epochs; import closure=7
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 854
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 854
+	gci1: 28
+	gci2: 93
+	gci3: 153
+	gci0_bot: 0
+	gci1_bot: 39
+	gci3_bot: 0
+	class_assertion: 83
+
+
+  0%|          | 0/1000 [00:00<?, ?it/s]
+  1%|          | 8/1000 [00:00<00:12, 79.96it/s]
+  2%|2         | 20/1000 [00:00<00:09, 100.41it/s]
+  3%|3         | 32/1000 [00:00<00:09, 106.51it/s]
+  4%|4         | 43/1000 [00:00<00:08, 106.82it/s]
+  6%|5         | 55/1000 [00:00<00:08, 108.19it/s]
+  7%|6         | 66/1000 [00:00<00:08, 108.24it/s]
+  8%|7         | 77/1000 [00:00<00:08, 108.27it/s]
+  9%|8         | 89/1000 [00:00<00:08, 109.19it/s]
+ 10%|#         | 101/1000 [00:00<00:08, 110.45it/s]
+ 11%|#1        | 113/1000 [00:01<00:08, 110.61it/s]
+ 12%|#2        | 125/1000 [00:01<00:07, 109.95it/s]
+ 14%|#3        | 137/1000 [00:01<00:07, 110.45it/s]
+ 15%|#4        | 149/1000 [00:01<00:07, 110.78it/s]
+ 16%|#6        | 161/1000 [00:01<00:07, 111.02it/s]
+ 17%|#7        | 173/1000 [00:01<00:07, 111.46it/s]
+ 18%|#8        | 185/1000 [00:01<00:07, 111.19it/s]
+ 20%|#9        | 197/1000 [00:01<00:07, 111.30it/s]
+ 21%|##        | 209/1000 [00:01<00:07, 111.23it/s]
+ 22%|##2       | 221/1000 [00:02<00:06, 111.54it/s]
+ 23%|##3       | 233/1000 [00:02<00:06, 111.54it/s]
+ 24%|##4       | 245/1000 [00:02<00:06, 111.09it/s]
+ 26%|##5       | 257/1000 [00:02<00:06, 111.85it/s]
+ 27%|##6       | 269/1000 [00:02<00:06, 111.67it/s]
+ 28%|##8       | 281/1000 [00:02<00:06, 110.49it/s]
+ 29%|##9       | 293/1000 [00:02<00:06, 111.03it/s]
+ 30%|###       | 305/1000 [00:02<00:06, 111.10it/s]
+ 32%|###1      | 317/1000 [00:02<00:06, 110.51it/s]
+ 33%|###2      | 329/1000 [00:02<00:06, 109.69it/s]
+ 34%|###4      | 340/1000 [00:03<00:06, 109.74it/s]
+ 35%|###5      | 352/1000 [00:03<00:05, 111.23it/s]
+ 36%|###6      | 364/1000 [00:03<00:05, 111.14it/s]
+ 38%|###7      | 376/1000 [00:03<00:05, 110.23it/s]
+ 39%|###8      | 388/1000 [00:03<00:05, 109.78it/s]
+ 40%|###9      | 399/1000 [00:03<00:05, 109.34it/s]
+ 41%|####1     | 411/1000 [00:03<00:05, 109.87it/s]
+ 42%|####2     | 422/1000 [00:03<00:05, 109.75it/s]
+ 43%|####3     | 434/1000 [00:03<00:05, 110.14it/s]
+ 45%|####4     | 446/1000 [00:04<00:04, 110.84it/s]
+ 46%|####5     | 458/1000 [00:04<00:04, 110.45it/s]
+ 47%|####6     | 470/1000 [00:04<00:04, 110.08it/s]
+ 48%|####8     | 482/1000 [00:04<00:04, 111.16it/s]
+ 49%|####9     | 494/1000 [00:04<00:04, 110.30it/s]
+ 51%|#####     | 506/1000 [00:04<00:04, 109.26it/s]
+ 52%|#####1    | 518/1000 [00:04<00:04, 109.47it/s]
+ 53%|#####3    | 530/1000 [00:04<00:04, 109.81it/s]
+ 54%|#####4    | 542/1000 [00:04<00:04, 110.04it/s]
+ 55%|#####5    | 554/1000 [00:05<00:04, 109.75it/s]
+ 57%|#####6    | 566/1000 [00:05<00:03, 110.30it/s]
+ 58%|#####7    | 578/1000 [00:05<00:03, 111.55it/s]
+ 59%|#####8    | 590/1000 [00:05<00:03, 112.21it/s]
+ 60%|######    | 602/1000 [00:05<00:03, 112.61it/s]
+ 61%|######1   | 614/1000 [00:05<00:03, 112.06it/s]
+ 63%|######2   | 626/1000 [00:05<00:03, 111.35it/s]
+ 64%|######3   | 638/1000 [00:05<00:03, 112.03it/s]
+ 65%|######5   | 650/1000 [00:05<00:03, 112.52it/s]
+ 66%|######6   | 662/1000 [00:05<00:03, 112.22it/s]
+ 67%|######7   | 674/1000 [00:06<00:02, 110.91it/s]
+ 69%|######8   | 686/1000 [00:06<00:02, 112.01it/s]
+ 70%|######9   | 698/1000 [00:06<00:02, 111.27it/s]
+ 71%|#######1  | 710/1000 [00:06<00:02, 110.70it/s]
+ 72%|#######2  | 722/1000 [00:06<00:02, 110.13it/s]
+ 73%|#######3  | 734/1000 [00:06<00:02, 110.55it/s]
+ 75%|#######4  | 746/1000 [00:06<00:02, 111.49it/s]
+ 76%|#######5  | 758/1000 [00:06<00:02, 110.91it/s]
+ 77%|#######7  | 770/1000 [00:06<00:02, 111.58it/s]
+ 78%|#######8  | 782/1000 [00:07<00:01, 111.49it/s]
+ 79%|#######9  | 794/1000 [00:07<00:01, 111.79it/s]
+ 81%|########  | 806/1000 [00:07<00:01, 110.66it/s]
+ 82%|########1 | 818/1000 [00:07<00:01, 111.53it/s]
+ 83%|########2 | 830/1000 [00:07<00:01, 111.36it/s]
+ 84%|########4 | 842/1000 [00:07<00:01, 111.54it/s]
+ 85%|########5 | 854/1000 [00:07<00:01, 111.52it/s]
+ 87%|########6 | 866/1000 [00:07<00:01, 112.84it/s]
+ 88%|########7 | 878/1000 [00:07<00:01, 112.78it/s]
+ 89%|########9 | 890/1000 [00:08<00:00, 112.36it/s]
+ 90%|######### | 902/1000 [00:08<00:00, 112.69it/s]
+ 91%|#########1| 914/1000 [00:08<00:00, 112.65it/s]
+ 93%|#########2| 926/1000 [00:08<00:00, 112.98it/s]
+ 94%|#########3| 938/1000 [00:08<00:00, 112.87it/s]
+ 95%|#########5| 950/1000 [00:08<00:00, 107.28it/s]
+ 96%|#########6| 961/1000 [00:08<00:00, 104.64it/s]
+ 97%|#########7| 972/1000 [00:08<00:00, 105.97it/s]
+ 98%|#########8| 984/1000 [00:08<00:00, 107.68it/s]
+100%|#########9| 996/1000 [00:09<00:00, 108.58it/s]Epoch 1000: Train loss: 0.18794910609722137
+
+100%|##########| 1000/1000 [00:09<00:00, 110.38it/s]
+========================================================================
+Selected development mean: 0.925887
+Outer validation mean_cos: 0.912295
+Outer control mean: 0.209199
+Validation minus control: 0.703096
+Masked reconstruction pairs: 73
+Chosen tau: 0.6
+Candidate similarities:
+  ont00000041 -> ont00000180 0.957493
+  ont00000332 -> ont00000270 0.941529
+STEP 5 STATUS: PASS
+
+============================================================================
+[2026-11-10T01:04:40.817603+00:00] STEP 6: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe -u C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\scripts\filter_candidates_hybrid.py
+======================================================================
+STEP 6: NUMERIC HYBRID CANDIDATE FILTER
+======================================================================
+Candidates: 2; Step 5 mean_cos: 0.9122951957914565; tau: 0.60
+Score column: cosine_similarity; Grok model: grok-4.7; API key present: True
+Weights: mOWL=0.7, LLM=0.3
+xAI minimum request interval: 10s; retry attempts: 6
+[1/2] Hostel -> Hotel: cos=0.957493067, llm=0.780000, hybrid=0.904245147, decision=ACCEPT_PROVISIONAL
+  xAI pacing: waiting 10.0s before request
+[2/2] Training Camp -> Educational Facility: cos=0.941529036, llm=0.860000, hybrid=0.917070325, decision=ACCEPT_PROVISIONAL
+======================================================================
+Accepted provisional: 2
+Rejected: 0; Deferred: 0
+STEP 6 STATUS: PASS
+Accepted axioms: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\generated\accepted_el.ttl
+
+============================================================================
+[2026-11-10T01:05:23.837126+00:00] STEP 7: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe -u C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\scripts\merge_and_reason.py
+======================================================================
+PROJECT 5 - STEP 7: ROBOT MERGE + ELK REASONING
+======================================================================
+Original triples: 563
+Step 6 accepted subclass axioms: 2
+New asserted subclass triples: 2
+Using verified Step 5 imported-axiom snapshot (offline)
+ROBOT executable: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\tools\robot.jar
+Reasoner: ELK (OWL 2 EL; not a full OWL 2 DL completeness guarantee)
+ROBOT: merge source and accepted axioms
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.base.UnsafeAccess (file:/C:/Users/calle/Documents/School%20Work/UB%20Ontology%20Program/Repos/Ontology-Tradecraft/projects/project-5/tools/robot.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.base.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+ROBOT returned 4 additional serialization triples (declarations / ontology metadata); excluded from the published local ontology.
+  ROBOT serialization extra: (rdflib.term.URIRef('http://purl.org/dc/terms/license'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://www.w3.org/2002/07/owl#AnnotationProperty'))
+  ROBOT serialization extra: (rdflib.term.URIRef('http://www.w3.org/2004/02/skos/core#altLabel'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://www.w3.org/2002/07/owl#AnnotationProperty'))
+  ROBOT serialization extra: (rdflib.term.URIRef('http://www.w3.org/2004/02/skos/core#definition'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://www.w3.org/2002/07/owl#AnnotationProperty'))
+  ROBOT serialization extra: (rdflib.term.URIRef('http://www.w3.org/2004/02/skos/core#example'), rdflib.term.URIRef('http://www.w3.org/1999/02/22-rdf-syntax-ns#type'), rdflib.term.URIRef('http://www.w3.org/2002/07/owl#AnnotationProperty'))
+ROBOT: build offline baseline ELK input
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.base.UnsafeAccess (file:/C:/Users/calle/Documents/School%20Work/UB%20Ontology%20Program/Repos/Ontology-Tradecraft/projects/project-5/tools/robot.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.base.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+ROBOT: build offline augmented ELK input
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.base.UnsafeAccess (file:/C:/Users/calle/Documents/School%20Work/UB%20Ontology%20Program/Repos/Ontology-Tradecraft/projects/project-5/tools/robot.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.base.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+ROBOT: ELK check/classification: original
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.base.UnsafeAccess (file:/C:/Users/calle/Documents/School%20Work/UB%20Ontology%20Program/Repos/Ontology-Tradecraft/projects/project-5/tools/robot.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.base.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+ROBOT: ELK check/classification: augmented
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.base.UnsafeAccess (file:/C:/Users/calle/Documents/School%20Work/UB%20Ontology%20Program/Repos/Ontology-Tradecraft/projects/project-5/tools/robot.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.base.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+======================================================================
+STEP 7 RESULTS
+======================================================================
+ROBOT merged asserted axioms: 2
+Augmented ontology triples: 565
+Baseline ELK coherence/consistency: PASS
+Augmented ELK coherence/consistency: PASS
+ELK reasoned differences (not necessarily novel axioms): 1268
+Augmented ontology: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\src\module_augmented.ttl
+Reasoner report: C:\Users\calle\Documents\School Work\UB Ontology Program\Repos\Ontology-Tradecraft\projects\project-5\reports\augmentation_reasoner_report.json
+STEP 7 STATUS: PASS

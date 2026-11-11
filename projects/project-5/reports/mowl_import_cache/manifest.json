@@ -1,0 +1,11 @@
+{
+  "cache_schema": 1,
+  "snapshot_sha256": "ea3b43903717103d606d41e4dcf9f44e72f20a0a4240ed7691667b9f07fedb65",
+  "direct_import_iris": [
+    "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+    "https://www.commoncoreontologies.org/ArtifactOntology"
+  ],
+  "imported_ontologies": 6,
+  "imported_axioms": 6648,
+  "note": "Derived from the full OWLAPI import closure of src/train.ttl; training root axioms deliberately excluded"
+}

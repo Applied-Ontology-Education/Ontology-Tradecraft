@@ -1,0 +1,242 @@
+{
+  "status": "PASS",
+  "no_outer_validation_training_or_model_selection": true,
+  "full_imports_in_native_training": true,
+  "inner_crossfit": [
+    {
+      "stage": "inner_fold_1",
+      "masked_count": 23,
+      "imports": {
+        "import_closure": 7,
+        "materialized_axioms": 7145,
+        "normalized_counts": {
+          "gci0": 819,
+          "gci1": 28,
+          "gci2": 93,
+          "gci3": 153,
+          "gci0_bot": 0,
+          "gci1_bot": 39,
+          "gci3_bot": 0,
+          "class_assertion": 83,
+          "object_property_assertion": 0
+        },
+        "indexed_class_iris": 870,
+        "import_cache": {
+          "snapshot_path": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_import_cache\\imported_axioms.owl",
+          "imported_axioms": 6649,
+          "direct_import_iris": [
+            "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+            "https://www.commoncoreontologies.org/ArtifactOntology"
+          ],
+          "network_used_for_each_fold": false
+        }
+      },
+      "forbidden_entailed": 0
+    },
+    {
+      "stage": "inner_fold_2",
+      "masked_count": 22,
+      "imports": {
+        "import_closure": 7,
+        "materialized_axioms": 7146,
+        "normalized_counts": {
+          "gci0": 820,
+          "gci1": 28,
+          "gci2": 93,
+          "gci3": 153,
+          "gci0_bot": 0,
+          "gci1_bot": 39,
+          "gci3_bot": 0,
+          "class_assertion": 83,
+          "object_property_assertion": 0
+        },
+        "indexed_class_iris": 870,
+        "import_cache": {
+          "snapshot_path": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_import_cache\\imported_axioms.owl",
+          "imported_axioms": 6649,
+          "direct_import_iris": [
+            "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+            "https://www.commoncoreontologies.org/ArtifactOntology"
+          ],
+          "network_used_for_each_fold": false
+        }
+      },
+      "forbidden_entailed": 0
+    },
+    {
+      "stage": "inner_fold_3",
+      "masked_count": 16,
+      "imports": {
+        "import_closure": 7,
+        "materialized_axioms": 7152,
+        "normalized_counts": {
+          "gci0": 826,
+          "gci1": 28,
+          "gci2": 93,
+          "gci3": 153,
+          "gci0_bot": 0,
+          "gci1_bot": 39,
+          "gci3_bot": 0,
+          "class_assertion": 83,
+          "object_property_assertion": 0
+        },
+        "indexed_class_iris": 870,
+        "import_cache": {
+          "snapshot_path": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_import_cache\\imported_axioms.owl",
+          "imported_axioms": 6649,
+          "direct_import_iris": [
+            "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+            "https://www.commoncoreontologies.org/ArtifactOntology"
+          ],
+          "network_used_for_each_fold": false
+        }
+      },
+      "forbidden_entailed": 0
+    }
+  ],
+  "outer_crossfit": [
+    {
+      "stage": "final_fold_1",
+      "masked_count": 23,
+      "imports": {
+        "import_closure": 7,
+        "materialized_axioms": 7157,
+        "normalized_counts": {
+          "gci0": 830,
+          "gci1": 28,
+          "gci2": 93,
+          "gci3": 153,
+          "gci0_bot": 0,
+          "gci1_bot": 39,
+          "gci3_bot": 0,
+          "class_assertion": 83,
+          "object_property_assertion": 0
+        },
+        "indexed_class_iris": 870,
+        "import_cache": {
+          "snapshot_path": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_import_cache\\imported_axioms.owl",
+          "imported_axioms": 6649,
+          "direct_import_iris": [
+            "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+            "https://www.commoncoreontologies.org/ArtifactOntology"
+          ],
+          "network_used_for_each_fold": false
+        }
+      },
+      "forbidden_entailed": 0
+    },
+    {
+      "stage": "final_fold_2",
+      "masked_count": 25,
+      "imports": {
+        "import_closure": 7,
+        "materialized_axioms": 7155,
+        "normalized_counts": {
+          "gci0": 829,
+          "gci1": 28,
+          "gci2": 93,
+          "gci3": 153,
+          "gci0_bot": 0,
+          "gci1_bot": 39,
+          "gci3_bot": 0,
+          "class_assertion": 83,
+          "object_property_assertion": 0
+        },
+        "indexed_class_iris": 870,
+        "import_cache": {
+          "snapshot_path": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_import_cache\\imported_axioms.owl",
+          "imported_axioms": 6649,
+          "direct_import_iris": [
+            "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+            "https://www.commoncoreontologies.org/ArtifactOntology"
+          ],
+          "network_used_for_each_fold": false
+        }
+      },
+      "forbidden_entailed": 0
+    },
+    {
+      "stage": "final_fold_3",
+      "masked_count": 25,
+      "imports": {
+        "import_closure": 7,
+        "materialized_axioms": 7155,
+        "normalized_counts": {
+          "gci0": 829,
+          "gci1": 28,
+          "gci2": 93,
+          "gci3": 153,
+          "gci0_bot": 0,
+          "gci1_bot": 39,
+          "gci3_bot": 0,
+          "class_assertion": 83,
+          "object_property_assertion": 0
+        },
+        "indexed_class_iris": 870,
+        "import_cache": {
+          "snapshot_path": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_import_cache\\imported_axioms.owl",
+          "imported_axioms": 6649,
+          "direct_import_iris": [
+            "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+            "https://www.commoncoreontologies.org/ArtifactOntology"
+          ],
+          "network_used_for_each_fold": false
+        }
+      },
+      "forbidden_entailed": 0
+    }
+  ],
+  "inner_native_ontology": {
+    "import_closure": 7,
+    "materialized_axioms": 7168,
+    "normalized_counts": {
+      "gci0": 842,
+      "gci1": 28,
+      "gci2": 93,
+      "gci3": 153,
+      "gci0_bot": 0,
+      "gci1_bot": 39,
+      "gci3_bot": 0,
+      "class_assertion": 83,
+      "object_property_assertion": 0
+    },
+    "indexed_class_iris": 870,
+    "import_cache": {
+      "snapshot_path": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_import_cache\\imported_axioms.owl",
+      "imported_axioms": 6649,
+      "direct_import_iris": [
+        "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+        "https://www.commoncoreontologies.org/ArtifactOntology"
+      ],
+      "network_used_for_each_fold": false
+    }
+  },
+  "final_native_ontology": {
+    "import_closure": 7,
+    "materialized_axioms": 7180,
+    "normalized_counts": {
+      "gci0": 854,
+      "gci1": 28,
+      "gci2": 93,
+      "gci3": 153,
+      "gci0_bot": 0,
+      "gci1_bot": 39,
+      "gci3_bot": 0,
+      "class_assertion": 83,
+      "object_property_assertion": 0
+    },
+    "indexed_class_iris": 870,
+    "import_cache": {
+      "snapshot_path": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\mowl_import_cache\\imported_axioms.owl",
+      "imported_axioms": 6649,
+      "direct_import_iris": [
+        "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+        "https://www.commoncoreontologies.org/ArtifactOntology"
+      ],
+      "network_used_for_each_fold": false
+    }
+  },
+  "final_outer_leaks": 0,
+  "masking": "target edges excluded from native fold graph and superclass support",
+  "definition_warning": "Enriched definitions can mention held-out taxonomy implicitly."
+}

@@ -1,0 +1,23 @@
+{
+  "stage": 6,
+  "status": "PASS",
+  "candidate_axioms": 2,
+  "source_named_subclass_axioms": 91,
+  "accepted_provisional_axioms": 2,
+  "rejected_axioms": 0,
+  "deferred_axioms": 0,
+  "llm_supported": 2,
+  "llm_unsupported": 0,
+  "llm_uncertain": 0,
+  "llm_errors": 0,
+  "mean_cos": 0.9122951957914565,
+  "chosen_tau": 0.6,
+  "mowl_weight": 0.7,
+  "llm_weight": 0.3,
+  "mowl_input_column": "cosine_similarity",
+  "cosine_normalization": "max(0, raw cosine); raw cosine retained separately",
+  "llm_model": "grok-4.7",
+  "report_file": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\reports\\candidate_filter_report.csv",
+  "accepted_file": "C:\\Users\\calle\\Documents\\School Work\\UB Ontology Program\\Repos\\Ontology-Tradecraft\\projects\\project-5\\generated\\accepted_el.ttl",
+  "note": "Provisional acceptance; Step 7 must check OWL entailment and consistency."
+}

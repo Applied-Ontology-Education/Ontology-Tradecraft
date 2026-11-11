@@ -1,0 +1,13 @@
+child_iri,parent_iri,cosine_similarity,stage
+https://www.commoncoreontologies.org/ont00000040,https://www.commoncoreontologies.org/ont00001102,0.9411168098449707,inner_config_7
+https://www.commoncoreontologies.org/ont00000108,https://www.commoncoreontologies.org/ont00000226,0.9267834424972534,inner_config_7
+https://www.commoncoreontologies.org/ont00000339,https://www.commoncoreontologies.org/ont00000192,0.9098330736160278,inner_config_7
+https://www.commoncoreontologies.org/ont00000531,https://www.commoncoreontologies.org/ont00000192,0.9429956674575806,inner_config_7
+https://www.commoncoreontologies.org/ont00000545,https://www.commoncoreontologies.org/ont00000946,0.9276337027549744,inner_config_7
+https://www.commoncoreontologies.org/ont00000667,https://www.commoncoreontologies.org/ont00001052,0.9351357221603394,inner_config_7
+https://www.commoncoreontologies.org/ont00000680,https://www.commoncoreontologies.org/ont00000881,0.9668347835540771,inner_config_7
+https://www.commoncoreontologies.org/ont00000778,https://www.commoncoreontologies.org/ont00000881,0.9521008729934692,inner_config_7
+https://www.commoncoreontologies.org/ont00000882,https://www.commoncoreontologies.org/ont00001076,0.8830271363258362,inner_config_7
+https://www.commoncoreontologies.org/ont00000901,https://www.commoncoreontologies.org/ont00001375,0.8615809679031372,inner_config_7
+https://www.commoncoreontologies.org/ont00000905,https://www.commoncoreontologies.org/ont00000655,0.9374568462371826,inner_config_7
+https://www.commoncoreontologies.org/ont00001375,https://www.commoncoreontologies.org/ont00000192,0.9261430501937866,inner_config_7
