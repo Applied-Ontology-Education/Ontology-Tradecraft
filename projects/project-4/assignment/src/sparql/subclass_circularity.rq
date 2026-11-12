@@ -4,3 +4,12 @@
 #    No class should appear in a circular `subClassOf` hierarchy.
 # Severity:  
 #    Error
+# A valid ontology should return ZERO rows.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+SELECT DISTINCT ?class ?error
+WHERE {
+  ?class rdfs:subClassOf+ ?class .
+  BIND (concat("ERROR: The class ", str(?class), " is part of a circular subClassOf hierarchy.") AS ?error)
+}

@@ -5,3 +5,18 @@
 # Severity:
 #     Warning
 
+
+# A valid ontology should return ZERO rows.
+
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX iao: <http://purl.obolibrary.org/obo/IAO_>
+
+SELECT DISTINCT ?entity ?error
+WHERE {
+  { ?entity a owl:Class } UNION { ?entity a owl:ObjectProperty }
+  FILTER NOT EXISTS {
+    ?entity iao:0000115 ?def .
+    FILTER (lang(?def) = "en" && STR(?def) != "")
+  }
+  BIND (concat("WARNING: ", str(?entity), " has no non-empty English-language definition.") AS ?error)
+}

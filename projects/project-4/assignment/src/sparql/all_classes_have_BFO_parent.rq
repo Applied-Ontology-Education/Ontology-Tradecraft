@@ -4,3 +4,17 @@
 #     All classes must have a BFO superclass.
 # Severity:
 #     Error
+# A valid ontology should return ZERO rows.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+
+SELECT DISTINCT ?class ?error
+WHERE {
+  ?class a owl:Class .
+  FILTER NOT EXISTS {
+    ?class rdfs:subClassOf+ ?bfoClass .
+    FILTER(STRSTARTS(STR(?bfoClass), "http://purl.obolibrary.org/obo/BFO_"))
+  }
+  BIND (concat("ERROR: The class ", str(?class), " has no BFO superclass.") AS ?error)
+}

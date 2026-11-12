@@ -4,3 +4,16 @@
 #    No class definition should be self-referential. 
 # Severity:  
 #    Error
+# A valid ontology should return ZERO rows.
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?entity ?label ?def ?error
+WHERE {
+  VALUES ?p { <http://purl.obolibrary.org/obo/IAO_0000115> skos:definition }
+  ?entity ?p ?def .
+  ?entity rdfs:label ?label .
+  FILTER (CONTAINS(LCASE(STR(?def)), LCASE(STR(?label))))
+  BIND (concat("ERROR: The definition of ", str(?entity), " contains its own label '", str(?label), "'.") AS ?error)
+}
