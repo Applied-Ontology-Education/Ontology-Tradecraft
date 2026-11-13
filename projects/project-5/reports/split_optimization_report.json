@@ -1,0 +1,254 @@
+{
+  "script_version": "global-closure-preserving-split-v3",
+  "configuration": {
+    "seed": 42,
+    "validation_fraction": 0.2,
+    "minimum_support": 1,
+    "max_heldout_per_subclass": 1,
+    "search_restarts": 3000,
+    "search_jitter": 8.0,
+    "local_search_passes": 10,
+    "pair_swap_trials": 3000
+  },
+  "module": {
+    "named_subclass_axioms": 103,
+    "full_closure": 225
+  },
+  "previous_split": {
+    "available": true,
+    "train_direct": 82,
+    "valid_direct": 21,
+    "train_closure": 88,
+    "closure_retention": 0.39111111111111113
+  },
+  "optimized_split": {
+    "training_direct": 82,
+    "validation_direct": 21,
+    "training_closure": 196,
+    "closure_lost": 29,
+    "closure_retention": 0.8711111111111111,
+    "improvement_over_previous_closure": 108,
+    "direct_overlap": 0,
+    "transitive_overlap": 0,
+    "isolated_validation_subclasses": 0
+  },
+  "search": {
+    "valid_global_candidates": 3001,
+    "global_best_closure": 196,
+    "after_local_search": 196,
+    "after_pair_swap": 196,
+    "pair_swap_improvements": 0
+  },
+  "validation_edges": [
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000044",
+      "subclass_label": "Eye Color",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000019",
+      "superclass_label": "BFO_0000019",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000173",
+      "subclass_label": "Civilian Role",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "superclass_label": "BFO_0000023",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000175",
+      "subclass_label": "Organization Member Role",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "superclass_label": "BFO_0000023",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000476",
+      "subclass_label": "Objective",
+      "superclass": "https://www.commoncoreontologies.org/ont00000965",
+      "superclass_label": "ont00000965",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000485",
+      "subclass_label": "Commercial Role",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "superclass_label": "BFO_0000023",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000780",
+      "subclass_label": "Ethnicity",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000019",
+      "superclass_label": "BFO_0000019",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000898",
+      "subclass_label": "Geopolitical Power Role",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "superclass_label": "BFO_0000023",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 2
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000917",
+      "subclass_label": "Permanent Resident Role",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "superclass_label": "BFO_0000023",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000974",
+      "subclass_label": "Plan",
+      "superclass": "https://www.commoncoreontologies.org/ont00000965",
+      "superclass_label": "ont00000965",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000987",
+      "subclass_label": "Citizen Role",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "superclass_label": "BFO_0000023",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001017",
+      "subclass_label": "Agent",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "superclass_label": "BFO_0000040",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 23
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001114",
+      "subclass_label": "Division of Delimiting Domain",
+      "superclass": "https://www.commoncoreontologies.org/ont00000472",
+      "superclass_label": "ont00000472",
+      "individual_closure_damage": 1,
+      "individual_closure_lost": 1,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 2
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000631",
+      "subclass_label": "Material Territory of a Country",
+      "superclass": "https://www.commoncoreontologies.org/ont00000662",
+      "superclass_label": "Material Territory of a Government Domain",
+      "individual_closure_damage": 2,
+      "individual_closure_lost": 2,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000662",
+      "subclass_label": "Material Territory of a Government Domain",
+      "superclass": "https://www.commoncoreontologies.org/ont00001341",
+      "superclass_label": "ont00001341",
+      "individual_closure_damage": 2,
+      "individual_closure_lost": 2,
+      "marginal_closure_restored": 1,
+      "remaining_logical_support": 2
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000404",
+      "subclass_label": "Iris",
+      "superclass": "https://www.commoncoreontologies.org/ont00000084",
+      "superclass_label": "Bodily Component",
+      "individual_closure_damage": 2,
+      "individual_closure_lost": 2,
+      "marginal_closure_restored": 2,
+      "remaining_logical_support": 2
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000500",
+      "subclass_label": "Eye",
+      "superclass": "https://www.commoncoreontologies.org/ont00000084",
+      "superclass_label": "Bodily Component",
+      "individual_closure_damage": 2,
+      "individual_closure_lost": 2,
+      "marginal_closure_restored": 2,
+      "remaining_logical_support": 2
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000587",
+      "subclass_label": "Ally Role",
+      "superclass": "https://www.commoncoreontologies.org/ont00000392",
+      "superclass_label": "Allegiance Role",
+      "individual_closure_damage": 2,
+      "individual_closure_lost": 2,
+      "marginal_closure_restored": 2,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000608",
+      "subclass_label": "Financial Value",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000019",
+      "superclass_label": "BFO_0000019",
+      "individual_closure_damage": 2,
+      "individual_closure_lost": 2,
+      "marginal_closure_restored": 2,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000696",
+      "subclass_label": "Ideology",
+      "superclass": "https://www.commoncoreontologies.org/ont00000958",
+      "superclass_label": "ont00000958",
+      "individual_closure_damage": 2,
+      "individual_closure_lost": 2,
+      "marginal_closure_restored": 2,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001224",
+      "subclass_label": "Process Requirement",
+      "superclass": "https://www.commoncoreontologies.org/ont00001324",
+      "superclass_label": "Process Regulation",
+      "individual_closure_damage": 2,
+      "individual_closure_lost": 2,
+      "marginal_closure_restored": 2,
+      "remaining_logical_support": 1
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001239",
+      "subclass_label": "Group of Organizations",
+      "superclass": "https://www.commoncoreontologies.org/ont00000300",
+      "superclass_label": "Group of Agents",
+      "individual_closure_damage": 2,
+      "individual_closure_lost": 2,
+      "marginal_closure_restored": 2,
+      "remaining_logical_support": 2
+    }
+  ]
+}

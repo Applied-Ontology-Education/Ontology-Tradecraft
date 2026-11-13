@@ -1,0 +1,25 @@
+{
+  "script_version": "hierarchy-ranking-v1-50-1000-101",
+  "selection_metric": "validation_mean_cosine",
+  "native_configuration": {
+    "embed_dim": 50,
+    "epochs": 1000,
+    "learning_rate": 0.001,
+    "seed": 101,
+    "batch_size": 128
+  },
+  "selected_stage": "native_baseline",
+  "hierarchy_configuration": {
+    "ranking_lambda": 0.0,
+    "anchor_lambda": 0.0,
+    "positive_cosine_weight": 0.1,
+    "ranking_margin": 0.2,
+    "negative_candidates": 8,
+    "epochs": 0,
+    "learning_rate": 0.0
+  },
+  "validation_mean_cos": 0.37447,
+  "target_mean_cos": 0.7,
+  "meets_target": false,
+  "selected_tau": null
+}

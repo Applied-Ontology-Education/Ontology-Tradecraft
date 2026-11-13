@@ -1,0 +1,22 @@
+cosine,logical_support,outgoing_subclass_edges,incoming_subclass_edges,declared,declaration_only,subclass_label,subclass,superclass_label,superclass
+,1,1,0,True,False,Eye Color,https://www.commoncoreontologies.org/ont00000044,BFO_0000019,http://purl.obolibrary.org/obo/BFO_0000019
+,1,0,0,True,False,Civilian Role,https://www.commoncoreontologies.org/ont00000173,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023
+,1,0,0,True,False,Organization Member Role,https://www.commoncoreontologies.org/ont00000175,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023
+,1,0,0,True,False,Objective,https://www.commoncoreontologies.org/ont00000476,ont00000965,https://www.commoncoreontologies.org/ont00000965
+,1,0,0,True,False,Commercial Role,https://www.commoncoreontologies.org/ont00000485,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023
+,1,0,0,True,False,Ally Role,https://www.commoncoreontologies.org/ont00000587,Allegiance Role,https://www.commoncoreontologies.org/ont00000392
+,1,0,1,True,False,Financial Value,https://www.commoncoreontologies.org/ont00000608,BFO_0000019,http://purl.obolibrary.org/obo/BFO_0000019
+,1,0,0,True,False,Material Territory of a Country,https://www.commoncoreontologies.org/ont00000631,Material Territory of a Government Domain,https://www.commoncoreontologies.org/ont00000662
+,1,0,1,True,False,Ideology,https://www.commoncoreontologies.org/ont00000696,ont00000958,https://www.commoncoreontologies.org/ont00000958
+,1,0,0,True,False,Ethnicity,https://www.commoncoreontologies.org/ont00000780,BFO_0000019,http://purl.obolibrary.org/obo/BFO_0000019
+,1,0,0,True,False,Permanent Resident Role,https://www.commoncoreontologies.org/ont00000917,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023
+,1,1,0,True,False,Plan,https://www.commoncoreontologies.org/ont00000974,ont00000965,https://www.commoncoreontologies.org/ont00000965
+,1,0,0,True,False,Citizen Role,https://www.commoncoreontologies.org/ont00000987,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023
+,1,0,0,True,False,Process Requirement,https://www.commoncoreontologies.org/ont00001224,Process Regulation,https://www.commoncoreontologies.org/ont00001324
+,2,1,0,True,False,Iris,https://www.commoncoreontologies.org/ont00000404,Bodily Component,https://www.commoncoreontologies.org/ont00000084
+,2,0,0,True,False,Eye,https://www.commoncoreontologies.org/ont00000500,Bodily Component,https://www.commoncoreontologies.org/ont00000084
+,2,0,0,True,False,Material Territory of a Government Domain,https://www.commoncoreontologies.org/ont00000662,ont00001341,https://www.commoncoreontologies.org/ont00001341
+,2,1,0,True,False,Geopolitical Power Role,https://www.commoncoreontologies.org/ont00000898,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023
+,2,1,0,True,False,Division of Delimiting Domain,https://www.commoncoreontologies.org/ont00001114,ont00000472,https://www.commoncoreontologies.org/ont00000472
+,2,2,0,True,False,Group of Organizations,https://www.commoncoreontologies.org/ont00001239,Group of Agents,https://www.commoncoreontologies.org/ont00000300
+,23,0,0,True,False,Agent,https://www.commoncoreontologies.org/ont00001017,BFO_0000040,http://purl.obolibrary.org/obo/BFO_0000040

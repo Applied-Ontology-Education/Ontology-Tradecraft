@@ -1,0 +1,17 @@
+{
+  "stage": "residual_mlp",
+  "learning_rate": 0.0025,
+  "epochs": 100,
+  "hidden_size": 32,
+  "identity_weight": 0.1,
+  "residual_scale": 0.25,
+  "direct_train_cosine": 0.9770771861076355,
+  "validation_mean": 0.7134455018455074,
+  "validation_median": 0.8903005719184875,
+  "validation_minimum": -0.282265841960907,
+  "validation_maximum": 0.9960774183273315,
+  "validation_below_0_20": 3,
+  "validation_at_or_above_0_60": 16,
+  "validation_at_or_above_0_70": 15,
+  "selected_tau": 0.6
+}

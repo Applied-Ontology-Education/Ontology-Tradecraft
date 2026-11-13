@@ -1,0 +1,101 @@
+{
+  "script_version": "project-5-frozen-clean-room-split-v6",
+  "status": "PASS",
+  "source_module": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\module.ttl",
+  "module_named_subclass_axioms": 103,
+  "training_named_subclass_axioms": 82,
+  "validation_named_subclass_axioms": 21,
+  "direct_overlap": 0,
+  "entailed_validation_axioms": 0,
+  "full_module_closure": 225,
+  "training_closure": 169,
+  "closure_retention": 0.7511111111111111,
+  "train_file": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\train.ttl",
+  "valid_file": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\valid.ttl",
+  "validation_pairs": [
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000089",
+      "superclass": "https://www.commoncoreontologies.org/ont00001379"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000139",
+      "superclass": "https://www.commoncoreontologies.org/ont00001152"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000408",
+      "superclass": "https://www.commoncoreontologies.org/ont00001180"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000426",
+      "superclass": "https://www.commoncoreontologies.org/ont00000274"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000443",
+      "superclass": "https://www.commoncoreontologies.org/ont00001180"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000473",
+      "superclass": "https://www.commoncoreontologies.org/ont00001152"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000476",
+      "superclass": "https://www.commoncoreontologies.org/ont00000965"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000485",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000486",
+      "superclass": "https://www.commoncoreontologies.org/ont00000392"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000500",
+      "superclass": "https://www.commoncoreontologies.org/ont00000084"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000507",
+      "superclass": "https://www.commoncoreontologies.org/ont00000914"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000532",
+      "superclass": "https://www.commoncoreontologies.org/ont00001335"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000553",
+      "superclass": "https://www.commoncoreontologies.org/ont00001324"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000647",
+      "superclass": "https://www.commoncoreontologies.org/ont00001262"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000662",
+      "superclass": "https://www.commoncoreontologies.org/ont00001341"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000898",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001017",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001114",
+      "superclass": "https://www.commoncoreontologies.org/ont00000472"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001324",
+      "superclass": "https://www.commoncoreontologies.org/ont00000965"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001335",
+      "superclass": "https://www.commoncoreontologies.org/ont00001180"
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001379",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000017"
+    }
+  ]
+}

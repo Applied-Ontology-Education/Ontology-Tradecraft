@@ -1,0 +1,19 @@
+{
+  "script_version": "robot-merge-elk-v2-preserve-accepted-subclass-axioms",
+  "status": "PASS",
+  "reasoner": "ELK",
+  "base_ontology": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\module.ttl",
+  "accepted_axioms_file": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\generated\\accepted_el.ttl",
+  "output_ontology": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\module_augmented.ttl",
+  "accepted_named_subclass_axioms": 22,
+  "accepted_axioms_retained": 22,
+  "accepted_axioms_missing": 0,
+  "accepted_axioms_preserved": true,
+  "output_triples": 1811,
+  "output_named_subclass_axioms": 689,
+  "collapse_import_closure": false,
+  "remove_redundant_subclass_axioms": false,
+  "robot_exit_code": 0,
+  "debug_ontology_created": false,
+  "robot_log": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\reports\\robot_merge_reason.log"
+}
