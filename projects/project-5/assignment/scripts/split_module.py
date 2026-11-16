@@ -1,10 +1,10 @@
-# --- Project 5, Step 4: create the train (~80%) and valid (~20%) ttl files 
+# --- Project 5, create the train (~80%) and valid (~20%) ttl files 
 # Input:  src/cco-module.ttl
 # Output: src/train.ttl   the whole module MINUS the held-out 'subClassOf' axioms
 #         src/valid.ttl   all declarations PLUS the held-out 'subClassOf' axioms
 #
-# Sections 2 and 3 reuse documentation/embedding_example.py
-# (connectivity-preserving split). Lines marked "CHANGED" differ from it.
+# Sections 2 & 3 reuse documentation/embedding_example.py
+# ( 
 #
 #   python scripts/split_module.py
 
@@ -75,42 +75,48 @@ valid_edges = sorted(valid_edges)
 print(f"Split sizes: train={len(train_edges)}, valid={len(valid_edges)}")
 print(f"  (target valid={target_valid}; the connectivity rule allowed {len(valid_edges)})")
 
-# write the split as two Turtle files for MOWL
+# write the split as two Turtle files for MOWL (training and valid)
 
-#  BFO parents are used in the module but not declared there.
+#  BFO parents are used in the module but not declared .
 #     Make a declaration (Class rdf:type owl:Class) for each one.
-missing_declarations = []
-for c in sorted(classes):
-    triple = (URIRef(c), RDF.type, OWL.Class)
-    if triple not in g:
-        missing_declarations.append(triple)
+missing_declarations = [] #empty list to hold the missing declarations
+for c in sorted(classes): #loop through the classes and check , in alphabetical order
+    triple = (URIRef(c), RDF.type, OWL.Class) #standard triple for a class declaration
+    if triple not in g: #check to see if the triple exists. 
+        missing_declarations.append(triple) #if not exists, add it to the missing_declarations list
 
-#  train.ttl = the whole module, minus the held-out edges,
-#     plus the missing BFO declarations
-train_g = rdflib.Graph()
+#  train.ttl = the whole module, minus the held-out edges, plus the missing BFO declarations
+train_g = rdflib.Graph() #create the train graph
 train_g.parse(TTL_IN, format="turtle")          # a fresh copy of the module
-for (u, v) in valid_edges:
+for (u, v) in valid_edges: #remove the held-out edges from the train graph
     train_g.remove((URIRef(u), RDFS.subClassOf, URIRef(v)))
-for triple in missing_declarations:
+for triple in missing_declarations: #add the missing declarations to the train graph
     train_g.add(triple)
+train_g.remove((None, OWL.imports, None)) #drop owl.imports to only use this module
+ # allow the held out child linked to teh grandparent relationship
+ # (child -> parent is heald out, but keep child -> grandparent)
+grandparent_links = 0 #reconnet the children to the grandparent
+for (u, v) in valid_edges:  #loop through the held out pairs of child/parent
+    for gp in train_g.objects(URIRef(v), RDFS.subClassOf): #find the grandparent
+        if isinstance(gp, URIRef):  #skip any blank nodes
+            train_g.add((URIRef(u), RDFS.subClassOf, gp)) #add the child subclass of gp.
+            grandparent_links +=1
+print("Grandparent links added to train", grandparent_links)
 
-#  valid.ttl = every declaration (rdf:type triple for a named entity),
-#     plus the missing BFO declarations, plus the held-out edges
-valid_g = rdflib.Graph()
+#  valid.ttl = every declaration (rdf:type triple for a named entity), plus the missing BFO declarations, plus the held-out edges
+valid_g = rdflib.Graph() #create the valid graph
 for prefix, namespace in g.namespaces():        # keep the same prefixes (cco:, obo: ...)
-    valid_g.bind(prefix, namespace)
+    valid_g.bind(prefix, namespace) #clean prefixes
 for s, p, o in g.triples((None, RDF.type, None)):
     if isinstance(s, URIRef):                   # skip blank nodes (restrictions)
         valid_g.add((s, p, o))
 for triple in missing_declarations:
-    valid_g.add(triple)
+    valid_g.add(triple) #missing triples are added to the valid graph to ensure that all upper level parent classes are properly declared
 for (u, v) in valid_edges:
     valid_g.add((URIRef(u), RDFS.subClassOf, URIRef(v)))
 
 train_g.serialize(TRAIN_OUT, format="turtle")
 valid_g.serialize(VALID_OUT, format="turtle")
-
-
 
 #  No held-out edge may still be in train
 overlap = 0

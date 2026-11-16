@@ -14,9 +14,6 @@ cco:InformationEntityOntology a owl:Ontology ;
     dcterms:license "BSD 3-Clause: https://github.com/CommonCoreOntology/CommonCoreOntologies/blob/master/LICENSE"@en ;
     dcterms:rights "CUBRC Inc., see full license."@en ;
     rdfs:comment "This ontology is designed to represent generic types of information as well as the relationships between information and other entities."@en ;
-    owl:imports <http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl>,
-        cco:GeospatialOntology,
-        cco:TimeOntology ;
     owl:versionIRI <https://www.commoncoreontologies.org/2026-08-13/InformationEntityOntology> ;
     owl:versionInfo "Version 2.2"@en .
 
@@ -1457,21 +1454,9 @@ cco:ont00002007 a owl:Class ;
 
 obo:BFO_0000030 a owl:Class .
 
-obo:BFO_0000031 a owl:Class .
-
-cco:ont00000073 a owl:Class ;
-    rdfs:label "Temporal Interval Identifier"@en ;
-    rdfs:subClassOf cco:ont00000399 ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( cco:ont00000399 [ a owl:Restriction ;
-                        owl:onProperty cco:ont00001916 ;
-                        owl:someValuesFrom obo:BFO_0000038 ] ) ] ;
-    skos:altLabel "One-Dimensional Temporal Region Identifier"@en ;
-    skos:definition "A Temporal Region Identifier that designates some Temporal Interval."@en ;
-    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
-
 cco:ont00000077 a owl:Class ;
     rdfs:label "Code Identifier"@en ;
+    rdfs:subClassOf cco:ont00000686 ;
     owl:disjointWith cco:ont00000923 ;
     skos:altLabel "Code ID"@en,
         "ID Code"@en,
@@ -1504,17 +1489,6 @@ cco:ont00000276 a owl:Class ;
     cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Solar_calendar&oldid=1058016588"^^xsd:anyURI ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
-cco:ont00000540 a owl:Class ;
-    rdfs:label "Temporal Instant Identifier"@en ;
-    rdfs:subClassOf cco:ont00000399 ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( cco:ont00000399 [ a owl:Restriction ;
-                        owl:onProperty cco:ont00001916 ;
-                        owl:someValuesFrom obo:BFO_0000203 ] ) ] ;
-    skos:altLabel "Zero-Dimensional Temporal Region Identifier"@en ;
-    skos:definition "A Temporal Region Identifier that designates some Temporal Instant."@en ;
-    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
-
 cco:ont00000649 a owl:Class ;
     rdfs:label "Non-Name Identifier"@en ;
     rdfs:subClassOf cco:ont00000686 ;
@@ -1531,11 +1505,13 @@ cco:ont00000891 a owl:Class ;
 
 cco:ont00000894 a owl:Class ;
     rdfs:label "Decimal Date Identifier"@en ;
+    rdfs:subClassOf cco:ont00000073 ;
     skos:definition "A Date Identifier that designates some Day by using a number to indicate the sequential ordering of the Day since a specified Reference Time."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
 cco:ont00000973 a owl:Class ;
     rdfs:label "Decimal Time of Day Identifier"@en ;
+    rdfs:subClassOf cco:ont00000540 ;
     skos:altLabel "Fractional Time of Day Identifier"@en ;
     skos:definition "A Time of Day Identifier that designates an approximate Temporal Instant that is part of some Day and is specified using a decimal value for the portion of the Day that preceded the Temporal Instant."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
@@ -1556,6 +1532,7 @@ cco:ont00001069 a owl:Class ;
 
 cco:ont00001176 a owl:Class ;
     rdfs:label "Estimate Information Content Entity"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
     skos:altLabel "Estimate"@en,
         "Estimate Measurement Information Content Entity"@en,
         "Estimated Value"@en ;
@@ -1614,6 +1591,17 @@ cco:ont00000003 a owl:Class ;
     skos:definition "A Designative Information Content Entity that consists of a string of characters that designates an entity within a specified cultural or social namespace and which is typically a word or phrase in a natural language that has an accepted cultural or social significance."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
+cco:ont00000073 a owl:Class ;
+    rdfs:label "Temporal Interval Identifier"@en ;
+    rdfs:subClassOf cco:ont00000399 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( cco:ont00000399 [ a owl:Restriction ;
+                        owl:onProperty cco:ont00001916 ;
+                        owl:someValuesFrom obo:BFO_0000038 ] ) ] ;
+    skos:altLabel "One-Dimensional Temporal Region Identifier"@en ;
+    skos:definition "A Temporal Region Identifier that designates some Temporal Interval."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
 cco:ont00000120 a owl:Class ;
     rdfs:label "Measurement Unit"@en ;
     rdfs:subClassOf cco:ont00000853 ;
@@ -1623,6 +1611,7 @@ cco:ont00000120 a owl:Class ;
 
 cco:ont00000275 a owl:Class ;
     rdfs:label "Spatial Reference System"@en ;
+    rdfs:subClassOf cco:ont00000853 ;
     skos:altLabel "Coordinate System"@en,
         "Spatial Coordinate System"@en,
         "Spatial Reference Frame"@en ;
@@ -1655,6 +1644,17 @@ cco:ont00000398 a owl:Class ;
     skos:definition "A Descriptive Information Content Entity that describes a set of standards for organizing and understanding data of the specified type or domain."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
+cco:ont00000540 a owl:Class ;
+    rdfs:label "Temporal Instant Identifier"@en ;
+    rdfs:subClassOf cco:ont00000399 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( cco:ont00000399 [ a owl:Restriction ;
+                        owl:onProperty cco:ont00001916 ;
+                        owl:someValuesFrom obo:BFO_0000203 ] ) ] ;
+    skos:altLabel "Zero-Dimensional Temporal Region Identifier"@en ;
+    skos:definition "A Temporal Region Identifier that designates some Temporal Instant."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
 cco:ont00000605 a owl:Class ;
     rdfs:label "Abbreviated Name"@en ;
     skos:definition "A Designative Name that is a shortened form of a Proper Name."@en ;
@@ -1682,6 +1682,7 @@ cco:ont00001942 a owl:ObjectProperty ;
 
 cco:ont00002010 a owl:Class ;
     rdfs:label "Message"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
     skos:definition "A Media Content Entity that is relatively brief and designed to be transmitted from a sender to a recipient."@en ;
     cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Message&oldid=1060098631"^^xsd:anyURI ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
@@ -1707,6 +1708,7 @@ W3C (https://www.w3.org/TR/NOTE-datetime)"""@en,
 
 cco:ont00001175 a owl:Class ;
     rdfs:label "Language"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
     skos:definition "A Prescriptive Information Content Entity that prescribes a canonical format for communication."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
@@ -1751,20 +1753,9 @@ cco:ont00001801 a owl:ObjectProperty ;
     skos:definition "x is subject of y =Def y is about x."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
-cco:ont00000686 a owl:Class ;
-    rdfs:label "Designative Information Content Entity"@en ;
-    owl:disjointWith cco:ont00000853,
-        cco:ont00000965 ;
-    owl:equivalentClass [ a owl:Class ;
-            owl:intersectionOf ( cco:ont00000958 [ a owl:Restriction ;
-                        owl:onProperty cco:ont00001916 ;
-                        owl:someValuesFrom obo:BFO_0000001 ] ) ] ;
-    skos:altLabel "Designative ICE"@en ;
-    skos:definition "An Information Content Entity that consists of a set of symbols that designate some Entity."@en ;
-    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
-
 cco:ont00000965 a owl:Class ;
     rdfs:label "Prescriptive Information Content Entity"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( cco:ont00000958 [ a owl:Restriction ;
                         owl:onProperty cco:ont00001942 ;
@@ -1783,15 +1774,17 @@ cco:ont00001966 a owl:ObjectProperty ;
         "This object property, as well as all of its children are typified as functional properties. This means that for instances x, y, and z if x is a measurement of y and x is a measurement of z, then y = z."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
-cco:ont00000853 a owl:Class ;
-    rdfs:label "Descriptive Information Content Entity"@en ;
-    owl:disjointWith cco:ont00000965 ;
+cco:ont00000686 a owl:Class ;
+    rdfs:label "Designative Information Content Entity"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
+    owl:disjointWith cco:ont00000853,
+        cco:ont00000965 ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( cco:ont00000958 [ a owl:Restriction ;
-                        owl:onProperty cco:ont00001982 ;
+                        owl:onProperty cco:ont00001916 ;
                         owl:someValuesFrom obo:BFO_0000001 ] ) ] ;
-    skos:altLabel "Descriptive ICE"@en ;
-    skos:definition "An Information Content Entity that describes some Entity."@en ;
+    skos:altLabel "Designative ICE"@en ;
+    skos:definition "An Information Content Entity that consists of a set of symbols that designate some Entity."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
 cco:ont00001022 a owl:Class ;
@@ -1819,6 +1812,7 @@ cco:ont00001808 a owl:ObjectProperty ;
 
 cco:ont00002039 a owl:Class ;
     rdfs:label "Document Content Entity"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
     skos:altLabel "Document"@en ;
     skos:definition "A Media Content Entity that consists of a series of paragraphs of text or diagrams that are intended to be carried by physical pieces of paper or an electronic word processor file."@en ;
     cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Document&oldid=1057829688"^^xsd:anyURI ;
@@ -1861,6 +1855,7 @@ cco:ont00001010 a owl:Class ;
 
 cco:ont00002001 a owl:Class ;
     rdfs:label "Media Content Entity"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
     skos:definition "An information content entity presented in a canonical media format."@en ;
     skos:scopeNote "By 'canonical', it is intended that the media format is of a commonly recognized format, such as mass media formats such as books, magazines, and journals, as well as digital media forms (e.g. ebooks), to include, too, file types, such as those recognized by the Internet Assigned Numbers Authority (IANA)'s Media Types standard [RFC2046]." ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
@@ -1870,6 +1865,18 @@ cco:ont00000469 a owl:Class ;
     rdfs:subClassOf cco:ont00000275 ;
     skos:altLabel "Geographic Coordinate System"@en ;
     skos:definition "A Spatial Reference System that is used to determine and identify the location of a point or object at or near the surface of the Earth."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000853 a owl:Class ;
+    rdfs:label "Descriptive Information Content Entity"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
+    owl:disjointWith cco:ont00000965 ;
+    owl:equivalentClass [ a owl:Class ;
+            owl:intersectionOf ( cco:ont00000958 [ a owl:Restriction ;
+                        owl:onProperty cco:ont00001982 ;
+                        owl:someValuesFrom obo:BFO_0000001 ] ) ] ;
+    skos:altLabel "Descriptive ICE"@en ;
+    skos:definition "An Information Content Entity that describes some Entity."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
 cco:ont00001916 a owl:ObjectProperty ;
@@ -1884,8 +1891,11 @@ cco:ont00001916 a owl:ObjectProperty ;
     skos:scopeNote "Given a stronger temporal interpretation, this property may be functional. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en ;
     cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
 
+obo:BFO_0000031 a owl:Class .
+
 cco:ont00001328 a owl:Class ;
     rdfs:label "Temporal Reference System"@en ;
+    rdfs:subClassOf cco:ont00000853 ;
     skos:altLabel "Temporal Reference Frame"@en,
         "Time Scale"@en ;
     skos:definition "A Reference System that describes a set of standards for measuring time as well as understanding the context of and organizing temporal data."@en ;
@@ -1893,6 +1903,7 @@ cco:ont00001328 a owl:Class ;
 
 cco:ont00001163 a owl:Class ;
     rdfs:label "Measurement Information Content Entity"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
     owl:equivalentClass [ a owl:Class ;
             owl:intersectionOf ( cco:ont00000853 [ a owl:Restriction ;
                         owl:onProperty cco:ont00001966 ;

@@ -12,8 +12,8 @@ from rdflib.namespace import OWL, RDF, RDFS,SKOS
 
 # 1. Where to read and write
 BASESOURCE = Path(__file__).resolve().parents[1]
-IN_PATH = BASESOURCE / "SRC" / "CCO-Module.ttl"
-OUT_PATH = BASESOURCE / "DATA" / "definitions.csv"
+IN_PATH = BASESOURCE / "src" / "cco-module.ttl"
+OUT_PATH = BASESOURCE / "data" / "definitions.csv"
 
 # 2. Load CCO ICE file
 g = Graph()

@@ -1,12 +1,12 @@
-# --- Project 5, Step 2: normalize definitions with an LLM ---
+# --- Project 5, normalize the definitions using an LLM ---
 # Input:  data/definitions.csv  (IRI, label, definition from Step 1)
-#         src/cco-module.ttl    (to look up each class's parent)
+#         src/cco-module.ttl    (look up each class's parent)
 # Output: data/definitions_enriched.csv
 #
-# Each class definition is rewritten as "A <label> is a <parent> that <...>."
-# Non-class rows (object properties) are copied through unchanged.
+# Format to align to OWL EL is to have each class definition be rewritten as "A <label> is a <parent> that <...>."
+# Non-class rows (object properties) are copied and are unchanged.
 #
-# Run from the assignment folder:
+# Run from assignment folder:
 #   python scripts/preprocess_definitions_llm.py       (all classes)
 #   python scripts/preprocess_definitions_llm.py 5     (test: first 5 classes)
 
@@ -22,8 +22,11 @@ CSV_IN = BASE / "data" / "definitions.csv"
 TTL_PATH = BASE / "src" / "cco-module.ttl"
 CSV_OUT = BASE / "data" / "definitions_enriched.csv"
 
-# Optional test limit from the command line, e.g. "5"
-LIMIT = int(sys.argv[1]) if len(sys.argv) > 1 else None
+# Optional test limit from the command line, e.g. "5"  
+if len(sys.argv) > 1:  #read from the command line
+    LIMIT = int(sys.argv[1])
+else:
+    LIMIT = None
 
 # 1) Load the definitions and the module
 df = pd.read_csv(CSV_IN)
@@ -82,19 +85,31 @@ for _, row in df.iterrows():
     genus = ""
     differentia = ""
 
-    if is_class and parents and (LIMIT is None or sent < LIMIT):
-        prompt = (
-            f"Label: {row['label']}\n"
-            f"Parent label (use as genus): {parent_label}\n"
-            f"Original definition: {row['definition']}"
-        )
-        answer = ask_llm(INSTRUCTIONS, prompt, SCHEMA)
-        enriched = answer["enriched_definition"]
-        genus = answer["genus"]
-        differentia = answer["differentia"]
-        sent += 1
-        print(f"  [{sent}] {row['label']}: {enriched}")
+    # 1. Skip items that aren't classes or don't have parents
+    if is_class == True:
+        if len(parents) > 0:
 
+            # 2. Check if we are still under the test limit
+            under_limit = False
+            if LIMIT is None:
+                under_limit = True
+            elif sent < LIMIT:
+                under_limit = True
+
+            # 3. Build the prompt using simple string addition
+            if under_limit == True:
+                prompt = "Label: " + str(row["label"]) + "\n"
+                prompt = prompt + "Parent label (use as genus): " + parent_label + "\n"
+                prompt = prompt + "Original definition: " + str(row["definition"])
+
+                answer = ask_llm(INSTRUCTIONS, prompt, SCHEMA, max_tokens=2000)   # room for the full JSON answer
+                enriched = answer["enriched_definition"]
+                genus = answer["genus"]
+                differentia = answer["differentia"]
+                sent += 1
+                print(f"  [{sent}] {row['label']}: {enriched}")
+
+    # 4. Every row is saved, rewritten or not (still inside the for loop)
     rows.append({
         "IRI": iri,
         "label": row["label"],

@@ -183,5 +183,2041 @@
     "differentia": "is about an uncertain future event",
     "enriched_definition": "A predictive information content entity is a descriptive information content entity that is about an uncertain future event.",
     "genus": "descriptive information content entity"
+  },
+  "1cb9a5886c639d777f63d45407aefd9121ab1664e2e2613386d673d5e668d7bb": {
+    "plausibility": 0.9,
+    "reason": "Legal Name is defined as a Proper Name, and Proper Name is a kind of Designative Name, so the subclass relation follows by transitivity."
+  },
+  "d2f53e5f7d45d8e260ad853a1f0d593eb6e10ba94772bb9c7acc9b5fe5084b79": {
+    "plausibility": 0.01,
+    "reason": "A book is a document containing textual content, not a descriptive information entity defining a standard magnitude of a physical quantity, so Book SubClassOf Measurement Unit is clearly false."
+  },
+  "da325c615ed7f0d4800acba07ddbd424f2943b2493c152f210a2d255c74c4bad": {
+    "plausibility": 0.02,
+    "reason": "An Email Address is defined as a Designative Name, while Non-Name Identifier is explicitly defined as not being a Designative Name, so the subclass axiom contradicts the definitions."
+  },
+  "afe282605662a79d6379366c32479bdd69dd07de31626519215c006c06b22417": {
+    "plausibility": 0.4,
+    "reason": "The axiom requires every geocoordinate unit to be the unit of some information bearing entity, but a unit could exist without being recorded in any such entity, so this holds only sometimes."
+  },
+  "bf9bcf45ee54f94dd67c41104671ed1a35e1f5315a188963903532958227f411": {
+    "plausibility": 0.9,
+    "reason": "A Legal Name is a Proper Name, which is a kind of Designative Name, so the subclass relation follows from the definitions via the designation within a legal/governmental namespace."
+  },
+  "a6d4f7ab43a421b4ffe8c6bb67194d2a819afc3c80ca647c63f71ba7cb1c7e10": {
+    "plausibility": 0.0,
+    "reason": "A Book is a document content entity bound to physical materials, whereas a Measurement Unit describes a standard magnitude of a physical quantity; these classes are disjoint, so the subclass axiom is clearly false."
+  },
+  "0bbdfcd3b271318df727cec23df85f61ff493b6bfdc1a8812a824edd01d1d211": {
+    "plausibility": 0.02,
+    "reason": "The definition of Email Address makes it a Designative Name, while Non-Name Identifier is explicitly defined as not being a Designative Name, so the proposed subclass relation is contradictory."
+  },
+  "b2d40ffa162fb7c9f851e8d891e06136e39cdc7715ebfae7c164c3f2a4b18846": {
+    "plausibility": 0.55,
+    "reason": "An email message is an information content entity that is presented in a standard media format, but the definition of Media Content Entity is vague enough that it's unclear every email message qualifies as having a canonical media format."
+  },
+  "cb1e4e8b7352ba9e9cdfec54cfc841adb274a64184fe171d3586c5522a9a7c7a": {
+    "superclasses": [
+      "representational information content entity",
+      "information content entity"
+    ]
+  },
+  "ed2b888d2c76498fc6e314e9912c36a5812beeca024a25e0e3f990aa379a47b2": {
+    "superclasses": [
+      "measurement information content entity",
+      "estimate information content entity",
+      "information content entity"
+    ]
+  },
+  "0cc15b1203518b3cf39853b8ef8e6630d4161274126b90bb43f6e59c39b24e1e": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "b46691f5c9c5e7288472f8a05e2ebb5d65fdb0f88eea297cc34ac92d2df15a5f": {
+    "superclasses": [
+      "information content entity",
+      "designative information content entity",
+      "non-name identifier"
+    ]
+  },
+  "0b29d15239398cb6e65c8c4e5567ebaa63e72b205264da3bc47fd56331e4d27a": {
+    "superclasses": [
+      "designative information content entity",
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "2c766ade714a5fff5b6d9f0170dc27374c9913932b41b9e4e05b22c2c5193dd6": {
+    "superclasses": [
+      "information content entity",
+      "designative information content entity",
+      "representational information content entity"
+    ]
+  },
+  "45e6e90c27103df1939df7c1cf812e0dee0a6ef3f8005d9ce4b2e5422cb05e94": {
+    "superclasses": [
+      "date identifier",
+      "calendar date identifier"
+    ]
+  },
+  "59e723ffb90a649743fb969b7d538db597ddb880d285b26a1b5921f789e7e756": {
+    "superclasses": [
+      "information content entity",
+      "designative information content entity"
+    ]
+  },
+  "6785358f361186387e3f080014968e08b1ae83a0f4668569393b967d692bc862": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "09d09b10c131bfa5c850558c22bb50386af54d50bcde3c89d8a0d447f0fef7e6": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "df3d442fa213224632178e545dcc3bdaabe53c7c72f0604ffa82fcd44b8ccd95": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "7bc87629ab247ea2f710c5400214ba7ded88f455f121852ea702558e18805c0d": {
+    "superclasses": [
+      "estimate information content entity",
+      "descriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "f0ddd36877dcceebc625a0d3e8d4420b7a21861d8316d7f1bb8c29d636386cda": {
+    "superclasses": [
+      "measurement information content entity",
+      "information content entity"
+    ]
+  },
+  "2ea3b8101afec12e10f45584a040c05e6970baf5a18d8cacbb34e434abebd8aa": {
+    "superclasses": [
+      "measurement information content entity",
+      "information content entity"
+    ]
+  },
+  "964b9c52c2977a45471308970ff788955cc1232380675c96225f3a35bff01f91": {
+    "superclasses": [
+      "information content entity",
+      "descriptive information content entity"
+    ]
+  },
+  "2cd7bb6f3a5fc2c42453d54abbcb9d91e590cefa3be31e81a18b91bdf2d6c874": {
+    "superclasses": []
+  },
+  "6777709674ce65223c8a11fc6ea0a34f325b8902b9e73cea66bcb4ef98524d07": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "37834c47738d33c1e2357e49223326af9b91fff766e67d53d15d1316d285baee": {
+    "superclasses": []
+  },
+  "63eed4afcae484715c38b878a0fb57d526e29d55bdeb6c17e004b06b31e001d8": {
+    "superclasses": [
+      "temporal reference system",
+      "reference system"
+    ]
+  },
+  "99678ba86d07bf44ef6fb0daabd7da8b4e1d3b1bba012ade9c2dbffac41cc8ea": {
+    "superclasses": [
+      "descriptive information content entity",
+      "representational information content entity",
+      "information content entity"
+    ]
+  },
+  "4232ac94ebf46acc6038d488ebacc689ea8f0082fa01291c11dbcbf26a846323": {
+    "superclasses": []
+  },
+  "7a6cbf1cb3a75ab7c9b5d4e7776f9441caae880f1b9aa403b9be0228396a21d4": {
+    "superclasses": [
+      "measurement information content entity",
+      "information content entity"
+    ]
+  },
+  "af2d5d559f86ff8c85e577ccf1dbde4a85cb611c243f378194aff21736e5df3a": {
+    "superclasses": [
+      "information content entity",
+      "non-name identifier",
+      "representational information content entity"
+    ]
+  },
+  "941ef02493f5547a1dd30b839a70cd6b4cd57f7b914afe650fa38eda0fa846eb": {
+    "superclasses": [
+      "representational information content entity",
+      "information content entity"
+    ]
+  },
+  "a062b47e2a12b8b9caaf7226e5e4acdd8b4619cf356ac7fb979aa60eea02be89": {
+    "superclasses": [
+      "information content entity",
+      "non-name identifier"
+    ]
+  },
+  "bc596219167b6af4842ae57687a5c4f577da3454da621f71c77c7dfbdbf7d75a": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "5b439340492c7fd27cc627b3c08dc76d8f1fdbf0c79fb8f2543421ecf5b1404c": {
+    "superclasses": [
+      "non-name identifier",
+      "arbitrary identifier"
+    ]
+  },
+  "192ee50fd459fdb953a5112f7b0244aa6677cdefa225c7572467ce97b6ceb1a1": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "1b082e286f3b9f392746433143bc0f6697c9b7c3881ec81d24ffd2378f5ee39c": {
+    "superclasses": [
+      "information content entity",
+      "designative information content entity"
+    ]
+  },
+  "3b9e1f75547863ee4d8552e26b155f041f2b414ebfa05fe01d9882f977836979": {
+    "superclasses": [
+      "information content entity",
+      "non-name identifier",
+      "temporal region identifier"
+    ]
+  },
+  "d649918da9140560559e22ab032add948e57bceb096cfa11bfd5db18135ca033": {
+    "superclasses": [
+      "measurement information content entity",
+      "descriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "62b42eaccf3f81af205d6e7c08fa8ad1904e1f28aa3957357d63535bbdd5d620": {
+    "plausibility": 0.9,
+    "reason": "A Designative Name is defined as a Designative Information Content Entity, and Designative ICEs are representational ICEs that designate entities, so the subclass relation to Representational Information Content Entity follows from the definitions."
+  },
+  "08364c852807cbeff6d77ee396c1beddab8900431f89b371128df3eb83011cc4": {
+    "plausibility": 0.85,
+    "reason": "A Code Identifier is a Non-Name Identifier, which is an information content entity that designates an entity, so it should fall under Representational Information Content Entity."
+  },
+  "ab8f875d96e8a542b9b0e9d490b6cc75ce4d28b75ba6c404eb79e62e649aab98": {
+    "plausibility": 0.6,
+    "reason": "A time-of-day identifier is an information content entity that designates a temporal instant, but the axiom needs it to 'represent' an entity, and the given definitions don't explicitly establish that link."
+  },
+  "e1c77ba1116d29ffaefe00f57c26b5d06b78852f40c35698590d0f5647805dbd": {
+    "plausibility": 0.95,
+    "reason": "Designative Name is defined as a Designative Information Content Entity, which by definition is a subclass of Information Content Entity, so the axiom follows directly from the given definitions."
+  },
+  "12d9256015e325fd0e416a8f03a2ce25e5a3f6911b5abd1917cadbe6bcf28f4d": {
+    "plausibility": 0.95,
+    "reason": "A median point estimate is defined as a subclass of Point Estimate Information Content Entity, which is itself an Information Content Entity, so the subsumption follows by transitivity."
+  },
+  "70706c21b1a9acc8ca25f1c3859ae74f1847a16b3eace966aa4ee12e8caca0f0": {
+    "plausibility": 0.92,
+    "reason": "A Temporal Interval Identifier is a Temporal Region Identifier, which is an identifier and therefore an information content entity that is about the interval it designates."
+  },
+  "a852cbcbab320565d53368c457740cd3bb32c95082abc7cc7486cff1151f6e53": {
+    "plausibility": 0.92,
+    "reason": "A Code Identifier is a Non-Name Identifier, and identifiers in CCO are information content entities that generically depend on an information bearing entity and are about the entity they identify."
+  },
+  "dc68dd02cff188700cd384ee145fe1e25af049549466d3ccc7e93987c0da14ad": {
+    "plausibility": 0.9,
+    "reason": "A Standard Time of Day Identifier is a designative textual/symbolic identifier that generically depends on an information bearing entity and is about a temporal instant, so it fits the Information Content Entity definition."
+  },
+  "2fdc51e4d5411cdefc52931cdf034a58077939619fd00dd2ef9737fbb99cfe37": {
+    "plausibility": 0.9,
+    "reason": "Measurement Unit is defined as a Descriptive Information Content Entity, so it is a subclass of Information Content Entity by the given definitions, though the axiom follows directly from that definition rather than being independently verified."
+  },
+  "2555131db7e1a69f38fad27dc7013274dd1b4b650860acdb408daea2b27d0571": {
+    "plausibility": 0.97,
+    "reason": "A Performance Specification is defined as a Prescriptive Information Content Entity, so it inherits from Information Content Entity and the subclass axiom follows directly from the definitions."
+  },
+  "bd7c6dca57164e4df175579679a6bc93f067f4ef0a6dca1daee9d5e9b81447a8": {
+    "plausibility": 0.85,
+    "reason": "A median point estimate is defined as a point estimate that measures a set of values, and point estimates are measurement-type descriptive information, so the subclass relation is largely consistent with the definitions."
+  },
+  "127ec30fafec1a17a8be0878f83211321a438a6c277a8598699d99a115b1ed25": {
+    "plausibility": 0.9,
+    "reason": "A Median Point Estimate is defined as a Point Estimate Information Content Entity, which in turn falls under Estimate Information Content Entity, so the subclass relation follows by transitivity."
+  },
+  "c8dd72865820b728042bdc186edcd1906ae84532ded417257290c1ac94b91930": {
+    "plausibility": 0.9,
+    "reason": "Civil Time Reference System is defined as a Temporal Reference System, which in turn is a kind of Reference System, so the subclass relation follows transitively from the given definitions."
+  },
+  "5cfc67c306687f9d63840b9e62b784c9aaae83e8d4ecc1ca6f114bb9ce1bf595": {
+    "plausibility": 0.92,
+    "reason": "A Solar Time Reference System is defined as a kind of Temporal Reference System, which is itself a reference system, so it fits under Reference System."
+  },
+  "4661134aab4a391a24a35e82f056e36a7fab8ced60f49020bfdafd5a211b37c3": {
+    "plausibility": 0.9,
+    "reason": "A Temporal Interval Identifier is a Temporal Region Identifier, which is an information content entity whose symbols designate a temporal interval, so it fits the Designative Information Content Entity definition."
+  },
+  "06996c6a001544d1de55f10d5b62c70033e213ed035a543aafca3018b71621e6": {
+    "plausibility": 0.92,
+    "reason": "A Code Identifier is a Non-Name Identifier, which is an identifier, and identifiers are designative information content entities that consist of symbols designating an entity, so the subclass relation follows from the definitions."
+  },
+  "6ade97181451d3780a62cdb1e7ea4dc6c8c8e6b32b03f504487d67396e9946d0": {
+    "plausibility": 0.9,
+    "reason": "A Standard Time of Day Identifier designates a temporal instant via symbols (time expressed in hours, minutes, seconds), so it is an information content entity whose symbols designate an entity, making it a designative ICE."
+  },
+  "7312070d94f684c5f925fa0b1eaa558946ba9498bc8c255b3d2d4773b8d5f3c8": {
+    "plausibility": 0.05,
+    "reason": "Measurement Unit is defined as a Descriptive Information Content Entity, which is disjoint from designative content in CCO, so it is not a subclass of Designative Information Content Entity."
+  },
+  "3806e463f5860b740e0bfe133d1c0d5aefdbb1e33ed01a233b1398e083f5a170": {
+    "plausibility": 0.4,
+    "reason": "Temporal interval identifiers such as dates are often non-name, but named periods like 'World War II' are Designative Names, so the subclass claim does not hold for every instance."
+  },
+  "e7cb1317f1e6ccf2c7f2123b13f125d218832f3ca05119f1a8f67f927af240ce": {
+    "plausibility": 0.9,
+    "reason": "An Ordinal Date Identifier is defined as a Decimal Date Identifier designating a Day, and Date Identifier designates a Day, so the subclass relation follows from the chain of definitions (assuming Decimal Date Identifier is a subclass of Date Identifier)."
+  },
+  "a723ee387b8b3285423e316dc8f9d1d3e594201d3a9c0fca5ce636165e2ab896": {
+    "plausibility": 0.7,
+    "reason": "An ordinal date is a calendar-based date format (year plus day-of-year number), so it fits the Calendar Date Identifier scope, though it is not built from explicit Day, Week, or Month identifiers."
+  },
+  "1b7a99015b1dcbab3027fa807eeda8b7e8519f8df7c64908001b9a65add993af": {
+    "differentia": "is based on the average rotational speed of the Earth and designates the prime meridian at zero degrees longitude as a reference point",
+    "enriched_definition": "A universal time reference system is a solar time reference system that is based on the average rotational speed of the Earth and designates the prime meridian at zero degrees longitude as a reference point.",
+    "genus": "solar time reference system"
+  },
+  "d409055040542ed217d1bc485c5db71aa635972d8ce13422e5a1e3af18b887b2": {
+    "differentia": "consists of a string of characters that designates an entity within a specified namespace or context, is not a designative name, may be automatically or randomly generated, and typically has no preexisting cultural or social significance",
+    "enriched_definition": "A non-name identifier is a designative information content entity that consists of a string of characters that designates an entity within a specified namespace or context, is not a designative name, may be automatically or randomly generated, and typically has no preexisting cultural or social significance.",
+    "genus": "designative information content entity"
+  },
+  "71b3587922e6d96ae9e72895cbcc6235c92462799b60df42a34da51c4bd177ec": {
+    "differentia": "that is about some process and describes a finite sequence of unambiguous instructions in order to achieve some objective",
+    "enriched_definition": "A algorithm is a prescriptive information content entity that is about some process and describes a finite sequence of unambiguous instructions in order to achieve some objective.",
+    "genus": "prescriptive information content entity"
+  },
+  "74734998f85b52844375f563448c047dcd2eaab7bd03dc3730d121beb2617f25": {
+    "differentia": "is about a one-dimensional extent that inheres in a site that is externally connected to two independent continuants",
+    "enriched_definition": "A distance measurement information content entity is a ratio measurement information content entity that is about a one-dimensional extent that inheres in a site that is externally connected to two independent continuants.",
+    "genus": "ratio measurement information content entity"
+  },
+  "8a99091bcd89f10ceada563dfe03b5e2dd538ee476236a159dee5f36905ee38c": {
+    "differentia": "is a familiar form of a proper name",
+    "enriched_definition": "A diminutive name is an abbreviated name that is a familiar form of a proper name.",
+    "genus": "Abbreviated Name"
+  },
+  "c5e552cd81f6b1a74c3c627d4710dba7e80d8f7915cff1f1242154e57f695184": {
+    "differentia": "consists of a set of symbols that designates some entity",
+    "enriched_definition": "A designative information content entity is a information content entity that consists of a set of symbols that designates some entity.",
+    "genus": "Information Content Entity"
+  },
+  "27a46421ba6ba690f0c18b9c4eb166b8a22eb45948819498725d99a7828ed564": {
+    "differentia": "is about the likelihood that a process or process aggregate occurs",
+    "enriched_definition": "A probability measurement information content entity is a measurement information content entity that is about the likelihood that a process or process aggregate occurs.",
+    "genus": "measurement information content entity"
+  },
+  "576f5756ffdcc6ae6b25598b9c3f10984193e56014575faa22f73135461d700c": {
+    "differentia": "is a spatial reference system for three-dimensional spatial regions that identifies each point by an ordered triple of numerical coordinates consisting of the radial distance of the point from a fixed origin, the polar angle of the point measured from a fixed zenith direction, and the azimuth angle of the orthogonal projection of the point onto a reference plane measured from a fixed direction on that plane, where the reference plane passes through the origin and is orthogonal to the zenith",
+    "enriched_definition": "A spherical coordinate system is a spatial reference system that is about three-dimensional spatial regions and designates each point by an ordered triple of numerical coordinates consisting of the radial distance of the point from a fixed origin, the polar angle of the point measured from a fixed zenith direction, and the azimuth angle of the orthogonal projection of the point onto a reference plane measured from a fixed direction on that plane, where the reference plane passes through the origin and is orthogonal to the zenith.",
+    "genus": "spatial reference system"
+  },
+  "7302e6ef1840b22d76a82eedc7968a28d317e892e4ebf1b5979b01764d6237cc": {
+    "differentia": "is about the extent to which an entity deviates from how it is expected or supposed to be",
+    "enriched_definition": "A deviation measurement information content entity is a measurement information content entity that is about the extent to which an entity deviates from how it is expected or supposed to be.",
+    "genus": "Measurement Information Content Entity"
+  },
+  "662a75c970ed13fc519ed4b858d09f0350da8d78053f8518b708b2a847e43859": {
+    "differentia": "is composed of four pairs of geocoordinates, one for each of the four defining points (north, west, south, east) of a geospatial region bounding box",
+    "enriched_definition": "A geospatial region bounding box identifier list is a measurement unit of geocoordinate that is composed of four pairs of geocoordinates, one for each of the four defining points (north, west, south, east) of a geospatial region bounding box.",
+    "genus": "measurement unit of geocoordinate"
+  },
+  "fe818753e3064856fba4df61b31bd7c2c9e6c95d94ecea07697a40b11c28ff51": {
+    "differentia": "consists of a single value for the measured entity",
+    "enriched_definition": "A point estimate information content entity is a estimate information content entity that consists of a single value for the measured entity.",
+    "genus": "Estimate Information Content Entity"
+  },
+  "311306e09a58b745aba496999cd390934750baf4289e9489ecd0fe99ddfb3417": {
+    "differentia": "that designates some Julian day by using a number to indicate the sequential ordering of the day since the Julian Date epoch",
+    "enriched_definition": "A julian day number is a decimal date identifier that designates some julian day by using a number to indicate the sequential ordering of the day since the julian date epoch.",
+    "genus": "Decimal Date Identifier"
+  },
+  "c21d1caeb44465bcc05bf5c8cd53c62ef370bae547423281b96a7d13a073111f": {
+    "differentia": "designates some time of day",
+    "enriched_definition": "A time of day identifier is a temporal instant identifier that designates some time of day.",
+    "genus": "temporal instant identifier"
+  },
+  "4288b83aef1435f3f6d69e885170b41769b09f59dbb35fd7070c747f123e081c": {
+    "differentia": "designates a time zone region that is associated with a uniform standard time used for legal, commercial, or social purposes",
+    "enriched_definition": "A time zone identifier is a spatial region identifier that designates a time zone region that is associated with a uniform standard time used for legal, commercial, or social purposes.",
+    "genus": "spatial region identifier"
+  },
+  "cf091834542a8e408cf91431e5dcbcbf0c89ac83f5dc77d6dad60c65c4cee776": {
+    "differentia": "designates some julian date and has part some julian day number and has part some julian date fraction",
+    "enriched_definition": "A julian date identifier is a decimal time of day identifier that designates some julian date and has part some julian day number and has part some julian date fraction.",
+    "genus": "decimal time of day identifier"
+  },
+  "783de11962044f6d12bc01430f4698b98da604e184bc3b185ba3f13274226b21": {
+    "differentia": "is about a measurement of a portion of a whole, described by a numerator, compared against that whole, described by a denominator, where the whole is a nominally described set of like entities",
+    "enriched_definition": "A proportional ratio measurement information content entity is a ratio measurement information content entity that is about a measurement of a portion of a whole, described by a numerator, compared against that whole, described by a denominator, where the whole is a nominally described set of like entities.",
+    "genus": "ratio measurement information content entity"
+  },
+  "c371ff2b730b792f83c3626c6e74a1148611a4e5b5392b52772fa9b746405715": {
+    "differentia": "is about some information content entity's referent-bearing subject matter, namely some cco:Entity that it describes",
+    "enriched_definition": "A descriptive information content entity is an information content entity that is about some entity by describing it.",
+    "genus": "Information Content Entity"
+  },
+  "d0075a5f124878b9a88a339f08c94141f51df30ecd0b784258ec0771beec8328": {
+    "differentia": "that is designed to organize and identify dates",
+    "enriched_definition": "A calendar system is a temporal reference system that is designed to organize and identify calendar dates.",
+    "genus": "Temporal Reference System"
+  },
+  "139cb45a31a35d12304b03b7f2a291e9d682e15a94441a06da833731d4a72b69": {
+    "differentia": "designates some day by using a number to indicate the sequential ordering of the day since a specified reference time",
+    "enriched_definition": "A decimal date identifier is a date identifier that designates some day by using a number to indicate the sequential ordering of the day since a specified reference time.",
+    "genus": "date identifier"
+  },
+  "6b87f51d2996699b4b0d20016f665645f26b4e961f2b6436e00b940a88e9b349": {
+    "differentia": "is a measurement of a set of values and is equal to the sum of all values in the set divided by the total number of values in the set",
+    "enriched_definition": "A mean point estimate information content entity is a point estimate information content entity that is a measurement of a set of values and is equal to the sum of all values in the set divided by the total number of values in the set.",
+    "genus": "point estimate information content entity"
+  },
+  "475c775ae74482e8014bc8a2dd92b15d24400d9029b5515c8d30466dd1462c0b": {
+    "differentia": "is about a Designative Name whose initial letters it combines and which is pronounced as a word",
+    "enriched_definition": "An acronym is an abbreviated name that is about a designative name whose initial letters it combines and which is pronounced as a word.",
+    "genus": "abbreviated name"
+  },
+  "a923ce8aa732841ef245a26095f3b00cd36c70d8bf44bd2760db54e76a6d0ca7": {
+    "differentia": "is designed to organize and identify dates and is about the cycles of the Moon's phases",
+    "enriched_definition": "A lunar calendar system is a Calendar System that is designed to organize and identify dates and is about the cycles of the Moon's phases.",
+    "genus": "Calendar System"
+  },
+  "6d905e9c104048e6fbd9b17052b2bca33199750ec1c966b027f200d1bbd787dd": {
+    "differentia": "consists of a string of characters that does not follow an encoding system",
+    "enriched_definition": "An arbitrary identifier is a non-name identifier that consists of a string of characters that does not follow an encoding system.",
+    "genus": "non-name identifier"
+  },
+  "1a25db0f80873bd1aa13efe8893b1d74bfe3a9127ad4268ffca33850eb82a6ab": {
+    "differentia": "generically depends on some information bearing entity and is about some entity",
+    "enriched_definition": "An information content entity is a generically dependent continuant that generically depends on some information bearing entity and is about some entity.",
+    "genus": "generically dependent continuant"
+  },
+  "b92aacf6073e2a30957b7ad4d63cc04003384fad9d43ad23c84f11c58b3e8f04": {
+    "differentia": "that is about some entity and that prescribes the behavior, action, or state of that entity",
+    "enriched_definition": "A prescriptive information content entity is a information content entity that is about some entity and that prescribes the behavior, action, or state of that entity.",
+    "genus": "Information Content Entity"
+  },
+  "874a3c9c6b8f67d710ceecbf8bcbe375473a247aaa31b87f2f73697a1be140e3": {
+    "differentia": "designates an approximate temporal instant that is part of some day and is specified using a decimal value for the portion of the day that precedes the temporal instant",
+    "enriched_definition": "A decimal time of day identifier is a time of day identifier that designates an approximate temporal instant that is part of some day and is specified using a decimal value for the portion of the day that precedes the temporal instant.",
+    "genus": "time of day identifier"
+  },
+  "f331422a436dc1d9ce4a09ebeefbcc291433cab30fcd45cf2ddff1c79a4aa96b": {
+    "differentia": "that designates an entity by being a familiar or humorous substitute for a proper name of that entity",
+    "enriched_definition": "A nickname is a designative name that designates an entity by being a familiar or humorous substitute for a proper name of that entity.",
+    "genus": "Designative Name"
+  },
+  "b4d9973eea5b77c4a9417fba28893bca7afd4ed953e0d422b1b4c7737678d6f6": {
+    "differentia": "is an information content entity that consists of a symbol that places an entity into some rank order",
+    "enriched_definition": "An ordinal measurement information content entity is a measurement information content entity that consists of a symbol that places an entity into some rank order.",
+    "genus": "Measurement Information Content Entity"
+  },
+  "b7458a1ea512f654643a4139406d03478e690fea096bff771e5ddfe72d7c34f2": {
+    "differentia": "that designates a particular entity as an official name",
+    "enriched_definition": "A proper name is a designative name that designates a particular entity as an official name.",
+    "genus": "designative name"
+  },
+  "53d67fd784cf05a16a37405ad8c4aa4abe00090c251354338a4c8d4be083bed6": {
+    "differentia": "is about a quality of an entity and designates a measurement of that quality on a ratio scale that has a true zero value",
+    "enriched_definition": "A ratio measurement information content entity is a measurement information content entity that is about a quality of an entity and designates a measurement of that quality on a ratio scale that has a true zero value.",
+    "genus": "measurement information content entity"
+  },
+  "46c28d6952808d29a33c7665fa3bef9b9f37bd27a92c7742326a5479f203a285": {
+    "differentia": "is about the position of some entity in some ordered sequence",
+    "enriched_definition": "A sequence position ordinality is a ordinal measurement information content entity that is about the position of some entity in some ordered sequence.",
+    "genus": "ordinal measurement information content entity"
+  },
+  "1ed1c47523c7de8505fddfa2cdaf161993d6038aaf9686103d38b08fcc8f6046": {
+    "differentia": "is about some entity that it represents",
+    "enriched_definition": "A representational information content entity is an information content entity that is about some entity that it represents.",
+    "genus": "information content entity"
+  },
+  "39a25b47a931ef8fec3b97c77d4a304fddf5f838136b0204542cb8a8c806ada0": {
+    "differentia": "is about an interval of possible or probable values for a measured entity",
+    "enriched_definition": "An interval estimate information content entity is an estimate information content entity that is about an interval of possible or probable values for a measured entity.",
+    "genus": "Estimate Information Content Entity"
+  },
+  "cfc3d0837814e87aa5882aa00ef4e2c8018ca1743b7ce80ea1fa3638c560fcec": {
+    "differentia": "is based on the Earth's rate of rotation as measured relative to one or more fixed stars rather than the Sun",
+    "enriched_definition": "A sidereal time reference system is a temporal reference system that is based on the Earth's rate of rotation as measured relative to one or more fixed stars rather than the Sun.",
+    "genus": "Temporal Reference System"
+  },
+  "e23e7c3c6dc0ca60185892b50651ec54f9e63317f7602fcdaa791bcd5243667a": {
+    "differentia": "is a ratio measurement information content entity that is about a measurement of a set of values and whose value is equal to the absolute difference between the largest value and the smallest value in that set",
+    "enriched_definition": "A data range interval estimate information content entity is an interval estimate information content entity that is a ratio measurement information content entity about a measurement of a set of values and whose value is equal to the absolute difference between the largest value and the smallest value in that set.",
+    "genus": "interval estimate information content entity"
+  },
+  "12c3f23ed43c8776f87343b8b3f4e015cae3e4f50a9698cf1d0f0be15f7d081e": {
+    "differentia": "is about a bearer's extent, dimensions, quantity, or quality measured relative to some standard unit or reference",
+    "enriched_definition": "A measurement information content entity is a descriptive information content entity that is about the extent, dimensions, quantity, or quality of an entity relative to some standard.",
+    "genus": "Descriptive Information Content Entity"
+  },
+  "2e51dfb9a680cb148bc87804de82c15151dcdd6f0259316412367e3e19b7678e": {
+    "differentia": "that is about a set of rules and conventions for communication, the rules being a canonical format for expressing and interpreting symbols",
+    "enriched_definition": "A language is a prescriptive information content entity that is about a set of rules and conventions for communication, prescribing a canonical format for communication.",
+    "genus": "Prescriptive Information Content Entity"
+  },
+  "a310fc82743bf3f50e839bfc036c788d1087fe8a78c2be332bf4ce0d4d581c7f": {
+    "differentia": "is an estimate of a quantity of an entity, based on partial information about that entity or an appropriately similar entity",
+    "enriched_definition": "An estimate information content entity is a measurement information content entity that is an estimate of a quantity of an entity, based on partial information about that entity or an appropriately similar entity.",
+    "genus": "measurement information content entity"
+  },
+  "eff1517b3898f8e7f6a81226b4edbadff1ed11d1562bdae96b71710c3a14d951": {
+    "differentia": "that is designed to be used to rank or identify the relative importance of information content entities of a specified type",
+    "enriched_definition": "A priority scale is a reference system that is designed to be used to rank or identify the relative importance of entities of a specified type.",
+    "genus": "Reference System"
+  },
+  "82d1de4fd50fbabb105b672d9a2eae88283d9d9cf0e17d33167ee0211a18482f": {
+    "differentia": "designates a spatial region in which local time is calculated according to a specified offset from Zulu time, which has no offset from Coordinated Universal Time",
+    "enriched_definition": "A military time zone identifier is a time zone identifier that designates a spatial region in which local time is calculated according to a specified offset from Zulu time, which has no offset from Coordinated Universal Time.",
+    "genus": "time zone identifier"
+  },
+  "54f5dac64236c7ffe1fca552760327299d0cdb9f1f8fa6d65d16c8f1fed86236": {
+    "differentia": "consists of the initial letters of some words or syllables in a designative name, and in which each letter is pronounced separately",
+    "enriched_definition": "An initialism is an abbreviated name that consists of the initial letters of some words or syllables in a designative name, and in which each letter is pronounced separately.",
+    "genus": "abbreviated name"
+  },
+  "355dfe1268df265d01916bcaab0d614d7e42284b9b5f3ab2d43126c48d1f0437": {
+    "differentia": "is about the extent to which an entity can consistently produce an outcome",
+    "enriched_definition": "A reliability measurement information content entity is a measurement information content entity that is about the extent to which an entity can consistently produce an outcome.",
+    "genus": "Measurement Information Content Entity"
+  },
+  "99b7c779adcbf01c5161d3a2969de5f6d58d0fd1a44b3198b7966ff463e8f8bf": {
+    "differentia": "designates a particular quantity or lot of material produced by a single manufacturer",
+    "enriched_definition": "A lot number is a code identifier that designates a particular quantity or lot of material produced by a single manufacturer.",
+    "genus": "code identifier"
+  },
+  "8702f7af4ea690fa3c71a60ce97d974b854afb94548c3358785ab83c2895a6eb": {
+    "differentia": "that is about a set of standards for measuring time and for organizing and contextualizing temporal data",
+    "enriched_definition": "A temporal reference system is a reference system that is about a set of standards for measuring time and for organizing and contextualizing temporal data.",
+    "genus": "Reference System"
+  },
+  "b8c361706a387d9561ba5cc01f4a3f61e3cf28e1de864c5b51b16654e4eee60d": {
+    "differentia": "that is designated by a government or court of law as the official name of a bearer entity",
+    "enriched_definition": "A legal name is a proper name that is designated by a government or court of law as the official name of a bearer entity.",
+    "genus": "proper name"
+  },
+  "75ab66297097cf3b68f34ce46f970f549cb63aea0cce2ed6eedbb3423ffc7900": {
+    "differentia": "designates some day by using a combination of day, week, month, or year identifiers formatted according to an implementation of a calendar system",
+    "enriched_definition": "A calendar date identifier is a date identifier that designates some day by using a combination of day, week, month, or year identifiers formatted according to an implementation of a calendar system.",
+    "genus": "date identifier"
+  },
+  "62636cc078fe09a0c5d418ddc3cf874110ef53d890c1f8b23a602159ee6a2ab7": {
+    "differentia": "identifies each point in a spatial region of n dimensions using an ordered n-tuple of numerical coordinates that are signed distances, measured in the same unit of length, from the zero point where fixed, mutually perpendicular coordinate system axes meet",
+    "enriched_definition": "A cartesian coordinate system is a Spatial Reference System that identifies each point in a spatial region of n dimensions using an ordered n-tuple of numerical coordinates that are signed distances, measured in the same unit of length, from the zero point where fixed, mutually perpendicular coordinate system axes meet.",
+    "genus": "Spatial Reference System"
+  },
+  "db193108652d3e085e5a14d02dff2f4b6712a9dc2c4e52d4b63e6ccc17a5d96d": {
+    "differentia": "designates a spatial region in which local time is calculated according to a specified offset from Greenwich Mean Time",
+    "enriched_definition": "A greenwich mean time zone identifier is a time zone identifier that designates a spatial region in which local time is calculated according to a specified offset from Greenwich Mean Time.",
+    "genus": "time zone identifier"
+  },
+  "8d2976658a54cd45b016153f0d73214b63fe553c06affd585830223852b5408f": {
+    "differentia": "is about some interval scale having no true zero value onto which a quality of an entity is placed",
+    "enriched_definition": "An interval measurement information content entity is a measurement information content entity that is about some interval scale having no true zero value onto which a quality of an entity is placed.",
+    "genus": "Measurement Information Content Entity"
+  },
+  "cd3bd1374d006b23870dc58ed5348c49949673fa740cc108e30c3538014cc041": {
+    "differentia": "that is presented in a canonical media format",
+    "enriched_definition": "A media content entity is a information content entity that is presented in a canonical media format.",
+    "genus": "Information Content Entity"
+  },
+  "cfa617248fce8111c19fd5effa88a473ce01290a55e8cf24516003b6fadfff49": {
+    "differentia": "that is about and attests to certain demonstrated characteristics of some information content entity-bearing object, person, or organization",
+    "enriched_definition": "A certificate is a media content entity that is about certain demonstrated characteristics of an object, person, or organization, and that attests to those characteristics.",
+    "genus": "Media Content Entity"
+  },
+  "f0b4869ec78f85a48715dac3d6f464e2a5b4826507f3fc2d5e962c5d33c39e1d": {
+    "differentia": "is issued by some educational organization to some person and designates that the person has satisfactorily completed a course of study or serves as an honorary recognition of that person's achievement",
+    "enriched_definition": "An academic degree is a certificate that is issued by some educational organization to some person and designates that the person has satisfactorily completed a course of study or serves as an honorary recognition of that person's achievement.",
+    "genus": "certificate"
+  },
+  "cdfdc4a7dbad5a4a433d66c011a272aefa8e48be1e6b016919b2f5fef804a145": {
+    "differentia": "represents some entity owing to a visual isomorphism between the carrying artifact and that entity",
+    "enriched_definition": "An image is a Media Content Entity that represents some entity owing to a visual isomorphism between the carrying artifact and that entity.",
+    "genus": "Media Content Entity"
+  },
+  "231c324b34297d3033255d947b657b918befd0418cd1c9dbf958fc443f00f437": {
+    "differentia": "that is prescribed by some canonical visual format",
+    "enriched_definition": "A chart is an image that is prescribed by some canonical visual format.",
+    "genus": "image"
+  },
+  "36e789d1e2ddb75565c42b6a0b75a4565499bc4e98116db757e7ce356a6dd955": {
+    "differentia": "that is designed to be rapidly searchable and retrievable",
+    "enriched_definition": "A database is a media content entity that is designed to be rapidly searchable and retrievable.",
+    "genus": "Media Content Entity"
+  },
+  "14f6cb2a1161228a4f119d84e1e54dbce8950669543d14b203cf6cf1db824967": {
+    "differentia": "that has part some information content entity that is about some sequence position ordinality",
+    "enriched_definition": "A list is a media content entity that has part some information content entity that is about some sequence position ordinality.",
+    "genus": "Media Content Entity"
+  },
+  "d03818a165bfa44642100da933c9ac5efbe7d89c8bafc770e61bb67ac3266815": {
+    "differentia": "has part some code identifier",
+    "enriched_definition": "A code list is a list that has part only code identifiers.",
+    "genus": "list"
+  },
+  "5b48a2214ed19c630520509d3b17ddcdd18576fe8e097d80cdadd86a5a70a7ca": {
+    "differentia": "that has part a sequence of images presented sufficiently rapidly to create the appearance of motion and continuity",
+    "enriched_definition": "A video is a media content entity that has part a sequence of images presented sufficiently rapidly to create the appearance of motion and continuity.",
+    "genus": "Media Content Entity"
+  },
+  "60b6fd663bc2a6af25411f820575d520c6b77072954d371ba1e581f3ab1299ed": {
+    "differentia": "that is relatively brief and is designed to be transmitted from a sender to a recipient",
+    "enriched_definition": "A message is a media content entity that is relatively brief and is designed to be transmitted from a sender to a recipient.",
+    "genus": "Media Content Entity"
+  },
+  "ded732c8d68549b84e4bd208b794d6f7034d0218e67fbd6c4b65acff13475cf1": {
+    "differentia": "that is about a possible or impending threat",
+    "enriched_definition": "A warning message is a message that is about a possible or impending threat.",
+    "genus": "message"
+  },
+  "c3f9bd45dfa34a2b5d0f437d6c581e20268efe805b3075248124d36c1b2ae537": {
+    "differentia": "is transmitted to the email box of a recipient",
+    "enriched_definition": "An email message is a Message that is transmitted to the email box of a recipient.",
+    "genus": "Message"
+  },
+  "1a9d7e98c1a337c097b3a8068b90b962474663fb02ee67a1e14ef7014ba21e83": {
+    "differentia": "that is about a scenario that has been determined to merit attention by a recipient",
+    "enriched_definition": "A notification message is a message that is about a scenario that has been determined to merit attention by a recipient.",
+    "genus": "message"
+  },
+  "932613501d57ca798e3321c1c450637d65145c02817f0369fdcd685edebc0494": {
+    "differentia": "is composed of geometric shapes that encode, as part, some prescriptive information content entity",
+    "enriched_definition": "A barcode is a media content entity that is composed of one or more geometric shapes that are part of some prescriptive information content entity.",
+    "genus": "Media Content Entity"
+  },
+  "810281598eaf5077c86e1ce5eb51dcc2c45856600706b34bb98420610c1fbc9f": {
+    "differentia": "that designates some email box as the destination of an email message for the purpose of email messaging",
+    "enriched_definition": "An email address is a designative name that designates some email box as the destination of an email message for the purpose of email messaging.",
+    "genus": "designative name"
+  },
+  "d265ed322673af57bdc234aa1e42944d89b48c256efae7fade541269d7e4a7c4": {
+    "differentia": "that is part of some document content information content entity and consists of a single line or row of that document content entity",
+    "enriched_definition": "An information line is a media content entity that is part of some document content information content entity and consists of a single line or row of that document content entity.",
+    "genus": "Media Content Entity"
+  },
+  "cf031b2efa61dd22ebcc1ab155a3deff09909263fa171e25e703d09b122447f7": {
+    "differentia": "is part of some document content entity and prescribes the elicitation of information to be written or selected within that document content entity",
+    "enriched_definition": "A document field content is a media content entity that is part of some document content entity and prescribes the elicitation of information to be written or selected within that document content entity.",
+    "genus": "media content entity"
+  },
+  "6473dfa4ed8233eb9b68775aa6002abe30d3db27ff207906a71a87133433c518": {
+    "differentia": "consists of a series of paragraphs of text or diagrams that are intended to be carried by physical pieces of paper or an electronic word processing file",
+    "enriched_definition": "A document content entity is a media content entity that consists of a series of paragraphs of text or diagrams that are intended to be carried by physical pieces of paper or an electronic word processing file.",
+    "genus": "media content entity"
+  },
+  "4c9d3c4de107f1a73c3c73a4e1ddde8df27fdb6624c64cc331cde32a2e1ddbe9": {
+    "differentia": "that is a bearer of ink marks arranged on paper, parchment, or other materials fastened together to hinge at one side",
+    "enriched_definition": "A book is a document content entity that is a bearer of ink marks arranged on paper, parchment, or other materials fastened together to hinge at one side.",
+    "genus": "document content entity"
+  },
+  "586884f43b96035c1daea76152e843328652cadd351c37798dd3d7a4b4c15d7a": {
+    "differentia": "that is a transcription of an information content entity that was originally recorded in a different medium",
+    "enriched_definition": "A transcript is a document content entity that is a transcription of an information content entity that was originally recorded in a different medium.",
+    "genus": "Document Content Entity"
+  },
+  "6cf1cea0c9f761fcd8e746e11a908bc6f8c99f05a2f482e948f50040be7b0142": {
+    "differentia": "that is composed of information arranged in rows and columns and that is designed to be interactively manipulated by means of computer software",
+    "enriched_definition": "A spreadsheet is a document content entity that is composed of information arranged in rows and columns and that is designed to be interactively manipulated by means of computer software.",
+    "genus": "Document Content Entity"
+  },
+  "51c09e416dd47ad23229bdf17da0e3173214c8a5ed5c7e9ed43c9cdf9d4308c6": {
+    "differentia": "that is about some event, situation, or observation result and that conveys an account of it",
+    "enriched_definition": "A report is a document content entity that conveys an account of some event, situation, or the result of some observation or inquiry.",
+    "genus": "Document Content Entity"
+  },
+  "3165c0a1769b2d9908bb0f7e85062bf4ee5bfc9836accf1ebcd6fe948129f7b3": {
+    "differentia": "has part some form field content",
+    "enriched_definition": "A form document is a document content entity that has part some form field content.",
+    "genus": "document content entity"
+  },
+  "a8ada3488c35493dc12da708908dde3ad2293ac12a035e54b25819dea9df2265": {
+    "differentia": "that is part of a journal issue",
+    "enriched_definition": "A journal article is a document content entity that is part of a journal issue.",
+    "genus": "Document Content Entity"
+  },
+  "c17a9151ccda60bfca048e1d62f7fd73dcb5de640ae99383057ddcbb3cf44da1": {
+    "superclasses": [
+      "temporal instant identifier",
+      "designative information content entity",
+      "information content entity"
+    ]
+  },
+  "bf86d81bd4424b0a8e0d0ff27fcf10cfd865b8187bf7de79596fa215b1619df2": {
+    "superclasses": [
+      "date identifier",
+      "calendar date identifier",
+      "designative information content entity"
+    ]
+  },
+  "13cf5af1c32ba8246a13a64d108f2e023cb65b81980da8e050e2833e023d1bcf": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "8626588d4bffb1399f7c5897f22793482f12bb01d5df77e7ec168350e4c576e8": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "1f2597dc5e57d515b489f5d4f1fb907eee986e0e3f7e489ba2ef178618b10e44": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "b7cb144b9a1f0a699b1bdb57c786b13c0a91286c186df9bb12109f60ad14d903": {
+    "superclasses": [
+      "information content entity",
+      "designative information content entity"
+    ]
+  },
+  "44a762c8d6d41049d1db928ca68727501a5dd3513b180ccb54c1c6e3e273c004": {
+    "superclasses": [
+      "estimate information content entity",
+      "descriptive information content entity",
+      "representational information content entity"
+    ]
+  },
+  "1556066e4631b29762dda6d56cfbf5d7f65157ded9ae7f0f2ac217e0f9145548": {
+    "superclasses": [
+      "measurement information content entity",
+      "descriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "0ab6329999e22c75ae74c4356be0d0292ac9d2c6025298dc69e0ebff89ecc64b": {
+    "superclasses": [
+      "measurement information content entity",
+      "information content entity"
+    ]
+  },
+  "ec44ca4025d2258662a424edc2dad14f7cd7fa74d464f2fae3ff3c6416ac85b8": {
+    "superclasses": [
+      "measurement information content entity",
+      "descriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "ef8b1e6f05052588a195988dad3528af0380020078c6a0c85af7fdc529ad9271": {
+    "superclasses": []
+  },
+  "c207809420103866dd5ddf1dd4647d003d316d39ad52f23597dbe989b7305f33": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "a009e0c0dfa61da1c7391624a9ad323086e841435e18651bfb6b2cbf72a0fcaa": {
+    "superclasses": [
+      "information content entity",
+      "prescriptive information content entity"
+    ]
+  },
+  "964163c83db028281f3e244c5d0767a3ea47168f425642a8c9455469d9a9d746": {
+    "superclasses": [
+      "temporal reference system",
+      "reference system"
+    ]
+  },
+  "bde2704c2c9c65b7947eebdfc556fdee0e0a61ee539626814792e53781c9d17b": {
+    "superclasses": [
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "f8f52e6f8e5275b56dde99a53d0384f537049cce4c5d8e4eab2e83b9352466b1": {
+    "superclasses": []
+  },
+  "488148f2091d33a8fb672e99efeb41c10354d31d0e76117ddda920bef9a22cff": {
+    "superclasses": [
+      "measurement information content entity",
+      "descriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "2a04a16aaa51db5f69e1e2ab4dd9f2154702ccfee11fa0dc24b32c4bc5d0b16f": {
+    "superclasses": [
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "af52e1a8875aabcde4bdbffd73190e55d1cdd182ce13ba782a919a07678ba60b": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "4005b5cc23c25342fff444dc13b0ef8eca3ff0975f8df30d87941162329b0511": {
+    "superclasses": [
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "d4bbb2521733fb80fa4016dc3cdf9616ebcbac84f715db18707aebb671db0cb6": {
+    "superclasses": []
+  },
+  "f47c0681ea404e9b4a052ce237adf9e8563f5ff4fc6257c90f3bcc398cda10b7": {
+    "superclasses": [
+      "non-name identifier",
+      "designative information content entity",
+      "information content entity"
+    ]
+  },
+  "2581e6aef52edc5eefb99e469ec5ea41f1378891225557948203c686ca891e17": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "92f843b83bbc83c7fdb4cbff9ba769433918980c746414a66348480d98cf3151": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "1f5fd66f7ea6b03274b31151883dd7c757329fd23889853b6569ec0201086583": {
+    "superclasses": [
+      "non-name identifier",
+      "designative information content entity",
+      "information content entity"
+    ]
+  },
+  "d1dbe1780bcbf88779790997bd7af665e68b8777627c218f548c6bd5732a3b3a": {
+    "superclasses": [
+      "measurement information content entity",
+      "information content entity"
+    ]
+  },
+  "0ef35ff2cfa40482882c8b3cf267117d52059c99a2414b6f763881f421ce09a3": {
+    "superclasses": [
+      "designative information content entity",
+      "information content entity"
+    ]
+  },
+  "592bd79b6808215d3e61fa71234055872c3857e1d4e1763dc885e70c7146c668": {
+    "superclasses": [
+      "time of day identifier",
+      "temporal instant identifier"
+    ]
+  },
+  "0dc62484cbc4d865b3ec28b35809d57e2b290726063a2c5a3d8e8058d850409c": {
+    "superclasses": [
+      "information content entity",
+      "information quality entity"
+    ]
+  },
+  "c451ad6f569f930be8f657403358b052d9a6d82418df6a0d25c39da227d919f8": {
+    "superclasses": [
+      "measurement information content entity",
+      "information content entity"
+    ]
+  },
+  "bc8902c037c69ec6aed0a9e9c07093cebec3012bc8c8ff888fd6f8400fee53e4": {
+    "superclasses": [
+      "designative information content entity",
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "b44d5494b52db79e6bf00dffa7880bf806bdd44d331976205f3ae372057767a2": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "276eaffd2edc30bd13378249aa219ccb75807606d8dee0bffbc70c4a5f0eac88": {
+    "superclasses": [
+      "temporal reference system",
+      "reference system"
+    ]
+  },
+  "653b851b67b7a1f170410a0e4d1b369e1f12b94343ffa4deb8e7ed9782784d4b": {
+    "superclasses": [
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "17fe8dfd656e74b8cfae34f03b830668fc6401c739c9deda4abafb54f9940b99": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "be7e53e094b2c188965bd49f3d38f0dd9480828aa74d4f34803810fb908b5811": {
+    "superclasses": [
+      "measurement information content entity",
+      "descriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "9cca214730def765835de546f0f1c0e4742f62be3187c4e78cb707ec2d10efea": {
+    "superclasses": [
+      "designative name",
+      "designative information content entity"
+    ]
+  },
+  "1d326467eca1f1abbbc694c97fa8f866f31e9993fe39f1c2783edc8a694a405d": {
+    "superclasses": [
+      "representational information content entity"
+    ]
+  },
+  "4abd0d25ed470a852bd2092de38c3ec1e1d790c9c7caf66440c125439f0509de": {
+    "superclasses": [
+      "descriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "f5d6d2b9a470d0c54a50a8213a2d15041370ef56ac79632ea34f7eb59526358a": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "1e35fad37faa7cb61de67b8e9f31d19a40d7ed8e46aea5bdfaee8c5a74b0d9a9": {
+    "superclasses": [
+      "descriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "d9aa30c439924872b44eada06f0dfedce6cf96a6565d0a3c5205beadb0337ea4": {
+    "superclasses": [
+      "measurement unit"
+    ]
+  },
+  "6388a33569d3ca0312d0476a2424c4f5085c08ba9c0da1f713a4eab3c27812e5": {
+    "superclasses": [
+      "information content entity",
+      "descriptive information content entity"
+    ]
+  },
+  "ee1d90d65801241465593fbe2b77140a6a59fb78254ee4510111e3fa54240b19": {
+    "superclasses": [
+      "date identifier",
+      "julian date identifier"
+    ]
+  },
+  "dd5c0f9977d9b222fbb412895217c266aff1fe2b4f9d9ad9e192ff29d41f1a85": {
+    "superclasses": [
+      "designative information content entity",
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "ce20f7027bfe11a0d274e1c99c51d818dbbdd35a4e9ef59005d7346a2d7d1079": {
+    "superclasses": [
+      "temporal region identifier"
+    ]
+  },
+  "13c93953e5c606140f96ac47065ad16f42ee229276317290a5fdcf6eeaf318a9": {
+    "superclasses": [
+      "date identifier",
+      "time of day identifier"
+    ]
+  },
+  "bed3dfe539fd13ffff97830fbc1e4554740e42336d3c0b6ec0e5cdccb55efa6c": {
+    "superclasses": [
+      "measurement information content entity",
+      "descriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "649104a0d65d8a8c113c77cbc94151a358fe1ea5a1f96cfc74ffc0c418a7f08b": {
+    "superclasses": [
+      "representational information content entity"
+    ]
+  },
+  "cbd8081927e9be726055868d8d457aaf49a8be7cff8ebd440aaa3057163a3168": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "83ab48180c5231b1411403f07e2b688e4c0e3d0cb29631bb96917bfc11a81d51": {
+    "superclasses": [
+      "julian day number",
+      "julian date identifier"
+    ]
+  },
+  "75f1cf580887cb0f4aab202de1d8934acf7026149cb89b339bce49ba3562c595": {
+    "superclasses": [
+      "measurement information content entity",
+      "estimate information content entity"
+    ]
+  },
+  "196d8224ad542aad80573ede74ecdc9bcecae51ed591262cde3bb0bb8db858c5": {
+    "superclasses": [
+      "designative name",
+      "designative information content entity",
+      "information content entity"
+    ]
+  },
+  "5d6ff35456e9f7e5ffc715f24f4573423bf71b5c98dcffc16d3e8d3fd7cb9fa0": {
+    "superclasses": [
+      "temporal reference system",
+      "reference system"
+    ]
+  },
+  "6fcd7bebb593d48a47f71c3663b84c2bae9f16b82f5c0c91686e977cc68f8740": {
+    "superclasses": [
+      "information content entity",
+      "designative information content entity",
+      "representational information content entity"
+    ]
+  },
+  "9b6212c2ad57aa644b848ac3c4f89f53ea77f9e58400b4c7098dd5c29530a33f": {
+    "superclasses": []
+  },
+  "b5820948aa1979f680d8faf5ea27df354ba9d8423248702728def0179265fccc": {
+    "superclasses": [
+      "representational information content entity"
+    ]
+  },
+  "4fb7571afa985e319f9b0b4e0eb3a35db450c0b74968382874dc679d656de4f9": {
+    "superclasses": [
+      "temporal instant identifier",
+      "non-name identifier"
+    ]
+  },
+  "70a868090c8dce611b81290fe26e447e5e38c49d8f037c625a1c45a1c295fd42": {
+    "superclasses": [
+      "designative information content entity",
+      "representational information content entity",
+      "information content entity"
+    ]
+  },
+  "ecf307248315aad59deacc33dcf27afbd41324c90471159638c0f11e0422f190": {
+    "superclasses": [
+      "descriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "a760f1eec0bd2490bf0260d913d7411d7faec6d7e548fc9b72b9fed6b4578ad9": {
+    "superclasses": [
+      "designative information content entity",
+      "representational information content entity",
+      "information content entity"
+    ]
+  },
+  "c45d0e3cf54620b32676f604ebc5f6a6d605f35c245615f9228e6395b3896e03": {
+    "superclasses": [
+      "descriptive information content entity",
+      "representational information content entity",
+      "information content entity"
+    ]
+  },
+  "a25cf40e76abdbc5ce96f89bf0b5a466096af90e19844cdc7f541b2c86824635": {
+    "superclasses": [
+      "information content entity",
+      "measurement information content entity",
+      "descriptive information content entity"
+    ]
+  },
+  "3c8d038a81408f9c771e04e473f3672c96b41027f26b622749e8c22581343cb4": {
+    "superclasses": []
+  },
+  "1ceb58393c5c6f966da2bfaaadcfd8f92e6b18b9d0c2f96e25d99eae8c85f7b5": {
+    "superclasses": [
+      "information content entity",
+      "descriptive information content entity"
+    ]
+  },
+  "2b50e88ab0b7c58fbbc4dcfaf1f2fa7b131ddcefa647bee56874ef39f9649a12": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "b96845e6ad346d618b144f3fae05d0e83fb7ab8abd2cde3aa80ff813b26f78bc": {
+    "superclasses": [
+      "ratio measurement information content entity",
+      "measurement information content entity",
+      "estimate information content entity"
+    ]
+  },
+  "5c8738b9089a68043c62cafede2d04e602c9561eddf9abf51aa5e58a06fabf00": {
+    "superclasses": [
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "139198c8c50a3dcfe761ee76e4fd4f0926733dffcf4386ad8f578c4d421a7e9e": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "3aad00ee7b02c455d920ae2514f2dc95cf667f155d54d9420a0468715a0430ad": {
+    "superclasses": [
+      "information content entity",
+      "descriptive information content entity"
+    ]
+  },
+  "7475503c35e6f6b123e8f0aed05b94ce499585dcccafda9ef2c59b6f46f2dc8c": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "de887385812bd725897ef2a73c067ab619f80afb12610a7b2484b994a28b007f": {
+    "superclasses": [
+      "spatial region identifier",
+      "non-name identifier"
+    ]
+  },
+  "392a8e98446693d1f0e0530d625e4c29bf94b6baaf052a42c20a6546482a0d4e": {
+    "superclasses": [
+      "designative name",
+      "designative information content entity",
+      "information content entity"
+    ]
+  },
+  "41105e849c7eb2e48f364cfbfa670dc38b37f22114cfba7158ab07df03928106": {
+    "superclasses": [
+      "descriptive information content entity",
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "ba2e1176f82c988f7beafd6c5d9e07d83fc02a61bc812e326b26ce80846f31e0": {
+    "superclasses": [
+      "non-name identifier",
+      "designative information content entity",
+      "information content entity"
+    ]
+  },
+  "254ba33374f535dc8ca63750a2bac2cc2ccbd119cadcff3db46eaf520f0f5cc5": {
+    "superclasses": []
+  },
+  "caa35a2d2e9171c5144c5fb4fb656edd249abe72c14a74d777b02e188822d196": {
+    "superclasses": [
+      "designative name",
+      "designative information content entity",
+      "information content entity"
+    ]
+  },
+  "fa50e420b49614dd028d4c2f6f906b18c6b4b6ae8017468e377b226d3197ecf1": {
+    "superclasses": [
+      "temporal region identifier",
+      "non-name identifier",
+      "designative information content entity"
+    ]
+  },
+  "30f4b8d4c95f8a59b22bbda167c6d36c216fcf7e475d04fffb5775b46cc6f8fc": {
+    "superclasses": [
+      "reference system"
+    ]
+  },
+  "31d7ae8f9752bbeb02eb186072863aae7ba105c8a05b5d007502bd226d94c430": {
+    "superclasses": [
+      "spatial region identifier",
+      "designative information content entity"
+    ]
+  },
+  "d8eef63c35bb6c0940ab00172ba30cbbd15142b2b3d4123228a56155827b7be5": {
+    "superclasses": [
+      "information content entity",
+      "descriptive information content entity",
+      "representational information content entity"
+    ]
+  },
+  "4d3f61396bcc7ba16638f178c8d5af6353cd90998a3d7b394af16ab30fa8681a": {
+    "superclasses": []
+  },
+  "4353ba4f0da5729a33438d96be3a8eecb7b76d098d3766e260f25d845cb031f6": {
+    "superclasses": [
+      "information content entity",
+      "descriptive information content entity"
+    ]
+  },
+  "a53991baacc5c74715570840d1ce4eab02c325ecac2da2596bda2a1f305dc377": {
+    "superclasses": [
+      "information bearing entity",
+      "information content entity"
+    ]
+  },
+  "8096b743ab421cd6f6b1d57e52baccac0bfe4d851b6c55bb8ec9687ea46b622c": {
+    "superclasses": [
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "aa12c88afd32cbdbb9ae8fbbac41a6b5dff4cbed430d2088a2e9024b462e6c9d": {
+    "superclasses": [
+      "media content entity",
+      "representational information content entity",
+      "information content entity"
+    ]
+  },
+  "cdf8179b5c79a629376d30bc9d4aa0029d4abd0aced8d6aca5b241dac64e1305": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "ca433e55d74c6e97c7dce8cbea04798aec8e46e9d394cea882c8dfcdcf2dafe5": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "ba59a912fc584f8187007d0bbb61d3758644a57953b5f08524cc3efe7e99cb2e": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "0983e12276bbd705d91371883d50338b8aade7e841adf48a67832ac41ab86448": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "6e2629bd1df534ba43b4e01b6f815f180c1ee23efee86b34f5d0d3577b5136c2": {
+    "superclasses": [
+      "information bearing entity",
+      "information content entity"
+    ]
+  },
+  "6d55d465ab6521abd05d7ef17d7e1114925496b13e8174e5c94df193c1570e04": {
+    "superclasses": [
+      "information bearing entity",
+      "information content entity",
+      "notification message"
+    ]
+  },
+  "04f062ea501b467154b0cd1ebe9e8ecf561a2ab200a0b54d339a9bfa7c810b36": {
+    "superclasses": [
+      "information bearing entity",
+      "information content entity"
+    ]
+  },
+  "31732ebb866e8f1c7ea5b8301b40f26afb17038f3f791ae12d9fe763a713a40a": {
+    "superclasses": [
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "eff9b63d2766d9e9e8a6f8713837c42cb8dc24dc12b15a9eeccb335a3c39857f": {
+    "superclasses": [
+      "information content entity",
+      "information bearing entity"
+    ]
+  },
+  "c3c7bda162b56f0f44e03a957ce3b2f67e4517112a3912a9f968c0d523920bb6": {
+    "superclasses": [
+      "designative information content entity",
+      "representational information content entity",
+      "information content entity"
+    ]
+  },
+  "b6fa9830b4477e3b5a81a9dc676ea225753cfc884dbb81db4de1568deb6b0dcc": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "8ed5060bf59dc93a351c80794f94d6a53c678413aca4a76348cc7e0ab76e9442": {
+    "superclasses": [
+      "prescriptive information content entity",
+      "information content entity"
+    ]
+  },
+  "f9359390b76445744cd623684c0d8a7060ee6d9a350c9bc233b384afe6f9ca57": {
+    "superclasses": [
+      "information content entity"
+    ]
+  },
+  "f6d02cc0d247af50fd0a68c9b34cbb97d610eea637f4b01b9a871445be6534db": {
+    "superclasses": [
+      "information bearing entity",
+      "information content entity"
+    ]
+  },
+  "31ca8cc7fa881a1e833f9293dae2093bd96b424037d53ad97a44ba5f3896c81d": {
+    "superclasses": [
+      "information content entity",
+      "information bearing entity",
+      "representational information content entity"
+    ]
+  },
+  "22d7b5d21ef0d179f5b2125d9effabee6b8d8676f17244db205a9e6f594566bc": {
+    "superclasses": [
+      "information content entity",
+      "information bearing entity"
+    ]
+  },
+  "82129647dabad90ce02e7cfd64ade681ea3170dcc5a12a1c35deff7165c3b2a9": {
+    "superclasses": [
+      "information bearing entity",
+      "information content entity"
+    ]
+  },
+  "631d5618d54d7b303ee128d2b712211fb2aeee470efaa2539181ea4b5905a2f9": {
+    "superclasses": [
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "059eb67268731461376f70650ded9465f64ef5b2e9199f3d46c64788841e4047": {
+    "superclasses": [
+      "information content entity",
+      "representational information content entity"
+    ]
+  },
+  "1a02e9979ffd78dd7ecaf053654ae03cfa79f08f32056809b0b70835a634622d": {
+    "plausibility": 0.85,
+    "reason": "A mode point estimate is information about a set of values, so it plausibly represents that set and therefore falls under Representational Information Content Entity."
+  },
+  "623477798494883f2afa9b6483e9725f06aaeccb8d5d33666d8ad80116e2106b": {
+    "plausibility": 0.9,
+    "reason": "A nominal measurement information content entity consists of a classifying symbol, which represents the categories it classifies, so it is plausibly a subclass of representational information content entities."
+  },
+  "cf9a116e502b8ba105e2b4189c2b2ae3c5bff8d762c9af369eb2fe9cfcd7b248": {
+    "plausibility": 0.9,
+    "reason": "A Spatial Region Identifier is a Designative Information Content Entity, and designation is a kind of representation, so it is plausibly a subclass of Representational Information Content Entity, though the subsumption depends on designation being a subtype of representation in CCO."
+  },
+  "0b95d532ce1806f063446e2cb39c8f63942268de000a32701272f0c4628431fb": {
+    "plausibility": 0.9,
+    "reason": "A Temporal Region Identifier is a Designative Information Content Entity, which is a kind of Representational Information Content Entity, so the subclass relation follows from the hierarchy."
+  },
+  "48ab9a6514af82bae608ce819a76db03957aacfc3883ccbd6146310e05ddae31": {
+    "plausibility": 0.9,
+    "reason": "An Abbreviated Name is a Designative Name, which is an information content entity that designates (and so represents) an entity, so it falls under Representational Information Content Entity."
+  },
+  "b9d30314c352a10bd4d56e35e2f5bb0d78b4622483438f25bcfbab9b5306b017": {
+    "plausibility": 0.95,
+    "reason": "A Non-Name Identifier is defined as a Designative Information Content Entity, and designation is a form of representation, so it follows that it is an Representational Information Content Entity."
+  },
+  "ba794b29cb424528600a455909ee9d3c52310db91b8a870371b775de2ae60b8d": {
+    "plausibility": 0.9,
+    "reason": "Designation is a form of representation: an entity that designates another entity through symbols also represents it, so the subclass relation is largely sound."
+  },
+  "9a18f519f4d05f5428241003d25ab53aab9afa0ca87eb2c455317b47fff40684": {
+    "plausibility": 0.85,
+    "reason": "A Temporal Instant Identifier designates a Time of Day, and designating an entity is a form of representing it, so the subclass axiom is very likely true."
+  },
+  "92ccf5881a4a38f78440a997a6257f75d94e704b1c78fe8f07ef07ba613f81be": {
+    "plausibility": 0.25,
+    "reason": "Describing an entity does not by definition entail representing it, and CCO treats descriptive and representational content as distinct branches, so the subclass link is unsupported."
+  },
+  "8188da8d0356afb78af63f6794519fee3e42b7dab969fc591f6368f3e93891dc": {
+    "plausibility": 0.85,
+    "reason": "An arbitrary identifier is a kind of identifier, which is an information content entity that refers to some entity, so it should represent an entity."
+  },
+  "0873d84ecf8be605f43a0c9c36030d8285672b5ba411cb9ebd33e7ac2a2877b4": {
+    "plausibility": 0.15,
+    "reason": "A prescriptive information content entity prescribes rather than represents, so it is not clearly a subclass of representational information content entities; the axiom is likely false."
+  },
+  "3de26d2da152a0c6c85a67f46ce42018d84f6af45a11fe909dc0cd9d772d9d30": {
+    "plausibility": 1.0,
+    "reason": "A Nickname is a Designative Name, which is a kind of information content entity that designates an entity, so it represents something and is therefore a Representational Information Content Entity."
+  },
+  "6ffcab7e2484ea1be3d4f44742edbb7391cb8032a99a130f2911db4368d695d2": {
+    "plausibility": 0.92,
+    "reason": "A Proper Name is a Designative Name, which is an information content entity that designates (represents) a particular entity, so it fits the subclass definition."
+  },
+  "04f117ee259afba98ce0438119daaae247ecece1367dba71455d050ba5904c7d": {
+    "plausibility": 0.9,
+    "reason": "A ratio measurement ICE consists of a symbol that places an entity's quality onto a scale, so it represents that entity and fits within Representational Information Content Entity."
+  },
+  "e6e738d0127844d16c8fdb898eb78a95a1ae24895b417521c068924abca01398": {
+    "plausibility": 0.85,
+    "reason": "A measurement ICE is a descriptive ICE that describes an entity, and describing an entity is a form of representing it, so it falls under representational ICE."
+  },
+  "67d2f80e6676f702c3439904df86f688c0d487fff4cf650c5426f6d31863c68c": {
+    "plausibility": 0.85,
+    "reason": "A reliability measurement ICE is a measurement of an entity's consistency, so it is an ICE that represents that entity, which fits the representational ICE definition."
+  },
+  "3bbe3bd03722224c17ed8c07071db7b4449d2f5a521bada89f44578d7b8c6969": {
+    "plausibility": 0.9,
+    "reason": "Interval Measurement Information Content Entity is defined as a Measurement Information Content Entity, which in CCO is a kind of representational information content entity, so the subclass axiom is very likely true."
+  },
+  "e614173bcdaad525a3de0bedd2b1bf650abe74c57623af1aaff067d06260aa36": {
+    "plausibility": 0.9,
+    "reason": "An Image is defined as a Media Content Entity that represents some entity, which fits the definition of Representational Information Content Entity as an Information Content Entity that represents something."
+  },
+  "ff115e9237b3526e3dd51df98b67426648ab37c63362e4f0164acb2ac6d5c79e": {
+    "plausibility": 0.8,
+    "reason": "A chart is an Image, which in CCO is an information content entity that represents something visual, so charts generally represent some entity (their data or subject), though the link depends on how Image is axiomatized."
+  },
+  "24564a21c257d2b79ca2914dd35875f14608d7256f9f86e52bee629957ab4f5a": {
+    "plausibility": 0.85,
+    "reason": "A Notification Message describes a scenario, so it is an Information Content Entity that represents an Entity, though the axiom relies on 'describes' being read as 'represents'."
+  },
+  "25759fdf6a7bf3267572015861b2c70bf77b28c6c108be115ab29d4ec27bbeef": {
+    "plausibility": 0.9,
+    "reason": "An Email Address is a Designative Name, and Designative Names are Information Content Entities that designate (represent) an entity such as an Email Box, so it is plausibly a subclass of Representational Information Content Entity."
+  },
+  "9e20963b5c7c37e19af816c83116de77136c265c33fd8950205cc5af4f36e49e": {
+    "plausibility": 0.85,
+    "reason": "A transcript is a Document Content Entity that records and thus represents the spoken or recorded content, so it is plausibly a representational information content entity."
+  },
+  "3cef7f508245f6cb24247a6f7a9035aeebf502e1051d4f3220986de1577b00b1": {
+    "plausibility": 0.75,
+    "reason": "A form document is a document content entity with fields, which typically represent some entity such as a person or transaction, though blank forms may be weaker in representing a specific entity."
+  },
+  "f8fe7657a8f376c36b163e5654ca26af90dee028af3a6212b009c0ad0774af89": {
+    "plausibility": 0.8,
+    "reason": "A Journal Article is a Document Content Entity, hence an Information Content Entity, and articles generally represent some entity (their subject matter), though this is not guaranteed for every instance."
+  },
+  "6cce1f86dba0cb3f0994cf12948d4584c9c435f5890b18c00c63b71fe3e5f4b7": {
+    "plausibility": 0.85,
+    "reason": "An artificial language is a kind of language, and in CCO languages are treated as information content entities (symbol systems that generically depend on bearers and are about things), so the subclass link is very likely correct though the definition doesn't state it explicitly."
+  },
+  "b14fd1c6f0b5e1c672cbc6522b58b721911092984ca5bf3d48dd0b835b6cf013": {
+    "plausibility": 0.95,
+    "reason": "Minimum Ordinal Measurement Information Content Entity is an Ordinal Measurement Information Content Entity, which is a kind of Information Content Entity, so the subclass relation follows by transitivity."
+  },
+  "98bdc298d0b1892ce95d6f954ac32af426fce8784afe0d4525179438cb9b69f1": {
+    "plausibility": 0.95,
+    "reason": "Artifact Version Ordinality is defined as an Ordinal Measurement Information Content Entity, so by transitivity of subclass it is necessarily a subclass of Information Content Entity."
+  },
+  "575f1b6ce277d7554d4cb7b2d0f6ac594524902d4a9d85705cd682519041542d": {
+    "plausibility": 0.95,
+    "reason": "Event Status Nominal is defined as a Nominal Measurement Information Content Entity, which in turn is an Information Content Entity, so the subclass relation follows by transitivity."
+  },
+  "cb8bef6153c86bfab88f2313feeb89be531c28049fa0a8f0628651b53ca4e514": {
+    "plausibility": 0.2,
+    "reason": "A Spatial Reference System is described as a set of standards for identifying positions by measurement, which is not obviously a generically dependent continuant about some entity, so the subclass claim is doubtful though a standard could be construed as an information artifact."
+  },
+  "dc0979a5baca02c813d671f2a5b65dd4c4529b6206146cb9fad57a90d7c5fcea": {
+    "plausibility": 0.95,
+    "reason": "A Nominal Measurement Information Content Entity is a Measurement Information Content Entity, which in turn is an Information Content Entity, so the subclass relation follows transitively from the given definitions."
+  },
+  "bfde3f69e20fac90ae8ab6671771a534cae8aacf066c724d7ed1cb92cf0cca77": {
+    "plausibility": 0.9,
+    "reason": "A Priority Measurement Information Content Entity is defined as an Ordinal Measurement Information Content Entity, which by chain of definitions is an information content entity, so the subclass axiom is very likely true."
+  },
+  "9a80088a4a72badd9a800a0c55d43c4f70ee21409fa019622cc316a3a33aaf45": {
+    "plausibility": 0.95,
+    "reason": "A Spatial Region Identifier is defined as a Designative Information Content Entity, and Designative ICEs are a subtype of ICE, so the subclass axiom follows directly from the definitions."
+  },
+  "02116365ecc5a40443dc740ba075f48a3a5642057aac451a83902e4d9b336d30": {
+    "plausibility": 0.95,
+    "reason": "Reference System is defined as a Descriptive Information Content Entity, which by definition is a subclass of Information Content Entity, so the axiom follows directly from the given definitions."
+  },
+  "bfeb205ea1ba0d8788831e1e33683eb2d3c391dd411c5d07d704ba5ab3dbec36": {
+    "plausibility": 0.95,
+    "reason": "The definition makes Temporal Region Identifier a subclass of Designative Information Content Entity, which is itself a subclass of Information Content Entity, so the axiom follows by transitivity."
+  },
+  "10a89af4da377fdb722627ced8c811f4e1c6337c155e5ef96117f727218f55c9": {
+    "plausibility": 0.92,
+    "reason": "A Part Number is a Code Identifier, and identifiers in CCO are information content entities that designate things, so the subclass relation follows from the definition's classification as a Code Identifier."
+  },
+  "0f441ae22ae2045f4bf893a82953b6c8b73c294284fbca917988e2c707a979a6": {
+    "plausibility": 0.8,
+    "reason": "In CCO, a Language is modeled as an Information Content Entity, so a natural language developed through use is plausibly a subclass of ICE, though the given definition does not state this directly."
+  },
+  "7cb77ff83d389ecd675febfe7d6feae10034cef6f61291d7039c1505060cc6de": {
+    "plausibility": 0.9,
+    "reason": "A Date Identifier is a Temporal Interval Identifier, which is an identifier designating a day, so it is an information content entity that is about the day it designates."
+  },
+  "55a5687b4365beae7f685814a90f4f0cbcbdc6f7e11021b5ed5c748789a45450": {
+    "plausibility": 0.9,
+    "reason": "A Count Measurement Information Content Entity is defined as a Ratio Measurement Information Content Entity, which by its parent chain is an Information Content Entity, so the subclass axiom follows from the hierarchy."
+  },
+  "226ca6131e9cd53e6bb6e6c610d1b04ce381b9f70bfe889bbfe5aefcdac6e307": {
+    "plausibility": 0.93,
+    "reason": "In CCO, identifiers are information content entities that are about the entity they designate, so a Temporal Region Identifier designating a Temporal Instant inherits this, making the subclass axiom very likely true."
+  },
+  "728afb486f0f2a750b275ae9ab43b1f1f288550e576602ba09d60d2b971d7a3e": {
+    "plausibility": 0.97,
+    "reason": "A Veracity Measurement Information Content Entity is defined as a Measurement Information Content Entity, which is itself a kind of Information Content Entity, so the subclass axiom follows by transitivity."
+  },
+  "5f31ed910843d5fb2766b468854d476d29fef2d9866d72a0695241f058b5df79": {
+    "plausibility": 0.97,
+    "reason": "Maximum Ordinal Measurement Information Content Entity is defined as a kind of Ordinal Measurement Information Content Entity, which is an information content entity, so the subclass relation follows by transitivity."
+  },
+  "1fe7360fa88ffdd3baa4307d5b383b46af8d61fbbacbb829e38f1d9bdc8fe0e7": {
+    "plausibility": 0.92,
+    "reason": "An Abbreviated Name is a Designative Name, and in CCO Designative Names are Information Content Entities, so the subclass relation follows from the definition chain."
+  },
+  "592a178bde24b364ecd084876bb24d03221cdee81dc2a2676af16323e86c874e": {
+    "plausibility": 0.95,
+    "reason": "A Predictive Information Content Entity is defined as a Descriptive Information Content Entity, which itself is an Information Content Entity, so the subclass relation follows by transitivity of subclassing."
+  },
+  "1d126ad80d47689fdde3d99b142518d6fac1e6e4fedb7e891c34f2406083f640": {
+    "plausibility": 0.97,
+    "reason": "Non-Name Identifier is defined as a Designative Information Content Entity, and Designative ICEs are ICEs, so the subclass relation follows by transitivity."
+  },
+  "ce8ad3923d3a6c174c951dffe30d0ea4570aacfd375731ded86ef7dc3f53b2fb": {
+    "plausibility": 0.97,
+    "reason": "Algorithm is defined as a Prescriptive Information Content Entity, which is itself a subclass of Information Content Entity, so the subclass axiom follows directly from the definitions."
+  },
+  "89699c0896a6573a5d3626e6c51deeebc18616d77a321cf430b3620fac48db58": {
+    "plausibility": 0.95,
+    "reason": "Distance Measurement Information Content Entity is defined as a Ratio Measurement Information Content Entity, which by chain of subclassing is an Information Content Entity, so the subclass axiom is clearly true."
+  },
+  "a6d02670cc9373a0cac524a66e5dee001a661021bf09e64ab8b307266ccf0d99": {
+    "plausibility": 0.97,
+    "reason": "A Probability Measurement Information Content Entity is a Measurement Information Content Entity, which is itself an Information Content Entity, so the subclass relation follows by transitivity of subclassing."
+  },
+  "c56b42e8afdc023bc5bb08252e40eac528681d4abac68f34b58aff3a0a0d4bf1": {
+    "plausibility": 0.97,
+    "reason": "A Deviation Measurement Information Content Entity is a Measurement Information Content Entity, which in turn is an Information Content Entity, so the subclass axiom follows by transitivity of subclassing."
+  },
+  "86b914eff539f3f43b6143074fec75e4491e206c6963fe2c8c296baaec80cdf7": {
+    "plausibility": 1.0,
+    "reason": "A Point Estimate Information Content Entity is defined as a subtype of Estimate Information Content Entity, which in turn is an Information Content Entity, so the subclass relation follows by transitivity."
+  },
+  "e59cd7ae2e22448d9d85b32dfdee67e1740879c4b4bc0b40108cda063d379e84": {
+    "plausibility": 0.9,
+    "reason": "In CCO, identifiers such as Temporal Instant Identifier are information content entities that designate entities, so a Time of Day Identifier should inherit ICE status."
+  },
+  "de39d5238ad93f418920cdf7e636d5fe009868604139d13679f7c9b85ec78797": {
+    "plausibility": 0.97,
+    "reason": "A Proportional Ratio Measurement Information Content Entity is defined as a kind of Ratio Measurement Information Content Entity, which by inheritance is an Information Content Entity, so the subclass axiom follows from the definitions."
+  },
+  "194e9e9c9e718479a0d00b1eb32000995b93587192b0edd6260356c87f1d8c8b": {
+    "plausibility": 0.9,
+    "reason": "An Acronym is an Abbreviated Name, a kind of Designative Name, and names are information content entities in CCO, so the subclass relation follows through the hierarchy."
+  },
+  "86e614fa52f4007c96945654be8f3f57dd190ec28249feae358b4e498a6389ef": {
+    "plausibility": 0.9,
+    "reason": "An arbitrary identifier is a string of characters, which is a generically dependent continuant borne by some information bearing entity and typically about the entity it identifies, so it plausibly falls under Information Content Entity."
+  },
+  "6da0062afdd3e02246f3e6ae84996df68724dba5a654e3b0d8e8c681e29096fa": {
+    "plausibility": 0.95,
+    "reason": "A Nickname is a Designative Name, which is a kind of Designative Information Content Entity, so it is an Information Content Entity by inheritance through Designative Name."
+  },
+  "2573253900ae1b67a674b34d7ca46b47be243aa9c206fbd58a67e36ad7a5d4e6": {
+    "plausibility": 0.95,
+    "reason": "Ordinal Measurement Information Content Entity is defined as a Measurement Information Content Entity, which itself falls under Information Content Entity, so the subclass relation follows by transitivity."
+  },
+  "867df2c6822da52dfe22479d9793298933e35fce14105ed0dcd7901a9cd09e17": {
+    "plausibility": 0.9,
+    "reason": "A Proper Name is a Designative Name, which is a kind of Information Content Entity in CCO, so the subclass axiom is very likely true."
+  },
+  "d2e111813b2b4c6e7e5995000f4dd936aa6cd6d4cee7e047206fc4887aa86ecb": {
+    "plausibility": 0.95,
+    "reason": "A Ratio Measurement Information Content Entity is defined as a Measurement Information Content Entity, which in turn is an Information Content Entity, so the subclass relation follows by transitivity."
+  },
+  "3624fc696c5fcada2d47b6746e05ff7571744eae2f120cc14022aec7340d241c": {
+    "plausibility": 0.95,
+    "reason": "Sequence Position Ordinality is defined as an Ordinal Measurement Information Content Entity, and Ordinal Measurement is presumably a subclass of Information Content Entity, so the subclass axiom follows directly from the definitions."
+  },
+  "fbdb2eb767c5075ae86c524c1df87ebb240e8b8f065aef443cbb47e195656260": {
+    "plausibility": 0.95,
+    "reason": "An Interval Estimate Information Content Entity is defined as a kind of Estimate Information Content Entity, which in turn is an Information Content Entity, so the subclass relation follows transitively."
+  },
+  "428d6426dc98bd6be51bf659e4eb938e70d5de1c97c4ca78022e072311879a85": {
+    "plausibility": 0.95,
+    "reason": "A measurement information content entity is defined as a descriptive information content entity, which itself is a subtype of information content entity, so the subclass axiom follows directly from the definitions."
+  },
+  "3dc91c5ea93b9726f88ebe2796f25bc0cc08173a074972eee4c389d556a6c0a0": {
+    "plausibility": 0.9,
+    "reason": "Language is defined as a Prescriptive Information Content Entity, which is itself a subtype of Information Content Entity, so the subclass axiom follows from the given definitions."
+  },
+  "0e8784553d9aa0b2928463a340ea0bb4b1fb0da3242615bfbd95774c96155fee": {
+    "plausibility": 0.97,
+    "reason": "Estimate Information Content Entity is defined as a Measurement Information Content Entity, which is itself a kind of Information Content Entity, so the subclass relation follows by transitivity."
+  },
+  "39a7af62c56e29a747995e4cca5263f7eb2b10ea2f46bbade4be6e53032e4fac": {
+    "plausibility": 0.9,
+    "reason": "A Priority Scale is a Reference System, which in CCO is an information content entity that generically depends on bearers and is about the ranked entities, so the subclass axiom follows."
+  },
+  "9944eabfa44bb23af5dbb4ca6b6ac16fb44f57ba12f6c3649a149e6c72f2ebbb": {
+    "plausibility": 0.95,
+    "reason": "An initialism is an Abbreviated Name, a kind of Designative Name, and names are generically dependent continuants about entities, so it falls under Information Content Entity."
+  },
+  "1d97cff2bd038086ebb1802977d9bedccdcea46f9d063883dcad8c18f49fe2e6": {
+    "plausibility": 0.95,
+    "reason": "Reliability Measurement Information Content Entity is defined as a subclass of Measurement Information Content Entity, which in turn is an Information Content Entity, so the subsumption follows by transitivity."
+  },
+  "56f54f5c974d59b77e7e7e38ebb872456552f713c787875d294e03f3db3aef5c": {
+    "plausibility": 0.92,
+    "reason": "A Lot Number is a Code Identifier, and identifiers in CCO are information content entities that are generically dependent on information bearers and about the entities they designate."
+  },
+  "885bf85f0e66e22caa53eb723d8da9cac7800466be4a60e24e8e390bfdde1380": {
+    "plausibility": 0.9,
+    "reason": "A legal name is a proper name, and proper names are information content entities (designative ICEs) that generically depend on information bearers and are about the named entity."
+  },
+  "425fa065e098e9d20770aeb9bc08f8d996448d4c635ecdd6011aadd19da30a1a": {
+    "plausibility": 0.95,
+    "reason": "An Interval Measurement Information Content Entity is defined as a Measurement Information Content Entity, which in turn is an Information Content Entity, so the subclass relation follows by transitivity of subclassing."
+  },
+  "c19c31d8435224cdf0b25edd68827dc17237a87a4c7fee259c548f9ce47c5d55": {
+    "plausibility": 0.9,
+    "reason": "A Certificate is defined as a Media Content Entity, which is a subtype of Information Content Entity in CCO, so the subclass axiom is very likely true."
+  },
+  "7098d6e527b913fb529649d55d7cd6218a2666f3d8c3067e6887d9e9b1528ef0": {
+    "plausibility": 0.9,
+    "reason": "An Academic Degree is defined as a Certificate, and Certificates are information content entities that generically depend on an information bearer and are about the degree holder's completed study."
+  },
+  "a914f725d0f8eb18da63f61378b5ae48c96992ecaadb30c1e2183448fafd7c07": {
+    "plausibility": 0.9,
+    "reason": "An image is a media content entity that represents something, and media content entities are information content entities, so the subclass relation is well supported, though the stated definition itself only links Image to Media Content Entity."
+  },
+  "e1b4d05536045d1bcaed29890ec61341e66296c34bbaa1f6c955a44d8a1becf6": {
+    "plausibility": 0.9,
+    "reason": "A Chart is defined as an Image, and Images are information content entities in CCO, so the subclass relation follows, though the Image definition is not supplied here."
+  },
+  "57265da97fae6eddf9ca26635bee6c68adcdb913dfd0be32c2f4e4cdd90df989": {
+    "plausibility": 0.9,
+    "reason": "Database is defined as a Media Content Entity, which in CCO is itself a kind of Information Content Entity, so the subclass relation follows by transitivity."
+  },
+  "88d0d1fd00899675e68fb2dd8f81980658775a1b6a45aa2af526b39eaa1a5674": {
+    "plausibility": 0.9,
+    "reason": "A List is defined as a Media Content Entity, which is a kind of Information Content Entity in CCO, so the subclass axiom follows from the hierarchy, though the definitions given do not state the link explicitly."
+  },
+  "4acd6b53b7d1e1547bec9e0e02bf2762aed0ff3ebb37f8e5d99953f50a913b0c": {
+    "plausibility": 0.8,
+    "reason": "A list of Code Identifiers is an information artifact that plausibly generically depends on a bearer and is about the codes' referents, though the definition of List isn't given to confirm it."
+  },
+  "8c477d37fd3ef2137feac8427e58a0cfd0aed561f5700e6a75d3e630401cccd9": {
+    "plausibility": 0.9,
+    "reason": "Video is defined as a Media Content Entity, which in CCO is a kind of Information Content Entity, so the subclass relation follows by transitivity, though the axiom is not stated directly in the given definitions."
+  },
+  "9f8bd59d967991dca08f3d26610f63efaee616d1df1faaa562040f6dc94159a1": {
+    "plausibility": 0.92,
+    "reason": "Message is defined as a Media Content Entity, which is itself an information content entity in CCO, so the subclass relation follows by transitivity."
+  },
+  "36fa4981e81c6e3a136fca483cfedfbf114d74f2096df283fe896f867099f078": {
+    "plausibility": 0.9,
+    "reason": "A Warning Message is a Message, and Messages are information content entities that describe something (a threat), so the subclass relation follows from the definitions."
+  },
+  "58e19aba4a7785e223145feb786460936519c26c8b4f1dcdac6fe7db27c0df37": {
+    "plausibility": 0.9,
+    "reason": "An Email Message is a message, which is a information content entity carried by a digital medium, so it generically depends on a bearer and is about something; the subclass axiom is very likely true."
+  },
+  "a756533d420b1fe1e050b7984435607c113fdad9ae83e2dd806a5f561cb31005": {
+    "plausibility": 0.9,
+    "reason": "A Notification Message is a Message, and messages are information content entities (generically dependent on a bearer and about a scenario), so the subclass relation is very likely true."
+  },
+  "7a39c1b7a6b7aafc986afc6f524e4d46c2cd3d79629ea5bf90621041525117e6": {
+    "plausibility": 0.95,
+    "reason": "Barcode is defined as a Media Content Entity, which is a subtype of Information Content Entity in CCO, so the subclass relation follows transitively from the given definitions."
+  },
+  "d12b2254fc848d2d03a42f5844ef237e888a52ecfc2a99a9b1652b160f347301": {
+    "plausibility": 0.92,
+    "reason": "An Email Address is defined as a Designative Name, and designative names are information content entities that generically depend on information bearers and are about the email box they identify."
+  },
+  "8d74e74220379a9f01149c966ce691b89d75cd4b3c06ba351291c0c73b63e64f": {
+    "plausibility": 0.9,
+    "reason": "The definition makes Information Line a kind of Media Content entity, and Media Content is a kind of Information Content Entity, so the subclass relation follows, though it depends on the Media Content hierarchy being as assumed."
+  },
+  "9dce25e744f169adfed7eff60e1938632a4b61ba460eab4690c9d07549c06c34": {
+    "plausibility": 0.92,
+    "reason": "Document Field Content is defined as a Media Content Entity, and Media Content Entity is an information content entity, so the subclass relation follows by transitivity."
+  },
+  "50d807cb355249b6e7d831a50b816ca7484a562a3c217c132867968946852d51": {
+    "plausibility": 0.95,
+    "reason": "Document Content Entity is defined as a Media Content Entity, which is itself an Information Content Entity, so the subclass relation follows by transitivity and matches the CCO hierarchy."
+  },
+  "2eca250f4f4b6eeaa61a41710de642201d049c6a1c5f3b29d07fe797a84b4f5a": {
+    "plausibility": 1.0,
+    "reason": "Book is defined as a Document Content Entity, which is a subtype of Information Content Entity, so the subclass axiom follows directly from the definitions."
+  },
+  "96b75dc4f708e36c1980c78df370cb922c6f0c402164cd91eb8ca11ff24d78a2": {
+    "plausibility": 0.9,
+    "reason": "A Transcript is defined as a Document Content Entity, and Document Content Entity is an information content entity in CCO, so the subclass relation follows by transitivity."
+  },
+  "e3fe33da78e9638c9870d364194f2125433f15456fd29dbfec10f03c5f05112a": {
+    "plausibility": 0.9,
+    "reason": "A Spreadsheet is defined as a Document Content Entity, which is an Information Content Entity subtype in CCO, so the subclass axiom follows from the hierarchy."
+  },
+  "8949fcb4f07fe1b47451296e79cc731d230532744c524c6a44d8f781e16bc8a2": {
+    "plausibility": 0.95,
+    "reason": "A Report is defined as a Document Content entity, and Document Content is a kind of Information Content Entity, so the subclass relation is almost certainly true."
+  },
+  "065ab4e818b4d3c3326227ddf20f72325a332e210d4ad870851a7ecf1c8fc397": {
+    "plausibility": 0.95,
+    "reason": "Form Document is defined as a Document Content Entity, and Document Content Entity is a subclass of Information Content Entity in CCO, so the subclass axiom follows from the hierarchy."
+  },
+  "81c48651d51833a3e2ccd0490aafb435a06374895e145780176072c26c474e80": {
+    "plausibility": 0.9,
+    "reason": "A Journal Article is defined as a Document Content Entity, which is an information content entity, so the subclass relation follows from the definitions, though the stated definition does not explicitly mention the superclass."
+  },
+  "cd36c03f55ecc8f018cacc0b25da68ece154b62858edc19a0864672f07f78901": {
+    "plausibility": 0.95,
+    "reason": "The subclass is defined as an Ordinal Measurement Information Content Entity, which is itself a measurement ICE, so it is necessarily a Measurement Information Content Entity."
+  },
+  "2f6fee7a9eb65b99627b0a183f9ed7e7f8aa2be2fdb234decb0d2e7f092be86b": {
+    "plausibility": 0.9,
+    "reason": "Artifact Version Ordinality is defined as an Ordinal Measurement Information Content Entity, and ordinal measurement entities are subtypes of measurement information content entities, so the subclass axiom follows from the definitions."
+  },
+  "c0b1db58c658babef04c3e7abfb23ae26ceb95f93d12c85e968ee5bb1b2033e7": {
+    "plausibility": 0.9,
+    "reason": "The stated definition makes it a Nominal Measurement Information Content Entity, and a nominal measurement is a kind of Measurement Information Content Entity, so the subclass relation follows."
+  },
+  "9cfd50ef819e7659729386b8ebda0e60726deab897fb8f6a6d2e984ce04393f2": {
+    "plausibility": 0.92,
+    "reason": "Priority Measurement ICE is defined as an Ordinal Measurement ICE, and Ordinal Measurement ICE is a kind of Measurement ICE, so the subclass link follows by transitivity."
+  },
+  "cff292f0d677894b440bd899393c196e127422f2e05eccdc2de8f1a2f5b828f4": {
+    "plausibility": 0.95,
+    "reason": "A count measurement is a ratio measurement information content entity, which is a kind of measurement information content entity, so the subclass relation follows from the definitions."
+  },
+  "d2aaf2d8c5c23b39104f9de532f99baad2b557f550c4a764a5a8248f7a006e12": {
+    "plausibility": 0.95,
+    "reason": "A maximum ordinal measurement is an ordinal measurement information content entity, which is a kind of measurement information content entity, so the subclass relation follows from the definitions."
+  },
+  "2f55bfeda734e4a5515eeff5c580d8c2436f981f9de856c28a2afa255f3c85fb": {
+    "plausibility": 0.95,
+    "reason": "A distance measurement information content entity is defined as a ratio measurement information content entity, which is a kind of measurement information content entity describing extent relative to a standard, so the subclass relation follows directly from the definitions."
+  },
+  "26e5dc6440ef5a7e9d665fbb36deec3fac7828f8e0d10b27884a8371edadd0cd": {
+    "plausibility": 0.95,
+    "reason": "A Proportional Ratio Measurement is a kind of Ratio Measurement, which itself is a Measurement Information Content Entity, so the subclass axiom follows from the definitions."
+  },
+  "a62aa767de2105ef3d88269ac89ecf01f7c316576e31430989f133a07ada1cb3": {
+    "plausibility": 0.85,
+    "reason": "A mean point estimate is defined as a measurement of a set of values, so it is plausibly a kind of measurement information content entity, though the definition of measurement ICE emphasizes description relative to a standard."
+  },
+  "c711f9501f4083657230eba645cd3180e42ed48703349958bd2860e2dc8a650e": {
+    "plausibility": 0.9,
+    "reason": "Sequence Position Ordinality is defined as an Ordinal Measurement Information Content Entity, and ordinal measurements are a kind of measurement information content entity, so the subclass axiom follows from the definitions."
+  },
+  "b5b2baf68242b942bd9a79143b5b97ce6503b0da6fcbc808b29e1d8431f6b9cb": {
+    "plausibility": 0.95,
+    "reason": "The definition states it is a Ratio Measurement Information Content Entity, which is a kind of Measurement Information Content Entity, so the subclass relation follows."
+  },
+  "8a364a26876bc24c7da0cbad43076e44c7cfbff9e807be4190aa0ecec4de2720": {
+    "plausibility": 0.9,
+    "reason": "A mode point estimate is defined as a point estimate, which in CCO is an estimate ICE, so the subclass relation follows by transitivity."
+  },
+  "e8c999c8a6feb385c293c37ed26558527e4a17453090691ab7262753dc5c43df": {
+    "plausibility": 0.85,
+    "reason": "A mean point estimate is defined as a Point Estimate Information Content Entity, which should sit under Estimate Information Content Entity, so the subclass relation follows transitively."
+  },
+  "53dc26373618cdcfd0f3f0c88fa92ff12b6532c598352352d5aba3e6c68d200b": {
+    "plausibility": 0.1,
+    "reason": "A data range is defined as a measurement of a set of values, which need not rest on partial information about an entity, so it is not necessarily an estimate."
+  },
+  "739224bc123f99b51c0015e606d0081974d15105449e9b2fdc220fda139dca54": {
+    "plausibility": 0.9,
+    "reason": "A Clock Time System is defined as a Temporal Reference System, and Temporal Reference Systems are a kind of Reference System, so the subclass axiom follows from the given definitions via transitivity."
+  },
+  "242540cf57d78d9f8d201590b70d12b9e51a2e4c8b6a0414e947d6374d762adc": {
+    "plausibility": 0.9,
+    "reason": "A solar calendar system is a calendar system, which organizes dates by a set of standards, so it fits the definition of a Reference System as a descriptive information content entity."
+  },
+  "fcd432baab4b4bf7ade2842f0dd74aa119da043fe80ff577b549abe30550c3c2": {
+    "plausibility": 0.9,
+    "reason": "A Geospatial Coordinate Reference System is defined as a kind of Spatial Reference System, which is itself a kind of Reference System, so the subclass relation is very likely correct."
+  },
+  "bdd1e8544d8c318e82ef164c24600def9da52387b0d0b086b6d8aaf9756e6410": {
+    "plausibility": 0.95,
+    "reason": "Universal Time Reference System is defined as a Solar Time Reference System, which in turn is a kind of Reference System, so the subclass relation follows transitively from the given definitions."
+  },
+  "b80e8fafa9f0fec92de8cd52e2b22d5728a3079913e3162c9c7992e599a3be82": {
+    "plausibility": 0.9,
+    "reason": "The definition describes a Spherical Coordinate System as a kind of Spatial Reference System, which is itself a kind of reference system, so the subclass relation follows from the stated definitions."
+  },
+  "f14b5ef6300181deb1c503a48bd83e20f894727987334184230ed8ca5554b4b1": {
+    "plausibility": 0.95,
+    "reason": "A Calendar System is defined as a Temporal Reference System, and a Temporal Reference System is a kind of Reference System, so the subclass relation follows from the given definitions."
+  },
+  "4546af8c1349cfc0f43302a9a89306a485ac47c23bb69d6f64feaa3b939ce1c4": {
+    "plausibility": 0.9,
+    "reason": "A lunar calendar system is a calendar system that sets standards for organizing and identifying dates, which fits the definition of a reference system as a descriptive information content entity."
+  },
+  "b28b2b1a57754aa09763070ec96e92e48c521aa2eec8cc65140d8e8414a881e4": {
+    "plausibility": 0.9,
+    "reason": "A Sidereal Time Reference System is defined as a Temporal Reference System, which in turn is a kind of Reference System, so the subclass relation follows transitively from the given definitions."
+  },
+  "e1979d3e25e9b3d2d88d26bcabf7a1aa82066d5c3d8ba68e1c5345737c1bcc5a": {
+    "plausibility": 0.9,
+    "reason": "A Cartesian Coordinate System is defined as a Spatial Reference System, which in turn falls under the Reference System category of descriptive information content entities describing standards."
+  },
+  "d3411e7d49e87d540ada5d85555caef8ebe5808d242677909a9572978b8588ca": {
+    "plausibility": 0.95,
+    "reason": "An Ordinal Date Identifier is a Decimal Date Identifier that designates a Day using a number, so it consists of symbols designating an Entity, fitting Designative Information Content Entity."
+  },
+  "36df1d4d3ea4ea1791db3a83c68d794c7ed51d074173d7bfd6331656e3be78c4": {
+    "plausibility": 0.7,
+    "reason": "Most artificial languages consist of symbols that designate entities, but a language could in principle have rules or syntax without designating anything, so the subclass relation is not guaranteed for every instance."
+  },
+  "1d58e1897010a0662e99188d4b88ae7bef43a59ae4443e2d0361938125832e6e": {
+    "plausibility": 0.9,
+    "reason": "A Part Number is a Code Identifier that designates a type of part, and identifiers are symbol sets that designate entities, so it falls under Designative Information Content Entity."
+  },
+  "c737aae4cf62fc5349cd0d0c2be7b7784e54513fc1e61d1ae89da58430660ce8": {
+    "plausibility": 0.9,
+    "reason": "A Date Identifier designates a Day, so it is an information content entity consisting of symbols designating an entity, making it a subclass of Designative Information Content Entity via its Temporal Interval Identifier parent."
+  },
+  "7e948f0440a76364477fa79c515d36e16c7681347ea970553bf4407901eb5cad": {
+    "plausibility": 0.9,
+    "reason": "A Temporal Instant Identifier designates a Temporal Instant, and as a Temporal Region Identifier (an identifier, hence a designative information content entity made of symbols) it should inherit that classification."
+  },
+  "2fbd9088838c06e3140dce23d597f5a1a6a899e68e1e0f004fe9b3a906cf4303": {
+    "plausibility": 0.95,
+    "reason": "An Abbreviated Name is a Designative Name, which is a kind of Designative Information Content Entity, so the subclass axiom follows from the given definitions."
+  },
+  "78e6f424e9c4a96af343334f33e995b23d1d5f43198de11a8e13880e819cfaf5": {
+    "plausibility": 0.9,
+    "reason": "A Diminutive Name is an Abbreviated Name, which is a kind of name, and names consist of symbols designating an entity, so it fits Designative Information Content Entity."
+  },
+  "00593f839625bb287d375f3c916967399746d6994dd42b93642967ee4c524434": {
+    "plausibility": 0.9,
+    "reason": "A Time of Day Identifier is a Temporal Instant Identifier that designates a time of day, and Temporal Instant Identifiers are information content entities designating temporal instants, so it inherits designative information content entity status."
+  },
+  "11dc438e86d23badb3651624d6dd4babcc73b9e41605236fd41e6b8ef943ac32": {
+    "plausibility": 0.9,
+    "reason": "An Acronym is an Abbreviated Name, which is a Designative Name, so it is an information content entity whose symbols designate an entity, making it a subclass of Designative Information Content Entity."
+  },
+  "9922716b62a7c7aec5b4084abffc0465e416e1c70a7d21cc3a2bb09b8b6e929d": {
+    "plausibility": 0.85,
+    "reason": "An Arbitrary Identifier is a Non-Name Identifier, which is a string of symbols used to designate the entity it identifies, so it fits the Designative ICE definition."
+  },
+  "9d2aaceb0d698c5be26d1f743a23000dc62105e74b5b278b5a49590533d8e502": {
+    "plausibility": 0.95,
+    "reason": "A nickname is defined as a kind of Designative Name, and a designative name consists of symbols that designate an entity, so every nickname is a Designative Information Content Entity."
+  },
+  "55459658ffbe6975e506722afc92e75ff8f4290fab2977e13e92450d19c4dbb7": {
+    "plausibility": 0.95,
+    "reason": "A Proper Name is defined as a Designative Name, which designates an entity, so it is necessarily a Designative Information Content Entity."
+  },
+  "20a4f8c2c62099995297ac3c6b5a84e9c2295b5ba7a9502cb1d6fb175452f556": {
+    "plausibility": 0.93,
+    "reason": "An Initialism is an Abbreviated Name, which is a kind of Designative Name, so its symbols designating an Entity make it a Designative Information Content Entity."
+  },
+  "a2b8125efb26f5420b48bf175fe39281b2d379fbf02f090721d5497bdbc79324": {
+    "plausibility": 0.9,
+    "reason": "A Lot Number is a Code Identifier that designates a specific lot of material, so it is an information content entity whose symbols designate an entity, fitting Designative Information Content Entity."
+  },
+  "7774d9750dfe8d3c1555f007eb8ac498a31dc7e9854491f55b81e9da7e953d25": {
+    "plausibility": 0.9,
+    "reason": "A Legal Name is a Proper Name, and Proper Names are symbol-based designators of entities, so it falls under Designative Information Content Entity."
+  },
+  "40b954b9e8b022bc2f74075d555337bd5fd788d185b3c258e1598ca5e7be5a39": {
+    "plausibility": 0.95,
+    "reason": "A Calendar Date Identifier designates a Day via symbols formatted per a Calendar System, so it is a designative information content entity that designates an entity (a Day)."
+  },
+  "44f0420dcd30c0f4cfa7e5822d34c26c21112959254640f5eaa9bfaf2adbe60b": {
+    "plausibility": 0.9,
+    "reason": "A time zone identifier is a symbol string that designates a spatial region, so it fits the definition of a designative information content entity."
+  },
+  "6910d0aae2053144afbec0a616d84aa6e03caa1427068fa55ddada9c37b90d38": {
+    "plausibility": 0.93,
+    "reason": "The definition describes an Email Address as a Designative Name, which is a designative information content entity that designates an Email Box, so it fits the proposed subclass relation."
+  },
+  "40d94cf0e7b583a6a060ff01efe446cf30f12bdc6b212edea8ebdfa7fec125e5": {
+    "plausibility": 0.9,
+    "reason": "A part number is a code identifier, a string of characters designating a part, which is not a designative name, so it fits within Non-Name Identifier."
+  },
+  "0c6499c733da0136b14978523fdf12585e47b68f484c4122465bddde2da7f8d7": {
+    "plausibility": 0.75,
+    "reason": "A date identifier designates a day via a character string and is not a designative name, so it fits Non-Name Identifier, though the 'no cultural significance' clause is debatable for dates."
+  },
+  "81a012e0a422b66e6ecab17e4bf1099e236ca945309e844cd45777afc4f3bdbf": {
+    "plausibility": 0.72,
+    "reason": "Time of Day Identifiers designate temporal instants by string and are generally not Designative Names, though some (like 'noon') carry cultural significance, so the subclass relation is likely but not certain."
+  },
+  "296fde3fbcfcd434a1cac32272b7fd39de1b321e2aa66ce2aa0eb8cdb563c29b": {
+    "plausibility": 0.7,
+    "reason": "Military time zone letters are codes designating zones within a defined system rather than names, so they fit Non-Name Identifier, though some letters like Zulu carry cultural meaning."
+  },
+  "c8327a76eec37b06d65c146b269a0f096c0ddcc0c24e4e16afbc971c44c5d41a": {
+    "plausibility": 0.9,
+    "reason": "A Lot Number is a Code Identifier designating a lot of material, which fits the Non-Name Identifier definition as a non-name designative string within a context, so the subclass relation is very likely true."
+  },
+  "4901503204ed2ad4d9c21e3457937bf8de38bc5befca5a5b8aaa722819440565": {
+    "plausibility": 0.6,
+    "reason": "Calendar date identifiers are strings that are not Designative Names, which fits Non-Name Identifier, but their calendar-based cultural significance sits uneasily with the definition's 'no preexisting cultural significance' clause, though 'typically' softens that conflict."
+  },
+  "e1bb0cf36ce7f706910c94a84c2221c887c161f274c99b1ff721fb6143b9d09e": {
+    "plausibility": 0.85,
+    "reason": "A Standard Time of Day Identifier designates an (approximate) Temporal Instant, which fits the Temporal Instant Identifier definition, provided Time of Day Identifiers are themselves Temporal Region Identifiers."
+  },
+  "843656dc0abafe757350c41e4161d79be4989d55b169650df321a39798221cea": {
+    "plausibility": 0.75,
+    "reason": "A Julian Date Fraction is a Decimal Time of Day Identifier that designates an (approximate) temporal instant, which fits being a Temporal Instant Identifier, though the 'approximate' qualifier makes the designation slightly less strict."
+  },
+  "718fe96c1151ac7b92ffb32b407f81d4f1e30ad174ed86328212df51dcf9da04": {
+    "plausibility": 0.85,
+    "reason": "A Decimal Time of Day Identifier designates an approximate Temporal Instant, which fits the definition of Temporal Instant Identifier, though the 'approximate' qualifier adds some doubt."
+  },
+  "8930796f91c4218e9c1f8dde6ba0c466b0ea9454ee85e4e89f38392246e04928": {
+    "plausibility": 0.9,
+    "reason": "A Julian Day Number is defined as a Decimal Date Identifier, which in turn should fall under Date Identifier, so the subclass relation follows transitively and is consistent with the definitions."
+  },
+  "add7c38b0916d3a5cb02e80097b0568d498964c8cebf008b552459a8e182128c": {
+    "plausibility": 0.05,
+    "reason": "A Julian Date Identifier is defined as a Decimal Time of Day Identifier, which designates a time within a day rather than a Day, so it does not fall under Date Identifier."
+  },
+  "4b3ce5ab9c59c9c3c69517e455c2d65b5c9b692ae996a65f9c6e87c85f2520b2": {
+    "plausibility": 0.85,
+    "reason": "A mode point estimate is a statistical summary of a value set, so it plausibly describes an entity and fits within Descriptive Information Content Entity, though the exact parent class depends on CCO's statistical hierarchy."
+  },
+  "86f2f0194b937b9e2576a2bc59ae69a091a5a17be95e26c9055cc7551898539b": {
+    "plausibility": 0.92,
+    "reason": "An ordinal measurement information content entity is a measurement of an entity, so it describes that entity and falls under Descriptive Information Content Entity via the measurement hierarchy."
+  },
+  "964832abf0539db9b6e39ba514434702426dcc215333c0b590662de82caea670": {
+    "plausibility": 0.9,
+    "reason": "A nominal measurement ICE is a kind of measurement ICE, which describes the measured process, so it falls under Descriptive ICE."
+  },
+  "4f3362baaf84e52a812861ca195846502028d7ee20dbe0cd1279fb6ac4dec113": {
+    "plausibility": 0.9,
+    "reason": "A priority measurement is an ordinal measurement of relative importance of an entity, so it describes an entity and therefore falls under Descriptive Information Content Entity; the axiom is very likely true."
+  },
+  "4dc40b3257721a9bef2ad99a6bc25737aa7535f99a405575c8b3a7ea97028802": {
+    "plausibility": 0.9,
+    "reason": "A distance measurement ICE is a ratio measurement ICE that is about a one-dimensional extent, so it describes an entity and therefore falls under Descriptive Information Content Entity."
+  },
+  "7818d810cb8167f972bc4cd0f3e4facef6436415ac13d39b360a58c4e2ba29ed": {
+    "plausibility": 0.9,
+    "reason": "A probability measurement is a measurement information content entity, which is descriptive of the process whose likelihood it measures, so it falls under Descriptive Information Content Entity."
+  },
+  "fc917184c883e8337d015292551114428240673cfaccdfeb5b685db94ed4f0b7": {
+    "plausibility": 0.9,
+    "reason": "A deviation measurement is a measurement information content entity describing the extent to which some entity conforms to expectations, so it describes an entity and is plausibly a descriptive information content entity."
+  },
+  "2625408abbd321217da5b54779c312fb04d63aa1f41541a3c04e6c509334dc87": {
+    "plausibility": 0.9,
+    "reason": "A point estimate is an estimate that consists of a single value describing the measured entity, so it is a descriptive information content entity, though the link depends on estimates being descriptive."
+  },
+  "787fd2fb4c182d59b5f1d4090dd178de53f13f0a0aae73042a858a314c223ac9": {
+    "plausibility": 0.9,
+    "reason": "A proportional ratio measurement is a ratio measurement information content entity, which in CCO falls under descriptive information content, so the subclass relation is very likely true."
+  },
+  "e5b8b7e8c5d4c0c66b6eb1b4fdfa5f3907158fc04f3b56ab684030ea5717740f": {
+    "plausibility": 0.9,
+    "reason": "An ordinal measurement is a symbol that places an entity in a rank order, which describes that entity, and measurement ICEs are a kind of descriptive ICE."
+  },
+  "ad315a79e221524c6a40136c3ae5ce52d538b4469a2d96a6781c211ceb7ab187": {
+    "plausibility": 0.9,
+    "reason": "A ratio measurement information content entity is a measurement ICE, which describes the measured quality of an entity, so it is plausibly a descriptive ICE."
+  },
+  "db89ea90ef9fc116b50135e8e0b4862bdce41ffb73cf8aad2ece48f3e1a7d1b8": {
+    "plausibility": 0.87,
+    "reason": "An ordinal measurement ICE about an entity's position in a sequence describes that entity, and in CCO measurement ICEs fall under descriptive ICEs, so the subclass relation is very likely correct."
+  },
+  "8e2e088a2e94791784f74eb8422c7e10c11ce43ff70aa9c519d554a4c558e630": {
+    "plausibility": 0.9,
+    "reason": "An interval estimate is an estimate information content entity describing a measured entity by a range of values, so it plausibly falls under descriptive information content entity, though the definition relies on the estimate describing the measured entity."
+  },
+  "7a0e7fb2902f0c90eb3cd87a34b3fe7d7089c595d428f273f4f7367cc2777dd5": {
+    "plausibility": 0.9,
+    "reason": "An Estimate ICE is a Measurement ICE, which describes an entity, so it falls under Descriptive ICE, though the link runs through the intermediate Measurement class."
+  },
+  "195b24e49fed582ad9848b60ead566a8177be73ba38e6b24538756647f07361d": {
+    "plausibility": 0.9,
+    "reason": "A Reliability Measurement ICE is defined as a Measurement ICE, and Measurement ICEs are descriptive information about an entity's measured property, so the subclass relation follows transitively."
+  },
+  "1e75715e63145d8a50121da7d95a86e1e805439f1207b89d607122cf9bd38dea": {
+    "plausibility": 0.92,
+    "reason": "An Interval Measurement ICE is defined as a Measurement ICE, which describes a Quality of an Entity, so it falls under Descriptive ICE by transitivity."
+  },
+  "c1b1c2816d268d5e377373edca545f09733a950ec771da2ae4c27e3957075df4": {
+    "plausibility": 0.8,
+    "reason": "A certificate attests to demonstrated characteristics of an Object, Person, or Organization, which amounts to describing those entities, so it fits Descriptive Information Content Entity, though the subsumption is not fully explicit in the given definitions."
+  },
+  "120151c5871ec5626776d0f6a72f68d81b9483f62f3c3ecf5c83358d47c3baee": {
+    "plausibility": 0.7,
+    "reason": "A spatial reference system is defined as a set of standards, which are prescriptive in nature, so it plausibly prescribes how positions are to be identified, though the link to 'prescribes some Entity' is not explicit."
+  },
+  "cb61b8208d9b55987202991daed2856f0fba45e7bddcf8e810b9ebe896bb5ea6": {
+    "plausibility": 0.87,
+    "reason": "Document Field Content is defined as a Media Content Entity, which is an Information Content Entity, and it prescribes the elicitation of information, which satisfies the 'prescribes some Entity' condition."
+  },
+  "76baa8967a52e224386617831ca1c1b98d02e15a03e37dd3c586251e3882a5f6": {
+    "plausibility": 0.9,
+    "reason": "A solar calendar system organizes dates by solar cycles, which fits the definition of a temporal reference system as a standard for organizing temporal data, so the subclass relation is very likely correct."
+  },
+  "b8700479b03473e0528242644c8cc801e47cc3226f4067203b74d86522f8097e": {
+    "plausibility": 0.9,
+    "reason": "Universal Time Reference System is defined as a Solar Time Reference System, which is a kind of temporal reference system for measuring time, so the subclass relation follows from the definitions."
+  },
+  "675c28002250c15f2e3d9bb1d130bbf12484c41af12e6246a36128edb6f4ce55": {
+    "plausibility": 0.9,
+    "reason": "A lunar calendar system organizes dates by lunar phase cycles, which fits the definition of a temporal reference system as a standard for measuring and organizing time, so the subclass relation is very likely true."
+  },
+  "80052cc9adf73a573f310b965d8e1e1cfe2ac5e3ec9bde60a2fb0eb331586485": {
+    "plausibility": 0.9,
+    "reason": "Julian Date Fraction is defined as a Decimal Time of Day Identifier, and Decimal Time of Day Identifier is presumably a subclass of Time of Day Identifier, so the subclass relation follows by transitivity."
+  },
+  "15af675c86e60913a718e5c7b153897e78174c259fc5a538d4649dca2bfb2d57": {
+    "plausibility": 0.92,
+    "reason": "The definition makes Julian Date Identifier a subtype of Decimal Time of Day Identifier, which in turn designates a Time of Day, so the subclass relation follows from the stated definitions."
+  },
+  "ae957fa2766016a8597370cb7ede09c4396d023cb40afe989c8726bc535c3bad": {
+    "plausibility": 0.02,
+    "reason": "A Veracity Measurement Information Content Entity is an information content entity (a measurement record), not a Quality that concretizes one, so it cannot be a subclass of Information Quality Entity."
+  },
+  "edf8050666b771b24c2a64cf65ca6bded85b00450e6a5f35065a99a1ae12eb9c": {
+    "plausibility": 0.9,
+    "reason": "A diminutive name is a kind of abbreviated name, which is a designative name, and it is a string designating a person within a cultural namespace."
+  },
+  "f94f83a59c2bd9eb3b37ac41ee94f5b205559e0eb3760a822d2da0e213f7ef28": {
+    "plausibility": 0.9,
+    "reason": "An Acronym is defined as a kind of Abbreviated Name, which in CCO is itself a Designative Name, so the subclass relation follows transitively."
+  },
+  "24a27cc03ed7232faf463b753b564068874aece78e7b4e0c1e46829dc335bcfd": {
+    "plausibility": 0.9,
+    "reason": "An Initialism is defined as a kind of Abbreviated Name, which is a designative string of characters used as a name, so it should fall under Designative Name by transitivity."
+  },
+  "14b3f3b37e6ba84e16191a82a000ba5863a0b73c7c45d58785071edbfcc7ce52": {
+    "plausibility": 0.2,
+    "reason": "A list of four bounding-box coordinate pairs identifies a region rather than defining a standard magnitude of a physical quantity, so it fits poorly under Measurement Unit despite the 'Measurement Unit of Geocoordinate' wording."
+  },
+  "0243335864f516103b906470f3e084493e831611426d281b8ba839549b6b96ba": {
+    "plausibility": 0.03,
+    "reason": "A Julian Day Number is defined as a Decimal Date Identifier designating a Julian Day, whereas a Julian Date Identifier is composed of a Julian Day Number plus a fraction, so a Julian Day Number is a component of, not a subclass of, a Julian Date Identifier."
+  },
+  "53fb1d499e4ec6e640a1dfb35b2a35e077675ba7a2e9f601ab89381989d3d3d4": {
+    "plausibility": 0.02,
+    "reason": "Decimal Date Identifier is a broader class (any number-based day identifier since a reference time) and does not require Julian Day Number and fraction composition, so it cannot be a subclass of Julian Date Identifier; the axiom is reversed or wrong."
+  },
+  "376fa85909d428def97b28d12219fe37e8796da1714edfa72d8900a8beab9d52": {
+    "plausibility": 0.05,
+    "reason": "A Time Zone Identifier is defined as a Spatial Region Identifier designating a spatial region, so it does not necessarily designate a Temporal Region and the subclass axiom is clearly false."
+  },
+  "b1b55497c42fb9e5694c241e990c061bf6fb00c9c3853e31f8656e6c96fbbafd": {
+    "plausibility": 0.9,
+    "reason": "A Calendar Date Identifier designates a Day, which is a Temporal Region, so it fits the definition of Temporal Region Identifier, assuming Date Identifier is itself a Temporal Region Identifier."
+  },
+  "8ca9a609d9c2ec50c2beb5709eeb8480f1dfb5bbf28ed07a4c257a9d8a278988": {
+    "plausibility": 0.02,
+    "reason": "The axiom reverses the relation: Julian Day Number is a subclass of Decimal Date Identifier (counting from the Julian epoch), not the other way around, since a generic decimal date identifier need not be a Julian Day Number."
+  },
+  "87b11b3b07ecf27a62c7d112b0a6e40af59bd7ce364ef719dfd5181cff07a6e4": {
+    "plausibility": 0.9,
+    "reason": "The Data Range definition explicitly names Ratio Measurement Information Content Entity as its genus, so the subclass relation follows directly from the stated definition."
+  },
+  "6706a60eb581797e7b5c50431dbc8a70e947e5866fe8d3ec608138d505786bb4": {
+    "plausibility": 0.85,
+    "reason": "A Military Time Zone Identifier is a Time Zone Identifier that designates a spatial region (a time zone), so it fits the definition of Spatial Region Identifier."
+  },
+  "c5d7fd08e949acbe98f73e471e219b78b06a78f7c8f30f9e444631560c4fb2dd": {
+    "plausibility": 0.85,
+    "reason": "A Greenwich Mean Time Zone Identifier is a Time Zone Identifier that designates a spatial region, so it fits as a Designative ICE designating a Spatial Region."
+  },
+  "ac2ed5a569a91f92fdcf11aea87c693bc47f8d1920a818607b1b8d0ee41aeaab": {
+    "plausibility": 0.9,
+    "reason": "A certificate is a physical artifact that bears information content, so an academic degree issued as a Certificate generically depends on information content and fits Information Bearing Entity."
+  },
+  "d1c1ab098886d3cb737707d047a684613c4c91936f962bc7e143cb1a9e0c514a": {
+    "plausibility": 0.15,
+    "reason": "A Message is defined as a Media Content Entity, an Information Content Entity (a generically dependent continuant), not an Object, so it cannot be a subclass of Information Bearing Entity, which is defined as an Object."
+  },
+  "23a17d3da5f252b519077d8db3eb343dfc72dbd6d2647093e5bbdf66f58e1cad": {
+    "plausibility": 0.1,
+    "reason": "A Warning Message is an information content entity (a Message), whereas Information Bearing Entity is defined as an Object, so the subclass link appears mismatched."
+  },
+  "b57f45ccd95d60e24652a6053ae171ab773e8165a01ae18cda2fe4214bed78eb": {
+    "plausibility": 0.2,
+    "reason": "An Email Message is a Message, which is an Information Content Entity (a generically dependent continuant), not an Object, so it does not fit the Information Bearing Entity definition as an Object."
+  },
+  "8b7609e56d7e38025f3dae21bd36c87a83428b34be4d98b8148d3ec068918d78": {
+    "plausibility": 0.1,
+    "reason": "A barcode is defined as a Media Content Entity, which is an Information Content Entity rather than an Object, so it cannot be a subclass of Information Bearing Entity, which is defined as an Object."
+  },
+  "6efcbc88e527df09795cc3b0fb6db3282bd3fb33e4e5624d5e3ae050cf0f85c5": {
+    "plausibility": 0.9,
+    "reason": "A Book is a Document Content Entity, which is an Information Content Entity borne by a physical object, so Book being a subclass of Information Bearing Entity is very likely true."
+  },
+  "1014e7a504df40ef02cfe1e6c0494e25b544ade583ec285c26a695d859baa836": {
+    "plausibility": 0.1,
+    "reason": "A Transcript is defined as a Document Content Entity, which is an Information Content Entity and not an Object, so it cannot be a subclass of Information Bearing Entity (defined as an Object)."
+  },
+  "bc4ceef25202fab8ab1fa23000a171eeeb935324d32fa958d3898decce6656ae": {
+    "plausibility": 0.1,
+    "reason": "A Spreadsheet is a Document Content Entity, an information content entity that is not itself an Object, so it does not fit the Information Bearing Entity definition, which requires being an Object."
+  },
+  "b7e8d59d1a4445a1b1cc865271efc5a0a1452bf2f277e8389c51f03633f435cf": {
+    "plausibility": 0.1,
+    "reason": "A Report is defined as a Document Content entity (an information content entity), while Information Bearing Entity is restricted to Objects, so the content is not itself an Object bearing information."
+  },
+  "dac991b0f19854348f264c8a527f21c8ba47f6aed81c88148bd31946d803997e": {
+    "plausibility": 0.8,
+    "reason": "A Chart is an Image, an information content entity presented in a visual format, which fits the Media Content Entity definition, though the prescribed-versus-presented wording is slightly different."
+  },
+  "e7a66508987ad628116f32261abd01f5b23830166308c1db018e293dec607162": {
+    "plausibility": 0.3,
+    "reason": "A warning describes a possible or impending threat, which need not be something determined to merit the recipient's attention, so the subclass relation is not clearly entailed by the definitions."
   }
 }

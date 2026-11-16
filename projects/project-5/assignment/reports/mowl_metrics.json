@@ -1,0 +1,58 @@
+{
+  "model": "ELEmbeddings (mowl-borg 1.0.2)",
+  "train_file": "src/train.ttl",
+  "valid_file": "src/valid.ttl",
+  "settings": {
+    "embed_dim": 50,
+    "epochs": 3000,
+    "learning_rate": 0.01,
+    "margin": -0.1,
+    "seed": 42
+  },
+  "validPairs": 20,
+  "pairs_scored": 20,
+  "pairs_skipped": [],
+  "mean_cos": 0.817,
+  "passed": true,
+  "tau": 0.6,
+  "tau_rule": "smallest tau in [0.60, 0.65, 0.70, 0.75, 0.80] where held out pairs with cosine >= tau have mean cosine >= 0.70",
+  "tau_sweep": [
+    {
+      "tau": 0.6,
+      "pairs_kept": 17,
+      "mean_cos_kept": 0.912
+    },
+    {
+      "tau": 0.65,
+      "pairs_kept": 17,
+      "mean_cos_kept": 0.912
+    },
+    {
+      "tau": 0.7,
+      "pairs_kept": 16,
+      "mean_cos_kept": 0.927
+    },
+    {
+      "tau": 0.75,
+      "pairs_kept": 15,
+      "mean_cos_kept": 0.941
+    },
+    {
+      "tau": 0.8,
+      "pairs_kept": 13,
+      "mean_cos_kept": 0.969
+    }
+  ],
+  "hybrid": {
+    "cosine_weight": 0.7,
+    "llm_weight": 0.3,
+    "tau": 0.6,
+    "llm_model": "anthropic/claude-haiku-5-5",
+    "candidates": 211,
+    "scored": 193,
+    "accepted": 155,
+    "skipped_disjoint": 18,
+    "llm_contribution_rate": 0.123,
+    "llm_contribution_rule": "share of accepted axioms whose cosine alone is below tau"
+  }
+}

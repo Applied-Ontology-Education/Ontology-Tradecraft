@@ -9,4 +9,13 @@ __pycache__/
 .venv/
 
 # macOS Finder files (also in the repo-level .gitignore)
+.DS_Storetools/
+
+# macOS Finder files (also in the repo-level .gitignore)
 .DS_Store
+
+# ROBOT jar (run_all.py downloads it if missing)
+tools/
+
+# Protégé creates this when it opens a file; not needed
+src/catalog-v001.xml

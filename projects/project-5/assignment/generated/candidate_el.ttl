@@ -1,0 +1,638 @@
+# candidate_el.ttl -- written by scripts/generate_candidates_llm.py (Step 3)
+# Each comment line gives the labels for the axiom below it.
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+# Designative Name  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000003> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Designative Name  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000003> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Median Point Estimate Information Content Entity  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00000029> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Median Point Estimate Information Content Entity  SubClassOf  Estimate Information Content Entity
+<https://www.commoncoreontologies.org/ont00000029> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001176> .
+
+# Median Point Estimate Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000029> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Civil Time Reference System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00000067> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Temporal Interval Identifier  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000073> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Temporal Interval Identifier  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000073> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Temporal Interval Identifier  SubClassOf  Non-Name Identifier
+<https://www.commoncoreontologies.org/ont00000073> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000649> .
+
+# Code Identifier  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000077> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Code Identifier  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000077> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Code Identifier  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000077> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Standard Time of Day Identifier  SubClassOf  Temporal Instant Identifier
+<https://www.commoncoreontologies.org/ont00000080> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000540> .
+
+# Standard Time of Day Identifier  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000080> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Standard Time of Day Identifier  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000080> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Ordinal Date Identifier  SubClassOf  Date Identifier
+<https://www.commoncoreontologies.org/ont00000087> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000529> .
+
+# Ordinal Date Identifier  SubClassOf  Calendar Date Identifier
+<https://www.commoncoreontologies.org/ont00000087> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001340> .
+
+# Ordinal Date Identifier  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000087> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Measurement Unit  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000120> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Solar Time Reference System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00000124> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Performance Specification  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000127> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Artificial Language  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000146> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Artificial Language  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000146> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Mode Point Estimate Information Content Entity  SubClassOf  Estimate Information Content Entity
+<https://www.commoncoreontologies.org/ont00000154> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001176> .
+
+# Mode Point Estimate Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00000154> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Mode Point Estimate Information Content Entity  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000154> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Minimum Ordinal Measurement Information Content Entity  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00000164> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Minimum Ordinal Measurement Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00000164> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Minimum Ordinal Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000164> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Artifact Version Ordinality  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00000186> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Artifact Version Ordinality  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000186> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Event Status Nominal Information Content Entity  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00000203> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Event Status Nominal Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00000203> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Event Status Nominal Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000203> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Clock Time System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00000263> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Spatial Reference System  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000275> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Spatial Reference System  SubClassOf  Prescriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00000275> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> .
+
+# Solar Calendar System  SubClassOf  Temporal Reference System
+<https://www.commoncoreontologies.org/ont00000276> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001328> .
+
+# Solar Calendar System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00000276> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Nominal Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000293> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Nominal Measurement Information Content Entity  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000293> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Priority Measurement Information Content Entity  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00000369> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Priority Measurement Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00000369> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Priority Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000369> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Spatial Region Identifier  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000390> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Spatial Region Identifier  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000390> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Reference System  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000398> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Temporal Region Identifier  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000399> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Temporal Region Identifier  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000399> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Part Number  SubClassOf  Non-Name Identifier
+<https://www.commoncoreontologies.org/ont00000419> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000649> .
+
+# Part Number  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000419> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Part Number  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000419> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Geospatial Coordinate Reference System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00000469> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Natural Language  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000496> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Date Identifier  SubClassOf  Non-Name Identifier
+<https://www.commoncoreontologies.org/ont00000529> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000649> .
+
+# Date Identifier  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000529> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Date Identifier  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000529> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Count Measurement Information Content Entity  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00000539> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Count Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000539> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Temporal Instant Identifier  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000540> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Temporal Instant Identifier  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000540> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Julian Date Fraction  SubClassOf  Time of Day Identifier
+<https://www.commoncoreontologies.org/ont00000589> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000827> .
+
+# Julian Date Fraction  SubClassOf  Temporal Instant Identifier
+<https://www.commoncoreontologies.org/ont00000589> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000540> .
+
+# Veracity Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000592> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Veracity Measurement Information Content Entity  SubClassOf  Information Quality Entity
+<https://www.commoncoreontologies.org/ont00000592> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000314> .
+
+# Maximum Ordinal Measurement Information Content Entity  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00000604> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Maximum Ordinal Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000604> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Abbreviated Name  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000605> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Abbreviated Name  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000605> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Abbreviated Name  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000605> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Predictive Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000626> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Universal Time Reference System  SubClassOf  Temporal Reference System
+<https://www.commoncoreontologies.org/ont00000630> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001328> .
+
+# Universal Time Reference System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00000630> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Non-Name Identifier  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000649> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Non-Name Identifier  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000649> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Algorithm  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000653> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Distance Measurement Information Content Entity  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00000669> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Distance Measurement Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00000669> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Distance Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000669> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Diminutive Name  SubClassOf  Designative Name
+<https://www.commoncoreontologies.org/ont00000683> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000003> .
+
+# Diminutive Name  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000683> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Designative Information Content Entity  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000686> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Probability Measurement Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00000692> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Probability Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000692> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Spherical Coordinate System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00000729> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Deviation Measurement Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00000731> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Deviation Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000731> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Geospatial Region Bounding Box Identifier List  SubClassOf  Measurement Unit
+<https://www.commoncoreontologies.org/ont00000735> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000120> .
+
+# Point Estimate Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000745> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Point Estimate Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00000745> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Julian Day Number  SubClassOf  Date Identifier
+<https://www.commoncoreontologies.org/ont00000749> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000529> .
+
+# Julian Day Number  SubClassOf  Julian Date Identifier
+<https://www.commoncoreontologies.org/ont00000749> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000833> .
+
+# Time of Day Identifier  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000827> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Time of Day Identifier  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000827> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Time of Day Identifier  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000827> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Time Zone Identifier  SubClassOf  Temporal Region Identifier
+<https://www.commoncoreontologies.org/ont00000829> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000399> .
+
+# Julian Date Identifier  SubClassOf  Date Identifier
+<https://www.commoncoreontologies.org/ont00000833> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000529> .
+
+# Julian Date Identifier  SubClassOf  Time of Day Identifier
+<https://www.commoncoreontologies.org/ont00000833> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000827> .
+
+# Proportional Ratio Measurement Information Content Entity  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00000845> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Proportional Ratio Measurement Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00000845> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Proportional Ratio Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000845> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Descriptive Information Content Entity  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000853> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Calendar System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00000891> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Decimal Date Identifier  SubClassOf  Julian Day Number
+<https://www.commoncoreontologies.org/ont00000894> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000749> .
+
+# Decimal Date Identifier  SubClassOf  Julian Date Identifier
+<https://www.commoncoreontologies.org/ont00000894> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000833> .
+
+# Mean Point Estimate Information Content Entity  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00000896> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Mean Point Estimate Information Content Entity  SubClassOf  Estimate Information Content Entity
+<https://www.commoncoreontologies.org/ont00000896> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001176> .
+
+# Acronym  SubClassOf  Designative Name
+<https://www.commoncoreontologies.org/ont00000915> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000003> .
+
+# Acronym  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000915> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Acronym  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000915> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Lunar Calendar System  SubClassOf  Temporal Reference System
+<https://www.commoncoreontologies.org/ont00000916> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001328> .
+
+# Lunar Calendar System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00000916> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Arbitrary Identifier  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000923> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Arbitrary Identifier  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000923> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Arbitrary Identifier  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000923> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Prescriptive Information Content Entity  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000965> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Decimal Time of Day Identifier  SubClassOf  Temporal Instant Identifier
+<https://www.commoncoreontologies.org/ont00000973> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000540> .
+
+# Decimal Time of Day Identifier  SubClassOf  Non-Name Identifier
+<https://www.commoncoreontologies.org/ont00000973> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000649> .
+
+# Nickname  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00000990> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Nickname  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00000990> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Nickname  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00000990> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Ordinal Measurement Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00001010> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Ordinal Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001010> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Proper Name  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00001014> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Proper Name  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00001014> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Proper Name  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001014> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Ratio Measurement Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00001022> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Ratio Measurement Information Content Entity  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00001022> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Ratio Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001022> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Sequence Position Ordinality  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001041> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Sequence Position Ordinality  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00001041> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Sequence Position Ordinality  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00001041> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Interval Estimate Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001101> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Interval Estimate Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00001101> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Sidereal Time Reference System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00001146> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Data Range Interval Estimate Information Content Entity  SubClassOf  Ratio Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00001149> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001022> .
+
+# Data Range Interval Estimate Information Content Entity  SubClassOf  Measurement Information Content Entity
+<https://www.commoncoreontologies.org/ont00001149> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+# Data Range Interval Estimate Information Content Entity  SubClassOf  Estimate Information Content Entity
+<https://www.commoncoreontologies.org/ont00001149> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001176> .
+
+# Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001163> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Measurement Information Content Entity  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00001163> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Language  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001175> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Estimate Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001176> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Estimate Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00001176> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Priority Scale  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001205> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Military Time Zone Identifier  SubClassOf  Spatial Region Identifier
+<https://www.commoncoreontologies.org/ont00001235> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000390> .
+
+# Military Time Zone Identifier  SubClassOf  Non-Name Identifier
+<https://www.commoncoreontologies.org/ont00001235> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000649> .
+
+# Initialism  SubClassOf  Designative Name
+<https://www.commoncoreontologies.org/ont00001238> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000003> .
+
+# Initialism  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00001238> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Initialism  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001238> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Reliability Measurement Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00001256> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Reliability Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001256> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Reliability Measurement Information Content Entity  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00001256> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Lot Number  SubClassOf  Non-Name Identifier
+<https://www.commoncoreontologies.org/ont00001309> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000649> .
+
+# Lot Number  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00001309> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Lot Number  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001309> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Legal Name  SubClassOf  Designative Name
+<https://www.commoncoreontologies.org/ont00001331> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000003> .
+
+# Legal Name  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00001331> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Legal Name  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001331> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Calendar Date Identifier  SubClassOf  Temporal Region Identifier
+<https://www.commoncoreontologies.org/ont00001340> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000399> .
+
+# Calendar Date Identifier  SubClassOf  Non-Name Identifier
+<https://www.commoncoreontologies.org/ont00001340> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000649> .
+
+# Calendar Date Identifier  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00001340> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Cartesian Coordinate System  SubClassOf  Reference System
+<https://www.commoncoreontologies.org/ont00001351> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+# Greenwich Mean Time Zone Identifier  SubClassOf  Spatial Region Identifier
+<https://www.commoncoreontologies.org/ont00001352> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000390> .
+
+# Greenwich Mean Time Zone Identifier  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00001352> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Interval Measurement Information Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00001364> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Interval Measurement Information Content Entity  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00001364> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Interval Measurement Information Content Entity  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00001364> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Certificate  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002002> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Certificate  SubClassOf  Descriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00002002> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+# Academic Degree  SubClassOf  Information Bearing Entity
+<https://www.commoncoreontologies.org/ont00002003> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000253> .
+
+# Academic Degree  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002003> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Image  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002004> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Image  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00002004> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Chart  SubClassOf  Media Content Entity
+<https://www.commoncoreontologies.org/ont00002005> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002001> .
+
+# Chart  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00002005> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Chart  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002005> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Database  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002006> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# List  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002007> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Code List  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002008> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Video  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002009> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Message  SubClassOf  Information Bearing Entity
+<https://www.commoncoreontologies.org/ont00002010> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000253> .
+
+# Message  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002010> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Warning Message  SubClassOf  Information Bearing Entity
+<https://www.commoncoreontologies.org/ont00002011> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000253> .
+
+# Warning Message  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002011> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Warning Message  SubClassOf  Notification Message
+<https://www.commoncoreontologies.org/ont00002011> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002013> .
+
+# Email Message  SubClassOf  Information Bearing Entity
+<https://www.commoncoreontologies.org/ont00002012> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000253> .
+
+# Email Message  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002012> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Notification Message  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002013> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Notification Message  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00002013> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Barcode  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002014> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Barcode  SubClassOf  Information Bearing Entity
+<https://www.commoncoreontologies.org/ont00002014> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000253> .
+
+# Email Address  SubClassOf  Designative Information Content Entity
+<https://www.commoncoreontologies.org/ont00002070> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+# Email Address  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00002070> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Email Address  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002070> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Information Line  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002037> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Document Field Content  SubClassOf  Prescriptive Information Content Entity
+<https://www.commoncoreontologies.org/ont00002038> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> .
+
+# Document Field Content  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002038> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Document Content Entity  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002039> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Book  SubClassOf  Information Bearing Entity
+<https://www.commoncoreontologies.org/ont00002040> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000253> .
+
+# Book  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002040> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Transcript  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002041> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Transcript  SubClassOf  Information Bearing Entity
+<https://www.commoncoreontologies.org/ont00002041> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000253> .
+
+# Transcript  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00002041> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Spreadsheet  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002042> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Spreadsheet  SubClassOf  Information Bearing Entity
+<https://www.commoncoreontologies.org/ont00002042> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000253> .
+
+# Report  SubClassOf  Information Bearing Entity
+<https://www.commoncoreontologies.org/ont00002043> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000253> .
+
+# Report  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002043> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Form Document  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002044> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Form Document  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00002044> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+
+# Journal Article  SubClassOf  Information Content Entity
+<https://www.commoncoreontologies.org/ont00002045> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+# Journal Article  SubClassOf  Representational Information Content Entity
+<https://www.commoncoreontologies.org/ont00002045> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001069> .
+

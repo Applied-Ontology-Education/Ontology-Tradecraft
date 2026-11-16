@@ -1,9 +1,19 @@
-# Core
-mowl==1.0.2
-JPype1==1.6.0
-torch>=2.2,<3
-rdflib==7.0.0
-pandas==2.2.2
-python-dotenv
-perplexityai
-networkx #to support the ability to hold out a class with at least two edges.  
+# Core (tested on macOS, Python 3.11)
+mowl-borg==1.0.2
+JPype1==1.5.1
+torch==2.15.0
+numpy==2.4.6
+rdflib==7.6.0
+pandas==3.1.0
+
+# scipy is NOT pinned here: mowl-borg 1.0.2 asks for scipy<1.16.
+# On macOS, run this after installing this file:
+#     pip install scipy==1.17.1
+# (pip warns about the conflict; that's expected)
+
+# networkx: to hold out a class with at least two edges (Step 4 split)
+networkx==3.6.1
+
+# LLM calls (llm_helper.py)
+perplexityai==0.46.1
+python-dotenv==1.2.4
