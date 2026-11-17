@@ -1,0 +1,244 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+cco:ont00000029 rdfs:subClassOf cco:ont00000958,
+        cco:ont00001163,
+        cco:ont00001176 .
+
+cco:ont00000067 rdfs:subClassOf cco:ont00000398 .
+
+cco:ont00000073 rdfs:subClassOf cco:ont00000649,
+        cco:ont00000686,
+        cco:ont00000958 .
+
+cco:ont00000077 rdfs:subClassOf cco:ont00000686,
+        cco:ont00000958,
+        cco:ont00001069 .
+
+cco:ont00000080 rdfs:subClassOf cco:ont00000540,
+        cco:ont00000686,
+        cco:ont00000958 .
+
+cco:ont00000087 rdfs:subClassOf cco:ont00000529,
+        cco:ont00000686,
+        cco:ont00001340 .
+
+cco:ont00000124 rdfs:subClassOf cco:ont00000398 .
+
+cco:ont00000127 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00000154 rdfs:subClassOf cco:ont00000853,
+        cco:ont00001176 .
+
+cco:ont00000164 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958,
+        cco:ont00001163 .
+
+cco:ont00000186 rdfs:subClassOf cco:ont00000958,
+        cco:ont00001163 .
+
+cco:ont00000203 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958,
+        cco:ont00001163 .
+
+cco:ont00000263 rdfs:subClassOf cco:ont00000398 .
+
+cco:ont00000275 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00000293 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00000369 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958,
+        cco:ont00001163 .
+
+cco:ont00000419 rdfs:subClassOf cco:ont00000649,
+        cco:ont00000686,
+        cco:ont00000958 .
+
+cco:ont00000469 rdfs:subClassOf cco:ont00000398 .
+
+cco:ont00000496 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00000539 rdfs:subClassOf cco:ont00000958,
+        cco:ont00001163 .
+
+cco:ont00000589 rdfs:subClassOf cco:ont00000540,
+        cco:ont00000827 .
+
+cco:ont00000592 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00000604 rdfs:subClassOf cco:ont00000958,
+        cco:ont00001163 .
+
+cco:ont00000605 rdfs:subClassOf cco:ont00000686,
+        cco:ont00000958 .
+
+cco:ont00000626 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00000630 rdfs:subClassOf cco:ont00000398,
+        cco:ont00001328 .
+
+cco:ont00000653 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00000669 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958,
+        cco:ont00001163 .
+
+cco:ont00000692 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958 .
+
+cco:ont00000729 rdfs:subClassOf cco:ont00000398 .
+
+cco:ont00000731 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958 .
+
+cco:ont00000735 rdfs:subClassOf cco:ont00000120 .
+
+cco:ont00000745 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958 .
+
+cco:ont00000749 rdfs:subClassOf cco:ont00000529,
+        cco:ont00000833 .
+
+cco:ont00000829 rdfs:subClassOf cco:ont00000399 .
+
+cco:ont00000845 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958,
+        cco:ont00001163 .
+
+cco:ont00000894 rdfs:subClassOf cco:ont00000833 .
+
+cco:ont00000896 rdfs:subClassOf cco:ont00001163,
+        cco:ont00001176 .
+
+cco:ont00000923 rdfs:subClassOf cco:ont00000686,
+        cco:ont00000958,
+        cco:ont00001069 .
+
+cco:ont00000973 rdfs:subClassOf cco:ont00000540,
+        cco:ont00000649 .
+
+cco:ont00001010 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958 .
+
+cco:ont00001041 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958,
+        cco:ont00001163 .
+
+cco:ont00001101 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958 .
+
+cco:ont00001146 rdfs:subClassOf cco:ont00000398 .
+
+cco:ont00001149 rdfs:subClassOf cco:ont00001022,
+        cco:ont00001163,
+        cco:ont00001176 .
+
+cco:ont00001175 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00001205 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00001235 rdfs:subClassOf cco:ont00000390,
+        cco:ont00000649 .
+
+cco:ont00001256 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958 .
+
+cco:ont00001309 rdfs:subClassOf cco:ont00000649,
+        cco:ont00000686,
+        cco:ont00000958 .
+
+cco:ont00001331 rdfs:subClassOf cco:ont00000003 .
+
+cco:ont00001351 rdfs:subClassOf cco:ont00000398 .
+
+cco:ont00001352 rdfs:subClassOf cco:ont00000390,
+        cco:ont00000686 .
+
+cco:ont00001364 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958 .
+
+cco:ont00002002 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958 .
+
+cco:ont00002003 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002004 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002005 rdfs:subClassOf cco:ont00000958,
+        cco:ont00002001 .
+
+cco:ont00002006 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002007 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002008 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002009 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002010 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002011 rdfs:subClassOf cco:ont00000958,
+        cco:ont00002013 .
+
+cco:ont00002014 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002037 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002039 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002040 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002041 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002042 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002043 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002044 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00002045 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00000120 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00001022 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958 .
+
+cco:ont00001340 rdfs:subClassOf cco:ont00000399,
+        cco:ont00000649,
+        cco:ont00000686 .
+
+cco:ont00002013 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00000390 rdfs:subClassOf cco:ont00000958,
+        cco:ont00001069 .
+
+cco:ont00000399 rdfs:subClassOf cco:ont00000958,
+        cco:ont00001069 .
+
+cco:ont00000827 rdfs:subClassOf cco:ont00000686,
+        cco:ont00000958,
+        cco:ont00001069 .
+
+cco:ont00000833 rdfs:subClassOf cco:ont00000529,
+        cco:ont00000827 .
+
+cco:ont00000529 rdfs:subClassOf cco:ont00000649,
+        cco:ont00000686,
+        cco:ont00000958 .
+
+cco:ont00000540 rdfs:subClassOf cco:ont00000686,
+        cco:ont00000958 .
+
+cco:ont00001176 rdfs:subClassOf cco:ont00000853,
+        cco:ont00000958 .
+
+cco:ont00000649 rdfs:subClassOf cco:ont00000958,
+        cco:ont00001069 .
+
+cco:ont00000398 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00001163 rdfs:subClassOf cco:ont00000958 .
+
+cco:ont00000686 rdfs:subClassOf cco:ont00001069 .
+
