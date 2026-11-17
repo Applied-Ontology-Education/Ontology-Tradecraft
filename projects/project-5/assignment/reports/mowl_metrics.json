@@ -12,7 +12,7 @@
   "validPairs": 20,
   "pairs_scored": 20,
   "pairs_skipped": [],
-  "mean_cos": 0.817,
+  "mean_cos": 0.803,
   "passed": true,
   "tau": 0.6,
   "tau_rule": "smallest tau in [0.60, 0.65, 0.70, 0.75, 0.80] where held out pairs with cosine >= tau have mean cosine >= 0.70",
@@ -20,27 +20,27 @@
     {
       "tau": 0.6,
       "pairs_kept": 17,
-      "mean_cos_kept": 0.912
+      "mean_cos_kept": 0.911
     },
     {
       "tau": 0.65,
       "pairs_kept": 17,
-      "mean_cos_kept": 0.912
+      "mean_cos_kept": 0.911
     },
     {
       "tau": 0.7,
       "pairs_kept": 16,
-      "mean_cos_kept": 0.927
+      "mean_cos_kept": 0.925
     },
     {
       "tau": 0.75,
-      "pairs_kept": 15,
-      "mean_cos_kept": 0.941
+      "pairs_kept": 14,
+      "mean_cos_kept": 0.955
     },
     {
       "tau": 0.8,
       "pairs_kept": 13,
-      "mean_cos_kept": 0.969
+      "mean_cos_kept": 0.97
     }
   ],
   "hybrid": {
@@ -49,10 +49,11 @@
     "tau": 0.6,
     "llm_model": "anthropic/claude-haiku-5-5",
     "candidates": 211,
-    "scored": 193,
-    "accepted": 155,
+    "scored": 192,
+    "accepted": 153,
     "skipped_disjoint": 18,
-    "llm_contribution_rate": 0.123,
+    "skipped_cycle": 1,
+    "llm_contribution_rate": 0.131,
     "llm_contribution_rule": "share of accepted axioms whose cosine alone is below tau"
   }
 }

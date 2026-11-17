@@ -2884,7 +2884,6 @@ cco:ont00000085 rdf:type owl:Class ;
 cco:ont00000087 rdf:type owl:Class ;
                 rdfs:subClassOf cco:ont00000529 ,
                                 cco:ont00000686 ,
-                                cco:ont00000749 ,
                                 cco:ont00000894 ,
                                 cco:ont00001340 ;
                 rdfs:label "Ordinal Date Identifier"@en ;
@@ -2954,8 +2953,7 @@ cco:ont00000127 rdf:type owl:Class ;
 
 ###  https://www.commoncoreontologies.org/ont00000146
 cco:ont00000146 rdf:type owl:Class ;
-                rdfs:subClassOf cco:ont00000958 ,
-                                cco:ont00001175 ;
+                rdfs:subClassOf cco:ont00001175 ;
                 owl:disjointWith cco:ont00000496 ;
                 rdfs:label "Artificial Language"@en ;
                 skos:definition "A Language that is developed through conscious planning and premeditation, rather than one that was developed through use and repetition."@en ;
@@ -4063,7 +4061,6 @@ cco:ont00000891 rdf:type owl:Class ;
 ###  https://www.commoncoreontologies.org/ont00000894
 cco:ont00000894 rdf:type owl:Class ;
                 rdfs:subClassOf cco:ont00000529 ,
-                                cco:ont00000749 ,
                                 cco:ont00000833 ;
                 rdfs:label "Decimal Date Identifier"@en ;
                 skos:definition "A Date Identifier that designates some Day by using a number to indicate the sequential ordering of the Day since a specified Reference Time."@en ;

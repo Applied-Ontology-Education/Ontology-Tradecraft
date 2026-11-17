@@ -116,6 +116,7 @@ scored = 0
 kept = 0
 llm_helped = 0
 clashed = 0
+cycled = 0 #added becasue of OOPS! find
 
 for sub, sup in candidates.subject_objects(RDFS.subClassOf):
     total += 1
@@ -133,6 +134,11 @@ for sub, sup in candidates.subject_objects(RDFS.subClassOf):
         # every class above sub (and sub itself), every class above sup (and sup itself)
     sub_up = [str(c) for c in tree.transitive_objects(sub, RDFS.subClassOf)] #childs current lineage
     sup_up = [str(c) for c in tree.transitive_objects(sup, RDFS.subClassOf)] #proposed parents lineage
+    # skip if sup is already below sub - adding sub SubClassOf sup would make a cycle (OOPS! P06)
+    if str(sub) in sup_up: #add becasue of OOPS!  
+        print("  skipped (cycle - " + sup_name + " is already below " + sub_name + "):", axiom)
+        cycled += 1
+        continue
     clash = None
     for a in sub_up:
         for b in sup_up: #check every possible combination of the subclass's lineage and the proposed superclass's lineage to see if any pair of classes are disjoint. If a disjoint pair is found, it indicates that the proposed axiom would create a logical inconsistency in the ontology, as it would imply that an instance could belong to two disjoint classes. This check helps maintain the integrity of the ontology by preventing the acceptance of axioms that would violate disjointness constraints.
@@ -199,12 +205,13 @@ metrics["hybrid"] = {
     "scored": scored,
     "accepted": kept,
     "skipped_disjoint": clashed,
+    "skipped_cycle": cycled, #added becasue of OOPS! find
     "llm_contribution_rate": round(contribution, 3),
     "llm_contribution_rule": "share of accepted axioms whose cosine alone is below tau",
 }
 METRICS.write_text(json.dumps(metrics, indent=2))
 
-print(f"\nCandidates: {total}  scored: {scored}  accepted: {kept}  skipped (disjoint): {clashed}")
+print(f"\nCandidates: {total}  scored: {scored}  accepted: {kept}  skipped (disjoint): {clashed}  skipped (cycle): {cycled}")   ##added becasue of OOPS! find
 print(f"LLM contribution rate: {contribution:.1%}")
 print("Saved:", ACCEPTED)
 print("Saved:", METRICS)

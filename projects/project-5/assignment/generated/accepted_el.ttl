@@ -27,8 +27,6 @@ cco:ont00000124 rdfs:subClassOf cco:ont00000398 .
 
 cco:ont00000127 rdfs:subClassOf cco:ont00000958 .
 
-cco:ont00000146 rdfs:subClassOf cco:ont00000958 .
-
 cco:ont00000154 rdfs:subClassOf cco:ont00000853,
         cco:ont00001176 .
 
@@ -99,14 +97,16 @@ cco:ont00000735 rdfs:subClassOf cco:ont00000120 .
 cco:ont00000745 rdfs:subClassOf cco:ont00000853,
         cco:ont00000958 .
 
+cco:ont00000749 rdfs:subClassOf cco:ont00000529,
+        cco:ont00000833 .
+
 cco:ont00000829 rdfs:subClassOf cco:ont00000399 .
 
 cco:ont00000845 rdfs:subClassOf cco:ont00000853,
         cco:ont00000958,
         cco:ont00001163 .
 
-cco:ont00000894 rdfs:subClassOf cco:ont00000749,
-        cco:ont00000833 .
+cco:ont00000894 rdfs:subClassOf cco:ont00000833 .
 
 cco:ont00000896 rdfs:subClassOf cco:ont00001163,
         cco:ont00001176 .
@@ -200,9 +200,6 @@ cco:ont00002044 rdfs:subClassOf cco:ont00000958 .
 cco:ont00002045 rdfs:subClassOf cco:ont00000958 .
 
 cco:ont00000120 rdfs:subClassOf cco:ont00000958 .
-
-cco:ont00000749 rdfs:subClassOf cco:ont00000529,
-        cco:ont00000833 .
 
 cco:ont00001022 rdfs:subClassOf cco:ont00000853,
         cco:ont00000958 .
