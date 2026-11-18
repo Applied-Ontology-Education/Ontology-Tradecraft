@@ -1,9 +1,0 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-# Zero rows means this quality check passes.
-SELECT ?property ?wrongType WHERE {
-      VALUES (?property ?wrongType) { (<https://example.org/ontologies/intel-ontology#has_arrival_station> <http://www.w3.org/2002/07/owl#DatatypeProperty>) (<https://example.org/ontologies/intel-ontology#has_conveying_train> <http://www.w3.org/2002/07/owl#DatatypeProperty>) (<https://example.org/ontologies/intel-ontology#has_departure_station> <http://www.w3.org/2002/07/owl#DatatypeProperty>) (<https://example.org/ontologies/intel-ontology#has_intermediate_stop> <http://www.w3.org/2002/07/owl#DatatypeProperty>) (<https://example.org/ontologies/intel-ontology#has_rail_service_code> <http://www.w3.org/2002/07/owl#ObjectProperty>) (<https://example.org/ontologies/intel-ontology#has_train_identifier> <http://www.w3.org/2002/07/owl#ObjectProperty>) }
-      ?property rdf:type ?wrongType .
-    }

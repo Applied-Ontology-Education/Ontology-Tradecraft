@@ -1,9 +1,0 @@
-STEP8 COMMAND: C:\Users\cappa\Ontology-Tradecraft\projects\project-6\.venv-mowl\Scripts\python.exe -u C:\Users\cappa\Ontology-Tradecraft\projects\project-6\scripts\prepare_rail_mowl.py --project-root C:\Users\cappa\Ontology-Tradecraft\projects\project-6 --seed 42
-STEP 5A — PASS_SPLIT_READY_FOR_MOWL
-{
-  "source_import_train_pairs": 658,
-  "source_import_holdout_pairs": 165,
-  "rail_candidate_holdout_pairs": 1,
-  "train_axiom_pairs": 666,
-  "valid_axiom_pairs": 166
-}

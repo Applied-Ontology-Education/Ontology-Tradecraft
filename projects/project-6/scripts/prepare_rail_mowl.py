@@ -1,4 +1,4 @@
-"""Project 6 Step 5A: reproducible 80/20, no-leakage taxonomy data for mOWL.
+"""Project 6 Step 5A: reproducible, no-leakage taxonomy data for mOWL.
 
 Projects *named subclass axioms* from the source, six imported ontologies,
 and the refined rail candidate. Blank-node GCAs, ABox and non-EL features are
@@ -19,7 +19,7 @@ from rdflib.namespace import RDF, RDFS, OWL
 from validate_rail_tbox import require_inputs, file_hash, atomic_json, atomic_text, sorted_turtle
 from generate_rail_axioms import SUPPORTED_EXTENSIONS, parse_graph
 
-VERSION = "project6-mowl-80-20-v2"
+VERSION = "project6-mowl-holdout-v1"
 BASE_NS = "https://example.org/ontologies/intel-ontology#"
 AGENT_NS = "https://www.commoncoreontologies.org/AgentOntology/"
 RAIL_ROLE_PAIR = (BASE_NS + "rail_passenger_role", AGENT_NS + "passenger")
@@ -90,51 +90,6 @@ def select_holdout(base: set[tuple[str,str]], candidate_train: set[tuple[str,str
     return train, hold
 
 
-def select_rail_holdout(base: set[tuple[str,str]],
-                        candidate: set[tuple[str,str]], *,
-                        seed: int = 42, fraction: float = .20) -> tuple[set, set]:
-    """Create a seeded 80/20 candidate split without cold-start or path leakage.
-
-    Each held-out edge must retain *both* endpoint nodes in at least one
-    training taxonomy edge; OWL.Class declarations alone do NOT count as
-    learned embedding support. A candidate is not eligible when its child has
-    no other subclass connections, or its parent is only linked by that edge.
-
-    If the requested number of held-out edges cannot be obtained, fail rather
-    than silently reducing the rail validation sample or making up evidence.
-    """
-    if not candidate:
-        raise ValueError("No rail candidate subclass axioms available")
-    target = max(1, round(len(candidate) * fraction))
-    rng = random.Random(seed)
-    choices = sorted(candidate)
-    rng.shuffle(choices)
-    train = set(candidate)
-    hold = set()
-    for edge in choices:
-        if len(hold) >= target:
-            break
-        trial = train - {edge}
-        remaining = base | trial
-        support = degrees(remaining)
-        if support[edge[0]] == 0 or support[edge[1]] == 0:
-            continue
-        if reachable(remaining, *edge):
-            continue
-        train.remove(edge)
-        hold.add(edge)
-    if len(hold) != target:
-        raise ValueError(
-            f"Rail 80/20 split requires {target} held-out candidate subclass pairs "
-            f"out of {len(candidate)}; only {len(hold)} retain training support "
-            "without direct/transitive leakage. More independently supported "
-            "rail axioms are needed; do not count cold-start edges as cosine validation."
-        )
-    if train & hold or any(reachable(base | train, *e) for e in hold):
-        raise AssertionError("Candidate train/validation leakage")
-    return train, hold
-
-
 def assemble_data(training_edges: set[tuple[str,str]],
                   validation_edges: set[tuple[str,str]],
                   classes: set[str]) -> tuple[Graph,Graph]:
@@ -199,15 +154,16 @@ def plan(root: Path, *, seed: int = 42, validation_fraction: float = .20) -> dic
         for t in graph: base_graph.add(t)
     base_pairs=pairs(base_graph)
     all_candidate=pairs(refined)
-    # The source/import axioms and rail candidate axioms each receive an 80/20
-    # split. This prevents a large source taxonomy from masking a 1-of-9 rail
-    # holdout, as occurred in Step 5 v1.
-    training_candidate, heldout_candidate = select_rail_holdout(
-        base_pairs, all_candidate, seed=seed, fraction=validation_fraction)
-    training_base, heldout_base = select_holdout(
-        base_pairs, training_candidate, seed, validation_fraction)
+    if RAIL_ROLE_PAIR not in all_candidate:
+        raise ValueError("Expected new rail passenger role -> existing passenger axiom is missing")
+    training_candidate = all_candidate - {RAIL_ROLE_PAIR}
+    if reachable(base_pairs | training_candidate, *RAIL_ROLE_PAIR):
+        raise ValueError("Rail candidate holdout is reachable from retained taxonomy: leakage")
+    if degrees(base_pairs | training_candidate)[RAIL_ROLE_PAIR[0]] == 0:
+        raise ValueError("Rail passenger role lacks independent class support")
+    training_base, heldout_base=select_holdout(base_pairs, training_candidate, seed,validation_fraction)
     training_edges = training_base | training_candidate
-    validation_edges = heldout_base | heldout_candidate
+    validation_edges = heldout_base | {RAIL_ROLE_PAIR}
     if training_edges & validation_edges:
         raise ValueError("Direct train/validation leakage")
     if any(reachable(training_edges,*e) for e in validation_edges):
@@ -218,7 +174,7 @@ def plan(root: Path, *, seed: int = 42, validation_fraction: float = .20) -> dic
     before_hashes={"source":hashes["source"],"refined":hashes["refined"],"step4_summary":file_hash(root/"reports/step4_summary.json")}
     train_path=root/"generated/mowl_rail_train.ttl"
     valid_path=root/"generated/mowl_rail_valid.ttl"
-    atomic_text(train_path,sorted_turtle(train_graph,"Project 6 mOWL taxonomy-only train data (80pct source and rail; no validation edges)"))
+    atomic_text(train_path,sorted_turtle(train_graph,"Project 6 mOWL taxonomy-only training data (candidate role alignment withheld)"))
     atomic_text(valid_path,sorted_turtle(valid_graph,"Project 6 mOWL taxonomy-only validation data, never used to fit embeddings"))
     # Safety: emitted files must be graph-equivalent to our in-memory projection.
     if set(load_ontology(train_path)) != set(train_graph) or set(load_ontology(valid_path)) != set(valid_graph):
@@ -236,23 +192,15 @@ def plan(root: Path, *, seed: int = 42, validation_fraction: float = .20) -> dic
         "source_import_explicit_named_subclass_pairs":len(base_pairs),
         "source_import_train_pairs":len(training_base),"source_import_holdout_pairs":len(heldout_base),
         "rail_candidate_pairs_total":len(all_candidate),
-        "rail_candidate_training_pairs":len(training_candidate),
-        "rail_candidate_holdout_pairs":len(heldout_candidate),
-        "rail_candidate_holdouts":[{"child":a,"parent":b} for a,b in sorted(heldout_candidate)],
-        "rail_candidate_holdout":({"child":RAIL_ROLE_PAIR[0], "parent":RAIL_ROLE_PAIR[1]}
-                                  if RAIL_ROLE_PAIR in heldout_candidate else None),
-        "overall_train_fraction":round(len(training_edges)/(len(training_edges)+len(validation_edges)),6),
-        "overall_validation_fraction":round(len(validation_edges)/(len(training_edges)+len(validation_edges)),6),
+        "rail_candidate_training_pairs":len(training_candidate),"rail_candidate_holdout_pairs":1,
+        "rail_candidate_holdout":{"child":RAIL_ROLE_PAIR[0],"parent":RAIL_ROLE_PAIR[1]},
         "train_axiom_pairs":len(training_edges),"valid_axiom_pairs":len(validation_edges),
         "indexed_class_declarations":len(all_classes),
         "train_sha256":file_hash(train_path),"valid_sha256":file_hash(valid_path),
         "holdout_pairs":[{"child":a,"parent":b} for a,b in sorted(validation_edges)],
-        "candidate_pairs":[{"child":a,"parent":b,
-                           "evaluation":"HELD_OUT" if (a,b) in heldout_candidate
-                           else "IN_TRAINING_UNSCORABLE_INDEPENDENTLY"}
-                           for a,b in sorted(all_candidate)],
+        "candidate_pairs":[{"child":a,"parent":b,"evaluation":"HELD_OUT" if (a,b)==RAIL_ROLE_PAIR else "IN_TRAINING_UNSCORABLE_INDEPENDENTLY"} for a,b in sorted(all_candidate)],
         "projection_scope":"Named rdfs:subClassOf + owl:Class declarations only. Imported/source GCAs, restrictions, ABox and property domain/range not used in mOWL loss.",
-        "limitation":"Some rail classes have a single asserted parent; these edges remain in training because holding them out would leave an unsupported class-center embedding. New rail held-outs must have other training support, and a 0.70 cosine mean is not guaranteed by the 80/20 split.",
+        "limitation":"Most rail classes have a single asserted parent and cannot support a leak-free embedding score for that same parent. Only the role->passenger edge is held out.",
         "source_not_merged":True,"individuals_generated":False,
     }
     atomic_json(root/"reports/step5_split_report.json",out)

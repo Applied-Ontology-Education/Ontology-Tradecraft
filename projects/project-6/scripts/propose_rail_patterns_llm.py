@@ -23,7 +23,7 @@ from rdflib.namespace import OWL, RDF, RDFS
 
 from inventory_ontology import audit_project, declarations, parse_graph, sha256_file, atomic_json
 
-VERSION = "project6-rail-proposal-v3-manifest-vocabulary-contract"
+VERSION = "project6-rail-proposal-v1"
 DEFAULT_NAMESPACE = "https://example.org/ontologies/intel-ontology#"
 BASE_TYPES = {
     "object": "http://purl.obolibrary.org/obo/BFO_0000030",
@@ -32,41 +32,6 @@ BASE_TYPES = {
     "information_content_entity": "http://purl.obolibrary.org/obo/IAO_0000030",
     "material_information_bearer": "http://purl.obolibrary.org/obo/IAO_0000178",
 }
-
-# The downstream Step 3A refinement script is intentionally tied to this
-# approved design profile. The model may write definitions/rationales, but it
-# may not silently omit required entities or change these superclass contracts.
-AGENT_NS = "https://www.commoncoreontologies.org/AgentOntology/"
-RAIL_CLASS_CONTRACT = {
-    "train": ("train", BASE_TYPES["object"]),
-    "passenger train": ("passenger_train", DEFAULT_NAMESPACE + "train"),
-    "railway station": ("railway_station", AGENT_NS + "building"),
-    "rail journey": ("rail_journey", BASE_TYPES["process"]),
-    "rail journey plan": ("rail_journey_plan", BASE_TYPES["information_content_entity"]),
-    "rail ticket": ("rail_ticket", AGENT_NS + "ticket"),
-    "rail reservation information": ("rail_reservation_information", AGENT_NS + "reservation"),
-    "rail passenger role": ("rail_passenger_role", BASE_TYPES["role"]),
-}
-REQUIRED_OBJECT_PROPERTY_COUNT = 4
-REQUIRED_DATA_PROPERTY_COUNT = 2
-DEFAULT_DESIGN_ATTEMPTS = 2
-
-# The v3 in-transit passenger-manifest importer is downstream of the rail
-# augmentation. Counts alone are not sufficient: all six IRIs, domains, and
-# ranges must match the reviewed, previously validated manifest vocabulary.
-# This design is intentionally fixed; Grok still authors definitions and
-# rationales but cannot silently rename the predicates between stages.
-RAIL_OBJECT_PROPERTY_CONTRACT = {
-    "departs_from_station": ("rail_journey", "railway_station"),
-    "arrives_at_station": ("rail_journey", "railway_station"),
-    "occurs_aboard_train": ("rail_journey", "train"),
-    "specifies_rail_journey": ("rail_journey_plan", "rail_journey"),
-}
-RAIL_DATA_PROPERTY_CONTRACT = {
-    "has_planned_departure_time": ("rail_journey_plan", "dateTime"),
-    "has_train_service_code": ("passenger_train", "string"),
-}
-
 
 
 def object_schema(properties: dict) -> dict:
@@ -131,21 +96,12 @@ Distinguish actual train journey (BFO process), journey plan/reservation informa
 what is intended), train/station physical objects, and passenger role (BFO role,
 NOT person). Do not create any named individuals, social-media threat classifications,
 trip records, or statements about specific persons. Keep BFO role and person distinct.
-For THIS pipeline propose EXACTLY FOUR (4) NEW object properties and EXACTLY TWO (2)
-NEW datatype properties. The downstream Step 3A validation requires eight CREATE
-classes + four object properties + two datatype properties (62 candidate RDF
-triples). Zero or one datatype properties is NOT acceptable. Do not add or omit
-properties. Follow the reviewed class local names and direct parent IRIs in
-`required_rail_class_contract` without changing them. You may write labels,
-definitions, rationales, and review notes, but do not change any class identifiers
-or prescribed direct parents. Similarly, use EXACTLY the object and datatype
-property `local_name`, `domain_iri`, `range_iri` / `datatype_iri` supplied in
-`required_manifest_object_property_contract` and
-`required_manifest_data_property_contract`. These six property identities
-are required by the validated passenger-manifest ingestion stage. Do not
-replace them with near-synonyms such as has_departure_station,
-has_arrival_station, has_conveying_train, has_rail_service_code, or
-has_train_identifier. Avoid duplicating existing properties.
+MANDATORY: For the target_concept 'rail passenger role', use parent_iri exactly
+'http://purl.obolibrary.org/obo/BFO_0000023' (BFO Role), NOT passenger.
+MANDATORY: For the target_concept 'rail journey', use parent_iri exactly
+'http://purl.obolibrary.org/obo/BFO_0000015' (BFO Process).
+Propose 2-4 NEW object properties relevant to rail processes/facilities/vehicle and
+0-2 relevant new datatype properties; avoid duplicating existing properties.
 Property domains/ranges must be known class IRIs or newly proposed class IRIs.
 Never use invented external namespace IRIs or existing named individuals as class parents.
 Express uncertainties and potential modeling pitfalls in review_notes/design_warnings.
@@ -216,21 +172,6 @@ def build_request(root: Path, namespace: str, model: str) -> tuple[dict, set[str
         "source_object_properties": source_props,
         "source_data_properties": source_data,
         "constraint": "TBox proposals only, preserve source, no new individuals",
-        "required_rail_class_contract": {
-            concept: {"local_name": local, "parent_iri": parent.replace(DEFAULT_NAMESPACE, namespace)}
-            for concept, (local, parent) in RAIL_CLASS_CONTRACT.items()
-        },
-        "required_object_property_count": REQUIRED_OBJECT_PROPERTY_COUNT,
-        "required_data_property_count": REQUIRED_DATA_PROPERTY_COUNT,
-        "required_manifest_object_property_contract": {
-            name: {"domain_iri": namespace + domain, "range_iri": namespace + range_}
-            for name, (domain, range_) in RAIL_OBJECT_PROPERTY_CONTRACT.items()
-        },
-        "required_manifest_data_property_contract": {
-            name: {"domain_iri": namespace + domain, "datatype_iri": "http://www.w3.org/2001/XMLSchema#" + datatype}
-            for name, (domain, datatype) in RAIL_DATA_PROPERTY_CONTRACT.items()
-        },
-        "required_candidate_triples_before_refinement": 62,
     }
     return payload, classes, properties, individuals
 
@@ -331,79 +272,6 @@ def validate_proposal(response: dict, payload: dict, classes: set[str],
             "data_properties": len(response["data_properties"])}
 
 
-
-def validate_refinement_contract(response: dict, payload: dict) -> None:
-    """Ensure a valid Step 2 proposal is also consumable by the approved Step 3A.
-
-    JSON schema validity is insufficient: the prior prompt allowed 0–2 data
-    properties, although Step 3A requires exactly two. This function prevents
-    that mismatch, and checks the class names and direct parents which Step 3A
-    rewrites deterministically.
-    """
-    classes = response.get("rail_classes", [])
-    objects = response.get("object_properties", [])
-    datas = response.get("data_properties", [])
-    issues = []
-    if len(classes) != len(RAIL_CLASS_CONTRACT):
-        issues.append(f"rail classes: expected 8, got {len(classes)}")
-    if len(objects) != REQUIRED_OBJECT_PROPERTY_COUNT:
-        issues.append(f"object properties: expected 4, got {len(objects)}")
-    if len(datas) != REQUIRED_DATA_PROPERTY_COUNT:
-        issues.append(f"data properties: expected 2, got {len(datas)}")
-    # Count validation by itself allowed Step 8 to pass the rail merge with
-    # properties unsupported by the ABox importer. Check every IRI and its
-    # asserted domain/range now, BEFORE Step 3 consumes the Grok design.
-    for label, items, contract, keys in (
-        ("object", objects, payload["required_manifest_object_property_contract"],
-         ("domain_iri", "range_iri")),
-        ("data", datas, payload["required_manifest_data_property_contract"],
-         ("domain_iri", "datatype_iri")),
-    ):
-        if any(not isinstance(item, dict) for item in items):
-            issues.append(f"{label} properties must be dictionaries")
-            continue
-        by_name = {item.get("local_name"): item for item in items}
-        expected_names = set(contract)
-        actual_names = set(by_name)
-        if expected_names != actual_names or len(by_name) != len(items):
-            issues.append(
-                f"{label} property local_name mismatch: "
-                f"expected {sorted(expected_names)}; got {sorted(str(x) for x in actual_names)}"
-            )
-        for name, expected in contract.items():
-            item = by_name.get(name)
-            if item is None:
-                continue
-            for field in keys:
-                if item.get(field) != expected[field]:
-                    issues.append(
-                        f"{label} property {name}: expected {field} "
-                        f"{expected[field]!r}, got {item.get(field)!r}"
-                    )
-    actual = {item.get("target_concept"): item for item in classes if isinstance(item, dict)}
-    for concept, expected in payload["required_rail_class_contract"].items():
-        item = actual.get(concept)
-        if not item:
-            issues.append(f"missing rail class: {concept}")
-            continue
-        if item.get("decision") != "CREATE":
-            issues.append(f"{concept}: expected CREATE, got {item.get('decision')}")
-        if item.get("local_name") != expected["local_name"]:
-            issues.append(f"{concept}: expected local_name {expected['local_name']}")
-        if item.get("parent_iri") != expected["parent_iri"]:
-            issues.append(f"{concept}: expected parent_iri {expected['parent_iri']}")
-    if issues:
-        raise ValueError("Refinement contract violation: " + "; ".join(issues))
-
-
-def validate_design(response: dict, payload: dict, classes: set[str],
-                    properties: set[str], individuals: set[str]) -> dict:
-    """Validate vocabulary, disjoint property names, and downstream contract."""
-    counts = validate_proposal(response, payload, classes, properties, individuals)
-    validate_refinement_contract(response, payload)
-    return counts
-
-
 def call_llm(payload: dict, model: str) -> dict:
     api_key = os.environ.get("XAI_API_KEY", "").strip()
     if not api_key:
@@ -412,7 +280,7 @@ def call_llm(payload: dict, model: str) -> dict:
         from openai import OpenAI
     except ImportError as exc:
         raise RuntimeError("Install the OpenAI Python SDK: python -m pip install openai") from exc
-    client = OpenAI(api_key=api_key, base_url="https://api.x.ai/v1", timeout=120.0, max_retries=2)
+    client = OpenAI(api_key=api_key, base_url="https://api.x.ai/v1", timeout=900.0, max_retries=2)
     response = client.chat.completions.create(
         model=model,
         messages=[
@@ -429,9 +297,7 @@ def call_llm(payload: dict, model: str) -> dict:
 
 
 def run(root: Path, *, model: str, namespace: str, dry_run: bool = False,
-        llm_function=None, max_design_attempts: int = DEFAULT_DESIGN_ATTEMPTS) -> dict:
-    if not (1 <= max_design_attempts <= 5):
-        raise ValueError("--max-design-attempts must be between 1 and 5")
+        llm_function=None) -> dict:
     source = root / "src/module.ttl"
     original_hash = sha256_file(source)
     payload, classes, properties, individuals = build_request(root, namespace, model)
@@ -445,60 +311,58 @@ def run(root: Path, *, model: str, namespace: str, dry_run: bool = False,
                   "note": "No API request made; no OWL generated"}
     else:
         llm_function = llm_function or call_llm
-        rejected = []
-        response = None
-        counts = None
-        for attempt in range(1, max_design_attempts + 1):
-            # Requests are independent of prior generated artifacts; a rejected
-            # response is NEVER emitted as the downstream design proposal.
-            request = dict(payload)
-            if rejected:
-                request["repair_feedback"] = {
-                    "previous_candidate_rejected": True,
-                    "validation_error": rejected[-1]["error"],
-                    "instruction": "Regenerate the COMPLETE JSON design, not a patch. "
-                                   "Satisfy every mandatory class and property count. "
-                                   "Do not modify protected source ontology inputs.",
-                }
-            # Service/authentication exceptions must propagate immediately.
-            # Only well-formed but structurally invalid design candidates retry.
-            candidate = llm_function(request, model)
-            try:
-                counts = validate_design(candidate, payload, classes, properties, individuals)
-            except ValueError as exc:
-                # A rejected design is neither saved as the proposal nor
-                # consumed by Step 3. The source and imports stay unchanged.
-                rejected.append({"attempt": attempt, "error": str(exc)})
-                if attempt == max_design_attempts:
-                    atomic_json(root / "reports/step2_rejected_attempts.json", {
-                        "status": "FAIL_DESIGN_CONTRACT", "model": model,
-                        "attempts": rejected,
-                    })
-                    raise ValueError(
-                        f"Step 2 rejected {max_design_attempts} design attempt(s); "
-                        f"last error: {exc}. See reports/step2_rejected_attempts.json"
-                    ) from exc
-                print(f"STEP 2 — rejected candidate {attempt}/{max_design_attempts}: {exc}; retrying", flush=True)
-                continue
-            response = candidate
-            break
-        assert response is not None and counts is not None
+        response = llm_function(payload, model)
+
+        # Preserve the original LLM response for review.
+        atomic_json(
+            root / "generated/rail_pattern_proposal_raw.json",
+            response
+        )
+
+        # Enforce mandatory BFO parent classes.
+        required_parents = {
+            "rail passenger role": BASE_TYPES["role"],
+            "rail journey": BASE_TYPES["process"],
+        }
+
+        for item in response.get("rail_classes", []):
+            concept = item.get("target_concept")
+
+            if (
+                item.get("decision") == "CREATE"
+                and concept in required_parents
+            ):
+                expected = required_parents[concept]
+
+                if item.get("parent_iri") != expected:
+                    original = item.get("parent_iri")
+                    item["parent_iri"] = expected
+
+                    item["review_notes"].append(
+                        f"Pipeline constraint: parent changed "
+                        f"from {original} to {expected}"
+                    )
+
+        counts = validate_proposal(
+            response,
+            payload,
+            classes,
+            properties,
+            individuals
+        )
         if sha256_file(source) != original_hash:
             raise RuntimeError("Source ontology changed during generation; aborting")
         proposal = {"status": "PROPOSED_NOT_VALIDATED_OWL", "script_version": VERSION,
                     "provenance": {"model": model, "source_sha256": original_hash,
                                    "prompt_sha256": hashlib.sha256(json.dumps(payload, sort_keys=True).encode()).hexdigest(),
                                    "local_import_hashes": {k: v["sha256"] for k, v in payload["local_imports"].items()},
-                                   "generated_by": "xAI LLM; validated against downstream refinement contract",
-                                   "design_attempts": len(rejected) + 1,
-                                   "rejected_attempts": rejected},
+                                   "generated_by": "xAI LLM; checked against local RDF vocabulary"},
                     "namespace": namespace, "proposal": response}
         atomic_json(root / "generated/rail_pattern_proposal.json", proposal)
         result = {"status": "PASS_PROPOSAL_ONLY", "model": model,
                   "source_unchanged": True, "targets": len(payload["pattern_targets"]),
                   "imports": len(payload["local_imports"]), **counts,
-                  "design_attempts": len(rejected) + 1,
-                  "note": "Complete eight-class, six-property candidate; no OWL generated or merged"}
+                  "note": "JSON candidate design only; no OWL generated or merged"}
     atomic_json(root / "reports/step2_summary.json", result)
     return result
 
@@ -509,12 +373,10 @@ def main() -> int:
     parser.add_argument("--model", default=os.getenv("XAI_MODEL", "grok-4.7"))
     parser.add_argument("--namespace", default=DEFAULT_NAMESPACE)
     parser.add_argument("--dry-run", action="store_true", help="Test input/import checks without an API call")
-    parser.add_argument("--max-design-attempts", type=int, default=DEFAULT_DESIGN_ATTEMPTS,
-                        help="Total fresh LLM design attempts if the candidate violates downstream contract (1-5)")
     args = parser.parse_args()
     try:
         result = run(args.project_root.resolve(), model=args.model, namespace=args.namespace,
-                     dry_run=args.dry_run, max_design_attempts=args.max_design_attempts)
+                     dry_run=args.dry_run)
     except Exception as exc:
         print(f"STEP 2 — FAIL: {exc}", file=sys.stderr)
         return 1

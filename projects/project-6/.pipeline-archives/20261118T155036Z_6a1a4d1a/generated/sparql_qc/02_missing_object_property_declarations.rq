@@ -1,6 +1,0 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-# Zero rows means this quality check passes.
-SELECT ?entity WHERE { VALUES ?entity { <https://example.org/ontologies/intel-ontology#arrives_at_station> <https://example.org/ontologies/intel-ontology#departs_from_station> <https://example.org/ontologies/intel-ontology#occurs_aboard_train> <https://example.org/ontologies/intel-ontology#specifies_rail_journey> } FILTER NOT EXISTS { ?entity rdf:type <http://www.w3.org/2002/07/owl#ObjectProperty> } }

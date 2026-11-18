@@ -1,4 +1,4 @@
-# Project 6 mOWL taxonomy-only train data (80pct source and rail; no validation edges)
+# Project 6 mOWL taxonomy-only training data (candidate role alignment withheld)
 
 <http://purl.obolibrary.org/obo/APOLLO_SV_00000008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://purl.obolibrary.org/obo/APOLLO_SV_00000008> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/COB_0000035> .
@@ -493,6 +493,7 @@
 <https://example.org/ontologies/intel-ontology#railway_station> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000040> .
 <https://example.org/ontologies/intel-ontology#reservation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://example.org/ontologies/intel-ontology#train> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/ontologies/intel-ontology#train> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000040> .
 <https://www.commoncoreontologies.org/AgentOntology#driver's_license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://www.commoncoreontologies.org/AgentOntology#driver's_license> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.commoncoreontologies.org/AgentOntology/license> .
 <https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_posting> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

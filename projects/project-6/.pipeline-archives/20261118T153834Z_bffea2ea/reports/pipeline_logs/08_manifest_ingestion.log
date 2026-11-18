@@ -1,2 +1,0 @@
-STEP8 COMMAND: C:\Users\cappa\Ontology-Tradecraft\projects\project-6\.venv-mowl\Scripts\python.exe -u C:\Users\cappa\Ontology-Tradecraft\projects\project-6\scripts\ingest_passenger_manifest.py --input C:\Users\cappa\Ontology-Tradecraft\projects\project-6\templates\passenger_manifest_template.xlsx
-MANIFEST INGEST — FAIL: Augmented ontology is missing required ObjectProperty: https://example.org/ontologies/intel-ontology#departs_from_station

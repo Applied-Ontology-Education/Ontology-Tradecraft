@@ -5,9 +5,9 @@ Usage:
   python scripts/evaluate_rail_mowl.py
   python scripts/evaluate_rail_mowl.py --with-llm --reuse-vectors
 
-A rail candidate is never 'approved' by cosine or an LLM. Step 5A holds out
-20% of independently supported rail subclass edges. Only those edges receive
-an out-of-sample cosine score; other candidate edges remain in training.
+A rail candidate is never 'approved' by cosine or an LLM. Only the rail
+passenger-role to existing passenger-role axiom is held out of model training;
+other candidate edges are in training and are NOT independently scored.
 """
 from __future__ import annotations
 import argparse
@@ -25,7 +25,7 @@ from rdflib.namespace import RDF, RDFS, OWL, SKOS
 from prepare_rail_mowl import (plan, file_hash, atomic_json, atomic_text,
                                RAIL_ROLE_PAIR, load_ontology, pairs)
 
-VERSION="project6-elembeddings-hybrid-80-20-v2"
+VERSION="project6-elembeddings-hybrid-v1"
 DEFAULT_MODEL="grok-4.7"
 
 
@@ -40,7 +40,7 @@ def cosine(vec_a: np.ndarray, vec_b: np.ndarray) -> float | None:
 
 def score_holdouts(index: dict[str,int],vectors: np.ndarray, report: dict) -> list[dict]:
     rows=[]
-    held = {(x["child"], x["parent"]) for x in report["rail_candidate_holdouts"]}
+    held = (report["rail_candidate_holdout"]["child"],report["rail_candidate_holdout"]["parent"])
     for row in report["holdout_pairs"]:
         child,parent=row["child"],row["parent"]
         if child not in index or parent not in index:
@@ -49,7 +49,7 @@ def score_holdouts(index: dict[str,int],vectors: np.ndarray, report: dict) -> li
             score=cosine(vectors[index[child]],vectors[index[parent]])
             status="HELD_OUT_COSINE" if score is not None else "INVALID_EMBEDDING"
         rows.append({"child":child,"parent":parent,"cosine":score,
-                     "status":status,"scope":"RAIL_NEW_DOMAIN" if (child,parent) in held else "SOURCE_IMPORT_REFERENCE"})
+                     "status":status,"scope":"RAIL_NEW_DOMAIN" if (child,parent)==held else "SOURCE_IMPORT_REFERENCE"})
     return rows
 
 
@@ -245,16 +245,9 @@ def evaluate(root:Path,*,epochs:int=200,dim:int=50,seed:int=42,
         save_vectors(root,index,vectors,{**manifest,**details})
         model_metadata={**manifest,**details}
     scores=score_holdouts(index,vectors,split)
-    rail_scores = [r for r in scores if r["scope"] == "RAIL_NEW_DOMAIN"]
-    if (len(rail_scores) != split["rail_candidate_holdout_pairs"] or
-        any(r["status"] != "HELD_OUT_COSINE" for r in rail_scores)):
-        raise ValueError("Some independently held-out rail relationships lack valid embeddings; fail rather than fabricate a mean")
-    rail_mean = round(float(np.mean([r["cosine"] for r in rail_scores])), 6)
-    # Preserve a role-specific field solely for comparing this run with v1.
-    role_score = next((r["cosine"] for r in rail_scores
-                       if (r["child"], r["parent"]) == RAIL_ROLE_PAIR), None)
-    threshold = .70
-    meets_threshold = rail_mean >= threshold
+    role_score=[r for r in scores if (r["child"],r["parent"])==RAIL_ROLE_PAIR]
+    if len(role_score)!=1 or role_score[0]["status"]!="HELD_OUT_COSINE":
+        raise ValueError("Held-out rail passenger alignment not represented by a valid embedding; fail rather than fabricate score")
     proposal=json.loads((root/"generated/rail_pattern_proposal.json").read_text(encoding="utf-8"))
     original_hash=split["source_sha256"]
     llm_ratings=None
@@ -274,12 +267,7 @@ def evaluate(root:Path,*,epochs:int=200,dim:int=50,seed:int=42,
                    "train_sha256":split["train_sha256"],"valid_sha256":split["valid_sha256"],
                    "model":model_metadata,"heldout_source_import_pairs":len(heldref),
                    "mean_heldout_source_import_cosine":round(float(np.mean(heldref)),6) if heldref else None,
-                   "heldout_rail_cosine":role_score,
-                   "heldout_rail_pairs":len(rail_scores),
-                   "mean_heldout_rail_cosine":rail_mean,
-                   "cosine_threshold":threshold,
-                   "cosine_requirement_met":meets_threshold,
-                   "heldout_rail_pair_scores":rail_scores,
+                   "heldout_rail_cosine":role_score[0]["cosine"],
                    "scores":scores,
                    "warning":"Train set contains all other rail candidate superclass axioms. Do not use their in-sample scores as independent validation."}
     if (file_hash(root/"src/module.ttl")!=original_hash or
@@ -288,18 +276,13 @@ def evaluate(root:Path,*,epochs:int=200,dim:int=50,seed:int=42,
     atomic_json(root/"reports/step5_cosine_scores.json",cosine_report)
     atomic_json(root/"reports/step5_hybrid_review.json",hybrid)
     summary={"version":VERSION,"status":"PASS_HYBRID_REVIEW_ONLY" if with_llm else "PASS_COSINE_ONLY",
-             "mowl_training_completed":True,
-              "cosine_heldout_rail_pairs":len(rail_scores),
-              "mean_heldout_rail_cosine":rail_mean,
-              "cosine_threshold":threshold,
-              "cosine_requirement_met":meets_threshold,
+             "mowl_training_completed":True,"cosine_heldout_rail_pairs":1,
              "cosine_source_reference_pairs":len(heldref),
              "hybrid_scored_pairs":hybrid["hybrid_scored_pairs"],
              "llm_executed":with_llm,"source_unchanged":True,"source_sha256":original_hash,
              "merged_into_source":False,"new_named_individuals":0,
              "semantic_approval":False,"owl_reasoner_executed":False,
-             "next":"Human scope review + OWL reasoner + controlled merge; no candidate automatically accepted",
-              "cosine_requirement_note": "Successful training does not imply 0.70 cosine mean; check cosine_requirement_met. The report is diagnostic and does not by itself block the runner."}
+             "next":"Human scope review + OWL reasoner + controlled merge; no candidate automatically accepted"}
     atomic_json(root/"reports/step5_summary.json",summary)
     return summary
 

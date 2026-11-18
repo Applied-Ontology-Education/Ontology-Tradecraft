@@ -42,7 +42,7 @@
     },
     {
       "child": "https://example.org/ontologies/intel-ontology#train",
-      "evaluation": "HELD_OUT",
+      "evaluation": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
       "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
     }
   ],
@@ -226,10 +226,6 @@
     {
       "child": "https://example.org/ontologies/intel-ontology#reservation",
       "parent": "http://purl.obolibrary.org/obo/IAO_0000178"
-    },
-    {
-      "child": "https://example.org/ontologies/intel-ontology#train",
-      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
     },
     {
       "child": "https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting",
@@ -726,28 +722,16 @@
   },
   "indexed_class_declarations": 849,
   "individuals_generated": false,
-  "limitation": "Some rail classes have a single asserted parent; these edges remain in training because holding them out would leave an unsupported class-center embedding. New rail held-outs must have other training support, and a 0.70 cosine mean is not guaranteed by the 80/20 split.",
-  "overall_train_fraction": 0.799279,
-  "overall_validation_fraction": 0.200721,
+  "limitation": "Most rail classes have a single asserted parent and cannot support a leak-free embedding score for that same parent. Only the role->passenger edge is held out.",
   "projection_scope": "Named rdfs:subClassOf + owl:Class declarations only. Imported/source GCAs, restrictions, ABox and property domain/range not used in mOWL loss.",
   "rail_candidate_holdout": {
     "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
     "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger"
   },
-  "rail_candidate_holdout_pairs": 2,
-  "rail_candidate_holdouts": [
-    {
-      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
-      "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger"
-    },
-    {
-      "child": "https://example.org/ontologies/intel-ontology#train",
-      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
-    }
-  ],
+  "rail_candidate_holdout_pairs": 1,
   "rail_candidate_pairs_total": 9,
-  "rail_candidate_training_pairs": 7,
-  "refined_sha256": "f27f752d3b89200d2d58ee87f5128d57ffc215a1792997c26bc472db71901566",
+  "rail_candidate_training_pairs": 8,
+  "refined_sha256": "c89b5c9adce5ae4b0e2d82ec758c13f4dea1be410f5c33d56529d96904cce36e",
   "seed": 42,
   "source_import_explicit_named_subclass_pairs": 823,
   "source_import_holdout_pairs": 165,
@@ -756,11 +740,11 @@
   "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
   "source_unchanged": true,
   "status": "PASS_SPLIT_READY_FOR_MOWL",
-  "step4_summary_sha256": "c057aec53d749d52315bf9769a854feafbb40baa82c822a91d5950db80d31429",
-  "train_axiom_pairs": 665,
-  "train_sha256": "ca26851c1c6246bdf20ce1182e83bb5852f6301d32ce8663522e2dfa1b4c379e",
-  "valid_axiom_pairs": 167,
-  "valid_sha256": "62ee00ef60eb94af3f10af7b988298a9ada2dc20aaf2c883a3ba9ba64d3ff1b5",
+  "step4_summary_sha256": "001e6aacd4a7400e9d7ac49b5d2c20144cdb512837fddcda8736362421c9d3b2",
+  "train_axiom_pairs": 666,
+  "train_sha256": "e4d596140271e898f478d3ff13de381a87956b3f3f7e73b1e521736b90560637",
+  "valid_axiom_pairs": 166,
+  "valid_sha256": "a14a164b02148b55dfe5d4b7641e25d58e5e4edc15a18a76ab817118baa6cd45",
   "validation_fraction_requested": 0.2,
-  "version": "project6-mowl-80-20-v2"
+  "version": "project6-mowl-holdout-v1"
 }

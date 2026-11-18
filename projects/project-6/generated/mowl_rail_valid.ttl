@@ -45,7 +45,6 @@
 <http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000015> .
 <https://example.org/ontologies/intel-ontology#rail_passenger_role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.commoncoreontologies.org/AgentOntology/passenger> .
 <https://example.org/ontologies/intel-ontology#reservation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000178> .
-<https://example.org/ontologies/intel-ontology#train> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000040> .
 <https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000015> .
 <https://www.commoncoreontologies.org/AgentOntology/Airplane> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000030> .
 <https://www.commoncoreontologies.org/AgentOntology/Facebook> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.commoncoreontologies.org/AgentOntology/Social_Media> .

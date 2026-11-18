@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """Project 6 Step 6: baseline vs refined rail candidate OWL reasoning with ROBOT.
 
@@ -5,8 +6,10 @@ Run in project-6 root, after successful Step 5C:
     python scripts/validate_rail_reasoner.py
 
 Explicitly no ontology merge, automatic semantic approval, new individuals, or LLM call.
-Runs ROBOT/HermiT twice over a complete *locally supplied* flattened corpus,
-without resolving remote owl:imports. Reports scope of that import closure.
+By default extracts a syntactic-locality STAR module from the six local imports,
+seeded with every IRI used in source + the candidate. Then runs ROBOT/HermiT
+on baseline = source + relevant import module and candidate = baseline + refined.
+Does not validate unrelated imported axioms. No remote owl:imports resolution.
 ROBOT exit 0 is required for both consistency and no unsatisfiable named classes.
 """
 from __future__ import annotations
@@ -29,7 +32,7 @@ from prepare_rail_mowl import confirm_step4, load_ontology
 from generate_rail_axioms import SUPPORTED_EXTENSIONS
 from validate_rail_tbox import atomic_json, atomic_text, file_hash
 
-VERSION = "project6-robot-reasoner-v2-windows-watchdog"
+VERSION = "project6-robot-reasoner-v3-source-scoped"
 
 
 def _progress(message: str) -> None:
@@ -61,6 +64,7 @@ def _kill_tree(proc: subprocess.Popen) -> None:
         proc.wait(timeout=5)
     except subprocess.TimeoutExpired:
         pass
+
 
 STEP6_ONTOLOGY = URIRef("https://example.org/ontologies/project6-step6-local-flattened")
 
@@ -111,6 +115,121 @@ def _assemble(parts: list[tuple[str, Graph]], *, include_candidate: bool) -> tup
               "import_closure_scope": "Only six hash-verified local import files; no remote owl:imports fetched."
               }
     return union, report
+
+
+# Never use a source-only subgraph filter in place of OWL locality extraction.
+# Axiom locality handles restrictions, property chains, disjointness and GCAs
+# that are not visible through simple RDF subject/object traversal.
+_ENTITY_VOCAB = (
+    str(RDF), str(RDFS), str(OWL),
+    "http://www.w3.org/2001/XMLSchema#",
+)
+
+
+def _scoped_import_seeds(source: Graph, refined: Graph, imported: Graph) -> list[str]:
+    """All source/candidate IRIs present in the imported graph's signature.
+
+    The same union seed is used for both baseline and candidate to guarantee
+    that the import environment is held fixed for the delta comparison.
+    """
+    def iris(g: Graph) -> set[str]:
+        return {str(x) for triple in g for x in triple if isinstance(x, URIRef)}
+
+    used = iris(source) | iris(refined)
+    present = iris(imported)
+    seeds = sorted(x for x in used & present if not x.startswith(_ENTITY_VOCAB))
+    if not seeds:
+        raise ValueError("No source/candidate entity IRIs overlap with the six local imports; "
+                         "cannot construct a grounded import locality module")
+    return seeds
+
+
+def _extract_import_module(base_cmd: list[str], imported_corpus: Path,
+                           term_file: Path, module_path: Path, log: Path,
+                           timeout: int) -> dict:
+    """Run ROBOT STAR locality extraction without remote imports or unrelated ABox."""
+    cmd = base_cmd + ["extract", "--method", "STAR", "--input", str(imported_corpus),
+                      "--term-file", str(term_file), "--imports", "exclude",
+                      "--individuals", "definitions", "--output", str(module_path)]
+    module_path.unlink(missing_ok=True)
+    _progress(f"Extracting source-scoped OWL import module with ROBOT (limit {timeout}s)")
+    timed_out = False
+    code = None
+    with log.open('w', encoding='utf-8') as stream:
+        stream.write("COMMAND: " + " ".join(cmd) + "\n")
+        stream.flush()
+        try:
+            kwargs = ({'creationflags': subprocess.CREATE_NEW_PROCESS_GROUP} if os.name == 'nt'
+                      else {'start_new_session': True})
+            proc = subprocess.Popen(cmd, stdout=stream, stderr=subprocess.STDOUT,
+                                    stdin=subprocess.DEVNULL, **kwargs)
+            try:
+                code = proc.wait(timeout=timeout)
+            except subprocess.TimeoutExpired:
+                timed_out = True
+                _kill_tree(proc)
+        except OSError as exc:
+            stream.write(f"\nFailed to launch ROBOT extraction: {exc}\n")
+        stream.write(f"\nRETURN CODE: {code}\nTIMEOUT: {timed_out}\n")
+        stream.flush()
+    if code != 0 or not module_path.is_file() or module_path.stat().st_size == 0:
+        raise RuntimeError("ROBOT STAR extraction failed or timed out; inspect " + str(log))
+    _progress(f"ROBOT STAR extraction completed: {module_path.name}")
+    return {"return_code": code, "timed_out": timed_out, "command": cmd,
+            "log": log.name, "module_sha256": file_hash(module_path)}
+
+
+def _assemble_scoped(root: Path, ctx: dict, base_cmd: list[str],
+                     *, timeout: int) -> tuple[Graph, dict]:
+    """Preserve entire source and a conservative OWL locality module of imports."""
+    gen, reports = root/'generated', root/'reports'
+    # Canonicalize imports independently to avoid shared bnode IDs from
+    # separately serialized OWL documents being confused when flattening.
+    imported_corpus, imports_meta = _assemble(ctx['parts'][1:], include_candidate=False)
+    corpus_path = gen/'step6_all_local_imports_for_extraction.ttl'
+    atomic_text(corpus_path, _serialize(imported_corpus))
+    _progress(f"Import extraction input: {len(imported_corpus):,} triples")
+    seeds = _scoped_import_seeds(ctx['source'], ctx['refined'], imported_corpus)
+    term_file = gen/'step6_import_module_seed_terms.txt'
+    atomic_text(term_file, '\n'.join(seeds) + '\n')
+    _progress(f"Seeded with {len(seeds)} source/candidate IRIs referenced by local imports")
+    module_path = gen/'step6_scoped_imports_module.ttl'
+    extract_meta = _extract_import_module(base_cmd, corpus_path, term_file,
+                                          module_path, reports/'step6_import_extraction.log', timeout)
+    module = load_ontology(module_path)
+    if not module:
+        raise RuntimeError("ROBOT emitted an empty import module")
+    # Source is preserved as a whole: GCAs, named individuals, data/object
+    # properties, and every original annotation/axiom except ontology headers.
+    baseline, base_meta = _assemble([
+        ('src/module.ttl', ctx['source']),
+        ('generated/step6_scoped_imports_module.ttl', module),
+    ], include_candidate=False)
+    # Forbid any loss of source assertions (including anonymous GCAs and ABox).
+    # The original owl:imports and owl:Ontology document header are intentionally
+    # removed from the generated offline reasoning ontology only.
+    normalized_source = _stable_graph(ctx['source'], 'src/module.ttl')
+    headers = set(normalized_source.subjects(RDF.type, OWL.Ontology))
+    protected_assertions = {(s, p, o) for s, p, o in normalized_source
+                            if p != OWL.imports and s not in headers}
+    if not protected_assertions.issubset(set(baseline)):
+        raise RuntimeError('Scoped import extraction lost source ontology assertions')
+    base_meta['source_logical_and_annotation_triples_preserved'] = len(protected_assertions)
+    base_meta['scope'] = 'SOURCE_PLUS_STAR_LOCALITY_MODULE_OF_IMPORTS'
+    base_meta['source_triples'] = len(ctx['source'])
+    base_meta['all_imports_corpus_triples'] = len(imported_corpus)
+    base_meta['import_module_triples'] = len(module)
+    base_meta['seed_count'] = len(seeds)
+    base_meta['seed_terms_file'] = str(term_file.relative_to(root))
+    base_meta['import_module_path'] = str(module_path.relative_to(root))
+    base_meta['import_extraction'] = extract_meta
+    base_meta['module_method'] = 'ROBOT STAR (OWL syntactic locality), --individuals definitions'
+    base_meta['import_corpus_metadata'] = imports_meta
+    base_meta['scope_limit'] = ('Unrelated import axioms not in the locality module are out of scope; '
+                                'this is not a full import closure consistency check.')
+    _progress(f"Scoped baseline: {len(baseline):,} triples "
+              f"(source {len(ctx['source']):,} + import module {len(module):,}, with overlap)")
+    return baseline, base_meta
 
 
 def _named_pairs(graph: Graph) -> set[tuple[str, str]]:
@@ -241,7 +360,7 @@ def _check_unchanged(context: dict) -> None:
 
 def validate(root: Path, *, robot: str | None = None, robot_jar: Path | None = None,
              java: str = "java", reasoner: str = "hermit", timeout: int = 900,
-             prepare_only: bool = False) -> dict:
+             prepare_only: bool = False, scope: str = "module") -> dict:
     root = root.resolve()
     if timeout < 30:
         raise ValueError("timeout must be at least 30 seconds")
@@ -253,7 +372,13 @@ def validate(root: Path, *, robot: str | None = None, robot_jar: Path | None = N
     gen.mkdir(parents=True, exist_ok=True)
     reports.mkdir(parents=True, exist_ok=True)
     _progress("Assembling baseline graph")
-    baseline, base_meta = _assemble(ctx["parts"], include_candidate=False)
+    if scope == "module":
+        baseline, base_meta = _assemble_scoped(root, ctx, base_cmd, timeout=timeout)
+    elif scope == "full":
+        baseline, base_meta = _assemble(ctx["parts"], include_candidate=False)
+        base_meta['scope'] = 'FULL_SIX_LOCAL_IMPORTS'
+    else:
+        raise ValueError("scope must be 'module' or 'full'")
     _progress(f"Baseline assembled: {len(baseline):,} triples")
     # Reusing baseline avoids re-canonicalizing all six large import files.
     _progress("Assembling candidate as exact 63-triple addition to baseline")
@@ -287,6 +412,9 @@ def validate(root: Path, *, robot: str | None = None, robot_jar: Path | None = N
         _check_unchanged(ctx)
         result = {"version": VERSION, "status": "PASS_PREPARATION_ONLY_UNREASONED",
                   "baseline_triples": len(baseline), "candidate_triples": len(augmented),
+                  "scope": base_meta.get("scope"), "seed_count": base_meta.get("seed_count"),
+                  "import_module_triples": base_meta.get("import_module_triples"),
+                  "all_imports_corpus_triples": base_meta.get("all_imports_corpus_triples"),
                   "source_sha256": ctx["hashes"]["source"], "source_unchanged": True,
                   "owl_reasoner_executed": False, "semantic_approval": False,
                   "merge_performed": False,
@@ -300,7 +428,8 @@ def validate(root: Path, *, robot: str | None = None, robot_jar: Path | None = N
               "local_input_hashes": ctx["hashes"],
               "baseline_flattened_sha256": file_hash(baseline_path),
               "augmented_flattened_sha256": file_hash(augmented_path),
-              "scope_limits": ["Flattened graph QC checks reparsed triple counts and named class pairs; it does not run expensive RDF graph isomorphism.",
+              "scope_limits": ["Scoped validation covers the source's complete asserted content and the OWL locality module of local imports, NOT unrelated imported axioms.",
+                               "Flattened graph QC checks reparsed triple counts and named class pairs; it does not run expensive RDF graph isomorphism.",
                                "Offline reasoning only uses the six supplied local imports; remote imports are not fetched.",
                                "ROBOT coherence checks do not determine whether modeling choices are ontologically appropriate.",
                                "Reported new named-pair comparisons use ROBOT default direct inferred superclasses; they are not a complete entailment difference.",
@@ -352,6 +481,8 @@ def validate(root: Path, *, robot: str | None = None, robot_jar: Path | None = N
                "source_unchanged": True,
                "source_sha256": ctx["hashes"]["source"],
                "refined_sha256": ctx["hashes"]["refined"],
+               "reasoning_scope": base_meta.get("scope"),
+               "import_module_triples": base_meta.get("import_module_triples"),
                "source_merged": False,
                "new_named_individuals": 0,
                "semantic_approval": False,
@@ -375,7 +506,9 @@ def main() -> int:
     parser.add_argument("--hard-timeout", type=int, default=900,
                         help="Total seconds for ALL stages, with process-tree kill (default 900)")
     parser.add_argument("--prepare-only", action="store_true",
-                        help="Prepare and verify graph input without invoking Java/HermiT")
+                        help="Prepare input, run ROBOT module extraction in module mode; no HermiT")
+    parser.add_argument("--scope", choices=["module", "full"], default="module",
+                        help="module (default): source plus STAR import locality module; full: all six imports")
     parser.add_argument("--_internal-worker", action="store_true", help=argparse.SUPPRESS)
     args = parser.parse_args()
     if args.hard_timeout < 30:
@@ -412,7 +545,7 @@ def main() -> int:
     try:
         summary = validate(args.project_root, robot=args.robot, robot_jar=args.robot_jar,
                            java=args.java, reasoner=args.reasoner, timeout=args.timeout,
-                           prepare_only=args.prepare_only)
+                           prepare_only=args.prepare_only, scope=args.scope)
         print("STEP 6 — " + summary["status"], flush=True)
         return 0 if summary["status"] in ("PASS_REASONER_COHERENT_UNAPPROVED",
                                             "PASS_PREPARATION_ONLY_UNREASONED") else 1

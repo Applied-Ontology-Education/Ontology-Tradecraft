@@ -1,9 +1,0 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-# Zero rows means this quality check passes.
-SELECT ?child ?parent WHERE {
-      VALUES (?child ?parent) { (<https://example.org/ontologies/intel-ontology#passenger_train> <https://example.org/ontologies/intel-ontology#train>) (<https://example.org/ontologies/intel-ontology#rail_journey> <http://purl.obolibrary.org/obo/BFO_0000015>) (<https://example.org/ontologies/intel-ontology#rail_journey_plan> <http://purl.obolibrary.org/obo/IAO_0000030>) (<https://example.org/ontologies/intel-ontology#rail_passenger_role> <http://purl.obolibrary.org/obo/BFO_0000023>) (<https://example.org/ontologies/intel-ontology#rail_passenger_role> <https://www.commoncoreontologies.org/AgentOntology/passenger>) (<https://example.org/ontologies/intel-ontology#rail_reservation_information> <https://www.commoncoreontologies.org/AgentOntology/reservation>) (<https://example.org/ontologies/intel-ontology#rail_ticket> <https://www.commoncoreontologies.org/AgentOntology/ticket>) (<https://example.org/ontologies/intel-ontology#railway_station> <http://purl.obolibrary.org/obo/BFO_0000040>) (<https://example.org/ontologies/intel-ontology#train> <http://purl.obolibrary.org/obo/BFO_0000040>) }
-      FILTER NOT EXISTS { ?child rdfs:subClassOf ?parent }
-    }

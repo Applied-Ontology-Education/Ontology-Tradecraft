@@ -1,10 +1,9 @@
 {
   "created_classes": 8,
   "data_properties": 2,
-  "design_attempts": 1,
   "imports": 6,
   "model": "grok-4.7",
-  "note": "Complete eight-class, six-property candidate; no OWL generated or merged",
+  "note": "JSON candidate design only; no OWL generated or merged",
   "object_properties": 4,
   "reused_classes": 0,
   "source_unchanged": true,

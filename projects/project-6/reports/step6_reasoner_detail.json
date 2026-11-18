@@ -1,5 +1,5 @@
 {
-  "augmented_flattened_sha256": "bfc50690d3d7e1aa8d393582fb2de8f1efe3781fa3a2fd59b9cdb2991a47ef4b",
+  "augmented_flattened_sha256": "ed123bdf41903039ef0993dd84fa5f711d4a53c4e8befac755586491de9bd121",
   "augmented_reasoned_named_pairs": 82,
   "augmented_reasoner_run": {
     "error_summary": null,
@@ -205,10 +205,10 @@
     "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
     "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
     "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0",
-    "refined": "f27f752d3b89200d2d58ee87f5128d57ffc215a1792997c26bc472db71901566",
+    "refined": "c89b5c9adce5ae4b0e2d82ec758c13f4dea1be410f5c33d56529d96904cce36e",
     "source": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
-    "step4_summary": "c057aec53d749d52315bf9769a854feafbb40baa82c822a91d5950db80d31429",
-    "step5c_review": "33c3a753f2e7d41e28666e54e0e8e6f8b5191f6daf961a5aedfbb3742719c3ee",
+    "step4_summary": "001e6aacd4a7400e9d7ac49b5d2c20144cdb512837fddcda8736362421c9d3b2",
+    "step5c_review": "607d117f308e6b41440850cb6d13cb7627ecd1920b8f764570d92be0966e485b",
     "step5c_summary": "394008b98a222c47936177910559ca2be15a7261fa17277c4f58d3d2bc1d0976"
   },
   "merged_into_source": false,
