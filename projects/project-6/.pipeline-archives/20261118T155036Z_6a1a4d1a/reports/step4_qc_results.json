@@ -1,0 +1,71 @@
+{
+  "checks": [
+    {
+      "check": "01_missing_class_declarations",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "02_missing_object_property_declarations",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "03_missing_data_property_declarations",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "04_missing_english_label",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "05_missing_english_definition",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "06_missing_required_superclass",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "07_incorrect_property_domain_or_range",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "08_subclass_cycle",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "09_no_rail_air_equivalence",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "10_no_named_individuals_in_candidate",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    },
+    {
+      "check": "11_no_property_kind_conflicts",
+      "examples": [],
+      "row_count": 0,
+      "status": "PASS"
+    }
+  ],
+  "status": "PASS_QC_AND_SHACL_UNAPPROVED"
+}

@@ -1,0 +1,1216 @@
+{
+  "cosine_requirement_met": false,
+  "cosine_threshold": 0.7,
+  "heldout_rail_cosine": 0.215456,
+  "heldout_rail_pair_scores": [
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "cosine": 0.215456,
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "scope": "RAIL_NEW_DOMAIN",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "cosine": 0.037228,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "scope": "RAIL_NEW_DOMAIN",
+      "status": "HELD_OUT_COSINE"
+    }
+  ],
+  "heldout_rail_pairs": 2,
+  "heldout_source_import_pairs": 165,
+  "mean_heldout_rail_cosine": 0.126342,
+  "mean_heldout_source_import_cosine": -0.009948,
+  "model": {
+    "device": "cpu",
+    "embed_dim": 50,
+    "epochs": 200,
+    "model_path": "generated/mowl_rail_train.ttl",
+    "model_type": "mOWL ELEmbeddings",
+    "mowl_version": "unknown",
+    "refined_sha256": "f27f752d3b89200d2d58ee87f5128d57ffc215a1792997c26bc472db71901566",
+    "seed": 42,
+    "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+    "torch_version": "2.15.0+cpu",
+    "train_sha256": "ca26851c1c6246bdf20ce1182e83bb5852f6301d32ce8663522e2dfa1b4c379e",
+    "valid_sha256": "62ee00ef60eb94af3f10af7b988298a9ada2dc20aaf2c883a3ba9ba64d3ff1b5",
+    "version": "project6-elembeddings-hybrid-80-20-v2"
+  },
+  "scores": [
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000004",
+      "cosine": 0.040113,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000002",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000006",
+      "cosine": -0.285183,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000141",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000008",
+      "cosine": 0.187306,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000003",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "cosine": 0.145357,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000003",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000016",
+      "cosine": -0.059557,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000017",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000019",
+      "cosine": -0.063617,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000020",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000020",
+      "cosine": 0.010701,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000002",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000024",
+      "cosine": -0.204829,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000027",
+      "cosine": 0.261196,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000029",
+      "cosine": 0.009049,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000141",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000031",
+      "cosine": -0.20793,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000002",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000035",
+      "cosine": -0.297388,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000003",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000038",
+      "cosine": -0.238624,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000008",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000140",
+      "cosine": -0.102138,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000141",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000144",
+      "cosine": 0.253808,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000003",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000001",
+      "cosine": 0.298374,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000033",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000009",
+      "cosine": 0.013588,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000027",
+      "cosine": -0.21152,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000028",
+      "cosine": -0.138878,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000029",
+      "cosine": -0.186314,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000028",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000033",
+      "cosine": -0.170206,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000038",
+      "cosine": 0.0264,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000309",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000064",
+      "cosine": -0.130123,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000104",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000300",
+      "cosine": -0.118032,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000305",
+      "cosine": -0.18056,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000300",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000306",
+      "cosine": 0.051665,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000300",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000311",
+      "cosine": 0.204209,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000310",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000315",
+      "cosine": -0.005504,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000314",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000317",
+      "cosine": 0.087554,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000314",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000400",
+      "cosine": -0.174153,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000027",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000590",
+      "cosine": -0.048381,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000300",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000631",
+      "cosine": -0.131348,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000314",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000646",
+      "cosine": -0.215538,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0020000",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0001000",
+      "cosine": 0.081177,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000027",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0020000",
+      "cosine": 0.0123,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0020015",
+      "cosine": 0.107728,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0020000",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0020020",
+      "cosine": -0.043814,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#Aerospace_Engineering_and_Operations",
+      "cosine": 0.060032,
+      "parent": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation_role",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#act_of_aircraft_processing",
+      "cosine": -0.235125,
+      "parent": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#aerospance_engineer_broad_role",
+      "cosine": -0.229991,
+      "parent": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation_role",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#aircraft",
+      "cosine": -0.153356,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#approach_speed_specification",
+      "cosine": 0.008842,
+      "parent": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#artifact_design",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation",
+      "cosine": 0.277355,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "cosine": 0.215456,
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "scope": "RAIL_NEW_DOMAIN",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#reservation",
+      "cosine": 0.157418,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000178",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "cosine": 0.037228,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "scope": "RAIL_NEW_DOMAIN",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting",
+      "cosine": -0.047612,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/Airplane",
+      "cosine": 0.139047,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/Facebook",
+      "cosine": -0.085497,
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/Social_Media",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/building",
+      "cosine": 0.184517,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/license",
+      "cosine": -0.134927,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000178",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "cosine": 0.073622,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/personal_identification",
+      "cosine": 0.019875,
+      "parent": "https://www.commoncoreontologies.org/ont00000686",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+      "cosine": -0.188957,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/social_media_user",
+      "cosine": -0.00193,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+      "cosine": 0.041072,
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000178",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000003",
+      "cosine": -0.086397,
+      "parent": "https://www.commoncoreontologies.org/ont00000686",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000004",
+      "cosine": 0.00909,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000005",
+      "cosine": -0.479271,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000007",
+      "cosine": 0.121632,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000008",
+      "cosine": 0.027032,
+      "parent": "https://www.commoncoreontologies.org/ont00001047",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000037",
+      "cosine": 0.025771,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000073",
+      "cosine": -0.085374,
+      "parent": "https://www.commoncoreontologies.org/ont00000399",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000077",
+      "cosine": -0.228144,
+      "parent": "https://www.commoncoreontologies.org/ont00000649",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000089",
+      "cosine": -0.132523,
+      "parent": "https://www.commoncoreontologies.org/ont00001379",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000099",
+      "cosine": -0.041057,
+      "parent": "https://www.commoncoreontologies.org/ont00000007",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000100",
+      "cosine": 0.199779,
+      "parent": "https://www.commoncoreontologies.org/ont00001132",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000123",
+      "cosine": -0.188973,
+      "parent": "https://www.commoncoreontologies.org/ont00000402",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000124",
+      "cosine": 0.080917,
+      "parent": "https://www.commoncoreontologies.org/ont00001328",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000133",
+      "cosine": -0.273982,
+      "parent": "https://www.commoncoreontologies.org/ont00000402",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000150",
+      "cosine": 0.205737,
+      "parent": "https://www.commoncoreontologies.org/ont00000754",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000234",
+      "cosine": -0.208715,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000274",
+      "cosine": -0.093778,
+      "parent": "https://www.commoncoreontologies.org/ont00001180",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000275",
+      "cosine": -0.086961,
+      "parent": "https://www.commoncoreontologies.org/ont00000398",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000278",
+      "cosine": -0.168008,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000144",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000290",
+      "cosine": 0.042527,
+      "parent": "https://www.commoncoreontologies.org/ont00000726",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000293",
+      "cosine": -0.023334,
+      "parent": "https://www.commoncoreontologies.org/ont00001163",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000313",
+      "cosine": 0.097098,
+      "parent": "https://www.commoncoreontologies.org/ont00000752",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000335",
+      "cosine": -0.054573,
+      "parent": "https://www.commoncoreontologies.org/ont00000819",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000345",
+      "cosine": 0.142902,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000357",
+      "cosine": 0.171172,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000366",
+      "cosine": 0.048468,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000368",
+      "cosine": 0.205065,
+      "parent": "https://www.commoncoreontologies.org/ont00001133",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000380",
+      "cosine": -0.131505,
+      "parent": "https://www.commoncoreontologies.org/ont00000570",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000392",
+      "cosine": 0.009713,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000398",
+      "cosine": -0.124808,
+      "parent": "https://www.commoncoreontologies.org/ont00000853",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000402",
+      "cosine": -0.005321,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000406",
+      "cosine": -0.098194,
+      "parent": "https://www.commoncoreontologies.org/ont00000120",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000426",
+      "cosine": -0.197322,
+      "parent": "https://www.commoncoreontologies.org/ont00000274",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000433",
+      "cosine": 0.106464,
+      "parent": "https://www.commoncoreontologies.org/ont00001327",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000455",
+      "cosine": 0.073221,
+      "parent": "https://www.commoncoreontologies.org/ont00001327",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000490",
+      "cosine": -0.035796,
+      "parent": "https://www.commoncoreontologies.org/ont00000754",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000503",
+      "cosine": -0.040099,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000144",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000517",
+      "cosine": -0.024606,
+      "parent": "https://www.commoncoreontologies.org/ont00000402",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000530",
+      "cosine": 0.076765,
+      "parent": "https://www.commoncoreontologies.org/ont00000008",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000540",
+      "cosine": -0.05074,
+      "parent": "https://www.commoncoreontologies.org/ont00000399",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000543",
+      "cosine": -0.018184,
+      "parent": "https://www.commoncoreontologies.org/ont00000854",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000544",
+      "cosine": -0.000493,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000557",
+      "cosine": -0.004095,
+      "parent": "https://www.commoncoreontologies.org/ont00001132",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000566",
+      "cosine": 0.04706,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000588",
+      "cosine": -0.075152,
+      "parent": "https://www.commoncoreontologies.org/ont00000402",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000605",
+      "cosine": -0.146111,
+      "parent": "https://www.commoncoreontologies.org/ont00000003",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000609",
+      "cosine": -0.080823,
+      "parent": "https://www.commoncoreontologies.org/ont00000642",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000610",
+      "cosine": -0.038805,
+      "parent": "https://www.commoncoreontologies.org/ont00000754",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000611",
+      "cosine": -0.000758,
+      "parent": "https://www.commoncoreontologies.org/ont00001214",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000642",
+      "cosine": 0.211565,
+      "parent": "https://www.commoncoreontologies.org/ont00000395",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000649",
+      "cosine": -0.112624,
+      "parent": "https://www.commoncoreontologies.org/ont00000686",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000686",
+      "cosine": 0.093232,
+      "parent": "https://www.commoncoreontologies.org/ont00000958",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000696",
+      "cosine": -0.260667,
+      "parent": "https://www.commoncoreontologies.org/ont00000958",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000712",
+      "cosine": 0.071911,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000144",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000726",
+      "cosine": -0.063293,
+      "parent": "https://www.commoncoreontologies.org/ont00000004",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000732",
+      "cosine": 0.21247,
+      "parent": "https://www.commoncoreontologies.org/ont00000150",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000752",
+      "cosine": 0.26118,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000144",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000754",
+      "cosine": -0.092122,
+      "parent": "https://www.commoncoreontologies.org/ont00001047",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000763",
+      "cosine": 0.091886,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000144",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000789",
+      "cosine": -0.058858,
+      "parent": "https://www.commoncoreontologies.org/ont00001133",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000819",
+      "cosine": -0.096937,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000821",
+      "cosine": -0.111436,
+      "parent": "https://www.commoncoreontologies.org/ont00001162",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000829",
+      "cosine": 0.123026,
+      "parent": "https://www.commoncoreontologies.org/ont00000390",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000836",
+      "cosine": -0.00515,
+      "parent": "https://www.commoncoreontologies.org/ont00000566",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000837",
+      "cosine": 0.059946,
+      "parent": "https://www.commoncoreontologies.org/ont00000914",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000850",
+      "cosine": 0.151188,
+      "parent": "https://www.commoncoreontologies.org/ont00000135",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000853",
+      "cosine": -0.217223,
+      "parent": "https://www.commoncoreontologies.org/ont00000958",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000854",
+      "cosine": 0.118659,
+      "parent": "https://www.commoncoreontologies.org/ont00000290",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000865",
+      "cosine": 0.033299,
+      "parent": "https://www.commoncoreontologies.org/ont00000876",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000876",
+      "cosine": -0.126071,
+      "parent": "https://www.commoncoreontologies.org/ont00000004",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000894",
+      "cosine": -0.12798,
+      "parent": "https://www.commoncoreontologies.org/ont00000529",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000908",
+      "cosine": 0.424683,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000914",
+      "cosine": 0.095217,
+      "parent": "https://www.commoncoreontologies.org/ont00000300",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000951",
+      "cosine": -0.263758,
+      "parent": "https://www.commoncoreontologies.org/ont00000099",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000958",
+      "cosine": 0.117499,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000031",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000965",
+      "cosine": 0.006414,
+      "parent": "https://www.commoncoreontologies.org/ont00000958",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000970",
+      "cosine": 0.073337,
+      "parent": "https://www.commoncoreontologies.org/ont00000908",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000971",
+      "cosine": 0.135585,
+      "parent": "https://www.commoncoreontologies.org/ont00000402",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001014",
+      "cosine": 0.009236,
+      "parent": "https://www.commoncoreontologies.org/ont00000003",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001022",
+      "cosine": 0.257658,
+      "parent": "https://www.commoncoreontologies.org/ont00001163",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001028",
+      "cosine": 0.097051,
+      "parent": "https://www.commoncoreontologies.org/ont00000099",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001033",
+      "cosine": 0.116313,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000019",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001066",
+      "cosine": -0.114744,
+      "parent": "https://www.commoncoreontologies.org/ont00000250",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001075",
+      "cosine": 0.021215,
+      "parent": "https://www.commoncoreontologies.org/ont00000234",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001132",
+      "cosine": 0.278262,
+      "parent": "https://www.commoncoreontologies.org/ont00000246",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001162",
+      "cosine": 0.025483,
+      "parent": "https://www.commoncoreontologies.org/ont00000402",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001176",
+      "cosine": -0.120222,
+      "parent": "https://www.commoncoreontologies.org/ont00001163",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001190",
+      "cosine": -0.158686,
+      "parent": "https://www.commoncoreontologies.org/ont00002076",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001191",
+      "cosine": 0.096643,
+      "parent": "https://www.commoncoreontologies.org/ont00001213",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001203",
+      "cosine": 0.100541,
+      "parent": "https://www.commoncoreontologies.org/ont00000472",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001213",
+      "cosine": -0.310285,
+      "parent": "https://www.commoncoreontologies.org/ont00000246",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001226",
+      "cosine": -0.181667,
+      "parent": "https://www.commoncoreontologies.org/ont00002071",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001232",
+      "cosine": 0.228634,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001251",
+      "cosine": 0.018111,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001272",
+      "cosine": -0.004288,
+      "parent": "https://www.commoncoreontologies.org/ont00000191",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001289",
+      "cosine": 0.277715,
+      "parent": "https://www.commoncoreontologies.org/ont00000135",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001324",
+      "cosine": 0.265853,
+      "parent": "https://www.commoncoreontologies.org/ont00000965",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001327",
+      "cosine": -0.141744,
+      "parent": "https://www.commoncoreontologies.org/ont00000228",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001328",
+      "cosine": -0.06609,
+      "parent": "https://www.commoncoreontologies.org/ont00000398",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001334",
+      "cosine": 0.300201,
+      "parent": "https://www.commoncoreontologies.org/ont00000836",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001337",
+      "cosine": -0.028905,
+      "parent": "https://www.commoncoreontologies.org/ont00000754",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001356",
+      "cosine": -0.015046,
+      "parent": "https://www.commoncoreontologies.org/ont00000611",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001374",
+      "cosine": 0.168994,
+      "parent": "https://www.commoncoreontologies.org/ont00000402",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001379",
+      "cosine": -0.021075,
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000017",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002001",
+      "cosine": 0.003295,
+      "parent": "https://www.commoncoreontologies.org/ont00000958",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002004",
+      "cosine": 0.051828,
+      "parent": "https://www.commoncoreontologies.org/ont00002001",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002007",
+      "cosine": -0.039088,
+      "parent": "https://www.commoncoreontologies.org/ont00002001",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002039",
+      "cosine": -0.115426,
+      "parent": "https://www.commoncoreontologies.org/ont00002001",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002076",
+      "cosine": -0.058436,
+      "parent": "https://www.commoncoreontologies.org/ont00000402",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002077",
+      "cosine": -0.225131,
+      "parent": "https://www.commoncoreontologies.org/ont00000588",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002078",
+      "cosine": -0.030382,
+      "parent": "https://www.commoncoreontologies.org/ont00000588",
+      "scope": "SOURCE_IMPORT_REFERENCE",
+      "status": "HELD_OUT_COSINE"
+    }
+  ],
+  "status": "MOWL_TRAINED_HELDOUT_EVALUATED",
+  "train_sha256": "ca26851c1c6246bdf20ce1182e83bb5852f6301d32ce8663522e2dfa1b4c379e",
+  "valid_sha256": "62ee00ef60eb94af3f10af7b988298a9ada2dc20aaf2c883a3ba9ba64d3ff1b5",
+  "version": "project6-elembeddings-hybrid-80-20-v2",
+  "warning": "Train set contains all other rail candidate superclass axioms. Do not use their in-sample scores as independent validation."
+}

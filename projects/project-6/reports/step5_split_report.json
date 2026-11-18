@@ -1,0 +1,766 @@
+{
+  "candidate_pairs": [
+    {
+      "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "evaluation": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "parent": "https://example.org/ontologies/intel-ontology#train"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "evaluation": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "evaluation": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "evaluation": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000023"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "evaluation": "HELD_OUT",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "evaluation": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/reservation"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "evaluation": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/ticket"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#railway_station",
+      "evaluation": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "evaluation": "HELD_OUT",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    }
+  ],
+  "holdout_pairs": [
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000004",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000002"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000006",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000141"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000008",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000003"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000003"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000016",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000017"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000019",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000020"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000020",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000002"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000024",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000027",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000029",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000141"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000031",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000002"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000035",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000003"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000038",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000008"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000140",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000141"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/BFO_0000144",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000003"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000001",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000033"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000009",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000027",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000028",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000029",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000028"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000033",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000038",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000309"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000064",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000104"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000300",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000305",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000300"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000306",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000300"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000311",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000310"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000315",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000314"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000317",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000314"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000400",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000027"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000590",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000300"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000631",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000314"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0000646",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0020000"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0001000",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000027"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0020000",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0020015",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0020000"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/IAO_0020020",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#Aerospace_Engineering_and_Operations",
+      "parent": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation_role"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#act_of_aircraft_processing",
+      "parent": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#aerospance_engineer_broad_role",
+      "parent": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation_role"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#aircraft",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000030"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#approach_speed_specification",
+      "parent": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#artifact_design"
+    },
+    {
+      "child": "http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#reservation",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000178"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/Airplane",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000030"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/Facebook",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/Social_Media"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/building",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000030"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/license",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000178"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000023"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/personal_identification",
+      "parent": "https://www.commoncoreontologies.org/ont00000686"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/social_media_user",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000023"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000178"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000003",
+      "parent": "https://www.commoncoreontologies.org/ont00000686"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000004",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000005",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000007",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000008",
+      "parent": "https://www.commoncoreontologies.org/ont00001047"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000037",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000073",
+      "parent": "https://www.commoncoreontologies.org/ont00000399"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000077",
+      "parent": "https://www.commoncoreontologies.org/ont00000649"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000089",
+      "parent": "https://www.commoncoreontologies.org/ont00001379"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000099",
+      "parent": "https://www.commoncoreontologies.org/ont00000007"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000100",
+      "parent": "https://www.commoncoreontologies.org/ont00001132"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000123",
+      "parent": "https://www.commoncoreontologies.org/ont00000402"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000124",
+      "parent": "https://www.commoncoreontologies.org/ont00001328"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000133",
+      "parent": "https://www.commoncoreontologies.org/ont00000402"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000150",
+      "parent": "https://www.commoncoreontologies.org/ont00000754"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000234",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000274",
+      "parent": "https://www.commoncoreontologies.org/ont00001180"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000275",
+      "parent": "https://www.commoncoreontologies.org/ont00000398"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000278",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000144"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000290",
+      "parent": "https://www.commoncoreontologies.org/ont00000726"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000293",
+      "parent": "https://www.commoncoreontologies.org/ont00001163"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000313",
+      "parent": "https://www.commoncoreontologies.org/ont00000752"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000335",
+      "parent": "https://www.commoncoreontologies.org/ont00000819"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000345",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000357",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000366",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000368",
+      "parent": "https://www.commoncoreontologies.org/ont00001133"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000380",
+      "parent": "https://www.commoncoreontologies.org/ont00000570"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000392",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000023"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000398",
+      "parent": "https://www.commoncoreontologies.org/ont00000853"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000402",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000406",
+      "parent": "https://www.commoncoreontologies.org/ont00000120"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000426",
+      "parent": "https://www.commoncoreontologies.org/ont00000274"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000433",
+      "parent": "https://www.commoncoreontologies.org/ont00001327"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000455",
+      "parent": "https://www.commoncoreontologies.org/ont00001327"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000490",
+      "parent": "https://www.commoncoreontologies.org/ont00000754"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000503",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000144"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000517",
+      "parent": "https://www.commoncoreontologies.org/ont00000402"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000530",
+      "parent": "https://www.commoncoreontologies.org/ont00000008"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000540",
+      "parent": "https://www.commoncoreontologies.org/ont00000399"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000543",
+      "parent": "https://www.commoncoreontologies.org/ont00000854"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000544",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000557",
+      "parent": "https://www.commoncoreontologies.org/ont00001132"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000566",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000588",
+      "parent": "https://www.commoncoreontologies.org/ont00000402"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000605",
+      "parent": "https://www.commoncoreontologies.org/ont00000003"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000609",
+      "parent": "https://www.commoncoreontologies.org/ont00000642"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000610",
+      "parent": "https://www.commoncoreontologies.org/ont00000754"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000611",
+      "parent": "https://www.commoncoreontologies.org/ont00001214"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000642",
+      "parent": "https://www.commoncoreontologies.org/ont00000395"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000649",
+      "parent": "https://www.commoncoreontologies.org/ont00000686"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000686",
+      "parent": "https://www.commoncoreontologies.org/ont00000958"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000696",
+      "parent": "https://www.commoncoreontologies.org/ont00000958"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000712",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000144"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000726",
+      "parent": "https://www.commoncoreontologies.org/ont00000004"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000732",
+      "parent": "https://www.commoncoreontologies.org/ont00000150"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000752",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000144"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000754",
+      "parent": "https://www.commoncoreontologies.org/ont00001047"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000763",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000144"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000789",
+      "parent": "https://www.commoncoreontologies.org/ont00001133"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000819",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000821",
+      "parent": "https://www.commoncoreontologies.org/ont00001162"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000829",
+      "parent": "https://www.commoncoreontologies.org/ont00000390"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000836",
+      "parent": "https://www.commoncoreontologies.org/ont00000566"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000837",
+      "parent": "https://www.commoncoreontologies.org/ont00000914"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000850",
+      "parent": "https://www.commoncoreontologies.org/ont00000135"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000853",
+      "parent": "https://www.commoncoreontologies.org/ont00000958"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000854",
+      "parent": "https://www.commoncoreontologies.org/ont00000290"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000865",
+      "parent": "https://www.commoncoreontologies.org/ont00000876"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000876",
+      "parent": "https://www.commoncoreontologies.org/ont00000004"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000894",
+      "parent": "https://www.commoncoreontologies.org/ont00000529"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000908",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000914",
+      "parent": "https://www.commoncoreontologies.org/ont00000300"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000951",
+      "parent": "https://www.commoncoreontologies.org/ont00000099"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000958",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000031"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000965",
+      "parent": "https://www.commoncoreontologies.org/ont00000958"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000970",
+      "parent": "https://www.commoncoreontologies.org/ont00000908"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00000971",
+      "parent": "https://www.commoncoreontologies.org/ont00000402"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001014",
+      "parent": "https://www.commoncoreontologies.org/ont00000003"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001022",
+      "parent": "https://www.commoncoreontologies.org/ont00001163"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001028",
+      "parent": "https://www.commoncoreontologies.org/ont00000099"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001033",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000019"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001066",
+      "parent": "https://www.commoncoreontologies.org/ont00000250"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001075",
+      "parent": "https://www.commoncoreontologies.org/ont00000234"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001132",
+      "parent": "https://www.commoncoreontologies.org/ont00000246"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001162",
+      "parent": "https://www.commoncoreontologies.org/ont00000402"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001176",
+      "parent": "https://www.commoncoreontologies.org/ont00001163"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001190",
+      "parent": "https://www.commoncoreontologies.org/ont00002076"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001191",
+      "parent": "https://www.commoncoreontologies.org/ont00001213"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001203",
+      "parent": "https://www.commoncoreontologies.org/ont00000472"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001213",
+      "parent": "https://www.commoncoreontologies.org/ont00000246"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001226",
+      "parent": "https://www.commoncoreontologies.org/ont00002071"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001232",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001251",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001272",
+      "parent": "https://www.commoncoreontologies.org/ont00000191"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001289",
+      "parent": "https://www.commoncoreontologies.org/ont00000135"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001324",
+      "parent": "https://www.commoncoreontologies.org/ont00000965"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001327",
+      "parent": "https://www.commoncoreontologies.org/ont00000228"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001328",
+      "parent": "https://www.commoncoreontologies.org/ont00000398"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001334",
+      "parent": "https://www.commoncoreontologies.org/ont00000836"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001337",
+      "parent": "https://www.commoncoreontologies.org/ont00000754"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001356",
+      "parent": "https://www.commoncoreontologies.org/ont00000611"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001374",
+      "parent": "https://www.commoncoreontologies.org/ont00000402"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00001379",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000017"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002001",
+      "parent": "https://www.commoncoreontologies.org/ont00000958"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002004",
+      "parent": "https://www.commoncoreontologies.org/ont00002001"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002007",
+      "parent": "https://www.commoncoreontologies.org/ont00002001"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002039",
+      "parent": "https://www.commoncoreontologies.org/ont00002001"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002076",
+      "parent": "https://www.commoncoreontologies.org/ont00000402"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002077",
+      "parent": "https://www.commoncoreontologies.org/ont00000588"
+    },
+    {
+      "child": "https://www.commoncoreontologies.org/ont00002078",
+      "parent": "https://www.commoncoreontologies.org/ont00000588"
+    }
+  ],
+  "import_hashes": {
+    "imports/AgentOntology.ttl": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+    "imports/EventOntology.ttl": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+    "imports/InformationEntityOntology.ttl": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+    "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+    "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+    "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0"
+  },
+  "indexed_class_declarations": 849,
+  "individuals_generated": false,
+  "limitation": "Some rail classes have a single asserted parent; these edges remain in training because holding them out would leave an unsupported class-center embedding. New rail held-outs must have other training support, and a 0.70 cosine mean is not guaranteed by the 80/20 split.",
+  "overall_train_fraction": 0.799279,
+  "overall_validation_fraction": 0.200721,
+  "projection_scope": "Named rdfs:subClassOf + owl:Class declarations only. Imported/source GCAs, restrictions, ABox and property domain/range not used in mOWL loss.",
+  "rail_candidate_holdout": {
+    "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+    "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger"
+  },
+  "rail_candidate_holdout_pairs": 2,
+  "rail_candidate_holdouts": [
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    }
+  ],
+  "rail_candidate_pairs_total": 9,
+  "rail_candidate_training_pairs": 7,
+  "refined_sha256": "f27f752d3b89200d2d58ee87f5128d57ffc215a1792997c26bc472db71901566",
+  "seed": 42,
+  "source_import_explicit_named_subclass_pairs": 823,
+  "source_import_holdout_pairs": 165,
+  "source_import_train_pairs": 658,
+  "source_not_merged": true,
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_unchanged": true,
+  "status": "PASS_SPLIT_READY_FOR_MOWL",
+  "step4_summary_sha256": "c057aec53d749d52315bf9769a854feafbb40baa82c822a91d5950db80d31429",
+  "train_axiom_pairs": 665,
+  "train_sha256": "ca26851c1c6246bdf20ce1182e83bb5852f6301d32ce8663522e2dfa1b4c379e",
+  "valid_axiom_pairs": 167,
+  "valid_sha256": "62ee00ef60eb94af3f10af7b988298a9ada2dc20aaf2c883a3ba9ba64d3ff1b5",
+  "validation_fraction_requested": 0.2,
+  "version": "project6-mowl-80-20-v2"
+}

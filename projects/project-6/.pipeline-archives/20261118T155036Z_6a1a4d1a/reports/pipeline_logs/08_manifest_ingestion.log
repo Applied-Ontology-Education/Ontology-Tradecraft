@@ -1,0 +1,22 @@
+STEP8 COMMAND: C:\Users\cappa\Ontology-Tradecraft\projects\project-6\.venv-mowl\Scripts\python.exe -u C:\Users\cappa\Ontology-Tradecraft\projects\project-6\scripts\ingest_passenger_manifest.py --input C:\Users\cappa\Ontology-Tradecraft\projects\project-6\templates\passenger_manifest_template.xlsx
+MANIFEST INGEST — PASS_MANIFEST_ABOX_GENERATED
+{
+  "ontology_triples": 484,
+  "abox_triples": 142,
+  "combined_triples": 626,
+  "counts": {
+    "onboard_passenger_rows": 5,
+    "air_passenger_rows": 2,
+    "physical_rail_ticket_rows": 2,
+    "rail_passenger_rows": 3,
+    "unique_air_flights": 1,
+    "unique_rail_journeys": 2,
+    "rows": 5,
+    "people": 5,
+    "new_named_individuals": 27,
+    "abox_triples": 142
+  },
+  "warnings": [
+    "Ticket IDs do not automatically prove physical rail tickets exist."
+  ]
+}

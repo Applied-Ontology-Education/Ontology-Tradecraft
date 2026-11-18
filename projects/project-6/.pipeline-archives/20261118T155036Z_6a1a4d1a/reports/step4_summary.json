@@ -1,0 +1,36 @@
+{
+  "combined_triples": 484,
+  "failed_sparql_checks": [],
+  "generated_query_count": 11,
+  "generated_shacl_node_shapes": 14,
+  "imports_verified_against_step2_provenance": 6,
+  "merged_into_source": false,
+  "named_individuals_created": false,
+  "pending_step3a_design_decisions": [
+    {
+      "blocking_for_unreviewed_merge": true,
+      "decision": "Material information bearer scope retained; electronic ticket INFORMATION requires a distinct class/pattern",
+      "entity": "https://example.org/ontologies/intel-ontology#rail_ticket"
+    },
+    {
+      "blocking_for_unreviewed_merge": false,
+      "decision": "An optional BFO Site / facility-vs-infrastructure distinction may be needed after formal review",
+      "entity": "https://example.org/ontologies/intel-ontology#railway_station"
+    }
+  ],
+  "refined_sha256": "a19a8986b7946e1c77a598ff3ef166d92efb553ec0456e45542cf4c8a4fae44a",
+  "refined_triples": 63,
+  "review_required_before_merge": true,
+  "scope_note": "Explicit candidate TBox QC only, not OWL consistency or ontological approval",
+  "shacl": {
+    "conforms": true,
+    "executed": true,
+    "report_text": "Validation Report\nConforms: True\n"
+  },
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_triples": 421,
+  "source_unchanged": true,
+  "sparql_passed": true,
+  "status": "PASS_QC_AND_SHACL_UNAPPROVED",
+  "version": "project6-rail-qc-shacl-v1"
+}

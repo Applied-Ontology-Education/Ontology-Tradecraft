@@ -1,0 +1,89 @@
+{
+  "candidates": [
+    {
+      "child_definition": "A train whose designed function includes carrying persons who bear a rail passenger role.",
+      "child_iri": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "child_label": "passenger train",
+      "cosine_status": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "id": "edge-00",
+      "parent_iri": "https://example.org/ontologies/intel-ontology#train",
+      "parent_label": "train"
+    },
+    {
+      "child_definition": "A process in which a train travels along railway tracks from a departure railway station to an arrival railway station.",
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "child_label": "rail journey",
+      "cosine_status": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "id": "edge-01",
+      "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "parent_label": "BFO_0000015"
+    },
+    {
+      "child_definition": "An information content entity that specifies a planned rail journey, including planned endpoints and timing, and is not itself a rail journey process.",
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "child_label": "rail journey plan",
+      "cosine_status": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "id": "edge-02",
+      "parent_iri": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "parent_label": "IAO_0000030"
+    },
+    {
+      "child_definition": "A role borne by a person in virtue of being carried, or authorized to be carried, on a passenger train during a rail journey.",
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "child_label": "rail passenger role",
+      "cosine_status": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "id": "edge-03",
+      "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "parent_label": "BFO_0000023"
+    },
+    {
+      "child_definition": "A role borne by a person in virtue of being carried, or authorized to be carried, on a passenger train during a rail journey.",
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "child_label": "rail passenger role",
+      "cosine_status": "HELD_OUT",
+      "id": "edge-04",
+      "parent_iri": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "parent_label": "passenger"
+    },
+    {
+      "child_definition": "An information content entity that is reservation information about a planned rail journey or related travel entitlement, distinct from any material booking artifact and from the rail journey process.",
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "child_label": "rail reservation information",
+      "cosine_status": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "id": "edge-05",
+      "parent_iri": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+      "parent_label": "reservation information"
+    },
+    {
+      "child_definition": "A material information bearer that is a ticket and bears information authorizing travel associated with a rail journey.",
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "child_label": "rail ticket",
+      "cosine_status": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "id": "edge-06",
+      "parent_iri": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+      "parent_label": "ticket"
+    },
+    {
+      "child_definition": "A material entity comprising physical railway facilities at which rail journeys begin, end, or pause, potentially including platforms, track infrastructure, structures, and buildings.",
+      "child_iri": "https://example.org/ontologies/intel-ontology#railway_station",
+      "child_label": "railway station",
+      "cosine_status": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "id": "edge-07",
+      "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "parent_label": "BFO_0000040"
+    },
+    {
+      "child_definition": "A material entity composed of one or more rail vehicles operated together on a railway to convey passengers or freight.",
+      "child_iri": "https://example.org/ontologies/intel-ontology#train",
+      "child_label": "train",
+      "cosine_status": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "id": "edge-08",
+      "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "parent_label": "BFO_0000040"
+    }
+  ],
+  "constraint": "Ticket-as-bearer versus digital information remains a blocking human design review; source must remain unchanged.",
+  "model": "grok-4.7",
+  "scope": "Assess subclass plausibility only. Do not infer real-world individuals, a person's intentions, or threat status.",
+  "version": "project6-elembeddings-hybrid-v1"
+}

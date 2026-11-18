@@ -1,0 +1,48 @@
+{
+  "actual_air_flights": 1,
+  "air_information_about_process_links": 1,
+  "air_planning_processes": 1,
+  "aircraft_flight_participations": 1,
+  "aircraft_planning_participations": 1,
+  "augmented_triples": 484,
+  "combined_triples": 709,
+  "disclaimer": "This is asserted-data enrichment, not OWL reasoner approval.",
+  "enriched_abox_triples": 171,
+  "flight_and_rail_occurrence_assumed_from_manifest": true,
+  "flight_plan_document_bearers": 1,
+  "new_abox_triples": 29,
+  "new_named_individuals": 2,
+  "new_tbox_triples": 54,
+  "original_abox_sha256": "7a5513a2c077ed4602557fb33f71e4a0e72f3287e92e5e4fe51f93a06783d940",
+  "original_abox_triples": 142,
+  "output_abox": "generated\\manifest_instances_enriched.ttl",
+  "output_combined": "generated\\module_augmented_with_manifest_enriched.ttl",
+  "output_schema": "generated\\manifest_tbox_extension.ttl",
+  "owl_reasoner_executed": false,
+  "physical_document_evidence_required": true,
+  "protected_ontology_and_manifest_files_unchanged": true,
+  "rail_plan_station_links": 6,
+  "rail_plan_train_links": 3,
+  "rail_train_participation_links": 2,
+  "source_sha256": "c3075f154a68db470b371d917c011a4918a98377aae8707835c6f59563ef1718",
+  "source_unchanged": true,
+  "station_direction_checks": [
+    {
+      "arrival_station_name": "Philadelphia 30th Street",
+      "departure_station_name": "Washington Union Station",
+      "in_transit_assumed_from_manifest": true,
+      "service_code": "NEX102",
+      "trip_id": "RJ-20261117-NEX102"
+    },
+    {
+      "arrival_station_name": "New York Penn Station",
+      "departure_station_name": "Philadelphia 30th Street",
+      "in_transit_assumed_from_manifest": true,
+      "service_code": "NEX103",
+      "trip_id": "RJ-20261117-NEX103"
+    }
+  ],
+  "status": "PASS_RELATIONSHIPS_ENRICHED_NOT_MERGED",
+  "version": "project6-manifest-relationships-v3-in-transit",
+  "workbook_sha256": "bbff4adfbb05b7ba9dbcbc05593859dead0bc391b63d339ba55ddceb34241a2f"
+}

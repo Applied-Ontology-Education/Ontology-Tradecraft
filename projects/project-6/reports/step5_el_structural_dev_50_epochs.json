@@ -1,0 +1,90 @@
+{
+  "chosen_dev_result": {
+    "config": {
+      "dimension": 50,
+      "dispersion_weight": 0.02,
+      "lambda_cos": 0.25,
+      "learning_rate": 0.001,
+      "semantic_scale": 0.4
+    },
+    "control_mean": 0.029822,
+    "epochs": 50,
+    "inferred_training_pairs": 40,
+    "mean_cosine": 0.106236,
+    "positive_control_auc": 0.653571,
+    "positive_control_gap": 0.076414,
+    "score_count": 56,
+    "selection_score": 0.106236,
+    "semantic_adapter_updated": true,
+    "stage": "el_dev_1",
+    "total_training_positive_pairs": 649,
+    "train_positive_mean_cosine": 0.530053
+  },
+  "chosen_development_config": {
+    "dimension": 50,
+    "dispersion_weight": 0.02,
+    "lambda_cos": 0.25,
+    "learning_rate": 0.001,
+    "semantic_scale": 0.4
+  },
+  "development_holdout_pairs": 56,
+  "development_sweep": [
+    {
+      "config": {
+        "dimension": 50,
+        "dispersion_weight": 0.02,
+        "lambda_cos": 0.25,
+        "learning_rate": 0.001,
+        "semantic_scale": 0.4
+      },
+      "control_mean": 0.029822,
+      "epochs": 50,
+      "inferred_training_pairs": 40,
+      "mean_cosine": 0.106236,
+      "positive_control_auc": 0.653571,
+      "positive_control_gap": 0.076414,
+      "score_count": 56,
+      "selection_score": 0.106236,
+      "semantic_adapter_updated": true,
+      "stage": "el_dev_1",
+      "total_training_positive_pairs": 649,
+      "train_positive_mean_cosine": 0.530053
+    }
+  ],
+  "development_training_graph_sha256": "b37122dfb3733b17b1f22f46814c3bba9afba9b32356bd6e814957356ec41759",
+  "development_training_pairs": 609,
+  "input_sha256": {
+    "refined_sha256": "f27f752d3b89200d2d58ee87f5128d57ffc215a1792997c26bc472db71901566",
+    "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+    "train_sha256": "ca26851c1c6246bdf20ce1182e83bb5852f6301d32ce8663522e2dfa1b4c379e",
+    "valid_sha256": "62ee00ef60eb94af3f10af7b988298a9ada2dc20aaf2c883a3ba9ba64d3ff1b5"
+  },
+  "mode": "development_only",
+  "normal_forms": {
+    "development": {
+      "gci0": 612,
+      "gci0_bot": 0,
+      "gci1": 8,
+      "gci1_bot": 0,
+      "gci2": 73,
+      "gci3": 8,
+      "gci3_bot": 0
+    }
+  },
+  "outer_final_fit_run": false,
+  "outer_holdout_evaluated": false,
+  "outer_training_graph_written": false,
+  "outer_vectors_written": false,
+  "report_scope": "Internal development only; outer holdout is not evaluated.",
+  "seed": 42,
+  "status": "DEVELOPMENT_ONLY_COMPLETE",
+  "threshold_reference_only": 0.7,
+  "tune_epochs": 50,
+  "version": "project6-el-structural-development-only-v3",
+  "warnings": [
+    "No final holdout or rail performance is reported by this run.",
+    "Do not interpret development cosine as proof of the 0.70 outer requirement.",
+    "Source text features may implicitly encode taxonomy information.",
+    "An OWL reasoner is needed to certify semantic nonleakage."
+  ]
+}

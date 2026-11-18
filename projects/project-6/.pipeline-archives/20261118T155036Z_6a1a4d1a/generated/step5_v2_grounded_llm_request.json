@@ -1,0 +1,293 @@
+{
+  "candidates": [
+    {
+      "child_definitions": [
+        "A train whose designed or designated function includes conveying passengers."
+      ],
+      "child_iri": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "child_label": "passenger train",
+      "cosine_evidence_type": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "design_note": "",
+      "id": "edge-00",
+      "other_proposed_child_parents_NOT_YET_APPROVED": [],
+      "parent_definitions": [],
+      "parent_iri": "https://example.org/ontologies/intel-ontology#train",
+      "parent_label": "train",
+      "verified_child_role_ancestry_path": null,
+      "verified_parent_direct_superclasses": [],
+      "verified_parent_is_bfo_role_or_subclass": false,
+      "verified_parent_role_ancestry_path": null
+    },
+    {
+      "child_definitions": [
+        "A process in which a train conveys one or more passengers between railway stations."
+      ],
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "child_label": "rail journey",
+      "cosine_evidence_type": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "design_note": "",
+      "id": "edge-01",
+      "other_proposed_child_parents_NOT_YET_APPROVED": [],
+      "parent_definitions": [
+        "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"
+      ],
+      "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "parent_label": "process",
+      "verified_child_role_ancestry_path": null,
+      "verified_parent_direct_superclasses": [
+        {
+          "asserted_in": [
+            "VERIFIED_LOCAL_IMPORT"
+          ],
+          "object": "http://purl.obolibrary.org/obo/BFO_0000003",
+          "object_label": "occurrent",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "subject": "http://purl.obolibrary.org/obo/BFO_0000015",
+          "verification": "DIRECTLY_ASSERTED_NOT_INFERRED"
+        }
+      ],
+      "verified_parent_is_bfo_role_or_subclass": false,
+      "verified_parent_role_ancestry_path": null
+    },
+    {
+      "child_definitions": [
+        "An information content entity that specifies an intended rail journey, including planned conveyance and schedule information."
+      ],
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "child_label": "rail journey plan",
+      "cosine_evidence_type": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "design_note": "",
+      "id": "edge-02",
+      "other_proposed_child_parents_NOT_YET_APPROVED": [],
+      "parent_definitions": [
+        "A generically dependent continuant that is about some thing."
+      ],
+      "parent_iri": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "parent_label": "information content entity",
+      "verified_child_role_ancestry_path": null,
+      "verified_parent_direct_superclasses": [
+        {
+          "asserted_in": [
+            "VERIFIED_LOCAL_IMPORT"
+          ],
+          "object": "http://purl.obolibrary.org/obo/BFO_0000031",
+          "object_label": "generically dependent continuant",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "subject": "http://purl.obolibrary.org/obo/IAO_0000030",
+          "verification": "DIRECTLY_ASSERTED_NOT_INFERRED"
+        }
+      ],
+      "verified_parent_is_bfo_role_or_subclass": false,
+      "verified_parent_role_ancestry_path": null
+    },
+    {
+      "child_definitions": [
+        "A role that inheres in a person and is realized by that person being conveyed as a passenger by a train."
+      ],
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "child_label": "rail passenger role",
+      "cosine_evidence_type": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "design_note": "",
+      "id": "edge-03",
+      "other_proposed_child_parents_NOT_YET_APPROVED": [
+        "https://www.commoncoreontologies.org/AgentOntology/passenger"
+      ],
+      "parent_definitions": [
+        "(Elucidation) A role b is a realizable entity such that b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed"
+      ],
+      "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "parent_label": "role",
+      "verified_child_role_ancestry_path": null,
+      "verified_parent_direct_superclasses": [
+        {
+          "asserted_in": [
+            "VERIFIED_LOCAL_IMPORT"
+          ],
+          "object": "http://purl.obolibrary.org/obo/BFO_0000017",
+          "object_label": "realizable entity",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "subject": "http://purl.obolibrary.org/obo/BFO_0000023",
+          "verification": "DIRECTLY_ASSERTED_NOT_INFERRED"
+        }
+      ],
+      "verified_parent_is_bfo_role_or_subclass": true,
+      "verified_parent_role_ancestry_path": [
+        "http://purl.obolibrary.org/obo/BFO_0000023"
+      ]
+    },
+    {
+      "child_definitions": [
+        "A role that inheres in a person and is realized by that person being conveyed as a passenger by a train."
+      ],
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "child_label": "rail passenger role",
+      "cosine_evidence_type": "HELD_OUT",
+      "design_note": "",
+      "id": "edge-04",
+      "other_proposed_child_parents_NOT_YET_APPROVED": [
+        "http://purl.obolibrary.org/obo/BFO_0000023"
+      ],
+      "parent_definitions": [],
+      "parent_iri": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "parent_label": "passenger",
+      "verified_child_role_ancestry_path": null,
+      "verified_parent_direct_superclasses": [
+        {
+          "asserted_in": [
+            "SOURCE_MODULE"
+          ],
+          "object": "http://purl.obolibrary.org/obo/BFO_0000023",
+          "object_label": "role",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "subject": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+          "verification": "DIRECTLY_ASSERTED_NOT_INFERRED"
+        }
+      ],
+      "verified_parent_is_bfo_role_or_subclass": true,
+      "verified_parent_role_ancestry_path": [
+        "https://www.commoncoreontologies.org/AgentOntology/passenger",
+        "http://purl.obolibrary.org/obo/BFO_0000023"
+      ]
+    },
+    {
+      "child_definitions": [
+        "Reservation information that records an allocation of rail travel for one or more passengers."
+      ],
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "child_label": "rail reservation information",
+      "cosine_evidence_type": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "design_note": "",
+      "id": "edge-05",
+      "other_proposed_child_parents_NOT_YET_APPROVED": [],
+      "parent_definitions": [],
+      "parent_iri": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+      "parent_label": "reservation information",
+      "verified_child_role_ancestry_path": null,
+      "verified_parent_direct_superclasses": [
+        {
+          "asserted_in": [
+            "SOURCE_MODULE"
+          ],
+          "object": "http://purl.obolibrary.org/obo/IAO_0000030",
+          "object_label": "information content entity",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "subject": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+          "verification": "DIRECTLY_ASSERTED_NOT_INFERRED"
+        }
+      ],
+      "verified_parent_is_bfo_role_or_subclass": false,
+      "verified_parent_role_ancestry_path": null
+    },
+    {
+      "child_definitions": [
+        "A ticket that is a material information bearer carried as evidence of authorization to travel by rail."
+      ],
+      "child_iri": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "child_label": "rail ticket",
+      "cosine_evidence_type": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "design_note": "Rail ticket as physical bearer vs electronic ticket content is UNRESOLVED",
+      "id": "edge-06",
+      "other_proposed_child_parents_NOT_YET_APPROVED": [],
+      "parent_definitions": [],
+      "parent_iri": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+      "parent_label": "ticket",
+      "verified_child_role_ancestry_path": null,
+      "verified_parent_direct_superclasses": [
+        {
+          "asserted_in": [
+            "SOURCE_MODULE"
+          ],
+          "object": "http://purl.obolibrary.org/obo/IAO_0000178",
+          "object_label": "material information bearer",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "subject": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+          "verification": "DIRECTLY_ASSERTED_NOT_INFERRED"
+        }
+      ],
+      "verified_parent_is_bfo_role_or_subclass": false,
+      "verified_parent_role_ancestry_path": null
+    },
+    {
+      "child_definitions": [
+        "A material entity comprising physical railway facilities at which rail journeys begin, end, or pause, potentially including platforms, track infrastructure, structures, and buildings."
+      ],
+      "child_iri": "https://example.org/ontologies/intel-ontology#railway_station",
+      "child_label": "railway station",
+      "cosine_evidence_type": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "design_note": "",
+      "id": "edge-07",
+      "other_proposed_child_parents_NOT_YET_APPROVED": [],
+      "parent_definitions": [
+        "(Elucidation) A material entity is an independent continuant that at all times at which it exists has some portion of matter as continuant part"
+      ],
+      "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "parent_label": "material entity",
+      "verified_child_role_ancestry_path": null,
+      "verified_parent_direct_superclasses": [
+        {
+          "asserted_in": [
+            "VERIFIED_LOCAL_IMPORT"
+          ],
+          "object": "http://purl.obolibrary.org/obo/BFO_0000004",
+          "object_label": "independent continuant",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "subject": "http://purl.obolibrary.org/obo/BFO_0000040",
+          "verification": "DIRECTLY_ASSERTED_NOT_INFERRED"
+        }
+      ],
+      "verified_parent_is_bfo_role_or_subclass": false,
+      "verified_parent_role_ancestry_path": null
+    },
+    {
+      "child_definitions": [
+        "A material entity composed of one or more rail vehicles operated together on a railway to convey passengers or freight."
+      ],
+      "child_iri": "https://example.org/ontologies/intel-ontology#train",
+      "child_label": "train",
+      "cosine_evidence_type": "IN_TRAINING_UNSCORABLE_INDEPENDENTLY",
+      "design_note": "",
+      "id": "edge-08",
+      "other_proposed_child_parents_NOT_YET_APPROVED": [],
+      "parent_definitions": [
+        "(Elucidation) A material entity is an independent continuant that at all times at which it exists has some portion of matter as continuant part"
+      ],
+      "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "parent_label": "material entity",
+      "verified_child_role_ancestry_path": null,
+      "verified_parent_direct_superclasses": [
+        {
+          "asserted_in": [
+            "VERIFIED_LOCAL_IMPORT"
+          ],
+          "object": "http://purl.obolibrary.org/obo/BFO_0000004",
+          "object_label": "independent continuant",
+          "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+          "subject": "http://purl.obolibrary.org/obo/BFO_0000040",
+          "verification": "DIRECTLY_ASSERTED_NOT_INFERRED"
+        }
+      ],
+      "verified_parent_is_bfo_role_or_subclass": false,
+      "verified_parent_role_ancestry_path": null
+    }
+  ],
+  "import_hashes": {
+    "imports/AgentOntology.ttl": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+    "imports/EventOntology.ttl": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+    "imports/InformationEntityOntology.ttl": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+    "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+    "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+    "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0"
+  },
+  "model": "grok-4.7",
+  "ontology_context_rules": [
+    "All VERIFIED_PARENT facts and role-ancestry paths come from the unchanged source and hash-verified local imports.",
+    "Other candidate parents are PROPOSALS, not asserted source facts or reasoner results.",
+    "When source facts say a parent is a BFO Role subclass, do NOT hypothesize that it is a person/bearer instead.",
+    "Score plausibility of the proposed subclass relation, not whether the axiom has already been approved.",
+    "If facts are insufficient, say exactly what is missing rather than inventing a parent's type.",
+    "No people, individuals, intent, or threat identification; no merges or automatic acceptance."
+  ],
+  "refined_sha256": "a19a8986b7946e1c77a598ff3ef166d92efb553ec0456e45542cf4c8a4fae44a",
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "version": "project6-elembeddings-grounded-review-v2"
+}

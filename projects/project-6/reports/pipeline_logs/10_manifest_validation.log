@@ -1,0 +1,24 @@
+STEP8 COMMAND: C:\Users\cappa\Ontology-Tradecraft\projects\project-6\.venv-mowl\Scripts\python.exe -u C:\Users\cappa\Ontology-Tradecraft\projects\project-6\scripts\validate_manifest_abox.py --project-root C:\Users\cappa\Ontology-Tradecraft\projects\project-6 --workbook C:\Users\cappa\Ontology-Tradecraft\projects\project-6\templates\passenger_manifest_template.xlsx --strict-occurrence --timeout 300 --hard-timeout 1200
+MANIFEST VALIDATION — supervising HermiT/ROBOT execution
+MANIFEST VALIDATION — structural assertions and SHACL passed
+MANIFEST VALIDATION — parsing six local imports and building STAR locality module
+MANIFEST VALIDATION — ROBOT: extract --method STAR -> import_extraction.log
+MANIFEST VALIDATION — ROBOT: reason --input C:\Users\cappa\Ontology-Tradecraft\projects\project-6\generated\manifest_validation\reasoner_baseline.ttl -> baseline_hermit.log
+MANIFEST VALIDATION — ROBOT: reason --input C:\Users\cappa\Ontology-Tradecraft\projects\project-6\generated\manifest_validation\reasoner_candidate.ttl -> candidate_hermit.log
+MANIFEST VALIDATION — PASS_SCOPED_HERMIT_AND_SHACL
+{
+  "counts": {
+    "augmented_tbox_triples": 484,
+    "new_property_declaration_triples": 54,
+    "manifest_enriched_abox_triples": 171,
+    "combined_triples": 709
+  },
+  "shacl": {
+    "conforms": true,
+    "target_shape_count": 7,
+    "triple_count": 120,
+    "violations": 0
+  },
+  "semantic_warnings": [],
+  "reasoner_executed": true
+}

@@ -1,0 +1,149 @@
+{
+  "config": {
+    "embedding_dimension": 50,
+    "epochs": 200,
+    "model": "grok-4.7",
+    "reasoner": "hermit",
+    "reasoner_hard_timeout": 900,
+    "reasoner_scope": "module",
+    "reasoner_timeout": 300,
+    "seed": 42
+  },
+  "finished_at_utc": "2026-11-17T16:50:06+00:00",
+  "hindsight_note": "Source-scoped HermiT passed; this does not validate unrelated unimported axioms.",
+  "import_sha256": {
+    "imports/AgentOntology.ttl": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+    "imports/EventOntology.ttl": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+    "imports/InformationEntityOntology.ttl": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+    "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+    "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+    "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0"
+  },
+  "llm_repeatability_note": "Two live Grok calls occur; model responses and numerical scores can change between runs.",
+  "merged_triples": 484,
+  "mowl_repeatability_note": "CPU+fixed seeds help reproducibility but may not guarantee identical embeddings across versions/hardware.",
+  "new_named_individuals": 0,
+  "output": "generated/module_augmented.ttl",
+  "output_sha256": "c3075f154a68db470b371d917c011a4918a98377aae8707835c6f59563ef1718",
+  "previous_outputs_archive": ".pipeline-archives/20261117T164514Z_d808cd12",
+  "python_executable": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-6\\.venv-mowl\\Scripts\\python.exe",
+  "python_version": "3.12.10",
+  "source_overwritten": false,
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_unchanged": true,
+  "stages": [
+    {
+      "duration_seconds": 1.172,
+      "finished_at_utc": "2026-11-17T16:45:15+00:00",
+      "report": "reports/step1_summary.json",
+      "report_sha256": "477c0ab52003b63bb8568afcfcf4e21bd6c0fb03e5e8152e3bdc6ef8671caf36",
+      "reported_status": "PASS",
+      "script": "inventory_ontology.py",
+      "stage": "01_inventory",
+      "started_at_utc": "2026-11-17T16:45:14+00:00",
+      "status": "PASS"
+    },
+    {
+      "duration_seconds": 151.812,
+      "finished_at_utc": "2026-11-17T16:47:47+00:00",
+      "report": "reports/step2_summary.json",
+      "report_sha256": "028bd0b0dd23fe9dda6de986f78a58dcaf14572a316041327cdf0a1d312aa608",
+      "reported_status": "PASS_PROPOSAL_ONLY",
+      "script": "propose_rail_patterns_llm.py",
+      "stage": "02_grok_proposal",
+      "started_at_utc": "2026-11-17T16:45:15+00:00",
+      "status": "PASS"
+    },
+    {
+      "duration_seconds": 0.61,
+      "finished_at_utc": "2026-11-17T16:47:48+00:00",
+      "report": "reports/step3_summary.json",
+      "report_sha256": "e7a6da70deff2e96750acbf39445552f51698c441ac5cbee65baf2be247a0281",
+      "reported_status": "PASS_CANDIDATES_REVIEW_REQUIRED",
+      "script": "generate_rail_axioms.py",
+      "stage": "03_candidate_axioms",
+      "started_at_utc": "2026-11-17T16:47:47+00:00",
+      "status": "PASS"
+    },
+    {
+      "duration_seconds": 0.641,
+      "finished_at_utc": "2026-11-17T16:47:48+00:00",
+      "report": "reports/step3a_summary.json",
+      "report_sha256": "53efaa81c8e505f63eb34499c0600e7c315444566280cb6a15e81b304639aa79",
+      "reported_status": "PASS_REFINED_UNAPPROVED",
+      "script": "refine_rail_axioms.py",
+      "stage": "03a_refine_axioms",
+      "started_at_utc": "2026-11-17T16:47:48+00:00",
+      "status": "PASS"
+    },
+    {
+      "duration_seconds": 0.547,
+      "finished_at_utc": "2026-11-17T16:47:49+00:00",
+      "report": "reports/step4_summary.json",
+      "report_sha256": "7a236c744497bfc64d12207a01c529158495ee0751a629aaa7c9e1e3e2c77299",
+      "reported_status": "PASS_QC_AND_SHACL_UNAPPROVED",
+      "script": "validate_rail_tbox.py",
+      "stage": "04_qc_shacl",
+      "started_at_utc": "2026-11-17T16:47:48+00:00",
+      "status": "PASS"
+    },
+    {
+      "duration_seconds": 0.891,
+      "finished_at_utc": "2026-11-17T16:47:50+00:00",
+      "report": "reports/step5_split_report.json",
+      "report_sha256": "e39ddc608b8eacaf7e95f67462eabe77b0724f8b74a05da20c8ffaee7e301133",
+      "reported_status": "PASS_SPLIT_READY_FOR_MOWL",
+      "script": "prepare_rail_mowl.py",
+      "stage": "05a_train_valid_split",
+      "started_at_utc": "2026-11-17T16:47:49+00:00",
+      "status": "PASS"
+    },
+    {
+      "duration_seconds": 55.156,
+      "finished_at_utc": "2026-11-17T16:48:45+00:00",
+      "report": "reports/step5_summary.json",
+      "report_sha256": "4e0a99dc72f0307cf2bef13d2918b0ad036cbf9a165f8369d359166270f5b6f3",
+      "reported_status": "PASS_HYBRID_REVIEW_ONLY",
+      "script": "evaluate_rail_mowl.py",
+      "stage": "05b_mowl_and_grok",
+      "started_at_utc": "2026-11-17T16:47:50+00:00",
+      "status": "PASS"
+    },
+    {
+      "duration_seconds": 68.328,
+      "finished_at_utc": "2026-11-17T16:49:53+00:00",
+      "report": "reports/step5_v2_summary.json",
+      "report_sha256": "394008b98a222c47936177910559ca2be15a7261fa17277c4f58d3d2bc1d0976",
+      "reported_status": "PASS_GROUNDED_HYBRID_REVIEW_ONLY",
+      "script": "refine_rail_hybrid.py",
+      "stage": "05c_grounded_grok",
+      "started_at_utc": "2026-11-17T16:48:45+00:00",
+      "status": "PASS"
+    },
+    {
+      "duration_seconds": 11.015,
+      "finished_at_utc": "2026-11-17T16:50:04+00:00",
+      "report": "reports/step6_reasoner_summary.json",
+      "report_sha256": "99604f817be55a84d8620bdc68e2d0eb9e3de8dce8bf8a1afe1e9af43cbfbbb3",
+      "reported_status": "PASS_REASONER_COHERENT_UNAPPROVED",
+      "script": "validate_rail_reasoner.py",
+      "stage": "06_scoped_hermit",
+      "started_at_utc": "2026-11-17T16:49:53+00:00",
+      "status": "PASS"
+    },
+    {
+      "duration_seconds": 1.719,
+      "finished_at_utc": "2026-11-17T16:50:06+00:00",
+      "report": "reports/step7_summary.json",
+      "report_sha256": "33d5e7657d8178ecbb97313bc000e1197f26ea77ce7673b71c254e2f1f8231c3",
+      "reported_status": "PASS_CONTROLLED_MERGE_VALIDATED_NOT_PROMOTED",
+      "script": "merge_rail_ontology.py",
+      "stage": "07_controlled_merge",
+      "started_at_utc": "2026-11-17T16:50:04+00:00",
+      "status": "PASS"
+    }
+  ],
+  "started_at_utc": "2026-11-17T16:45:14+00:00",
+  "status": "PASS_ALL_STAGES_SOURCE_UNCHANGED",
+  "version": "project6-run-all-v1"
+}

@@ -1,0 +1,58 @@
+{
+  "ratings": [
+    {
+      "concern": "None; function or schedule does not change the train category.",
+      "id": "edge-00",
+      "plausibility": 0.96,
+      "rationale": "The child is defined as a train restricted by a passenger-carrying function, so it is a straightforward specialization of train."
+    },
+    {
+      "concern": "Station-to-station wording may exclude some rail movements, but not processhood.",
+      "id": "edge-01",
+      "plausibility": 0.95,
+      "rationale": "The child is explicitly a process of train movement between stations, matching BFO process (BFO_0000015)."
+    },
+    {
+      "concern": "Prescriptive and descriptive ICE subtypes are not separated, but both remain ICE.",
+      "id": "edge-02",
+      "plausibility": 0.94,
+      "rationale": "A plan that prescribes or describes an intended journey is an information content entity, matching IAO_0000030."
+    },
+    {
+      "concern": "None material; the non-person clause reinforces rather than conflicts with role.",
+      "id": "edge-03",
+      "plausibility": 0.95,
+      "rationale": "The child is defined as a role inhering in a person and realized in travel, matching BFO role (BFO_0000023)."
+    },
+    {
+      "concern": "Likely category error if passenger denotes an agent or person rather than a passenger role.",
+      "id": "edge-04",
+      "plausibility": 0.38,
+      "rationale": "A rail-passenger role is a role, while the parent is only labeled passenger in an agent ontology and is not defined as a role."
+    },
+    {
+      "concern": "Parent IRI token reservation is broader than the information label; alignment depends on that label.",
+      "id": "edge-05",
+      "plausibility": 0.9,
+      "rationale": "Rail reservation information is reservation information restricted to a rail-travel entitlement, independent of a material ticket."
+    },
+    {
+      "concern": "Bearer versus information-content status of ticket is an unresolved blocking distinction; do not treat subsumption as settled.",
+      "id": "edge-06",
+      "plausibility": 0.52,
+      "rationale": "Calling a rail ticket a ticket is linguistically natural, but the child is fixed as a material information bearer."
+    },
+    {
+      "concern": "A station-as-place might instead be a BFO site; the given definition commits to the material reading.",
+      "id": "edge-07",
+      "plausibility": 0.88,
+      "rationale": "Facilities, platforms, track, and buildings are material, so the defined station fits BFO material entity (BFO_0000040)."
+    },
+    {
+      "concern": "None material; this excludes an occurrent train-service reading already ruled out by the definition.",
+      "id": "edge-08",
+      "plausibility": 0.95,
+      "rationale": "A train composed of rail vehicles is a material object aggregate and therefore a material entity (BFO_0000040)."
+    }
+  ]
+}

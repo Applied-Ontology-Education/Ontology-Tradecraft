@@ -1,0 +1,16 @@
+{
+  "cosine_heldout_rail_pairs": 1,
+  "cosine_source_reference_pairs": 165,
+  "hybrid_scored_pairs": 1,
+  "llm_executed": true,
+  "merged_into_source": false,
+  "mowl_training_completed": true,
+  "new_named_individuals": 0,
+  "next": "Human scope review + OWL reasoner + controlled merge; no candidate automatically accepted",
+  "owl_reasoner_executed": false,
+  "semantic_approval": false,
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_unchanged": true,
+  "status": "PASS_HYBRID_REVIEW_ONLY",
+  "version": "project6-elembeddings-hybrid-v1"
+}

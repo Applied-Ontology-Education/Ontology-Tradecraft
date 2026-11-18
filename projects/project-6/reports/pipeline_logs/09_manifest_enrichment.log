@@ -1,0 +1,29 @@
+STEP8 COMMAND: C:\Users\cappa\Ontology-Tradecraft\projects\project-6\.venv-mowl\Scripts\python.exe -u C:\Users\cappa\Ontology-Tradecraft\projects\project-6\scripts\enrich_manifest_relationships.py --input C:\Users\cappa\Ontology-Tradecraft\projects\project-6\templates\passenger_manifest_template.xlsx --flight-document FL-20261117-AA101=FPDOC-AA101
+MANIFEST ENRICH — PASS_RELATIONSHIPS_ENRICHED_NOT_MERGED
+{
+  "augmented_triples": 484,
+  "original_abox_triples": 142,
+  "new_tbox_triples": 54,
+  "new_abox_triples": 29,
+  "enriched_abox_triples": 171,
+  "combined_triples": 709,
+  "station_direction_checks": [
+    {
+      "trip_id": "RJ-20261117-NEX102",
+      "service_code": "NEX102",
+      "departure_station_name": "Washington Union Station",
+      "arrival_station_name": "Philadelphia 30th Street",
+      "in_transit_assumed_from_manifest": true
+    },
+    {
+      "trip_id": "RJ-20261117-NEX103",
+      "service_code": "NEX103",
+      "departure_station_name": "Philadelphia 30th Street",
+      "arrival_station_name": "New York Penn Station",
+      "in_transit_assumed_from_manifest": true
+    }
+  ],
+  "flight_plan_document_bearers": 1,
+  "rail_train_participation_links": 2,
+  "actual_air_flights": 1
+}

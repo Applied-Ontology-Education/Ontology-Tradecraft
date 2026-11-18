@@ -1,0 +1,58 @@
+{
+  "ratings": [
+    {
+      "concern": "Designed-function wording is teleological but does not undermine the subclass.",
+      "id": "edge-00",
+      "plausibility": 0.96,
+      "rationale": "The child is defined as a train specialized by a passenger-carrying function, so passenger train is a kind of train."
+    },
+    {
+      "concern": "None for this parent; schedule details belong to related information entities.",
+      "id": "edge-01",
+      "plausibility": 0.97,
+      "rationale": "BFO_0000015 is process, and the child is defined as a process of train travel between stations."
+    },
+    {
+      "concern": "A narrower plan-specification parent may exist, but ICE is a correct general parent.",
+      "id": "edge-02",
+      "plausibility": 0.93,
+      "rationale": "IAO_0000030 is information content entity, and the plan is defined as ICE that specifies a journey rather than being the journey process."
+    },
+    {
+      "concern": "Carriage versus mere authorization may need distinct realization conditions, but both fit a role.",
+      "id": "edge-03",
+      "plausibility": 0.96,
+      "rationale": "BFO_0000023 is role, and the child is defined as a role borne by a person through carriage or travel authorization."
+    },
+    {
+      "concern": "Likely category error between a realizable role and a passenger bearer or agent; do not accept without a role definition for the parent.",
+      "id": "edge-04",
+      "plausibility": 0.36,
+      "rationale": "The child is a role, while the parent is only labeled passenger in an agent ontology. Subclass holds only if passenger is itself a role, which is not established."
+    },
+    {
+      "concern": "Confirm the parent is an information content entity; its agent-ontology placement is unexplained.",
+      "id": "edge-05",
+      "plausibility": 0.9,
+      "rationale": "The child is defined as reservation information about planned rail travel, distinct from the journey process and from material booking artifacts."
+    },
+    {
+      "concern": "Ticket-as-bearer versus digital information remains unresolved; an information-entity parent would make this the wrong category.",
+      "id": "edge-06",
+      "plausibility": 0.74,
+      "rationale": "The child is defined as a material bearer that is a ticket for rail travel, which supports subclass of ticket only if ticket denotes that kind of bearer."
+    },
+    {
+      "concern": "A station may alternatively be a site, and object aggregate may be a tighter material parent.",
+      "id": "edge-07",
+      "plausibility": 0.82,
+      "rationale": "BFO_0000040 is material entity, and the station is defined as a material entity comprising physical railway facilities."
+    },
+    {
+      "concern": "Object aggregate would be more specific, but material entity remains appropriate.",
+      "id": "edge-08",
+      "plausibility": 0.94,
+      "rationale": "A train defined as composed of one or more rail vehicles is a material entity, typically an object aggregate."
+    }
+  ]
+}

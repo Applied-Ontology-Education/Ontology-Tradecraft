@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)https://cdn.platform.openai.com/deployments/dil/v15/runner.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-1jrO9354XvTqYOM/3p4VL6ADhhgTZ3Lp8RE/yCyqGIc=' 'self' https://cdn.platform.openai.com/assets/dil/ 'unsafe-eval'; base-uri 'none'; form-action 'none'; frame-src 'none'; object-src 'none'; worker-src blob: data:">
+    <script>(() => {
+  const isRunnerModule = (script) =>
+    script.hasAttribute("data-dil-runner-module");
+  let modulePolicyDenied = false;
+  let moduleFailureReported = false;
+  document.addEventListener("securitypolicyviolation", (event) => {
+    if (
+      event.disposition === "enforce" &&
+      (event.effectiveDirective === "script-src" ||
+        event.effectiveDirective === "script-src-elem") &&
+      event.blockedURI ===
+        document.querySelector("script[data-dil-runner-module]")?.src
+    ) {
+      modulePolicyDenied = true;
+    }
+  });
+  const reportModuleError = (event) => {
+    if (
+      moduleFailureReported ||
+      !(event.target instanceof HTMLScriptElement) ||
+      !isRunnerModule(event.target)
+    )
+      return;
+    moduleFailureReported = true;
+    try {
+      const entries = performance.getEntriesByName(
+        event.target.src,
+        "resource",
+      );
+      if (entries.length === 1 && entries[0].responseStatus === 403)
+        modulePolicyDenied = true;
+    } catch {
+      // An opaque or unavailable status does not identify a policy denial.
+    }
+    try {
+      parent.postMessage(
+        {
+          __oaiDilFrame: true,
+          kind: "moduleError",
+          protocolVersion: 15,
+          ...(modulePolicyDenied ? { policyDenied: true } : {}),
+        },
+        "*",
+      );
+    } catch {}
+  };
+  if (
+    new URLSearchParams(location.hash.slice(1)).get("dil-diagnostics") !== "1"
+  ) {
+    addEventListener("error", reportModuleError, true);
+    return;
+  }
+  const documentBootId =
+    typeof crypto.randomUUID === "function"
+      ? crypto.randomUUID()
+      : `${Date.now().toString(36)}-${Math.random().toString(36).slice(2)}`;
+  let sequence = 0;
+  const now = performance.now.bind(performance);
+  const timeOriginMs = performance.timeOrigin;
+  const record = (operation, phase, details = {}) => {
+    if (sequence >= 64) return;
+    try {
+      parent.postMessage(
+        {
+          __oaiDilFrame: true,
+          kind: "diagnostic",
+          protocolVersion: 15,
+          record: {
+            realm: "bootstrap",
+            sequence: ++sequence,
+            localTimeMs: now(),
+            timeOriginMs,
+            documentBootId,
+            operation,
+            phase,
+            ...details,
+          },
+        },
+        "*",
+      );
+    } catch {}
+  };
+  const runnerModule = () =>
+    document.querySelector("script[data-dil-runner-module]");
+  const recordDocumentState = () => {
+    const script = runnerModule();
+    const details = {
+      documentReadyState: document.readyState,
+      ...(script
+        ? {
+            moduleEvaluationSupported: script.hasAttribute(
+              "data-dil-evaluation-checkpoint",
+            ),
+          }
+        : {}),
+    };
+    try {
+      const entries = performance.getEntriesByType("navigation");
+      const navigation = entries.length === 1 ? entries[0] : undefined;
+      if (navigation?.responseEnd > 0)
+        details.navigationResponseEndMs = navigation.responseEnd;
+      if (navigation?.domInteractive > 0)
+        details.navigationDomInteractiveMs = navigation.domInteractive;
+    } catch {}
+    record("module_load", "received", {
+      reason: "document_state",
+      ...details,
+    });
+  };
+  let evaluationObserved = false;
+  Object.defineProperty(window, "__oaiDilBootstrap", {
+    value: Object.freeze({
+      documentBootId,
+      moduleEvaluationStarted() {
+        if (evaluationObserved) return;
+        evaluationObserved = true;
+        record("module_load", "begin", { reason: "bundle_evaluation" });
+        recordDocumentState();
+        recordModuleResource(runnerModule());
+      },
+    }),
+  });
+  let completedModuleResource;
+  let resourceObserver;
+  const recordModuleResource = (script) => {
+    if (!script || !isRunnerModule(script)) return;
+    try {
+      const candidates = performance
+        .getEntriesByName(script.src, "resource")
+        // The preload scanner can start this document's module request before
+        // the inline bootstrap runs. The resource timeline is document-local.
+        .filter((entry) => entry.startTime <= now());
+      const timing = candidates.length === 1 ? candidates[0] : undefined;
+      const details = {
+        resourceArtifactId: /^runner-([A-Za-z0-9_-]{8,64})\.js$/.exec(
+          new URL(script.src).pathname.split("/").at(-1) ?? "",
+        )?.[1],
+        resourceStartMs: timing?.startTime,
+        resourceEndMs: timing?.responseEnd,
+        // Zero, including for a known 200 response, is not an HTTP failure.
+        ...(timing?.responseStatus >= 100 && timing.responseStatus <= 599
+          ? { httpStatus: timing.responseStatus }
+          : {
+              reason: timing
+                ? "status_unavailable"
+                : candidates.length > 1
+                  ? "timing_ambiguous"
+                  : "timing_missing",
+            }),
+      };
+      record("module_resource", "received", details);
+      if (
+        timing?.responseEnd > 0 &&
+        timing.responseEnd >= timing.startTime &&
+        !completedModuleResource
+      ) {
+        completedModuleResource = true;
+        // A later missing timing lookup must not erase positive completion.
+        record("module_resource", "returned", details);
+        resourceObserver?.disconnect();
+      }
+    } catch {
+      record("module_resource", "ignored", { reason: "timing_unavailable" });
+    }
+  };
+  record("observer_bootstrap", "returned", { hidden: document.hidden });
+  recordDocumentState();
+  document.addEventListener("readystatechange", recordDocumentState);
+  try {
+    resourceObserver = new PerformanceObserver((list) => {
+      const script = runnerModule();
+      if (
+        script &&
+        list.getEntries().some((entry) => entry.name === script.src)
+      )
+        recordModuleResource(script);
+    });
+    resourceObserver.observe({ type: "resource", buffered: true });
+  } catch {
+    // Existing load/probe lookups still work without PerformanceObserver.
+  }
+  addEventListener("pagehide", () => resourceObserver?.disconnect());
+  let probes = 0;
+  const probeTimers = new Set();
+  const cancelProbeTimers = () => {
+    for (const timer of probeTimers) clearTimeout(timer);
+    probeTimers.clear();
+  };
+  addEventListener("pagehide", cancelProbeTimers);
+  document.addEventListener("freeze", cancelProbeTimers);
+  addEventListener("message", (event) => {
+    const message = event.data;
+    if (
+      event.source === parent &&
+      message &&
+      typeof message === "object" &&
+      message.__oaiDilFrame === true &&
+      message.kind === "diagnosticProbe" &&
+      message.protocolVersion === 15 &&
+      typeof message.requestId === "string" &&
+      message.requestId.length <= 128 &&
+      probes++ < 4
+    ) {
+      record("frame_probe", "received", {
+        requestId: message.requestId,
+        hidden: document.hidden,
+      });
+      recordDocumentState();
+      // Inspect the original request even when neither script load nor error fired.
+      recordModuleResource(runnerModule());
+      const startedAtMs = now();
+      const timer = setTimeout(() => {
+        probeTimers.delete(timer);
+        record("event_loop", "fired", {
+          requestId: message.requestId,
+          budgetMs: 0,
+          elapsedMs: now() - startedAtMs,
+          hidden: document.hidden,
+        });
+      }, 0);
+      probeTimers.add(timer);
+    }
+  });
+  const isNativeError = Error.isError;
+  const getPrototypeOf = Object.getPrototypeOf;
+  const nativeErrorNames = new Map([
+    [Error.prototype, "Error"],
+    [TypeError.prototype, "TypeError"],
+    [RangeError.prototype, "RangeError"],
+    [SyntaxError.prototype, "SyntaxError"],
+    [ReferenceError.prototype, "ReferenceError"],
+    [URIError.prototype, "URIError"],
+    [EvalError.prototype, "EvalError"],
+  ]);
+  if (typeof AggregateError !== "undefined")
+    nativeErrorNames.set(AggregateError.prototype, "AggregateError");
+  let moduleExceptionRecorded = false;
+  addEventListener(
+    "error",
+    (event) => {
+      const script =
+        event.target instanceof HTMLScriptElement ? event.target : null;
+      const resource = script !== null;
+      if (
+        !moduleExceptionRecorded &&
+        event instanceof ErrorEvent &&
+        event.filename &&
+        event.filename === runnerModule()?.src
+      ) {
+        moduleExceptionRecorded = true;
+        let name = "unknown";
+        try {
+          // A native brand check avoids invoking thrown Proxy traps/getters.
+          if (isNativeError?.(event.error))
+            name = nativeErrorNames.get(getPrototypeOf(event.error)) ?? name;
+        } catch {}
+        const locations = [];
+        if (
+          Number.isSafeInteger(event.lineno) &&
+          event.lineno > 0 &&
+          event.lineno < 10_000_000 &&
+          Number.isSafeInteger(event.colno) &&
+          event.colno >= 0 &&
+          event.colno < 10_000_000
+        )
+          locations.push({ line: event.lineno, column: event.colno });
+        record("module_load", "reported_error", {
+          reason: "runner_module_exception",
+          fault: { name, locations, stackUnavailable: locations.length === 0 },
+        });
+      }
+      record(resource ? "module_load" : "error", "reported_error", {
+        reason: script
+          ? isRunnerModule(script)
+            ? "runner_module_script_error"
+            : "other_script_error"
+          : "uncaught_error",
+      });
+      if (script) recordModuleResource(script);
+      reportModuleError(event);
+    },
+    true,
+  );
+  addEventListener("unhandledrejection", () => {
+    record("error", "reported_error", { reason: "unhandled_rejection" });
+  });
+  document.addEventListener("securitypolicyviolation", (event) => {
+    const directive = event.effectiveDirective;
+    const operation =
+      directive === "script-src" || directive === "script-src-elem"
+        ? "module_load"
+        : directive === "worker-src"
+          ? "worker_create"
+          : "error";
+    const runnerModule = document.querySelector(
+      "script[data-dil-runner-module]",
+    );
+    const blocked = event.blockedURI;
+    record(operation, "reported_error", {
+      reason: "csp_violation",
+      cspDirective: [
+        "script-src",
+        "script-src-elem",
+        "script-src-attr",
+        "worker-src",
+      ].includes(directive)
+        ? directive
+        : "other",
+      cspDisposition: event.disposition,
+      // Keep URLs local. Cross-origin reports can redact the path, so a missing
+      // exact match does not prove that a different resource was blocked.
+      cspResource:
+        blocked && runnerModule?.src === blocked
+          ? "runner_module"
+          : blocked === "inline"
+            ? "inline"
+            : blocked === "eval" || blocked === "wasm-eval"
+              ? "eval"
+              : "unknown",
+    });
+  });
+  document.addEventListener(
+    "load",
+    (event) => {
+      if (
+        event.target instanceof HTMLScriptElement &&
+        isRunnerModule(event.target)
+      ) {
+        record("module_load", "returned");
+        recordModuleResource(event.target);
+      }
+    },
+    true,
+  );
+  document.addEventListener("visibilitychange", () => {
+    record("visibility", "received", { hidden: document.hidden });
+  });
+  for (const name of ["pagehide", "pageshow"]) {
+    addEventListener(name, (event) =>
+      record(name, "received", {
+        hidden: document.hidden,
+        persisted: event.persisted,
+      }),
+    );
+  }
+  for (const name of ["freeze", "resume"]) {
+    document.addEventListener(name, () =>
+      record(name, "received", { hidden: document.hidden }),
+    );
+  }
+})();
+</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DIL Runner</title>
+    <script type="module" crossorigin="" src="./runner-DiyRWJgs.js.download" data-dil-runner-module="" data-dil-evaluation-checkpoint=""></script>
+  </head>
+  <body>
+  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5972342c959d64c',t:'MTc5NDUwMzI5Ng=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5972342c959d64c',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>
+
+</body></html>

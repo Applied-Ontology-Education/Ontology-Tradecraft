@@ -1,0 +1,6 @@
+STEP8 COMMAND: C:\Users\cappa\Ontology-Tradecraft\projects\project-6\.venv-mowl\Scripts\python.exe -u C:\Users\cappa\Ontology-Tradecraft\projects\project-6\scripts\validate_manifest_abox.py --project-root C:\Users\cappa\Ontology-Tradecraft\projects\project-6 --workbook C:\Users\cappa\Ontology-Tradecraft\projects\project-6\templates\passenger_manifest_template.xlsx --strict-occurrence --timeout 300 --hard-timeout 1200
+MANIFEST VALIDATION — supervising HermiT/ROBOT execution
+MANIFEST VALIDATION — structural assertions and SHACL passed
+MANIFEST VALIDATION — parsing six local imports and building STAR locality module
+MANIFEST VALIDATION — FAIL: 'charmap' codec can't encode character '\u2192' in position 0: character maps to <undefined>
+MANIFEST VALIDATION — ROBOT: extract --method STAR 

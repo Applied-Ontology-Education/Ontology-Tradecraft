@@ -1,0 +1,2310 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://purl.obolibrary.org/obo/APOLLO_SV_00000008> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/APOLLO_SV_00000032> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> .
+
+<http://purl.obolibrary.org/obo/APOLLO_SV_00000033> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/APOLLO_SV_00000522> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> .
+
+<http://purl.obolibrary.org/obo/APOLLO_SV_00000524> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/APOLLO_SV_00000796> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/BFO_0000002> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> .
+
+<http://purl.obolibrary.org/obo/BFO_0000009> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000006> .
+
+<http://purl.obolibrary.org/obo/BFO_0000011> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> .
+
+<http://purl.obolibrary.org/obo/BFO_0000018> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000006> .
+
+<http://purl.obolibrary.org/obo/BFO_0000026> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000006> .
+
+<http://purl.obolibrary.org/obo/BFO_0000028> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000006> .
+
+<http://purl.obolibrary.org/obo/BFO_0000034> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> .
+
+<http://purl.obolibrary.org/obo/BFO_0000141> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> .
+
+<http://purl.obolibrary.org/obo/BFO_0000142> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000140> .
+
+<http://purl.obolibrary.org/obo/BFO_0000145> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
+
+<http://purl.obolibrary.org/obo/BFO_0000146> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000140> .
+
+<http://purl.obolibrary.org/obo/BFO_0000147> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000140> .
+
+<http://purl.obolibrary.org/obo/BFO_0000182> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+<http://purl.obolibrary.org/obo/BFO_0000202> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000038> .
+
+<http://purl.obolibrary.org/obo/BFO_0000203> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000148> .
+
+<http://purl.obolibrary.org/obo/IAO_0000003> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000009> .
+
+<http://purl.obolibrary.org/obo/IAO_0000005> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<http://purl.obolibrary.org/obo/IAO_0000006> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/IAO_0000007> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<http://purl.obolibrary.org/obo/IAO_0000013> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000088> .
+
+<http://purl.obolibrary.org/obo/IAO_0000015> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000017> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000028> .
+
+<http://purl.obolibrary.org/obo/IAO_0000025> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> .
+
+<http://purl.obolibrary.org/obo/IAO_0000031> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000029> .
+
+<http://purl.obolibrary.org/obo/IAO_0000034> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000001> .
+
+<http://purl.obolibrary.org/obo/IAO_0000037> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000038> .
+
+<http://purl.obolibrary.org/obo/IAO_0000055> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000001> .
+
+<http://purl.obolibrary.org/obo/IAO_0000057> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000038> .
+
+<http://purl.obolibrary.org/obo/IAO_0000065> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000064> .
+
+<http://purl.obolibrary.org/obo/IAO_0000079> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000038> .
+
+<http://purl.obolibrary.org/obo/IAO_0000096> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<http://purl.obolibrary.org/obo/IAO_0000098> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000033> .
+
+<http://purl.obolibrary.org/obo/IAO_0000129> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000028> .
+
+<http://purl.obolibrary.org/obo/IAO_0000131> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000028> .
+
+<http://purl.obolibrary.org/obo/IAO_0000132> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000028> .
+
+<http://purl.obolibrary.org/obo/IAO_0000140> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000027> .
+
+<http://purl.obolibrary.org/obo/IAO_0000144> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000179> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000038> .
+
+<http://purl.obolibrary.org/obo/IAO_0000180> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000038> .
+
+<http://purl.obolibrary.org/obo/IAO_0000181> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000038> .
+
+<http://purl.obolibrary.org/obo/IAO_0000183> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000038> .
+
+<http://purl.obolibrary.org/obo/IAO_0000184> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000038> .
+
+<http://purl.obolibrary.org/obo/IAO_0000185> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000101> .
+
+<http://purl.obolibrary.org/obo/IAO_0000186> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000301> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000302> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000590> .
+
+<http://purl.obolibrary.org/obo/IAO_0000303> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000304> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000307> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000306> .
+
+<http://purl.obolibrary.org/obo/IAO_0000309> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000308> .
+
+<http://purl.obolibrary.org/obo/IAO_0000312> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000311> .
+
+<http://purl.obolibrary.org/obo/IAO_0000313> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> .
+
+<http://purl.obolibrary.org/obo/IAO_0000316> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000319> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000320> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000321> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000322> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000323> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000324> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000325> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000326> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000327> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000306> .
+
+<http://purl.obolibrary.org/obo/IAO_0000328> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000306> .
+
+<http://purl.obolibrary.org/obo/IAO_0000329> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000305> .
+
+<http://purl.obolibrary.org/obo/IAO_0000330> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000401> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000400> .
+
+<http://purl.obolibrary.org/obo/IAO_0000402> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000400> .
+
+<http://purl.obolibrary.org/obo/IAO_0000403> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000400> .
+
+<http://purl.obolibrary.org/obo/IAO_0000408> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> .
+
+<http://purl.obolibrary.org/obo/IAO_0000414> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> .
+
+<http://purl.obolibrary.org/obo/IAO_0000415> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000416> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000032> .
+
+<http://purl.obolibrary.org/obo/IAO_0000422> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000429> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/IAO_0000442> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<http://purl.obolibrary.org/obo/IAO_0000443> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/IAO_0000444> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/IAO_0000445> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000310> .
+
+<http://purl.obolibrary.org/obo/IAO_0000572> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/IAO_0000573> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000038> .
+
+<http://purl.obolibrary.org/obo/IAO_0000574> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/IAO_0000575> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/IAO_0000577> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000028> .
+
+<http://purl.obolibrary.org/obo/IAO_0000579> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020020> .
+
+<http://purl.obolibrary.org/obo/IAO_0000580> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/IAO_0000582> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000109> .
+
+<http://purl.obolibrary.org/obo/IAO_0000584> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000100> .
+
+<http://purl.obolibrary.org/obo/IAO_0000591> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000010> .
+
+<http://purl.obolibrary.org/obo/IAO_0000592> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000010> .
+
+<http://purl.obolibrary.org/obo/IAO_0000593> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000010> .
+
+<http://purl.obolibrary.org/obo/IAO_0000594> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000010> .
+
+<http://purl.obolibrary.org/obo/IAO_0000595> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000010> .
+
+<http://purl.obolibrary.org/obo/IAO_0000605> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000606> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000607> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000608> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000609> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000610> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000611> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000612> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000613> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000614> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000615> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000616> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000617> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000618> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000619> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000620> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000621> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000622> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000623> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000624> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000625> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000626> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000627> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000628> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000629> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000630> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000632> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000633> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000634> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000635> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000636> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000637> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000638> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000639> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000640> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000641> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000642> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000643> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000300> .
+
+<http://purl.obolibrary.org/obo/IAO_0000644> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000645> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000647> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000104> .
+
+<http://purl.obolibrary.org/obo/IAO_0000648> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000646> .
+
+<http://purl.obolibrary.org/obo/IAO_0000650> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/IAO_0000651> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000701> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000702> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000318> .
+
+<http://purl.obolibrary.org/obo/IAO_0000703> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000704> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000317> .
+
+<http://purl.obolibrary.org/obo/IAO_0000705> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000314> .
+
+<http://purl.obolibrary.org/obo/IAO_0000706> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000631> .
+
+<http://purl.obolibrary.org/obo/IAO_0000707> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000315> .
+
+<http://purl.obolibrary.org/obo/IAO_0000708> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000578> .
+
+<http://purl.obolibrary.org/obo/IAO_0020001> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/IAO_0020010> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/COB_0000035> .
+
+<http://purl.obolibrary.org/obo/IAO_0020016> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020015> .
+
+<http://purl.obolibrary.org/obo/IAO_0020017> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0020000> .
+
+<http://purl.obolibrary.org/obo/OBI_0000066> a owl:Class .
+
+<http://purl.obolibrary.org/obo/OBI_0000471> a owl:Class .
+
+<http://purl.obolibrary.org/obo/OBI_0500000> a owl:Class .
+
+<http://purl.obolibrary.org/obo/PATO_0000122> a owl:Class .
+
+<http://purl.obolibrary.org/obo/PATO_0000125> a owl:Class .
+
+<http://purl.obolibrary.org/obo/UO_0000001> a owl:Class .
+
+<http://purl.obolibrary.org/obo/UO_0000002> a owl:Class .
+
+<http://purl.obolibrary.org/obo/UO_0000003> a owl:Class .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Air_and_Space_Vehicle_Evaluation> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Aircraft_Constructing> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#act_of_aircraft_processing> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Aircraft_Designing> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#act_of_aircraft_processing> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Aircraft_Testing> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#act_of_aircraft_processing> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Equipment_Adjustment> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Equipment_Installation> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Equipment_Maintenance> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Equipment_Operation> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Measuring> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Recommending_Testing_Improvements> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Test_Data_Interpretation> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Act_of_Test_Data_Recording> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Adaptability_Evaluation> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Adaptability_Evaluation_Report> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Equipment> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#OEWS_occupation_estimate_entry> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#SOC_Occupation_Entry> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Technologist_and_Technician_Role> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#Aerospace_Engineering_and_Operations> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Test_Data_Record> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Testing_Improvement_Recommendation> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#aerospace_engineer_role> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#aerospance_engineer_broad_role> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#aircraft_manufacturer> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#organization> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#approach_process> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#approach_speed_specification> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#artifact_design> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#average_maximum_approach_speed_measurement> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#employment_count_measurement_datum> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#measurement_datum> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#employment_population_size_quality> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#engine> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#fixed_wing> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/iao/iao-edit.owl#aircraft> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#geographic_area> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000029> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#jet_engine> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#measurement_unit> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation_role> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupational_population> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#person> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#test_process> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+<https://example.org/ontologies/intel-ontology#hotel_reservation> a owl:Class ;
+    rdfs:subClassOf <https://example.org/ontologies/intel-ontology#reservation> .
+
+<https://example.org/ontologies/intel-ontology#passenger_train> a owl:Class ;
+    rdfs:subClassOf <https://example.org/ontologies/intel-ontology#train> .
+
+<https://example.org/ontologies/intel-ontology#rail_journey> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+<https://example.org/ontologies/intel-ontology#rail_journey_plan> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://example.org/ontologies/intel-ontology#rail_passenger_role> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://example.org/ontologies/intel-ontology#rail_reservation_information> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/reservation> .
+
+<https://example.org/ontologies/intel-ontology#rail_ticket> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/ticket> .
+
+<https://example.org/ontologies/intel-ontology#railway_station> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/AgentOntology#driver's_license> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/license> .
+
+<https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_posting> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting> .
+
+<https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+<https://www.commoncoreontologies.org/AgentOntology/Commcercial_airplane> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/Airplane> .
+
+<https://www.commoncoreontologies.org/AgentOntology/Facebook_Post> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/Facebook> .
+
+<https://www.commoncoreontologies.org/AgentOntology/Flight_plan> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> .
+
+<https://www.commoncoreontologies.org/AgentOntology/Jetblue_passenger> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/passenger> .
+
+<https://www.commoncoreontologies.org/AgentOntology/Person_Of_Interest> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/AgentOntology/Post> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000178> .
+
+<https://www.commoncoreontologies.org/AgentOntology/Social_Media> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002001> .
+
+<https://www.commoncoreontologies.org/AgentOntology/airline_reservation> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/reservation> .
+
+<https://www.commoncoreontologies.org/AgentOntology/arrival_airport> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/airport> .
+
+<https://www.commoncoreontologies.org/AgentOntology/boarding_pass> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/pass> .
+
+<https://www.commoncoreontologies.org/AgentOntology/concert_attendee> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/reservation> .
+
+<https://www.commoncoreontologies.org/AgentOntology/concert_ticket> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/ticket> .
+
+<https://www.commoncoreontologies.org/AgentOntology/departure_airport> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/airport> .
+
+<https://www.commoncoreontologies.org/AgentOntology/driver_license> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/personal_identification> .
+
+<https://www.commoncoreontologies.org/AgentOntology/event_venue> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000544> .
+
+<https://www.commoncoreontologies.org/AgentOntology/facebook_user> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/social_media_user> .
+
+<https://www.commoncoreontologies.org/AgentOntology/guest> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/AgentOntology/hotel> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/building> .
+
+<https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_information> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/reservation> .
+
+<https://www.commoncoreontologies.org/AgentOntology/person> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
+
+<https://www.commoncoreontologies.org/AgentOntology/terrorist_organization> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/organization> .
+
+<https://www.commoncoreontologies.org/ont00000006> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000530> .
+
+<https://www.commoncoreontologies.org/ont00000010> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001180> .
+
+<https://www.commoncoreontologies.org/ont00000011> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000135> .
+
+<https://www.commoncoreontologies.org/ont00000013> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000554> .
+
+<https://www.commoncoreontologies.org/ont00000016> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001286> .
+
+<https://www.commoncoreontologies.org/ont00000024> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000133> .
+
+<https://www.commoncoreontologies.org/ont00000026> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
+
+<https://www.commoncoreontologies.org/ont00000027> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000517> .
+
+<https://www.commoncoreontologies.org/ont00000029> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000745> .
+
+<https://www.commoncoreontologies.org/ont00000033> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000854> .
+
+<https://www.commoncoreontologies.org/ont00000035> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000490> .
+
+<https://www.commoncoreontologies.org/ont00000044> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
+
+<https://www.commoncoreontologies.org/ont00000046> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000126> .
+
+<https://www.commoncoreontologies.org/ont00000051> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000908> .
+
+<https://www.commoncoreontologies.org/ont00000058> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000084> .
+
+<https://www.commoncoreontologies.org/ont00000067> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001328> .
+
+<https://www.commoncoreontologies.org/ont00000071> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000460> .
+
+<https://www.commoncoreontologies.org/ont00000078> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000345> .
+
+<https://www.commoncoreontologies.org/ont00000079> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001327> .
+
+<https://www.commoncoreontologies.org/ont00000080> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000827> .
+
+<https://www.commoncoreontologies.org/ont00000083> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000035> .
+
+<https://www.commoncoreontologies.org/ont00000087> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000894> .
+
+<https://www.commoncoreontologies.org/ont00000102> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
+
+<https://www.commoncoreontologies.org/ont00000106> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001213> .
+
+<https://www.commoncoreontologies.org/ont00000107> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001048> .
+
+<https://www.commoncoreontologies.org/ont00000109> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> .
+
+<https://www.commoncoreontologies.org/ont00000115> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000246> .
+
+<https://www.commoncoreontologies.org/ont00000120> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+<https://www.commoncoreontologies.org/ont00000121> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000588> .
+
+<https://www.commoncoreontologies.org/ont00000127> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> .
+
+<https://www.commoncoreontologies.org/ont00000129> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000084> .
+
+<https://www.commoncoreontologies.org/ont00000131> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001214> .
+
+<https://www.commoncoreontologies.org/ont00000134> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001152> .
+
+<https://www.commoncoreontologies.org/ont00000137> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000836> .
+
+<https://www.commoncoreontologies.org/ont00000138> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000503> .
+
+<https://www.commoncoreontologies.org/ont00000139> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001152> .
+
+<https://www.commoncoreontologies.org/ont00000141> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000914> .
+
+<https://www.commoncoreontologies.org/ont00000142> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> .
+
+<https://www.commoncoreontologies.org/ont00000144> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000433> .
+
+<https://www.commoncoreontologies.org/ont00000146> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001175> .
+
+<https://www.commoncoreontologies.org/ont00000148> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000368> .
+
+<https://www.commoncoreontologies.org/ont00000149> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002076> .
+
+<https://www.commoncoreontologies.org/ont00000151> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000379> .
+
+<https://www.commoncoreontologies.org/ont00000154> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000745> .
+
+<https://www.commoncoreontologies.org/ont00000155> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001337> .
+
+<https://www.commoncoreontologies.org/ont00000157> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000084> .
+
+<https://www.commoncoreontologies.org/ont00000164> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001010> .
+
+<https://www.commoncoreontologies.org/ont00000165> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> .
+
+<https://www.commoncoreontologies.org/ont00000166> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000099> .
+
+<https://www.commoncoreontologies.org/ont00000168> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000433> .
+
+<https://www.commoncoreontologies.org/ont00000173> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000175> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000176> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001180> .
+
+<https://www.commoncoreontologies.org/ont00000177> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> .
+
+<https://www.commoncoreontologies.org/ont00000179> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000570> .
+
+<https://www.commoncoreontologies.org/ont00000181> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000089> .
+
+<https://www.commoncoreontologies.org/ont00000182> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000123> .
+
+<https://www.commoncoreontologies.org/ont00000186> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001010> .
+
+<https://www.commoncoreontologies.org/ont00000187> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000191> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001147> .
+
+<https://www.commoncoreontologies.org/ont00000197> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000035> .
+
+<https://www.commoncoreontologies.org/ont00000200> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000890> .
+
+<https://www.commoncoreontologies.org/ont00000201> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000065> .
+
+<https://www.commoncoreontologies.org/ont00000202> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001075> .
+
+<https://www.commoncoreontologies.org/ont00000203> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000293> .
+
+<https://www.commoncoreontologies.org/ont00000208> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000123> .
+
+<https://www.commoncoreontologies.org/ont00000209> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000313> .
+
+<https://www.commoncoreontologies.org/ont00000222> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000530> .
+
+<https://www.commoncoreontologies.org/ont00000223> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000235> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000687> .
+
+<https://www.commoncoreontologies.org/ont00000237> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000687> .
+
+<https://www.commoncoreontologies.org/ont00000240> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001162> .
+
+<https://www.commoncoreontologies.org/ont00000253> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
+
+<https://www.commoncoreontologies.org/ont00000260> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000675> .
+
+<https://www.commoncoreontologies.org/ont00000261> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000754> .
+
+<https://www.commoncoreontologies.org/ont00000263> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001328> .
+
+<https://www.commoncoreontologies.org/ont00000265> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001327> .
+
+<https://www.commoncoreontologies.org/ont00000272> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000007> .
+
+<https://www.commoncoreontologies.org/ont00000276> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000891> .
+
+<https://www.commoncoreontologies.org/ont00000279> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000392> .
+
+<https://www.commoncoreontologies.org/ont00000286> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000100> .
+
+<https://www.commoncoreontologies.org/ont00000291> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000566> .
+
+<https://www.commoncoreontologies.org/ont00000296> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000763> .
+
+<https://www.commoncoreontologies.org/ont00000305> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000380> .
+
+<https://www.commoncoreontologies.org/ont00000308> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001226> .
+
+<https://www.commoncoreontologies.org/ont00000312> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000007> .
+
+<https://www.commoncoreontologies.org/ont00000314> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
+
+<https://www.commoncoreontologies.org/ont00000318> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000016> .
+
+<https://www.commoncoreontologies.org/ont00000320> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001251> .
+
+<https://www.commoncoreontologies.org/ont00000322> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000836> .
+
+<https://www.commoncoreontologies.org/ont00000351> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000133> .
+
+<https://www.commoncoreontologies.org/ont00000354> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000379> .
+
+<https://www.commoncoreontologies.org/ont00000356> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002077> .
+
+<https://www.commoncoreontologies.org/ont00000360> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001289> .
+
+<https://www.commoncoreontologies.org/ont00000361> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001356> .
+
+<https://www.commoncoreontologies.org/ont00000367> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001075> .
+
+<https://www.commoncoreontologies.org/ont00000369> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001010> .
+
+<https://www.commoncoreontologies.org/ont00000370> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000123> .
+
+<https://www.commoncoreontologies.org/ont00000371> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> .
+
+<https://www.commoncoreontologies.org/ont00000377> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
+
+<https://www.commoncoreontologies.org/ont00000383> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000837> .
+
+<https://www.commoncoreontologies.org/ont00000384> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000789> .
+
+<https://www.commoncoreontologies.org/ont00000386> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002076> .
+
+<https://www.commoncoreontologies.org/ont00000389> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001334> .
+
+<https://www.commoncoreontologies.org/ont00000390> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+<https://www.commoncoreontologies.org/ont00000391> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000754> .
+
+<https://www.commoncoreontologies.org/ont00000396> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000150> .
+
+<https://www.commoncoreontologies.org/ont00000399> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> .
+
+<https://www.commoncoreontologies.org/ont00000401> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000008> .
+
+<https://www.commoncoreontologies.org/ont00000404> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000084> .
+
+<https://www.commoncoreontologies.org/ont00000405> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001152> .
+
+<https://www.commoncoreontologies.org/ont00000408> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001180> .
+
+<https://www.commoncoreontologies.org/ont00000414> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001286> .
+
+<https://www.commoncoreontologies.org/ont00000416> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002077> .
+
+<https://www.commoncoreontologies.org/ont00000418> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000005> .
+
+<https://www.commoncoreontologies.org/ont00000419> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000077> .
+
+<https://www.commoncoreontologies.org/ont00000430> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000850> .
+
+<https://www.commoncoreontologies.org/ont00000438> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001374> .
+
+<https://www.commoncoreontologies.org/ont00000443> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001180> .
+
+<https://www.commoncoreontologies.org/ont00000449> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001334> .
+
+<https://www.commoncoreontologies.org/ont00000462> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000609> .
+
+<https://www.commoncoreontologies.org/ont00000463> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001075> .
+
+<https://www.commoncoreontologies.org/ont00000469> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000275> .
+
+<https://www.commoncoreontologies.org/ont00000473> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001152> .
+
+<https://www.commoncoreontologies.org/ont00000476> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> .
+
+<https://www.commoncoreontologies.org/ont00000485> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000486> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000392> .
+
+<https://www.commoncoreontologies.org/ont00000492> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002076> .
+
+<https://www.commoncoreontologies.org/ont00000496> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001175> .
+
+<https://www.commoncoreontologies.org/ont00000498> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000500> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000084> .
+
+<https://www.commoncoreontologies.org/ont00000501> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000836> .
+
+<https://www.commoncoreontologies.org/ont00000506> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000507> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000914> .
+
+<https://www.commoncoreontologies.org/ont00000508> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000610> .
+
+<https://www.commoncoreontologies.org/ont00000509> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001180> .
+
+<https://www.commoncoreontologies.org/ont00000511> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> .
+
+<https://www.commoncoreontologies.org/ont00000513> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000566> .
+
+<https://www.commoncoreontologies.org/ont00000514> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000752> .
+
+<https://www.commoncoreontologies.org/ont00000515> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000566> .
+
+<https://www.commoncoreontologies.org/ont00000519> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000732> .
+
+<https://www.commoncoreontologies.org/ont00000520> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000065> .
+
+<https://www.commoncoreontologies.org/ont00000521> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001272> .
+
+<https://www.commoncoreontologies.org/ont00000523> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000862> .
+
+<https://www.commoncoreontologies.org/ont00000532> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001335> .
+
+<https://www.commoncoreontologies.org/ont00000535> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000290> .
+
+<https://www.commoncoreontologies.org/ont00000539> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001022> .
+
+<https://www.commoncoreontologies.org/ont00000542> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000876> .
+
+<https://www.commoncoreontologies.org/ont00000546> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000005> .
+
+<https://www.commoncoreontologies.org/ont00000553> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001324> .
+
+<https://www.commoncoreontologies.org/ont00000555> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000135> .
+
+<https://www.commoncoreontologies.org/ont00000558> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000099> .
+
+<https://www.commoncoreontologies.org/ont00000564> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001180> .
+
+<https://www.commoncoreontologies.org/ont00000567> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000487> .
+
+<https://www.commoncoreontologies.org/ont00000568> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001379> .
+
+<https://www.commoncoreontologies.org/ont00000572> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000765> .
+
+<https://www.commoncoreontologies.org/ont00000573> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000687> .
+
+<https://www.commoncoreontologies.org/ont00000576> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000084> .
+
+<https://www.commoncoreontologies.org/ont00000580> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001286> .
+
+<https://www.commoncoreontologies.org/ont00000584> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000357> .
+
+<https://www.commoncoreontologies.org/ont00000585> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001286> .
+
+<https://www.commoncoreontologies.org/ont00000587> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000392> .
+
+<https://www.commoncoreontologies.org/ont00000589> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000973> .
+
+<https://www.commoncoreontologies.org/ont00000592> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+<https://www.commoncoreontologies.org/ont00000594> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000007> .
+
+<https://www.commoncoreontologies.org/ont00000595> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000065> .
+
+<https://www.commoncoreontologies.org/ont00000599> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000604> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001010> .
+
+<https://www.commoncoreontologies.org/ont00000612> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000566> .
+
+<https://www.commoncoreontologies.org/ont00000613> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000250> .
+
+<https://www.commoncoreontologies.org/ont00000615> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000433> .
+
+<https://www.commoncoreontologies.org/ont00000616> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+<https://www.commoncoreontologies.org/ont00000621> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001286> .
+
+<https://www.commoncoreontologies.org/ont00000622> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001132> .
+
+<https://www.commoncoreontologies.org/ont00000626> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000853> .
+
+<https://www.commoncoreontologies.org/ont00000630> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000124> .
+
+<https://www.commoncoreontologies.org/ont00000631> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000662> .
+
+<https://www.commoncoreontologies.org/ont00000636> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000345> .
+
+<https://www.commoncoreontologies.org/ont00000643> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000150> .
+
+<https://www.commoncoreontologies.org/ont00000644> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000004> .
+
+<https://www.commoncoreontologies.org/ont00000653> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> .
+
+<https://www.commoncoreontologies.org/ont00000654> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001147> .
+
+<https://www.commoncoreontologies.org/ont00000669> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001022> .
+
+<https://www.commoncoreontologies.org/ont00000672> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000150> .
+
+<https://www.commoncoreontologies.org/ont00000683> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000605> .
+
+<https://www.commoncoreontologies.org/ont00000684> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000821> .
+
+<https://www.commoncoreontologies.org/ont00000685> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000207> .
+
+<https://www.commoncoreontologies.org/ont00000692> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+<https://www.commoncoreontologies.org/ont00000718> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000460> .
+
+<https://www.commoncoreontologies.org/ont00000725> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000455> .
+
+<https://www.commoncoreontologies.org/ont00000729> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000275> .
+
+<https://www.commoncoreontologies.org/ont00000731> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+<https://www.commoncoreontologies.org/ont00000735> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000406> .
+
+<https://www.commoncoreontologies.org/ont00000739> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000676> .
+
+<https://www.commoncoreontologies.org/ont00000741> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> .
+
+<https://www.commoncoreontologies.org/ont00000744> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000433> .
+
+<https://www.commoncoreontologies.org/ont00000749> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000894> .
+
+<https://www.commoncoreontologies.org/ont00000750> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002076> .
+
+<https://www.commoncoreontologies.org/ont00000751> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001324> .
+
+<https://www.commoncoreontologies.org/ont00000753> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000150> .
+
+<https://www.commoncoreontologies.org/ont00000760> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000752> .
+
+<https://www.commoncoreontologies.org/ont00000769> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000133> .
+
+<https://www.commoncoreontologies.org/ont00000772> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> .
+
+<https://www.commoncoreontologies.org/ont00000773> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000789> .
+
+<https://www.commoncoreontologies.org/ont00000780> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000019> .
+
+<https://www.commoncoreontologies.org/ont00000783> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000557> .
+
+<https://www.commoncoreontologies.org/ont00000786> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000611> .
+
+<https://www.commoncoreontologies.org/ont00000812> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000951> .
+
+<https://www.commoncoreontologies.org/ont00000820> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000246> .
+
+<https://www.commoncoreontologies.org/ont00000822> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000150> .
+
+<https://www.commoncoreontologies.org/ont00000824> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000246> .
+
+<https://www.commoncoreontologies.org/ont00000830> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> .
+
+<https://www.commoncoreontologies.org/ont00000833> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000973> .
+
+<https://www.commoncoreontologies.org/ont00000834> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001337> .
+
+<https://www.commoncoreontologies.org/ont00000839> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000836> .
+
+<https://www.commoncoreontologies.org/ont00000842> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000530> .
+
+<https://www.commoncoreontologies.org/ont00000845> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001022> .
+
+<https://www.commoncoreontologies.org/ont00000855> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000660> .
+
+<https://www.commoncoreontologies.org/ont00000859> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002076> .
+
+<https://www.commoncoreontologies.org/ont00000863> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000379> .
+
+<https://www.commoncoreontologies.org/ont00000866> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002076> .
+
+<https://www.commoncoreontologies.org/ont00000875> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000402> .
+
+<https://www.commoncoreontologies.org/ont00000879> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000433> .
+
+<https://www.commoncoreontologies.org/ont00000883> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001162> .
+
+<https://www.commoncoreontologies.org/ont00000884> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000836> .
+
+<https://www.commoncoreontologies.org/ont00000887> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000460> .
+
+<https://www.commoncoreontologies.org/ont00000889> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000037> .
+
+<https://www.commoncoreontologies.org/ont00000895> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000335> .
+
+<https://www.commoncoreontologies.org/ont00000896> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000745> .
+
+<https://www.commoncoreontologies.org/ont00000898> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000902> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000566> .
+
+<https://www.commoncoreontologies.org/ont00000910> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> .
+
+<https://www.commoncoreontologies.org/ont00000915> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000605> .
+
+<https://www.commoncoreontologies.org/ont00000916> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000891> .
+
+<https://www.commoncoreontologies.org/ont00000917> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000920> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000007> .
+
+<https://www.commoncoreontologies.org/ont00000922> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000065> .
+
+<https://www.commoncoreontologies.org/ont00000923> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000649> .
+
+<https://www.commoncoreontologies.org/ont00000924> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001191> .
+
+<https://www.commoncoreontologies.org/ont00000925> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000687> .
+
+<https://www.commoncoreontologies.org/ont00000926> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000123> .
+
+<https://www.commoncoreontologies.org/ont00000927> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000530> .
+
+<https://www.commoncoreontologies.org/ont00000934> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000126> .
+
+<https://www.commoncoreontologies.org/ont00000935> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000566> .
+
+<https://www.commoncoreontologies.org/ont00000936> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001213> .
+
+<https://www.commoncoreontologies.org/ont00000948> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000455> .
+
+<https://www.commoncoreontologies.org/ont00000949> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> .
+
+<https://www.commoncoreontologies.org/ont00000950> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000970> .
+
+<https://www.commoncoreontologies.org/ont00000953> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000862> .
+
+<https://www.commoncoreontologies.org/ont00000955> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000278> .
+
+<https://www.commoncoreontologies.org/ont00000960> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001190> .
+
+<https://www.commoncoreontologies.org/ont00000964> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000150> .
+
+<https://www.commoncoreontologies.org/ont00000974> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000965> .
+
+<https://www.commoncoreontologies.org/ont00000976> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000696> .
+
+<https://www.commoncoreontologies.org/ont00000977> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002077> .
+
+<https://www.commoncoreontologies.org/ont00000978> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> .
+
+<https://www.commoncoreontologies.org/ont00000981> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000566> .
+
+<https://www.commoncoreontologies.org/ont00000982> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000543> .
+
+<https://www.commoncoreontologies.org/ont00000983> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001028> .
+
+<https://www.commoncoreontologies.org/ont00000984> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000986> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000084> .
+
+<https://www.commoncoreontologies.org/ont00000987> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00000989> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000732> .
+
+<https://www.commoncoreontologies.org/ont00000990> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000003> .
+
+<https://www.commoncoreontologies.org/ont00000999> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001213> .
+
+<https://www.commoncoreontologies.org/ont00001006> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> .
+
+<https://www.commoncoreontologies.org/ont00001017> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00001021> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000379> .
+
+<https://www.commoncoreontologies.org/ont00001031> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001162> .
+
+<https://www.commoncoreontologies.org/ont00001032> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001374> .
+
+<https://www.commoncoreontologies.org/ont00001039> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000836> .
+
+<https://www.commoncoreontologies.org/ont00001041> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001010> .
+
+<https://www.commoncoreontologies.org/ont00001047> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> .
+
+<https://www.commoncoreontologies.org/ont00001053> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000065> .
+
+<https://www.commoncoreontologies.org/ont00001056> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000754> .
+
+<https://www.commoncoreontologies.org/ont00001057> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002078> .
+
+<https://www.commoncoreontologies.org/ont00001062> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000300> .
+
+<https://www.commoncoreontologies.org/ont00001068> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000395> .
+
+<https://www.commoncoreontologies.org/ont00001069> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> .
+
+<https://www.commoncoreontologies.org/ont00001072> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000169> .
+
+<https://www.commoncoreontologies.org/ont00001073> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000608> .
+
+<https://www.commoncoreontologies.org/ont00001074> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000687> .
+
+<https://www.commoncoreontologies.org/ont00001080> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001337> .
+
+<https://www.commoncoreontologies.org/ont00001094> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001251> .
+
+<https://www.commoncoreontologies.org/ont00001108> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000732> .
+
+<https://www.commoncoreontologies.org/ont00001109> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000368> .
+
+<https://www.commoncoreontologies.org/ont00001111> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000530> .
+
+<https://www.commoncoreontologies.org/ont00001112> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000712> .
+
+<https://www.commoncoreontologies.org/ont00001114> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000472> .
+
+<https://www.commoncoreontologies.org/ont00001115> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001190> .
+
+<https://www.commoncoreontologies.org/ont00001120> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001075> .
+
+<https://www.commoncoreontologies.org/ont00001122> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000007> .
+
+<https://www.commoncoreontologies.org/ont00001125> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000084> .
+
+<https://www.commoncoreontologies.org/ont00001127> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000865> .
+
+<https://www.commoncoreontologies.org/ont00001128> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000676> .
+
+<https://www.commoncoreontologies.org/ont00001136> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000008> .
+
+<https://www.commoncoreontologies.org/ont00001143> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002076> .
+
+<https://www.commoncoreontologies.org/ont00001144> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> .
+
+<https://www.commoncoreontologies.org/ont00001146> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001328> .
+
+<https://www.commoncoreontologies.org/ont00001149> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001101> .
+
+<https://www.commoncoreontologies.org/ont00001158> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000366> .
+
+<https://www.commoncoreontologies.org/ont00001164> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001152> .
+
+<https://www.commoncoreontologies.org/ont00001167> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000530> .
+
+<https://www.commoncoreontologies.org/ont00001170> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000490> .
+
+<https://www.commoncoreontologies.org/ont00001171> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001190> .
+
+<https://www.commoncoreontologies.org/ont00001183> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000300> .
+
+<https://www.commoncoreontologies.org/ont00001184> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000368> .
+
+<https://www.commoncoreontologies.org/ont00001194> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000642> .
+
+<https://www.commoncoreontologies.org/ont00001196> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000908> .
+
+<https://www.commoncoreontologies.org/ont00001205> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000398> .
+
+<https://www.commoncoreontologies.org/ont00001208> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000150> .
+
+<https://www.commoncoreontologies.org/ont00001212> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001033> .
+
+<https://www.commoncoreontologies.org/ont00001215> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000455> .
+
+<https://www.commoncoreontologies.org/ont00001219> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000144> .
+
+<https://www.commoncoreontologies.org/ont00001224> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001324> .
+
+<https://www.commoncoreontologies.org/ont00001227> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000752> .
+
+<https://www.commoncoreontologies.org/ont00001231> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000530> .
+
+<https://www.commoncoreontologies.org/ont00001235> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000829> .
+
+<https://www.commoncoreontologies.org/ont00001236> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001147> .
+
+<https://www.commoncoreontologies.org/ont00001237> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000007> .
+
+<https://www.commoncoreontologies.org/ont00001238> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000605> .
+
+<https://www.commoncoreontologies.org/ont00001239> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000300> .
+
+<https://www.commoncoreontologies.org/ont00001244> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002078> .
+
+<https://www.commoncoreontologies.org/ont00001246> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000847> .
+
+<https://www.commoncoreontologies.org/ont00001256> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+<https://www.commoncoreontologies.org/ont00001261> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000379> .
+
+<https://www.commoncoreontologies.org/ont00001263> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002078> .
+
+<https://www.commoncoreontologies.org/ont00001266> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001075> .
+
+<https://www.commoncoreontologies.org/ont00001267> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000971> .
+
+<https://www.commoncoreontologies.org/ont00001269> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000133> .
+
+<https://www.commoncoreontologies.org/ont00001274> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000008> .
+
+<https://www.commoncoreontologies.org/ont00001276> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000426> .
+
+<https://www.commoncoreontologies.org/ont00001279> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001133> .
+
+<https://www.commoncoreontologies.org/ont00001284> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000914> .
+
+<https://www.commoncoreontologies.org/ont00001285> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000368> .
+
+<https://www.commoncoreontologies.org/ont00001302> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001180> .
+
+<https://www.commoncoreontologies.org/ont00001305> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001066> .
+
+<https://www.commoncoreontologies.org/ont00001309> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000077> .
+
+<https://www.commoncoreontologies.org/ont00001312> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000274> .
+
+<https://www.commoncoreontologies.org/ont00001314> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> .
+
+<https://www.commoncoreontologies.org/ont00001322> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000726> .
+
+<https://www.commoncoreontologies.org/ont00001325> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001334> .
+
+<https://www.commoncoreontologies.org/ont00001330> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000110> .
+
+<https://www.commoncoreontologies.org/ont00001331> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001014> .
+
+<https://www.commoncoreontologies.org/ont00001332> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000610> .
+
+<https://www.commoncoreontologies.org/ont00001336> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001232> .
+
+<https://www.commoncoreontologies.org/ont00001338> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000862> .
+
+<https://www.commoncoreontologies.org/ont00001339> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000890> .
+
+<https://www.commoncoreontologies.org/ont00001340> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000529> .
+
+<https://www.commoncoreontologies.org/ont00001347> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000005> .
+
+<https://www.commoncoreontologies.org/ont00001351> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000275> .
+
+<https://www.commoncoreontologies.org/ont00001352> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000829> .
+
+<https://www.commoncoreontologies.org/ont00001359> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000908> .
+
+<https://www.commoncoreontologies.org/ont00001363> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001033> .
+
+<https://www.commoncoreontologies.org/ont00001364> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001163> .
+
+<https://www.commoncoreontologies.org/ont00001376> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000570> .
+
+<https://www.commoncoreontologies.org/ont00002003> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002002> .
+
+<https://www.commoncoreontologies.org/ont00002005> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002004> .
+
+<https://www.commoncoreontologies.org/ont00002006> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002001> .
+
+<https://www.commoncoreontologies.org/ont00002008> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002007> .
+
+<https://www.commoncoreontologies.org/ont00002009> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002001> .
+
+<https://www.commoncoreontologies.org/ont00002011> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002010> .
+
+<https://www.commoncoreontologies.org/ont00002012> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002010> .
+
+<https://www.commoncoreontologies.org/ont00002013> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002010> .
+
+<https://www.commoncoreontologies.org/ont00002014> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002001> .
+
+<https://www.commoncoreontologies.org/ont00002037> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002001> .
+
+<https://www.commoncoreontologies.org/ont00002038> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002001> .
+
+<https://www.commoncoreontologies.org/ont00002040> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002039> .
+
+<https://www.commoncoreontologies.org/ont00002041> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002039> .
+
+<https://www.commoncoreontologies.org/ont00002042> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002039> .
+
+<https://www.commoncoreontologies.org/ont00002043> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002039> .
+
+<https://www.commoncoreontologies.org/ont00002044> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002039> .
+
+<https://www.commoncoreontologies.org/ont00002045> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002039> .
+
+<https://www.commoncoreontologies.org/ont00002070> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000003> .
+
+<https://www.commoncoreontologies.org/ont00002071> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000433> .
+
+<https://www.commoncoreontologies.org/ont00002082> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> .
+
+<https://www.commoncoreontologies.org/ont00002083> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000123> .
+
+<http://purl.obolibrary.org/obo/BFO_0000001> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000003> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000004> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000008> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000017> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000020> .
+
+<http://purl.obolibrary.org/obo/BFO_0000020> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000024> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000027> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000029> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000031> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000038> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000148> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000008> .
+
+<http://purl.obolibrary.org/obo/IAO_0000009> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000027> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000029> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000064> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000088> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000100> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0001000> .
+
+<http://purl.obolibrary.org/obo/IAO_0000101> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000178> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000305> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000308> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000311> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000315> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000317> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000318> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000578> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000590> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000631> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000646> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0001000> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0020000> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0020015> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0020020> a owl:Class .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#Aerospace_Engineering_and_Operations> a owl:Class .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#aerospance_engineer_broad_role> a owl:Class .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#aircraft> a owl:Class .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#measurement_datum> a owl:Class .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#organization> a owl:Class .
+
+<https://example.org/ontologies/intel-ontology#reservation> a owl:Class .
+
+<https://example.org/ontologies/intel-ontology#train> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/Airplane> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/Facebook> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/building> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/license> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/organization> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/pass> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/passenger> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/personal_identification> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/social_media_user> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000004> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000037> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000073> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000089> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000100> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000110> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000124> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000169> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000207> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000234> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000250> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000274> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000278> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000290> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000293> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000313> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000335> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000357> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000366> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000380> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000395> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000398> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000402> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000406> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000426> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000472> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000487> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000503> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000517> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000529> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000073> .
+
+<https://www.commoncoreontologies.org/ont00000540> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000543> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000544> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000554> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000557> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000588> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000608> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000609> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000611> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000642> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000649> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000660> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000662> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001341> .
+
+<https://www.commoncoreontologies.org/ont00000675> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000696> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000712> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000726> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000763> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000765> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000819> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000821> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000827> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000540> .
+
+<https://www.commoncoreontologies.org/ont00000837> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000847> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000850> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000854> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000865> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000876> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000951> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000970> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000971> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001014> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001028> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001048> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001066> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001101> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001176> .
+
+<https://www.commoncoreontologies.org/ont00001132> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001133> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001176> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001191> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001203> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001214> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001226> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001232> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001272> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001289> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001335> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001341> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001356> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001379> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00002002> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00002004> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00002007> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000016> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000035> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000001> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000104> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000109> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/airport> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/ticket> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000003> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000077> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000099> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000126> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000135> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000819> .
+
+<https://www.commoncoreontologies.org/ont00000345> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000490> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000570> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000610> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000676> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000686> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000789> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000829> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000853> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000890> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000891> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000894> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000958> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000973> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001033> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001175> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001251> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001327> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001374> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000140> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000032> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000306> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000310> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000400> a owl:Class .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#act_of_aircraft_processing> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000005> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000008> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000246> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000275> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000300> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000392> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000455> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000460> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000605> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000732> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000745> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000752> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000754> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000862> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000908> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000914> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001022> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001147> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001162> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001190> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001213> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001324> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001328> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001334> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001337> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00002010> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00002077> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00002078> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000006> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000030> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000033> a owl:Class .
+
+<https://www.commoncoreontologies.org/AgentOntology/reservation> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000133> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000368> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000965> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000040> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000144> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000010> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000028> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000065> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000123> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000379> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000687> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000234> .
+
+<https://www.commoncoreontologies.org/ont00001010> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001075> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001152> a owl:Class ;
+    rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001203> .
+
+<https://www.commoncoreontologies.org/ont00001163> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001286> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000007> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000433> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000836> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00002001> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00002039> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000015> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000150> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000530> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000566> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00001180> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00002076> a owl:Class .
+
+<http://purl.obolibrary.org/obo/BFO_0000019> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000084> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> .
+
+<http://purl.obolibrary.org/obo/IAO_0000038> a owl:Class .
+
+<http://purl.obolibrary.org/obo/iao/iao-edit.owl#occupation> a owl:Class .
+
+<https://www.commoncoreontologies.org/ont00000228> a owl:Class .
+
+<http://purl.obolibrary.org/obo/COB_0000035> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000030> a owl:Class ;
+    rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> .
+
+<http://purl.obolibrary.org/obo/BFO_0000023> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000300> a owl:Class .
+
+<http://purl.obolibrary.org/obo/IAO_0000314> a owl:Class .
+

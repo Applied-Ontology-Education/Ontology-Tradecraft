@@ -1,0 +1,121 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+owl:Class rdfs:subClassOf rdfs:Class .
+
+owl:DatatypeProperty rdfs:subClassOf rdf:Property .
+
+<https://example.org/ontologies/project6/manifest-validation#material-flight-plan-document> a sh:NodeShape ;
+    sh:property [ a sh:PropertyShape ;
+            sh:class <https://www.commoncoreontologies.org/AgentOntology/Flight_plan> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <http://purl.obolibrary.org/obo/BFO_0000101> ] ;
+    sh:targetNode <https://example.org/ontologies/intel-ontology/manifest#physical_flight_plan_document_4d1ba9d87eb37afe27ac4732> .
+
+<https://example.org/ontologies/project6/manifest-validation#node-shape-0> a sh:NodeShape ;
+    sh:class <https://www.commoncoreontologies.org/AgentOntology/Flight_plan> ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:dateTime ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://example.org/ontologies/intel-ontology#has_planned_air_departure_time> ],
+        [ a sh:PropertyShape ;
+            sh:class <https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <http://purl.obolibrary.org/obo/IAO_0000136> ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://example.org/ontologies/intel-ontology#has_flight_service_code> ] ;
+    sh:targetNode <https://example.org/ontologies/intel-ontology/manifest#flight_plan_8302802d6754b75ac50f1f98> .
+
+<https://example.org/ontologies/project6/manifest-validation#node-shape-1> a sh:NodeShape ;
+    sh:class <https://example.org/ontologies/intel-ontology#passenger_train> ;
+    sh:property [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://example.org/ontologies/intel-ontology#has_train_arrival_station_name> ],
+        [ a sh:PropertyShape ;
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path <https://example.org/ontologies/intel-ontology#has_train_departure_station_name> ] ;
+    sh:targetNode <https://example.org/ontologies/intel-ontology/manifest#passenger_train_48b0841663ee3158822f1ab4>,
+        <https://example.org/ontologies/intel-ontology/manifest#passenger_train_a2dc45ea1db421200d07aa7e> .
+
+<https://example.org/ontologies/project6/manifest-validation#node-shape-2> a sh:NodeShape ;
+    sh:class <https://example.org/ontologies/intel-ontology#rail_journey_plan> ;
+    sh:property [ a sh:PropertyShape ;
+            sh:class <https://example.org/ontologies/intel-ontology#railway_station> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/ontologies/intel-ontology#has_planned_arrival_station> ],
+        [ a sh:PropertyShape ;
+            sh:class <https://example.org/ontologies/intel-ontology#passenger_train> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/ontologies/intel-ontology#plans_to_use_train> ],
+        [ a sh:PropertyShape ;
+            sh:class <https://example.org/ontologies/intel-ontology#railway_station> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/ontologies/intel-ontology#has_planned_departure_station> ] ;
+    sh:targetNode <https://example.org/ontologies/intel-ontology/manifest#rail_journey_plan_2470c7be67fcf2c051c49a93>,
+        <https://example.org/ontologies/intel-ontology/manifest#rail_journey_plan_8b2d2217e1e54a99769801bf>,
+        <https://example.org/ontologies/intel-ontology/manifest#rail_journey_plan_f88e3d286f766db3c68b3f5b> .
+
+<https://example.org/ontologies/project6/manifest-validation#node-shape-3> a sh:NodeShape ;
+    sh:class <https://example.org/ontologies/intel-ontology#air_flight> ;
+    sh:property [ a sh:PropertyShape ;
+            sh:class <https://www.commoncoreontologies.org/AgentOntology/Flight_plan> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/ontologies/intel-ontology#has_flight_plan_information> ],
+        [ a sh:PropertyShape ;
+            sh:class <https://www.commoncoreontologies.org/AgentOntology/Commcercial_airplane> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/ontologies/intel-ontology#occurs_aboard_airplane> ] ;
+    sh:targetNode <https://example.org/ontologies/intel-ontology/manifest#trip_31ef8f29eba6050be8ffad8b> .
+
+<https://example.org/ontologies/project6/manifest-validation#node-shape-4> a sh:NodeShape ;
+    sh:class <https://example.org/ontologies/intel-ontology#rail_journey> ;
+    sh:property [ a sh:PropertyShape ;
+            sh:class <https://example.org/ontologies/intel-ontology#railway_station> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/ontologies/intel-ontology#departs_from_station> ],
+        [ a sh:PropertyShape ;
+            sh:class <https://example.org/ontologies/intel-ontology#railway_station> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/ontologies/intel-ontology#arrives_at_station> ],
+        [ a sh:PropertyShape ;
+            sh:class <https://example.org/ontologies/intel-ontology#passenger_train> ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path <https://example.org/ontologies/intel-ontology#occurs_aboard_train> ] ;
+    sh:targetNode <https://example.org/ontologies/intel-ontology/manifest#trip_b57d03cad561519d2f6ae59f>,
+        <https://example.org/ontologies/intel-ontology/manifest#trip_c0c4108f1148ac0f0fba6a83> .
+
+<https://example.org/ontologies/project6/manifest-validation#node-shape-5> a sh:NodeShape ;
+    sh:class <https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan> ;
+    sh:targetNode <https://example.org/ontologies/intel-ontology/manifest#act_of_flight_plan_f70ced21f85717ea7c4f59e0> .
+

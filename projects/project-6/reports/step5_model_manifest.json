@@ -1,0 +1,16 @@
+{
+  "device": "cpu",
+  "embed_dim": 50,
+  "epochs": 200,
+  "model_path": "generated/mowl_rail_train.ttl",
+  "model_type": "mOWL ELEmbeddings",
+  "mowl_version": "unknown",
+  "refined_sha256": "f27f752d3b89200d2d58ee87f5128d57ffc215a1792997c26bc472db71901566",
+  "seed": 42,
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "torch_version": "2.15.0+cpu",
+  "train_sha256": "ca26851c1c6246bdf20ce1182e83bb5852f6301d32ce8663522e2dfa1b4c379e",
+  "valid_sha256": "62ee00ef60eb94af3f10af7b988298a9ada2dc20aaf2c883a3ba9ba64d3ff1b5",
+  "vectors_sha256": "37273727f09b406acc71fa5189caca24cb3554915745db2aee80021ffc3e6f24",
+  "version": "project6-elembeddings-hybrid-80-20-v2"
+}

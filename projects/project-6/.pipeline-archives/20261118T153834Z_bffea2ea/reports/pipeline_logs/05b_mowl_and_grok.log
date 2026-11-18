@@ -1,0 +1,50 @@
+STEP8 COMMAND: C:\Users\cappa\Ontology-Tradecraft\projects\project-6\.venv-mowl\Scripts\python.exe -u C:\Users\cappa\Ontology-Tradecraft\projects\project-6\scripts\evaluate_rail_mowl.py --project-root C:\Users\cappa\Ontology-Tradecraft\projects\project-6 --epochs 200 --dim 50 --seed 42 --model grok-4.7 --with-llm
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.jpype.JPypeContext in an unnamed module (file:/C:/Users/cappa/Ontology-Tradecraft/projects/project-6/.venv-mowl/Lib/site-packages/org.jpype.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.cache.UnsafeAccess (file:/C:/Users/cappa/Ontology-Tradecraft/projects/project-6/.venv-mowl/Lib/site-packages/mowl/lib/caffeine-2.8.6.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.cache.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 666
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 666
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+  0%|          | 0/200 [00:00<?, ?it/s] 12%|#1        | 23/200 [00:00<00:00, 227.17it/s] 30%|##9       | 59/200 [00:00<00:00, 302.00it/s] 46%|####5     | 91/200 [00:00<00:00, 307.32it/s] 62%|######2   | 124/200 [00:00<00:00, 315.87it/s] 78%|#######8  | 156/200 [00:00<00:00, 317.06it/s] 94%|#########3| 188/200 [00:00<00:00, 312.73it/s]Epoch 200: Train loss: 0.05018632113933563
+100%|##########| 200/200 [00:00<00:00, 308.92it/s]
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/chat/completions "HTTP/1.1 200 OK"
+STEP 5 — PASS_HYBRID_REVIEW_ONLY
+{
+  "version": "project6-elembeddings-hybrid-v1",
+  "status": "PASS_HYBRID_REVIEW_ONLY",
+  "mowl_training_completed": true,
+  "cosine_heldout_rail_pairs": 1,
+  "cosine_source_reference_pairs": 165,
+  "hybrid_scored_pairs": 1,
+  "llm_executed": true,
+  "source_unchanged": true,
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "merged_into_source": false,
+  "new_named_individuals": 0,
+  "semantic_approval": false,
+  "owl_reasoner_executed": false,
+  "next": "Human scope review + OWL reasoner + controlled merge; no candidate automatically accepted"
+}

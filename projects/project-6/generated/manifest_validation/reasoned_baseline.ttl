@@ -1,0 +1,1749 @@
+@prefix : <https://example.org/ontologies/project6/manifest-validation#offline-flattened-ontology> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://example.org/ontologies/project6/manifest-validation#offline-flattened-ontology> .
+
+<https://example.org/ontologies/project6/manifest-validation#offline-flattened-ontology> rdf:type owl:Ontology .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/IAO_0000111
+<http://purl.obolibrary.org/obo/IAO_0000111> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000112
+<http://purl.obolibrary.org/obo/IAO_0000112> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000114
+<http://purl.obolibrary.org/obo/IAO_0000114> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000115
+<http://purl.obolibrary.org/obo/IAO_0000115> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000116
+<http://purl.obolibrary.org/obo/IAO_0000116> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000117
+<http://purl.obolibrary.org/obo/IAO_0000117> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000119
+<http://purl.obolibrary.org/obo/IAO_0000119> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#altLabel
+<http://www.w3.org/2004/02/skos/core#altLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+<http://www.w3.org/2004/02/skos/core#definition> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+<http://www.w3.org/2004/02/skos/core#editorialNote> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+<http://www.w3.org/2004/02/skos/core#example> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+<http://www.w3.org/2004/02/skos/core#prefLabel> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#scopeNote
+<http://www.w3.org/2004/02/skos/core#scopeNote> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001754
+<https://www.commoncoreontologies.org/ont00001754> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001760
+<https://www.commoncoreontologies.org/ont00001760> rdf:type owl:AnnotationProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001986
+<https://www.commoncoreontologies.org/ont00001986> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000054
+<http://purl.obolibrary.org/obo/BFO_0000054> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000055> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "206-BFO" ;
+                                             rdfs:label "has realization"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "realized in"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b has realization c =Def c realizes b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "As for realizes"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000055
+<http://purl.obolibrary.org/obo/BFO_0000055> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "059-BFO" ;
+                                             rdfs:label "realizes"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000056
+<http://purl.obolibrary.org/obo/BFO_0000056> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                         [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                                [ rdf:type owl:Class ;
+                                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ]
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "250-BFO" ;
+                                             rdfs:label "participates in"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region & some process p such that b participates in p some way"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000057
+<http://purl.obolibrary.org/obo/BFO_0000057> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                        <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                        [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                               [ rdf:type owl:Class ;
+                                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ]
+                                                                      )
+                                                        ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "248-BFO" ;
+                                             rdfs:label "has participant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "p has participant c =Def c participates in p"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000058
+<http://purl.obolibrary.org/obo/BFO_0000058> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000059> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                        <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                      )
+                                                        ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "258-BFO" ;
+                                             rdfs:label "is concretized by"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "c is concretized by b =Def b concretizes c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000059
+<http://purl.obolibrary.org/obo/BFO_0000059> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000015>
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "256-BFO" ;
+                                             rdfs:label "concretizes"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b concretizes c =Def b is a process or a specifically dependent continuant & c is a generically dependent continuant & there is some time t such that c is the pattern or content which b shares at t with actual or potential copies"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000084
+<http://purl.obolibrary.org/obo/BFO_0000084> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             rdfs:range [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                               [ rdf:type owl:Class ;
+                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "252-BFO" ;
+                                             rdfs:label "generically depends on"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "g-depends on"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b generically depends on c =Def b is a generically dependent continuant & c is an independent continuant that is not a spatial region & at some time t there inheres in c a specifically dependent continuant which concretizes b at t"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000101
+<http://purl.obolibrary.org/obo/BFO_0000101> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                [ rdf:type owl:Class ;
+                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "254-BFO" ;
+                                             rdfs:label "is carrier of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b is carrier of c =Def there is some time t such that c generically depends on b at t"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000194
+<http://purl.obolibrary.org/obo/BFO_0000194> rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000195> ;
+                                             rdfs:domain [ rdf:type owl:Class ;
+                                                           owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                         [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                                [ rdf:type owl:Class ;
+                                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                                ]
+                                                                                              ) ;
+                                                                           rdf:type owl:Class
+                                                                         ]
+                                                                       )
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "260-BFO" ;
+                                             rdfs:label "specifically depended on by"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "s-depended on by"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b specifically depended on by c =Def c specifically depends on b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Coloured object specifically depended on by colour"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000195
+<http://purl.obolibrary.org/obo/BFO_0000195> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             rdfs:range [ rdf:type owl:Class ;
+                                                          owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000020>
+                                                                        [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                               [ rdf:type owl:Class ;
+                                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                               ]
+                                                                                             ) ;
+                                                                          rdf:type owl:Class
+                                                                        ]
+                                                                      )
+                                                        ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "012-BFO" ;
+                                             rdfs:label "specifically depends on"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "s-depends on"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) specifically depends on is a relation between a specifically dependent continuant b and specifically dependent continuant or independent continuant that is not a spatial region c such that b and c share no parts in common & b is of a nature such that at all times t it cannot exist unless c exists & b is not a boundary of c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A shape specifically depends on the shaped object; hue, saturation and brightness of a colour sample specifically depends on each other"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "The analogue of specifically depends on for occurrents is has participant."@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000196
+<http://purl.obolibrary.org/obo/BFO_0000196> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000194> ;
+                                             owl:inverseOf <http://purl.obolibrary.org/obo/BFO_0000197> ;
+                                             rdfs:domain [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                                [ rdf:type owl:Class ;
+                                                                                  owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                ]
+                                                                              ) ;
+                                                           rdf:type owl:Class
+                                                         ] ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "053-BFO" ;
+                                             rdfs:label "bearer of"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b bearer of c =Def c inheres in b"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A patch of ink is the bearer of a colour quality; an organism is the bearer of a temperature quality"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000197
+<http://purl.obolibrary.org/obo/BFO_0000197> rdf:type owl:ObjectProperty ;
+                                             rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000195> ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             rdfs:range [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                                                                               [ rdf:type owl:Class ;
+                                                                                 owl:complementOf <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                               ]
+                                                                             ) ;
+                                                          rdf:type owl:Class
+                                                        ] ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "051-BFO" ;
+                                             rdfs:label "inheres in"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b inheres in c =Def b is a specifically dependent continuant & c is an independent continuant that is not a spatial region & b specifically depends on c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A shape inheres in a shaped object; a mass inheres in a material entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000136
+<http://purl.obolibrary.org/obo/IAO_0000136> rdf:type owl:ObjectProperty ;
+                                             rdfs:domain <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                             rdfs:range <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000112> "This document is about information artifacts and their representations"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000125> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A (currently) primitive relation that relates an information artifact to an entity."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000116> """7/6/2009 Alan Ruttenberg. Following discussion with Jonathan Rees, and introduction of \"mentions\" relation. Weaken the is_about relationship to be primitive. 
+
+We will try to build it back up by elaborating the various subproperties that are more precisely defined.
+
+Some currently missing phenomena that should be considered \"about\" are predications - \"The only person who knows the answer is sitting beside me\" , Allegory, Satire, and other literary forms that can be topical without explicitly mentioning the topic."""@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000117> "person:Alan Ruttenberg"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000119> "Smith, Ceusters, Ruttenberg, 2000 years of philosophy"@en ;
+                                             rdfs:label "is about"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "A (currently) primitive relation that relates an information artifact to an entity."@en .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000053
+<http://purl.obolibrary.org/obo/RO_0000053> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000056
+<http://purl.obolibrary.org/obo/RO_0000056> rdf:type owl:ObjectProperty ;
+                                            rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000056> .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000059
+<http://purl.obolibrary.org/obo/RO_0000059> rdf:type owl:ObjectProperty .
+
+
+###  http://purl.obolibrary.org/obo/RO_0000087
+<http://purl.obolibrary.org/obo/RO_0000087> rdf:type owl:ObjectProperty .
+
+
+###  https://example.org/ontologies/intel-ontology#arrives_at_station
+<https://example.org/ontologies/intel-ontology#arrives_at_station> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <https://example.org/ontologies/intel-ontology#rail_journey> ;
+                                                                   rdfs:range <https://example.org/ontologies/intel-ontology#railway_station> ;
+                                                                   rdfs:label "arrives at station"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#definition> "A relation between a rail journey and a railway station at which that journey arrives."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#departs_from_station
+<https://example.org/ontologies/intel-ontology#departs_from_station> rdf:type owl:ObjectProperty ;
+                                                                     rdfs:domain <https://example.org/ontologies/intel-ontology#rail_journey> ;
+                                                                     rdfs:range <https://example.org/ontologies/intel-ontology#railway_station> ;
+                                                                     rdfs:label "departs from station"@en ;
+                                                                     <http://www.w3.org/2004/02/skos/core#definition> "A relation between a rail journey and a railway station from which that journey departs."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#has_flight_plan_information
+<https://example.org/ontologies/intel-ontology#has_flight_plan_information> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:domain <https://example.org/ontologies/intel-ontology#air_flight> ;
+                                                                            rdfs:range <https://www.commoncoreontologies.org/AgentOntology/Flight_plan> ;
+                                                                            rdfs:label "has flight plan information"@en ;
+                                                                            <http://www.w3.org/2004/02/skos/core#definition> "Relates an actual flight process to its flight-plan information content entity."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#has_planned_arrival_station
+<https://example.org/ontologies/intel-ontology#has_planned_arrival_station> rdf:type owl:ObjectProperty ;
+                                                                            rdfs:domain <https://example.org/ontologies/intel-ontology#rail_journey_plan> ;
+                                                                            rdfs:range <https://example.org/ontologies/intel-ontology#railway_station> ;
+                                                                            rdfs:label "has planned arrival station"@en ;
+                                                                            <http://www.w3.org/2004/02/skos/core#definition> "Relates a journey plan to its arrival facility."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#has_planned_departure_station
+<https://example.org/ontologies/intel-ontology#has_planned_departure_station> rdf:type owl:ObjectProperty ;
+                                                                              rdfs:domain <https://example.org/ontologies/intel-ontology#rail_journey_plan> ;
+                                                                              rdfs:range <https://example.org/ontologies/intel-ontology#railway_station> ;
+                                                                              rdfs:label "has planned departure station"@en ;
+                                                                              <http://www.w3.org/2004/02/skos/core#definition> "Relates a journey plan to its departure facility."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#occurs_aboard_airplane
+<https://example.org/ontologies/intel-ontology#occurs_aboard_airplane> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <https://example.org/ontologies/intel-ontology#air_flight> ;
+                                                                       rdfs:range <https://www.commoncoreontologies.org/AgentOntology/Commcercial_airplane> ;
+                                                                       rdfs:label "occurs aboard airplane"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "Relates an actual flight process to the airplane conveying its participants."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#occurs_aboard_train
+<https://example.org/ontologies/intel-ontology#occurs_aboard_train> rdf:type owl:ObjectProperty ;
+                                                                    rdfs:domain <https://example.org/ontologies/intel-ontology#rail_journey> ;
+                                                                    rdfs:range <https://example.org/ontologies/intel-ontology#train> ;
+                                                                    rdfs:label "occurs aboard train"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#definition> "A relation between a rail journey and the train aboard which that journey occurs."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#plans_to_use_train
+<https://example.org/ontologies/intel-ontology#plans_to_use_train> rdf:type owl:ObjectProperty ;
+                                                                   rdfs:domain <https://example.org/ontologies/intel-ontology#rail_journey_plan> ;
+                                                                   rdfs:range <https://example.org/ontologies/intel-ontology#passenger_train> ;
+                                                                   rdfs:label "plans to use train"@en ;
+                                                                   <http://www.w3.org/2004/02/skos/core#definition> "Connects a rail journey plan to its train."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#specifies_rail_journey
+<https://example.org/ontologies/intel-ontology#specifies_rail_journey> rdf:type owl:ObjectProperty ;
+                                                                       rdfs:domain <https://example.org/ontologies/intel-ontology#rail_journey_plan> ;
+                                                                       rdfs:range <https://example.org/ontologies/intel-ontology#rail_journey> ;
+                                                                       rdfs:label "specifies rail journey"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "A relation between a rail journey plan and the rail journey specified by that plan."@en .
+
+
+###  https://www.commoncoreontologies.org/ont00001787
+<https://www.commoncoreontologies.org/ont00001787> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000056> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001833> ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:label "agent in"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x agent_in y iff y is an instance of Process and x is an instance of Agent, such that x is causally active in y."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001801
+<https://www.commoncoreontologies.org/ont00001801> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001808> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   rdfs:label "is subject of"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is subject of y =Def y is about x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001808
+<https://www.commoncoreontologies.org/ont00001808> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:label "is about"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is_about y is a primitive relationship between an instance of Information Content Entity x and an instance of Entity y."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://purl.obolibrary.org/obo/IAO_0000136" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001830
+<https://www.commoncoreontologies.org/ont00001830> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001895> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:label "has accomplice"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x has accomplice y =Def y accomplice in x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Accomplice&oldid=1002047204"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001833
+<https://www.commoncoreontologies.org/ont00001833> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000057> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:label "has agent"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x has agent y =Def y agent in x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001866
+<https://www.commoncoreontologies.org/ont00001866> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001984> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   <http://purl.org/dc/terms/created> "2022-12-30T21:32:27-05:00"^^xsd:dateTime ;
+                                                   <http://purl.org/dc/terms/creator> "https://cubrc.org"^^xsd:anyURI ;
+                                                   rdfs:label "is interest of"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is interest of y =Def y has interest in x."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "is interest of"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001879
+<https://www.commoncoreontologies.org/ont00001879> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001801> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001916> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00000686> ;
+                                                   rdfs:label "designated by"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x designated by y =Def y designates x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001895
+<https://www.commoncoreontologies.org/ont00001895> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <http://purl.obolibrary.org/obo/BFO_0000056> ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:label "accomplice in"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "Agent x is accomplice_in Process y iff x assists in the commission of y, is located at the location of y, but is not agent_in y."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Accomplice&oldid=1002047204"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001916
+<https://www.commoncoreontologies.org/ont00001916> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001808> ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00000686> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:label "designates"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x designates y iff x is an instance of a Designative Information Content Entity, and y is an instance of an Entity, such that given some context, x uniquely distinguishes y from other entities."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "a URL designates the location of a Web Page on the internet" ,
+                                                                                                 "a person's name designates that person" ,
+                                                                                                 "a vehicle identification number designates some vehicle" ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Given a stronger temporal interpretation, this property may be functional. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001920
+<https://www.commoncoreontologies.org/ont00001920> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001801> ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001942> ;
+                                                   rdfs:domain <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00000965> ;
+                                                   rdfs:label "prescribed by"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x prescribed by y =Def y prescribes x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001936
+<https://www.commoncoreontologies.org/ont00001936> rdf:type owl:ObjectProperty .
+
+
+###  https://www.commoncoreontologies.org/ont00001939
+<https://www.commoncoreontologies.org/ont00001939> rdf:type owl:ObjectProperty ;
+                                                   owl:inverseOf <https://www.commoncoreontologies.org/ont00001977> ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:label "is affiliated with"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x is_affiliated_with y iff x and y are instances of Agent, such that they have any kind of social or business relationship."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001942
+<https://www.commoncoreontologies.org/ont00001942> rdf:type owl:ObjectProperty ;
+                                                   rdfs:subPropertyOf <https://www.commoncoreontologies.org/ont00001808> ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00000965> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                                   rdfs:label "prescribes"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x prescribes y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x serves as a rule or guide for y if y an Occurrent, or x serves as a model for y if y is a Continuant."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#example> "A blueprint prescribes some artifact or facility by being a model for it." ,
+                                                                                                 "A professional code of conduct prescribes some realizations of a profession (role) by giving rules for how the bearer should act in those realizations." ,
+                                                                                                 "An operations plan prescribes an operation by enumerating the tasks that need to be performed in order to achieve the objectives of the operation." ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001977
+<https://www.commoncoreontologies.org/ont00001977> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:range <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:label "has affiliate"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "x has affiliate y =Def y is affiliated with x."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001984
+<https://www.commoncoreontologies.org/ont00001984> rdf:type owl:ObjectProperty ;
+                                                   rdfs:domain <https://www.commoncoreontologies.org/ont00001017> ;
+                                                   rdfs:range <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   <http://purl.org/dc/terms/created> "2022-12-30T21:32:27-05:00"^^xsd:dateTime ;
+                                                   <http://purl.org/dc/terms/creator> "https://cubrc.org"^^xsd:anyURI ;
+                                                   rdfs:label "has interest in"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A relation between an Agent and some Process where the Agent has an interest in that Process."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#editorialNote> "This term is meant to be weakly normative. The only sense in which the process is of positive normative value is that it's prescribed by the Agent, or historically of evolutionary benefit to the Agent's ancestors, or facilitates a process the Agent has an interest in for the prior two reasons. The process an Agent has an interest could in many or all ways be harmful to the Agent."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#prefLabel> "has interest in"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "There are four conditions in which an agent has an interest in some process. 1) Biological Condition: If a part (including improper part) of an organism has a function, then that organism has an interest in the realization of that function. 2) Artifactual Condition: If a part (including improper part) of an artifact has a function, then some agent or group of agents, at some time, has an interest in the realization of that function. 3) Prescription Condition: If an agent or group of agents has a plan, then it has an interest in the realization of all the processes and process-combinations prescribed by that plan. 4) Facilitation Condition: If (a) agent x has an interest in the realization of a disposition y, and (b) the realization of a disposition z facilitates the realization of disposition y, then (c) x has an interest in the realization of disposition z, and by 'facilitates' we mean that the occurrence of a process w, which realizes realization of z is either (1) required for y, to realize or (2) would contribute positively to the grade of, y's realization."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/is_author_of
+<https://www.commoncoreontologies.org/AgentOntology/is_author_of> rdf:type owl:ObjectProperty ;
+                                                                  rdfs:domain <https://www.commoncoreontologies.org/AgentOntology/person> ;
+                                                                  rdfs:range <https://www.commoncoreontologies.org/AgentOntology/Post> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/is_registered_guest
+<https://www.commoncoreontologies.org/AgentOntology/is_registered_guest> rdf:type owl:ObjectProperty ;
+                                                                         rdfs:domain <https://www.commoncoreontologies.org/AgentOntology/person> ;
+                                                                         rdfs:label "is registered guest on" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/possesses
+<https://www.commoncoreontologies.org/AgentOntology/possesses> rdf:type owl:ObjectProperty ;
+                                                               rdfs:domain <https://www.commoncoreontologies.org/AgentOntology/person> ;
+                                                               rdfs:range <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                                               rdfs:label "possesses" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://example.org/ontologies/intel-ontology#has_flight_service_code
+<https://example.org/ontologies/intel-ontology#has_flight_service_code> rdf:type owl:DatatypeProperty ;
+                                                                        rdfs:domain <https://www.commoncoreontologies.org/AgentOntology/Flight_plan> ;
+                                                                        rdfs:range xsd:string ;
+                                                                        rdfs:label "has flight service code"@en ;
+                                                                        <http://www.w3.org/2004/02/skos/core#definition> "Relates flight plan information to a service identifier."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#has_physical_rail_ticket_evidence_reference
+<https://example.org/ontologies/intel-ontology#has_physical_rail_ticket_evidence_reference> rdf:type owl:DatatypeProperty ;
+                                                                                            rdfs:domain <https://example.org/ontologies/intel-ontology#rail_ticket> ;
+                                                                                            rdfs:range xsd:string ;
+                                                                                            rdfs:label "has physical rail ticket evidence reference"@en ;
+                                                                                            <http://www.w3.org/2004/02/skos/core#definition> "An optional record reference supporting a physical ticket bearer."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#has_planned_air_departure_time
+<https://example.org/ontologies/intel-ontology#has_planned_air_departure_time> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:domain <https://www.commoncoreontologies.org/AgentOntology/Flight_plan> ;
+                                                                               rdfs:range xsd:dateTime ;
+                                                                               rdfs:label "has planned air departure time"@en ;
+                                                                               <http://www.w3.org/2004/02/skos/core#definition> "Relates flight plan information to its scheduled departure instant."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#has_planned_departure_time
+<https://example.org/ontologies/intel-ontology#has_planned_departure_time> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:domain <https://example.org/ontologies/intel-ontology#rail_journey_plan> ;
+                                                                           rdfs:range xsd:dateTime ;
+                                                                           rdfs:label "has planned departure time"@en ;
+                                                                           <http://www.w3.org/2004/02/skos/core#definition> "A datatype relation that records the planned departure time specified by a rail journey plan."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#has_train_arrival_station_name
+<https://example.org/ontologies/intel-ontology#has_train_arrival_station_name> rdf:type owl:DatatypeProperty ;
+                                                                               rdfs:domain <https://example.org/ontologies/intel-ontology#passenger_train> ;
+                                                                               rdfs:range xsd:string ;
+                                                                               rdfs:label "has train arrival station name"@en ;
+                                                                               <http://www.w3.org/2004/02/skos/core#definition> "Records the manifest arrival station name for this in-transit train."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#has_train_departure_station_name
+<https://example.org/ontologies/intel-ontology#has_train_departure_station_name> rdf:type owl:DatatypeProperty ;
+                                                                                 rdfs:domain <https://example.org/ontologies/intel-ontology#passenger_train> ;
+                                                                                 rdfs:range xsd:string ;
+                                                                                 rdfs:label "has train departure station name"@en ;
+                                                                                 <http://www.w3.org/2004/02/skos/core#definition> "Records the manifest departure station name for this in-transit train."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#has_train_service_code
+<https://example.org/ontologies/intel-ontology#has_train_service_code> rdf:type owl:DatatypeProperty ;
+                                                                       rdfs:domain <https://example.org/ontologies/intel-ontology#passenger_train> ;
+                                                                       rdfs:range xsd:string ;
+                                                                       rdfs:label "has train service code"@en ;
+                                                                       <http://www.w3.org/2004/02/skos/core#definition> "A datatype relation that records the string service code associated with a passenger train."@en .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_ICAO_Telephony
+<https://www.commoncoreontologies.org/AgentOntology/has_ICAO_Telephony> rdf:type owl:DatatypeProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_ICAO_code
+<https://www.commoncoreontologies.org/AgentOntology/has_ICAO_code> rdf:type owl:DatatypeProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_MSN
+<https://www.commoncoreontologies.org/AgentOntology/has_MSN> rdf:type owl:DatatypeProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_Mode_S_Hex_Code
+<https://www.commoncoreontologies.org/AgentOntology/has_Mode_S_Hex_Code> rdf:type owl:DatatypeProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_arrival_airport
+<https://www.commoncoreontologies.org/AgentOntology/has_arrival_airport> rdf:type owl:DatatypeProperty ;
+                                                                         rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_boarding_gate
+<https://www.commoncoreontologies.org/AgentOntology/has_boarding_gate> rdf:type owl:DatatypeProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_boarding_group
+<https://www.commoncoreontologies.org/AgentOntology/has_boarding_group> rdf:type owl:DatatypeProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_boarding_time
+<https://www.commoncoreontologies.org/AgentOntology/has_boarding_time> rdf:type owl:DatatypeProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_departure_airport
+<https://www.commoncoreontologies.org/AgentOntology/has_departure_airport> rdf:type owl:DatatypeProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_first_name
+<https://www.commoncoreontologies.org/AgentOntology/has_first_name> rdf:type owl:DatatypeProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_last_name
+<https://www.commoncoreontologies.org/AgentOntology/has_last_name> rdf:type owl:DatatypeProperty ;
+                                                                   rdfs:subPropertyOf owl:topDataProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_reservation_number
+<https://www.commoncoreontologies.org/AgentOntology/has_reservation_number> rdf:type owl:DatatypeProperty .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/has_tail_number
+<https://www.commoncoreontologies.org/AgentOntology/has_tail_number> rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000001
+<http://purl.obolibrary.org/obo/BFO_0000001> rdf:type owl:Class ;
+                                             rdfs:subClassOf owl:Thing ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "001-BFO" ;
+                                             rdfs:label "entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) An entity is anything that exists or has existed or will exist"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "Julius Caesar; the Second World War; your body mass index; Verdi's Requiem"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000002
+<http://purl.obolibrary.org/obo/BFO_0000002> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                             owl:disjointWith <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "008-BFO" ;
+                                             rdfs:label "continuant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A human being; a tennis ball; a cave; a region of space; someone's temperature"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000003
+<http://purl.obolibrary.org/obo/BFO_0000003> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000001> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "077-BFO" ;
+                                             rdfs:label "occurrent"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "As for process, history, process boundary, spatiotemporal region, zero-dimensional temporal region, one-dimensional temporal region, temporal interval, temporal instant."@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000004
+<http://purl.obolibrary.org/obo/BFO_0000004> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "017-BFO" ;
+                                             rdfs:label "independent continuant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b is an independent continuant =Def b is a continuant & there is no c such that b specifically depends on c or b generically depends on c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "An atom; a molecule; an organism; a heart; a chair; the bottom right portion of a human torso; a leg; the interior of your mouth; a spatial region; an orchestra"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000006
+<http://purl.obolibrary.org/obo/BFO_0000006> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000141> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "035-BFO" ;
+                                             rdfs:label "spatial region"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A spatial region is a continuant entity that is a continuant part of the spatial projection of a portion of spacetime at a given time"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "As for zero-dimensional spatial region, one-dimensional spatial region, two-dimensional spatial region, three-dimensional spatial region"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+<http://purl.obolibrary.org/obo/BFO_0000015> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000003> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "083-BFO" ;
+                                             rdfs:label "process"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "event"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000016
+<http://purl.obolibrary.org/obo/BFO_0000016> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                             owl:disjointWith <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "062-BFO" ;
+                                             rdfs:label "disposition"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "internally-grounded realizable entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A disposition b is a realizable entity such that if b ceases to exist then its bearer is physically changed & b's realization occurs when and because this bearer is in some special physical circumstances & this realization occurs in virtue of the bearer's physical make-up"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "An atom of element X has the disposition to decay to an atom of element Y; the cell wall is disposed to transport cellular material through endocytosis and exocytosis; certain people have a predisposition to colon cancer; children are innately disposed to categorize objects in certain ways"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000017
+<http://purl.obolibrary.org/obo/BFO_0000017> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000020> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "058-BFO" ;
+                                             rdfs:label "realizable entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A realizable entity is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region & which is of a type some instances of which are realized in processes of a correlated type"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The role of being a doctor; the role of this boundary to delineate where Utah and Colorado meet; the function of your reproductive organs; the disposition of your blood to coagulate; the disposition of this piece of metal to conduct electricity"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000020
+<http://purl.obolibrary.org/obo/BFO_0000020> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "050-BFO" ;
+                                             rdfs:label "specifically dependent continuant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b specifically depends on c"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "(with multiple bearers) John's love for Mary; the ownership relation between John and this statue; the relation of authority between John and his subordinates"@en ,
+                                                                                           "(with one bearer) The mass of this tomato; the pink colour of a medium rare piece of grilled filet mignon at its centre; the smell of this portion of mozzarella; the disposition of this fish to decay; the role of being a doctor; the function of this heart to pump blood; the shape of this hole"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000023
+<http://purl.obolibrary.org/obo/BFO_0000023> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "061-BFO" ;
+                                             rdfs:label "role"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "externally-grounded realizable entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A role b is a realizable entity such that b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The priest role; the student role; the role of subject in a clinical trial; the role of a stone in marking a property boundary; the role of a boundary to demarcate two neighbouring administrative territories; the role of a building in serving as a military target"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000027
+<http://purl.obolibrary.org/obo/BFO_0000027> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "025-BFO" ;
+                                             rdfs:label "object aggregate"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) An object aggregate is a material entity consisting exactly of a plurality (≥1) of objects as member parts which together form a unit"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The aggregate of the musicians in a symphony orchestra and their instruments; the aggregate of bearings in a constant velocity axle joint; the nitrogen atoms in the atmosphere; a collection of cells in a blood biobank"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "'Exactly' means that there are no parts of the object aggregate other than its member parts." ,
+                                                                                             "The unit can, at certain times, consist of exactly one object, for example, when a wolf litter loses all but one of its pups, but it must at some time have a plurality of member parts." .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000030
+<http://purl.obolibrary.org/obo/BFO_0000030> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "024-BFO" ;
+                                             rdfs:label "object"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) An object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#scopeNote> "A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User Guide"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000031
+<http://purl.obolibrary.org/obo/BFO_0000031> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000002> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "074-BFO" ;
+                                             rdfs:label "generically dependent continuant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#altLabel> "g-dependent continuant"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000040
+<http://purl.obolibrary.org/obo/BFO_0000040> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> ;
+                                             owl:disjointWith <http://purl.obolibrary.org/obo/BFO_0000141> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "019-BFO" ;
+                                             rdfs:label "material entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "(Elucidation) A material entity is an independent continuant that at all times at which it exists has some portion of matter as continuant part"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "A human being; the undetached arm of a human being; an aggregate of human beings"@en .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000141
+<http://purl.obolibrary.org/obo/BFO_0000141> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000004> ;
+                                             <http://purl.org/dc/elements/1.1/identifier> "028-BFO" ;
+                                             rdfs:label "immaterial entity"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#definition> "b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part"@en ;
+                                             <http://www.w3.org/2004/02/skos/core#example> "As for fiat point, fiat line, fiat surface, site"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+<http://purl.obolibrary.org/obo/IAO_0000030> rdf:type owl:Class ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ,
+                                                             [ rdf:type owl:Restriction ;
+                                                               owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                             ] ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000111> "information content entity"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000112> "Examples of information content entites include journal articles, data, graphical layouts, and graphs."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A generically dependent continuant that is about some thing."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000116> "2014-03-10: The use of \"thing\" is intended to be general enough to include universals and configurations (see https://groups.google.com/d/msg/information-ontology/GBxvYZCk1oc/-L6B5fSBBTQJ)."@en ,
+                                                                                          """information_content_entity 'is_encoded_in' some digital_entity in obi before split (040907). information_content_entity 'is_encoded_in' some physical_document in obi before split (040907).
+
+Previous. An information content entity is a non-realizable information entity that 'is encoded in' some digital or physical entity."""@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000117> "PERSON: Chris Stoeckert"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000119> "OBI_0000142"@en ;
+                                             rdfs:label "information content entity"@en .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000178
+<http://purl.obolibrary.org/obo/IAO_0000178> rdf:type owl:Class ;
+                                             owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                                        [ rdf:type owl:Restriction ;
+                                                                                          owl:onProperty <http://purl.obolibrary.org/obo/RO_0000053> ;
+                                                                                          owl:someValuesFrom [ rdf:type owl:Restriction ;
+                                                                                                               owl:onProperty <http://purl.obolibrary.org/obo/RO_0000059> ;
+                                                                                                               owl:someValuesFrom <http://purl.obolibrary.org/obo/IAO_0000030>
+                                                                                                             ]
+                                                                                        ]
+                                                                                      ) ;
+                                                                   rdf:type owl:Class
+                                                                 ] ;
+                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000111> "material information bearer"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000112> "A page of a paperback novel with writing on it. The paper itself is a material information bearer, the pattern of ink is the information carrier."@en ,
+                                                                                          "a brain"@en ,
+                                                                                          "a hard drive"@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000114> <http://purl.obolibrary.org/obo/IAO_0000122> ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000115> "A material entity in which a concretization of an information content entity inheres."@en ;
+                                             <http://purl.obolibrary.org/obo/IAO_0000117> "GROUP: IAO"@en ;
+                                             rdfs:label "material information bearer"@en .
+
+
+###  https://example.org/ontologies/intel-ontology#air_flight
+<https://example.org/ontologies/intel-ontology#air_flight> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                           rdfs:label "air flight"@en ;
+                                                           <http://www.w3.org/2004/02/skos/core#definition> "An actual process of an airplane flying while conveying passengers."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#hotel_reservation
+<https://example.org/ontologies/intel-ontology#hotel_reservation> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://example.org/ontologies/intel-ontology#reservation> ;
+                                                                  rdfs:label "hotel reservation" .
+
+
+###  https://example.org/ontologies/intel-ontology#passenger_train
+<https://example.org/ontologies/intel-ontology#passenger_train> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <https://example.org/ontologies/intel-ontology#train> ;
+                                                                rdfs:label "passenger train"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "A train whose designed function includes carrying persons who bear a rail passenger role."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#rail_journey
+<https://example.org/ontologies/intel-ontology#rail_journey> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                             rdfs:label "rail journey"@en ;
+                                                             <http://www.w3.org/2004/02/skos/core#definition> "A process in which a train travels along railway tracks from a departure railway station to an arrival railway station."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#rail_journey_plan
+<https://example.org/ontologies/intel-ontology#rail_journey_plan> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                                                  rdfs:label "rail journey plan"@en ;
+                                                                  <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that specifies a planned rail journey, including planned endpoints and timing, and is not itself a rail journey process."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#rail_passenger_role
+<https://example.org/ontologies/intel-ontology#rail_passenger_role> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/passenger> ;
+                                                                    rdfs:label "rail passenger role"@en ;
+                                                                    <http://www.w3.org/2004/02/skos/core#definition> "A role borne by a person in virtue of being carried, or authorized to be carried, on a passenger train during a rail journey."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#rail_reservation_information
+<https://example.org/ontologies/intel-ontology#rail_reservation_information> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/reservation> ;
+                                                                             rdfs:label "rail reservation information"@en ;
+                                                                             <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that is reservation information about a planned rail journey or related travel entitlement, distinct from any material booking artifact and from the rail journey process."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#rail_ticket
+<https://example.org/ontologies/intel-ontology#rail_ticket> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/ticket> ;
+                                                            rdfs:label "rail ticket"@en ;
+                                                            <http://www.w3.org/2004/02/skos/core#definition> "A material information bearer that is a ticket and bears information authorizing travel associated with a rail journey."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#railway_station
+<https://example.org/ontologies/intel-ontology#railway_station> rdf:type owl:Class ;
+                                                                rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                                rdfs:label "railway station"@en ;
+                                                                <http://www.w3.org/2004/02/skos/core#definition> "A material entity comprising physical railway facilities at which rail journeys begin, end, or pause, potentially including platforms, track infrastructure, structures, and buildings."@en .
+
+
+###  https://example.org/ontologies/intel-ontology#reservation
+<https://example.org/ontologies/intel-ontology#reservation> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000178> ;
+                                                            rdfs:label "reservation" .
+
+
+###  https://example.org/ontologies/intel-ontology#train
+<https://example.org/ontologies/intel-ontology#train> rdf:type owl:Class ;
+                                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                      rdfs:label "train"@en ;
+                                                      <http://www.w3.org/2004/02/skos/core#definition> "A material entity composed of one or more rail vehicles operated together on a railway to convey passengers or freight."@en .
+
+
+###  https://www.commoncoreontologies.org/ont00000003
+<https://www.commoncoreontologies.org/ont00000003> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> ;
+                                                   rdfs:label "Designative Name"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Name"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Designative Information Content Entity that consists of a string of characters that designates an entity within a specified cultural or social namespace and which is typically a word or phrase in a natural language that has an accepted cultural or social significance."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000005
+<https://www.commoncoreontologies.org/ont00000005> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                   rdfs:label "Act"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Process in which at least one Agent plays a causative role."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000228
+<https://www.commoncoreontologies.org/ont00000228> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000005>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000055> ;
+                                                                                                owl:someValuesFrom [ owl:intersectionOf ( [ rdf:type owl:Class ;
+                                                                                                                                            owl:unionOf ( <http://purl.obolibrary.org/obo/BFO_0000016>
+                                                                                                                                                          <http://purl.obolibrary.org/obo/BFO_0000023>
+                                                                                                                                                        )
+                                                                                                                                          ]
+                                                                                                                                          [ rdf:type owl:Restriction ;
+                                                                                                                                            owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000059> ;
+                                                                                                                                            owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000965>
+                                                                                                                                          ]
+                                                                                                                                        ) ;
+                                                                                                                     rdf:type owl:Class
+                                                                                                                   ]
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000005> ;
+                                                   rdfs:label "Planned Act"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Intentional Act"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000253
+<https://www.commoncoreontologies.org/ont00000253> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000030>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                                                                owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000958>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
+                                                   rdfs:label "Information Bearing Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "IBE"@en ,
+                                                                                                  "Information Carrying Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Object upon which an Information Content Entity generically depends."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "This class continues to use the word ‘bearing’ in its rdfslabel because of potential confusion with the acronym ‘ICE’, which is widely used for information content entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://purl.obolibrary.org/obo/IAO_0000178"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000390
+<https://www.commoncoreontologies.org/ont00000390> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000686>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000006>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> ;
+                                                   rdfs:label "Spatial Region Identifier"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Designative Information Content Entity that designates some Spatial Region."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000544
+<https://www.commoncoreontologies.org/ont00000544> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001936> ;
+                                                                                                owl:someValuesFrom <https://www.commoncoreontologies.org/ont00000741>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                   rdfs:label "Target"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Material Entity that is the object of an Act of Targeting."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Although people speak of targeting a process, say, a parade, what in fact are being targeted are the material participants of that process. The disruption or ceasing of the process is the objective of some plan, but not technically a target. Only material things can be targeted for action. Even if some dependent entity is described as being the target, the material thing for which that dependent entity depends is the object of a targeting process."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000654
+<https://www.commoncoreontologies.org/ont00000654> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001147> ;
+                                                   rdfs:label "Act of Terrorism"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Act of Violence which creates fear and which is prescribed by religious, political or ideological objectives, and which deliberately target or disregard the safety of civilians and are committed by members of non-government organizations."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Terrorism&oldid=1063471352"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000686
+<https://www.commoncoreontologies.org/ont00000686> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000958>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001916> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   owl:disjointWith <https://www.commoncoreontologies.org/ont00000965> ;
+                                                   rdfs:label "Designative Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Designative ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that consists of a set of symbols that designate some Entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000741
+<https://www.commoncoreontologies.org/ont00000741> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> ;
+                                                   rdfs:label "Act of Targeting"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Planned Act wherein some Agent maintains one or more entities as the objects of potential action given some operational requirement."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000958
+<https://www.commoncoreontologies.org/ont00000958> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000031>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001808> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000031> ;
+                                                   rdfs:label "Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Generically Dependent Continuant that generically depends on some Information Bearing Entity and stands in relation of aboutness to some Entity."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "Information Content Entity is here intended to be a class of Entities whose instances are the informational content of Information Bearing Entities. For example, three instances of information bearers -- such as a bar chart, color-coded map, and a written report -- each of which lists the GDP of Countries for the year 2010 are each different carriers of the same information content. It is this content that is generically dependent upon its carrier. This treatment of Informational Content Entity (cf. the Information Artifact Ontology) leads to a principle of subtyping based upon the relationship that ICE's have with the Entity they are about rather than characteristics such as format, language, measurement scale, or media. The latter are treated here as being Qualities of bearers."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "http://purl.obolibrary.org/obo/IAO_0000030" ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00000965
+<https://www.commoncoreontologies.org/ont00000965> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <https://www.commoncoreontologies.org/ont00000958>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <https://www.commoncoreontologies.org/ont00001942> ;
+                                                                                                owl:someValuesFrom <http://purl.obolibrary.org/obo/BFO_0000001>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   rdfs:label "Prescriptive Information Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#altLabel> "Directive ICE"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An Information Content Entity that prescribes some Entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001014
+<https://www.commoncoreontologies.org/ont00001014> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000003> ;
+                                                   rdfs:label "Proper Name"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Designative Name that is an official name for a particular entity."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001017
+<https://www.commoncoreontologies.org/ont00001017> rdf:type owl:Class ;
+                                                   owl:equivalentClass [ owl:intersectionOf ( <http://purl.obolibrary.org/obo/BFO_0000040>
+                                                                                              [ rdf:type owl:Restriction ;
+                                                                                                owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000196> ;
+                                                                                                owl:someValuesFrom <https://www.commoncoreontologies.org/ont00001379>
+                                                                                              ]
+                                                                                            ) ;
+                                                                         rdf:type owl:Class
+                                                                       ] ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> ;
+                                                   rdfs:label "Agent"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Material Entity that bears an Agent Capability."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "Schlosser, Markus, \"Agency\", The Stanford Encyclopedia of Philosophy (Winter 2019 Edition), Edward N. Zalta (ed.), available at: https://plato.stanford.edu/archives/win2019/entries/agency/"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001147
+<https://www.commoncoreontologies.org/ont00001147> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000228> ;
+                                                   rdfs:label "Act of Violence"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Planned Act of causing harm to oneself or to another through the use of physical or verbal force."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "https://en.wikipedia.org/w/index.php?title=Violence&oldid=1063681926"^^xsd:anyURI ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001331
+<https://www.commoncoreontologies.org/ont00001331> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001014> ;
+                                                   rdfs:label "Legal Name"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Proper Name that is an official name for the designated entity as determined by a Government or court of law."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00001379
+<https://www.commoncoreontologies.org/ont00001379> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000017> ;
+                                                   rdfs:label "Agent Capability"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "A Realizable Entity that inheres in a Material Entity in virtue of that Material Entity's capacity to realize it in some Planned Act."@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001754> "Schlosser, Markus, \"Agency\", The Stanford Encyclopedia of Philosophy (Winter 2019 Edition), Edward N. Zalta (ed.), available at: https://plato.stanford.edu/archives/win2019/entries/agency/"@en ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/ont00002001
+<https://www.commoncoreontologies.org/ont00002001> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000958> ;
+                                                   rdfs:label "Media Content Entity"@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#definition> "An information content entity presented in a canonical media format."@en ;
+                                                   <http://www.w3.org/2004/02/skos/core#scopeNote> "By 'canonical', it is intended that the media format is of a commonly recognized format, such as mass media formats such as books, magazines, and journals, as well as digital media forms (e.g. ebooks), to include, too, file types, such as those recognized by the Internet Assigned Numbers Authority (IANA)'s Media Types standard [RFC2046]." ;
+                                                   <https://www.commoncoreontologies.org/ont00001760> "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology#driver's_license
+<https://www.commoncoreontologies.org/AgentOntology#driver's_license> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/license> ;
+                                                                      rdfs:label "driver's license" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_posting
+<https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_posting> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting> ;
+                                                                             rdfs:label "Act of Facebook posting" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan
+<https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                                        rdfs:label "Act of Flight Plan" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting
+<https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting> rdf:type owl:Class ;
+                                                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000015> ;
+                                                                                 rdfs:label "Act of Social Media Posting" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Airplane
+<https://www.commoncoreontologies.org/AgentOntology/Airplane> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Commcercial_airplane
+<https://www.commoncoreontologies.org/AgentOntology/Commcercial_airplane> rdf:type owl:Class ;
+                                                                          rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/Airplane> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Facebook
+<https://www.commoncoreontologies.org/AgentOntology/Facebook> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/Social_Media> ;
+                                                              rdfs:label "Facebook" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Facebook_Post
+<https://www.commoncoreontologies.org/AgentOntology/Facebook_Post> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/Facebook> ;
+                                                                   rdfs:label "Facebook Post Information" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Flight_plan
+<https://www.commoncoreontologies.org/AgentOntology/Flight_plan> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                                                 rdfs:label "Flight plan" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Jetblue_passenger
+<https://www.commoncoreontologies.org/AgentOntology/Jetblue_passenger> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/passenger> ;
+                                                                       rdfs:label "Jetblue passenger" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Person_Of_Interest
+<https://www.commoncoreontologies.org/AgentOntology/Person_Of_Interest> rdf:type owl:Class ;
+                                                                        rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                                        rdfs:label "Person of Interest" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Post
+<https://www.commoncoreontologies.org/AgentOntology/Post> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000178> ;
+                                                          rdfs:label "Post" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Social_Media
+<https://www.commoncoreontologies.org/AgentOntology/Social_Media> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <https://www.commoncoreontologies.org/ont00002001> ;
+                                                                  rdfs:label "Social Media" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/airline_reservation
+<https://www.commoncoreontologies.org/AgentOntology/airline_reservation> rdf:type owl:Class ;
+                                                                         rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/reservation> ;
+                                                                         rdfs:label "airline reservation information" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/airport
+<https://www.commoncoreontologies.org/AgentOntology/airport> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/building> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/arrival_airport
+<https://www.commoncoreontologies.org/AgentOntology/arrival_airport> rdf:type owl:Class ;
+                                                                     rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/airport> ;
+                                                                     rdfs:label "Arrival airport" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/boarding_pass
+<https://www.commoncoreontologies.org/AgentOntology/boarding_pass> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/pass> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/building
+<https://www.commoncoreontologies.org/AgentOntology/building> rdf:type owl:Class ;
+                                                              rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> ;
+                                                              rdfs:label "Building" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/concert_attendee
+<https://www.commoncoreontologies.org/AgentOntology/concert_attendee> rdf:type owl:Class ;
+                                                                      rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                                      rdfs:label "concert attendee" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information
+<https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information> rdf:type owl:Class ;
+                                                                                     rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/reservation> ;
+                                                                                     rdfs:label "concert reservation information" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/concert_ticket
+<https://www.commoncoreontologies.org/AgentOntology/concert_ticket> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/ticket> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/departure_airport
+<https://www.commoncoreontologies.org/AgentOntology/departure_airport> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/airport> ;
+                                                                       rdfs:label "Departure airport" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/driver_license
+<https://www.commoncoreontologies.org/AgentOntology/driver_license> rdf:type owl:Class ;
+                                                                    rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/personal_identification> ;
+                                                                    rdfs:label "driver's license" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/event_venue
+<https://www.commoncoreontologies.org/AgentOntology/event_venue> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000544> ;
+                                                                 rdfs:label "concert venue" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/facebook_user
+<https://www.commoncoreontologies.org/AgentOntology/facebook_user> rdf:type owl:Class ;
+                                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/social_media_user> ;
+                                                                   rdfs:label "Facebook user" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/guest
+<https://www.commoncoreontologies.org/AgentOntology/guest> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                           rdfs:label "guest" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/hotel
+<https://www.commoncoreontologies.org/AgentOntology/hotel> rdf:type owl:Class ;
+                                                           rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/building> ;
+                                                           rdfs:label "hotel" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_information
+<https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_information> rdf:type owl:Class ;
+                                                                                   rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/reservation> ;
+                                                                                   rdfs:label "hotel reservation information" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/license
+<https://www.commoncoreontologies.org/AgentOntology/license> rdf:type owl:Class ;
+                                                             rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000178> ;
+                                                             rdfs:label "license" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/organization
+<https://www.commoncoreontologies.org/AgentOntology/organization> rdf:type owl:Class ;
+                                                                  rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027> ;
+                                                                  rdfs:label "Organization" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/pass
+<https://www.commoncoreontologies.org/AgentOntology/pass> rdf:type owl:Class ;
+                                                          rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000178> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/passenger
+<https://www.commoncoreontologies.org/AgentOntology/passenger> rdf:type owl:Class ;
+                                                               rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                               rdfs:label "passenger" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/person
+<https://www.commoncoreontologies.org/AgentOntology/person> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/personal_identification
+<https://www.commoncoreontologies.org/AgentOntology/personal_identification> rdf:type owl:Class ;
+                                                                             rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000686> ;
+                                                                             rdfs:label "personal identification" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/reservation
+<https://www.commoncoreontologies.org/AgentOntology/reservation> rdf:type owl:Class ;
+                                                                 rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000030> ;
+                                                                 rdfs:label "reservation information" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/social_media_user
+<https://www.commoncoreontologies.org/AgentOntology/social_media_user> rdf:type owl:Class ;
+                                                                       rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000023> ;
+                                                                       rdfs:label "social media user" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/terrorist_organization
+<https://www.commoncoreontologies.org/AgentOntology/terrorist_organization> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf <https://www.commoncoreontologies.org/AgentOntology/organization> ;
+                                                                            rdfs:label "Terrorist organization" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/ticket
+<https://www.commoncoreontologies.org/AgentOntology/ticket> rdf:type owl:Class ;
+                                                            rdfs:subClassOf <http://purl.obolibrary.org/obo/IAO_0000178> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://example.org/ontologies/intel-ontology#hotel_reservation_01
+<https://example.org/ontologies/intel-ontology#hotel_reservation_01> rdf:type owl:NamedIndividual ,
+                                                                              <https://example.org/ontologies/intel-ontology#hotel_reservation> ;
+                                                                     <http://purl.obolibrary.org/obo/BFO_0000101> <https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_01> ;
+                                                                     rdfs:label "hotel reservation 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology#driver's_license_01
+<https://www.commoncoreontologies.org/AgentOntology#driver's_license_01> rdf:type owl:NamedIndividual ,
+                                                                                  <https://www.commoncoreontologies.org/AgentOntology#driver's_license> ;
+                                                                         <http://purl.obolibrary.org/obo/BFO_0000101> <https://www.commoncoreontologies.org/AgentOntology/driver_license_01> ;
+                                                                         rdfs:label "driver's license 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_Posting_01
+<https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_Posting_01> rdf:type owl:NamedIndividual ,
+                                                                                         <https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_posting> ;
+                                                                                <https://www.commoncoreontologies.org/ont00001986> <https://www.commoncoreontologies.org/AgentOntology/Post_01> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan_01
+<https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan_01> rdf:type owl:NamedIndividual ,
+                                                                                    <https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan> ;
+                                                                           <http://purl.obolibrary.org/obo/BFO_0000059> <https://www.commoncoreontologies.org/AgentOntology/Flight_plan_01> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Commercial_airplane_01
+<https://www.commoncoreontologies.org/AgentOntology/Commercial_airplane_01> rdf:type owl:NamedIndividual ,
+                                                                                     <https://www.commoncoreontologies.org/AgentOntology/Commcercial_airplane> ;
+                                                                            <http://purl.obolibrary.org/obo/BFO_0000056> <https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan_01> ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_ICAO_Telephony> "JETBLUE" ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_ICAO_code> "JBU" ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_MSN> 3808 ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_Mode_S_Hex_Code> "AAFCA8" ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_tail_number> "N807JB" ;
+                                                                            rdfs:label "Commercial airplane" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Concert_Ticket_01
+<https://www.commoncoreontologies.org/AgentOntology/Concert_Ticket_01> rdf:type owl:NamedIndividual ,
+                                                                                <https://www.commoncoreontologies.org/AgentOntology/concert_ticket> ,
+                                                                                <https://www.commoncoreontologies.org/AgentOntology/ticket> ;
+                                                                       <http://purl.obolibrary.org/obo/BFO_0000101> <https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information_01> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Facebook_Post_Information_01
+<https://www.commoncoreontologies.org/AgentOntology/Facebook_Post_Information_01> rdf:type owl:NamedIndividual ,
+                                                                                           <https://www.commoncoreontologies.org/AgentOntology/Facebook_Post> ;
+                                                                                  <http://purl.obolibrary.org/obo/BFO_0000084> <https://www.commoncoreontologies.org/AgentOntology/Post_01> ;
+                                                                                  <http://purl.obolibrary.org/obo/IAO_0000136> <https://www.commoncoreontologies.org/AgentOntology/concert_attack> ;
+                                                                                  rdfs:label "Facebook Post Information 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Flight_plan_01
+<https://www.commoncoreontologies.org/AgentOntology/Flight_plan_01> rdf:type owl:NamedIndividual ,
+                                                                             <https://www.commoncoreontologies.org/AgentOntology/Flight_plan> ;
+                                                                    <http://purl.obolibrary.org/obo/IAO_0000136> <https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan_01> ;
+                                                                    <https://www.commoncoreontologies.org/AgentOntology/has_arrival_airport> "'O\\'Hare International Airport'" ;
+                                                                    <https://www.commoncoreontologies.org/AgentOntology/has_departure_airport> "'Baltimore Washington International Airport'" ;
+                                                                    rdfs:label "Flight plan 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Post_01
+<https://www.commoncoreontologies.org/AgentOntology/Post_01> rdf:type owl:NamedIndividual ,
+                                                                      <https://www.commoncoreontologies.org/AgentOntology/Post> ;
+                                                             <http://purl.obolibrary.org/obo/BFO_0000101> <https://www.commoncoreontologies.org/AgentOntology/Facebook_Post_Information_01> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/Terrorist_profile_01
+<https://www.commoncoreontologies.org/AgentOntology/Terrorist_profile_01> rdf:type owl:NamedIndividual ;
+                                                                          rdfs:label "Person of Interest Information 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/airline_reservation_01
+<https://www.commoncoreontologies.org/AgentOntology/airline_reservation_01> rdf:type owl:NamedIndividual ,
+                                                                                     <https://www.commoncoreontologies.org/AgentOntology/airline_reservation> ;
+                                                                            <http://purl.obolibrary.org/obo/BFO_0000084> <https://www.commoncoreontologies.org/AgentOntology/boarding_pass_01> ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_arrival_airport> "O'Hare International Airport" ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_boarding_gate> "A" ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_boarding_group> 1 ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_departure_airport> "Baltimore Washington International Airport" ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_first_name> "John" ;
+                                                                            <https://www.commoncoreontologies.org/AgentOntology/has_last_name> "Smith" ;
+                                                                            rdfs:label "airline_reservation_information_01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/arrival_airport_01
+<https://www.commoncoreontologies.org/AgentOntology/arrival_airport_01> rdf:type owl:NamedIndividual ,
+                                                                                 <https://www.commoncoreontologies.org/AgentOntology/arrival_airport> ;
+                                                                        rdfs:label "O'Hare International Airport" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/boarding_pass_01
+<https://www.commoncoreontologies.org/AgentOntology/boarding_pass_01> rdf:type owl:NamedIndividual ,
+                                                                               <https://www.commoncoreontologies.org/AgentOntology/boarding_pass> ;
+                                                                      <http://purl.obolibrary.org/obo/BFO_0000101> <https://www.commoncoreontologies.org/AgentOntology/airline_reservation_01> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/concert_attack
+<https://www.commoncoreontologies.org/AgentOntology/concert_attack> rdf:type owl:NamedIndividual ,
+                                                                             <https://www.commoncoreontologies.org/ont00000654> ;
+                                                                    rdfs:label "concert attack" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information_01
+<https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information_01> rdf:type owl:NamedIndividual ,
+                                                                                                 <https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information> ;
+                                                                                        <http://purl.obolibrary.org/obo/BFO_0000084> <https://www.commoncoreontologies.org/AgentOntology/Concert_Ticket_01> .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/departure_airport_01
+<https://www.commoncoreontologies.org/AgentOntology/departure_airport_01> rdf:type owl:NamedIndividual ,
+                                                                                   <https://www.commoncoreontologies.org/AgentOntology/departure_airport> ;
+                                                                          rdfs:label "Baltimore Washington International Airport" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/driver_license_01
+<https://www.commoncoreontologies.org/AgentOntology/driver_license_01> rdf:type owl:NamedIndividual ,
+                                                                                <https://www.commoncoreontologies.org/AgentOntology/driver_license> ;
+                                                                       <http://purl.obolibrary.org/obo/BFO_0000084> <https://www.commoncoreontologies.org/AgentOntology#driver's_license_01> ;
+                                                                       <https://www.commoncoreontologies.org/ont00001916> <https://www.commoncoreontologies.org/AgentOntology/person_01> ;
+                                                                       <https://www.commoncoreontologies.org/AgentOntology/has_first_name> "John" ;
+                                                                       <https://www.commoncoreontologies.org/AgentOntology/has_last_name> "Smith" ;
+                                                                       rdfs:label "Driver's License Information" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/event_venue_01
+<https://www.commoncoreontologies.org/AgentOntology/event_venue_01> rdf:type owl:NamedIndividual ,
+                                                                             <https://www.commoncoreontologies.org/AgentOntology/event_venue> ;
+                                                                    rdfs:label "The Chicago Theatre" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/facebook_user_01
+<https://www.commoncoreontologies.org/AgentOntology/facebook_user_01> rdf:type owl:NamedIndividual ,
+                                                                               <https://www.commoncoreontologies.org/AgentOntology/facebook_user> ;
+                                                                      rdfs:label "Facebook user" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/guest_01
+<https://www.commoncoreontologies.org/AgentOntology/guest_01> rdf:type owl:NamedIndividual ,
+                                                                       <https://www.commoncoreontologies.org/AgentOntology/guest> ;
+                                                              rdfs:label "Hampton Inn Chicago Guest" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/hotel_01
+<https://www.commoncoreontologies.org/AgentOntology/hotel_01> rdf:type owl:NamedIndividual ,
+                                                                       <https://www.commoncoreontologies.org/AgentOntology/hotel> ;
+                                                              rdfs:label "Hampton Inn Chicago" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_01
+<https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_01> rdf:type owl:NamedIndividual ,
+                                                                                   <https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_information> ;
+                                                                          <http://purl.obolibrary.org/obo/BFO_0000084> <https://example.org/ontologies/intel-ontology#hotel_reservation_01> ;
+                                                                          <https://www.commoncoreontologies.org/AgentOntology/has_first_name> "John" ;
+                                                                          <https://www.commoncoreontologies.org/AgentOntology/has_last_name> "Smith" ;
+                                                                          <https://www.commoncoreontologies.org/AgentOntology/has_reservation_number> "ABCD12345" ;
+                                                                          rdfs:label "hotel reservation information 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/passenger_01
+<https://www.commoncoreontologies.org/AgentOntology/passenger_01> rdf:type owl:NamedIndividual ,
+                                                                           <https://www.commoncoreontologies.org/AgentOntology/Jetblue_passenger> ,
+                                                                           <https://www.commoncoreontologies.org/AgentOntology/passenger> ;
+                                                                  rdfs:label "Jetblue passenger" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/person_01
+<https://www.commoncoreontologies.org/AgentOntology/person_01> rdf:type owl:NamedIndividual ,
+                                                                        <https://www.commoncoreontologies.org/AgentOntology/person> ;
+                                                               <http://purl.obolibrary.org/obo/BFO_0000056> <https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_Posting_01> ;
+                                                               <https://www.commoncoreontologies.org/AgentOntology/is_author_of> <https://www.commoncoreontologies.org/AgentOntology/Post_01> ;
+                                                               <https://www.commoncoreontologies.org/AgentOntology/possesses> <https://example.org/ontologies/intel-ontology#hotel_reservation_01> ,
+                                                                                                                              <https://www.commoncoreontologies.org/AgentOntology#driver's_license_01> ,
+                                                                                                                              <https://www.commoncoreontologies.org/AgentOntology/Concert_Ticket_01> ,
+                                                                                                                              <https://www.commoncoreontologies.org/AgentOntology/boarding_pass_01> ;
+                                                               rdfs:label "John Smith" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/proper_name_01
+<https://www.commoncoreontologies.org/AgentOntology/proper_name_01> rdf:type owl:NamedIndividual ,
+                                                                             <https://www.commoncoreontologies.org/ont00001331> ;
+                                                                    <http://purl.obolibrary.org/obo/IAO_0000136> <https://www.commoncoreontologies.org/AgentOntology/person_01> ;
+                                                                    <https://www.commoncoreontologies.org/AgentOntology/has_first_name> "John" ;
+                                                                    <https://www.commoncoreontologies.org/AgentOntology/has_last_name> "Smith" ;
+                                                                    rdfs:label "proper name 01" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/sympathizer_01
+<https://www.commoncoreontologies.org/AgentOntology/sympathizer_01> rdf:type owl:NamedIndividual ;
+                                                                    rdfs:label "terrorist sympathizer" .
+
+
+###  https://www.commoncoreontologies.org/AgentOntology/terrorist_organization_01
+<https://www.commoncoreontologies.org/AgentOntology/terrorist_organization_01> rdf:type owl:NamedIndividual ,
+                                                                                        <https://www.commoncoreontologies.org/AgentOntology/terrorist_organization> ;
+                                                                               rdfs:label "The Rising Dawn" .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ owl:intersectionOf ( <https://www.commoncoreontologies.org/AgentOntology/person>
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://www.commoncoreontologies.org/AgentOntology/is_author_of> ;
+                         owl:someValuesFrom [ owl:intersectionOf ( <https://www.commoncoreontologies.org/AgentOntology/Post>
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                                     owl:someValuesFrom <https://www.commoncoreontologies.org/AgentOntology/Facebook_Post>
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ]
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                    owl:someValuesFrom <https://www.commoncoreontologies.org/AgentOntology/social_media_user>
+                  ]
+] .
+
+
+[ owl:intersectionOf ( <https://www.commoncoreontologies.org/AgentOntology/person>
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://www.commoncoreontologies.org/AgentOntology/is_author_of> ;
+                         owl:someValuesFrom [ owl:intersectionOf ( <https://www.commoncoreontologies.org/AgentOntology/Post>
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                                     owl:someValuesFrom [ owl:intersectionOf ( <https://www.commoncoreontologies.org/AgentOntology/Facebook_Post>
+                                                                                                               [ rdf:type owl:Restriction ;
+                                                                                                                 owl:onProperty <http://purl.obolibrary.org/obo/IAO_0000136> ;
+                                                                                                                 owl:hasValue <https://www.commoncoreontologies.org/AgentOntology/concert_attack>
+                                                                                                               ]
+                                                                                                             ) ;
+                                                                                          rdf:type owl:Class
+                                                                                        ]
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ]
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://www.commoncoreontologies.org/AgentOntology/possesses> ;
+                         owl:someValuesFrom <https://example.org/ontologies/intel-ontology#hotel_reservation>
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://www.commoncoreontologies.org/AgentOntology/possesses> ;
+                         owl:someValuesFrom <https://www.commoncoreontologies.org/AgentOntology/boarding_pass>
+                       ]
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://www.commoncoreontologies.org/AgentOntology/possesses> ;
+                         owl:someValuesFrom <https://www.commoncoreontologies.org/AgentOntology/concert_ticket>
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                    owl:someValuesFrom <https://www.commoncoreontologies.org/AgentOntology/Person_Of_Interest>
+                  ]
+] .
+
+
+[ owl:intersectionOf ( <https://www.commoncoreontologies.org/AgentOntology/person>
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://www.commoncoreontologies.org/AgentOntology/possesses> ;
+                         owl:someValuesFrom [ owl:intersectionOf ( <https://www.commoncoreontologies.org/AgentOntology/boarding_pass>
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                                     owl:someValuesFrom <https://www.commoncoreontologies.org/AgentOntology/airline_reservation>
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ]
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                    owl:someValuesFrom <https://www.commoncoreontologies.org/AgentOntology/Jetblue_passenger>
+                  ]
+] .
+
+
+[ owl:intersectionOf ( <https://www.commoncoreontologies.org/AgentOntology/person>
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty <https://www.commoncoreontologies.org/AgentOntology/possesses> ;
+                         owl:someValuesFrom [ owl:intersectionOf ( <https://www.commoncoreontologies.org/AgentOntology/concert_ticket>
+                                                                   [ rdf:type owl:Restriction ;
+                                                                     owl:onProperty <http://purl.obolibrary.org/obo/BFO_0000101> ;
+                                                                     owl:someValuesFrom <https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information>
+                                                                   ]
+                                                                 ) ;
+                                              rdf:type owl:Class
+                                            ]
+                       ]
+                     ) ;
+  rdf:type owl:Class ;
+  rdfs:subClassOf [ rdf:type owl:Restriction ;
+                    owl:onProperty <http://purl.obolibrary.org/obo/RO_0000087> ;
+                    owl:someValuesFrom <https://www.commoncoreontologies.org/AgentOntology/concert_attendee>
+                  ]
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( <http://purl.obolibrary.org/obo/BFO_0000004>
+                <http://purl.obolibrary.org/obo/BFO_0000020>
+                <http://purl.obolibrary.org/obo/BFO_0000031>
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.29) https://github.com/owlcs/owlapi

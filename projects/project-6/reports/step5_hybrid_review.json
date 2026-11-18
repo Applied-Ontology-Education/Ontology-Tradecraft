@@ -1,0 +1,128 @@
+{
+  "all_human_review_required": true,
+  "candidate_relationships": [
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "",
+      "llm_plausibility": null,
+      "llm_rationale": "",
+      "parent": "https://example.org/ontologies/intel-ontology#train",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "",
+      "llm_plausibility": null,
+      "llm_rationale": "",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "",
+      "llm_plausibility": null,
+      "llm_rationale": "",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "",
+      "llm_plausibility": null,
+      "llm_rationale": "",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "cosine": 0.215456,
+      "cosine_evidence": "HELD_OUT_INDEPENDENT",
+      "hybrid_score": null,
+      "llm_concern": "",
+      "llm_plausibility": null,
+      "llm_rationale": "",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "",
+      "llm_plausibility": null,
+      "llm_rationale": "",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "",
+      "llm_plausibility": null,
+      "llm_rationale": "",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#railway_station",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "",
+      "llm_plausibility": null,
+      "llm_rationale": "",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "cosine": 0.037228,
+      "cosine_evidence": "HELD_OUT_INDEPENDENT",
+      "hybrid_score": null,
+      "llm_concern": "",
+      "llm_plausibility": null,
+      "llm_rationale": "",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    }
+  ],
+  "hybrid_scored_pairs": 0,
+  "llm_model": null,
+  "llm_ratings_executed": false,
+  "merges_performed": 0,
+  "method": "70% held-out cosine + 30% LLM only when held-out evidence exists; no score fabricated for cold-start/in-training candidate links",
+  "note": "Cosine is not logical validity. Separate OWL reasoner and ticket-information scope review remain mandatory.",
+  "refined_sha256": "f27f752d3b89200d2d58ee87f5128d57ffc215a1792997c26bc472db71901566",
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "status": "COSINE_ONLY_LLM_NOT_RUN",
+  "unscored_independent_cosine": 7,
+  "version": "project6-elembeddings-hybrid-80-20-v2",
+  "weights": {
+    "cosine": 0.7,
+    "llm": 0.3
+  }
+}
