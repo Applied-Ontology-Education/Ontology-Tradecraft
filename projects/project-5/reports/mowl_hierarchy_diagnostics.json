@@ -1,0 +1,200 @@
+{
+  "direct_training_pairs": 82,
+  "training_closure_pairs": 158,
+  "transitive_only_training_pairs": 76,
+  "validation_pairs": 21,
+  "validation_direct_overlap": 0,
+  "validation_entailed_by_training": 0,
+  "validation_transitively_entailed": 0,
+  "validation_details": [
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000026",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000019",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000126",
+      "superclass": "https://www.commoncoreontologies.org/ont00001152",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000129",
+      "superclass": "https://www.commoncoreontologies.org/ont00000084",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000173",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000405",
+      "superclass": "https://www.commoncoreontologies.org/ont00001152",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000426",
+      "superclass": "https://www.commoncoreontologies.org/ont00000274",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000443",
+      "superclass": "https://www.commoncoreontologies.org/ont00001180",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000485",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000507",
+      "superclass": "https://www.commoncoreontologies.org/ont00000914",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000551",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000030",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000553",
+      "superclass": "https://www.commoncoreontologies.org/ont00001324",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000564",
+      "superclass": "https://www.commoncoreontologies.org/ont00001180",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000576",
+      "superclass": "https://www.commoncoreontologies.org/ont00000084",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000645",
+      "superclass": "https://www.commoncoreontologies.org/ont00001262",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000662",
+      "superclass": "https://www.commoncoreontologies.org/ont00001341",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000837",
+      "superclass": "https://www.commoncoreontologies.org/ont00000914",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000860",
+      "superclass": "https://www.commoncoreontologies.org/ont00001262",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000917",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000987",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001017",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001062",
+      "superclass": "https://www.commoncoreontologies.org/ont00000300",
+      "directly_present_in_training": false,
+      "entailed_by_training_hierarchy": false,
+      "transitively_entailed": false,
+      "training_path": null,
+      "path_length": null
+    }
+  ]
+}

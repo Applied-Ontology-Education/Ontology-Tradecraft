@@ -1,0 +1,14 @@
+{
+  "stage": "direct_weighted",
+  "lambda_direct": 0.5,
+  "lambda_transitive": 0.0,
+  "epochs": 100,
+  "learning_rate": 0.0001,
+  "validation_mean": 0.5571294579477537,
+  "validation_median": 0.6605595350265503,
+  "validation_minimum": -0.08513271808624268,
+  "validation_maximum": 0.9696952700614929,
+  "direct_training_cosine": 0.8848480582237244,
+  "transitive_training_cosine": 0.7431333065032959,
+  "selected_tau": null
+}

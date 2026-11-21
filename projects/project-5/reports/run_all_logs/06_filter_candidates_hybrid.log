@@ -1,0 +1,524 @@
+COMMAND
+==============================================================================
+C:\Users\cappa\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe C:\Users\cappa\Ontology-Tradecraft\projects\project-5\scripts\filter_candidates_hybrid.py
+
+OUTPUT
+==============================================================================
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.jpype.JPypeContext in an unnamed module (file:/C:/Users/cappa/Ontology-Tradecraft/.venv-mowl/Lib/site-packages/org.jpype.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.cache.UnsafeAccess (file:/C:/Users/cappa/Ontology-Tradecraft/.venv-mowl/Lib/site-packages/mowl/lib/caffeine-2.8.6.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.cache.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:openai._base_client:Retrying request in 0.391917 seconds (retry 1 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.380486 seconds (retry 1 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.939310 seconds (retry 2 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.453625 seconds (retry 1 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.785501 seconds (retry 2 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+HYBRID_FILTER_VERSION  : hybrid-mowl-llm-filter-v2-semantic-floor-reciprocal-guard
+
+==============================================================================
+PROJECT 5 - HYBRID MOWL + LLM FILTER V2
+==============================================================================
+
+Candidate ontology      : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\candidate_el.ttl
+Accepted ontology       : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\accepted_el.ttl
+
+mOWL weight             : 0.70
+LLM weight              : 0.30
+Hybrid threshold        : 0.60
+LLM semantic floor      : 0.50
+Reciprocal guard        : ENABLED
+
+Named candidate pairs   : 187
+Skipped candidates      : 0
+Definition records      : 139
+
+Initializing mOWL JVM...
+JVM initialized.
+
+Rebuilding frozen v8 training ontology...
+Import closure          : 7
+Root axioms             : 948
+Broad signature entities: 982
+Declarations added      : 824
+Indexed classes         : 663
+Imported logical axioms: NOT INCLUDED
+
+Loading frozen v8 native ELEmbeddings...
+Native ELEmbeddings loaded.
+
+Frozen v8 residual MLP loaded.
+  hidden size           : 32
+  residual scale        : 0.25
+  validation mean       : 0.7134455018455074
+
+Frozen v8 reconstruction check:
+  validation pairs      : 21
+  max cosine difference : 0.00000000
+  reconstruction        : PASS
+
+Cached LLM judgments    : 0
+
+==============================================================================
+PASS 1 - HYBRID + SEMANTIC FLOOR
+==============================================================================
+
+[001/187] REJECT_LLM_FLOOR     cos=+0.9010 llm=0.2500 hybrid=0.7057  Incorporated Organization -> Commercial Organization
+[002/187] REJECT_HYBRID        cos=+0.4237 llm=0.1500 hybrid=0.3416  Incorporated Organization -> Agent
+[003/187] REJECT_LLM_FLOOR     cos=+0.9565 llm=0.0500 hybrid=0.6846  Incorporated Organization -> Civil Organization
+[004/187] REJECT_HYBRID        cos=+0.4253 llm=0.7200 hybrid=0.5137  Province -> BFO_0000024
+[005/187] REJECT_HYBRID        cos=+0.0967 llm=0.1200 hybrid=0.1037  Province -> BFO_0000040
+[006/187] REJECT_HYBRID        cos=+0.7282 llm=0.0800 hybrid=0.5337  Province -> Material Territory of a Country
+[007/187] REJECT_HYBRID        cos=+0.7297 llm=0.0800 hybrid=0.5348  Province -> Material Territory of a Government Domain
+[008/187] REJECT_HYBRID        cos=-0.1582 llm=0.2800 hybrid=-0.0267  Province -> Division of Delimiting Domain
+[009/187] PRELIMINARY_ACCEPT   cos=+0.6585 llm=0.7600 hybrid=0.6890  Scalp Hair -> BFO_0000027
+[010/187] REJECT_HYBRID        cos=+0.5803 llm=0.3200 hybrid=0.5022  Scalp Hair -> BFO_0000030
+[011/187] PRELIMINARY_ACCEPT   cos=+0.4927 llm=0.9600 hybrid=0.6329  Scalp Hair -> BFO_0000040
+[012/187] REJECT_HYBRID        cos=+0.4444 llm=0.5000 hybrid=0.4610  Town -> BFO_0000024
+[013/187] REJECT_LLM_FLOOR     cos=+0.9421 llm=0.2800 hybrid=0.7435  Town -> Third-Order Administrative Region
+[014/187] REJECT_LLM_FLOOR     cos=+0.8301 llm=0.2500 hybrid=0.6561  Town -> Fourth-Order Administrative Region
+[015/187] REJECT_HYBRID        cos=+0.7628 llm=0.1500 hybrid=0.5790  Town -> Material Territory of a Government Domain
+[016/187] REJECT_HYBRID        cos=-0.1549 llm=0.1500 hybrid=-0.0634  Town -> Division of Delimiting Domain
+[017/187] PRELIMINARY_ACCEPT   cos=+0.5748 llm=0.9700 hybrid=0.6933  Bodily Component -> BFO_0000040
+[018/187] REJECT_HYBRID        cos=+0.0071 llm=0.9000 hybrid=0.2750  Skill -> BFO_0000016
+[019/187] REJECT_LLM_FLOOR     cos=+0.9660 llm=0.2700 hybrid=0.7572  First-Order Administrative Region -> Domain of a Country
+[020/187] REJECT_HYBRID        cos=-0.1525 llm=0.2800 hybrid=-0.0228  First-Order Administrative Region -> Division of Delimiting Domain
+[021/187] REJECT_HYBRID        cos=+0.5513 llm=0.1800 hybrid=0.4399  Tattoo -> BFO_0000030
+[022/187] PRELIMINARY_ACCEPT   cos=+0.5142 llm=0.8800 hybrid=0.6239  Tattoo -> BFO_0000040
+[023/187] REJECT_HYBRID        cos=+0.4189 llm=0.3300 hybrid=0.3923  Third-Order Administrative Region -> BFO_0000024
+[024/187] REJECT_LLM_FLOOR     cos=+0.9705 llm=0.3600 hybrid=0.7873  Third-Order Administrative Region -> Local Administrative Region
+[025/187] REJECT_HYBRID        cos=+0.6947 llm=0.0800 hybrid=0.5103  Third-Order Administrative Region -> Material Territory of a Government Domain
+[026/187] REJECT_HYBRID        cos=-0.1067 llm=0.2800 hybrid=0.0093  Third-Order Administrative Region -> Division of Delimiting Domain
+[027/187] REJECT_HYBRID        cos=+0.3826 llm=0.2800 hybrid=0.3518  Domain of a Country -> BFO_0000024
+[028/187] REJECT_HYBRID        cos=+0.0805 llm=0.1200 hybrid=0.0924  Domain of a Country -> BFO_0000040
+[029/187] REJECT_HYBRID        cos=+0.5187 llm=0.3500 hybrid=0.4681  Facial Hair -> BFO_0000027
+[030/187] PRELIMINARY_ACCEPT   cos=+0.5762 llm=0.9200 hybrid=0.6793  Facial Hair -> BFO_0000040
+[031/187] REJECT_HYBRID        cos=+0.2294 llm=0.9000 hybrid=0.4306  Geopolitical Organization -> BFO_0000040
+[032/187] REJECT_LLM_FLOOR     cos=+0.8851 llm=0.2800 hybrid=0.7036  Geopolitical Organization -> Government Organization
+[033/187] REJECT_HYBRID        cos=+0.4925 llm=0.8200 hybrid=0.5908  Geopolitical Organization -> Agent
+[034/187] REJECT_LLM_FLOOR     cos=+0.9208 llm=0.2800 hybrid=0.7286  Geopolitical Organization -> Government
+[035/187] REJECT_HYBRID        cos=-0.1970 llm=0.3600 hybrid=-0.0299  Affordance -> BFO_0000016
+[036/187] REJECT_HYBRID        cos=+0.2570 llm=0.5000 hybrid=0.3299  Affordance -> BFO_0000023
+[037/187] REJECT_HYBRID        cos=+0.0036 llm=0.9000 hybrid=0.2725  Language Skill -> BFO_0000016
+[038/187] REJECT_LLM_FLOOR     cos=+0.9291 llm=0.2800 hybrid=0.7344  Authority Role -> Organization Member Role
+[039/187] REJECT_LLM_FLOOR     cos=+0.8688 llm=0.1200 hybrid=0.6442  Authority Role -> Geopolitical Power Role
+[040/187] REJECT_LLM_FLOOR     cos=+0.9469 llm=0.2200 hybrid=0.7288  Authority Role -> Occupation Role
+[041/187] REJECT_LLM_FLOOR     cos=+0.9221 llm=0.3000 hybrid=0.7355  Armed Force -> Geopolitical Organization
+[042/187] PRELIMINARY_ACCEPT   cos=+0.9271 llm=0.8200 hybrid=0.8950  Armed Force -> Government Organization
+[043/187] PRELIMINARY_ACCEPT   cos=+0.9651 llm=0.5700 hybrid=0.8466  Armed Force -> Service Provider
+[044/187] REJECT_HYBRID        cos=+0.4421 llm=0.7200 hybrid=0.5255  Armed Force -> Agent
+[045/187] REJECT_LLM_FLOOR     cos=+0.9226 llm=0.1500 hybrid=0.6908  Enemy Role -> Interpersonal Relationship Role
+[046/187] REJECT_HYBRID        cos=+0.1260 llm=0.9500 hybrid=0.3732  Group of Agents -> BFO_0000040
+[047/187] REJECT_HYBRID        cos=+0.4356 llm=0.2500 hybrid=0.3799  Group of Agents -> Agent
+[048/187] REJECT_HYBRID        cos=-0.1088 llm=0.9200 hybrid=0.1999  Disease -> BFO_0000017
+[049/187] REJECT_HYBRID        cos=+0.0952 llm=0.5000 hybrid=0.2166  Nuclear Family -> BFO_0000040
+[050/187] REJECT_HYBRID        cos=+0.3961 llm=0.2500 hybrid=0.3522  Nuclear Family -> Agent
+[051/187] REJECT_LLM_FLOOR     cos=+0.9057 llm=0.2500 hybrid=0.7090  Nuclear Family -> Civil Organization
+[052/187] REJECT_HYBRID        cos=+0.0751 llm=0.5000 hybrid=0.2026  Citizen -> BFO_0000040
+[053/187] REJECT_LLM_FLOOR     cos=+0.9572 llm=0.2800 hybrid=0.7540  Citizen -> Organization Member
+[054/187] REJECT_HYBRID        cos=+0.3724 llm=0.3000 hybrid=0.3507  Citizen -> Agent
+[055/187] REJECT_LLM_FLOOR     cos=+0.9434 llm=0.2800 hybrid=0.7444  Allegiance Role -> Interpersonal Relationship Role
+[056/187] PRELIMINARY_ACCEPT   cos=+0.5496 llm=0.9700 hybrid=0.6757  Iris -> BFO_0000040
+[057/187] REJECT_LLM_FLOOR     cos=+0.9929 llm=0.2800 hybrid=0.7790  Second-Order Administrative Region -> Local Administrative Region
+[058/187] REJECT_HYBRID        cos=-0.1253 llm=0.3600 hybrid=0.0203  Second-Order Administrative Region -> Division of Delimiting Domain
+[059/187] REJECT_LLM_FLOOR     cos=+0.8851 llm=0.2800 hybrid=0.7036  Government Organization -> Geopolitical Organization
+[060/187] REJECT_LLM_FLOOR     cos=+0.9250 llm=0.3200 hybrid=0.7435  Government Organization -> Service Provider
+[061/187] REJECT_LLM_FLOOR     cos=+0.9245 llm=0.0200 hybrid=0.6531  Government Organization -> Organization MemberINFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.452617 seconds (retry 1 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.403390 seconds (retry 1 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.471454 seconds (retry 1 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+
+[062/187] REJECT_HYBRID        cos=+0.4261 llm=0.4800 hybrid=0.4423  Government Organization -> Agent
+[063/187] REJECT_HYBRID        cos=-0.3095 llm=0.1200 hybrid=-0.1806  Military Personnel Force -> Incorporated Organization
+[064/187] REJECT_HYBRID        cos=-0.2621 llm=0.3500 hybrid=-0.0784  Military Personnel Force -> Government Organization
+[065/187] REJECT_HYBRID        cos=+0.3612 llm=0.6700 hybrid=0.4538  Military Personnel Force -> Agent
+[066/187] REJECT_LLM_FLOOR     cos=+0.9010 llm=0.2200 hybrid=0.6967  Commercial Organization -> Incorporated Organization
+[067/187] REJECT_LLM_FLOOR     cos=+0.9190 llm=0.2800 hybrid=0.7273  Commercial Organization -> Service Provider
+[068/187] REJECT_HYBRID        cos=+0.4396 llm=0.2500 hybrid=0.3827  Commercial Organization -> Agent
+[069/187] REJECT_LLM_FLOOR     cos=+0.9330 llm=0.0200 hybrid=0.6591  Commercial Organization -> Civil Organization
+[070/187] REJECT_LLM_FLOOR     cos=+0.9991 llm=0.1200 hybrid=0.7353  Local Administrative Region -> First-Order Administrative Region
+[071/187] REJECT_LLM_FLOOR     cos=+0.9705 llm=0.2800 hybrid=0.7633  Local Administrative Region -> Third-Order Administrative Region
+[072/187] REJECT_LLM_FLOOR     cos=+0.9929 llm=0.2800 hybrid=0.7790  Local Administrative Region -> Second-Order Administrative Region
+[073/187] REJECT_LLM_FLOOR     cos=+0.8622 llm=0.2800 hybrid=0.6876  Local Administrative Region -> Fourth-Order Administrative Region
+[074/187] REJECT_HYBRID        cos=-0.1249 llm=0.1000 hybrid=-0.0574  Local Administrative Region -> Division of Delimiting Domain
+[075/187] REJECT_HYBRID        cos=+0.3926 llm=0.3000 hybrid=0.3648  Fourth-Order Administrative Region -> BFO_0000024
+[076/187] REJECT_LLM_FLOOR     cos=+0.8737 llm=0.1000 hybrid=0.6416  Fourth-Order Administrative Region -> BFO_0000030
+[077/187] REJECT_LLM_FLOOR     cos=+0.8622 llm=0.2800 hybrid=0.6876  Fourth-Order Administrative Region -> Local Administrative Region
+[078/187] REJECT_HYBRID        cos=-0.0110 llm=0.2700 hybrid=0.0733  Fourth-Order Administrative Region -> Division of Delimiting Domain
+[079/187] PRELIMINARY_ACCEPT   cos=+0.7351 llm=0.5000 hybrid=0.6646  Eye -> BFO_0000030
+[080/187] PRELIMINARY_ACCEPT   cos=+0.4452 llm=0.9700 hybrid=0.6027  Eye -> BFO_0000040
+[081/187] REJECT_LLM_FLOOR     cos=+0.8500 llm=0.1200 hybrid=0.6310  Contractor Role -> Commercial Role
+[082/187] REJECT_HYBRID        cos=+0.7755 llm=0.0500 hybrid=0.5578  Contractor Role -> Service Provider
+[083/187] REJECT_LLM_FLOOR     cos=+0.9521 llm=0.2800 hybrid=0.7505  Contractor Role -> Occupation Role
+[084/187] PRELIMINARY_ACCEPT   cos=+0.5396 llm=0.8600 hybrid=0.6357  Ethnic Group -> BFO_0000040
+[085/187] REJECT_HYBRID        cos=+0.4060 llm=0.1800 hybrid=0.3382  Ethnic Group -> Populace
+[086/187] REJECT_HYBRID        cos=+0.6441 llm=0.2500 hybrid=0.5259  Ethnic Group -> Agent
+[087/187] REJECT_HYBRID        cos=+0.4665 llm=0.2800 hybrid=0.4105  Ethnic Group -> Social Network
+[088/187] PRELIMINARY_ACCEPT   cos=+0.8763 llm=0.5000 hybrid=0.7634  Service Provider -> BFO_0000030
+[089/187] REJECT_HYBRID        cos=+0.2013 llm=0.8200 hybrid=0.3869  Service Provider -> BFO_0000040
+[090/187] REJECT_LLM_FLOOR     cos=+0.9674 llm=0.1800 hybrid=0.7312  Service Provider -> Incorporated Organization
+[091/187] REJECT_LLM_FLOOR     cos=+0.9190 llm=0.2200 hybrid=0.7093  Service Provider -> Commercial Organization
+[092/187] PRELIMINARY_ACCEPT   cos=+0.4986 llm=0.8800 hybrid=0.6130  Service Provider -> Agent
+[093/187] REJECT_LLM_FLOOR     cos=+0.9711 llm=0.0800 hybrid=0.7038  Government of a Country -> Government Organization
+[094/187] REJECT_HYBRID        cos=+0.5008 llm=0.3200 hybrid=0.4465  Government of a Country -> Agent
+[095/187] REJECT_HYBRID        cos=+0.0945 llm=0.9600 hybrid=0.3541  Organism -> BFO_0000040
+[096/187] REJECT_HYBRID        cos=+0.0871 llm=0.9600 hybrid=0.3490  Animal -> BFO_0000040
+[097/187] REJECT_HYBRID        cos=+0.3984 llm=0.3500 hybrid=0.3839  Animal -> Agent
+[098/187] REJECT_LLM_FLOOR     cos=+0.9309 llm=0.1200 hybrid=0.6876  Educational Organization -> BFO_0000030
+[099/187] REJECT_HYBRID        cos=+0.1550 llm=0.2800 hybrid=0.1925  Educational Organization -> BFO_0000040
+[100/187] PRELIMINARY_ACCEPT   cos=+0.9798 llm=0.9000 hybrid=0.9559  Educational Organization -> Service Provider
+[101/187] REJECT_HYBRID        cos=+0.4548 llm=0.2200 hybrid=0.3844  Educational Organization -> Agent
+[102/187] REJECT_LLM_FLOOR     cos=+0.9694 llm=0.2200 hybrid=0.7446  Educational Organization -> Civil Organization
+[103/187] REJECT_HYBRID        cos=+0.4387 llm=0.2800 hybrid=0.3911  Scalp -> BFO_0000030
+[104/187] PRELIMINARY_ACCEPT   cos=+0.5688 llm=0.9700 hybrid=0.6891  Scalp -> BFO_0000040
+[105/187] REJECT_LLM_FLOOR     cos=+0.9003 llm=0.2800 hybrid=0.7142  Religion -> Ideology
+[106/187] PRELIMINARY_ACCEPT   cos=+0.5677 llm=0.8800 hybrid=0.6614  Material Territory of a Country -> BFO_0000024
+[107/187] REJECT_HYBRID        cos=+0.7201 llm=0.2800 hybrid=0.5880  Material Territory of a Country -> BFO_0000027
+[108/187] REJECT_HYBRID        cos=+0.1387 llm=0.9700 hybrid=0.3881  Material Territory of a Country -> BFO_0000040
+[109/187] REJECT_HYBRID        cos=+0.1221 llm=0.9300 hybrid=0.3644  Permanent Resident -> BFO_0000040
+[110/187] REJECT_HYBRID        cos=+0.4011 llm=0.4200 hybrid=0.4068  Permanent Resident -> Agent
+[111/187] REJECT_HYBRID        cos=+0.1277 llm=0.9300 hybrid=0.3684  Organization Member -> BFO_0000040
+[112/187] REJECT_HYBRID        cos=+0.4243 llm=0.8300 hybrid=0.5460  Organization Member -> Agent
+[113/187] PRELIMINARY_ACCEPT   cos=+0.5709 llm=0.8800 hybrid=0.6636  Material Territory of a Government Domain -> BFO_0000024
+[114/187] REJECT_HYBRID        cos=+0.7277 llm=0.2800 hybrid=0.5934  Material Territory of a Government Domain -> BFO_0000027
+[115/187] REJECT_HYBRID        cos=+0.6571 llm=0.2800 hybrid=0.5439  Material Territory of a Government Domain -> BFO_0000030
+[116/187] REJECT_HYBRID        cos=+0.1383 llm=0.9500 hybrid=0.3818  Material Territory of a Government Domain -> BFO_0000040
+[117/187] REJECT_HYBRID        cos=+0.0399 llm=0.9300 hybrid=0.3069  Neutral Person -> BFO_0000040
+[118/187] REJECT_HYBRID        cos=+0.3436 llm=0.3200 hybrid=0.3365  Neutral Person -> Agent
+[119/187] REJECT_HYBRID        cos=+0.2664 llm=0.1200 hybrid=0.2225  Government Domain Border -> Division of Delimiting Domain
+[120/187] REJECT_HYBRID        cos=+0.5245 llm=0.0800 hybrid=0.3911  Government Domain Border -> Delimiting Domain
+[121/187] REJECT_HYBRID        cos=+0.1089 llm=0.9200 hybrid=0.3522  Enemy Person -> BFO_0000040
+[122/187] REJECT_HYBRID        cos=+0.4270 llm=0.5000 hybrid=0.4489  Enemy Person -> Agent
+[123/187] REJECT_LLM_FLOOR     cos=+0.9381 llm=0.2500 hybrid=0.7317  Village -> Third-Order Administrative Region
+[124/187] REJECT_LLM_FLOOR     cos=+0.8242 llm=0.2500 hybrid=0.6520  Village -> Fourth-Order Administrative Region
+[125/187] REJECT_HYBRID        cos=+0.0957 llm=0.5000 hybrid=0.2170  Family -> BFO_0000040
+[126/187] PRELIMINARY_ACCEPT   cos=+0.9281 llm=0.8600 hybrid=0.9076  Family -> Social Network
+[127/187] REJECT_HYBRID        cos=+0.0989 llm=0.9300 hybrid=0.3482  Allied Person -> BFO_0000040
+[128/187] REJECT_HYBRID        cos=+0.3890 llm=0.8200 hybrid=0.5183  Allied Person -> Agent
+[129/187] REJECT_HYBRID        cos=+0.0771 llm=0.9700 hybrid=0.3449  Plant -> BFO_0000040
+[130/187] REJECT_LLM_FLOOR     cos=+0.9346 llm=0.2500 hybrid=0.7292  City -> Third-Order Administrative Region
+[131/187] REJECT_LLM_FLOOR     cos=+0.9628 llm=0.2800 hybrid=0.7580  City -> Second-Order Administrative Region
+[132/187] REJECT_LLM_FLOOR     cos=+0.8169 llm=0.2500 hybrid=0.6468  City -> Fourth-Order Administrative Region
+[133/187] REJECT_HYBRID        cos=+0.7728 llm=0.1200 hybrid=0.5770  City -> Material Territory of a Government Domain
+[134/187] REJECT_HYBRID        cos=-0.1388 llm=0.1800 hybrid=-0.0432  City -> Division of Delimiting Domain
+[135/187] REJECT_HYBRID        cos=+0.1201 llm=0.5000 hybrid=0.2341  Geopolitical Power Role -> BFO_0000017
+[136/187] REJECT_LLM_FLOOR     cos=+0.8688 llm=0.2800 hybrid=0.6922  Geopolitical Power Role -> Authority RoleINFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.469479 seconds (retry 1 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.449983 seconds (retry 1 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.389569 seconds (retry 1 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 429 Too Many Requests"
+INFO:openai._base_client:Retrying request in 0.751353 seconds (retry 2 of 2)
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+INFO:httpx2:HTTP Request: POST https://api.x.ai/v1/responses "HTTP/1.1 200 OK"
+
+[137/187] REJECT_HYBRID        cos=+0.0960 llm=0.9100 hybrid=0.3402  Group of Persons -> BFO_0000040
+[138/187] REJECT_LLM_FLOOR     cos=+0.9990 llm=0.1600 hybrid=0.7473  Constituent State -> Province
+[139/187] REJECT_LLM_FLOOR     cos=+0.9707 llm=0.2500 hybrid=0.7545  Constituent State -> Domain of a Country
+[140/187] REJECT_HYBRID        cos=+0.7364 llm=0.0800 hybrid=0.5395  Constituent State -> Material Territory of a Country
+[141/187] REJECT_HYBRID        cos=+0.7379 llm=0.1200 hybrid=0.5525  Constituent State -> Material Territory of a Government Domain
+[142/187] REJECT_HYBRID        cos=-0.1489 llm=0.2800 hybrid=-0.0202  Constituent State -> Division of Delimiting Domain
+[143/187] REJECT_HYBRID        cos=+0.2503 llm=0.5000 hybrid=0.3252  Political Orientation -> BFO_0000016
+[144/187] REJECT_LLM_FLOOR     cos=+0.9322 llm=0.2800 hybrid=0.7365  Occupation Role -> Organization Member Role
+[145/187] REJECT_LLM_FLOOR     cos=+0.8587 llm=0.0800 hybrid=0.6251  Occupation Role -> Commercial Role
+[146/187] REJECT_LLM_FLOOR     cos=+0.9408 llm=0.2800 hybrid=0.7426  Occupation Role -> Interpersonal Relationship Role
+[147/187] REJECT_HYBRID        cos=+0.4982 llm=0.2800 hybrid=0.4327  Scar -> BFO_0000030
+[148/187] PRELIMINARY_ACCEPT   cos=+0.5060 llm=0.9600 hybrid=0.6422  Scar -> BFO_0000040
+[149/187] REJECT_LLM_FLOOR     cos=+0.9851 llm=0.2800 hybrid=0.7736  Citizen Role -> Organization Member Role
+[150/187] REJECT_LLM_FLOOR     cos=+0.9899 llm=0.2800 hybrid=0.7769  Citizen Role -> Allegiance Role
+[151/187] REJECT_LLM_FLOOR     cos=+0.9406 llm=0.1800 hybrid=0.7124  Operator Role -> Authority Role
+[152/187] REJECT_LLM_FLOOR     cos=+0.9593 llm=0.1800 hybrid=0.7255  Operator Role -> Occupation Role
+[153/187] REJECT_HYBRID        cos=+0.0654 llm=0.8600 hybrid=0.3038  International Community -> BFO_0000040
+[154/187] REJECT_HYBRID        cos=+0.3777 llm=0.2800 hybrid=0.3484  International Community -> Agent
+[155/187] REJECT_LLM_FLOOR     cos=+0.9747 llm=0.2500 hybrid=0.7573  International Community -> Social Network
+[156/187] PRELIMINARY_ACCEPT   cos=+0.9434 llm=0.9100 hybrid=0.9334  International Community -> Group of Organizations
+[157/187] PRELIMINARY_ACCEPT   cos=+0.6003 llm=0.8400 hybrid=0.6722  Set of Eyes -> BFO_0000027
+[158/187] PRELIMINARY_ACCEPT   cos=+0.5729 llm=0.9000 hybrid=0.6710  Set of Eyes -> BFO_0000040
+[159/187] REJECT_HYBRID        cos=+0.7799 llm=0.1600 hybrid=0.5939  Government Domain -> Operational Area
+[160/187] REJECT_LLM_FLOOR     cos=+0.9551 llm=0.2500 hybrid=0.7436  County -> Third-Order Administrative Region
+[161/187] REJECT_LLM_FLOOR     cos=+0.9897 llm=0.3500 hybrid=0.7978  County -> Local Administrative Region
+[162/187] REJECT_HYBRID        cos=-0.1240 llm=0.2500 hybrid=-0.0118  County -> Division of Delimiting Domain
+[163/187] REJECT_HYBRID        cos=+0.1347 llm=0.8400 hybrid=0.3463  Organization -> BFO_0000040
+[164/187] REJECT_HYBRID        cos=+0.4449 llm=0.3200 hybrid=0.4074  Organization -> Agent
+[165/187] REJECT_HYBRID        cos=+0.0962 llm=0.8300 hybrid=0.3164  Social Network -> BFO_0000040
+[166/187] REJECT_LLM_FLOOR     cos=+0.9284 llm=0.2800 hybrid=0.7339  Social Network -> Group of Persons
+[167/187] REJECT_LLM_FLOOR     cos=+0.8004 llm=0.2800 hybrid=0.6443  Delimiting Domain -> Operational Area
+[168/187] REJECT_HYBRID        cos=+0.3811 llm=0.2800 hybrid=0.3508  Group of Organizations -> Agent
+[169/187] REJECT_HYBRID        cos=+0.0876 llm=0.9600 hybrid=0.3493  Person -> BFO_0000040
+[170/187] REJECT_HYBRID        cos=+0.3991 llm=0.3200 hybrid=0.3754  Person -> Agent
+[171/187] REJECT_HYBRID        cos=+0.3770 llm=0.8800 hybrid=0.5279  Carrier Air Wing -> BFO_0000040
+[172/187] REJECT_HYBRID        cos=-0.1734 llm=0.1200 hybrid=-0.0854  Carrier Air Wing -> Geopolitical Organization
+[173/187] REJECT_HYBRID        cos=+0.2835 llm=0.8200 hybrid=0.4445  Carrier Air Wing -> Agent
+[174/187] REJECT_HYBRID        cos=+0.0959 llm=0.9100 hybrid=0.3401  Crew -> BFO_0000040
+[175/187] REJECT_HYBRID        cos=+0.3971 llm=0.2800 hybrid=0.3620  Crew -> Agent
+[176/187] REJECT_LLM_FLOOR     cos=+0.9404 llm=0.3200 hybrid=0.7543  Crew -> Organization
+[177/187] REJECT_HYBRID        cos=+0.1767 llm=0.8600 hybrid=0.3817  Civil Organization -> BFO_0000040
+[178/187] REJECT_HYBRID        cos=+0.4721 llm=0.4200 hybrid=0.4565  Civil Organization -> Agent
+[179/187] REJECT_LLM_FLOOR     cos=+0.9156 llm=0.2500 hybrid=0.7159  Paramilitary Force -> Government Organization
+[180/187] REJECT_HYBRID        cos=-0.2844 llm=0.2200 hybrid=-0.1331  Paramilitary Force -> Military Personnel Force
+[181/187] REJECT_HYBRID        cos=+0.4399 llm=0.8400 hybrid=0.5600  Paramilitary Force -> Agent
+[182/187] REJECT_LLM_FLOOR     cos=+0.9548 llm=0.1200 hybrid=0.7043  Paramilitary Force -> Civil Organization
+[183/187] REJECT_LLM_FLOOR     cos=+0.9497 llm=0.2400 hybrid=0.7368  Government -> Incorporated Organization
+[184/187] REJECT_LLM_FLOOR     cos=+0.9208 llm=0.3500 hybrid=0.7496  Government -> Geopolitical Organization
+[185/187] REJECT_LLM_FLOOR     cos=+0.9772 llm=0.0800 hybrid=0.7081  Government -> Government Organization
+[186/187] REJECT_LLM_FLOOR     cos=+0.9576 llm=0.3200 hybrid=0.7663  Government -> Service Provider
+[187/187] REJECT_LLM_FLOOR     cos=+0.9560 llm=0.2800 hybrid=0.7532  Government -> Civil Organization
+
+==============================================================================
+HYBRID FILTER V2 RESULTS
+==============================================================================
+
+Candidate pairs         : 187
+Fully scored pairs      : 187
+Accepted axioms         : 22
+Rejected by hybrid      : 100
+Rejected by LLM floor   : 65
+Reciprocal review edges : 0
+Reciprocal pairs        : 0
+Other rejected/errors   : 0
+
+Missing mOWL entities   : 0
+LLM cache hits          : 0
+New LLM API requests    : 187
+LLM failures            : 0
+
+Mean mOWL cosine        : 0.5480
+Mean LLM score          : 0.4287
+Mean hybrid score       : 0.5122
+
+Hybrid formula          : 0.70 � cosine + 0.30 � LLM
+Hybrid threshold        : 0.60
+LLM semantic floor      : 0.50
+Reciprocal guard        : ENABLED
+
+Hybrid acceptance       : PASS
+
+Files written:
+  Accepted axioms:
+    C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\accepted_el.ttl
+
+  Full audit:
+    C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\hybrid_candidate_scores.csv
+
+  Reciprocal review:
+    C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\hybrid_reciprocal_review.csv
+
+  LLM cache:
+    C:\Users\cappa\Ontology-Tradecraft\projects\project-5\generated\hybrid_llm_cache.jsonl

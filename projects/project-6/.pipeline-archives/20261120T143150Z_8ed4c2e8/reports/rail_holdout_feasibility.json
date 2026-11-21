@@ -1,0 +1,273 @@
+{
+  "augmented_triples": 484,
+  "files": {
+    "augmented": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-6\\generated\\module_augmented.ttl",
+    "source": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-6\\src\\module.ttl"
+  },
+  "files_unchanged": true,
+  "folds": [
+    {
+      "cold_or_weak_support_count": 1,
+      "fold": 1,
+      "held_out_pairs": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/reservation"
+        }
+      ],
+      "held_out_rail_classes": [
+        "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+        "https://example.org/ontologies/intel-ontology#rail_reservation_information"
+      ],
+      "test_examples": 2,
+      "transitive_leakage_count": 0
+    },
+    {
+      "cold_or_weak_support_count": 2,
+      "fold": 2,
+      "held_out_pairs": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#railway_station",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#train",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+        }
+      ],
+      "held_out_rail_classes": [
+        "https://example.org/ontologies/intel-ontology#railway_station",
+        "https://example.org/ontologies/intel-ontology#train"
+      ],
+      "test_examples": 2,
+      "transitive_leakage_count": 0
+    },
+    {
+      "cold_or_weak_support_count": 2,
+      "fold": 3,
+      "held_out_pairs": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+          "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/ticket"
+        }
+      ],
+      "held_out_rail_classes": [
+        "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+        "https://example.org/ontologies/intel-ontology#rail_ticket"
+      ],
+      "test_examples": 2,
+      "transitive_leakage_count": 0
+    },
+    {
+      "cold_or_weak_support_count": 2,
+      "fold": 4,
+      "held_out_pairs": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+          "parent": "https://example.org/ontologies/intel-ontology#train"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+        }
+      ],
+      "held_out_rail_classes": [
+        "https://example.org/ontologies/intel-ontology#passenger_train",
+        "https://example.org/ontologies/intel-ontology#rail_journey"
+      ],
+      "test_examples": 2,
+      "transitive_leakage_count": 0
+    }
+  ],
+  "imports_loaded": [
+    "imports/AgentOntology.ttl",
+    "imports/bfo-core.ttl",
+    "imports/core.ttl",
+    "imports/EventOntology.ttl",
+    "imports/iao-edit.owl",
+    "imports/InformationEntityOntology.ttl"
+  ],
+  "interpretation": [
+    "No embeddings were trained or scored by this diagnostic.",
+    "The current Step 5A projects only named subclass pairs and class declarations.",
+    "Labels, definitions, and property domain/range mentions are NOT trainable evidence in that projection.",
+    "A class with no retained superclass has no established parent-class embedding anchor; a 0.70 cosine requirement is not supported by this split alone.",
+    "A positive retained-parent status indicates topology support, not guaranteed cosine accuracy."
+  ],
+  "method": "Four folds with two primary rail superclass assertions withheld per fold; source/import subclass pairs are context only and NOT scored",
+  "new_rail_classes": 8,
+  "new_rail_data_properties": 2,
+  "new_rail_object_properties": 4,
+  "new_rail_subclass_relationships": 9,
+  "new_rail_subject_triples": 63,
+  "per_class": [
+    {
+      "class_iri": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "class_label": "passenger train",
+      "connects_to_existing_ontology_via_parent_chain": false,
+      "definitions": 1,
+      "english_labels": 1,
+      "fold": 4,
+      "heldout_pair_already_reachable_from_training": false,
+      "primary_heldout_parent": "https://example.org/ontologies/intel-ontology#train",
+      "property_domain_range_mentions_NOT_IN_CURRENT_MOWL_LOSS": [
+        "https://example.org/ontologies/intel-ontology#has_service_identifier rdf-schema#domain"
+      ],
+      "taxonomy_only_support_status": "COLD_START_NO_RETAINED_PARENT",
+      "train_named_child_count": 0,
+      "train_named_parent_count": 0,
+      "train_taxonomy_incident_edge_count": 0
+    },
+    {
+      "class_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "class_label": "rail journey",
+      "connects_to_existing_ontology_via_parent_chain": false,
+      "definitions": 1,
+      "english_labels": 1,
+      "fold": 4,
+      "heldout_pair_already_reachable_from_training": false,
+      "primary_heldout_parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "property_domain_range_mentions_NOT_IN_CURRENT_MOWL_LOSS": [
+        "https://example.org/ontologies/intel-ontology#arrives_at_station rdf-schema#domain",
+        "https://example.org/ontologies/intel-ontology#departs_from_station rdf-schema#domain",
+        "https://example.org/ontologies/intel-ontology#has_train_participant rdf-schema#domain",
+        "https://example.org/ontologies/intel-ontology#realizes_rail_passenger_role rdf-schema#domain"
+      ],
+      "taxonomy_only_support_status": "COLD_START_NO_RETAINED_PARENT",
+      "train_named_child_count": 0,
+      "train_named_parent_count": 0,
+      "train_taxonomy_incident_edge_count": 0
+    },
+    {
+      "class_iri": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "class_label": "rail journey plan",
+      "connects_to_existing_ontology_via_parent_chain": false,
+      "definitions": 1,
+      "english_labels": 1,
+      "fold": 3,
+      "heldout_pair_already_reachable_from_training": false,
+      "primary_heldout_parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "property_domain_range_mentions_NOT_IN_CURRENT_MOWL_LOSS": [],
+      "taxonomy_only_support_status": "COLD_START_NO_RETAINED_PARENT",
+      "train_named_child_count": 0,
+      "train_named_parent_count": 0,
+      "train_taxonomy_incident_edge_count": 0
+    },
+    {
+      "class_iri": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "class_label": "rail passenger role",
+      "connects_to_existing_ontology_via_parent_chain": true,
+      "definitions": 1,
+      "english_labels": 1,
+      "fold": 1,
+      "heldout_pair_already_reachable_from_training": false,
+      "primary_heldout_parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "property_domain_range_mentions_NOT_IN_CURRENT_MOWL_LOSS": [
+        "https://example.org/ontologies/intel-ontology#realizes_rail_passenger_role rdf-schema#range"
+      ],
+      "taxonomy_only_support_status": "RETAINED_TAXONOMY_PARENT_SUPPORT",
+      "train_named_child_count": 0,
+      "train_named_parent_count": 1,
+      "train_taxonomy_incident_edge_count": 1
+    },
+    {
+      "class_iri": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "class_label": "rail reservation information",
+      "connects_to_existing_ontology_via_parent_chain": false,
+      "definitions": 1,
+      "english_labels": 1,
+      "fold": 1,
+      "heldout_pair_already_reachable_from_training": false,
+      "primary_heldout_parent": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+      "property_domain_range_mentions_NOT_IN_CURRENT_MOWL_LOSS": [],
+      "taxonomy_only_support_status": "COLD_START_NO_RETAINED_PARENT",
+      "train_named_child_count": 0,
+      "train_named_parent_count": 0,
+      "train_taxonomy_incident_edge_count": 0
+    },
+    {
+      "class_iri": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "class_label": "rail ticket",
+      "connects_to_existing_ontology_via_parent_chain": false,
+      "definitions": 1,
+      "english_labels": 1,
+      "fold": 3,
+      "heldout_pair_already_reachable_from_training": false,
+      "primary_heldout_parent": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+      "property_domain_range_mentions_NOT_IN_CURRENT_MOWL_LOSS": [],
+      "taxonomy_only_support_status": "COLD_START_NO_RETAINED_PARENT",
+      "train_named_child_count": 0,
+      "train_named_parent_count": 0,
+      "train_taxonomy_incident_edge_count": 0
+    },
+    {
+      "class_iri": "https://example.org/ontologies/intel-ontology#railway_station",
+      "class_label": "railway station",
+      "connects_to_existing_ontology_via_parent_chain": false,
+      "definitions": 1,
+      "english_labels": 1,
+      "fold": 2,
+      "heldout_pair_already_reachable_from_training": false,
+      "primary_heldout_parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "property_domain_range_mentions_NOT_IN_CURRENT_MOWL_LOSS": [
+        "https://example.org/ontologies/intel-ontology#arrives_at_station rdf-schema#range",
+        "https://example.org/ontologies/intel-ontology#departs_from_station rdf-schema#range",
+        "https://example.org/ontologies/intel-ontology#has_station_code rdf-schema#domain"
+      ],
+      "taxonomy_only_support_status": "COLD_START_NO_RETAINED_PARENT",
+      "train_named_child_count": 0,
+      "train_named_parent_count": 0,
+      "train_taxonomy_incident_edge_count": 0
+    },
+    {
+      "class_iri": "https://example.org/ontologies/intel-ontology#train",
+      "class_label": "train",
+      "connects_to_existing_ontology_via_parent_chain": false,
+      "definitions": 1,
+      "english_labels": 1,
+      "fold": 2,
+      "heldout_pair_already_reachable_from_training": false,
+      "primary_heldout_parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "property_domain_range_mentions_NOT_IN_CURRENT_MOWL_LOSS": [
+        "https://example.org/ontologies/intel-ontology#has_train_participant rdf-schema#range"
+      ],
+      "taxonomy_only_support_status": "INCOMING_ONLY_NO_PARENT_ANCHOR",
+      "train_named_child_count": 1,
+      "train_named_parent_count": 0,
+      "train_taxonomy_incident_edge_count": 1
+    }
+  ],
+  "primary_target_pairs": 8,
+  "scope": "EIGHT_NEW_RAIL_CLASSES_ONLY",
+  "seed": 42,
+  "sha256": {
+    "augmented": "5d157574acd9d59dff35b42c7d4855378d179ac1055fe1c28e74611ad5df2054",
+    "source": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1"
+  },
+  "source_byte_prefix_preserved": true,
+  "source_triples": 421,
+  "status": "DIAGNOSTIC_COMPLETE_NEEDS_RICHER_TRAINING_EVIDENCE",
+  "summary": {
+    "cold_or_weakly_supported_rail_classes": 7,
+    "folds": 4,
+    "heldout_examples_per_fold": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "heldout_transitive_leakage_count": 0,
+    "supported_rail_classes": 1,
+    "unique_rail_class_scores_if_trained": 8
+  },
+  "version": "project6-rail-holdout-feasibility-v1",
+  "warnings": []
+}

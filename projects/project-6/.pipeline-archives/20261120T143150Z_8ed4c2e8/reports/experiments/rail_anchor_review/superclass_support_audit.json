@@ -1,0 +1,530 @@
+{
+  "fold_count": 4,
+  "folds": [
+    {
+      "fold": 1,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+          "existing_non_target_anchors": [
+            "http://purl.obolibrary.org/obo/BFO_0000023"
+          ],
+          "full_graph_direct_superclasses_FOR_AUDIT_ONLY": [
+            "http://purl.obolibrary.org/obo/BFO_0000023",
+            "https://www.commoncoreontologies.org/AgentOntology/passenger"
+          ],
+          "incoming_training_children": [],
+          "independent_anchor_gap": false,
+          "other_owl_or_annotation_evidence_NOT_subclass_axioms": {
+            "generated/module_augmented.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "rail passenger role"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A role that inheres in a person and is realized by participating as a passenger in a rail journey, and that is not itself a person."
+                ]
+              },
+              "structural_references": [
+                {
+                  "kind": "rdfs:range",
+                  "property": "https://example.org/ontologies/intel-ontology#realizes_rail_passenger_role"
+                }
+              ]
+            },
+            "generated/rail_axioms_refined.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "rail passenger role"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A role that inheres in a person and is realized by participating as a passenger in a rail journey, and that is not itself a person."
+                ]
+              },
+              "structural_references": [
+                {
+                  "kind": "rdfs:range",
+                  "property": "https://example.org/ontologies/intel-ontology#realizes_rail_passenger_role"
+                }
+              ]
+            }
+          },
+          "retained_direct_superclasses": [
+            "http://purl.obolibrary.org/obo/BFO_0000023"
+          ],
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "target_dependent_ancestors_NOT_independent_evidence": [],
+          "training_incoming": 0,
+          "training_outgoing": 1,
+          "withheld_target": "https://www.commoncoreontologies.org/AgentOntology/passenger"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+          "existing_non_target_anchors": [],
+          "full_graph_direct_superclasses_FOR_AUDIT_ONLY": [
+            "https://www.commoncoreontologies.org/AgentOntology/reservation"
+          ],
+          "incoming_training_children": [],
+          "independent_anchor_gap": true,
+          "other_owl_or_annotation_evidence_NOT_subclass_axioms": {
+            "generated/module_augmented.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "rail reservation information"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "An information content entity that is a reservation of participation in a rail journey."
+                ]
+              },
+              "structural_references": []
+            },
+            "generated/rail_axioms_refined.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "rail reservation information"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "An information content entity that is a reservation of participation in a rail journey."
+                ]
+              },
+              "structural_references": []
+            }
+          },
+          "retained_direct_superclasses": [],
+          "support_status": "COLD_START_NO_TAXONOMY_RELATION",
+          "target_dependent_ancestors_NOT_independent_evidence": [
+            "http://purl.obolibrary.org/obo/BFO_0000001",
+            "http://purl.obolibrary.org/obo/BFO_0000002",
+            "http://purl.obolibrary.org/obo/BFO_0000031",
+            "http://purl.obolibrary.org/obo/IAO_0000030"
+          ],
+          "training_incoming": 0,
+          "training_outgoing": 0,
+          "withheld_target": "https://www.commoncoreontologies.org/AgentOntology/reservation"
+        }
+      ],
+      "train_pairs": 830
+    },
+    {
+      "fold": 2,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#railway_station",
+          "existing_non_target_anchors": [],
+          "full_graph_direct_superclasses_FOR_AUDIT_ONLY": [
+            "http://purl.obolibrary.org/obo/BFO_0000040"
+          ],
+          "incoming_training_children": [],
+          "independent_anchor_gap": true,
+          "other_owl_or_annotation_evidence_NOT_subclass_axioms": {
+            "generated/module_augmented.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "railway station"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A material entity comprising physical railway facilities at which rail journeys begin, end, or pause, potentially including platforms, track infrastructure, structures, and buildings."
+                ]
+              },
+              "structural_references": [
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#has_station_code"
+                },
+                {
+                  "kind": "rdfs:range",
+                  "property": "https://example.org/ontologies/intel-ontology#arrives_at_station"
+                },
+                {
+                  "kind": "rdfs:range",
+                  "property": "https://example.org/ontologies/intel-ontology#departs_from_station"
+                }
+              ]
+            },
+            "generated/rail_axioms_refined.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "railway station"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A material entity comprising physical railway facilities at which rail journeys begin, end, or pause, potentially including platforms, track infrastructure, structures, and buildings."
+                ]
+              },
+              "structural_references": [
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#has_station_code"
+                },
+                {
+                  "kind": "rdfs:range",
+                  "property": "https://example.org/ontologies/intel-ontology#arrives_at_station"
+                },
+                {
+                  "kind": "rdfs:range",
+                  "property": "https://example.org/ontologies/intel-ontology#departs_from_station"
+                }
+              ]
+            }
+          },
+          "retained_direct_superclasses": [],
+          "support_status": "COLD_START_NO_TAXONOMY_RELATION",
+          "target_dependent_ancestors_NOT_independent_evidence": [
+            "http://purl.obolibrary.org/obo/BFO_0000001",
+            "http://purl.obolibrary.org/obo/BFO_0000002",
+            "http://purl.obolibrary.org/obo/BFO_0000004"
+          ],
+          "training_incoming": 0,
+          "training_outgoing": 0,
+          "withheld_target": "http://purl.obolibrary.org/obo/BFO_0000040"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#train",
+          "existing_non_target_anchors": [],
+          "full_graph_direct_superclasses_FOR_AUDIT_ONLY": [
+            "http://purl.obolibrary.org/obo/BFO_0000040"
+          ],
+          "incoming_training_children": [
+            "https://example.org/ontologies/intel-ontology#passenger_train"
+          ],
+          "independent_anchor_gap": true,
+          "other_owl_or_annotation_evidence_NOT_subclass_axioms": {
+            "generated/module_augmented.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "train"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A material entity composed of one or more rail vehicles operated together on a railway to convey passengers or freight."
+                ]
+              },
+              "structural_references": [
+                {
+                  "kind": "rdfs:range",
+                  "property": "https://example.org/ontologies/intel-ontology#has_train_participant"
+                }
+              ]
+            },
+            "generated/rail_axioms_refined.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "train"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A material entity composed of one or more rail vehicles operated together on a railway to convey passengers or freight."
+                ]
+              },
+              "structural_references": [
+                {
+                  "kind": "rdfs:range",
+                  "property": "https://example.org/ontologies/intel-ontology#has_train_participant"
+                }
+              ]
+            }
+          },
+          "retained_direct_superclasses": [],
+          "support_status": "INCOMING_ONLY_NO_PARENT_ANCHOR",
+          "target_dependent_ancestors_NOT_independent_evidence": [
+            "http://purl.obolibrary.org/obo/BFO_0000001",
+            "http://purl.obolibrary.org/obo/BFO_0000002",
+            "http://purl.obolibrary.org/obo/BFO_0000004"
+          ],
+          "training_incoming": 1,
+          "training_outgoing": 0,
+          "withheld_target": "http://purl.obolibrary.org/obo/BFO_0000040"
+        }
+      ],
+      "train_pairs": 830
+    },
+    {
+      "fold": 3,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+          "existing_non_target_anchors": [],
+          "full_graph_direct_superclasses_FOR_AUDIT_ONLY": [
+            "http://purl.obolibrary.org/obo/IAO_0000030"
+          ],
+          "incoming_training_children": [],
+          "independent_anchor_gap": true,
+          "other_owl_or_annotation_evidence_NOT_subclass_axioms": {
+            "generated/module_augmented.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "rail journey plan"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "An information content entity that specifies an intended rail journey and is not itself that travel process."
+                ]
+              },
+              "structural_references": []
+            },
+            "generated/rail_axioms_refined.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "rail journey plan"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "An information content entity that specifies an intended rail journey and is not itself that travel process."
+                ]
+              },
+              "structural_references": []
+            }
+          },
+          "retained_direct_superclasses": [],
+          "support_status": "COLD_START_NO_TAXONOMY_RELATION",
+          "target_dependent_ancestors_NOT_independent_evidence": [
+            "http://purl.obolibrary.org/obo/BFO_0000001",
+            "http://purl.obolibrary.org/obo/BFO_0000002",
+            "http://purl.obolibrary.org/obo/BFO_0000031"
+          ],
+          "training_incoming": 0,
+          "training_outgoing": 0,
+          "withheld_target": "http://purl.obolibrary.org/obo/IAO_0000030"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+          "existing_non_target_anchors": [],
+          "full_graph_direct_superclasses_FOR_AUDIT_ONLY": [
+            "https://www.commoncoreontologies.org/AgentOntology/ticket"
+          ],
+          "incoming_training_children": [],
+          "independent_anchor_gap": true,
+          "other_owl_or_annotation_evidence_NOT_subclass_axioms": {
+            "generated/module_augmented.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "rail ticket"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A material information bearer that bears information about participation in a rail journey."
+                ]
+              },
+              "structural_references": []
+            },
+            "generated/rail_axioms_refined.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "rail ticket"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A material information bearer that bears information about participation in a rail journey."
+                ]
+              },
+              "structural_references": []
+            }
+          },
+          "retained_direct_superclasses": [],
+          "support_status": "COLD_START_NO_TAXONOMY_RELATION",
+          "target_dependent_ancestors_NOT_independent_evidence": [
+            "http://purl.obolibrary.org/obo/IAO_0000178"
+          ],
+          "training_incoming": 0,
+          "training_outgoing": 0,
+          "withheld_target": "https://www.commoncoreontologies.org/AgentOntology/ticket"
+        }
+      ],
+      "train_pairs": 830
+    },
+    {
+      "fold": 4,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+          "existing_non_target_anchors": [],
+          "full_graph_direct_superclasses_FOR_AUDIT_ONLY": [
+            "https://example.org/ontologies/intel-ontology#train"
+          ],
+          "incoming_training_children": [],
+          "independent_anchor_gap": true,
+          "other_owl_or_annotation_evidence_NOT_subclass_axioms": {
+            "generated/module_augmented.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "passenger train"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A train designed to transport passengers."
+                ]
+              },
+              "structural_references": [
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#has_service_identifier"
+                }
+              ]
+            },
+            "generated/rail_axioms_refined.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "passenger train"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A train designed to transport passengers."
+                ]
+              },
+              "structural_references": [
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#has_service_identifier"
+                }
+              ]
+            }
+          },
+          "retained_direct_superclasses": [],
+          "support_status": "COLD_START_NO_TAXONOMY_RELATION",
+          "target_dependent_ancestors_NOT_independent_evidence": [
+            "http://purl.obolibrary.org/obo/BFO_0000001",
+            "http://purl.obolibrary.org/obo/BFO_0000002",
+            "http://purl.obolibrary.org/obo/BFO_0000004",
+            "http://purl.obolibrary.org/obo/BFO_0000040"
+          ],
+          "training_incoming": 0,
+          "training_outgoing": 0,
+          "withheld_target": "https://example.org/ontologies/intel-ontology#train"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+          "existing_non_target_anchors": [],
+          "full_graph_direct_superclasses_FOR_AUDIT_ONLY": [
+            "http://purl.obolibrary.org/obo/BFO_0000015"
+          ],
+          "incoming_training_children": [],
+          "independent_anchor_gap": true,
+          "other_owl_or_annotation_evidence_NOT_subclass_axioms": {
+            "generated/module_augmented.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "rail journey"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A process in which a train travels along a railway from a departure station toward an arrival station."
+                ]
+              },
+              "structural_references": [
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#arrives_at_station"
+                },
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#departs_from_station"
+                },
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#has_train_participant"
+                },
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#realizes_rail_passenger_role"
+                }
+              ]
+            },
+            "generated/rail_axioms_refined.ttl": {
+              "annotations": {
+                "http://www.w3.org/2000/01/rdf-schema#label": [
+                  "rail journey"
+                ],
+                "http://www.w3.org/2004/02/skos/core#definition": [
+                  "A process in which a train travels along a railway from a departure station toward an arrival station."
+                ]
+              },
+              "structural_references": [
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#arrives_at_station"
+                },
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#departs_from_station"
+                },
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#has_train_participant"
+                },
+                {
+                  "kind": "rdfs:domain",
+                  "property": "https://example.org/ontologies/intel-ontology#realizes_rail_passenger_role"
+                }
+              ]
+            }
+          },
+          "retained_direct_superclasses": [],
+          "support_status": "COLD_START_NO_TAXONOMY_RELATION",
+          "target_dependent_ancestors_NOT_independent_evidence": [
+            "http://purl.obolibrary.org/obo/BFO_0000001",
+            "http://purl.obolibrary.org/obo/BFO_0000003"
+          ],
+          "training_incoming": 0,
+          "training_outgoing": 0,
+          "withheld_target": "http://purl.obolibrary.org/obo/BFO_0000015"
+        }
+      ],
+      "train_pairs": 830
+    }
+  ],
+  "input_hashes": {
+    "generated/module_augmented.ttl": "5d157574acd9d59dff35b42c7d4855378d179ac1055fe1c28e74611ad5df2054",
+    "generated/mowl_rail_train.ttl": "e4d596140271e898f478d3ff13de381a87956b3f3f7e73b1e521736b90560637",
+    "generated/mowl_rail_valid.ttl": "a14a164b02148b55dfe5d4b7641e25d58e5e4edc15a18a76ab817118baa6cd45",
+    "imports/AgentOntology.ttl": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+    "imports/EventOntology.ttl": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+    "imports/InformationEntityOntology.ttl": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+    "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+    "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+    "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0",
+    "reports/step5_split_report.json": "972452c2b3a7ba4d63f3d453d235d5cc95443eeceefd7c0144ab775cdd108856",
+    "scripts/run_all.py": "5d91ad914fadc4511b32aeb796bb83478d17dbeef746fb9fccdccb16047f00bb",
+    "src/module.ttl": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1"
+  },
+  "named_taxonomy_leakage_detected": false,
+  "ontology_evidence_sources": {
+    "generated/module_augmented.ttl": {
+      "sha256": "5d157574acd9d59dff35b42c7d4855378d179ac1055fe1c28e74611ad5df2054",
+      "triples": 484
+    },
+    "generated/rail_axioms_refined.ttl": {
+      "sha256": "c248478cb93849bb1f4d36d22f22a042a2891f0b55c054d55ae80ca34b295ef5",
+      "triples": 63
+    },
+    "imports/AgentOntology.ttl": {
+      "sha256": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+      "triples": 1081
+    },
+    "imports/EventOntology.ttl": {
+      "sha256": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+      "triples": 2285
+    },
+    "imports/InformationEntityOntology.ttl": {
+      "sha256": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+      "triples": 1800
+    },
+    "imports/bfo-core.ttl": {
+      "sha256": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+      "triples": 1014
+    },
+    "imports/core.ttl": {
+      "sha256": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+      "triples": 3410
+    },
+    "imports/iao-edit.owl": {
+      "sha256": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0",
+      "triples": 2837
+    },
+    "src/module.ttl": {
+      "sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+      "triples": 421
+    }
+  },
+  "original_pipeline_modified": false,
+  "owl_semantic_leakage_proven_absent": false,
+  "rail_classes": 8,
+  "recommendation": "Review potential independent superclass evidence; do not infer superclass edges from a held-out assertion or labels. OWL reasoner check required for new fold datasets.",
+  "status": "SUPPORT_EVIDENCE_AUDITED_NO_AXIOMS_ADDED",
+  "support_counts": {
+    "COLD_START_NO_TAXONOMY_RELATION": 6,
+    "INCOMING_ONLY_NO_PARENT_ANCHOR": 1,
+    "RETAINED_PARENT_SUPPORT": 1
+  },
+  "training_representation": "existing named taxonomy only; other structural evidence is inventoried, not silently converted",
+  "version": "project6-experimental-superclass-support-review-v1"
+}

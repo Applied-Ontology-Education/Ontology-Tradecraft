@@ -1,0 +1,23 @@
+COMMAND
+==============================================================================
+C:\Users\cappa\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe C:\Users\cappa\Ontology-Tradecraft\projects\project-5\scripts\extract_definitions.py
+
+OUTPUT
+==============================================================================
+Project root : C:\Users\cappa\Ontology-Tradecraft\projects\project-5
+Input file   : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module.ttl
+Output file  : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\data\definitions.csv
+
+Reading definitions from module.ttl...
+
+Definition extraction complete.
+Definitions extracted: 139
+Saved to: C:\Users\cappa\Ontology-Tradecraft\projects\project-5\data\definitions.csv
+
+Sample:
+                                             IRI             label                                                                                                                                             definition
+https://www.commoncoreontologies.org/ont00000751 Action Permission                                                                                                        A Process Regulation that permits some Process.
+https://www.commoncoreontologies.org/ont00000177        Affordance A Realizable Entity of an Independent Continuant that creates an opportunity for an Agent to realize some Agent Capability or Disposition in some Act.
+https://www.commoncoreontologies.org/ont00001017             Agent                                                                                                      A Material Entity that bears an Agent Capability.
+https://www.commoncoreontologies.org/ont00001379  Agent Capability                  A Realizable Entity that inheres in a Material Entity in virtue of that Material Entity's capacity to realize it in some Planned Act.
+https://www.commoncoreontologies.org/ont00000392   Allegiance Role       A Role that inheres in an Agent by virtue of the support it has committed to provide to another Agent when that Agent is involved in a conflict.

@@ -1,0 +1,15 @@
+{
+  "anonymous_subclass_gcas": 4,
+  "data_properties": 13,
+  "declared_imports": 5,
+  "local_import_files_read": 6,
+  "named_classes": 41,
+  "named_individuals": 27,
+  "object_properties": 10,
+  "rail_concepts_not_found": 8,
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_triples": 421,
+  "source_unchanged": true,
+  "status": "PASS",
+  "warning": null
+}

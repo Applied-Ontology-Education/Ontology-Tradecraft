@@ -1,0 +1,20 @@
+STEP8 COMMAND: C:\Users\cappa\Ontology-Tradecraft\projects\project-6\.venv-mowl\Scripts\python.exe -u C:\Users\cappa\Ontology-Tradecraft\projects\project-6\scripts\refine_rail_axioms.py --project-root C:\Users\cappa\Ontology-Tradecraft\projects\project-6
+STEP 3A — PASS_REFINED_UNAPPROVED
+{
+  "baseline_triples": 62,
+  "classes": 8,
+  "data_properties": 2,
+  "merged_into_source": false,
+  "no_api_call": true,
+  "no_named_individuals_created": true,
+  "object_properties": 4,
+  "original_step2_proposal_unchanged": true,
+  "original_step3_candidate_unchanged": true,
+  "pending_scope_decisions": 2,
+  "refined_triples": 63,
+  "refinement_operations": 5,
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_unchanged": true,
+  "status": "PASS_REFINED_UNAPPROVED",
+  "version": "project6-rail-refinement-v1"
+}

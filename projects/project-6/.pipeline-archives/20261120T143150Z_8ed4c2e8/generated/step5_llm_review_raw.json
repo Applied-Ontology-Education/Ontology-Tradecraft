@@ -1,0 +1,58 @@
+{
+  "ratings": [
+    {
+      "concern": "Design purpose does not create a category mismatch with train.",
+      "id": "edge-00",
+      "plausibility": 0.96,
+      "rationale": "A passenger train is defined as a train used to carry passengers, so the subclass is a direct genus-species specialization."
+    },
+    {
+      "concern": "Arrival need not be completed, but that does not affect processhood.",
+      "id": "edge-01",
+      "plausibility": 0.94,
+      "rationale": "The child is defined as train travel along a railway, and BFO_0000015 is process, so the occurrent placement matches."
+    },
+    {
+      "concern": "A plan-specification class would be tighter, but information content entity remains a valid superclass.",
+      "id": "edge-02",
+      "plausibility": 0.93,
+      "rationale": "The plan is defined as an information content entity specifying a journey and explicitly not the travel process, matching IAO_0000030."
+    },
+    {
+      "concern": "Dependence on a bearer is expected for a role and is not collapsed by this axiom.",
+      "id": "edge-03",
+      "plausibility": 0.95,
+      "rationale": "The child is defined as a role realized by rail-journey participation and not as a person, matching BFO_0000023."
+    },
+    {
+      "concern": "Probable role-versus-agent category error unless that parent is independently a role; not equivalent to the BFO role parent.",
+      "id": "edge-04",
+      "plausibility": 0.18,
+      "rationale": "The same child is a role and expressly not a person, while the parent is labeled passenger in an agent ontology, which ordinarily denotes the bearer."
+    },
+    {
+      "concern": "The wording says the entity is a reservation rather than information about one; sound only if the parent is itself informational.",
+      "id": "edge-05",
+      "plausibility": 0.82,
+      "rationale": "Rail reservation information is a domain specialization of reservation information, and both sides are framed as information."
+    },
+    {
+      "concern": "Blocking design issue: unsafe if parent ticket is or includes an information content entity. Source left unchanged.",
+      "id": "edge-06",
+      "plausibility": 0.5,
+      "rationale": "A rail ticket is intuitively a ticket, but the child is fixed as a material information bearer while ticket-as-bearer versus digital information is unresolved."
+    },
+    {
+      "concern": "A station-as-place could instead be a BFO site, which is immaterial; that is not what this definition asserts.",
+      "id": "edge-07",
+      "plausibility": 0.86,
+      "rationale": "The definition treats the station as a material aggregate of facilities, structures, and infrastructure, fitting BFO material entity."
+    },
+    {
+      "concern": "Object versus object aggregate is finer-grained and does not undermine material-entity membership.",
+      "id": "edge-08",
+      "plausibility": 0.96,
+      "rationale": "A train of one or more rail vehicles is a material entity, so BFO_0000040 is an appropriate superclass."
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+# Project 6 Step 3: UNAPPROVED rail-travel candidate TBox
+# DO NOT merge automatically into src/module.ttl. Review JSON is mandatory.
+# No instances or OWL restriction axioms are generated in this step.
+
+<https://example.org/ontologies/intel-ontology#arrives_at_station> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/ontologies/intel-ontology#arrives_at_station> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/ontologies/intel-ontology#rail_journey> .
+<https://example.org/ontologies/intel-ontology#arrives_at_station> <http://www.w3.org/2000/01/rdf-schema#label> "arrives at station"@en .
+<https://example.org/ontologies/intel-ontology#arrives_at_station> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/ontologies/intel-ontology#railway_station> .
+<https://example.org/ontologies/intel-ontology#arrives_at_station> <http://www.w3.org/2004/02/skos/core#definition> "A relation between a rail journey and the railway station at which that journey ends."@en .
+<https://example.org/ontologies/intel-ontology#departs_from_station> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/ontologies/intel-ontology#departs_from_station> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/ontologies/intel-ontology#rail_journey> .
+<https://example.org/ontologies/intel-ontology#departs_from_station> <http://www.w3.org/2000/01/rdf-schema#label> "departs from station"@en .
+<https://example.org/ontologies/intel-ontology#departs_from_station> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/ontologies/intel-ontology#railway_station> .
+<https://example.org/ontologies/intel-ontology#departs_from_station> <http://www.w3.org/2004/02/skos/core#definition> "A relation between a rail journey and the railway station at which that journey begins."@en .
+<https://example.org/ontologies/intel-ontology#has_scheduled_departure_time> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/ontologies/intel-ontology#has_scheduled_departure_time> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/ontologies/intel-ontology#rail_journey_plan> .
+<https://example.org/ontologies/intel-ontology#has_scheduled_departure_time> <http://www.w3.org/2000/01/rdf-schema#label> "has scheduled departure time"@en .
+<https://example.org/ontologies/intel-ontology#has_scheduled_departure_time> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://example.org/ontologies/intel-ontology#has_scheduled_departure_time> <http://www.w3.org/2004/02/skos/core#definition> "A datatype relation that associates a rail journey plan with its scheduled departure time."@en .
+<https://example.org/ontologies/intel-ontology#has_train_number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://example.org/ontologies/intel-ontology#has_train_number> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/ontologies/intel-ontology#train> .
+<https://example.org/ontologies/intel-ontology#has_train_number> <http://www.w3.org/2000/01/rdf-schema#label> "has train number"@en .
+<https://example.org/ontologies/intel-ontology#has_train_number> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://example.org/ontologies/intel-ontology#has_train_number> <http://www.w3.org/2004/02/skos/core#definition> "A datatype relation that associates a train with a train-number identifier."@en .
+<https://example.org/ontologies/intel-ontology#passenger_train> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/ontologies/intel-ontology#passenger_train> <http://www.w3.org/2000/01/rdf-schema#label> "passenger train"@en .
+<https://example.org/ontologies/intel-ontology#passenger_train> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://example.org/ontologies/intel-ontology#train> .
+<https://example.org/ontologies/intel-ontology#passenger_train> <http://www.w3.org/2004/02/skos/core#definition> "A train whose intended use is the carriage of passengers."@en .
+<https://example.org/ontologies/intel-ontology#rail_journey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/ontologies/intel-ontology#rail_journey> <http://www.w3.org/2000/01/rdf-schema#label> "rail journey"@en .
+<https://example.org/ontologies/intel-ontology#rail_journey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000015> .
+<https://example.org/ontologies/intel-ontology#rail_journey> <http://www.w3.org/2004/02/skos/core#definition> "A process in which a train travels from a departure railway station to an arrival railway station."@en .
+<https://example.org/ontologies/intel-ontology#rail_journey_plan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/ontologies/intel-ontology#rail_journey_plan> <http://www.w3.org/2000/01/rdf-schema#label> "rail journey plan"@en .
+<https://example.org/ontologies/intel-ontology#rail_journey_plan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/IAO_0000030> .
+<https://example.org/ontologies/intel-ontology#rail_journey_plan> <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that specifies an intended rail journey, including planned origin, destination, or timing, and is not itself the journey process."@en .
+<https://example.org/ontologies/intel-ontology#rail_passenger_role> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/ontologies/intel-ontology#rail_passenger_role> <http://www.w3.org/2000/01/rdf-schema#label> "rail passenger role"@en .
+<https://example.org/ontologies/intel-ontology#rail_passenger_role> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000023> .
+<https://example.org/ontologies/intel-ontology#rail_passenger_role> <http://www.w3.org/2004/02/skos/core#definition> "A role that inheres in a person and is realized by that person traveling as a passenger on a train, and that is not itself a person."@en .
+<https://example.org/ontologies/intel-ontology#rail_reservation_information> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/ontologies/intel-ontology#rail_reservation_information> <http://www.w3.org/2000/01/rdf-schema#label> "rail reservation information"@en .
+<https://example.org/ontologies/intel-ontology#rail_reservation_information> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.commoncoreontologies.org/AgentOntology/reservation> .
+<https://example.org/ontologies/intel-ontology#rail_reservation_information> <http://www.w3.org/2004/02/skos/core#definition> "An information content entity that records a reservation for intended rail travel and is distinct from both the rail journey process and any material ticket."@en .
+<https://example.org/ontologies/intel-ontology#rail_ticket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/ontologies/intel-ontology#rail_ticket> <http://www.w3.org/2000/01/rdf-schema#label> "rail ticket"@en .
+<https://example.org/ontologies/intel-ontology#rail_ticket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.commoncoreontologies.org/AgentOntology/ticket> .
+<https://example.org/ontologies/intel-ontology#rail_ticket> <http://www.w3.org/2004/02/skos/core#definition> "A material information bearer that is a ticket carrying information authorizing travel on a rail journey."@en .
+<https://example.org/ontologies/intel-ontology#railway_station> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/ontologies/intel-ontology#railway_station> <http://www.w3.org/2000/01/rdf-schema#label> "railway station"@en .
+<https://example.org/ontologies/intel-ontology#railway_station> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://www.commoncoreontologies.org/AgentOntology/building> .
+<https://example.org/ontologies/intel-ontology#railway_station> <http://www.w3.org/2004/02/skos/core#definition> "A building that is a rail facility at which trains stop so that passengers may board or alight."@en .
+<https://example.org/ontologies/intel-ontology#specifies_rail_journey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/ontologies/intel-ontology#specifies_rail_journey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/ontologies/intel-ontology#rail_journey_plan> .
+<https://example.org/ontologies/intel-ontology#specifies_rail_journey> <http://www.w3.org/2000/01/rdf-schema#label> "specifies rail journey"@en .
+<https://example.org/ontologies/intel-ontology#specifies_rail_journey> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/ontologies/intel-ontology#rail_journey> .
+<https://example.org/ontologies/intel-ontology#specifies_rail_journey> <http://www.w3.org/2004/02/skos/core#definition> "A relation between a rail journey plan and the rail journey that the plan is about."@en .
+<https://example.org/ontologies/intel-ontology#train> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://example.org/ontologies/intel-ontology#train> <http://www.w3.org/2000/01/rdf-schema#label> "train"@en .
+<https://example.org/ontologies/intel-ontology#train> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.obolibrary.org/obo/BFO_0000030> .
+<https://example.org/ontologies/intel-ontology#train> <http://www.w3.org/2004/02/skos/core#definition> "A material object that is a rail vehicle intended to move along railway tracks."@en .
+<https://example.org/ontologies/intel-ontology#uses_train> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://example.org/ontologies/intel-ontology#uses_train> <http://www.w3.org/2000/01/rdf-schema#domain> <https://example.org/ontologies/intel-ontology#rail_journey> .
+<https://example.org/ontologies/intel-ontology#uses_train> <http://www.w3.org/2000/01/rdf-schema#label> "uses train"@en .
+<https://example.org/ontologies/intel-ontology#uses_train> <http://www.w3.org/2000/01/rdf-schema#range> <https://example.org/ontologies/intel-ontology#train> .
+<https://example.org/ontologies/intel-ontology#uses_train> <http://www.w3.org/2004/02/skos/core#definition> "A relation between a rail journey and the train that participates in that journey as its vehicle."@en .

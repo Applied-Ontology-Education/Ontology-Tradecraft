@@ -1,0 +1,67 @@
+{
+  "approved_anchor_count": 7,
+  "fold": 2,
+  "heldout_rows": [
+    {
+      "child": "https://example.org/ontologies/intel-ontology#railway_station",
+      "expected_parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "fold": 2,
+      "native_control_auc": 0.6666666666666666,
+      "native_control_mean": 0.4274500509103139,
+      "native_cosine": 0.48556050658226013,
+      "projected_control_auc": 0.6666666666666666,
+      "projected_control_mean": 0.9180417656898499,
+      "projected_cosine": 0.920525312423706,
+      "support_status": "RETAINED_PARENT_SUPPORT",
+      "training_incoming": 0,
+      "training_outgoing": 1
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "expected_parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "fold": 2,
+      "native_control_auc": 1.0,
+      "native_control_mean": 0.12702580044666925,
+      "native_cosine": 0.6517989039421082,
+      "projected_control_auc": 1.0,
+      "projected_control_mean": 0.8536131381988525,
+      "projected_cosine": 0.964983344078064,
+      "support_status": "RETAINED_PARENT_SUPPORT",
+      "training_incoming": 1,
+      "training_outgoing": 1
+    }
+  ],
+  "library_versions": {
+    "mowl_version": "unknown",
+    "torch_version": "2.15.0+cpu"
+  },
+  "named_holdout_leakage_detected": false,
+  "native_auc": 0.8333333333333334,
+  "native_control_mean": 0.2772379256784916,
+  "native_epochs": 1000,
+  "native_mean": 0.5686797052621841,
+  "native_positive_control_gap": 0.29144177958369255,
+  "projected_auc": 0.8333333333333334,
+  "projected_control_mean": 0.8858274519443512,
+  "projected_mean": 0.942754328250885,
+  "projected_positive_control_gap": 0.056926876306533813,
+  "projection_config": {
+    "epochs": 100,
+    "hidden_size": 32,
+    "identity_weight": 0.1,
+    "learning_rate": 0.0025,
+    "positive_weight": 1.0,
+    "residual_penalty_weight": 0.001,
+    "residual_scale": 0.25,
+    "weight_decay": 1e-05
+  },
+  "training_losses": {
+    "best_training_loss": 0.06560207903385162,
+    "epoch": 100,
+    "identity_loss": 0.4120839536190033,
+    "positive_loss": 0.02288437820971012,
+    "residual_loss": 1.5093011856079102,
+    "total_loss": 0.06560207903385162
+  },
+  "version": "project6-isolated-project5-v8-rail-four-fold-v1"
+}

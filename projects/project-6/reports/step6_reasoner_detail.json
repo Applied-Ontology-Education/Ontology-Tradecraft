@@ -1,0 +1,266 @@
+{
+  "augmented_flattened_sha256": "d6510848e5a3665a132ab9ac32b02fd806e6495958d4f7f6184014bc9501d8ec",
+  "augmented_reasoned_named_pairs": 82,
+  "augmented_reasoner_run": {
+    "error_summary": null,
+    "executed": true,
+    "log": "step6_candidate_robot.log",
+    "reasoned_file": "step6_candidate_reasoned.ttl",
+    "return_code": 0,
+    "timed_out": false
+  },
+  "baseline": {
+    "all_imports_corpus_triples": 10016,
+    "candidate_included": false,
+    "flattened_triples": 1064,
+    "import_closure_scope": "Only six hash-verified local import files; no remote owl:imports fetched.",
+    "import_corpus_metadata": {
+      "candidate_included": false,
+      "flattened_triples": 10016,
+      "import_closure_scope": "Only six hash-verified local import files; no remote owl:imports fetched.",
+      "input_triples": {
+        "imports/AgentOntology.ttl": 1081,
+        "imports/EventOntology.ttl": 2285,
+        "imports/InformationEntityOntology.ttl": 1800,
+        "imports/bfo-core.ttl": 1014,
+        "imports/core.ttl": 3410,
+        "imports/iao-edit.owl": 2837
+      },
+      "original_ontology_header_iris_suppressed": [
+        "http://purl.obolibrary.org/obo/bfo.owl",
+        "http://purl.obolibrary.org/obo/iao/iao-edit.owl",
+        "https://www.commoncoreontologies.org/AgentOntology",
+        "https://www.commoncoreontologies.org/EventOntology",
+        "https://www.commoncoreontologies.org/InformationEntityOntology"
+      ],
+      "original_owl_import_iris_suppressed_for_offline_flattening": [
+        "http://purl.obolibrary.org/obo/bfo.owl",
+        "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+        "http://purl.obolibrary.org/obo/iao/dev/externalByHand.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_COB.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_OBI.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_PATO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_RO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_UO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/obsolete.owl",
+        "http://purl.obolibrary.org/obo/omo.owl",
+        "http://purl.obolibrary.org/obo/ro/core.owl",
+        "https://www.commoncoreontologies.org/EventOntology",
+        "https://www.commoncoreontologies.org/GeospatialOntology",
+        "https://www.commoncoreontologies.org/InformationEntityOntology",
+        "https://www.commoncoreontologies.org/TimeOntology"
+      ]
+    },
+    "import_extraction": {
+      "command": [
+        "C:\\windows\\robot.BAT",
+        "extract",
+        "--method",
+        "STAR",
+        "--input",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-6\\generated\\step6_all_local_imports_for_extraction.ttl",
+        "--term-file",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-6\\generated\\step6_import_module_seed_terms.txt",
+        "--imports",
+        "exclude",
+        "--individuals",
+        "definitions",
+        "--output",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-6\\generated\\step6_scoped_imports_module.ttl"
+      ],
+      "log": "step6_import_extraction.log",
+      "module_sha256": "196a3726f2265aebe8e6631de148b80e5ac96a535b5d8cb35c40bf34dab011ea",
+      "return_code": 0,
+      "timed_out": false
+    },
+    "import_module_path": "generated\\step6_scoped_imports_module.ttl",
+    "import_module_triples": 696,
+    "input_triples": {
+      "generated/step6_scoped_imports_module.ttl": 696,
+      "src/module.ttl": 421
+    },
+    "module_method": "ROBOT STAR (OWL syntactic locality), --individuals definitions",
+    "original_ontology_header_iris_suppressed": [
+      "https://example.org/ontologies/intel-ontology",
+      "https://example.org/ontologies/project6-step6-local-flattened"
+    ],
+    "original_owl_import_iris_suppressed_for_offline_flattening": [
+      "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+      "http://purl.obolibrary.org/obo/iao/dev/iao-edit.owl",
+      "https://www.commoncoreontologies.org/2026-08-13/AgentOntology",
+      "https://www.commoncoreontologies.org/EventOntology",
+      "https://www.commoncoreontologies.org/InformationEntityOntology"
+    ],
+    "scope": "SOURCE_PLUS_STAR_LOCALITY_MODULE_OF_IMPORTS",
+    "scope_limit": "Unrelated import axioms not in the locality module are out of scope; this is not a full import closure consistency check.",
+    "seed_count": 36,
+    "seed_terms_file": "generated\\step6_import_module_seed_terms.txt",
+    "source_logical_and_annotation_triples_preserved": 413,
+    "source_triples": 421
+  },
+  "baseline_flattened_sha256": "d88a34615bc35c5012eb4a5af145bf1cdd34c9d699920f8622b14c6c3bb623d5",
+  "baseline_reasoned_named_pairs": 74,
+  "baseline_reasoner_run": {
+    "error_summary": null,
+    "executed": true,
+    "log": "step6_baseline_robot.log",
+    "reasoned_file": "step6_baseline_reasoned.ttl",
+    "return_code": 0,
+    "timed_out": false
+  },
+  "candidate": {
+    "all_imports_corpus_triples": 10016,
+    "candidate_included": true,
+    "flattened_triples": 1127,
+    "import_closure_scope": "Only six hash-verified local import files; no remote owl:imports fetched.",
+    "import_corpus_metadata": {
+      "candidate_included": false,
+      "flattened_triples": 10016,
+      "import_closure_scope": "Only six hash-verified local import files; no remote owl:imports fetched.",
+      "input_triples": {
+        "imports/AgentOntology.ttl": 1081,
+        "imports/EventOntology.ttl": 2285,
+        "imports/InformationEntityOntology.ttl": 1800,
+        "imports/bfo-core.ttl": 1014,
+        "imports/core.ttl": 3410,
+        "imports/iao-edit.owl": 2837
+      },
+      "original_ontology_header_iris_suppressed": [
+        "http://purl.obolibrary.org/obo/bfo.owl",
+        "http://purl.obolibrary.org/obo/iao/iao-edit.owl",
+        "https://www.commoncoreontologies.org/AgentOntology",
+        "https://www.commoncoreontologies.org/EventOntology",
+        "https://www.commoncoreontologies.org/InformationEntityOntology"
+      ],
+      "original_owl_import_iris_suppressed_for_offline_flattening": [
+        "http://purl.obolibrary.org/obo/bfo.owl",
+        "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+        "http://purl.obolibrary.org/obo/iao/dev/externalByHand.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_COB.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_OBI.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_PATO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_RO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_UO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/obsolete.owl",
+        "http://purl.obolibrary.org/obo/omo.owl",
+        "http://purl.obolibrary.org/obo/ro/core.owl",
+        "https://www.commoncoreontologies.org/EventOntology",
+        "https://www.commoncoreontologies.org/GeospatialOntology",
+        "https://www.commoncoreontologies.org/InformationEntityOntology",
+        "https://www.commoncoreontologies.org/TimeOntology"
+      ]
+    },
+    "import_extraction": {
+      "command": [
+        "C:\\windows\\robot.BAT",
+        "extract",
+        "--method",
+        "STAR",
+        "--input",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-6\\generated\\step6_all_local_imports_for_extraction.ttl",
+        "--term-file",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-6\\generated\\step6_import_module_seed_terms.txt",
+        "--imports",
+        "exclude",
+        "--individuals",
+        "definitions",
+        "--output",
+        "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-6\\generated\\step6_scoped_imports_module.ttl"
+      ],
+      "log": "step6_import_extraction.log",
+      "module_sha256": "196a3726f2265aebe8e6631de148b80e5ac96a535b5d8cb35c40bf34dab011ea",
+      "return_code": 0,
+      "timed_out": false
+    },
+    "import_module_path": "generated\\step6_scoped_imports_module.ttl",
+    "import_module_triples": 696,
+    "input_triples": {
+      "generated/rail_axioms_refined.ttl": 63,
+      "generated/step6_scoped_imports_module.ttl": 696,
+      "src/module.ttl": 421
+    },
+    "module_method": "ROBOT STAR (OWL syntactic locality), --individuals definitions",
+    "original_ontology_header_iris_suppressed": [
+      "https://example.org/ontologies/intel-ontology",
+      "https://example.org/ontologies/project6-step6-local-flattened"
+    ],
+    "original_owl_import_iris_suppressed_for_offline_flattening": [
+      "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+      "http://purl.obolibrary.org/obo/iao/dev/iao-edit.owl",
+      "https://www.commoncoreontologies.org/2026-08-13/AgentOntology",
+      "https://www.commoncoreontologies.org/EventOntology",
+      "https://www.commoncoreontologies.org/InformationEntityOntology"
+    ],
+    "scope": "SOURCE_PLUS_STAR_LOCALITY_MODULE_OF_IMPORTS",
+    "scope_limit": "Unrelated import axioms not in the locality module are out of scope; this is not a full import closure consistency check.",
+    "seed_count": 36,
+    "seed_terms_file": "generated\\step6_import_module_seed_terms.txt",
+    "source_logical_and_annotation_triples_preserved": 413,
+    "source_triples": 421
+  },
+  "local_input_hashes": {
+    "imports/AgentOntology.ttl": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+    "imports/EventOntology.ttl": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+    "imports/InformationEntityOntology.ttl": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+    "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+    "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+    "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0",
+    "refined": "3ecad31fff9c86592e0fcd4f4168dbc45f48a1c826fad4778022b8190ae0dc6b",
+    "source": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+    "step4_summary": "4acb4adfd1476e18f9f11a47ff2c331c6d93a73a2d1c6ff302b07e443af7d123",
+    "step5c_review": "5eaafb30628948460706189157b8766047443bbf2d3dc71017180c179a435f26",
+    "step5c_summary": "394008b98a222c47936177910559ca2be15a7261fa17277c4f58d3d2bc1d0976"
+  },
+  "merged_into_source": false,
+  "new_candidate_triples": 63,
+  "new_explicit_named_subclass_pairs": 9,
+  "new_named_pairs_examples": [
+    {
+      "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "parent": "https://example.org/ontologies/intel-ontology#train"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/reservation"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/ticket"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#railway_station",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    }
+  ],
+  "new_named_pairs_not_explicit_in_candidate": 0,
+  "new_named_pairs_vs_baseline_reasoned": 8,
+  "new_reasoner_only_pairs_examples": [],
+  "reasoner": "hermit",
+  "scope_limits": [
+    "Scoped validation covers the source's complete asserted content and the OWL locality module of local imports, NOT unrelated imported axioms.",
+    "Flattened graph QC checks reparsed triple counts and named class pairs; it does not run expensive RDF graph isomorphism.",
+    "Offline reasoning only uses the six supplied local imports; remote imports are not fetched.",
+    "ROBOT coherence checks do not determine whether modeling choices are ontologically appropriate.",
+    "Reported new named-pair comparisons use ROBOT default direct inferred superclasses; they are not a complete entailment difference.",
+    "Rail Ticket physical-vs-digital and Railway Station facility-vs-site await human resolution."
+  ],
+  "semantic_approval": false,
+  "status": "PASS_REASONER_COHERENT_UNAPPROVED",
+  "version": "project6-robot-reasoner-v3-source-scoped"
+}

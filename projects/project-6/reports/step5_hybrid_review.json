@@ -1,0 +1,128 @@
+{
+  "all_human_review_required": true,
+  "candidate_relationships": [
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "Intended use could also be modeled as a function or role, but that does not undermine this subclass link.",
+      "llm_plausibility": 0.96,
+      "llm_rationale": "The child is defined as a train distinguished by passenger carriage, so it is a narrower kind of train.",
+      "parent": "https://example.org/ontologies/intel-ontology#train",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "None material; stations and timing are participants or qualities, not competing parents.",
+      "llm_plausibility": 0.95,
+      "llm_rationale": "BFO_0000015 is process, and the child is defined as a train-travel process between stations.",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "A directive information entity may be a tighter parent, but subclassing under information content entity remains valid.",
+      "llm_plausibility": 0.93,
+      "llm_rationale": "IAO_0000030 is information content entity, and the plan is defined as information about an intended journey rather than the journey process.",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "None; the definition correctly excludes the bearer.",
+      "llm_plausibility": 0.96,
+      "llm_rationale": "BFO_0000023 is role, and the child is defined as a role inhering in a person and realized in rail travel.",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "cosine": 0.215386,
+      "cosine_evidence": "HELD_OUT_INDEPENDENT",
+      "hybrid_score": 0.20477,
+      "llm_concern": "Role and agent are disjoint in BFO; do not accept unless the parent is independently a passenger role.",
+      "llm_plausibility": 0.18,
+      "llm_rationale": "The child is a specifically dependent role and explicitly not a person, while the AgentOntology parent labeled passenger reads as the traveling agent.",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "Confirm the AgentOntology parent is an information entity rather than an act or agent.",
+      "llm_plausibility": 0.86,
+      "llm_rationale": "Rail reservation information is reservation information specialized to intended rail travel and kept distinct from the journey and any ticket bearer.",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "Blocking category issue: a material bearer cannot be a subclass of ticket if ticket is digital information content.",
+      "llm_plausibility": 0.48,
+      "llm_rationale": "A rail ticket is lexically a ticket, but the child is fixed as a material information bearer while the parent's bearer-versus-information status is unresolved.",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#railway_station",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "A station-as-location may instead be a BFO site; the supplied facility definition still supports material entity.",
+      "llm_plausibility": 0.86,
+      "llm_rationale": "The child is defined as a material aggregate of railway facilities, which falls under BFO_0000040 material entity.",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    },
+    {
+      "approved": false,
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "cosine": null,
+      "cosine_evidence": "INSUFFICIENT_INDEPENDENT_COSINE_EVIDENCE",
+      "hybrid_score": null,
+      "llm_concern": "Object versus object aggregate is finer than this parent and does not threaten the link.",
+      "llm_plausibility": 0.95,
+      "llm_rationale": "The child is defined as a material aggregate of rail vehicles and therefore a material entity.",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "review_priority": "HUMAN_REVIEW_REQUIRED"
+    }
+  ],
+  "hybrid_scored_pairs": 1,
+  "llm_model": "grok-4.7",
+  "llm_ratings_executed": true,
+  "merges_performed": 0,
+  "method": "70% held-out cosine + 30% LLM only when held-out evidence exists; no score fabricated for cold-start/in-training candidate links",
+  "note": "Cosine is not logical validity. Separate OWL reasoner and ticket-information scope review remain mandatory.",
+  "refined_sha256": "3ecad31fff9c86592e0fcd4f4168dbc45f48a1c826fad4778022b8190ae0dc6b",
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "status": "HYBRID_REVIEW_ONLY",
+  "unscored_independent_cosine": 8,
+  "version": "project6-elembeddings-hybrid-v1",
+  "weights": {
+    "cosine": 0.7,
+    "llm": 0.3
+  }
+}

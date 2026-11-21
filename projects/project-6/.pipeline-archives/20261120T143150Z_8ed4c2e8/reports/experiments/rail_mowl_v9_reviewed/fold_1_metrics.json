@@ -1,0 +1,131 @@
+{
+  "final_fit_details": null,
+  "fold": 1,
+  "heldout_not_used_to_select_config": true,
+  "inner_training_hash": "a213b73b3118a42723ee6de12cf4db5842ebda807213c9e3492bfa448bcf3577",
+  "native_library_versions": {
+    "mowl_version": "unknown",
+    "torch_version": "2.15.0+cpu"
+  },
+  "outer_geometry": {
+    "mean_absolute_shift": 0.0,
+    "mean_signed_shift": 0.0,
+    "native_offdiag_mean": 0.03746467083692551,
+    "native_offdiag_std": 0.179096058011055,
+    "projected_offdiag_mean": 0.03746467083692551,
+    "projected_offdiag_std": 0.179096058011055
+  },
+  "outer_native": {
+    "auc": 1.0,
+    "control_mean": 0.09428620679924886,
+    "count": 2,
+    "gap": 0.5222808088486394,
+    "paired_win_rate": 1.0,
+    "positive_mean": 0.6165670156478882,
+    "rows": [
+      {
+        "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+        "control_margin": 0.7670980772624413,
+        "control_mean": -0.07335067602495353,
+        "controls": [
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000030",
+            0.003623098134994507
+          ],
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/ticket",
+            -0.20277410745620728
+          ],
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/reservation",
+            -0.020901018753647804
+          ]
+        ],
+        "cosine": 0.6937474012374878,
+        "expected_parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+        "rank_among_four": 1
+      },
+      {
+        "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+        "control_margin": 0.27746354043483734,
+        "control_mean": 0.26192308962345123,
+        "controls": [
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000015",
+            0.34545832872390747
+          ],
+          [
+            "https://example.org/ontologies/intel-ontology#train",
+            0.13300220668315887
+          ],
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000040",
+            0.30730873346328735
+          ]
+        ],
+        "cosine": 0.5393866300582886,
+        "expected_parent": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+        "rank_among_four": 1
+      }
+    ],
+    "top1_of_four": 2
+  },
+  "outer_training_hash": "c79050e81eeb60a6d299f614e36025f59a922e69fd14ef024a858da4d593a954",
+  "outer_v9": {
+    "auc": 1.0,
+    "control_mean": 0.09428620679924886,
+    "count": 2,
+    "gap": 0.5222808088486394,
+    "paired_win_rate": 1.0,
+    "positive_mean": 0.6165670156478882,
+    "rows": [
+      {
+        "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+        "control_margin": 0.7670980772624413,
+        "control_mean": -0.07335067602495353,
+        "controls": [
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000030",
+            0.003623098134994507
+          ],
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/ticket",
+            -0.20277410745620728
+          ],
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/reservation",
+            -0.020901018753647804
+          ]
+        ],
+        "cosine": 0.6937474012374878,
+        "expected_parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+        "rank_among_four": 1
+      },
+      {
+        "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+        "control_margin": 0.27746354043483734,
+        "control_mean": 0.26192308962345123,
+        "controls": [
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000015",
+            0.34545832872390747
+          ],
+          [
+            "https://example.org/ontologies/intel-ontology#train",
+            0.13300220668315887
+          ],
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000040",
+            0.30730873346328735
+          ]
+        ],
+        "cosine": 0.5393866300582886,
+        "expected_parent": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+        "rank_among_four": 1
+      }
+    ],
+    "top1_of_four": 2
+  },
+  "selected_config": null,
+  "selection": "NATIVE_ONLY"
+}

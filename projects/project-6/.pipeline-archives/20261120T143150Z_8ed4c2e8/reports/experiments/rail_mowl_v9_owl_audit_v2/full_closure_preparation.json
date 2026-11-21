@@ -1,0 +1,13 @@
+{
+  "folds": [],
+  "full_owl_semantic_entailment_checked": false,
+  "import_dependency_report": "reports/experiments/rail_mowl_v9_owl_audit_v2/import_dependency_report.json",
+  "import_resolution_status": "UNRESOLVED_OR_AMBIGUOUS",
+  "reasoner_run": false,
+  "scope": "full-closure",
+  "status": "BLOCKED_MISSING_LOCAL_OWL_IMPORTS",
+  "v9_inputs_unmodified": true,
+  "v9_native_auc": 0.953125,
+  "v9_native_mean": 0.6037136092782021,
+  "version": "project6-v9-owl-audit-v2-strict-or-explicit-named"
+}

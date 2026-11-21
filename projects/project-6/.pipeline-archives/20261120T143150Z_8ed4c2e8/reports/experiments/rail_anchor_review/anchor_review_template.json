@@ -1,0 +1,72 @@
+{
+  "_instructions": "OPTIONAL review file. Fill approved_anchors only with independently justified, human-reviewed OWL subclass axioms; do not infer these from a withheld target. Provide independent_source, reviewer, and rationale. Submit this file with --reviewed-anchors; newly added evidence must undergo OWL entailment checking.",
+  "approved_anchors": [],
+  "example_only_not_an_approval": {
+    "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+    "independent_source": "Replace with actual independently verified ontology evidence",
+    "parent": "http://purl.obolibrary.org/obo/IAO_0000178",
+    "rationale": "Example only: this must be justified independently of the withheld rail_ticket->ticket axiom",
+    "reviewer": "Replace with actual reviewer ID or course review note"
+  },
+  "review_queue": [
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "fold": 1,
+      "requires_independent_ontology_justification": false,
+      "retained_direct_superclasses": [
+        "http://purl.obolibrary.org/obo/BFO_0000023"
+      ],
+      "target_to_remain_held_out": "https://www.commoncoreontologies.org/AgentOntology/passenger"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "fold": 1,
+      "requires_independent_ontology_justification": true,
+      "retained_direct_superclasses": [],
+      "target_to_remain_held_out": "https://www.commoncoreontologies.org/AgentOntology/reservation"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#railway_station",
+      "fold": 2,
+      "requires_independent_ontology_justification": true,
+      "retained_direct_superclasses": [],
+      "target_to_remain_held_out": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "fold": 2,
+      "requires_independent_ontology_justification": true,
+      "retained_direct_superclasses": [],
+      "target_to_remain_held_out": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "fold": 3,
+      "requires_independent_ontology_justification": true,
+      "retained_direct_superclasses": [],
+      "target_to_remain_held_out": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "fold": 3,
+      "requires_independent_ontology_justification": true,
+      "retained_direct_superclasses": [],
+      "target_to_remain_held_out": "https://www.commoncoreontologies.org/AgentOntology/ticket"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "fold": 4,
+      "requires_independent_ontology_justification": true,
+      "retained_direct_superclasses": [],
+      "target_to_remain_held_out": "https://example.org/ontologies/intel-ontology#train"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "fold": 4,
+      "requires_independent_ontology_justification": true,
+      "retained_direct_superclasses": [],
+      "target_to_remain_held_out": "http://purl.obolibrary.org/obo/BFO_0000015"
+    }
+  ],
+  "version": "project6-experimental-superclass-support-review-v1"
+}

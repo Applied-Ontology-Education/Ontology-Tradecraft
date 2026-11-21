@@ -1,0 +1,22 @@
+cosine,subclass_label,subclass,superclass_label,superclass
+-0.282265841960907,Military Personnel Force,https://www.commoncoreontologies.org/ont00000426,Armed Force,https://www.commoncoreontologies.org/ont00000274
+-0.025888781994581223,Division of Delimiting Domain,https://www.commoncoreontologies.org/ont00001114,ont00000472,https://www.commoncoreontologies.org/ont00000472
+0.115118607878685,Agent Capability,https://www.commoncoreontologies.org/ont00001379,BFO_0000017,http://purl.obolibrary.org/obo/BFO_0000017
+0.3971916437149048,Process Regulation,https://www.commoncoreontologies.org/ont00001324,ont00000965,https://www.commoncoreontologies.org/ont00000965
+0.4062767028808594,Ethnic Group,https://www.commoncoreontologies.org/ont00000507,Group of Persons,https://www.commoncoreontologies.org/ont00000914
+0.6966947317123413,Objective,https://www.commoncoreontologies.org/ont00000476,ont00000965,https://www.commoncoreontologies.org/ont00000965
+0.7316718697547913,Material Territory of a Government Domain,https://www.commoncoreontologies.org/ont00000662,ont00001341,https://www.commoncoreontologies.org/ont00001341
+0.7950766086578369,Skill,https://www.commoncoreontologies.org/ont00000089,Agent Capability,https://www.commoncoreontologies.org/ont00001379
+0.8619152307510376,Fourth-Order Administrative Region,https://www.commoncoreontologies.org/ont00000473,Government Domain,https://www.commoncoreontologies.org/ont00001152
+0.8797810673713684,Agent,https://www.commoncoreontologies.org/ont00001017,BFO_0000040,http://purl.obolibrary.org/obo/BFO_0000040
+0.8903005719184875,Eye,https://www.commoncoreontologies.org/ont00000500,Bodily Component,https://www.commoncoreontologies.org/ont00000084
+0.9050472974777222,Commercial Role,https://www.commoncoreontologies.org/ont00000485,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023
+0.9250465035438538,Neutral Role,https://www.commoncoreontologies.org/ont00000486,Allegiance Role,https://www.commoncoreontologies.org/ont00000392
+0.9309927821159363,Geopolitical Power Role,https://www.commoncoreontologies.org/ont00000898,BFO_0000023,http://purl.obolibrary.org/obo/BFO_0000023
+0.9409562349319458,Commercial Organization,https://www.commoncoreontologies.org/ont00000443,Organization,https://www.commoncoreontologies.org/ont00001180
+0.9539568424224854,Government Organization,https://www.commoncoreontologies.org/ont00000408,Organization,https://www.commoncoreontologies.org/ont00001180
+0.9569631814956665,Domain of a Country,https://www.commoncoreontologies.org/ont00000139,Government Domain,https://www.commoncoreontologies.org/ont00001152
+0.957490086555481,Process Prohibition,https://www.commoncoreontologies.org/ont00000553,Process Regulation,https://www.commoncoreontologies.org/ont00001324
+0.9632248282432556,Organization Member,https://www.commoncoreontologies.org/ont00000647,Person,https://www.commoncoreontologies.org/ont00001262
+0.9867279529571533,Government,https://www.commoncoreontologies.org/ont00001335,Organization,https://www.commoncoreontologies.org/ont00001180
+0.9960774183273315,Government of a Country,https://www.commoncoreontologies.org/ont00000532,Government,https://www.commoncoreontologies.org/ont00001335

@@ -1,0 +1,151 @@
+{
+  "candidate_results": [
+    {
+      "auc": 0.5397916666666667,
+      "gap": 0.01973813783066968,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "v9_native_reference",
+      "positive_mean": 0.02767455456778407
+    },
+    {
+      "auc": 0.5416666666666666,
+      "gap": 0.02212738400946061,
+      "geometry_shift": 0.0179335605353117,
+      "mix": 0.15,
+      "name": "v9_native_reference",
+      "positive_mean": 0.028405142482370138
+    },
+    {
+      "auc": 0.5470833333333334,
+      "gap": 0.02461278873185317,
+      "geometry_shift": 0.03754304349422455,
+      "mix": 0.3,
+      "name": "v9_native_reference",
+      "positive_mean": 0.02916012266650796
+    },
+    {
+      "auc": 0.5391666666666667,
+      "gap": 0.018332764413207768,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "compact_40",
+      "positive_mean": 0.00961675439029932
+    },
+    {
+      "auc": 0.5366666666666666,
+      "gap": 0.016075528366491197,
+      "geometry_shift": 0.023166794329881668,
+      "mix": 0.15,
+      "name": "compact_40",
+      "positive_mean": 0.006569754704833031
+    },
+    {
+      "auc": 0.5314583333333334,
+      "gap": 0.013642706054573257,
+      "geometry_shift": 0.04820508882403374,
+      "mix": 0.3,
+      "name": "compact_40",
+      "positive_mean": 0.0034091615118086336
+    },
+    {
+      "auc": 0.5016666666666667,
+      "gap": -0.0009559146206205085,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "wide_75",
+      "positive_mean": 0.005403520679101348
+    },
+    {
+      "auc": 0.5064583333333333,
+      "gap": -0.00012749166538317952,
+      "geometry_shift": 0.02199242077767849,
+      "mix": 0.15,
+      "name": "wide_75",
+      "positive_mean": 0.0070181620772928
+    },
+    {
+      "auc": 0.510625,
+      "gap": 0.0007325646157066035,
+      "geometry_shift": 0.04569847136735916,
+      "mix": 0.3,
+      "name": "wide_75",
+      "positive_mean": 0.008680882398039103
+    },
+    {
+      "auc": 0.5058333333333334,
+      "gap": -0.0030623690458014604,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "wide_100",
+      "positive_mean": 0.006810958380810916
+    },
+    {
+      "auc": 0.50875,
+      "gap": -0.002336578040073316,
+      "geometry_shift": 0.020113859325647354,
+      "mix": 0.15,
+      "name": "wide_100",
+      "positive_mean": 0.006835301127284765
+    },
+    {
+      "auc": 0.5089583333333333,
+      "gap": -0.0016267815760026378,
+      "geometry_shift": 0.0416436567902565,
+      "mix": 0.3,
+      "name": "wide_100",
+      "positive_mean": 0.006740578729659319
+    },
+    {
+      "auc": 0.5385416666666667,
+      "gap": 0.01983513308999439,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "small_margin_50",
+      "positive_mean": 0.026366695761680603
+    },
+    {
+      "auc": 0.5402083333333333,
+      "gap": 0.02156853419728577,
+      "geometry_shift": 0.018850527703762054,
+      "mix": 0.15,
+      "name": "small_margin_50",
+      "positive_mean": 0.026695130905136467
+    },
+    {
+      "auc": 0.544375,
+      "gap": 0.023359558770122628,
+      "geometry_shift": 0.039737772196531296,
+      "mix": 0.3,
+      "name": "small_margin_50",
+      "positive_mean": 0.027040563407354057
+    },
+    {
+      "auc": 0.5064583333333333,
+      "gap": -0.0010340847307816143,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "small_margin_75",
+      "positive_mean": 0.0061138768447563056
+    },
+    {
+      "auc": 0.506875,
+      "gap": -3.286056841413174e-05,
+      "geometry_shift": 0.021238209679722786,
+      "mix": 0.15,
+      "name": "small_margin_75",
+      "positive_mean": 0.00750601701438427
+    },
+    {
+      "auc": 0.5085416666666667,
+      "gap": 0.0010125441631923127,
+      "geometry_shift": 0.043897587805986404,
+      "mix": 0.3,
+      "name": "small_margin_75",
+      "positive_mean": 0.008945051347836852
+    }
+  ],
+  "fold": 1,
+  "outer_rail_test_pairs_used_for_tuning": 0,
+  "source_import_dev_pairs": 40
+}

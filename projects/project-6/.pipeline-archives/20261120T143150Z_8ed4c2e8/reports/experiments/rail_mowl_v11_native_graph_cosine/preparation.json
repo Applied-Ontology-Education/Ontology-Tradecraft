@@ -1,0 +1,138 @@
+{
+  "approved_anchor_count": 7,
+  "dev_max_requested": 40,
+  "development_selection_source": "source/import edges only; never rail child",
+  "folds": [
+    {
+      "dev_hash": "15cd96535f036a104178cb3a1a63fd6ae5d0c7ac26e19f52d8b76d66b9a10f98",
+      "dev_pairs": 40,
+      "fold": 1,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        }
+      ],
+      "inner_sha256": "a213b73b3118a42723ee6de12cf4db5842ebda807213c9e3492bfa448bcf3577",
+      "inner_training_pairs": 797,
+      "inner_training_path": "generated/experiments/rail_mowl_v11_native_graph_cosine/fold_1_inner_train.ttl",
+      "outer_sha256": "c79050e81eeb60a6d299f614e36025f59a922e69fd14ef024a858da4d593a954",
+      "outer_training_pairs": 837,
+      "outer_training_path": "generated/experiments/rail_mowl_v11_native_graph_cosine/fold_1_outer_train.ttl"
+    },
+    {
+      "dev_hash": "7019f393aec15c77affcb2d26ad573f8fa6f32bc5e134ff058e086aa476f3af6",
+      "dev_pairs": 40,
+      "fold": 2,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#railway_station",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#train",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 1,
+          "training_outgoing": 1
+        }
+      ],
+      "inner_sha256": "ebb7dc76c44504231747f179e3fc5435dc58d78be7643e3abeea0c1f2183dcd3",
+      "inner_training_pairs": 797,
+      "inner_training_path": "generated/experiments/rail_mowl_v11_native_graph_cosine/fold_2_inner_train.ttl",
+      "outer_sha256": "99c620e3538594fb61f7aa075c201e2d335c4b4d517e48411b98d97909156727",
+      "outer_training_pairs": 837,
+      "outer_training_path": "generated/experiments/rail_mowl_v11_native_graph_cosine/fold_2_outer_train.ttl"
+    },
+    {
+      "dev_hash": "a3647f71dffa1485287ad901a413089f11dbf47406069bfdeceef3c5fa1b8553",
+      "dev_pairs": 40,
+      "fold": 3,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+          "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        }
+      ],
+      "inner_sha256": "ccb7169508fcb7b4726ce4b4a2f2c8d4356be566437a83ef5ad155330c693677",
+      "inner_training_pairs": 797,
+      "inner_training_path": "generated/experiments/rail_mowl_v11_native_graph_cosine/fold_3_inner_train.ttl",
+      "outer_sha256": "583fe6ffecb7312c3d33e283f4fb2474141bab06f582762900ab0e3206c7f7d0",
+      "outer_training_pairs": 837,
+      "outer_training_path": "generated/experiments/rail_mowl_v11_native_graph_cosine/fold_3_outer_train.ttl"
+    },
+    {
+      "dev_hash": "f772211c4e5f5888b57bb519849346cd9176045cb3c4a44f7176c89cf9eefbfa",
+      "dev_pairs": 40,
+      "fold": 4,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+          "parent": "https://example.org/ontologies/intel-ontology#train",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        }
+      ],
+      "inner_sha256": "38c6a2aa9ce7a24ac01d6460acdc1adf244e8a22b7511206f478ebb82cf18d5a",
+      "inner_training_pairs": 797,
+      "inner_training_path": "generated/experiments/rail_mowl_v11_native_graph_cosine/fold_4_inner_train.ttl",
+      "outer_sha256": "0ef98c4dddf8ac12c7a84d657fda4ed16ee25df3c0bda971751a1e71b00540cd",
+      "outer_training_pairs": 837,
+      "outer_training_path": "generated/experiments/rail_mowl_v11_native_graph_cosine/fold_4_outer_train.ttl"
+    }
+  ],
+  "full_owl_semantic_entailment_checked": false,
+  "inputs_sha256": {
+    "generated/module_augmented.ttl": "5d157574acd9d59dff35b42c7d4855378d179ac1055fe1c28e74611ad5df2054",
+    "generated/mowl_rail_train.ttl": "e4d596140271e898f478d3ff13de381a87956b3f3f7e73b1e521736b90560637",
+    "generated/mowl_rail_valid.ttl": "a14a164b02148b55dfe5d4b7641e25d58e5e4edc15a18a76ab817118baa6cd45",
+    "imports/AgentOntology.ttl": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+    "imports/EventOntology.ttl": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+    "imports/InformationEntityOntology.ttl": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+    "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+    "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+    "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0",
+    "reports/step5_split_report.json": "972452c2b3a7ba4d63f3d453d235d5cc95443eeceefd7c0144ab775cdd108856",
+    "scripts/run_all.py": "5d91ad914fadc4511b32aeb796bb83478d17dbeef746fb9fccdccb16047f00bb",
+    "src/module.ttl": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1"
+  },
+  "mode": "NATIVE_HYPERPARAMETERS_AND_ONE_HOP_TAXONOMY",
+  "named_subclass_leakage_detected": false,
+  "outer_folds": 4,
+  "outer_holdout_total": 8,
+  "outer_tests_not_used_for_selection": true,
+  "review_file_sha256": "2ab12e2e437eb2c1c37c2c426e024aae4cdf89264d21007c99073a09c75083ea",
+  "status": "PREPARED_NO_TRAINING",
+  "version": "project6-v11-final-single-run-native-graph-cosine-v1"
+}

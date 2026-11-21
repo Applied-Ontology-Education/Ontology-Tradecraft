@@ -1,0 +1,236 @@
+{
+  "namespace": "https://example.org/ontologies/intel-ontology#",
+  "proposal": {
+    "data_properties": [
+      {
+        "datatype_iri": "http://www.w3.org/2001/XMLSchema#string",
+        "definition": "A datatype relation that associates a train with a train-number identifier.",
+        "domain_iri": "https://example.org/ontologies/intel-ontology#train",
+        "label": "has train number",
+        "local_name": "has_train_number",
+        "rationale": "Rail vehicle identifier analogous in purpose to, but not a duplicate of, tail number, MSN, or ICAO code."
+      },
+      {
+        "datatype_iri": "http://www.w3.org/2001/XMLSchema#dateTime",
+        "definition": "A datatype relation that associates a rail journey plan with its scheduled departure time.",
+        "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+        "label": "has scheduled departure time",
+        "local_name": "has_scheduled_departure_time",
+        "rationale": "Places schedule data on the plan information entity rather than on the journey process, and does not duplicate boarding time or reservation number."
+      }
+    ],
+    "design_warnings": [
+      "This is a candidate TBox report only and does not approve ontology assertions or generate OWL axioms.",
+      "Air analogues are comparisons only; do not assert owl:equivalentClass between rail and air classes.",
+      "The local reservation class is under material information bearer, while AgentOntology reservation is under information content entity. Rail reservation information follows the latter and must not be parented by the former.",
+      "Rail ticket follows the supplied material-bearer ticket pattern; a purely electronic ticket may require a separate information content entity.",
+      "Railway station is aligned with airport under building, but station site versus station facility, and non-building stations, remain unresolved.",
+      "Rail passenger role is mandated under BFO role and is not a subclass of passenger or person. Do not treat a role as a person or create person-specific statements.",
+      "No named individuals, trip records, social-media classes, or threat classifications are proposed.",
+      "Source arrival and departure airport relations are datatype properties; the rail design uses object properties to station classes instead and does not reuse those datatype properties.",
+      "Act of Flight Plan is a process and is not a suitable parent or reuse target for rail journey plan information."
+    ],
+    "object_properties": [
+      {
+        "definition": "A relation between a rail journey and the railway station at which that journey begins.",
+        "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
+        "label": "departs from station",
+        "local_name": "departs_from_station",
+        "range_iri": "https://example.org/ontologies/intel-ontology#railway_station",
+        "rationale": "Links the journey process to a facility object. The source departure-airport relation is a datatype property and is not reused.",
+        "reused_analogue_iri": ""
+      },
+      {
+        "definition": "A relation between a rail journey and the railway station at which that journey ends.",
+        "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
+        "label": "arrives at station",
+        "local_name": "arrives_at_station",
+        "range_iri": "https://example.org/ontologies/intel-ontology#railway_station",
+        "rationale": "Links the journey process to its arrival facility without duplicating the source arrival-airport datatype property.",
+        "reused_analogue_iri": ""
+      },
+      {
+        "definition": "A relation between a rail journey and the train that participates in that journey as its vehicle.",
+        "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
+        "label": "uses train",
+        "local_name": "uses_train",
+        "range_iri": "https://example.org/ontologies/intel-ontology#train",
+        "rationale": "Connects the process to the proposed vehicle class. No supplied object property has this domain and range.",
+        "reused_analogue_iri": ""
+      },
+      {
+        "definition": "A relation between a rail journey plan and the rail journey that the plan is about.",
+        "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+        "label": "specifies rail journey",
+        "local_name": "specifies_rail_journey",
+        "range_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
+        "rationale": "Keeps plan information about a process without identifying the information content entity with the process.",
+        "reused_analogue_iri": ""
+      }
+    ],
+    "rail_classes": [
+      {
+        "analogue_iris": [
+          "https://www.commoncoreontologies.org/AgentOntology/Airplane"
+        ],
+        "decision": "CREATE",
+        "definition": "A material object that is a rail vehicle intended to move along railway tracks.",
+        "label": "train",
+        "local_name": "train",
+        "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000030",
+        "rationale": "No exact-name match was supplied. Train is a material vehicle, so it is proposed under BFO object, using Airplane only as a structural comparison and not as an equivalent class.",
+        "reused_iri": "",
+        "review_notes": [
+          "No supplied vehicle or rail-vehicle class was available, so the parent is BFO object rather than an invented vehicle IRI.",
+          "Do not assert equivalence to Airplane.",
+          "This class is a type, not a named train individual."
+        ],
+        "target_concept": "train"
+      },
+      {
+        "analogue_iris": [
+          "https://www.commoncoreontologies.org/AgentOntology/Commcercial_airplane"
+        ],
+        "decision": "CREATE",
+        "definition": "A train whose intended use is the carriage of passengers.",
+        "label": "passenger train",
+        "local_name": "passenger_train",
+        "parent_iri": "https://example.org/ontologies/intel-ontology#train",
+        "rationale": "No exact-name match was supplied. This is a specialization of the proposed train class, mirroring the commercial-airplane-under-airplane pattern without copying the source spelling error or asserting equivalence.",
+        "reused_iri": "",
+        "review_notes": [
+          "Parent is a newly proposed class IRI, which is permitted for a proposed child.",
+          "Confirm whether freight-capable mixed trains should be excluded from the definition.",
+          "The supplied analogue IRI contains the source spelling Commcercial and is a comparison only."
+        ],
+        "target_concept": "passenger train"
+      },
+      {
+        "analogue_iris": [
+          "https://www.commoncoreontologies.org/AgentOntology/airport"
+        ],
+        "decision": "CREATE",
+        "definition": "A building that is a rail facility at which trains stop so that passengers may board or alight.",
+        "label": "railway station",
+        "local_name": "railway_station",
+        "parent_iri": "https://www.commoncoreontologies.org/AgentOntology/building",
+        "rationale": "No exact-name match was supplied. The air pattern places airport under the supplied building class, so railway station is aligned the same way rather than invented as a new facility parent.",
+        "reused_iri": "",
+        "review_notes": [
+          "Facility and geographic location are not distinguished here; a BFO site may be needed later for the station location.",
+          "Parenting under building may be too narrow for open-air or multi-structure stations.",
+          "Do not assert equivalence to airport, arrival airport, or departure airport."
+        ],
+        "target_concept": "railway station"
+      },
+      {
+        "analogue_iris": [],
+        "decision": "CREATE",
+        "definition": "A process in which a train travels from a departure railway station to an arrival railway station.",
+        "label": "rail journey",
+        "local_name": "rail_journey",
+        "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000015",
+        "rationale": "No exact-name match was supplied. An actual journey is a BFO process and must not be modeled as journey-plan or reservation information. The mandated parent is BFO process.",
+        "reused_iri": "",
+        "review_notes": [
+          "Distinct from rail journey plan and rail reservation information.",
+          "Do not reuse Act of Flight Plan; that source class is a process with a misleading information-like name and is not a rail journey.",
+          "No named trip records or journey individuals are proposed."
+        ],
+        "target_concept": "rail journey"
+      },
+      {
+        "analogue_iris": [
+          "https://www.commoncoreontologies.org/AgentOntology/Flight_plan"
+        ],
+        "decision": "CREATE",
+        "definition": "An information content entity that specifies an intended rail journey, including planned origin, destination, or timing, and is not itself the journey process.",
+        "label": "rail journey plan",
+        "local_name": "rail_journey_plan",
+        "parent_iri": "http://purl.obolibrary.org/obo/IAO_0000030",
+        "rationale": "No exact-name match was supplied. Flight plan is an information content entity, so the rail plan is aligned under IAO information content entity rather than under a process.",
+        "reused_iri": "",
+        "review_notes": [
+          "Not equivalent to Flight plan.",
+          "Not a material bearer and not a rail ticket.",
+          "A plan may describe a journey that never occurs; do not identify the plan with the process."
+        ],
+        "target_concept": "rail journey plan"
+      },
+      {
+        "analogue_iris": [
+          "https://www.commoncoreontologies.org/AgentOntology/boarding_pass",
+          "https://www.commoncoreontologies.org/AgentOntology/ticket"
+        ],
+        "decision": "CREATE",
+        "definition": "A material information bearer that is a ticket carrying information authorizing travel on a rail journey.",
+        "label": "rail ticket",
+        "local_name": "rail_ticket",
+        "parent_iri": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+        "rationale": "No exact-name match was supplied. Source ticket and boarding pass are material information bearers, and ticket is a supplied parent, so rail ticket follows that bearer pattern rather than the information-content-entity pattern used for plans and reservations.",
+        "reused_iri": "",
+        "review_notes": [
+          "Electronic or purely informational tickets may instead be information content entities; this proposal assumes the material-bearer reading indicated by the ticket analogue.",
+          "Do not assert equivalence to ticket, concert ticket, or boarding pass.",
+          "Ticket information and the physical bearer remain distinct if both are later needed."
+        ],
+        "target_concept": "rail ticket"
+      },
+      {
+        "analogue_iris": [
+          "https://example.org/ontologies/intel-ontology#reservation",
+          "https://www.commoncoreontologies.org/AgentOntology/airline_reservation",
+          "https://www.commoncoreontologies.org/AgentOntology/reservation"
+        ],
+        "decision": "CREATE",
+        "definition": "An information content entity that records a reservation for intended rail travel and is distinct from both the rail journey process and any material ticket.",
+        "label": "rail reservation information",
+        "local_name": "rail_reservation_information",
+        "parent_iri": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+        "rationale": "No exact-name match was supplied. The AgentOntology reservation class is the supplied information-content-entity parent used by airline reservation information, so the rail reservation information is aligned there and not under the local material-bearer reservation.",
+        "reused_iri": "",
+        "review_notes": [
+          "The local example.org reservation class is asserted under material information bearer and must not be used as this parent despite the shared label.",
+          "Comparison with airline reservation information is not an equivalence.",
+          "Do not create reservation individuals or person-specific booking statements."
+        ],
+        "target_concept": "rail reservation information"
+      },
+      {
+        "analogue_iris": [
+          "https://www.commoncoreontologies.org/AgentOntology/Jetblue_passenger",
+          "https://www.commoncoreontologies.org/AgentOntology/passenger"
+        ],
+        "decision": "CREATE",
+        "definition": "A role that inheres in a person and is realized by that person traveling as a passenger on a train, and that is not itself a person.",
+        "label": "rail passenger role",
+        "local_name": "rail_passenger_role",
+        "parent_iri": "http://purl.obolibrary.org/obo/BFO_0000023",
+        "rationale": "No exact-name match was supplied. The mandated parent is BFO role, not the source passenger class and not person, so the role remains distinct from its bearer.",
+        "reused_iri": "",
+        "review_notes": [
+          "Must not be subclassed under passenger or person, even though source passenger is itself a role.",
+          "Jetblue passenger is a carrier-specific analogue only and must not be reused or specialized with a named carrier.",
+          "No statements about specific persons are included."
+        ],
+        "target_concept": "rail passenger role"
+      }
+    ]
+  },
+  "provenance": {
+    "generated_by": "xAI LLM; checked against local RDF vocabulary",
+    "local_import_hashes": {
+      "imports/AgentOntology.ttl": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+      "imports/EventOntology.ttl": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+      "imports/InformationEntityOntology.ttl": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+      "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+      "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+      "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0"
+    },
+    "model": "grok-4.7",
+    "prompt_sha256": "88637eac2064a93fb283b392417c1a478d25d2073f22f8379a01be2b14dfc655",
+    "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1"
+  },
+  "script_version": "project6-rail-proposal-v1",
+  "status": "PROPOSED_NOT_VALIDATED_OWL"
+}

@@ -1,0 +1,20 @@
+{
+  "augmented_reasoner_passed": true,
+  "baseline_reasoner_passed": true,
+  "import_module_triples": 696,
+  "new_named_individuals": 0,
+  "next": "Resolve human scope decisions, then controlled candidate merge and full integrated pipeline",
+  "owl_reasoner_executed": true,
+  "pending_scope_review": [
+    "rail ticket physical bearer vs digital information",
+    "railway station physical facility vs site"
+  ],
+  "reasoning_scope": "SOURCE_PLUS_STAR_LOCALITY_MODULE_OF_IMPORTS",
+  "refined_sha256": "c89b5c9adce5ae4b0e2d82ec758c13f4dea1be410f5c33d56529d96904cce36e",
+  "semantic_approval": false,
+  "source_merged": false,
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_unchanged": true,
+  "status": "PASS_REASONER_COHERENT_UNAPPROVED",
+  "version": "project6-robot-reasoner-v3-source-scoped"
+}

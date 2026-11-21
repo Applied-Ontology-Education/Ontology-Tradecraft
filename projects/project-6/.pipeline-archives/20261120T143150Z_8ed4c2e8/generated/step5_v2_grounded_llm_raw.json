@@ -1,0 +1,58 @@
+{
+  "ratings": [
+    {
+      "concern": "Parent train has no verified definition or direct superclasses, so its BFO category is not established by source facts.",
+      "id": "edge-00",
+      "plausibility": 0.84,
+      "rationale": "The child is defined as a train with a passenger-transport differentia, so subclassing train is internally coherent with that genus. No verified parent definition or superclass axiom is available, and the unapproved train–material-entity proposal is not evidence."
+    },
+    {
+      "concern": "Temporal proper parts are implied by travel rather than explicitly stated; journeys only toward an arrival station remain processes.",
+      "id": "edge-01",
+      "plausibility": 0.9,
+      "rationale": "Verified parent process is an occurrent, not a role. The child is defined as a train-travel process between stations, matching the process genus and its temporal, material-participant elucidation."
+    },
+    {
+      "concern": "Aboutness for a journey that may not yet occur is not further axiomatized; no source contradiction.",
+      "id": "edge-02",
+      "plausibility": 0.91,
+      "rationale": "Verified parent is an information content entity and a generically dependent continuant. The child is defined as an ICE specifying an intended rail journey and explicitly not that travel process."
+    },
+    {
+      "concern": "Bearer is restricted to an undefined person class; that differentia is unverified. The other proposed parent is not an approved source fact.",
+      "id": "edge-03",
+      "plausibility": 0.89,
+      "rationale": "Verified parent is BFO role, a realizable entity. The child is defined as a role inhering in a bearer and realized by rail-passenger participation, and it is explicitly not itself a person."
+    },
+    {
+      "concern": "Parent definition text is missing, so the passenger role differentia cannot be checked against the rail-journey differentia. Do not retype passenger as the person who bears the role.",
+      "id": "edge-04",
+      "plausibility": 0.76,
+      "rationale": "Source axioms place passenger directly under BFO role, so it is a role type, not a person, bearer, or untyped occupant. A rail-specific passenger role is a plausible specialization, but role ancestry alone does not prove the subclass."
+    },
+    {
+      "concern": "No parent definition is supplied, so fit to this reservation class’s differentia is unverified. Wording could be misread as a reserving act, though the stated genus is ICE.",
+      "id": "edge-05",
+      "plausibility": 0.83,
+      "rationale": "Verified parent is an information content entity. The child is defined as an ICE that is reservation information about rail-journey participation, so a narrower subclass is generically compatible."
+    },
+    {
+      "concern": "Physical versus information bearer scope for rail ticket is unresolved. Electronic ticket content would be generically dependent information, not a material information bearer; including it would make this subclass too narrow or incorrect.",
+      "id": "edge-06",
+      "plausibility": 0.62,
+      "rationale": "Under the stated definition the child is a material information bearer, and verified ticket is a subclass of IAO material information bearer, so that physical reading is compatible. Parent type alone does not prove the subclass."
+    },
+    {
+      "concern": "A station is often modeled as a BFO site rather than only the material facility aggregate; site versus material-entity scope is not settled by the verified axioms.",
+      "id": "edge-07",
+      "plausibility": 0.79,
+      "rationale": "Verified parent is BFO material entity, an independent continuant. The child is defined as a material aggregate of physical railway facilities with material parts, fitting that elucidation."
+    },
+    {
+      "concern": "Object versus object-aggregate status of a multi-vehicle train is unspecified; either remains a material entity.",
+      "id": "edge-08",
+      "plausibility": 0.93,
+      "rationale": "Verified parent is BFO material entity. The child is defined as a material entity composed of one or more rail vehicles, satisfying the matter-as-part elucidation."
+    }
+  ]
+}

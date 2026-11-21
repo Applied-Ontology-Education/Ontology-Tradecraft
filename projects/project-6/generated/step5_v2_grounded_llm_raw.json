@@ -1,0 +1,58 @@
+{
+  "ratings": [
+    {
+      "concern": "Parent train lacks a verified definition and direct superclass; do not infer its type from other unapproved candidates.",
+      "id": "edge-00",
+      "plausibility": 0.76,
+      "rationale": "The child definition uses train as its genus and adds passenger carriage as the differentia, so the proposed subclass is definitionally coherent. The parent has no verified definition or direct superclass, so that wording is not independently confirmed by source axioms."
+    },
+    {
+      "concern": "None material; keep this process distinct from the separately defined journey plan.",
+      "id": "edge-01",
+      "plausibility": 0.91,
+      "rationale": "The child is defined as a process of a train traveling between stations, matching BFO process as an occurrent with temporal parts and a material participant. Verified parent ancestry is occurrent, not role, and the definition distinguishes the travel process from a plan."
+    },
+    {
+      "concern": "ICE is a broad genus; no verified more specific plan or directive class is supplied, but that does not conflict with this subclass claim.",
+      "id": "edge-02",
+      "plausibility": 0.9,
+      "rationale": "The child is defined as an information content entity about an intended journey and explicitly not the journey process, which fits IAO ICE as a generically dependent continuant that is about something. Verified parent superclass is generically dependent continuant, not a role."
+    },
+    {
+      "concern": "Specifying a person as bearer is a differentia of the role type, not an identification of the role with a person. The other proposed passenger parent is not an approved fact.",
+      "id": "edge-03",
+      "plausibility": 0.89,
+      "rationale": "The child is defined as a role realized in travel circumstances, not as a person, which matches the verified BFO role elucidation: a realizable entity dependent on contingent circumstances and not identical to its bearer. Verified parent superclass is realizable entity."
+    },
+    {
+      "concern": "Missing parent genus-differentia: cannot confirm that passenger is the mode-general passenger role rather than a differently differentiated role. Do not treat the child as already asserted under role.",
+      "id": "edge-04",
+      "plausibility": 0.63,
+      "rationale": "Verified source axioms place passenger directly under BFO role, so it is a role type, not a person, bearer, or untyped passenger. A rail-specific passenger role is a plausible subtype by label, but the parent definition is absent, and role ancestry alone does not prove the subclass."
+    },
+    {
+      "concern": "Parent definition is missing, so ICE ancestry shows only category compatibility, not that the child's differentia falls under this reservation class.",
+      "id": "edge-05",
+      "plausibility": 0.71,
+      "rationale": "The child is defined as reservation information for intended rail travel, distinct from the journey process and any material ticket, and the parent is verified as an information content entity. That supports category compatibility and a plausible rail-specific specialization."
+    },
+    {
+      "concern": "Physical versus information-bearer scope for Rail Ticket is unresolved. An electronic ticket would be information content, not a material information bearer, and could not be a subclass of this parent; parent type alone does not settle scope.",
+      "id": "edge-06",
+      "plausibility": 0.54,
+      "rationale": "As stated, both child and verified parent are material information bearers, so a physical ticket authorizing rail travel is compatible with ticket. That alignment does not resolve whether rail ticket also covers non-material ticket content."
+    },
+    {
+      "concern": "Ordinary station talk sometimes means a site rather than the material facilities; the given definition selects the material reading, so there is no contradiction with the verified parent.",
+      "id": "edge-07",
+      "plausibility": 0.83,
+      "rationale": "The child is defined as the material facility aggregate of platforms, track, structures, and buildings, which fits material entity as an independent continuant with material parts. Verified parent superclass is independent continuant, not role."
+    },
+    {
+      "concern": "Material entity is a correct but broad genus; no verified tighter artifact or object-aggregate parent is asserted here.",
+      "id": "edge-08",
+      "plausibility": 0.92,
+      "rationale": "A train composed of rail vehicles is a material entity with portions of matter as parts, matching the verified material-entity elucidation and its independent-continuant superclass. It is not a role."
+    }
+  ]
+}

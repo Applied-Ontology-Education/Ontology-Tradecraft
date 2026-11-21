@@ -1,0 +1,131 @@
+{
+  "final_fit_details": null,
+  "fold": 3,
+  "heldout_not_used_to_select_config": true,
+  "inner_training_hash": "ccb7169508fcb7b4726ce4b4a2f2c8d4356be566437a83ef5ad155330c693677",
+  "native_library_versions": {
+    "mowl_version": "unknown",
+    "torch_version": "2.15.0+cpu"
+  },
+  "outer_geometry": {
+    "mean_absolute_shift": 0.0,
+    "mean_signed_shift": 0.0,
+    "native_offdiag_mean": 0.058986008167266846,
+    "native_offdiag_std": 0.1793915331363678,
+    "projected_offdiag_mean": 0.058986008167266846,
+    "projected_offdiag_std": 0.1793915331363678
+  },
+  "outer_native": {
+    "auc": 1.0,
+    "control_mean": 0.1194588119784991,
+    "count": 2,
+    "gap": 0.5427721564968427,
+    "paired_win_rate": 1.0,
+    "positive_mean": 0.6622309684753418,
+    "rows": [
+      {
+        "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+        "control_margin": 0.3757985234260559,
+        "control_mean": 0.1572449803352356,
+        "controls": [
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/passenger",
+            0.11677475273609161
+          ],
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000015",
+            -0.011581167578697205
+          ],
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000040",
+            0.3665413558483124
+          ]
+        ],
+        "cosine": 0.5330435037612915,
+        "expected_parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+        "rank_among_four": 1
+      },
+      {
+        "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+        "control_margin": 0.7097457895676295,
+        "control_mean": 0.08167264362176259,
+        "controls": [
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000030",
+            0.11656861007213593
+          ],
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000015",
+            0.053093768656253815
+          ],
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/reservation",
+            0.07535555213689804
+          ]
+        ],
+        "cosine": 0.7914184331893921,
+        "expected_parent": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+        "rank_among_four": 1
+      }
+    ],
+    "top1_of_four": 2
+  },
+  "outer_training_hash": "583fe6ffecb7312c3d33e283f4fb2474141bab06f582762900ab0e3206c7f7d0",
+  "outer_v9": {
+    "auc": 1.0,
+    "control_mean": 0.1194588119784991,
+    "count": 2,
+    "gap": 0.5427721564968427,
+    "paired_win_rate": 1.0,
+    "positive_mean": 0.6622309684753418,
+    "rows": [
+      {
+        "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+        "control_margin": 0.3757985234260559,
+        "control_mean": 0.1572449803352356,
+        "controls": [
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/passenger",
+            0.11677475273609161
+          ],
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000015",
+            -0.011581167578697205
+          ],
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000040",
+            0.3665413558483124
+          ]
+        ],
+        "cosine": 0.5330435037612915,
+        "expected_parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+        "rank_among_four": 1
+      },
+      {
+        "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+        "control_margin": 0.7097457895676295,
+        "control_mean": 0.08167264362176259,
+        "controls": [
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000030",
+            0.11656861007213593
+          ],
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000015",
+            0.053093768656253815
+          ],
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/reservation",
+            0.07535555213689804
+          ]
+        ],
+        "cosine": 0.7914184331893921,
+        "expected_parent": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+        "rank_among_four": 1
+      }
+    ],
+    "top1_of_four": 2
+  },
+  "selected_config": null,
+  "selection": "NATIVE_ONLY"
+}

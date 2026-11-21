@@ -1,0 +1,213 @@
+STEP8 COMMAND: C:\Users\cappa\Ontology-Tradecraft\projects\project-6\.venv-mowl\Scripts\python.exe -u C:\Users\cappa\Ontology-Tradecraft\projects\project-6\scripts\experiment_rail_mowl_v9.py --project-root C:\Users\cappa\Ontology-Tradecraft\projects\project-6 --reviewed-anchors config/rail_mowl_v9_approved_anchors.json --native-epochs 1000 --projection-epochs 100 --configs 10 --dev-pairs 40 --seed 101
+[Rail mOWL v9] Loading immutable v8 Step 5A sources and eight audited rail holdouts
+[Rail mOWL v9] Prepared 4 isolated outer/inner folds; 7 approved anchors; named leakage checks PASS
+[Rail mOWL v9] Hyperparameters selected only on inner development pairs; outer rail targets are unseen
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.jpype.JPypeContext in an unnamed module (file:/C:/Users/cappa/Ontology-Tradecraft/projects/project-6/.venv-mowl/Lib/site-packages/org.jpype.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+[Rail mOWL v9] Fold 1/4: training INNER development ELEmbeddings (1000 epochs)
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.cache.UnsafeAccess (file:/C:/Users/cappa/Ontology-Tradecraft/projects/project-6/.venv-mowl/Lib/site-packages/mowl/lib/caffeine-2.8.6.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.cache.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 797
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 797
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+  0%|          | 0/1000 [00:00<?, ?it/s]  3%|3         | 30/1000 [00:00<00:03, 296.21it/s]  7%|6         | 67/1000 [00:00<00:02, 337.78it/s] 10%|#         | 104/1000 [00:00<00:02, 347.64it/s] 14%|#4        | 144/1000 [00:00<00:02, 366.87it/s] 18%|#8        | 181/1000 [00:00<00:02, 358.83it/s] 22%|##1       | 218/1000 [00:00<00:02, 361.62it/s] 26%|##5       | 256/1000 [00:00<00:02, 366.28it/s] 29%|##9       | 293/1000 [00:00<00:01, 366.48it/s] 33%|###3      | 330/1000 [00:00<00:01, 363.93it/s] 37%|###6      | 367/1000 [00:01<00:01, 364.47it/s] 40%|####      | 404/1000 [00:01<00:01, 363.11it/s] 44%|####4     | 442/1000 [00:01<00:01, 364.89it/s] 48%|####7     | 479/1000 [00:01<00:01, 353.93it/s] 52%|#####1    | 517/1000 [00:01<00:01, 360.13it/s] 55%|#####5    | 554/1000 [00:01<00:01, 360.09it/s] 59%|#####9    | 592/1000 [00:01<00:01, 364.72it/s] 63%|######2   | 629/1000 [00:01<00:01, 361.02it/s] 67%|######6   | 666/1000 [00:01<00:00, 356.21it/s] 70%|#######   | 703/1000 [00:01<00:00, 359.38it/s] 74%|#######4  | 740/1000 [00:02<00:00, 361.33it/s] 78%|#######7  | 777/1000 [00:02<00:00, 354.43it/s] 81%|########1 | 814/1000 [00:02<00:00, 357.92it/s] 85%|########5 | 851/1000 [00:02<00:00, 358.53it/s] 89%|########8 | 887/1000 [00:02<00:00, 355.26it/s] 92%|#########2| 923/1000 [00:02<00:00, 353.77it/s] 96%|#########6| 960/1000 [00:02<00:00, 357.49it/s]100%|#########9| 996/1000 [00:02<00:00, 357.41it/s]Epoch 1000: Train loss: 0.006804118864238262
+100%|##########| 1000/1000 [00:02<00:00, 358.68it/s]
+[Rail mOWL v9] Fold 1/4: tuning 10 projection configurations on INNER source/import development edges
+[Rail mOWL v9] Fold 1/4: development selection = NATIVE_ONLY
+[Rail mOWL v9] Fold 1/4: training OUTER ELEmbeddings (1000 epochs)
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 837
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 837
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+  0%|          | 0/1000 [00:00<?, ?it/s]  3%|3         | 31/1000 [00:00<00:03, 301.94it/s]  6%|6         | 64/1000 [00:00<00:02, 315.65it/s] 11%|#         | 109/1000 [00:00<00:02, 374.84it/s] 16%|#6        | 160/1000 [00:00<00:01, 424.43it/s] 20%|##        | 203/1000 [00:00<00:01, 410.89it/s] 24%|##4       | 245/1000 [00:00<00:02, 347.68it/s] 29%|##9       | 294/1000 [00:00<00:01, 387.84it/s] 36%|###5      | 356/1000 [00:00<00:01, 452.28it/s] 43%|####2     | 428/1000 [00:00<00:01, 527.64it/s] 49%|####9     | 492/1000 [00:01<00:00, 559.57it/s] 55%|#####5    | 551/1000 [00:01<00:00, 566.40it/s] 62%|######1   | 615/1000 [00:01<00:00, 585.48it/s] 68%|######7   | 679/1000 [00:01<00:00, 598.90it/s] 75%|#######5  | 751/1000 [00:01<00:00, 631.91it/s] 82%|########1 | 815/1000 [00:01<00:00, 627.15it/s] 88%|########7 | 878/1000 [00:01<00:00, 592.56it/s] 94%|#########4| 942/1000 [00:01<00:00, 605.12it/s]Epoch 1000: Train loss: 0.005866149440407753
+100%|##########| 1000/1000 [00:01<00:00, 522.89it/s]
+[Rail mOWL v9] Fold 1: native 0.6166; v9 0.6166; v9 gap 0.5223; native AUC 1.000; v9 AUC 1.000
+[Rail mOWL v9] Fold 2/4: training INNER development ELEmbeddings (1000 epochs)
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 797
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 797
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+  0%|          | 0/1000 [00:00<?, ?it/s]  4%|4         | 45/1000 [00:00<00:02, 441.90it/s] 10%|9         | 98/1000 [00:00<00:01, 488.05it/s] 15%|#4        | 147/1000 [00:00<00:01, 484.54it/s] 20%|##        | 202/1000 [00:00<00:01, 506.67it/s] 25%|##5       | 253/1000 [00:00<00:01, 506.59it/s] 30%|###       | 304/1000 [00:00<00:01, 494.27it/s] 36%|###5      | 355/1000 [00:00<00:01, 496.76it/s] 41%|####      | 408/1000 [00:00<00:01, 507.00it/s] 47%|####7     | 471/1000 [00:00<00:00, 543.94it/s] 54%|#####3    | 537/1000 [00:01<00:00, 578.97it/s] 60%|#####9    | 595/1000 [00:01<00:00, 505.96it/s] 65%|######4   | 648/1000 [00:01<00:00, 417.23it/s] 71%|#######1  | 711/1000 [00:01<00:00, 467.33it/s] 77%|#######6  | 769/1000 [00:01<00:00, 495.96it/s] 84%|########3 | 835/1000 [00:01<00:00, 539.81it/s] 90%|######### | 905/1000 [00:01<00:00, 583.78it/s] 98%|#########7| 979/1000 [00:01<00:00, 627.10it/s]Epoch 1000: Train loss: 0.00424079829826951
+100%|##########| 1000/1000 [00:01<00:00, 532.07it/s]
+[Rail mOWL v9] Fold 2/4: tuning 10 projection configurations on INNER source/import development edges
+[Rail mOWL v9] Fold 2/4: development selection = NATIVE_ONLY
+[Rail mOWL v9] Fold 2/4: training OUTER ELEmbeddings (1000 epochs)
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 837
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 837
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+  0%|          | 0/1000 [00:00<?, ?it/s]  6%|5         | 55/1000 [00:00<00:01, 544.79it/s] 12%|#1        | 115/1000 [00:00<00:01, 577.13it/s] 18%|#7        | 179/1000 [00:00<00:01, 605.60it/s] 24%|##4       | 245/1000 [00:00<00:01, 624.62it/s] 31%|###       | 308/1000 [00:00<00:01, 577.00it/s] 37%|###6      | 367/1000 [00:00<00:01, 537.99it/s] 42%|####2     | 422/1000 [00:00<00:01, 396.04it/s] 47%|####6     | 467/1000 [00:01<00:01, 361.12it/s] 51%|#####     | 507/1000 [00:01<00:01, 321.63it/s] 58%|#####7    | 577/1000 [00:01<00:01, 405.21it/s] 65%|######4   | 647/1000 [00:01<00:00, 475.20it/s] 71%|#######   | 709/1000 [00:01<00:00, 507.65it/s] 79%|#######8  | 787/1000 [00:01<00:00, 577.83it/s] 86%|########6 | 861/1000 [00:01<00:00, 620.04it/s] 94%|#########3| 936/1000 [00:01<00:00, 656.05it/s]Epoch 1000: Train loss: 0.005711115896701813
+100%|##########| 1000/1000 [00:01<00:00, 529.35it/s]
+[Rail mOWL v9] Fold 2: native 0.5634; v9 0.5634; v9 gap 0.2964; native AUC 0.833; v9 AUC 0.833
+[Rail mOWL v9] Fold 3/4: training INNER development ELEmbeddings (1000 epochs)
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 797
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 797
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+  0%|          | 0/1000 [00:00<?, ?it/s]  6%|5         | 56/1000 [00:00<00:01, 559.75it/s] 11%|#1        | 114/1000 [00:00<00:01, 565.35it/s] 17%|#7        | 171/1000 [00:00<00:01, 542.83it/s] 23%|##2       | 226/1000 [00:00<00:01, 520.55it/s] 28%|##7       | 279/1000 [00:00<00:01, 518.46it/s] 33%|###3      | 331/1000 [00:00<00:01, 517.36it/s] 39%|###8      | 387/1000 [00:00<00:01, 529.17it/s] 46%|####5     | 456/1000 [00:00<00:00, 575.38it/s] 51%|#####1    | 514/1000 [00:00<00:00, 557.27it/s] 57%|#####6    | 570/1000 [00:01<00:00, 433.48it/s] 62%|######1   | 618/1000 [00:01<00:00, 427.23it/s] 69%|######9   | 693/1000 [00:01<00:00, 507.86it/s] 76%|#######5  | 757/1000 [00:01<00:00, 542.95it/s] 83%|########3 | 831/1000 [00:01<00:00, 597.11it/s] 91%|######### | 908/1000 [00:01<00:00, 645.79it/s] 98%|#########8| 982/1000 [00:01<00:00, 670.92it/s]Epoch 1000: Train loss: 0.004374910145998001
+100%|##########| 1000/1000 [00:01<00:00, 560.97it/s]
+[Rail mOWL v9] Fold 3/4: tuning 10 projection configurations on INNER source/import development edges
+[Rail mOWL v9] Fold 3/4: development selection = NATIVE_ONLY
+[Rail mOWL v9] Fold 3/4: training OUTER ELEmbeddings (1000 epochs)
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 837
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 837
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+  0%|          | 0/1000 [00:00<?, ?it/s]  7%|6         | 69/1000 [00:00<00:01, 683.18it/s] 14%|#3        | 138/1000 [00:00<00:01, 675.29it/s] 21%|##        | 206/1000 [00:00<00:01, 671.37it/s] 28%|##7       | 276/1000 [00:00<00:01, 677.25it/s] 35%|###4      | 349/1000 [00:00<00:00, 693.56it/s] 42%|####2     | 421/1000 [00:00<00:00, 702.44it/s] 49%|####9     | 492/1000 [00:00<00:00, 703.44it/s] 56%|#####6    | 564/1000 [00:00<00:00, 704.23it/s] 64%|######3   | 635/1000 [00:00<00:00, 647.80it/s] 70%|#######   | 701/1000 [00:01<00:00, 518.12it/s] 76%|#######5  | 758/1000 [00:01<00:00, 513.19it/s] 83%|########2 | 829/1000 [00:01<00:00, 563.26it/s] 90%|######### | 904/1000 [00:01<00:00, 609.79it/s] 97%|#########6| 968/1000 [00:01<00:00, 550.70it/s]Epoch 1000: Train loss: 0.005806806962937117
+100%|##########| 1000/1000 [00:01<00:00, 594.47it/s]
+[Rail mOWL v9] Fold 3: native 0.6622; v9 0.6622; v9 gap 0.5428; native AUC 1.000; v9 AUC 1.000
+[Rail mOWL v9] Fold 4/4: training INNER development ELEmbeddings (1000 epochs)
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 797
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 797
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+  0%|          | 0/1000 [00:00<?, ?it/s]  6%|6         | 63/1000 [00:00<00:01, 623.77it/s] 13%|#2        | 128/1000 [00:00<00:01, 637.76it/s] 19%|#9        | 192/1000 [00:00<00:01, 583.07it/s] 25%|##5       | 251/1000 [00:00<00:01, 535.77it/s] 31%|###       | 306/1000 [00:00<00:01, 524.96it/s] 36%|###5      | 359/1000 [00:00<00:01, 518.44it/s] 42%|####1     | 415/1000 [00:00<00:01, 531.12it/s] 47%|####6     | 470/1000 [00:00<00:00, 536.39it/s] 54%|#####3    | 535/1000 [00:00<00:00, 569.85it/s] 59%|#####9    | 593/1000 [00:01<00:00, 484.46it/s] 64%|######4   | 644/1000 [00:01<00:00, 461.70it/s] 69%|######9   | 694/1000 [00:01<00:00, 471.80it/s] 77%|#######6  | 767/1000 [00:01<00:00, 541.72it/s] 84%|########4 | 842/1000 [00:01<00:00, 600.20it/s] 90%|######### | 904/1000 [00:01<00:00, 604.13it/s] 98%|#########7| 977/1000 [00:01<00:00, 638.75it/s]Epoch 1000: Train loss: 0.00534588098526001
+100%|##########| 1000/1000 [00:01<00:00, 558.26it/s]
+[Rail mOWL v9] Fold 4/4: tuning 10 projection configurations on INNER source/import development edges
+[Rail mOWL v9] Fold 4/4: development selection = NATIVE_ONLY
+[Rail mOWL v9] Fold 4/4: training OUTER ELEmbeddings (1000 epochs)
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+Training datasets: 
+	gci0: 837
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 837
+	gci1: 0
+	gci2: 0
+	gci3: 0
+	gci0_bot: 0
+	gci1_bot: 0
+	gci3_bot: 0
+
+  0%|          | 0/1000 [00:00<?, ?it/s]  4%|4         | 41/1000 [00:00<00:02, 408.62it/s] 11%|#1        | 112/1000 [00:00<00:01, 582.24it/s] 18%|#8        | 183/1000 [00:00<00:01, 637.45it/s] 26%|##6       | 260/1000 [00:00<00:01, 684.13it/s] 34%|###3      | 336/1000 [00:00<00:00, 708.74it/s] 41%|####      | 409/1000 [00:00<00:00, 714.29it/s] 48%|####8     | 481/1000 [00:00<00:00, 689.29it/s] 56%|#####5    | 555/1000 [00:00<00:00, 704.93it/s] 63%|######2   | 628/1000 [00:00<00:00, 710.43it/s] 70%|#######   | 700/1000 [00:01<00:00, 661.15it/s] 77%|#######6  | 767/1000 [00:01<00:00, 554.09it/s] 83%|########2 | 826/1000 [00:01<00:00, 526.98it/s] 90%|########9 | 896/1000 [00:01<00:00, 569.49it/s] 96%|#########6| 965/1000 [00:01<00:00, 599.93it/s]Epoch 1000: Train loss: 0.005792433861643076
+100%|##########| 1000/1000 [00:01<00:00, 628.53it/s]
+[Rail mOWL v9] Fold 4: native 0.5727; v9 0.5727; v9 gap 0.4447; native AUC 1.000; v9 AUC 1.000
+[Rail mOWL v9] Native mean: 0.6037136092782021
+[Rail mOWL v9] v9 mean: 0.6037136092782021
+[Rail mOWL v9] Result: TARGET_OR_CONTROLS_NOT_MET
+[Rail mOWL v9] Reports: reports/experiments/rail_mowl_v9_reviewed/eight_class_summary.json

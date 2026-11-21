@@ -1,0 +1,16 @@
+{
+  "all_imports_corpus_triples": 10016,
+  "baseline_triples": 1064,
+  "candidate_triples": 1127,
+  "import_module_triples": 696,
+  "merge_performed": false,
+  "note": "No OWL reasoner has run; roundtrip check includes counts and named class pairs, not full RDF graph isomorphism",
+  "owl_reasoner_executed": false,
+  "scope": "SOURCE_PLUS_STAR_LOCALITY_MODULE_OF_IMPORTS",
+  "seed_count": 36,
+  "semantic_approval": false,
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_unchanged": true,
+  "status": "PASS_PREPARATION_ONLY_UNREASONED",
+  "version": "project6-robot-reasoner-v3-source-scoped"
+}

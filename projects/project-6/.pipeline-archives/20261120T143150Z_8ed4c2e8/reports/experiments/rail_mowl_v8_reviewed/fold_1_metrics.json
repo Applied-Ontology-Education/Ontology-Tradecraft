@@ -1,0 +1,67 @@
+{
+  "approved_anchor_count": 7,
+  "fold": 1,
+  "heldout_rows": [
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "expected_parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "fold": 1,
+      "native_control_auc": 1.0,
+      "native_control_mean": 0.05588043729464213,
+      "native_cosine": 0.8256548047065735,
+      "projected_control_auc": 1.0,
+      "projected_control_mean": 0.8581334153811137,
+      "projected_cosine": 0.9602770805358887,
+      "support_status": "RETAINED_PARENT_SUPPORT",
+      "training_incoming": 0,
+      "training_outgoing": 1
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "expected_parent": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+      "fold": 1,
+      "native_control_auc": 1.0,
+      "native_control_mean": 0.1558021648476521,
+      "native_cosine": 0.26825371384620667,
+      "projected_control_auc": 0.6666666666666666,
+      "projected_control_mean": 0.8936158617337545,
+      "projected_cosine": 0.9094861149787903,
+      "support_status": "RETAINED_PARENT_SUPPORT",
+      "training_incoming": 0,
+      "training_outgoing": 1
+    }
+  ],
+  "library_versions": {
+    "mowl_version": "unknown",
+    "torch_version": "2.15.0+cpu"
+  },
+  "named_holdout_leakage_detected": false,
+  "native_auc": 1.0,
+  "native_control_mean": 0.10584130107114713,
+  "native_epochs": 1000,
+  "native_mean": 0.5469542592763901,
+  "native_positive_control_gap": 0.44111295820524293,
+  "projected_auc": 0.9166666666666666,
+  "projected_control_mean": 0.8758746385574341,
+  "projected_mean": 0.9348815977573395,
+  "projected_positive_control_gap": 0.059006959199905396,
+  "projection_config": {
+    "epochs": 100,
+    "hidden_size": 32,
+    "identity_weight": 0.1,
+    "learning_rate": 0.0025,
+    "positive_weight": 1.0,
+    "residual_penalty_weight": 0.001,
+    "residual_scale": 0.25,
+    "weight_decay": 1e-05
+  },
+  "training_losses": {
+    "best_training_loss": 0.06641072779893875,
+    "epoch": 100,
+    "identity_loss": 0.4102317690849304,
+    "positive_loss": 0.023975364863872528,
+    "residual_loss": 1.4121934175491333,
+    "total_loss": 0.06641072779893875
+  },
+  "version": "project6-isolated-project5-v8-rail-four-fold-v1"
+}

@@ -1,0 +1,419 @@
+COMMAND
+==============================================================================
+C:\Users\cappa\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe C:\Users\cappa\Ontology-Tradecraft\projects\project-5\scripts\train_mowl.py
+
+OUTPUT
+==============================================================================
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by org.jpype.JPypeContext in an unnamed module (file:/C:/Users/cappa/Ontology-Tradecraft/.venv-mowl/Lib/site-packages/org.jpype.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+WARNING: A terminally deprecated method in sun.misc.Unsafe has been called
+WARNING: sun.misc.Unsafe::objectFieldOffset has been called by com.github.benmanes.caffeine.cache.UnsafeAccess (file:/C:/Users/cappa/Ontology-Tradecraft/.venv-mowl/Lib/site-packages/mowl/lib/caffeine-2.8.6.jar)
+WARNING: Please consider reporting this to the maintainers of class com.github.benmanes.caffeine.cache.UnsafeAccess
+WARNING: sun.misc.Unsafe::objectFieldOffset will be removed in a future release
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+[main] INFO org.semanticweb.owlapi.io.AbstractOWLParser - URL connection input stream is compressed using gzip
+You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+WARNING:mowl.base_models.elmodel:You are using the default training method. If you want to use a customized training method (e.g., different negative sampling, etc.), please override the appropriate methods in a subclass.
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(144 111)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(147 12)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(162 45)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(165 45)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(135 14)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(132 115)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(156 115)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(138 101)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(140 101)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(141 101)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(146 101)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(148 101)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(153 101)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(154 101)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(155 101)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(157 101)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(161 101)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(134 120)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(137 120)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(166 120)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(130 6)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(133 6)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(143 6)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(149 6)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(152 6)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(160 6)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(163 6)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(150 124)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(159 124)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(131 109)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(136 109)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(139 10)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(142 10)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(145 109)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(158 10)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+INFO:root:Reverse translation. Ignoring axiom: RangeAxiom*(164 109)
+INFO:root:'uk.ac.manchester.cs.owl.owlapi.OWLObjectPropertyRangeAxiomImpl' object has no attribute 'getSubClass'
+Training datasets: 
+	gci0: 89
+	gci1: 20
+	gci2: 36
+	gci3: 56
+	gci0_bot: 0
+	gci1_bot: 1
+	gci3_bot: 0
+
+INFO:mowl.base_models.elmodel:Training datasets: 
+	gci0: 89
+	gci1: 20
+	gci2: 36
+	gci3: 56
+	gci0_bot: 0
+	gci1_bot: 1
+	gci3_bot: 0
+
+TRAIN_MOWL_VERSION     : frozen-elembeddings-residual-mlp-projection-v8
+
+==============================================================================
+PROJECT 5 - FROZEN ELEMBEDDINGS + RESIDUAL MLP
+==============================================================================
+
+Training ontology       : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\train.ttl
+Validation ontology     : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\valid.ttl
+
+Native ELEmbeddings
+  Dimension             : 50
+  Epochs                : 1000
+  Learning rate         : 0.001
+  Seed                  : 101
+
+Residual MLP sweep
+  Learning rates        : [0.0025, 0.005, 0.0075]
+  Epochs                : [100, 150, 200, 250]
+  Hidden sizes          : [32, 64]
+  Identity weights      : [0.1, 0.15, 0.2]
+  Residual scales       : [0.25, 0.5]
+  Total runs            : 144
+
+Negative sampling       : NONE
+Validation used in loss : NO
+
+Initializing mOWL JVM...
+JVM initialized.
+
+Training device         : cpu
+
+Direct training pairs   : 82
+Training closure pairs  : 169
+Transitive-only pairs   : 87
+Validation pairs        : 21
+
+Split leakage check     : PASS
+
+Loading mOWL training ontology...
+Import closure          : 7
+Root axioms             : 948
+Broad signature entities: 982
+Declarations added      : 824
+Indexed classes         : 663
+Imported logical axioms: NOT INCLUDED
+
+==============================================================================
+STAGE 1 - NATIVE ELEMBEDDINGS
+==============================================================================
+
+
+  0%|          | 0/1000 [00:00<?, ?it/s]
+  4%|3         | 39/1000 [00:00<00:02, 384.04it/s]
+  8%|7         | 78/1000 [00:00<00:02, 364.18it/s]
+ 12%|#1        | 115/1000 [00:00<00:02, 344.74it/s]
+ 15%|#5        | 150/1000 [00:00<00:02, 319.40it/s]
+ 18%|#8        | 183/1000 [00:00<00:02, 320.24it/s]
+ 22%|##1       | 219/1000 [00:00<00:02, 332.33it/s]
+ 26%|##5       | 255/1000 [00:00<00:02, 340.40it/s]
+ 30%|##9       | 297/1000 [00:00<00:01, 363.19it/s]
+ 34%|###3      | 335/1000 [00:00<00:01, 367.74it/s]
+ 38%|###7      | 376/1000 [00:01<00:01, 377.09it/s]
+ 41%|####1     | 414/1000 [00:01<00:01, 347.23it/s]
+ 45%|####5     | 450/1000 [00:01<00:01, 337.93it/s]
+ 49%|####8     | 489/1000 [00:01<00:01, 350.05it/s]
+ 53%|#####2    | 527/1000 [00:01<00:01, 357.03it/s]
+ 56%|#####6    | 563/1000 [00:01<00:01, 350.31it/s]
+ 60%|#####9    | 599/1000 [00:01<00:01, 352.57it/s]
+ 64%|######3   | 635/1000 [00:01<00:01, 337.55it/s]
+ 67%|######6   | 669/1000 [00:01<00:01, 328.91it/s]
+ 70%|#######   | 703/1000 [00:02<00:00, 327.86it/s]
+ 74%|#######3  | 737/1000 [00:02<00:00, 329.90it/s]
+ 77%|#######7  | 771/1000 [00:02<00:00, 321.23it/s]
+ 80%|########  | 804/1000 [00:02<00:00, 316.07it/s]
+ 84%|########3 | 838/1000 [00:02<00:00, 319.68it/s]
+ 87%|########7 | 871/1000 [00:02<00:00, 314.96it/s]
+ 90%|######### | 903/1000 [00:02<00:00, 303.81it/s]
+ 94%|#########3| 938/1000 [00:02<00:00, 316.36it/s]
+ 97%|#########7| 974/1000 [00:02<00:00, 327.45it/s]
+100%|##########| 1000/1000 [00:02<00:00, 335.87it/s]
+Epoch 1000: Train loss: 0.07093266397714615
+Native mean             : 0.5555
+Native median           : 0.6617
+Native minimum          : -0.0851
+Native maximum          : 0.9696
+Native poor (< .20)     : 5
+
+Projection training classes: 99
+
+==============================================================================
+STAGE 2 - RESIDUAL MLP PROJECTION SWEEP
+==============================================================================
+
+[001/144] lr=0.0025 ep=100 h=32 id=0.1  scale=0.25 -> mean=0.7134 median=0.8903 poor=3
+[002/144] lr=0.0025 ep=100 h=32 id=0.1  scale=0.5  -> mean=0.7117 median=0.9173 poor=3
+[003/144] lr=0.0025 ep=100 h=32 id=0.15 scale=0.25 -> mean=0.6724 median=0.8979 poor=3
+[004/144] lr=0.0025 ep=100 h=32 id=0.15 scale=0.5  -> mean=0.6689 median=0.8949 poor=3
+[005/144] lr=0.0025 ep=100 h=32 id=0.2  scale=0.25 -> mean=0.6527 median=0.8773 poor=3
+[006/144] lr=0.0025 ep=100 h=32 id=0.2  scale=0.5  -> mean=0.6546 median=0.8570 poor=3
+[007/144] lr=0.0025 ep=100 h=64 id=0.1  scale=0.25 -> mean=0.7112 median=0.9259 poor=3
+[008/144] lr=0.0025 ep=100 h=64 id=0.1  scale=0.5  -> mean=0.6984 median=0.9165 poor=3
+[009/144] lr=0.0025 ep=100 h=64 id=0.15 scale=0.25 -> mean=0.6733 median=0.8985 poor=3
+[010/144] lr=0.0025 ep=100 h=64 id=0.15 scale=0.5  -> mean=0.6685 median=0.8749 poor=3
+[011/144] lr=0.0025 ep=100 h=64 id=0.2  scale=0.25 -> mean=0.6575 median=0.8629 poor=3
+[012/144] lr=0.0025 ep=100 h=64 id=0.2  scale=0.5  -> mean=0.6614 median=0.8410 poor=3
+[013/144] lr=0.0025 ep=150 h=32 id=0.1  scale=0.25 -> mean=0.6886 median=0.9064 poor=3
+[014/144] lr=0.0025 ep=150 h=32 id=0.1  scale=0.5  -> mean=0.6788 median=0.9080 poor=3
+[015/144] lr=0.0025 ep=150 h=32 id=0.15 scale=0.25 -> mean=0.6642 median=0.8875 poor=3
+[016/144] lr=0.0025 ep=150 h=32 id=0.15 scale=0.5  -> mean=0.6665 median=0.8578 poor=3
+[017/144] lr=0.0025 ep=150 h=32 id=0.2  scale=0.25 -> mean=0.6563 median=0.8498 poor=3
+[018/144] lr=0.0025 ep=150 h=32 id=0.2  scale=0.5  -> mean=0.6603 median=0.8321 poor=3
+[019/144] lr=0.0025 ep=150 h=64 id=0.1  scale=0.25 -> mean=0.6837 median=0.9072 poor=3
+[020/144] lr=0.0025 ep=150 h=64 id=0.1  scale=0.5  -> mean=0.6745 median=0.8839 poor=3
+[021/144] lr=0.0025 ep=150 h=64 id=0.15 scale=0.25 -> mean=0.6653 median=0.8563 poor=3
+[022/144] lr=0.0025 ep=150 h=64 id=0.15 scale=0.5  -> mean=0.6737 median=0.8510 poor=3
+[023/144] lr=0.0025 ep=150 h=64 id=0.2  scale=0.25 -> mean=0.6625 median=0.8311 poor=3
+[024/144] lr=0.0025 ep=150 h=64 id=0.2  scale=0.5  -> mean=0.6692 median=0.8392 poor=3
+[025/144] lr=0.0025 ep=200 h=32 id=0.1  scale=0.25 -> mean=0.6743 median=0.9003 poor=3
+[026/144] lr=0.0025 ep=200 h=32 id=0.1  scale=0.5  -> mean=0.6734 median=0.8822 poor=3
+[027/144] lr=0.0025 ep=200 h=32 id=0.15 scale=0.25 -> mean=0.6679 median=0.8621 poor=3
+[028/144] lr=0.0025 ep=200 h=32 id=0.15 scale=0.5  -> mean=0.6707 median=0.8392 poor=3
+[029/144] lr=0.0025 ep=200 h=32 id=0.2  scale=0.25 -> mean=0.6604 median=0.8301 poor=3
+[030/144] lr=0.0025 ep=200 h=32 id=0.2  scale=0.5  -> mean=0.6649 median=0.8329 poor=3
+[031/144] lr=0.0025 ep=200 h=64 id=0.1  scale=0.25 -> mean=0.6713 median=0.8705 poor=3
+[032/144] lr=0.0025 ep=200 h=64 id=0.1  scale=0.5  -> mean=0.6739 median=0.8623 poor=3
+[033/144] lr=0.0025 ep=200 h=64 id=0.15 scale=0.25 -> mean=0.6715 median=0.8402 poor=3
+[034/144] lr=0.0025 ep=200 h=64 id=0.15 scale=0.5  -> mean=0.6732 median=0.8525 poor=3
+[035/144] lr=0.0025 ep=200 h=64 id=0.2  scale=0.25 -> mean=0.6658 median=0.8491 poor=3
+[036/144] lr=0.0025 ep=200 h=64 id=0.2  scale=0.5  -> mean=0.6626 median=0.8402 poor=3
+[037/144] lr=0.0025 ep=250 h=32 id=0.1  scale=0.25 -> mean=0.6733 median=0.8889 poor=3
+[038/144] lr=0.0025 ep=250 h=32 id=0.1  scale=0.5  -> mean=0.6757 median=0.8607 poor=3
+[039/144] lr=0.0025 ep=250 h=32 id=0.15 scale=0.25 -> mean=0.6694 median=0.8419 poor=3
+[040/144] lr=0.0025 ep=250 h=32 id=0.15 scale=0.5  -> mean=0.6717 median=0.8361 poor=3
+[041/144] lr=0.0025 ep=250 h=32 id=0.2  scale=0.25 -> mean=0.6614 median=0.8209 poor=3
+[042/144] lr=0.0025 ep=250 h=32 id=0.2  scale=0.5  -> mean=0.6604 median=0.8368 poor=3
+[043/144] lr=0.0025 ep=250 h=64 id=0.1  scale=0.25 -> mean=0.6722 median=0.8513 poor=3
+[044/144] lr=0.0025 ep=250 h=64 id=0.1  scale=0.5  -> mean=0.6747 median=0.8566 poor=3
+[045/144] lr=0.0025 ep=250 h=64 id=0.15 scale=0.25 -> mean=0.6702 median=0.8423 poor=3
+[046/144] lr=0.0025 ep=250 h=64 id=0.15 scale=0.5  -> mean=0.6623 median=0.8306 poor=3
+[047/144] lr=0.0025 ep=250 h=64 id=0.2  scale=0.25 -> mean=0.6578 median=0.8171 poor=3
+[048/144] lr=0.0025 ep=250 h=64 id=0.2  scale=0.5  -> mean=0.6527 median=0.8016 poor=4
+[049/144] lr=0.005  ep=100 h=32 id=0.1  scale=0.25 -> mean=0.6788 median=0.9015 poor=3
+[050/144] lr=0.005  ep=100 h=32 id=0.1  scale=0.5  -> mean=0.6762 median=0.8959 poor=3
+[051/144] lr=0.005  ep=100 h=32 id=0.15 scale=0.25 -> mean=0.6671 median=0.8749 poor=3
+[052/144] lr=0.005  ep=100 h=32 id=0.15 scale=0.5  -> mean=0.6709 median=0.8468 poor=3
+[053/144] lr=0.005  ep=100 h=32 id=0.2  scale=0.25 -> mean=0.6607 median=0.8396 poor=3
+[054/144] lr=0.005  ep=100 h=32 id=0.2  scale=0.5  -> mean=0.6639 median=0.8323 poor=3
+[055/144] lr=0.005  ep=100 h=64 id=0.1  scale=0.25 -> mean=0.6735 median=0.8795 poor=3
+[056/144] lr=0.005  ep=100 h=64 id=0.1  scale=0.5  -> mean=0.6791 median=0.8674 poor=3
+[057/144] lr=0.005  ep=100 h=64 id=0.15 scale=0.25 -> mean=0.6729 median=0.8419 poor=3
+[058/144] lr=0.005  ep=100 h=64 id=0.15 scale=0.5  -> mean=0.6759 median=0.8522 poor=3
+[059/144] lr=0.005  ep=100 h=64 id=0.2  scale=0.25 -> mean=0.6657 median=0.8316 poor=3
+[060/144] lr=0.005  ep=100 h=64 id=0.2  scale=0.5  -> mean=0.6673 median=0.8352 poor=3
+[061/144] lr=0.005  ep=150 h=32 id=0.1  scale=0.25 -> mean=0.6794 median=0.8852 poor=3
+[062/144] lr=0.005  ep=150 h=32 id=0.1  scale=0.5  -> mean=0.6820 median=0.8620 poor=3
+[063/144] lr=0.005  ep=150 h=32 id=0.15 scale=0.25 -> mean=0.6729 median=0.8426 poor=3
+[064/144] lr=0.005  ep=150 h=32 id=0.15 scale=0.5  -> mean=0.6710 median=0.8457 poor=3
+[065/144] lr=0.005  ep=150 h=32 id=0.2  scale=0.25 -> mean=0.6629 median=0.8366 poor=3
+[066/144] lr=0.005  ep=150 h=32 id=0.2  scale=0.5  -> mean=0.6580 median=0.8365 poor=3
+[067/144] lr=0.005  ep=150 h=64 id=0.1  scale=0.25 -> mean=0.6752 median=0.8458 poor=3
+[068/144] lr=0.005  ep=150 h=64 id=0.1  scale=0.5  -> mean=0.6800 median=0.8726 poor=3
+[069/144] lr=0.005  ep=150 h=64 id=0.15 scale=0.25 -> mean=0.6663 median=0.8334 poor=3
+[070/144] lr=0.005  ep=150 h=64 id=0.15 scale=0.5  -> mean=0.6595 median=0.8200 poor=4
+[071/144] lr=0.005  ep=150 h=64 id=0.2  scale=0.25 -> mean=0.6518 median=0.7999 poor=3
+[072/144] lr=0.005  ep=150 h=64 id=0.2  scale=0.5  -> mean=0.6495 median=0.8153 poor=4
+[073/144] lr=0.005  ep=200 h=32 id=0.1  scale=0.25 -> mean=0.6845 median=0.8593 poor=3
+[074/144] lr=0.005  ep=200 h=32 id=0.1  scale=0.5  -> mean=0.6780 median=0.8561 poor=3
+[075/144] lr=0.005  ep=200 h=32 id=0.15 scale=0.25 -> mean=0.6645 median=0.8393 poor=3
+[076/144] lr=0.005  ep=200 h=32 id=0.15 scale=0.5  -> mean=0.6524 median=0.8229 poor=3
+[077/144] lr=0.005  ep=200 h=32 id=0.2  scale=0.25 -> mean=0.6503 median=0.8184 poor=4
+[078/144] lr=0.005  ep=200 h=32 id=0.2  scale=0.5  -> mean=0.6425 median=0.8397 poor=4
+[079/144] lr=0.005  ep=200 h=64 id=0.1  scale=0.25 -> mean=0.6675 median=0.8338 poor=3
+[080/144] lr=0.005  ep=200 h=64 id=0.1  scale=0.5  -> mean=0.6664 median=0.8287 poor=3
+[081/144] lr=0.005  ep=200 h=64 id=0.15 scale=0.25 -> mean=0.6473 median=0.8069 poor=4
+[082/144] lr=0.005  ep=200 h=64 id=0.15 scale=0.5  -> mean=0.6524 median=0.8223 poor=4
+[083/144] lr=0.005  ep=200 h=64 id=0.2  scale=0.25 -> mean=0.6412 median=0.8001 poor=4
+[084/144] lr=0.005  ep=200 h=64 id=0.2  scale=0.5  -> mean=0.6455 median=0.7969 poor=4
+[085/144] lr=0.005  ep=250 h=32 id=0.1  scale=0.25 -> mean=0.6765 median=0.8364 poor=3
+[086/144] lr=0.005  ep=250 h=32 id=0.1  scale=0.5  -> mean=0.6577 median=0.8363 poor=3
+[087/144] lr=0.005  ep=250 h=32 id=0.15 scale=0.25 -> mean=0.6495 median=0.8067 poor=3
+[088/144] lr=0.005  ep=250 h=32 id=0.15 scale=0.5  -> mean=0.6448 median=0.8011 poor=4
+[089/144] lr=0.005  ep=250 h=32 id=0.2  scale=0.25 -> mean=0.6466 median=0.8017 poor=4
+[090/144] lr=0.005  ep=250 h=32 id=0.2  scale=0.5  -> mean=0.6369 median=0.8095 poor=4
+[091/144] lr=0.005  ep=250 h=64 id=0.1  scale=0.25 -> mean=0.6532 median=0.8121 poor=3
+[092/144] lr=0.005  ep=250 h=64 id=0.1  scale=0.5  -> mean=0.6595 median=0.8108 poor=4
+[093/144] lr=0.005  ep=250 h=64 id=0.15 scale=0.25 -> mean=0.6423 median=0.8004 poor=4
+[094/144] lr=0.005  ep=250 h=64 id=0.15 scale=0.5  -> mean=0.6491 median=0.8110 poor=4
+[095/144] lr=0.005  ep=250 h=64 id=0.2  scale=0.25 -> mean=0.6382 median=0.7777 poor=4
+[096/144] lr=0.005  ep=250 h=64 id=0.2  scale=0.5  -> mean=0.6423 median=0.7676 poor=4
+[097/144] lr=0.0075 ep=100 h=32 id=0.1  scale=0.25 -> mean=0.6806 median=0.8935 poor=3
+[098/144] lr=0.0075 ep=100 h=32 id=0.1  scale=0.5  -> mean=0.6809 median=0.8646 poor=3
+[099/144] lr=0.0075 ep=100 h=32 id=0.15 scale=0.25 -> mean=0.6743 median=0.8497 poor=3
+[100/144] lr=0.0075 ep=100 h=32 id=0.15 scale=0.5  -> mean=0.6730 median=0.8476 poor=3
+[101/144] lr=0.0075 ep=100 h=32 id=0.2  scale=0.25 -> mean=0.6644 median=0.8360 poor=3
+[102/144] lr=0.0075 ep=100 h=32 id=0.2  scale=0.5  -> mean=0.6627 median=0.8268 poor=3
+[103/144] lr=0.0075 ep=100 h=64 id=0.1  scale=0.25 -> mean=0.6788 median=0.8519 poor=3
+[104/144] lr=0.0075 ep=100 h=64 id=0.1  scale=0.5  -> mean=0.6817 median=0.8713 poor=3
+[105/144] lr=0.0075 ep=100 h=64 id=0.15 scale=0.25 -> mean=0.6705 median=0.8502 poor=3
+[106/144] lr=0.0075 ep=100 h=64 id=0.15 scale=0.5  -> mean=0.6636 median=0.8275 poor=3
+[107/144] lr=0.0075 ep=100 h=64 id=0.2  scale=0.25 -> mean=0.6555 median=0.8194 poor=3
+[108/144] lr=0.0075 ep=100 h=64 id=0.2  scale=0.5  -> mean=0.6517 median=0.8189 poor=4
+[109/144] lr=0.0075 ep=150 h=32 id=0.1  scale=0.25 -> mean=0.6859 median=0.8583 poor=3
+[110/144] lr=0.0075 ep=150 h=32 id=0.1  scale=0.5  -> mean=0.6785 median=0.8613 poor=3
+[111/144] lr=0.0075 ep=150 h=32 id=0.15 scale=0.25 -> mean=0.6614 median=0.8326 poor=3
+[112/144] lr=0.0075 ep=150 h=32 id=0.15 scale=0.5  -> mean=0.6512 median=0.8307 poor=4
+[113/144] lr=0.0075 ep=150 h=32 id=0.2  scale=0.25 -> mean=0.6473 median=0.8299 poor=4
+[114/144] lr=0.0075 ep=150 h=32 id=0.2  scale=0.5  -> mean=0.6420 median=0.8536 poor=4
+[115/144] lr=0.0075 ep=150 h=64 id=0.1  scale=0.25 -> mean=0.6667 median=0.8387 poor=3
+[116/144] lr=0.0075 ep=150 h=64 id=0.1  scale=0.5  -> mean=0.6669 median=0.8407 poor=4
+[117/144] lr=0.0075 ep=150 h=64 id=0.15 scale=0.25 -> mean=0.6462 median=0.8176 poor=4
+[118/144] lr=0.0075 ep=150 h=64 id=0.15 scale=0.5  -> mean=0.6521 median=0.8306 poor=4
+[119/144] lr=0.0075 ep=150 h=64 id=0.2  scale=0.25 -> mean=0.6393 median=0.7925 poor=4
+[120/144] lr=0.0075 ep=150 h=64 id=0.2  scale=0.5  -> mean=0.6467 median=0.7918 poor=4
+[121/144] lr=0.0075 ep=200 h=32 id=0.1  scale=0.25 -> mean=0.6636 median=0.8288 poor=3
+[122/144] lr=0.0075 ep=200 h=32 id=0.1  scale=0.5  -> mean=0.6548 median=0.8344 poor=3
+[123/144] lr=0.0075 ep=200 h=32 id=0.15 scale=0.25 -> mean=0.6457 median=0.8066 poor=4
+[124/144] lr=0.0075 ep=200 h=32 id=0.15 scale=0.5  -> mean=0.6427 median=0.8257 poor=4
+[125/144] lr=0.0075 ep=200 h=32 id=0.2  scale=0.25 -> mean=0.6434 median=0.8070 poor=4
+[126/144] lr=0.0075 ep=200 h=32 id=0.2  scale=0.5  -> mean=0.6369 median=0.8086 poor=4
+[127/144] lr=0.0075 ep=200 h=64 id=0.1  scale=0.25 -> mean=0.6531 median=0.8070 poor=4
+[128/144] lr=0.0075 ep=200 h=64 id=0.1  scale=0.5  -> mean=0.6605 median=0.8219 poor=4
+[129/144] lr=0.0075 ep=200 h=64 id=0.15 scale=0.25 -> mean=0.6408 median=0.7882 poor=4
+[130/144] lr=0.0075 ep=200 h=64 id=0.15 scale=0.5  -> mean=0.6460 median=0.7918 poor=4
+[131/144] lr=0.0075 ep=200 h=64 id=0.2  scale=0.25 -> mean=0.6349 median=0.7576 poor=4
+[132/144] lr=0.0075 ep=200 h=64 id=0.2  scale=0.5  -> mean=0.6408 median=0.7746 poor=4
+[133/144] lr=0.0075 ep=250 h=32 id=0.1  scale=0.25 -> mean=0.6399 median=0.7655 poor=4
+[134/144] lr=0.0075 ep=250 h=32 id=0.1  scale=0.5  -> mean=0.6479 median=0.8024 poor=4
+[135/144] lr=0.0075 ep=250 h=32 id=0.15 scale=0.25 -> mean=0.6430 median=0.7736 poor=4
+[136/144] lr=0.0075 ep=250 h=32 id=0.15 scale=0.5  -> mean=0.6413 median=0.7680 poor=4
+[137/144] lr=0.0075 ep=250 h=32 id=0.2  scale=0.25 -> mean=0.6410 median=0.7736 poor=4
+[138/144] lr=0.0075 ep=250 h=32 id=0.2  scale=0.5  -> mean=0.6341 median=0.7520 poor=4
+[139/144] lr=0.0075 ep=250 h=64 id=0.1  scale=0.25 -> mean=0.6448 median=0.7776 poor=4
+[140/144] lr=0.0075 ep=250 h=64 id=0.1  scale=0.5  -> mean=0.6539 median=0.8003 poor=4
+[141/144] lr=0.0075 ep=250 h=64 id=0.15 scale=0.25 -> mean=0.6359 median=0.7506 poor=4
+[142/144] lr=0.0075 ep=250 h=64 id=0.15 scale=0.5  -> mean=0.6399 median=0.7379 poor=4
+[143/144] lr=0.0075 ep=250 h=64 id=0.2  scale=0.25 -> mean=0.6280 median=0.7040 poor=4
+[144/144] lr=0.0075 ep=250 h=64 id=0.2  scale=0.5  -> mean=0.6326 median=0.7442 poor=4
+
+==============================================================================
+FINAL V8 RESULTS
+==============================================================================
+
+Previous best           : 0.6713
+Native mean             : 0.5555
+Selected mean           : 0.7134
+Selected median         : 0.8903
+Selected minimum        : -0.2823
+Selected maximum        : 0.9961
+Poor pairs (< 0.20)     : 3
+Pairs >= 0.60           : 16
+Pairs >= 0.70           : 15
+
+Selected stage          : residual_mlp
+Projection LR           : 0.0025
+Projection epochs       : 100
+Hidden size             : 32
+Identity weight         : 0.1
+Residual scale          : 0.25
+Direct train cosine     : 0.9771
+
+Difference vs previous  : +0.0421
+
+Mean cosine target      : PASS
+Selected tau            : 0.6
+Relevant mean @ tau     : 0.8982
+Relevant pairs @ tau    : 16
+
+Top 15 v8 configurations:
+
+  # 1 mean=0.7134 median=0.8903 poor=3  lr=0.0025 ep=100 h=32 id=0.1  scale=0.25 train_cos=0.9771
+  # 2 mean=0.7117 median=0.9173 poor=3  lr=0.0025 ep=100 h=32 id=0.1  scale=0.5  train_cos=0.9822
+  # 3 mean=0.7112 median=0.9259 poor=3  lr=0.0025 ep=100 h=64 id=0.1  scale=0.25 train_cos=0.9816
+  # 4 mean=0.6984 median=0.9165 poor=3  lr=0.0025 ep=100 h=64 id=0.1  scale=0.5  train_cos=0.9857
+  # 5 mean=0.6886 median=0.9064 poor=3  lr=0.0025 ep=150 h=32 id=0.1  scale=0.25 train_cos=0.9820
+  # 6 mean=0.6859 median=0.8583 poor=3  lr=0.0075 ep=150 h=32 id=0.1  scale=0.25 train_cos=0.9907
+  # 7 mean=0.6845 median=0.8593 poor=3  lr=0.005  ep=200 h=32 id=0.1  scale=0.25 train_cos=0.9901
+  # 8 mean=0.6837 median=0.9072 poor=3  lr=0.0025 ep=150 h=64 id=0.1  scale=0.25 train_cos=0.9855
+  # 9 mean=0.6820 median=0.8620 poor=3  lr=0.005  ep=150 h=32 id=0.1  scale=0.5  train_cos=0.9912
+  #10 mean=0.6817 median=0.8713 poor=3  lr=0.0075 ep=100 h=64 id=0.1  scale=0.5  train_cos=0.9929
+  #11 mean=0.6809 median=0.8646 poor=3  lr=0.0075 ep=100 h=32 id=0.1  scale=0.5  train_cos=0.9910
+  #12 mean=0.6806 median=0.8935 poor=3  lr=0.0075 ep=100 h=32 id=0.1  scale=0.25 train_cos=0.9881
+  #13 mean=0.6800 median=0.8726 poor=3  lr=0.005  ep=150 h=64 id=0.1  scale=0.5  train_cos=0.9933
+  #14 mean=0.6794 median=0.8852 poor=3  lr=0.005  ep=150 h=32 id=0.1  scale=0.25 train_cos=0.9882
+  #15 mean=0.6791 median=0.8674 poor=3  lr=0.005  ep=100 h=64 id=0.1  scale=0.5  train_cos=0.9907
+
+Files written:
+  C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\mowl_v8_residual_projection_best.pt
+  C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\mowl_v8_best_config.json
+  C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\mowl_v8_residual_projection_sweep.csv
+  C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\mowl_v8_best_validation_pairs.csv
+  C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\mowl_v8_metrics.json
+  C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\mowl_metrics.json

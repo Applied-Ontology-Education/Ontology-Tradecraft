@@ -1,0 +1,163 @@
+{
+  "script_version": "connectivity-preserving-split-v2",
+  "module": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\module.ttl",
+  "train": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\train.ttl",
+  "valid": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-5\\src\\valid.ttl",
+  "seed": 42,
+  "validation_fraction": 0.2,
+  "total_named_subclass_axioms": 103,
+  "train_named_subclass_axioms": 82,
+  "validation_named_subclass_axioms": 21,
+  "direct_overlap_count": 0,
+  "transitive_overlap_count": 0,
+  "isolated_validation_subclasses": 0,
+  "selected_validation_axioms": [
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000084",
+      "subclass_label": "Bodily Component",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000024",
+      "superclass_label": "BFO_0000024",
+      "remaining_logical_support": 8
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000089",
+      "subclass_label": "Skill",
+      "superclass": "https://www.commoncoreontologies.org/ont00001379",
+      "superclass_label": "Agent Capability",
+      "remaining_logical_support": 2
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000126",
+      "subclass_label": "First-Order Administrative Region",
+      "superclass": "https://www.commoncoreontologies.org/ont00001152",
+      "superclass_label": "Government Domain",
+      "remaining_logical_support": 4
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000139",
+      "subclass_label": "Domain of a Country",
+      "superclass": "https://www.commoncoreontologies.org/ont00001152",
+      "superclass_label": "Government Domain",
+      "remaining_logical_support": 3
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000274",
+      "subclass_label": "Armed Force",
+      "superclass": "https://www.commoncoreontologies.org/ont00001180",
+      "superclass_label": "Organization",
+      "remaining_logical_support": 2
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000300",
+      "subclass_label": "Group of Agents",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000027",
+      "superclass_label": "BFO_0000027",
+      "remaining_logical_support": 4
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000392",
+      "subclass_label": "Allegiance Role",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000023",
+      "superclass_label": "BFO_0000023",
+      "remaining_logical_support": 3
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000405",
+      "subclass_label": "Second-Order Administrative Region",
+      "superclass": "https://www.commoncoreontologies.org/ont00001152",
+      "superclass_label": "Government Domain",
+      "remaining_logical_support": 2
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000460",
+      "subclass_label": "Local Administrative Region",
+      "superclass": "https://www.commoncoreontologies.org/ont00001152",
+      "superclass_label": "Government Domain",
+      "remaining_logical_support": 3
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000551",
+      "subclass_label": "Organism",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000030",
+      "superclass_label": "BFO_0000030",
+      "remaining_logical_support": 2
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000647",
+      "subclass_label": "Organization Member",
+      "superclass": "https://www.commoncoreontologies.org/ont00001262",
+      "superclass_label": "Person",
+      "remaining_logical_support": 2
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000662",
+      "subclass_label": "Material Territory of a Government Domain",
+      "superclass": "https://www.commoncoreontologies.org/ont00001341",
+      "superclass_label": "ont00001341",
+      "remaining_logical_support": 3
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00000914",
+      "subclass_label": "Group of Persons",
+      "superclass": "https://www.commoncoreontologies.org/ont00000300",
+      "superclass_label": "Group of Agents",
+      "remaining_logical_support": 6
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001017",
+      "subclass_label": "Agent",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "superclass_label": "BFO_0000040",
+      "remaining_logical_support": 23
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001152",
+      "subclass_label": "Government Domain",
+      "superclass": "https://www.commoncoreontologies.org/ont00001203",
+      "superclass_label": "Delimiting Domain",
+      "remaining_logical_support": 5
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001180",
+      "subclass_label": "Organization",
+      "superclass": "https://www.commoncoreontologies.org/ont00000300",
+      "superclass_label": "Group of Agents",
+      "remaining_logical_support": 24
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001203",
+      "subclass_label": "Delimiting Domain",
+      "superclass": "https://www.commoncoreontologies.org/ont00000472",
+      "superclass_label": "ont00000472",
+      "remaining_logical_support": 7
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001262",
+      "subclass_label": "Person",
+      "superclass": "https://www.commoncoreontologies.org/ont00000562",
+      "superclass_label": "Animal",
+      "remaining_logical_support": 18
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001324",
+      "subclass_label": "Process Regulation",
+      "superclass": "https://www.commoncoreontologies.org/ont00000965",
+      "superclass_label": "ont00000965",
+      "remaining_logical_support": 12
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001335",
+      "subclass_label": "Government",
+      "superclass": "https://www.commoncoreontologies.org/ont00001180",
+      "superclass_label": "Organization",
+      "remaining_logical_support": 5
+    },
+    {
+      "subclass": "https://www.commoncoreontologies.org/ont00001379",
+      "subclass_label": "Agent Capability",
+      "superclass": "http://purl.obolibrary.org/obo/BFO_0000017",
+      "superclass_label": "BFO_0000017",
+      "remaining_logical_support": 8
+    }
+  ]
+}

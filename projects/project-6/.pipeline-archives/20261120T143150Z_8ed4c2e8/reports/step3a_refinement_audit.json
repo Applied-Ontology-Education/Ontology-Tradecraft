@@ -1,0 +1,73 @@
+{
+  "baseline_triples": 62,
+  "edits": [
+    {
+      "action": "REPLACE_TRIPLE_OBJECT",
+      "after": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "before": "http://purl.obolibrary.org/obo/BFO_0000030",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "reason": "Accommodate trains assembled from multiple rail vehicles",
+      "subject": "https://example.org/ontologies/intel-ontology#train"
+    },
+    {
+      "action": "REPLACE_TRIPLE_OBJECT",
+      "after": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "before": "https://www.commoncoreontologies.org/AgentOntology/building",
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "reason": "A station facility can include platforms and infrastructure, not only a building",
+      "subject": "https://example.org/ontologies/intel-ontology#railway_station"
+    },
+    {
+      "action": "REPLACE_TRIPLE_OBJECT",
+      "after": "A material entity composed of one or more rail vehicles operated together on a railway to convey passengers or freight.",
+      "before": "An object that is a rail vehicle designed to travel on railway tracks.",
+      "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+      "reason": "Describe single- and multi-vehicle trains using material entity",
+      "subject": "https://example.org/ontologies/intel-ontology#train"
+    },
+    {
+      "action": "REPLACE_TRIPLE_OBJECT",
+      "after": "A material entity comprising physical railway facilities at which rail journeys begin, end, or pause, potentially including platforms, track infrastructure, structures, and buildings.",
+      "before": "A building that is a facility at which trains stop and passengers board or alight.",
+      "predicate": "http://www.w3.org/2004/02/skos/core#definition",
+      "reason": "Broaden definition to cover railway facilities",
+      "subject": "https://example.org/ontologies/intel-ontology#railway_station"
+    },
+    {
+      "action": "ADD_TRIPLE",
+      "after": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+      "before": null,
+      "predicate": "http://www.w3.org/2000/01/rdf-schema#subClassOf",
+      "reason": "Reuse existing passenger Role subclass while retaining explicit BFO Role parent",
+      "subject": "https://example.org/ontologies/intel-ontology#rail_passenger_role"
+    }
+  ],
+  "no_merge": true,
+  "open_design_decisions": [
+    {
+      "blocking_for_unreviewed_merge": true,
+      "decision": "Material information bearer scope retained; electronic ticket INFORMATION requires a distinct class/pattern",
+      "entity": "https://example.org/ontologies/intel-ontology#rail_ticket"
+    },
+    {
+      "blocking_for_unreviewed_merge": false,
+      "decision": "An optional BFO Site / facility-vs-infrastructure distinction may be needed after formal review",
+      "entity": "https://example.org/ontologies/intel-ontology#railway_station"
+    }
+  ],
+  "proposal_sha256": "9859e908132ef4c6d59f792af6775603462493fcf51160542b4e19c2e94f2028",
+  "refined_triples": 63,
+  "resolved_step3_flags": [
+    "train: material-entity parent and revised definition",
+    "railway station: broader material-entity parent and revised definition",
+    "rail passenger role: existing passenger superclass added",
+    "three station-related object properties: existing domains/ranges retained after broader station class"
+  ],
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_triples": 421,
+  "status": "REFINED_UNAPPROVED",
+  "step3_candidate_sha256": "c12ee9633cffa808c86719ca3b127686961d4e9cac4cdfcca92c6ab3d944478c",
+  "step3_review_sha256": "e985cdbb71aedb0f8f086af138650b9c0b059b76a20b5291a864dda9d9d50fec",
+  "validation_scope": "RDF graph/identity/traceability checks only; NOT OWL consistency or SHACL/SPARQL approval",
+  "version": "project6-rail-refinement-v1"
+}

@@ -1,0 +1,109 @@
+{
+  "design_decisions": {
+    "electronic_ticket_information": "not introduced; separate future information content entity",
+    "immaterial_station_site": "not introduced; separate future site concept",
+    "passenger_role": "rail passenger role specializes existing passenger role",
+    "rail_ticket": "physical material information bearer; rail ticket subclass of existing ticket",
+    "railway_station": "material entity comprising physical railway facilities"
+  },
+  "exact_candidate_delta_triples": 63,
+  "notes": [
+    "No unrelated imported axioms are copied into merged source.",
+    "The original owl:imports declarations remain in output.",
+    "The prior HermiT check covered only the STAR locality module, not all remote imports.",
+    "Grok and cosine scores are recorded evidence, not semantic proof.",
+    "No automatic changes to src/module.ttl or original named individuals."
+  ],
+  "output_sha256": "7412eb10d9e8b92249a7af29249a8f43a612f00e31bf9b67d22f0bc4a5967e3f",
+  "provenance_hashes": {
+    "refined": "3ecad31fff9c86592e0fcd4f4168dbc45f48a1c826fad4778022b8190ae0dc6b",
+    "source": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+    "step4": "4acb4adfd1476e18f9f11a47ff2c331c6d93a73a2d1c6ff302b07e443af7d123",
+    "step5c": "394008b98a222c47936177910559ca2be15a7261fa17277c4f58d3d2bc1d0976",
+    "step5c_review": "5eaafb30628948460706189157b8766047443bbf2d3dc71017180c179a435f26",
+    "step6": "db396eb567242ad21ae619cf6405614cbb97a1fde70a5f4804e4c94bc0c8d11f",
+    "step6_baseline": "d88a34615bc35c5012eb4a5af145bf1cdd34c9d699920f8622b14c6c3bb623d5",
+    "step6_candidate": "d6510848e5a3665a132ab9ac32b02fd806e6495958d4f7f6184014bc9501d8ec",
+    "step6_detail": "72bc2ff091f7dec13717c4519ddae29893388091b40169c0e1bc2870ab4953f6"
+  },
+  "source_preservation": "Original source text is an exact byte prefix of generated output",
+  "status": "PASS_CONTROLLED_MERGE_VALIDATED_NOT_PROMOTED",
+  "step7_checks": {
+    "all_11_structural_checks_passed": true,
+    "checks": [
+      {
+        "check": "01_missing_class_declarations",
+        "failures": 0,
+        "method": "SPARQL",
+        "passed": true
+      },
+      {
+        "check": "02_missing_object_property_declarations",
+        "failures": 0,
+        "method": "SPARQL",
+        "passed": true
+      },
+      {
+        "check": "03_missing_data_property_declarations",
+        "failures": 0,
+        "method": "SPARQL",
+        "passed": true
+      },
+      {
+        "check": "04_missing_english_label",
+        "failures": 0,
+        "method": "RDFLib equivalent explicit annotation check",
+        "passed": true
+      },
+      {
+        "check": "05_missing_english_definition",
+        "failures": 0,
+        "method": "RDFLib equivalent explicit annotation check",
+        "passed": true
+      },
+      {
+        "check": "06_missing_required_superclass",
+        "failures": 0,
+        "method": "SPARQL",
+        "passed": true
+      },
+      {
+        "check": "07_incorrect_property_domain_or_range",
+        "failures": 0,
+        "method": "SPARQL",
+        "passed": true
+      },
+      {
+        "check": "08_subclass_cycle",
+        "failures": 0,
+        "method": "SPARQL",
+        "passed": true
+      },
+      {
+        "check": "09_no_rail_air_equivalence",
+        "failures": 0,
+        "method": "SPARQL",
+        "passed": true
+      },
+      {
+        "check": "10_no_named_individuals_in_candidate",
+        "failures": 0,
+        "method": "SPARQL",
+        "passed": true
+      },
+      {
+        "check": "11_no_property_kind_conflicts",
+        "failures": 0,
+        "method": "SPARQL",
+        "passed": true
+      }
+    ],
+    "equivalent_annotation_checks_executed": 2,
+    "shacl_conforms": true,
+    "shacl_report": "Validation Report\nConforms: True\n",
+    "sparql_passed": true,
+    "sparql_queries_executed": 9
+  },
+  "upstream_hermit_reasoner": "HermiT source-scoped baseline and candidate passed; same 63 triples",
+  "version": "project6-controlled-rail-merge-v1"
+}

@@ -1,0 +1,58 @@
+{
+  "ratings": [
+    {
+      "concern": "Missing verified parent type and definition; subclasshood rests only on the child's stated genus.",
+      "id": "edge-00",
+      "plausibility": 0.84,
+      "rationale": "The child is defined as a train differentiated by passenger conveyance, so the proposed genus-differentia relation is coherent. Parent train has no supplied definition or verified superclass, so its category is not independently established."
+    },
+    {
+      "concern": "The 'may be conveyed' clause leaves passenger participation optional and does not further specify process boundaries.",
+      "id": "edge-01",
+      "plausibility": 0.91,
+      "rationale": "The child is defined as a process of train travel between stations, and process is a verified occurrent with temporal parts and participants. Optional passenger conveyance does not undermine processhood."
+    },
+    {
+      "concern": "No concern about category mismatch; bearer of the plan is unspecified but not required for this subclass claim.",
+      "id": "edge-02",
+      "plausibility": 0.93,
+      "rationale": "The child is defined as an information content entity about an intended journey and explicitly not the journey. That matches information content entity as a generically dependent continuant that is about something."
+    },
+    {
+      "concern": "Bearer is restricted to an undefined person class; that differentia is narrower than BFO role but is not a category error.",
+      "id": "edge-03",
+      "plausibility": 0.9,
+      "rationale": "The child is defined as a role type inhering in a person and realized by conveyed-traveler participation, not as a person. Role is a verified realizable entity, so the role-to-role subclass is compatible."
+    },
+    {
+      "concern": "Passenger has no supplied definition, so its differentia cannot be checked against conveyed rail travel.",
+      "id": "edge-04",
+      "plausibility": 0.7,
+      "rationale": "Verified source places passenger under role, so it is a role type, not a person or bearer. A rail conveyed-traveler role is a plausible specialization, but role ancestry alone does not prove this subclass."
+    },
+    {
+      "concern": "Parent textual definition is missing; the IRI is reservation while the label is reservation information.",
+      "id": "edge-05",
+      "plausibility": 0.84,
+      "rationale": "The child is reservation information about a held rail booking and is explicitly not a material ticket or journey. Parent is verified as an information content entity, which fits that information reading."
+    },
+    {
+      "concern": "Physical bearer versus electronic ticket information content remains unresolved; an information-only ticket would not fit this material bearer parent.",
+      "id": "edge-06",
+      "plausibility": 0.66,
+      "rationale": "As stated, the child is a ticket and a material information bearer authorizing rail travel, matching ticket's verified material-information-bearer superclass. That supports only the physical-bearer reading."
+    },
+    {
+      "concern": "Facilities could be confused with an immaterial site; the stated definition commits to material parts, but no tighter facility or aggregate parent is verified.",
+      "id": "edge-07",
+      "plausibility": 0.86,
+      "rationale": "The child is defined as a material entity of physical railway facilities, and material entity is a verified independent continuant with matter as part. Platforms, structures, and buildings fit that reading."
+    },
+    {
+      "concern": "Object aggregate might be a tighter parent, but none is supplied; material entity remains compatible.",
+      "id": "edge-08",
+      "plausibility": 0.92,
+      "rationale": "The child is defined as a material entity composed of rail vehicles, matching material entity's verified independent-continuant and matter criteria. A train is not a role or information entity."
+    }
+  ]
+}
