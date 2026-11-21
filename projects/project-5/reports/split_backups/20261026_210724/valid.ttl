@@ -1,0 +1,386 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+dcterms:bibliographicCitation a owl:AnnotationProperty .
+
+dcterms:created a owl:AnnotationProperty .
+
+dcterms:creator a owl:AnnotationProperty .
+
+dcterms:rights a owl:AnnotationProperty .
+
+skos:editorialNote a owl:AnnotationProperty .
+
+skos:prefLabel a owl:AnnotationProperty .
+
+cco:ont00000010 a owl:Class .
+
+cco:ont00000026 a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000019 .
+
+cco:ont00000044 a owl:Class .
+
+cco:ont00000046 a owl:Class .
+
+cco:ont00000058 a owl:Class .
+
+cco:ont00000071 a owl:Class .
+
+cco:ont00000089 a owl:Class .
+
+cco:ont00000102 a owl:Class .
+
+cco:ont00000126 a owl:Class ;
+    rdfs:subClassOf cco:ont00001152 .
+
+cco:ont00000129 a owl:Class ;
+    rdfs:subClassOf cco:ont00000084 .
+
+cco:ont00000134 a owl:Class .
+
+cco:ont00000139 a owl:Class .
+
+cco:ont00000141 a owl:Class .
+
+cco:ont00000157 a owl:Class .
+
+cco:ont00000173 a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000023 .
+
+cco:ont00000175 a owl:Class .
+
+cco:ont00000176 a owl:Class .
+
+cco:ont00000177 a owl:Class .
+
+cco:ont00000181 a owl:Class .
+
+cco:ont00000187 a owl:Class .
+
+cco:ont00000207 a owl:Class .
+
+cco:ont00000279 a owl:Class .
+
+cco:ont00000318 a owl:Class .
+
+cco:ont00000377 a owl:Class .
+
+cco:ont00000383 a owl:Class .
+
+cco:ont00000388 a owl:Class .
+
+cco:ont00000392 a owl:Class .
+
+cco:ont00000404 a owl:Class .
+
+cco:ont00000405 a owl:Class ;
+    rdfs:subClassOf cco:ont00001152 .
+
+cco:ont00000408 a owl:Class .
+
+cco:ont00000426 a owl:Class ;
+    rdfs:subClassOf cco:ont00000274 .
+
+cco:ont00000443 a owl:Class ;
+    rdfs:subClassOf cco:ont00001180 .
+
+cco:ont00000460 a owl:Class .
+
+cco:ont00000472 a owl:Class .
+
+cco:ont00000473 a owl:Class .
+
+cco:ont00000476 a owl:Class .
+
+cco:ont00000485 a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000023 .
+
+cco:ont00000486 a owl:Class .
+
+cco:ont00000487 a owl:Class .
+
+cco:ont00000500 a owl:Class .
+
+cco:ont00000506 a owl:Class .
+
+cco:ont00000507 a owl:Class ;
+    rdfs:subClassOf cco:ont00000914 .
+
+cco:ont00000509 a owl:Class .
+
+cco:ont00000532 a owl:Class .
+
+cco:ont00000551 a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000030 .
+
+cco:ont00000553 a owl:Class ;
+    rdfs:subClassOf cco:ont00001324 .
+
+cco:ont00000562 a owl:Class .
+
+cco:ont00000564 a owl:Class ;
+    rdfs:subClassOf cco:ont00001180 .
+
+cco:ont00000567 a owl:Class .
+
+cco:ont00000568 a owl:Class .
+
+cco:ont00000576 a owl:Class ;
+    rdfs:subClassOf cco:ont00000084 .
+
+cco:ont00000587 a owl:Class .
+
+cco:ont00000599 a owl:Class .
+
+cco:ont00000608 a owl:Class .
+
+cco:ont00000616 a owl:Class .
+
+cco:ont00000631 a owl:Class .
+
+cco:ont00000645 a owl:Class ;
+    rdfs:subClassOf cco:ont00001262 .
+
+cco:ont00000647 a owl:Class .
+
+cco:ont00000662 a owl:Class ;
+    rdfs:subClassOf cco:ont00001341 .
+
+cco:ont00000666 a owl:Class .
+
+cco:ont00000685 a owl:Class .
+
+cco:ont00000696 a owl:Class .
+
+cco:ont00000697 a owl:Class .
+
+cco:ont00000718 a owl:Class .
+
+cco:ont00000751 a owl:Class .
+
+cco:ont00000780 a owl:Class .
+
+cco:ont00000837 a owl:Class ;
+    rdfs:subClassOf cco:ont00000914 .
+
+cco:ont00000860 a owl:Class ;
+    rdfs:subClassOf cco:ont00001262 .
+
+cco:ont00000871 a owl:Class .
+
+cco:ont00000887 a owl:Class .
+
+cco:ont00000898 a owl:Class .
+
+cco:ont00000917 a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000023 .
+
+cco:ont00000934 a owl:Class .
+
+cco:ont00000958 a owl:Class .
+
+cco:ont00000965 a owl:Class .
+
+cco:ont00000974 a owl:Class .
+
+cco:ont00000976 a owl:Class .
+
+cco:ont00000984 a owl:Class .
+
+cco:ont00000986 a owl:Class .
+
+cco:ont00000987 a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000023 .
+
+cco:ont00001006 a owl:Class .
+
+cco:ont00001017 a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000040 .
+
+cco:ont00001033 a owl:Class .
+
+cco:ont00001062 a owl:Class ;
+    rdfs:subClassOf cco:ont00000300 .
+
+cco:ont00001073 a owl:Class .
+
+cco:ont00001114 a owl:Class .
+
+cco:ont00001125 a owl:Class .
+
+cco:ont00001164 a owl:Class .
+
+cco:ont00001183 a owl:Class .
+
+cco:ont00001203 a owl:Class .
+
+cco:ont00001212 a owl:Class .
+
+cco:ont00001224 a owl:Class .
+
+cco:ont00001239 a owl:Class .
+
+cco:ont00001276 a owl:Class .
+
+cco:ont00001284 a owl:Class .
+
+cco:ont00001302 a owl:Class .
+
+cco:ont00001312 a owl:Class .
+
+cco:ont00001335 a owl:Class .
+
+cco:ont00001363 a owl:Class .
+
+cco:ont00001379 a owl:Class .
+
+cco:ont00001754 a owl:AnnotationProperty .
+
+cco:ont00001760 a owl:AnnotationProperty .
+
+cco:ont00001787 a owl:ObjectProperty .
+
+cco:ont00001794 a owl:ObjectProperty .
+
+cco:ont00001798 a owl:ObjectProperty .
+
+cco:ont00001800 a owl:ObjectProperty .
+
+cco:ont00001807 a owl:ObjectProperty .
+
+cco:ont00001809 a owl:ObjectProperty .
+
+cco:ont00001813 a owl:ObjectProperty .
+
+cco:ont00001815 a owl:ObjectProperty .
+
+cco:ont00001817 a owl:ObjectProperty .
+
+cco:ont00001830 a owl:ObjectProperty .
+
+cco:ont00001831 a owl:ObjectProperty .
+
+cco:ont00001833 a owl:ObjectProperty .
+
+cco:ont00001836 a owl:ObjectProperty .
+
+cco:ont00001844 a owl:ObjectProperty .
+
+cco:ont00001846 a owl:ObjectProperty .
+
+cco:ont00001852 a owl:ObjectProperty .
+
+cco:ont00001859 a owl:ObjectProperty .
+
+cco:ont00001864 a owl:ObjectProperty .
+
+cco:ont00001866 a owl:ObjectProperty .
+
+cco:ont00001880 a owl:ObjectProperty .
+
+cco:ont00001889 a owl:ObjectProperty .
+
+cco:ont00001895 a owl:ObjectProperty .
+
+cco:ont00001898 a owl:ObjectProperty .
+
+cco:ont00001907 a owl:ObjectProperty .
+
+cco:ont00001910 a owl:ObjectProperty .
+
+cco:ont00001920 a owl:ObjectProperty .
+
+cco:ont00001922 a owl:ObjectProperty .
+
+cco:ont00001925 a owl:ObjectProperty .
+
+cco:ont00001939 a owl:ObjectProperty .
+
+cco:ont00001942 a owl:ObjectProperty .
+
+cco:ont00001943 a owl:ObjectProperty .
+
+cco:ont00001949 a owl:ObjectProperty .
+
+cco:ont00001951 a owl:ObjectProperty .
+
+cco:ont00001954 a owl:ObjectProperty .
+
+cco:ont00001974 a owl:ObjectProperty .
+
+cco:ont00001977 a owl:ObjectProperty .
+
+cco:ont00001978 a owl:ObjectProperty .
+
+cco:ont00001984 a owl:ObjectProperty .
+
+cco:ont00001992 a owl:ObjectProperty .
+
+cco:ont00001993 a owl:ObjectProperty .
+
+cco:ont00001998 a owl:ObjectProperty .
+
+cco:ont00000274 a owl:Class .
+
+cco:ont00000300 a owl:Class .
+
+cco:ont00001324 a owl:Class .
+
+cco:ont00001341 a owl:Class .
+
+cco:ont00000084 a owl:Class .
+
+cco:ont00000914 a owl:Class .
+
+cco:ont00001152 a owl:Class .
+
+cco:ont00001180 a owl:Class .
+
+cco:ont00001262 a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+
+[] a owl:Class .
+

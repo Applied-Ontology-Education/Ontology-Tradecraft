@@ -1,0 +1,11 @@
+# Virtual environments
+.venv/
+.venv-mowl/
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Project 5 automatic backups
+projects/project-5/.run_all_backups/

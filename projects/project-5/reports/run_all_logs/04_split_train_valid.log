@@ -1,0 +1,29 @@
+COMMAND
+==============================================================================
+C:\Users\cappa\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe C:\Users\cappa\Ontology-Tradecraft\projects\project-5\scripts\split_train_valid.py
+
+OUTPUT
+==============================================================================
+SPLIT_VERSION           : project-5-frozen-clean-room-split-v6
+
+==============================================================================
+PROJECT 5 - CLEAN-ROOM TRAIN / VALIDATION SPLIT
+==============================================================================
+
+Module                  : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\module.ttl
+Training output         : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\train.ttl
+Validation output       : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\valid.ttl
+
+Named subclass axioms   : 103
+Training axioms         : 82
+Validation axioms       : 21
+Full module closure     : 225
+Training closure        : 169
+Closure retention       : 75.1%
+Direct overlap          : 0
+Validation leakage      : 0
+Split validation        : PASS
+
+Training ontology       : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\train.ttl
+Validation ontology     : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\src\valid.ttl
+Split report            : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\reports\split_train_valid_report.json

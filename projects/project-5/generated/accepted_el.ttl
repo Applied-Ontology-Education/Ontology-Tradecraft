@@ -1,0 +1,41 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://www.commoncoreontologies.org/ont00000058> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000084> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000129> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000157> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000274> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000408>,
+        <https://www.commoncoreontologies.org/ont00000509> .
+
+<https://www.commoncoreontologies.org/ont00000404> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000500> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000507> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000564> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000509> .
+
+<https://www.commoncoreontologies.org/ont00000576> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000631> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> .
+
+<https://www.commoncoreontologies.org/ont00000662> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000024> .
+
+<https://www.commoncoreontologies.org/ont00000837> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001183> .
+
+<https://www.commoncoreontologies.org/ont00000986> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00001062> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00001239> .
+
+<https://www.commoncoreontologies.org/ont00001125> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000027>,
+        <http://purl.obolibrary.org/obo/BFO_0000040> .
+
+<https://www.commoncoreontologies.org/ont00000509> rdfs:subClassOf <http://purl.obolibrary.org/obo/BFO_0000030>,
+        <https://www.commoncoreontologies.org/ont00001017> .
+

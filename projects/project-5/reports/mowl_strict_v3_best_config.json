@@ -1,0 +1,16 @@
+{
+  "script_version": "strict-local-preserved-validation-v3",
+  "selected_stage": "strict_native",
+  "selected_mean_cos": 0.4026247186017923,
+  "previous_local_best": 0.4108,
+  "beats_previous_local_best": false,
+  "native_configuration": {
+    "embed_dim": 50,
+    "epochs": 1000,
+    "learning_rate": 0.001,
+    "seed": 101,
+    "batch_size": 128
+  },
+  "selected_finetune_configuration": null,
+  "selected_tau": null
+}

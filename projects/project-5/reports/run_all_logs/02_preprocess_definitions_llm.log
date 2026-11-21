@@ -1,0 +1,164 @@
+COMMAND
+==============================================================================
+C:\Users\cappa\Ontology-Tradecraft\.venv-mowl\Scripts\python.exe C:\Users\cappa\Ontology-Tradecraft\projects\project-5\scripts\preprocess_definitions_llm.py
+
+OUTPUT
+==============================================================================
+======================================================================
+PROJECT 5 - XAI GROK DEFINITION PREPROCESSING
+======================================================================
+
+Project root : C:\Users\cappa\Ontology-Tradecraft\projects\project-5
+Input file   : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\data\definitions.csv
+Output file  : C:\Users\cappa\Ontology-Tradecraft\projects\project-5\data\definitions_enriched.csv
+xAI endpoint : https://api.x.ai/v1
+xAI model    : grok-4.7
+
+Definitions available: 139
+
+[1/139] Processing: Action Permission
+[2/139] Processing: Affordance
+[3/139] Processing: Agent
+[4/139] Processing: Agent Capability
+[5/139] Processing: Allegiance Role
+[6/139] Processing: Allied Person
+[7/139] Processing: Ally Role
+[8/139] Processing: Animal
+[9/139] Processing: Armed Force
+[10/139] Processing: Authority Role
+[11/139] Processing: Biological Sex
+[12/139] Processing: Bodily Component
+[13/139] Processing: Carrier Air Wing
+[14/139] Processing: Citizen
+[15/139] Processing: Citizen Role
+[16/139] Processing: City
+[17/139] Processing: Civil Organization
+[18/139] Processing: Civilian Role
+[19/139] Processing: Commercial Organization
+[20/139] Processing: Commercial Role
+[21/139] Processing: Constituent State
+[22/139] Processing: Contractor Role
+[23/139] Processing: County
+[24/139] Processing: Crew
+[25/139] Processing: Delimiting Domain
+[26/139] Processing: Disability
+[27/139] Processing: Disease
+[28/139] Processing: Division of Delimiting Domain
+[29/139] Processing: Domain of a Country
+[30/139] Processing: Educational Organization
+[31/139] Processing: Enemy Person
+[32/139] Processing: Enemy Role
+[33/139] Processing: Ethnic Group
+[34/139] Processing: Ethnicity
+[35/139] Processing: Eye
+[36/139] Processing: Eye Color
+[37/139] Processing: Facial Hair
+[38/139] Processing: Family
+[39/139] Processing: Female Sex
+[40/139] Processing: Financial Value
+[41/139] Processing: Financial Value of Property
+[42/139] Processing: First-Order Administrative Region
+[43/139] Processing: Fourth-Order Administrative Region
+[44/139] Processing: Geopolitical Organization
+[45/139] Processing: Geopolitical Power Role
+[46/139] Processing: Government
+[47/139] Processing: Government Domain
+[48/139] Processing: Government Domain Border
+[49/139] Processing: Government Organization
+[50/139] Processing: Government of a Country
+[51/139] Processing: Group of Agents
+[52/139] Processing: Group of Organizations
+[53/139] Processing: Group of Persons
+[54/139] Processing: Hair Color
+[55/139] Processing: Ideology
+[56/139] Processing: Incorporated Organization
+[57/139] Processing: International Community
+[58/139] Processing: Interpersonal Relationship Role
+[59/139] Processing: Iris
+[60/139] Processing: Language Skill
+[61/139] Processing: Local Administrative Region
+[62/139] Processing: Male Sex
+[63/139] Processing: Material Territory of a Country
+[64/139] Processing: Material Territory of a Government Domain
+[65/139] Processing: Military Personnel Force
+[66/139] Processing: Neutral Person
+[67/139] Processing: Neutral Role
+[68/139] Processing: Nuclear Family
+[69/139] Processing: Objective
+[70/139] Processing: Occupation Role
+[71/139] Processing: Operational Area
+[72/139] Processing: Operator Role
+[73/139] Processing: Organism
+[74/139] Processing: Organization
+[75/139] Processing: Organization Capability
+[76/139] Processing: Organization Member
+[77/139] Processing: Organization Member Role
+[78/139] Processing: Paramilitary Force
+[79/139] Processing: Permanent Resident
+[80/139] Processing: Permanent Resident Role
+[81/139] Processing: Person
+[82/139] Processing: Plan
+[83/139] Processing: Plant
+[84/139] Processing: Political Orientation
+[85/139] Processing: Populace
+[86/139] Processing: Process Prohibition
+[87/139] Processing: Process Regulation
+[88/139] Processing: Process Requirement
+[89/139] Processing: Province
+[90/139] Processing: Religion
+[91/139] Processing: Scalp
+[92/139] Processing: Scalp Hair
+[93/139] Processing: Scar
+[94/139] Processing: Second-Order Administrative Region
+[95/139] Processing: Service Provider
+[96/139] Processing: Set of Eyes
+[97/139] Processing: Skill
+[98/139] Processing: Skin Type
+[99/139] Processing: Social Network
+[100/139] Processing: Tattoo
+[101/139] Processing: Third-Order Administrative Region
+[102/139] Processing: Town
+[103/139] Processing: Village
+[104/139] Processing: accessory in
+[105/139] Processing: accomplice in
+[106/139] Processing: agent in
+[107/139] Processing: aggregate has capability
+[108/139] Processing: capability of
+[109/139] Processing: capability of aggregate
+[110/139] Processing: delimits
+[111/139] Processing: has accessory
+[112/139] Processing: has accomplice
+[113/139] Processing: has affiliate
+[114/139] Processing: has agent
+[115/139] Processing: has capability
+[116/139] Processing: has interest in
+[117/139] Processing: has organizational context
+[118/139] Processing: has recipient
+[119/139] Processing: has sender
+[120/139] Processing: has subordinate role
+[121/139] Processing: has subsidiary
+[122/139] Processing: is affiliated with
+[123/139] Processing: is delimited by
+[124/139] Processing: is interest of
+[125/139] Processing: is organizational context of
+[126/139] Processing: is permitted by
+[127/139] Processing: is prohibited by
+[128/139] Processing: is required by
+[129/139] Processing: is subordinate role to
+[130/139] Processing: is subsidiary of
+[131/139] Processing: is supervised by
+[132/139] Processing: is used by
+[133/139] Processing: permits
+[134/139] Processing: prohibits
+[135/139] Processing: receives
+[136/139] Processing: requires
+[137/139] Processing: sends
+[138/139] Processing: supervises
+[139/139] Processing: uses
+
+======================================================================
+PREPROCESSING COMPLETE
+======================================================================
+
+Definitions in output: 139
+Saved to: C:\Users\cappa\Ontology-Tradecraft\projects\project-5\data\definitions_enriched.csv

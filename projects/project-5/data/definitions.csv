@@ -1,0 +1,140 @@
+IRI,label,definition
+https://www.commoncoreontologies.org/ont00000751,Action Permission,A Process Regulation that permits some Process.
+https://www.commoncoreontologies.org/ont00000177,Affordance,A Realizable Entity of an Independent Continuant that creates an opportunity for an Agent to realize some Agent Capability or Disposition in some Act.
+https://www.commoncoreontologies.org/ont00001017,Agent,A Material Entity that bears an Agent Capability.
+https://www.commoncoreontologies.org/ont00001379,Agent Capability,A Realizable Entity that inheres in a Material Entity in virtue of that Material Entity's capacity to realize it in some Planned Act.
+https://www.commoncoreontologies.org/ont00000392,Allegiance Role,A Role that inheres in an Agent by virtue of the support it has committed to provide to another Agent when that Agent is involved in a conflict.
+https://www.commoncoreontologies.org/ont00000860,Allied Person,A Person who is the bearer of some Ally Role.
+https://www.commoncoreontologies.org/ont00000587,Ally Role,An Allegiance Role that inheres in an Agent in virtue of that Agent's commitment to perform Acts that support the Objectives of a particular Agent or Group of Agents.
+https://www.commoncoreontologies.org/ont00000562,Animal,"An Organism that is multicellular, eukaryotic, heterotrophic, and capable of motility for part of its life."
+https://www.commoncoreontologies.org/ont00000274,Armed Force,An Organization having the Objective to further the foreign and domestic policies of a Government and to defend that body and the nation it represents from external and internal aggressors.
+https://www.commoncoreontologies.org/ont00000187,Authority Role,"A Role that is realized by Processes which create, modify, transfer, or eliminate Process Regulations or other Authority Roles, and inheres in an Agent in virtue of collective acceptance of that Agent's ability to issue binding directives."
+https://www.commoncoreontologies.org/ont00001033,Biological Sex,A Quality inhering in a bearer by virtue of the bearer's ability to undergo sexual reproduction in order to differentiate the individuals or types involved.
+https://www.commoncoreontologies.org/ont00000084,Bodily Component,A Fiat Object Part located within or on the surface of an Agent.
+https://www.commoncoreontologies.org/ont00001276,Carrier Air Wing,A Military Force that is trained and equipped to conduct air operations while embarked on an aircraft carrier.
+https://www.commoncoreontologies.org/ont00000388,Citizen,A Person who is the bearer of some Citizen Role.
+https://www.commoncoreontologies.org/ont00000987,Citizen Role,"A Role that inheres in a Person by virtue of that Person being legally recognized as a member of a particular state, with associated rights and obligations."
+https://www.commoncoreontologies.org/ont00000887,City,"A Local Administrative Region in which a relatively large human population permanently resides; is designated as a city based on a particular administrative, legal, or historical status; and which delimits a local Government that typically oversees the provision of systems for sanitation, utilities, land usage, housing, and transportation."
+https://www.commoncoreontologies.org/ont00001302,Civil Organization,An Organization that is not commercial or military and is the bearer of a Civilian Role.
+https://www.commoncoreontologies.org/ont00000173,Civilian Role,A Role that inheres in an Agent or Group of Agents by virtue of that Agent or Group of Agents not being part of either an Armed Force or police force.
+https://www.commoncoreontologies.org/ont00000443,Commercial Organization,An Organization that is the bearer of a Commercial Role and whose primary objective is to make a profit from the provision of goods or services.
+https://www.commoncoreontologies.org/ont00000485,Commercial Role,A Role that inheres in an Organization by virtue of its establishment as a for-profit business.
+https://www.commoncoreontologies.org/ont00000934,Constituent State,A First-Order Administrative Region that is part of a Country and delimits a centralized regional Government that holds constitutionally-defined administrative jurisdiction over the defined geographic territory that bounds the State.
+https://www.commoncoreontologies.org/ont00000506,Contractor Role,A Role that inheres in an Agent or Group of Agents by virtue of that Agent or Group of Agents entering into a Contract to provide materials or labor to perform a service or complete a task.
+https://www.commoncoreontologies.org/ont00001164,County,A Government Domain that is part of either a First-Order or Second-Order Administrative Region.
+https://www.commoncoreontologies.org/ont00001284,Crew,A Group of Persons that bear Roles realized by the operation of the specified Vehicle.
+https://www.commoncoreontologies.org/ont00001203,Delimiting Domain,A Geospatial Region that delimits the authority of an Organization to exercise its control within the bounded area.
+https://www.commoncoreontologies.org/ont00000377,Disability,"A Quality inhering in an Agent by virtue a physical or mental condition that limits the Agent's movements, senses, or activities."
+https://www.commoncoreontologies.org/ont00000318,Disease,A Disposition to undergo pathological processes that exists in an organism because of one or more disorders in that organism.
+https://www.commoncoreontologies.org/ont00001114,Division of Delimiting Domain,A Geospatial Region that is a fiat division of a Delimiting Domain and not a Delimiting Domain.
+https://www.commoncoreontologies.org/ont00000139,Domain of a Country,"A Government Domain that is associated with certain distinct political, ethnic, or cultural characteristics, and which delimits a Government that has legitimate authority over a Populace."
+https://www.commoncoreontologies.org/ont00000564,Educational Organization,"An Organization whose primary purpose is to provide training or otherwise facilitate learning or the acquisition of knowledge, Skills, values, beliefs, or habits."
+https://www.commoncoreontologies.org/ont00000697,Enemy Person,A Person who is the bearer of some Enemy Role.
+https://www.commoncoreontologies.org/ont00000279,Enemy Role,An Allegiance Role that inheres in an Agent by virtue of that Agent having committed offensive Acts or exhibited intent to perform such Acts towards a particular Agent or Group of Agents or has been declared as hostile by some appropriate authority.
+https://www.commoncoreontologies.org/ont00000507,Ethnic Group,"A Group of Persons who identify with one another based on one or more shared inherited characteristics such as language, ancestry, nationality, culture, customs, religion, or social experiences."
+https://www.commoncoreontologies.org/ont00000780,Ethnicity,"A Quality that inheres in its bearers by virtue of a common heritage, often consisting of a common language, a common culture (often including a shared religion) and an ideology that stresses common ancestry or endogamy."
+https://www.commoncoreontologies.org/ont00000500,Eye,A Bodily Component that consists of an organ that canonically affords the Agent it is part of with the ability to receive visual stimuli necessary for sight.
+https://www.commoncoreontologies.org/ont00000044,Eye Color,A Quality inhering in an Eye by virtue of the color of the Eye's Iris.
+https://www.commoncoreontologies.org/ont00000157,Facial Hair,A Bodily Component that consists of a portion of hair that grows on the face of a human (typically male) or other animal.
+https://www.commoncoreontologies.org/ont00000837,Family,A Group of Persons related to one another by ancestry or marriage.
+https://www.commoncoreontologies.org/ont00001212,Female Sex,A Biological Sex inhering in an individual that only produces gametes that can be fertilized by male gametes.
+https://www.commoncoreontologies.org/ont00000608,Financial Value,A quality that inheres in an independent continuant to the degree that that independent continuant can serve as a medium of exchange in an economic system at a particular time.
+https://www.commoncoreontologies.org/ont00001073,Financial Value of Property,Financial Value that inheres in an material entity that is the object of an Act of Ownership.
+https://www.commoncoreontologies.org/ont00000126,First-Order Administrative Region,A Government Domain that is a primary administrative division of a Country.
+https://www.commoncoreontologies.org/ont00000473,Fourth-Order Administrative Region,A Government Domain that is a subdivision of a Third-Order Administrative Region.
+https://www.commoncoreontologies.org/ont00000176,Geopolitical Organization,An Organization that bears a Geopolitical Power Role.
+https://www.commoncoreontologies.org/ont00000898,Geopolitical Power Role,"A Role had by an Organization, that is perceived by an International Community as capable of performing influential acts in that community, and which would be realized in performing such acts."
+https://www.commoncoreontologies.org/ont00001335,Government,"An Organization that is the highest legitimate authority delimited by some Delimiting Domain and that exercises executive, legislative, or judicial authority in that Domain."
+https://www.commoncoreontologies.org/ont00001152,Government Domain,A Delimiting Domain that delimits the authority of a Government to exercise its control within the bounded area.
+https://www.commoncoreontologies.org/ont00000685,Government Domain Border,A One-Dimensional Geospatial Boundary of some Government Domain.
+https://www.commoncoreontologies.org/ont00000408,Government Organization,An Organization that is part of a Government and is responsible for the oversight or administration of specific governmental functions.
+https://www.commoncoreontologies.org/ont00000532,Government of a Country,A Government that has legitimate authority within and is delimited by a Domain of a Country.
+https://www.commoncoreontologies.org/ont00000300,Group of Agents,An Object Aggregate that has only Agents as member parts.
+https://www.commoncoreontologies.org/ont00001239,Group of Organizations,A Group of Agents that has only Organizations as member parts.
+https://www.commoncoreontologies.org/ont00000914,Group of Persons,A Group of Agents that has only Persons as member parts.
+https://www.commoncoreontologies.org/ont00000026,Hair Color,A Quality inhering in a portion of Hair by virtue of its color.
+https://www.commoncoreontologies.org/ont00000696,Ideology,"An Information Content Entity that consists of a collection of claims about how some part of the world is or should be and which is accepted as true by an Agent or Group of Agents such that it forms the basis of their beliefs, goals, expectations, and motivations."
+https://www.commoncoreontologies.org/ont00000010,Incorporated Organization,"An Organization formed by an Act of Incorporation that consists of an association of individuals, created by law or under authority of law, having a continuous existence independent of the existences of its members and owners, and having powers and liabilities distinct from those of its members and owners."
+https://www.commoncoreontologies.org/ont00001062,International Community,A maximal Group of Geopolitical Organizations engaged in geopolitics with one another.
+https://www.commoncoreontologies.org/ont00000599,Interpersonal Relationship Role,"A Role that inheres in a Person in virtue of the obligations, expectations, or social norms that govern that Person's Intentional Acts within the context of a relationship with another Person."
+https://www.commoncoreontologies.org/ont00000404,Iris,"A Bodily Component that consists of the part of an Eye that is a pigmented, round, contractile membrane, suspended between the cornea and lens and perforated by the pupil, and which canonically regulates the amount of light entering the Eye."
+https://www.commoncoreontologies.org/ont00000181,Language Skill,A Skill that is realized by an Act which is prescribed by a Language.
+https://www.commoncoreontologies.org/ont00000460,Local Administrative Region,A Government Domain that delimits a local Government.
+https://www.commoncoreontologies.org/ont00001363,Male Sex,A Biological Sex inhering in an individual whose sex organs contain only male gametes.
+https://www.commoncoreontologies.org/ont00000631,Material Territory of a Country,"The portions of lithosphere, hydrosphere, or atmosphere that together exactly occupy a The Domain of a Country."
+https://www.commoncoreontologies.org/ont00000662,Material Territory of a Government Domain,"The portions of lithosphere, hydrosphere, or atmosphere that together exactly occupy a Government Domain."
+https://www.commoncoreontologies.org/ont00000426,Military Personnel Force,"An Armed Force authorized to use deadly force, and weapons, to support the interests of the Government and some or all of its Citizens."
+https://www.commoncoreontologies.org/ont00000666,Neutral Person,A Person who is the bearer of some Neutral Role.
+https://www.commoncoreontologies.org/ont00000486,Neutral Role,An Allegiance Role that inheres in an Agent by virtue of that Agent not performing or being committed to performing Acts that have as their Objective to either support or undermine the Objectives of an Agent or Group of Agents involved in some conflict.
+https://www.commoncoreontologies.org/ont00000383,Nuclear Family,A Family composed of parents and their children.
+https://www.commoncoreontologies.org/ont00000476,Objective,A Prescriptive Information Content Entity that prescribes some projected state that some Agent intends to achieve.
+https://www.commoncoreontologies.org/ont00000984,Occupation Role,A Role that inheres in an Agent in virtue of the responsibilities that Agent is expected to fulfill within the context of some Act of Employment.
+https://www.commoncoreontologies.org/ont00000567,Operational Area,A Geospatial Location in which an Agent conducts some activity.
+https://www.commoncoreontologies.org/ont00001006,Operator Role,A Role that inheres in an Agent by virtue of that Agent's responsibilities to operate or control some Material Artifact.
+https://www.commoncoreontologies.org/ont00000551,Organism,An Object that is an Animal or Plant.
+https://www.commoncoreontologies.org/ont00001180,Organization,"A Group of Agents which can be the bearer of roles, has members, and has a set of organization rules."
+https://www.commoncoreontologies.org/ont00000568,Organization Capability,An Agent Capability that inheres in an Organization to the extent of that Organization's capacity to realize it in Intentional Acts of a certain type.
+https://www.commoncoreontologies.org/ont00000647,Organization Member,A Person who is affiliated with some Organization by being a member of that Organization.
+https://www.commoncoreontologies.org/ont00000175,Organization Member Role,A Role that inheres in an Agent in virtue of the responsibilities that Agent is expected to fulfill as a member of some Organization.
+https://www.commoncoreontologies.org/ont00001312,Paramilitary Force,"An Armed Force whose organizational structure, training, subculture, and (often) function are similar to those of a professional Military, and which is not included as part of a Government's formal Armed Forces."
+https://www.commoncoreontologies.org/ont00000645,Permanent Resident,A person with a Permanent Resident Role.
+https://www.commoncoreontologies.org/ont00000917,Permanent Resident Role,A role inhering in a Person by virtue of that Person being recognized as having legal resident status in a Government Domain in which that person is not a citizen but where they have the right to reside on a permanent basis.
+https://www.commoncoreontologies.org/ont00001262,Person,An Animal that is a member of the species Homo sapiens.
+https://www.commoncoreontologies.org/ont00000974,Plan,A Prescriptive Information Content Entity that prescribes some set of intended Intentional Acts through which some Agent expects to achieve some Objective.
+https://www.commoncoreontologies.org/ont00000871,Plant,"An Organism that is multicellular, eukaryotic, autotrophic, and has cells that contain chloroplasts and walls made of cellulose."
+https://www.commoncoreontologies.org/ont00000976,Political Orientation,"An Ideology that characterizes the political thinking of an Agent or Group of Agents, usually with respect to the political environment within a particular nation."
+https://www.commoncoreontologies.org/ont00000141,Populace,A Group of Persons forming the total population of some Government Domain.
+https://www.commoncoreontologies.org/ont00000553,Process Prohibition,A Process Regulation that prohibits some Process.
+https://www.commoncoreontologies.org/ont00001324,Process Regulation,"A Prescriptive Information Content Entity that prescribes an Process as required, prohibited, or permitted, and is the output of an Process which realizes some Authority Role."
+https://www.commoncoreontologies.org/ont00001224,Process Requirement,A Process Regulation that requires some Process.
+https://www.commoncoreontologies.org/ont00000046,Province,A First-Order Administrative Region that is part of a Country and delimits the authority of a magistrate who holds constitutionally-defined administrative jurisdiction over the defined geographic territory that bounds the Province.
+https://www.commoncoreontologies.org/ont00000616,Religion,"An Information Content Entity that consists of a collection of claims about the meaning or origin of existence or about the existence or nature of one or more deities, an afterlife, or spiritual or sacred entities, and which is accepted as true by an Agent or Group of Agents."
+https://www.commoncoreontologies.org/ont00000576,Scalp,A Bodily Component that consists of the skin covering the top of the head of a human or other animal.
+https://www.commoncoreontologies.org/ont00000058,Scalp Hair,A Bodily Component that consists of a portion of hair that grows on the scalp of a human or other animal.
+https://www.commoncoreontologies.org/ont00000986,Scar,A Bodily Component that consists of a portion of fibrous connective tissue on skin or within body tissue and which was formed due to an injury that has not healed completely.
+https://www.commoncoreontologies.org/ont00000405,Second-Order Administrative Region,A Government Domain that is a subdivision of a First-Order Administrative Region.
+https://www.commoncoreontologies.org/ont00000509,Service Provider,An Organization whose purpose is to provide a service to other Agents.
+https://www.commoncoreontologies.org/ont00001125,Set of Eyes,A Bodily Component that consists of two or more Eyes that are part of a single Agent.
+https://www.commoncoreontologies.org/ont00000089,Skill,An Agent Capability that inheres in a Person to the extent of that Person's capacity to realize it in Intentional Acts of a certain type.
+https://www.commoncoreontologies.org/ont00000102,Skin Type,A Quality inhering in a portion of skin by virtue of its color and natural tendency to respond to ultraviolet light.
+https://www.commoncoreontologies.org/ont00001183,Social Network,"A Group of Agents that are connected in dyadic relations by similar personal or career interests, activities, backgrounds, or real-life connections."
+https://www.commoncoreontologies.org/ont00000129,Tattoo,A Bodily Component that consists of a typically permanent mark or design on a portion of skin that is created by a process of pricking and ingraining an indelible pigment or by raising scars.
+https://www.commoncoreontologies.org/ont00000134,Third-Order Administrative Region,A Government Domain that is a subdivision of a Second-Order Administrative Region.
+https://www.commoncoreontologies.org/ont00000071,Town,"A Local Administrative Region in which a human population permanently resides that is typically larger than the population of a Village but smaller than that of a City; is designated as a town based on a particular administrative, legal, or historical status; and which delimits a local Government that typically exercises less power than that of a City Government."
+https://www.commoncoreontologies.org/ont00000718,Village,A Local Administrative Region in which a human population permanently resides that is typically larger than the population of a hamlet but smaller than that of a Town.
+https://www.commoncoreontologies.org/ont00001852,accessory in,"x is_accessory_in y iff x is an instance of Agent and y is an instance of Process such that x assists another instance of Agent z in the commission of y, and x was not located at the location of y when y occurred, and x is not an agent_in y."
+https://www.commoncoreontologies.org/ont00001895,accomplice in,"Agent x is accomplice_in Process y iff x assists in the commission of y, is located at the location of y, but is not agent_in y."
+https://www.commoncoreontologies.org/ont00001787,agent in,"x agent_in y iff y is an instance of Process and x is an instance of Agent, such that x is causally active in y."
+https://www.commoncoreontologies.org/ont00001898,aggregate has capability,x aggregate has capability y =Def y capability of aggregate x.
+https://www.commoncoreontologies.org/ont00001889,capability of,"x capability_of y iff y is an instance of Agent and x is an instance of Agent Capability, such that x inheres in y."
+https://www.commoncoreontologies.org/ont00001880,capability of aggregate,"x capability_of_aggregate y iff y is an instance of Object Aggregate and x is an instance of Agent Capability, such that x inheres in aggregate y."
+https://www.commoncoreontologies.org/ont00001864,delimits,x delimits y =Def y is delimited by x.
+https://www.commoncoreontologies.org/ont00001949,has accessory,x has accessory y =Def y accessory in x.
+https://www.commoncoreontologies.org/ont00001830,has accomplice,x has accomplice y =Def y accomplice in x.
+https://www.commoncoreontologies.org/ont00001977,has affiliate,x has affiliate y =Def y is affiliated with x.
+https://www.commoncoreontologies.org/ont00001833,has agent,x has agent y =Def y agent in x.
+https://www.commoncoreontologies.org/ont00001954,has capability,x has capability y =Def y capability of x.
+https://www.commoncoreontologies.org/ont00001984,has interest in,A relation between an Agent and some Process where the Agent has an interest in that Process.
+https://www.commoncoreontologies.org/ont00001992,has organizational context,x has organizational context y =Def y is organizational context of x.
+https://www.commoncoreontologies.org/ont00001922,has recipient,x has recipient y =Def y receives x.
+https://www.commoncoreontologies.org/ont00001844,has sender,x has sender y =Def y sends x.
+https://www.commoncoreontologies.org/ont00001951,has subordinate role,x has subordinate role y =Def y is subordinate role to x.
+https://www.commoncoreontologies.org/ont00001794,has subsidiary,x has subsidiary y =Def y is subsidiary of x.
+https://www.commoncoreontologies.org/ont00001939,is affiliated with,"x is_affiliated_with y iff x and y are instances of Agent, such that they have any kind of social or business relationship."
+https://www.commoncoreontologies.org/ont00001859,is delimited by,x is_delimited_by y iff x is an instance of Organization and y is an instance of Delimiting Domain and y delimits x.
+https://www.commoncoreontologies.org/ont00001866,is interest of,x is interest of y =Def y has interest in x.
+https://www.commoncoreontologies.org/ont00001846,is organizational context of,"x is_organizational_context_of y iff x is an instance of an Organization and y is an instance of a Role and z is an instance of a Person, such that z's affiliation with x is a prerequisite for z bearing y, or x ascribes y to the bearer of y."
+https://www.commoncoreontologies.org/ont00001998,is permitted by,x is permitted by y =Def y permits x.
+https://www.commoncoreontologies.org/ont00001817,is prohibited by,x is prohibited by y =Def y prohibits x.
+https://www.commoncoreontologies.org/ont00001807,is required by,x is required by y =Def y requires x.
+https://www.commoncoreontologies.org/ont00001831,is subordinate role to,"For all x,y,t: y is subordinate role to x at t iff: x is an instance of Role at time t, and y is an instance of Role at time t, and there is some z such that x is realized by z and z is an instance of Process which creates, modifies, transfers, or eliminates some u such that u is a Process Regulation at time t, and u is addressed to the bearer of y."
+https://www.commoncoreontologies.org/ont00001815,is subsidiary of,x is_subsidiary_of y iff x and y are both instances of Organization and y controls x by having the capacity to determine the outcome of decisions about the financial and operating policies of x.
+https://www.commoncoreontologies.org/ont00001798,is supervised by,x is_supervised_by y iff x and y are both instances of Person and y supervises x.
+https://www.commoncoreontologies.org/ont00001925,is used by,x is used by y =Def y uses x.
+https://www.commoncoreontologies.org/ont00001910,permits,"x permits y at t iff: x is an instance of Process Regulation at time t, and y is an instance of Process at time t, and x prescribes that y may occur."
+https://www.commoncoreontologies.org/ont00001800,prohibits,"x prohibits y at t iff: x is an instance of Process Regulation at time t, and y is an instance of Process at time t, and x prescribes that some y must not occur."
+https://www.commoncoreontologies.org/ont00001978,receives,"x receives y iff x is an instance of Agent and y is an instance of Act Of Communication, such that x is the recipient and decoder of the InformationContentEntity intended for communication in y."
+https://www.commoncoreontologies.org/ont00001974,requires,"x requires y at t iff: x is an instance of Process Regulation at time t, and y is an instance of Process at time t, and x prescribes that some y must occur."
+https://www.commoncoreontologies.org/ont00001993,sends,"x sends y iff x is an instance of Agent and y is an instance of Act Of Communication, such that x is the initiator and encoder of the InformationContentEntity intended for communication in y."
+https://www.commoncoreontologies.org/ont00001943,supervises,x supervises y =Def y is supervised by x.
+https://www.commoncoreontologies.org/ont00001813,uses,"x uses y iff x is an instance of an Agent and y is an instance of a Material Entity, such that both x and y participate in some instance of a Process wherein x attempts to accomplish a goal by manipulating, deploying, or leveraging some attribute of y."
