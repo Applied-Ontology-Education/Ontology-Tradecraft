@@ -15,8 +15,7 @@ You will use GitHub throughout the course to:
 - obtain course materials;
 - maintain your own copy of the repository;
 - create branches;
-- submit work through pull requests;
-- review the work of peers; and
+- submit work through pull requests and;
 - respond to feedback.
 
 Create an account at:
