@@ -1,0 +1,1043 @@
+{
+  "declared_import_iris": [
+    "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+    "http://purl.obolibrary.org/obo/iao/dev/iao-edit.owl",
+    "https://www.commoncoreontologies.org/2026-08-13/AgentOntology",
+    "https://www.commoncoreontologies.org/EventOntology",
+    "https://www.commoncoreontologies.org/InformationEntityOntology"
+  ],
+  "local_import_files": [
+    {
+      "declared_classes": 99,
+      "declared_data_properties": 0,
+      "declared_object_properties": 41,
+      "declared_ontology_iris": [
+        "https://www.commoncoreontologies.org/AgentOntology"
+      ],
+      "file": "imports/AgentOntology.ttl",
+      "sha256": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+      "triples": 1081,
+      "version_iris": [
+        "https://www.commoncoreontologies.org/2026-08-13/AgentOntology"
+      ]
+    },
+    {
+      "declared_classes": 36,
+      "declared_data_properties": 0,
+      "declared_object_properties": 40,
+      "declared_ontology_iris": [
+        "http://purl.obolibrary.org/obo/bfo.owl"
+      ],
+      "file": "imports/bfo-core.ttl",
+      "sha256": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+      "triples": 1014,
+      "version_iris": [
+        "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl"
+      ]
+    },
+    {
+      "declared_classes": 235,
+      "declared_data_properties": 74,
+      "declared_object_properties": 31,
+      "declared_ontology_iris": [
+        "http://purl.obolibrary.org/obo/iao/iao-edit.owl"
+      ],
+      "file": "imports/core.ttl",
+      "sha256": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+      "triples": 3410,
+      "version_iris": [
+        "http://purl.obolibrary.org/obo/iao/dev/iao-edit.owl"
+      ]
+    },
+    {
+      "declared_classes": 328,
+      "declared_data_properties": 0,
+      "declared_object_properties": 0,
+      "declared_ontology_iris": [
+        "https://www.commoncoreontologies.org/EventOntology"
+      ],
+      "file": "imports/EventOntology.ttl",
+      "sha256": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+      "triples": 2285,
+      "version_iris": [
+        "https://www.commoncoreontologies.org/2026-08-13/EventOntology"
+      ]
+    },
+    {
+      "declared_classes": 182,
+      "declared_data_properties": 4,
+      "declared_object_properties": 63,
+      "declared_ontology_iris": [
+        "http://purl.obolibrary.org/obo/iao/iao-edit.owl"
+      ],
+      "file": "imports/iao-edit.owl",
+      "sha256": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0",
+      "triples": 2837,
+      "version_iris": [
+        "http://purl.obolibrary.org/obo/iao/dev/iao-edit.owl"
+      ]
+    },
+    {
+      "declared_classes": 112,
+      "declared_data_properties": 8,
+      "declared_object_properties": 35,
+      "declared_ontology_iris": [
+        "https://www.commoncoreontologies.org/InformationEntityOntology"
+      ],
+      "file": "imports/InformationEntityOntology.ttl",
+      "sha256": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+      "triples": 1800,
+      "version_iris": [
+        "https://www.commoncoreontologies.org/2026-08-13/InformationEntityOntology"
+      ]
+    }
+  ],
+  "notes": [
+    "Imported files are inspected locally only; remote owl:imports are never fetched.",
+    "A local imported file is not automatically proven equivalent to a declared owl:imports IRI.",
+    "No OWL reasoner or logical consistency checking is performed in Step 1.",
+    "Counts cover explicit declarations in source; they do not include inferred entities."
+  ],
+  "script_version": "project6-rail-inventory-v1",
+  "source_counts": {
+    "annotation_properties": 8,
+    "anonymous_equivalence_gcas": 0,
+    "anonymous_subclass_gcas": 4,
+    "classes": 41,
+    "data_properties": 13,
+    "individuals": 27,
+    "object_properties": 10
+  },
+  "source_entities": {
+    "annotation_properties": [
+      {
+        "domains_asserted": [],
+        "iri": "http://purl.org/dc/terms/bibliographicCitation",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "http://purl.org/dc/terms/created",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "http://purl.org/dc/terms/creator",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "http://purl.org/dc/terms/rights",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "http://www.w3.org/2004/02/skos/core#editorialNote",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "http://www.w3.org/2004/02/skos/core#prefLabel",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/ont00001754",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/ont00001760",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      }
+    ],
+    "classes": [
+      {
+        "domains_asserted": [],
+        "iri": "https://example.org/ontologies/intel-ontology#hotel_reservation",
+        "labels": [
+          "hotel reservation"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://example.org/ontologies/intel-ontology#reservation"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://example.org/ontologies/intel-ontology#reservation",
+        "labels": [
+          "reservation"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/IAO_0000178"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology#driver's_license",
+        "labels": [
+          "driver's license"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/license"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_posting",
+        "labels": [
+          "Act of Facebook posting"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan",
+        "labels": [
+          "Act of Flight Plan"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000015"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Act_of_Social_Media_Posting",
+        "labels": [
+          "Act of Social Media Posting"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000015"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Airplane",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000030"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Commcercial_airplane",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/Airplane"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Facebook",
+        "labels": [
+          "Facebook"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/Social_Media"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Facebook_Post",
+        "labels": [
+          "Facebook Post Information"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/Facebook"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Flight_plan",
+        "labels": [
+          "Flight plan"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/IAO_0000030"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Jetblue_passenger",
+        "labels": [
+          "Jetblue passenger"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/passenger"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Person_Of_Interest",
+        "labels": [
+          "Person of Interest"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000023"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Post",
+        "labels": [
+          "Post"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/IAO_0000178"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Social_Media",
+        "labels": [
+          "Social Media"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/ont00002001"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/airline_reservation",
+        "labels": [
+          "airline reservation information"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/reservation"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/airport",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/building"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/arrival_airport",
+        "labels": [
+          "Arrival airport"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/airport"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/boarding_pass",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/pass"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/building",
+        "labels": [
+          "Building"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000030"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/concert_attendee",
+        "labels": [
+          "concert attendee"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000023"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information",
+        "labels": [
+          "concert reservation information"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/reservation"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/concert_ticket",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/ticket"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/departure_airport",
+        "labels": [
+          "Departure airport"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/airport"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/driver_license",
+        "labels": [
+          "driver's license"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/personal_identification"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/event_venue",
+        "labels": [
+          "concert venue"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/ont00000544"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/facebook_user",
+        "labels": [
+          "Facebook user"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/social_media_user"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/guest",
+        "labels": [
+          "guest"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000023"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/hotel",
+        "labels": [
+          "hotel"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/building"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_information",
+        "labels": [
+          "hotel reservation information"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/reservation"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/license",
+        "labels": [
+          "license"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/IAO_0000178"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/organization",
+        "labels": [
+          "Organization"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000027"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/pass",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/IAO_0000178"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+        "labels": [
+          "passenger"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000023"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/person",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000030"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/personal_identification",
+        "labels": [
+          "personal identification"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/ont00000686"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+        "labels": [
+          "reservation information"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/IAO_0000030"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/social_media_user",
+        "labels": [
+          "social media user"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000023"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/terrorist_organization",
+        "labels": [
+          "Terrorist organization"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/organization"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": [
+          "http://purl.obolibrary.org/obo/IAO_0000178"
+        ]
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/ont00001017",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      }
+    ],
+    "data_properties": [
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_ICAO_Telephony",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_ICAO_code",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_MSN",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_Mode_S_Hex_Code",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_arrival_airport",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_boarding_gate",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_boarding_group",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_boarding_time",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_departure_airport",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_first_name",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_last_name",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_reservation_number",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/has_tail_number",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      }
+    ],
+    "individuals": [
+      {
+        "domains_asserted": [],
+        "iri": "https://example.org/ontologies/intel-ontology#hotel_reservation_01",
+        "labels": [
+          "hotel reservation 01"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology#driver's_license_01",
+        "labels": [
+          "driver's license 01"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Act_of_Facebook_Posting_01",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Act_of_Flight_Plan_01",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Commercial_airplane_01",
+        "labels": [
+          "Commercial airplane"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Concert_Ticket_01",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Facebook_Post_Information_01",
+        "labels": [
+          "Facebook Post Information 01"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Flight_plan_01",
+        "labels": [
+          "Flight plan 01"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Post_01",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/Terrorist_profile_01",
+        "labels": [
+          "Person of Interest Information 01"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/airline_reservation_01",
+        "labels": [
+          "airline_reservation_information_01"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/arrival_airport_01",
+        "labels": [
+          "O'Hare International Airport"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/boarding_pass_01",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/concert_attack",
+        "labels": [
+          "concert attack"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/concert_reservation_information_01",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/departure_airport_01",
+        "labels": [
+          "Baltimore Washington International Airport"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/driver_license_01",
+        "labels": [
+          "Driver's License Information"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/event_venue_01",
+        "labels": [
+          "The Chicago Theatre"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/facebook_user_01",
+        "labels": [
+          "Facebook user"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/guest_01",
+        "labels": [
+          "Hampton Inn Chicago Guest"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/hotel_01",
+        "labels": [
+          "Hampton Inn Chicago"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/hotel_reservation_01",
+        "labels": [
+          "hotel reservation information 01"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/passenger_01",
+        "labels": [
+          "Jetblue passenger"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/person_01",
+        "labels": [
+          "John Smith"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/proper_name_01",
+        "labels": [
+          "proper name 01"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/sympathizer_01",
+        "labels": [
+          "terrorist sympathizer"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/terrorist_organization_01",
+        "labels": [
+          "The Rising Dawn"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      }
+    ],
+    "object_properties": [
+      {
+        "domains_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/person"
+        ],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/is_author_of",
+        "labels": [],
+        "ranges_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/Post"
+        ],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/person"
+        ],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/is_registered_guest",
+        "labels": [
+          "is registered guest on"
+        ],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [
+          "https://www.commoncoreontologies.org/AgentOntology/person"
+        ],
+        "iri": "https://www.commoncoreontologies.org/AgentOntology/possesses",
+        "labels": [
+          "possesses"
+        ],
+        "ranges_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000002"
+        ],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [
+          "https://www.commoncoreontologies.org/ont00001017"
+        ],
+        "iri": "https://www.commoncoreontologies.org/ont00001787",
+        "labels": [
+          "agent in"
+        ],
+        "ranges_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000015"
+        ],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/ont00001833",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000015"
+        ],
+        "iri": "https://www.commoncoreontologies.org/ont00001866",
+        "labels": [
+          "is interest of"
+        ],
+        "ranges_asserted": [
+          "https://www.commoncoreontologies.org/ont00001017"
+        ],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [
+          "https://www.commoncoreontologies.org/ont00001017"
+        ],
+        "iri": "https://www.commoncoreontologies.org/ont00001895",
+        "labels": [
+          "accomplice in"
+        ],
+        "ranges_asserted": [
+          "http://purl.obolibrary.org/obo/BFO_0000015"
+        ],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [
+          "https://www.commoncoreontologies.org/ont00001017"
+        ],
+        "iri": "https://www.commoncoreontologies.org/ont00001939",
+        "labels": [
+          "is affiliated with"
+        ],
+        "ranges_asserted": [
+          "https://www.commoncoreontologies.org/ont00001017"
+        ],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/ont00001977",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      },
+      {
+        "domains_asserted": [],
+        "iri": "https://www.commoncoreontologies.org/ont00001984",
+        "labels": [],
+        "ranges_asserted": [],
+        "superclasses_asserted": []
+      }
+    ]
+  },
+  "source_file": "src/module.ttl",
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_triples": 421
+}

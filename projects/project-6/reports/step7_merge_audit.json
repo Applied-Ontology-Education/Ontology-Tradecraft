@@ -14,17 +14,17 @@
     "Grok and cosine scores are recorded evidence, not semantic proof.",
     "No automatic changes to src/module.ttl or original named individuals."
   ],
-  "output_sha256": "18bcf9aeed7f587d0e2265740cb5a5399fa77a65694c50b48d8d9c640063719c",
+  "output_sha256": "7412eb10d9e8b92249a7af29249a8f43a612f00e31bf9b67d22f0bc4a5967e3f",
   "provenance_hashes": {
-    "refined": "c89b5c9adce5ae4b0e2d82ec758c13f4dea1be410f5c33d56529d96904cce36e",
+    "refined": "3ecad31fff9c86592e0fcd4f4168dbc45f48a1c826fad4778022b8190ae0dc6b",
     "source": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
-    "step4": "001e6aacd4a7400e9d7ac49b5d2c20144cdb512837fddcda8736362421c9d3b2",
+    "step4": "4acb4adfd1476e18f9f11a47ff2c331c6d93a73a2d1c6ff302b07e443af7d123",
     "step5c": "394008b98a222c47936177910559ca2be15a7261fa17277c4f58d3d2bc1d0976",
-    "step5c_review": "607d117f308e6b41440850cb6d13cb7627ecd1920b8f764570d92be0966e485b",
-    "step6": "1afe192e294d1839d05df5cbbd6c57c49bd1d5919dcdee11cfac71d392b57b21",
+    "step5c_review": "5eaafb30628948460706189157b8766047443bbf2d3dc71017180c179a435f26",
+    "step6": "db396eb567242ad21ae619cf6405614cbb97a1fde70a5f4804e4c94bc0c8d11f",
     "step6_baseline": "d88a34615bc35c5012eb4a5af145bf1cdd34c9d699920f8622b14c6c3bb623d5",
-    "step6_candidate": "ed123bdf41903039ef0993dd84fa5f711d4a53c4e8befac755586491de9bd121",
-    "step6_detail": "a6da14fe490b3c098a4e67dd1748b82b3d16b86ffec3cc3ca39c4e3a1d424ae0"
+    "step6_candidate": "d6510848e5a3665a132ab9ac32b02fd806e6495958d4f7f6184014bc9501d8ec",
+    "step6_detail": "72bc2ff091f7dec13717c4519ddae29893388091b40169c0e1bc2870ab4953f6"
   },
   "source_preservation": "Original source text is an exact byte prefix of generated output",
   "status": "PASS_CONTROLLED_MERGE_VALIDATED_NOT_PROMOTED",

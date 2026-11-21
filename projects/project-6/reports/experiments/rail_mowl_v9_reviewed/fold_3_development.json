@@ -1,0 +1,309 @@
+{
+  "all_dev_targets_excluded_from_inner_native_and_projection_training": true,
+  "configs": [
+    {
+      "config": {
+        "contrastive_weight": 0.0,
+        "epochs": 100,
+        "geometry_weight": 0.0,
+        "hidden_size": 32,
+        "identity_weight": 0.1,
+        "learning_rate": 0.0025,
+        "margin": 0.1,
+        "name": "v8_reference",
+        "positive_weight": 1.0,
+        "residual_penalty_weight": 0.001,
+        "residual_scale": 0.25,
+        "temperature": 0.25,
+        "weight_decay": 1e-05
+      },
+      "dev_auc": 0.5210416666666666,
+      "dev_control_mean": 0.6766508623957634,
+      "dev_gap": 0.005305644217878491,
+      "dev_paired_win_rate": 0.5166666666666667,
+      "dev_positive_mean": 0.6819565066136419,
+      "fold": 3,
+      "geometry_mean_absolute_shift": 0.7521309852600098,
+      "loss": {
+        "best_training_loss": 0.06627118587493896,
+        "last_training_loss": 0.06627118587493896
+      },
+      "passes_dev_guards": false
+    },
+    {
+      "config": {
+        "contrastive_weight": 0.0,
+        "epochs": 100,
+        "geometry_weight": 0.05,
+        "hidden_size": 32,
+        "identity_weight": 0.5,
+        "learning_rate": 0.0025,
+        "margin": 0.1,
+        "name": "identity_0p5",
+        "positive_weight": 1.0,
+        "residual_penalty_weight": 0.001,
+        "residual_scale": 0.25,
+        "temperature": 0.25,
+        "weight_decay": 1e-05
+      },
+      "dev_auc": 0.44645833333333335,
+      "dev_control_mean": 0.10318890681179861,
+      "dev_gap": -0.04798563487517337,
+      "dev_paired_win_rate": 0.4666666666666667,
+      "dev_positive_mean": 0.05520327193662524,
+      "fold": 3,
+      "geometry_mean_absolute_shift": 0.11468417197465897,
+      "loss": {
+        "best_training_loss": 0.1098015308380127,
+        "last_training_loss": 0.1098015308380127
+      },
+      "passes_dev_guards": false
+    },
+    {
+      "config": {
+        "contrastive_weight": 0.0,
+        "epochs": 100,
+        "geometry_weight": 0.1,
+        "hidden_size": 32,
+        "identity_weight": 1.0,
+        "learning_rate": 0.0025,
+        "margin": 0.1,
+        "name": "identity_1",
+        "positive_weight": 1.0,
+        "residual_penalty_weight": 0.001,
+        "residual_scale": 0.25,
+        "temperature": 0.25,
+        "weight_decay": 1e-05
+      },
+      "dev_auc": 0.44395833333333334,
+      "dev_control_mean": 0.06096089562245955,
+      "dev_gap": -0.03899322055124988,
+      "dev_paired_win_rate": 0.4666666666666667,
+      "dev_positive_mean": 0.02196767507120967,
+      "fold": 3,
+      "geometry_mean_absolute_shift": 0.05869996175169945,
+      "loss": {
+        "best_training_loss": 0.12174233794212341,
+        "last_training_loss": 0.12174233794212341
+      },
+      "passes_dev_guards": false
+    },
+    {
+      "config": {
+        "contrastive_weight": 0.0,
+        "epochs": 100,
+        "geometry_weight": 0.1,
+        "hidden_size": 32,
+        "identity_weight": 2.0,
+        "learning_rate": 0.0025,
+        "margin": 0.1,
+        "name": "identity_2",
+        "positive_weight": 1.0,
+        "residual_penalty_weight": 0.001,
+        "residual_scale": 0.1,
+        "temperature": 0.25,
+        "weight_decay": 1e-05
+      },
+      "dev_auc": 0.44125,
+      "dev_control_mean": 0.03792021311043451,
+      "dev_gap": -0.03819237392550955,
+      "dev_paired_win_rate": 0.475,
+      "dev_positive_mean": -0.0002721608150750399,
+      "fold": 3,
+      "geometry_mean_absolute_shift": 0.031778670847415924,
+      "loss": {
+        "best_training_loss": 0.13318772614002228,
+        "last_training_loss": 0.13318772614002228
+      },
+      "passes_dev_guards": false
+    },
+    {
+      "config": {
+        "contrastive_weight": 0.0,
+        "epochs": 100,
+        "geometry_weight": 0.2,
+        "hidden_size": 32,
+        "identity_weight": 4.0,
+        "learning_rate": 0.0025,
+        "margin": 0.1,
+        "name": "identity_4",
+        "positive_weight": 1.0,
+        "residual_penalty_weight": 0.001,
+        "residual_scale": 0.1,
+        "temperature": 0.25,
+        "weight_decay": 1e-05
+      },
+      "dev_auc": 0.43916666666666665,
+      "dev_control_mean": 0.02717475175547103,
+      "dev_gap": -0.037435907606656355,
+      "dev_paired_win_rate": 0.4666666666666667,
+      "dev_positive_mean": -0.010261155851185321,
+      "fold": 3,
+      "geometry_mean_absolute_shift": 0.017492741346359253,
+      "loss": {
+        "best_training_loss": 0.138459250330925,
+        "last_training_loss": 0.138459250330925
+      },
+      "passes_dev_guards": false
+    },
+    {
+      "config": {
+        "contrastive_weight": 0.0,
+        "epochs": 100,
+        "geometry_weight": 0.2,
+        "hidden_size": 32,
+        "identity_weight": 2.0,
+        "learning_rate": 0.0025,
+        "margin": 0.1,
+        "name": "gentle_projection",
+        "positive_weight": 1.0,
+        "residual_penalty_weight": 0.001,
+        "residual_scale": 0.05,
+        "temperature": 0.25,
+        "weight_decay": 1e-05
+      },
+      "dev_auc": 0.44395833333333334,
+      "dev_control_mean": 0.0351740259405536,
+      "dev_gap": -0.036861808431179574,
+      "dev_paired_win_rate": 0.475,
+      "dev_positive_mean": -0.0016877824906259774,
+      "fold": 3,
+      "geometry_mean_absolute_shift": 0.02966250479221344,
+      "loss": {
+        "best_training_loss": 0.136219784617424,
+        "last_training_loss": 0.136219784617424
+      },
+      "passes_dev_guards": false
+    },
+    {
+      "config": {
+        "contrastive_weight": 0.1,
+        "epochs": 100,
+        "geometry_weight": 0.1,
+        "hidden_size": 32,
+        "identity_weight": 1.0,
+        "learning_rate": 0.0025,
+        "margin": 0.1,
+        "name": "contrastive_light",
+        "positive_weight": 1.0,
+        "residual_penalty_weight": 0.001,
+        "residual_scale": 0.1,
+        "temperature": 0.25,
+        "weight_decay": 1e-05
+      },
+      "dev_auc": 0.44708333333333333,
+      "dev_control_mean": 0.05497153478985031,
+      "dev_gap": -0.03915507698742052,
+      "dev_paired_win_rate": 0.475,
+      "dev_positive_mean": 0.015816457802429795,
+      "fold": 3,
+      "geometry_mean_absolute_shift": 0.054451409727334976,
+      "loss": {
+        "best_training_loss": 0.13598081469535828,
+        "last_training_loss": 0.13598081469535828
+      },
+      "passes_dev_guards": false
+    },
+    {
+      "config": {
+        "contrastive_weight": 0.25,
+        "epochs": 100,
+        "geometry_weight": 0.15,
+        "hidden_size": 32,
+        "identity_weight": 2.0,
+        "learning_rate": 0.0025,
+        "margin": 0.1,
+        "name": "contrastive_medium",
+        "positive_weight": 1.0,
+        "residual_penalty_weight": 0.001,
+        "residual_scale": 0.1,
+        "temperature": 0.25,
+        "weight_decay": 1e-05
+      },
+      "dev_auc": 0.43895833333333334,
+      "dev_control_mean": 0.038557064292641975,
+      "dev_gap": -0.04053041799149165,
+      "dev_paired_win_rate": 0.4666666666666667,
+      "dev_positive_mean": -0.001973353698849678,
+      "fold": 3,
+      "geometry_mean_absolute_shift": 0.028939004987478256,
+      "loss": {
+        "best_training_loss": 0.15638643503189087,
+        "last_training_loss": 0.15638643503189087
+      },
+      "passes_dev_guards": false
+    },
+    {
+      "config": {
+        "contrastive_weight": 0.25,
+        "epochs": 100,
+        "geometry_weight": 0.2,
+        "hidden_size": 32,
+        "identity_weight": 4.0,
+        "learning_rate": 0.0025,
+        "margin": 0.1,
+        "name": "contrastive_conservative",
+        "positive_weight": 1.0,
+        "residual_penalty_weight": 0.001,
+        "residual_scale": 0.05,
+        "temperature": 0.25,
+        "weight_decay": 1e-05
+      },
+      "dev_auc": 0.4397916666666667,
+      "dev_control_mean": 0.026234270764204363,
+      "dev_gap": -0.03700063116072366,
+      "dev_paired_win_rate": 0.4583333333333333,
+      "dev_positive_mean": -0.010766360396519303,
+      "fold": 3,
+      "geometry_mean_absolute_shift": 0.015706297010183334,
+      "loss": {
+        "best_training_loss": 0.16375155746936798,
+        "last_training_loss": 0.16375155746936798
+      },
+      "passes_dev_guards": false
+    },
+    {
+      "config": {
+        "contrastive_weight": 0.5,
+        "epochs": 100,
+        "geometry_weight": 0.2,
+        "hidden_size": 32,
+        "identity_weight": 2.0,
+        "learning_rate": 0.0025,
+        "margin": 0.1,
+        "name": "contrastive_strong",
+        "positive_weight": 1.0,
+        "residual_penalty_weight": 0.001,
+        "residual_scale": 0.1,
+        "temperature": 0.25,
+        "weight_decay": 1e-05
+      },
+      "dev_auc": 0.44,
+      "dev_control_mean": 0.03696803095129629,
+      "dev_gap": -0.040734709318106375,
+      "dev_paired_win_rate": 0.4583333333333333,
+      "dev_positive_mean": -0.0037666783668100835,
+      "fold": 3,
+      "geometry_mean_absolute_shift": 0.0288249384611845,
+      "loss": {
+        "best_training_loss": 0.1785561740398407,
+        "last_training_loss": 0.1785561740398407
+      },
+      "passes_dev_guards": false
+    }
+  ],
+  "development_target_count": 40,
+  "fallback_native": true,
+  "fold": 3,
+  "native_dev": {
+    "auc": 0.44145833333333334,
+    "control_mean": 0.010604417060191433,
+    "count": 40,
+    "gap": -0.03401547238851587,
+    "paired_win_rate": 0.475,
+    "positive_mean": -0.023411055328324437,
+    "top1_of_four": 9
+  },
+  "selected_config": null,
+  "selection_rule": "predeclared development AUC, gap, geometric distortion; never outer rail tests"
+}

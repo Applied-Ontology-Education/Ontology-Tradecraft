@@ -5,8 +5,8 @@
     "RDFS domain/range restrictions can entail unintended classifications; review them and check reasoner consistency later.",
     "The railway_station Building parent and existing passenger-role alignment remain open modeling decisions."
   ],
-  "proposal_sha256": "85c2d70eb4d759f2fe1e3ea09c80e2cabe4cca82daeaf2a64d004fdf952efeb6",
-  "review_required_count": 7,
+  "proposal_sha256": "251f7154abbd80ad1b6558e57adcd42a4516f36f3b961ba857aaf8f479a811f2",
+  "review_required_count": 6,
   "rows": [
     {
       "iri": "https://example.org/ontologies/intel-ontology#passenger_train",
@@ -83,27 +83,27 @@
     },
     {
       "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
-      "iri": "https://example.org/ontologies/intel-ontology#has_rail_service_code",
+      "iri": "https://example.org/ontologies/intel-ontology#has_scheduled_departure_time",
       "kind": "data_property",
-      "local_name": "has_rail_service_code",
-      "range_iri": "http://www.w3.org/2001/XMLSchema#string",
+      "local_name": "has_scheduled_departure_time",
+      "range_iri": "http://www.w3.org/2001/XMLSchema#dateTime",
       "review_notes": [],
       "status": "CANDIDATE_UNAPPROVED"
     },
     {
       "domain_iri": "https://example.org/ontologies/intel-ontology#train",
-      "iri": "https://example.org/ontologies/intel-ontology#has_train_identifier",
+      "iri": "https://example.org/ontologies/intel-ontology#has_train_number",
       "kind": "data_property",
-      "local_name": "has_train_identifier",
+      "local_name": "has_train_number",
       "range_iri": "http://www.w3.org/2001/XMLSchema#string",
       "review_notes": [],
       "status": "CANDIDATE_UNAPPROVED"
     },
     {
       "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
-      "iri": "https://example.org/ontologies/intel-ontology#has_arrival_station",
+      "iri": "https://example.org/ontologies/intel-ontology#arrives_at_station",
       "kind": "object_property",
-      "local_name": "has_arrival_station",
+      "local_name": "arrives_at_station",
       "range_iri": "https://example.org/ontologies/intel-ontology#railway_station",
       "review_notes": [
         "BLOCKING REVIEW: depends on contested railway_station class design"
@@ -112,34 +112,32 @@
     },
     {
       "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
-      "iri": "https://example.org/ontologies/intel-ontology#has_conveying_train",
+      "iri": "https://example.org/ontologies/intel-ontology#departs_from_station",
       "kind": "object_property",
-      "local_name": "has_conveying_train",
-      "range_iri": "https://example.org/ontologies/intel-ontology#train",
+      "local_name": "departs_from_station",
+      "range_iri": "https://example.org/ontologies/intel-ontology#railway_station",
+      "review_notes": [
+        "BLOCKING REVIEW: depends on contested railway_station class design"
+      ],
+      "status": "REVIEW_REQUIRED"
+    },
+    {
+      "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "iri": "https://example.org/ontologies/intel-ontology#specifies_rail_journey",
+      "kind": "object_property",
+      "local_name": "specifies_rail_journey",
+      "range_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
       "review_notes": [],
       "status": "CANDIDATE_UNAPPROVED"
     },
     {
       "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
-      "iri": "https://example.org/ontologies/intel-ontology#has_departure_station",
+      "iri": "https://example.org/ontologies/intel-ontology#uses_train",
       "kind": "object_property",
-      "local_name": "has_departure_station",
-      "range_iri": "https://example.org/ontologies/intel-ontology#railway_station",
-      "review_notes": [
-        "BLOCKING REVIEW: depends on contested railway_station class design"
-      ],
-      "status": "REVIEW_REQUIRED"
-    },
-    {
-      "domain_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
-      "iri": "https://example.org/ontologies/intel-ontology#has_intermediate_stop",
-      "kind": "object_property",
-      "local_name": "has_intermediate_stop",
-      "range_iri": "https://example.org/ontologies/intel-ontology#railway_station",
-      "review_notes": [
-        "BLOCKING REVIEW: depends on contested railway_station class design"
-      ],
-      "status": "REVIEW_REQUIRED"
+      "local_name": "uses_train",
+      "range_iri": "https://example.org/ontologies/intel-ontology#train",
+      "review_notes": [],
+      "status": "CANDIDATE_UNAPPROVED"
     }
   ],
   "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",

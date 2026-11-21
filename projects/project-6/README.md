@@ -1,54 +1,36 @@
-# Week 6 Project: Enhancing your Semantic Pipeline
+# Project 6: Stage 1 rail-only holdout feasibility diagnostic
 
-The final project for this seminar asks you to demonstrate how Large Language Models (LLMs) can be integrated with symbolic ontology tools to create a modern, hybrid semantic pipeline. Your goal is to show how LLMs can augment traditional semantic technologies—improving automation, scalability, and reasoning while maintaining correctness and trustworthiness.
+**Purpose:** Identify whether 4 folds × 2 newly added rail classes can be tested without training/validation leakage using the *current* mOWL named-subclass-only training projection. **No training or ontology edits.**
 
-You will select one of two project pathways and deliver a presentation and to complete your work in the class.
+The diagnostic uses your existing:
+- `src/module.ttl` (421 source triples)
+- `generated/module_augmented.ttl` (484 augmented triples)
+- `imports/` (local reference ontology context, loaded if present)
 
-## Project
+It does not need `sentence-transformers`, an API key, Java, ROBOT, or PyTorch. It only uses Python's standard library and the existing `rdflib` package.
 
-**Option 1: Data & Design-Pattern Expansion**
+## Run in the restored Project 6 PowerShell terminal
 
-Extend your current semantic pipeline so that it can ingest and model a new domain, a new class of data, or a new family of design patterns.
+From `C:\Users\cappa\Ontology-Tradecraft\projects\project-6`:
 
-Your project should demonstrate how LLMs assist with:
-- Detecting and normalizing unfamiliar schemas
-- Identifying new ontology design patterns
-- Mapping new domain patterns to existing ones
-- Auto-generating SPARQL QC queries and SHACL shape constraints
-- Proposing candidate OWL axioms for the new domain
+```powershell
+Expand-Archive "$env:USERPROFILE\Downloads\Project6_Rail_Holdout_Diagnostic.zip" -DestinationPath . -Force
+python -u scripts\diagnose_rail_holdouts.py --project-root .
+```
 
-Tools you may use (not exhaustive):
-- ROBOT + ELK for taxonomy and unit consistency
-- SHACL for shape validation
-- OWL reasoners to check logical coherence
-- SPARQL QC to ensure data/ontology quality
-- GitHub Actions for fully automated CI/CD execution
-- Your favorite LLM(s)
+This writes only **`reports/rail_holdout_feasibility.json`**. `src/module.ttl`, `generated/module_augmented.ttl`, prior reports, and all pipeline scripts are untouched. Do **not** rerun `run_all.py` just for this diagnostic.
 
-**Option 2: Ontology Mapping Pipeline**
+Look at `summary`, `folds`, `per_class`, and `imports_loaded` in the generated JSON. Upload that report for the next iterative step.
 
-Develop or extend a pipeline that uses LLMs to generate, evaluate, and validate ontology mappings.
+## Method and limits
 
-Your project should show how LLMs contribute by:
-- Generating candidate mapping axioms
-- Rewriting labels and definitions to aid matching
-- Producing mapping explanations or rationales
-- Scoring mapping plausibility
-- Suggesting mapping-related SHACL or SPARQL QC constraints
+- First verify 421 original triples, 484 merged triples, 8 added rail classes, 4 object properties, 2 data properties, and 63 rail TBox triples.
+- Of the nine added explicit subclass relationships, choose one primary relation per new rail class. For `rail_passenger_role`, the more specific `passenger` parent is the primary test relation; the broader BFO Role assertion remains possible training context.
+- Assign all eight classes to a deterministic four-fold split with two held-out primary edges per fold (seed 42).
+- For each held-out class, check whether the remaining named-subclass graph provides its own parent anchor and whether the held-out relation is reachable transitively (leakage).
+- **Important:** labels, definitions, object-property domain/range constraints, and richer OWL EL expressions are **not** consumed by the existing Stage 5A training projection. They are counted/described for future options, but not treated as evidence already used by mOWL.
+- The audit performs **no cosine calculation** and makes no 0.70 claim. It assesses whether a fair test is viable *before* training.
 
-Tools you may use (not exhaustive):
-- OWL reasoners to test for inconsistencies introduced by mappings
-- Cross-ontology inference tests to verify correct entailments
-- SHACL to enforce mapping constraints
-- SPARQL QC to identify mapping errors
-- CI automation to validate the mapping layer end-to-end
-- Your favorite LLM(s)
+## Offline verification performed before delivery
 
-## Final Deliverable: Presentation
-
-Your presentation must include:
-- Option selected and how you understood the task
-- Explanation of your system architecture, including description of your inputs and expected outputs
-- Demonstration of your semantic pipeline
-- Verifying correctness with reasoners, SHACL, SPARQL QC, and CI automation
-- Display and description of your deliverables
+Two unit tests passed, and the diagnostic ran successfully on an earlier user-supplied 421-triple source and a 484-triple augmented copy. That copy has a different byte hash from the November 18 final run, so **the definitive result comes from the report you run in your restored project directory**.

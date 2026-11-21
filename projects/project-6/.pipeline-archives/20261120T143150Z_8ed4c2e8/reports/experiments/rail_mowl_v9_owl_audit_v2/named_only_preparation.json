@@ -1,0 +1,89 @@
+{
+  "folds": [
+    {
+      "dataset": {
+        "named_subclass_pairs": 837,
+        "path": "generated/experiments/rail_mowl_v9_owl_audit_v2/fold_1_named-only.owl",
+        "sha256": "9c7f37ea9cd7a9d3c4a744217352e0af8bb207e5724d3e18d12b1f049a70e10f",
+        "triples": 1686
+      },
+      "fold": 1,
+      "holdouts": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/reservation"
+        }
+      ]
+    },
+    {
+      "dataset": {
+        "named_subclass_pairs": 837,
+        "path": "generated/experiments/rail_mowl_v9_owl_audit_v2/fold_2_named-only.owl",
+        "sha256": "d0c341cdea9089c74a60d9debbda2d39367adf6b13b2cac881d6ad0f0e95ce01",
+        "triples": 1686
+      },
+      "fold": 2,
+      "holdouts": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#railway_station",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#train",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+        }
+      ]
+    },
+    {
+      "dataset": {
+        "named_subclass_pairs": 837,
+        "path": "generated/experiments/rail_mowl_v9_owl_audit_v2/fold_3_named-only.owl",
+        "sha256": "1a9b09eb57b839886e69d41af43a0878fd88415504ce185d5c8aa607dfaf92e5",
+        "triples": 1686
+      },
+      "fold": 3,
+      "holdouts": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+          "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/ticket"
+        }
+      ]
+    },
+    {
+      "dataset": {
+        "named_subclass_pairs": 837,
+        "path": "generated/experiments/rail_mowl_v9_owl_audit_v2/fold_4_named-only.owl",
+        "sha256": "62fcd3781f869259bc8557d69b5035494da558b13d5408ff7158bef86aef4f20",
+        "triples": 1686
+      },
+      "fold": 4,
+      "holdouts": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+          "parent": "https://example.org/ontologies/intel-ontology#train"
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+        }
+      ]
+    }
+  ],
+  "full_owl_semantic_entailment_checked": false,
+  "mode_description": "Exact frozen v9 named-subclass fold training graphs only, not the full OWL import closure",
+  "reasoner_run": false,
+  "scope": "named-only",
+  "status": "PREPARED_NOT_REASONED",
+  "v9_inputs_unmodified": true,
+  "v9_native_auc": 0.953125,
+  "v9_native_mean": 0.6037136092782021,
+  "version": "project6-v9-owl-audit-v2-strict-or-explicit-named"
+}

@@ -1,0 +1,30 @@
+{
+  "fold": 3,
+  "native_library_versions": {
+    "mowl_version": "unknown",
+    "torch_version": "2.15.0+cpu"
+  },
+  "reference": {
+    "auc": 1.0,
+    "control_mean": 0.1194588119784991,
+    "count": 2,
+    "gap": 0.5427721564968427,
+    "paired_win_rate": 1.0,
+    "positive_mean": 0.6622309684753418,
+    "top1_of_four": 2
+  },
+  "selected": {
+    "auc": 1.0,
+    "control_mean": 0.11945882936318715,
+    "count": 2,
+    "gap": 0.5427722285191218,
+    "paired_win_rate": 1.0,
+    "positive_mean": 0.662231057882309,
+    "top1_of_four": 2
+  },
+  "selected_setting": {
+    "mix": 0.0,
+    "name": "v9_native_reference"
+  },
+  "train_file_sha256": "583fe6ffecb7312c3d33e283f4fb2474141bab06f582762900ab0e3206c7f7d0"
+}

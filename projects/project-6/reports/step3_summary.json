@@ -7,7 +7,7 @@
   "no_api_call": true,
   "no_named_individuals_created": true,
   "reused_classes": 0,
-  "review_required_items": 7,
+  "review_required_items": 6,
   "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
   "source_unchanged": true,
   "status": "PASS_CANDIDATES_REVIEW_REQUIRED",

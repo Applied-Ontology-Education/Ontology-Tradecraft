@@ -1,21 +1,23 @@
 #!/usr/bin/env python3
-"""Project 6 Step 8: reproduce the rail TBox pipeline from source + six local imports.
+"""Project 6 Step 8: reproduce the rail TBox and final v9 mOWL evaluation.
 
 Run from the Project 6 repository's project directory:
 
     python -u scripts/run_all.py
 
-Only project DATA inputs required before execution:
+Required source and version-controlled configuration before execution:
     src/module.ttl
     imports/{AgentOntology.ttl,EventOntology.ttl,InformationEntityOntology.ttl,
              bfo-core.ttl,core.ttl,iao-edit.owl}
+    config/rail_mowl_v9_approved_anchors.json  (author-reviewed policy, NOT a generated intermediary)
 
 All earlier stage scripts, Python packages, Java/ROBOT, and XAI_API_KEY are
 runtime/software prerequisites; intermediate TTL/JSON/reports/vectors are NOT.
 
 The pipeline archives existing generated/ and reports/ folders, regenerates all
 artifacts (including new embeddings and two live Grok requests), and only writes
-'generated/module_augmented.ttl'. It never overwrites src/module.ttl.
+'generated/module_augmented.ttl' plus isolated v9 fold reports. It never overwrites
+src/module.ttl, and requires the reviewed v9 anchors in versioned config/.
 
 Passing means the prescribed structural checks, source-scoped HermiT checks,
 and approved design policy passed for this run. This is NOT evidence that all
@@ -37,7 +39,15 @@ import sys
 import time
 import uuid
 
-VERSION = "project6-run-all-v1"
+VERSION = "project6-run-all-v9-integration-v1"
+V9_ANCHORS_CONFIG = "config/rail_mowl_v9_approved_anchors.json"
+V9_REPORT_DIR = "reports/experiments/rail_mowl_v9_reviewed"
+V9_SUMMARY_PATH = V9_REPORT_DIR + "/eight_class_summary.json"
+V9_EXPECTED_VERSION = "project6-v9-nested-dev-geometry-protected-v1"
+V9_EXPECTED_STATUSES = frozenset({
+    "TARGET_AND_CONTROLS_MET_DIAGNOSTIC_ONLY",
+    "TARGET_OR_CONTROLS_NOT_MET",
+})
 
 IMPORT_NAMES = frozenset({
     "AgentOntology.ttl", "EventOntology.ttl", "InformationEntityOntology.ttl",
@@ -104,6 +114,18 @@ def stage_plan(*, epochs: int = 200, model: str = "grok-4.7",
         Stage("07_controlled_merge", "merge_rail_ontology.py", (),
               "reports/step7_summary.json", "PASS_CONTROLLED_MERGE_VALIDATED_NOT_PROMOTED",
               ("reports/step7_merge_audit.json", "generated/module_augmented.ttl"), 480),
+        # Final selected experiment. It needs the augmented ontology from Step 7,
+        # and the Step 5A split graphs. It never changes the source ontology.
+        Stage("08_v9_rail_mowl", "experiment_rail_mowl_v9.py",
+              ("--reviewed-anchors", V9_ANCHORS_CONFIG,
+               "--native-epochs", "1000", "--projection-epochs", "100",
+               "--configs", "10", "--dev-pairs", "40", "--seed", "101"),
+              V9_SUMMARY_PATH, "V9_DIAGNOSTIC_FINISHED",
+              (V9_REPORT_DIR + "/preparation.json",
+               V9_REPORT_DIR + "/all_pair_scores.csv",
+               *(V9_REPORT_DIR + f"/fold_{i}_development.json" for i in range(1, 5)),
+               *(V9_REPORT_DIR + f"/fold_{i}_metrics.json" for i in range(1, 5))),
+              5400),
     )
 
 
@@ -153,10 +175,35 @@ def fingerprint_inputs(root: Path, plan: tuple[Stage, ...]) -> dict[str, str]:
         unexpected = sorted(set(imports) - IMPORT_NAMES)
         raise ValueError(f"Expected exactly six local ontology imports; missing={missing}, unexpected={unexpected}")
     missing_scripts = [p.name for p in required_script_paths(root, plan) if not p.is_file()]
+    for dependency in ("experiment_rail_mowl_v8.py", "audit_rail_superclass_support.py"):
+        if not (root / "scripts" / dependency).is_file():
+            missing_scripts.append(dependency)
     if missing_scripts:
-        raise FileNotFoundError("Missing stage scripts in scripts/: " + ", ".join(missing_scripts))
+        raise FileNotFoundError("Missing stage scripts in scripts/: " + ", ".join(sorted(set(missing_scripts))))
+    review_path = root / V9_ANCHORS_CONFIG
+    if not review_path.is_file():
+        raise FileNotFoundError(
+            f"Missing reviewed v9 anchor config: {V9_ANCHORS_CONFIG}. "
+            "Copy the actual approved_anchors.json into config/ before running; "
+            "do not fabricate an approval record."
+        )
+    try:
+        review = json.loads(review_path.read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        raise ValueError(f"Unparseable reviewed v9 anchor config: {exc}") from exc
+    anchors = review.get("approved_anchors", [])
+    if (review.get("human_review_status") != "SEVEN_APPROVED_FOR_EXPERIMENT_2026_11_19"
+            or review.get("target_holdouts_must_remain_excluded") is not True
+            or not isinstance(anchors, list) or len(anchors) != 7
+            or any(not isinstance(row, dict) or not isinstance(row.get("child"), str)
+                   or not isinstance(row.get("parent"), str) for row in anchors)
+            or len({(row["child"], row["parent"]) for row in anchors}) != 7):
+        raise ValueError("Invalid v9 reviewed anchor record: exactly seven user-approved, "
+                         "unique anchors with excluded holdouts are required")
+    # v9 itself independently validates the seven exact approved IRIs and no leakage.
     return {"src/module.ttl": sha256_file(source),
-            **{"imports/" + k: sha256_file(path) for k, path in sorted(imports.items())}}
+            **{"imports/" + k: sha256_file(path) for k, path in sorted(imports.items())},
+            V9_ANCHORS_CONFIG: sha256_file(review_path)}
 
 
 def preflight(root: Path, plan: tuple[Stage, ...], *, robot_jar: str | None = None,
@@ -297,7 +344,11 @@ def read_and_validate_stage(root: Path, stage: Stage, inputs: dict[str, str]) ->
         record = json.loads(report_file.read_text(encoding="utf-8"))
     except (ValueError, OSError) as exc:
         raise RuntimeError(f"Unreadable report {stage.report}: {exc}") from exc
-    if record.get("status") != stage.status:
+    if stage.key == "08_v9_rail_mowl":
+        # Scientific cosine target is not a condition of successful execution.
+        if record.get("status") not in V9_EXPECTED_STATUSES:
+            raise RuntimeError(f"v9 experiment incomplete/unrecognized: {record.get('status')!r}")
+    elif record.get("status") != stage.status:
         raise RuntimeError(f"Stage {stage.key} status {record.get('status')!r}, expected {stage.status!r}")
     for relative in stage.outputs:
         file = root / relative
@@ -318,6 +369,35 @@ def read_and_validate_stage(root: Path, stage: Stage, inputs: dict[str, str]) ->
         if (record.get("reasoning_scope") != "SOURCE_PLUS_STAR_LOCALITY_MODULE_OF_IMPORTS"
                 or not record.get("baseline_reasoner_passed") or not record.get("augmented_reasoner_passed")):
             raise RuntimeError("Step 6 did not pass both source-scoped HermiT runs")
+    if stage.key == "08_v9_rail_mowl":
+        if (record.get("version") != V9_EXPECTED_VERSION
+                or record.get("folds_completed") != 4
+                or record.get("outer_test_sample_size") != 8
+                or record.get("dev_pairs_per_fold") != [40, 40, 40, 40]
+                or record.get("configs_per_fold") != 10
+                or record.get("all_8_rail_targets_unseen_during_model_selection") is not True
+                or record.get("all_inner_development_targets_unseen_by_inner_mowl_and_projection") is not True
+                or record.get("outer_named_subclass_leakage_detected") is not False
+                or record.get("development_named_subclass_leakage_detected") is not False):
+            raise RuntimeError("v9 completeness, fold or held-out leakage checks failed")
+        # Check provenance of the regenerated upstream inputs and approved config.
+        for rel, expected in record.get("input_sha256", {}).items():
+            if not (root / rel).is_file() or sha256_file(root / rel) != expected:
+                raise RuntimeError("v9 input provenance mismatch: " + rel)
+        if record.get("review_file_sha256") != inputs[V9_ANCHORS_CONFIG]:
+            raise RuntimeError("v9 approved-anchor provenance mismatch")
+        from math import isfinite
+        for key in ("native_8_class_mean", "native_auc", "native_gap",
+                    "v9_8_class_mean", "v9_auc", "v9_gap"):
+            value = record.get(key)
+            if isinstance(value, bool) or not isinstance(value, (int, float)) or not isfinite(value):
+                raise RuntimeError("v9 missing/invalid numerical metric: " + key)
+        for key in ("native_top1_of_four", "v9_top1_of_four"):
+            value = record.get(key)
+            if isinstance(value, bool) or not isinstance(value, int) or not 0 <= value <= 8:
+                raise RuntimeError("v9 missing/invalid superclass rank: " + key)
+        if record.get("target_0_70_met") != (record["v9_8_class_mean"] >= 0.70):
+            raise RuntimeError("v9 cosine target flag disagrees with measured mean")
     if stage.key == "07_controlled_merge":
         if (record.get("output") != "generated/module_augmented.ttl"
                 or record.get("source_overwritten") is not False
@@ -362,7 +442,8 @@ def run_pipeline(root: Path, *, epochs: int = 200, model: str = "grok-4.7",
                            "reasoner_hard_timeout": reasoner_hard_timeout},
                 "stages": [], "source_unchanged": True,
                 "llm_repeatability_note": "Two live Grok calls occur; model responses and numerical scores can change between runs.",
-                "mowl_repeatability_note": "CPU+fixed seeds help reproducibility but may not guarantee identical embeddings across versions/hardware."}
+                 "mowl_repeatability_note": "CPU+fixed seeds help reproducibility but may not guarantee identical embeddings across versions/hardware.",
+                 "v9_interpretation_note": "The scientific target is not a pipeline pass criterion; full external OWL import closure is not verified."}
     summary_path = root / "reports" / "step8_run_summary.json"
     runner = stage_executor or execute_stage
     try:
@@ -386,7 +467,17 @@ def run_pipeline(root: Path, *, epochs: int = 200, model: str = "grok-4.7",
             manifest["stages"].append(entry)
         check_input_integrity(root, input_hashes)
         final = json.loads((root / "reports" / "step7_summary.json").read_text(encoding="utf-8"))
+        v9 = json.loads((root / V9_SUMMARY_PATH).read_text(encoding="utf-8"))
         manifest.update({"status": "PASS_ALL_STAGES_SOURCE_UNCHANGED", "finished_at_utc": now(),
+                         "v9_final_model": "native ELEmbeddings (comparison baseline; not residual projection)",
+                         "v9_experiment_status": v9["status"],
+                         "v9_native_mean_cosine": v9["native_8_class_mean"],
+                         "v9_native_auc": v9["native_auc"],
+                         "v9_native_gap": v9["native_gap"],
+                         "v9_native_top1_of_eight": v9["native_top1_of_four"],
+                         "v9_dev_selected_projection_folds": v9["projection_selected_on_development_folds"],
+                         "v9_target_0_70_met": v9["target_0_70_met"],
+                         "v9_report": V9_SUMMARY_PATH,
                          "output": "generated/module_augmented.ttl",
                          "output_sha256": sha256_file(root / "generated" / "module_augmented.ttl"),
                          "source_unchanged": True,

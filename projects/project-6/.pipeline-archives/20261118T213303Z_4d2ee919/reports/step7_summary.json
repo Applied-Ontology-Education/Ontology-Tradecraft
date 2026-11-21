@@ -1,0 +1,30 @@
+{
+  "added_rail_triples": 63,
+  "automatic_llm_semantic_approval": false,
+  "design_decisions": {
+    "electronic_ticket_information": "not introduced; separate future information content entity",
+    "immaterial_station_site": "not introduced; separate future site concept",
+    "passenger_role": "rail passenger role specializes existing passenger role",
+    "rail_ticket": "physical material information bearer; rail ticket subclass of existing ticket",
+    "railway_station": "material entity comprising physical railway facilities"
+  },
+  "final_promotion_to_source": false,
+  "merge_policy": "Add all 63 reviewed rail TBox triples to separate output; do not replace source",
+  "merged_sha256": "18bcf9aeed7f587d0e2265740cb5a5399fa77a65694c50b48d8d9c640063719c",
+  "merged_triples": 484,
+  "new_named_individuals": 0,
+  "next": "Step 8: integrate the fully reproducible pipeline into scripts/run_all.py",
+  "output": "generated/module_augmented.ttl",
+  "refined_sha256": "c89b5c9adce5ae4b0e2d82ec758c13f4dea1be410f5c33d56529d96904cce36e",
+  "shacl_conforms": true,
+  "source_overwritten": false,
+  "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
+  "source_triples": 421,
+  "source_unchanged": true,
+  "sparql_passed": true,
+  "status": "PASS_CONTROLLED_MERGE_VALIDATED_NOT_PROMOTED",
+  "step6_source_scoped_hermit_passed": true,
+  "step7_hermit_rerun": false,
+  "step7_reuses_exact_step6_reasoner_candidate_delta": true,
+  "version": "project6-controlled-rail-merge-v1"
+}

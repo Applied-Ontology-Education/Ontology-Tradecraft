@@ -1,0 +1,181 @@
+{
+  "approved_anchor_count": 7,
+  "approved_anchor_edges": [
+    {
+      "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000003"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000031"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000031"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000178"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#railway_station",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000004"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000004"
+    }
+  ],
+  "caveat": "Approval is a model-design decision, not formal OWL validation. Each training graph contains only class declarations and named subClassOf edges; none of the 8 held-out targets is asserted or reachable by named subclass transitivity. Full OWL reasoner validation of the richer ontologies remains outstanding.",
+  "folds": [
+    {
+      "fold": 1,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        }
+      ],
+      "train_pairs": 837,
+      "train_sha256": "c79050e81eeb60a6d299f614e36025f59a922e69fd14ef024a858da4d593a954",
+      "training_path": "generated/experiments/rail_anchor_review/fold_1_train_reviewed.ttl"
+    },
+    {
+      "fold": 2,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#railway_station",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#train",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 1,
+          "training_outgoing": 1
+        }
+      ],
+      "train_pairs": 837,
+      "train_sha256": "99c620e3538594fb61f7aa075c201e2d335c4b4d517e48411b98d97909156727",
+      "training_path": "generated/experiments/rail_anchor_review/fold_2_train_reviewed.ttl"
+    },
+    {
+      "fold": 3,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+          "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+          "parent": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        }
+      ],
+      "train_pairs": 837,
+      "train_sha256": "583fe6ffecb7312c3d33e283f4fb2474141bab06f582762900ab0e3206c7f7d0",
+      "training_path": "generated/experiments/rail_anchor_review/fold_3_train_reviewed.ttl"
+    },
+    {
+      "fold": 4,
+      "heldout": [
+        {
+          "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+          "parent": "https://example.org/ontologies/intel-ontology#train",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        },
+        {
+          "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+          "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+          "support_status": "RETAINED_PARENT_SUPPORT",
+          "training_incoming": 0,
+          "training_outgoing": 1
+        }
+      ],
+      "train_pairs": 837,
+      "train_sha256": "0ef98c4dddf8ac12c7a84d657fda4ed16ee25df3c0bda971751a1e71b00540cd",
+      "training_path": "generated/experiments/rail_anchor_review/fold_4_train_reviewed.ttl"
+    }
+  ],
+  "full_owl_semantic_entailment_checked": false,
+  "held_out_targets": [
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/reservation"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#railway_station",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000030"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "parent": "https://www.commoncoreontologies.org/AgentOntology/ticket"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "parent": "https://example.org/ontologies/intel-ontology#train"
+    },
+    {
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000015"
+    }
+  ],
+  "input_sha256": {
+    "generated/module_augmented.ttl": "5d157574acd9d59dff35b42c7d4855378d179ac1055fe1c28e74611ad5df2054",
+    "generated/mowl_rail_train.ttl": "e4d596140271e898f478d3ff13de381a87956b3f3f7e73b1e521736b90560637",
+    "generated/mowl_rail_valid.ttl": "a14a164b02148b55dfe5d4b7641e25d58e5e4edc15a18a76ab817118baa6cd45",
+    "imports/AgentOntology.ttl": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+    "imports/EventOntology.ttl": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+    "imports/InformationEntityOntology.ttl": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+    "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+    "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+    "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0",
+    "reports/step5_split_report.json": "972452c2b3a7ba4d63f3d453d235d5cc95443eeceefd7c0144ab775cdd108856",
+    "scripts/run_all.py": "5d91ad914fadc4511b32aeb796bb83478d17dbeef746fb9fccdccb16047f00bb",
+    "src/module.ttl": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1"
+  },
+  "mode": "SEVEN_HUMAN_APPROVED_BROADER_ANCHORS",
+  "named_only_training_graph": true,
+  "named_subclass_entailment_leakage_found": false,
+  "review_file": "C:\\Users\\cappa\\Ontology-Tradecraft\\projects\\project-6\\reports\\experiments\\rail_anchor_review\\approved_anchors.json",
+  "review_file_sha256": "2ab12e2e437eb2c1c37c2c426e024aae4cdf89264d21007c99073a09c75083ea",
+  "source_ontologies_modified": false,
+  "status": "PREPARED_REVIEWED_NAMED_GRAPH_NO_TRAINING",
+  "version": "project6-isolated-project5-v8-rail-four-fold-v1"
+}

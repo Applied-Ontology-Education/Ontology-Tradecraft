@@ -1,0 +1,21 @@
+{
+  "reference": "FULL_V9_NATIVE_ONLY",
+  "reference_files_sha256": {
+    "reports/experiments/rail_mowl_v9_reviewed/all_pair_scores.csv": "c2d10da1ac14377ad1d8b41a1ff76769d073c21f14fc056551eb4ede31d7d59b",
+    "reports/experiments/rail_mowl_v9_reviewed/eight_class_summary.json": "a12adf63499a20a517199cd2317c7ccf51b6b82f7f78c1744fc7e697a2631ca3",
+    "reports/experiments/rail_mowl_v9_reviewed/fold_1_metrics.json": "dc99d11d6ac54e5c85491446b8c0580e9de07549b5e8056907368670df6507ad",
+    "reports/experiments/rail_mowl_v9_reviewed/fold_2_metrics.json": "c40f0138dea3b286490c9d25361ecea434c644abb8e4525d9f0b3a6106cf14cd",
+    "reports/experiments/rail_mowl_v9_reviewed/fold_3_metrics.json": "5e67958f0357e4adfadf809cc81db5bda58cfc664877ed288517885cb7b23ce8",
+    "reports/experiments/rail_mowl_v9_reviewed/fold_4_metrics.json": "653043e6d77211054b4a0b67a1484fdf6a3f868e3bd50d482046525e28488ecb",
+    "reports/experiments/rail_mowl_v9_reviewed/preparation.json": "1d5dde6d57ef7967a6104480dc77ebc1fded6decd8ea9149b860e8028b11300b",
+    "scripts/experiment_rail_mowl_v8.py": "29384f58937538b40e7e96b6a77eb15f766de36798627c537e39ee906c00d79e",
+    "scripts/experiment_rail_mowl_v9.py": "d2752a4e8c9e4f5de736acba9a2bd6fb28a242e397296808f0c0ff47194b2142"
+  },
+  "v9_frozen_archive_present": true,
+  "v9_metric_summary": {
+    "native_8_class_mean": 0.6037136092782021,
+    "native_auc": 0.953125,
+    "native_gap": 0.4515440862160176,
+    "native_top1_of_four": 7
+  }
+}

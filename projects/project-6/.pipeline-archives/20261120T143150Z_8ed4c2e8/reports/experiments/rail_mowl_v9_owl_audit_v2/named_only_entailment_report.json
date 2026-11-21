@@ -1,0 +1,107 @@
+{
+  "folds": [
+    {
+      "fold": 1,
+      "reasoner_result": {
+        "consistent": true,
+        "owlapi_logical_axiom_count": 837,
+        "reasoner": "HermiT",
+        "results": [
+          {
+            "child": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
+            "child_satisfiable": true,
+            "entailed": false,
+            "parent": "https://www.commoncoreontologies.org/AgentOntology/passenger",
+            "status": "NOT_ENTAILED"
+          },
+          {
+            "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+            "child_satisfiable": true,
+            "entailed": false,
+            "parent": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+            "status": "NOT_ENTAILED"
+          }
+        ]
+      }
+    },
+    {
+      "fold": 2,
+      "reasoner_result": {
+        "consistent": true,
+        "owlapi_logical_axiom_count": 837,
+        "reasoner": "HermiT",
+        "results": [
+          {
+            "child": "https://example.org/ontologies/intel-ontology#railway_station",
+            "child_satisfiable": true,
+            "entailed": false,
+            "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+            "status": "NOT_ENTAILED"
+          },
+          {
+            "child": "https://example.org/ontologies/intel-ontology#train",
+            "child_satisfiable": true,
+            "entailed": false,
+            "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+            "status": "NOT_ENTAILED"
+          }
+        ]
+      }
+    },
+    {
+      "fold": 3,
+      "reasoner_result": {
+        "consistent": true,
+        "owlapi_logical_axiom_count": 837,
+        "reasoner": "HermiT",
+        "results": [
+          {
+            "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+            "child_satisfiable": true,
+            "entailed": false,
+            "parent": "http://purl.obolibrary.org/obo/IAO_0000030",
+            "status": "NOT_ENTAILED"
+          },
+          {
+            "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+            "child_satisfiable": true,
+            "entailed": false,
+            "parent": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+            "status": "NOT_ENTAILED"
+          }
+        ]
+      }
+    },
+    {
+      "fold": 4,
+      "reasoner_result": {
+        "consistent": true,
+        "owlapi_logical_axiom_count": 837,
+        "reasoner": "HermiT",
+        "results": [
+          {
+            "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+            "child_satisfiable": true,
+            "entailed": false,
+            "parent": "https://example.org/ontologies/intel-ontology#train",
+            "status": "NOT_ENTAILED"
+          },
+          {
+            "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+            "child_satisfiable": true,
+            "entailed": false,
+            "parent": "http://purl.obolibrary.org/obo/BFO_0000015",
+            "status": "NOT_ENTAILED"
+          }
+        ]
+      }
+    }
+  ],
+  "full_owl_semantic_entailment_checked": false,
+  "reasoner": "HermiT",
+  "scope": "named-only",
+  "scope_limitation": "This only validates v9 named-subclass training graphs; full imported OWL semantics NOT checked.",
+  "status": "PASS_HERMIT_NAMED_CONTEXT_ONLY_FULL_CLOSURE_PENDING",
+  "version": "project6-v9-owl-audit-v2-strict-or-explicit-named",
+  "violations": []
+}

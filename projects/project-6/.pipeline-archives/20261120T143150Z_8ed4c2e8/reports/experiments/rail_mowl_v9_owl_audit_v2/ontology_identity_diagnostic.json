@@ -1,0 +1,167 @@
+{
+  "files": {
+    "imports/AgentOntology.ttl": {
+      "axiom_indicators": {
+        "disjoint_class_axioms": 1,
+        "equivalent_class_axioms": 13,
+        "equivalent_property_axioms": 0,
+        "inverse_property_axioms": 18,
+        "named_subclass_axioms": 109,
+        "object_property_domains": 34,
+        "object_property_ranges": 34,
+        "property_chains": 0
+      },
+      "imports": [
+        "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+        "https://www.commoncoreontologies.org/EventOntology",
+        "https://www.commoncoreontologies.org/InformationEntityOntology"
+      ],
+      "ontology_identities": [
+        {
+          "ontology_iri": "https://www.commoncoreontologies.org/AgentOntology",
+          "version_iris": [
+            "https://www.commoncoreontologies.org/2026-08-13/AgentOntology"
+          ]
+        }
+      ],
+      "sha256": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+      "triple_count": 1081
+    },
+    "imports/EventOntology.ttl": {
+      "axiom_indicators": {
+        "disjoint_class_axioms": 2,
+        "equivalent_class_axioms": 7,
+        "equivalent_property_axioms": 0,
+        "inverse_property_axioms": 0,
+        "named_subclass_axioms": 363,
+        "object_property_domains": 0,
+        "object_property_ranges": 0,
+        "property_chains": 0
+      },
+      "imports": [
+        "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+        "https://www.commoncoreontologies.org/InformationEntityOntology"
+      ],
+      "ontology_identities": [
+        {
+          "ontology_iri": "https://www.commoncoreontologies.org/EventOntology",
+          "version_iris": [
+            "https://www.commoncoreontologies.org/2026-08-13/EventOntology"
+          ]
+        }
+      ],
+      "sha256": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+      "triple_count": 2285
+    },
+    "imports/InformationEntityOntology.ttl": {
+      "axiom_indicators": {
+        "disjoint_class_axioms": 13,
+        "equivalent_class_axioms": 17,
+        "equivalent_property_axioms": 0,
+        "inverse_property_axioms": 17,
+        "named_subclass_axioms": 117,
+        "object_property_domains": 43,
+        "object_property_ranges": 41,
+        "property_chains": 2
+      },
+      "imports": [
+        "http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl",
+        "https://www.commoncoreontologies.org/GeospatialOntology",
+        "https://www.commoncoreontologies.org/TimeOntology"
+      ],
+      "ontology_identities": [
+        {
+          "ontology_iri": "https://www.commoncoreontologies.org/InformationEntityOntology",
+          "version_iris": [
+            "https://www.commoncoreontologies.org/2026-08-13/InformationEntityOntology"
+          ]
+        }
+      ],
+      "sha256": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+      "triple_count": 1800
+    },
+    "imports/core.ttl": {
+      "axiom_indicators": {
+        "disjoint_class_axioms": 0,
+        "equivalent_class_axioms": 10,
+        "equivalent_property_axioms": 0,
+        "inverse_property_axioms": 4,
+        "named_subclass_axioms": 298,
+        "object_property_domains": 56,
+        "object_property_ranges": 90,
+        "property_chains": 0
+      },
+      "imports": [
+        "http://purl.obolibrary.org/obo/bfo.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/externalByHand.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_COB.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_OBI.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_PATO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_RO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_UO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/obsolete.owl",
+        "http://purl.obolibrary.org/obo/omo.owl",
+        "http://purl.obolibrary.org/obo/ro/core.owl"
+      ],
+      "ontology_identities": [
+        {
+          "ontology_iri": "http://purl.obolibrary.org/obo/iao/iao-edit.owl",
+          "version_iris": [
+            "http://purl.obolibrary.org/obo/iao/dev/iao-edit.owl"
+          ]
+        }
+      ],
+      "sha256": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+      "triple_count": 3410
+    },
+    "imports/iao-edit.owl": {
+      "axiom_indicators": {
+        "disjoint_class_axioms": 0,
+        "equivalent_class_axioms": 10,
+        "equivalent_property_axioms": 0,
+        "inverse_property_axioms": 22,
+        "named_subclass_axioms": 259,
+        "object_property_domains": 48,
+        "object_property_ranges": 48,
+        "property_chains": 0
+      },
+      "imports": [
+        "http://purl.obolibrary.org/obo/bfo.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/externalByHand.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_COB.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_OBI.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_PATO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_RO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/import_UO.owl",
+        "http://purl.obolibrary.org/obo/iao/dev/obsolete.owl",
+        "http://purl.obolibrary.org/obo/omo.owl",
+        "http://purl.obolibrary.org/obo/ro/core.owl"
+      ],
+      "ontology_identities": [
+        {
+          "ontology_iri": "http://purl.obolibrary.org/obo/iao/iao-edit.owl",
+          "version_iris": [
+            "http://purl.obolibrary.org/obo/iao/dev/iao-edit.owl"
+          ]
+        }
+      ],
+      "sha256": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0",
+      "triple_count": 2837
+    }
+  },
+  "iao_comparison": {
+    "left": "imports/core.ttl",
+    "left_only_named_subclass_count": 45,
+    "not_a_reasoner_validation": true,
+    "rdf_isomorphic": false,
+    "right": "imports/iao-edit.owl",
+    "right_only_named_subclass_count": 0,
+    "same_bytes": false,
+    "shared_ontology_iris": [
+      "http://purl.obolibrary.org/obo/iao/iao-edit.owl"
+    ]
+  },
+  "interpretation": "Two non-equivalent local RDF documents declare the same ontology IRI. Inspect provenance and differences before resolving the ambiguity.",
+  "read_only": true,
+  "status": "SAME_ONTOLOGY_IRI_DIFFERENT_RDF_GRAPHS_REVIEW_REQUIRED"
+}

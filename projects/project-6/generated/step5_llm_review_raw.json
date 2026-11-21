@@ -1,58 +1,58 @@
 {
   "ratings": [
     {
-      "concern": "The designed-or-operated disjunction is broad but does not break the subclass.",
+      "concern": "Intended use could also be modeled as a function or role, but that does not undermine this subclass link.",
       "id": "edge-00",
       "plausibility": 0.96,
-      "rationale": "The child is defined as a train distinguished only by passenger design or operation, so it is a straightforward specialization of train."
+      "rationale": "The child is defined as a train distinguished by passenger carriage, so it is a narrower kind of train."
     },
     {
-      "concern": "A journey could later be typed more specifically, but that does not undermine process.",
+      "concern": "None material; stations and timing are participants or qualities, not competing parents.",
       "id": "edge-01",
-      "plausibility": 0.94,
-      "rationale": "The child is explicitly a travel process, and BFO_0000015 is process, matching the stated genus."
+      "plausibility": 0.95,
+      "rationale": "BFO_0000015 is process, and the child is defined as a train-travel process between stations."
     },
     {
-      "concern": "IAO may have a tighter directive or plan subtype, but ICE remains appropriate.",
+      "concern": "A directive information entity may be a tighter parent, but subclassing under information content entity remains valid.",
       "id": "edge-02",
-      "plausibility": 0.95,
-      "rationale": "The plan is defined as information content about an intended journey and as distinct from the journey; IAO_0000030 is information content entity."
+      "plausibility": 0.93,
+      "rationale": "IAO_0000030 is information content entity, and the plan is defined as information about an intended journey rather than the journey process."
     },
     {
-      "concern": "None material for this subclass.",
+      "concern": "None; the definition correctly excludes the bearer.",
       "id": "edge-03",
-      "plausibility": 0.95,
-      "rationale": "The child is defined as a role inhering in a person and realized in travel; BFO_0000023 is role."
+      "plausibility": 0.96,
+      "rationale": "BFO_0000023 is role, and the child is defined as a role inhering in a person and realized in rail travel."
     },
     {
-      "concern": "Valid only if passenger itself is a role; otherwise this is a category error.",
+      "concern": "Role and agent are disjoint in BFO; do not accept unless the parent is independently a passenger role.",
       "id": "edge-04",
-      "plausibility": 0.34,
-      "rationale": "The child is a specifically dependent role, while the parent is labeled passenger and is not given as a role, so the axiom likely conflates a role with its bearer."
+      "plausibility": 0.18,
+      "rationale": "The child is a specifically dependent role and explicitly not a person, while the AgentOntology parent labeled passenger reads as the traveling agent."
     },
     {
-      "concern": "Parent placement under an agent ontology is odd for information, but the labels align.",
+      "concern": "Confirm the AgentOntology parent is an information entity rather than an act or agent.",
       "id": "edge-05",
-      "plausibility": 0.9,
-      "rationale": "Rail reservation information is defined as reservation information about a held rail booking, excluding the ticket and the journey."
+      "plausibility": 0.86,
+      "rationale": "Rail reservation information is reservation information specialized to intended rail travel and kept distinct from the journey and any ticket bearer."
     },
     {
-      "concern": "Bearer versus digital information remains an unresolved blocking design issue; do not treat the axiom as settled.",
+      "concern": "Blocking category issue: a material bearer cannot be a subclass of ticket if ticket is digital information content.",
       "id": "edge-06",
-      "plausibility": 0.6,
-      "rationale": "Genus-differentia calls it a ticket, supporting specialization, but it is also fixed as a material information bearer."
+      "plausibility": 0.48,
+      "rationale": "A rail ticket is lexically a ticket, but the child is fixed as a material information bearer while the parent's bearer-versus-information status is unresolved."
     },
     {
-      "concern": "Station can also mean an immaterial site; this axiom commits to the facility reading.",
+      "concern": "A station-as-location may instead be a BFO site; the supplied facility definition still supports material entity.",
       "id": "edge-07",
-      "plausibility": 0.9,
-      "rationale": "The station is defined as a material aggregate of physical railway facilities, and BFO_0000040 is material entity."
+      "plausibility": 0.86,
+      "rationale": "The child is defined as a material aggregate of railway facilities, which falls under BFO_0000040 material entity."
     },
     {
-      "concern": "It may more specifically be an object aggregate, which is still under material entity.",
+      "concern": "Object versus object aggregate is finer than this parent and does not threaten the link.",
       "id": "edge-08",
-      "plausibility": 0.94,
-      "rationale": "A train composed of rail vehicles is a material continuant, so subclass of BFO_0000040 is appropriate."
+      "plausibility": 0.95,
+      "rationale": "The child is defined as a material aggregate of rail vehicles and therefore a material entity."
     }
   ]
 }

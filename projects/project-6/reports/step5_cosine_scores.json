@@ -9,13 +9,12 @@
     "model_path": "generated/mowl_rail_train.ttl",
     "model_type": "mOWL ELEmbeddings",
     "mowl_version": "unknown",
-    "refined_sha256": "c89b5c9adce5ae4b0e2d82ec758c13f4dea1be410f5c33d56529d96904cce36e",
+    "refined_sha256": "3ecad31fff9c86592e0fcd4f4168dbc45f48a1c826fad4778022b8190ae0dc6b",
     "seed": 42,
     "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
     "torch_version": "2.15.0+cpu",
     "train_sha256": "e4d596140271e898f478d3ff13de381a87956b3f3f7e73b1e521736b90560637",
     "valid_sha256": "a14a164b02148b55dfe5d4b7641e25d58e5e4edc15a18a76ab817118baa6cd45",
-    "vectors_sha256": "b794643a035aec7d3a9137d6281b7840d8e4bad32addf12e6ee99532e58eca5c",
     "version": "project6-elembeddings-hybrid-v1"
   },
   "scores": [

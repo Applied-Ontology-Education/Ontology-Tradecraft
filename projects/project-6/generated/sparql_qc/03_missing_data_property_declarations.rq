@@ -3,4 +3,4 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 # Zero rows means this quality check passes.
-SELECT ?entity WHERE { VALUES ?entity { <https://example.org/ontologies/intel-ontology#has_rail_service_code> <https://example.org/ontologies/intel-ontology#has_train_identifier> } FILTER NOT EXISTS { ?entity rdf:type <http://www.w3.org/2002/07/owl#DatatypeProperty> } }
+SELECT ?entity WHERE { VALUES ?entity { <https://example.org/ontologies/intel-ontology#has_scheduled_departure_time> <https://example.org/ontologies/intel-ontology#has_train_number> } FILTER NOT EXISTS { ?entity rdf:type <http://www.w3.org/2002/07/owl#DatatypeProperty> } }

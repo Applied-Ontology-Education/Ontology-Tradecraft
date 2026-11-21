@@ -1,5 +1,5 @@
 {
-  "augmented_flattened_sha256": "ed123bdf41903039ef0993dd84fa5f711d4a53c4e8befac755586491de9bd121",
+  "augmented_flattened_sha256": "d6510848e5a3665a132ab9ac32b02fd806e6495958d4f7f6184014bc9501d8ec",
   "augmented_reasoned_named_pairs": 82,
   "augmented_reasoner_run": {
     "error_summary": null,
@@ -205,10 +205,10 @@
     "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
     "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
     "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0",
-    "refined": "c89b5c9adce5ae4b0e2d82ec758c13f4dea1be410f5c33d56529d96904cce36e",
+    "refined": "3ecad31fff9c86592e0fcd4f4168dbc45f48a1c826fad4778022b8190ae0dc6b",
     "source": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
-    "step4_summary": "001e6aacd4a7400e9d7ac49b5d2c20144cdb512837fddcda8736362421c9d3b2",
-    "step5c_review": "607d117f308e6b41440850cb6d13cb7627ecd1920b8f764570d92be0966e485b",
+    "step4_summary": "4acb4adfd1476e18f9f11a47ff2c331c6d93a73a2d1c6ff302b07e443af7d123",
+    "step5c_review": "5eaafb30628948460706189157b8766047443bbf2d3dc71017180c179a435f26",
     "step5c_summary": "394008b98a222c47936177910559ca2be15a7261fa17277c4f58d3d2bc1d0976"
   },
   "merged_into_source": false,

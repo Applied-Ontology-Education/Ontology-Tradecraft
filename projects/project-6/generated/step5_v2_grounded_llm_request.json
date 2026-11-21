@@ -2,7 +2,7 @@
   "candidates": [
     {
       "child_definitions": [
-        "A train that is designed or operated to convey passengers."
+        "A train whose intended use is the carriage of passengers."
       ],
       "child_iri": "https://example.org/ontologies/intel-ontology#passenger_train",
       "child_label": "passenger train",
@@ -20,7 +20,7 @@
     },
     {
       "child_definitions": [
-        "A process in which a train travels from one railway station toward another and during which passengers may be conveyed."
+        "A process in which a train travels from a departure railway station to an arrival railway station."
       ],
       "child_iri": "https://example.org/ontologies/intel-ontology#rail_journey",
       "child_label": "rail journey",
@@ -51,7 +51,7 @@
     },
     {
       "child_definitions": [
-        "An information content entity that specifies an intended rail journey, including station and service information, and that is not itself that journey."
+        "An information content entity that specifies an intended rail journey, including planned origin, destination, or timing, and is not itself the journey process."
       ],
       "child_iri": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
       "child_label": "rail journey plan",
@@ -82,7 +82,7 @@
     },
     {
       "child_definitions": [
-        "A role that inheres in a person and is realized by that person's participation in a rail journey as a conveyed traveler."
+        "A role that inheres in a person and is realized by that person traveling as a passenger on a train, and that is not itself a person."
       ],
       "child_iri": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
       "child_label": "rail passenger role",
@@ -117,7 +117,7 @@
     },
     {
       "child_definitions": [
-        "A role that inheres in a person and is realized by that person's participation in a rail journey as a conveyed traveler."
+        "A role that inheres in a person and is realized by that person traveling as a passenger on a train, and that is not itself a person."
       ],
       "child_iri": "https://example.org/ontologies/intel-ontology#rail_passenger_role",
       "child_label": "rail passenger role",
@@ -151,7 +151,7 @@
     },
     {
       "child_definitions": [
-        "Reservation information that specifies a held booking for rail travel and that is not a material ticket or a rail journey."
+        "An information content entity that records a reservation for intended rail travel and is distinct from both the rail journey process and any material ticket."
       ],
       "child_iri": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
       "child_label": "rail reservation information",
@@ -180,7 +180,7 @@
     },
     {
       "child_definitions": [
-        "A ticket that is a material information bearer bearing information that authorizes travel on a rail journey."
+        "A material information bearer that is a ticket carrying information authorizing travel on a rail journey."
       ],
       "child_iri": "https://example.org/ontologies/intel-ontology#rail_ticket",
       "child_label": "rail ticket",
@@ -287,7 +287,7 @@
     "If facts are insufficient, say exactly what is missing rather than inventing a parent's type.",
     "No people, individuals, intent, or threat identification; no merges or automatic acceptance."
   ],
-  "refined_sha256": "c89b5c9adce5ae4b0e2d82ec758c13f4dea1be410f5c33d56529d96904cce36e",
+  "refined_sha256": "3ecad31fff9c86592e0fcd4f4168dbc45f48a1c826fad4778022b8190ae0dc6b",
   "source_sha256": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1",
   "version": "project6-elembeddings-grounded-review-v2"
 }

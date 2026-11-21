@@ -1,0 +1,90 @@
+{
+  "complete_owl_import_closure_verified": false,
+  "data": {
+    "approved_superclass_anchors": 7,
+    "comparison_parent_pairs": 24,
+    "development_pairs": 160,
+    "folds": 4,
+    "heldout_rail_pairs": 8,
+    "training_owl_el_normal_form": "GCI0_ONLY"
+  },
+  "delta_from_frozen_v9": 1.4901161193847656e-08,
+  "delta_mean_cosine": 1.4901161193847656e-08,
+  "development_baseline": {
+    "auc": 0.5367447916666667,
+    "gap": 0.013250232910892615,
+    "positive_mean": 0.019127080612815917,
+    "top1_of_four": 45
+  },
+  "exploratory_reused_rail_test_set": true,
+  "frozen_v9_reference": {
+    "native_8_class_mean": 0.6037136092782021,
+    "native_auc": 0.953125,
+    "native_gap": 0.4515440862160176,
+    "native_top1_of_four": 7
+  },
+  "metrics_gates": {
+    "auc_close_to_matched_native": true,
+    "control_gap_close_to_matched_native": true,
+    "cosine_at_least_0_70": false,
+    "top1_at_least_native_minus_one": true
+  },
+  "named_only_hermit_previously_passed": true,
+  "named_subclass_leakage_detected": false,
+  "native_auc": 0.953125,
+  "native_configurations_compared": 6,
+  "native_control_mean": 0.15216952306218445,
+  "native_gap": 0.4515440862160176,
+  "native_mean_cosine": 0.6037136092782021,
+  "native_top1_of_four": 7,
+  "negative_alternatives_are_unasserted_not_owl_disjoint": true,
+  "one_hop_mixes_compared": [
+    0.0,
+    0.15,
+    0.3
+  ],
+  "outer_rail_targets_used_to_tune": false,
+  "provenance": {
+    "input_sha256": {
+      "generated/module_augmented.ttl": "5d157574acd9d59dff35b42c7d4855378d179ac1055fe1c28e74611ad5df2054",
+      "generated/mowl_rail_train.ttl": "e4d596140271e898f478d3ff13de381a87956b3f3f7e73b1e521736b90560637",
+      "generated/mowl_rail_valid.ttl": "a14a164b02148b55dfe5d4b7641e25d58e5e4edc15a18a76ab817118baa6cd45",
+      "imports/AgentOntology.ttl": "4490e5160c00408da2e32877abc4b72975b3593f2a8363af668087d155f8ce2e",
+      "imports/EventOntology.ttl": "fa0063e0d0e2a95bcd32a5ddfe6c9661b540e91f2e4e45fd73c779cc282afed9",
+      "imports/InformationEntityOntology.ttl": "294f81969d05af6d941625e08636d7f1289a1e36908aae22ca48d6176417571b",
+      "imports/bfo-core.ttl": "a7f0385eb859e707fa81bad532ff252427dc3490e3896a929332016fc53d9ece",
+      "imports/core.ttl": "f117593b5e51dcee30ac131c18ce6bcc65b7b06b8dbb34013ca33083481542cc",
+      "imports/iao-edit.owl": "b9ad0a1559141b5906a1e199cd1e5343f07c4423700fd3c0ee3b4b967d4838b0",
+      "reports/step5_split_report.json": "972452c2b3a7ba4d63f3d453d235d5cc95443eeceefd7c0144ab775cdd108856",
+      "scripts/run_all.py": "5d91ad914fadc4511b32aeb796bb83478d17dbeef746fb9fccdccb16047f00bb",
+      "src/module.ttl": "0a9b8988354f91fc535ea5d9a1a329a144051d7fe95b9701dc7e31b3f1d221a1"
+    },
+    "review_file_sha256": "2ab12e2e437eb2c1c37c2c426e024aae4cdf89264d21007c99073a09c75083ea",
+    "source_or_pipeline_modified": false,
+    "v9_reference_file_sha256": {
+      "reports/experiments/rail_mowl_v9_reviewed/all_pair_scores.csv": "c2d10da1ac14377ad1d8b41a1ff76769d073c21f14fc056551eb4ede31d7d59b",
+      "reports/experiments/rail_mowl_v9_reviewed/eight_class_summary.json": "a12adf63499a20a517199cd2317c7ccf51b6b82f7f78c1744fc7e697a2631ca3",
+      "reports/experiments/rail_mowl_v9_reviewed/fold_1_metrics.json": "dc99d11d6ac54e5c85491446b8c0580e9de07549b5e8056907368670df6507ad",
+      "reports/experiments/rail_mowl_v9_reviewed/fold_2_metrics.json": "c40f0138dea3b286490c9d25361ecea434c644abb8e4525d9f0b3a6106cf14cd",
+      "reports/experiments/rail_mowl_v9_reviewed/fold_3_metrics.json": "5e67958f0357e4adfadf809cc81db5bda58cfc664877ed288517885cb7b23ce8",
+      "reports/experiments/rail_mowl_v9_reviewed/fold_4_metrics.json": "653043e6d77211054b4a0b67a1484fdf6a3f868e3bd50d482046525e28488ecb",
+      "reports/experiments/rail_mowl_v9_reviewed/preparation.json": "1d5dde6d57ef7967a6104480dc77ebc1fded6decd8ea9149b860e8028b11300b",
+      "scripts/experiment_rail_mowl_v8.py": "29384f58937538b40e7e96b6a77eb15f766de36798627c537e39ee906c00d79e",
+      "scripts/experiment_rail_mowl_v9.py": "d2752a4e8c9e4f5de736acba9a2bd6fb28a242e397296808f0c0ff47194b2142"
+    }
+  },
+  "selected_global_setting": {
+    "mix": 0.0,
+    "name": "v9_native_reference"
+  },
+  "selection_source": "inner_source_import_only_no_rail_target",
+  "semantics_assumed_valid_as_user_requested": true,
+  "status": "TARGET_OR_CONTROLS_NOT_MET",
+  "v11_auc": 0.953125,
+  "v11_control_mean": 0.15216953889466822,
+  "v11_gap": 0.45154408528469503,
+  "v11_mean_cosine": 0.6037136241793633,
+  "v11_top1_of_four": 7,
+  "v9_frozen_mean_cosine": 0.6037136092782021,
+  "version": "project6-v11-final-single-run-native-graph-cosine-v1"
+}

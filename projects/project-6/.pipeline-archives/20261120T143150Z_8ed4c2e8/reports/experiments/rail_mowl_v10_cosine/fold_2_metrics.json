@@ -1,0 +1,130 @@
+{
+  "fit_details": null,
+  "fold": 2,
+  "geometry": {
+    "mean_absolute_shift": 0.0,
+    "mean_signed_shift": 0.0,
+    "native_offdiag_mean": 0.05243002250790596,
+    "native_offdiag_std": 0.19876591861248016,
+    "projected_offdiag_mean": 0.05243002250790596,
+    "projected_offdiag_std": 0.19876591861248016
+  },
+  "input_training_sha256": "99c620e3538594fb61f7aa075c201e2d335c4b4d517e48411b98d97909156727",
+  "native": {
+    "auc": 0.8333333333333334,
+    "control_mean": 0.26696600019931793,
+    "count": 2,
+    "gap": 0.2964395135641098,
+    "paired_win_rate": 0.8333333333333334,
+    "positive_mean": 0.5634055137634277,
+    "rows": [
+      {
+        "child": "https://example.org/ontologies/intel-ontology#railway_station",
+        "control_margin": 0.12411399682362872,
+        "control_mean": 0.40439526240030926,
+        "controls": [
+          [
+            "https://example.org/ontologies/intel-ontology#train",
+            0.7571359872817993
+          ],
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000015",
+            0.19390735030174255
+          ],
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000030",
+            0.26214244961738586
+          ]
+        ],
+        "cosine": 0.528509259223938,
+        "expected_parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+        "rank_among_four": 2
+      },
+      {
+        "child": "https://example.org/ontologies/intel-ontology#train",
+        "control_margin": 0.4687650303045908,
+        "control_mean": 0.12953673799832663,
+        "controls": [
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/passenger",
+            0.04205954074859619
+          ],
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000030",
+            0.231765478849411
+          ],
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/ticket",
+            0.11478519439697266
+          ]
+        ],
+        "cosine": 0.5983017683029175,
+        "expected_parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+        "rank_among_four": 1
+      }
+    ],
+    "top1_of_four": 1
+  },
+  "native_library_versions": {
+    "mowl_version": "unknown",
+    "torch_version": "2.15.0+cpu"
+  },
+  "rail_holdouts_unseen_during_tuning": true,
+  "selected_config": null,
+  "selection": "NATIVE_ONLY",
+  "v10": {
+    "auc": 0.8333333333333334,
+    "control_mean": 0.26696600019931793,
+    "count": 2,
+    "gap": 0.2964395135641098,
+    "paired_win_rate": 0.8333333333333334,
+    "positive_mean": 0.5634055137634277,
+    "rows": [
+      {
+        "child": "https://example.org/ontologies/intel-ontology#railway_station",
+        "control_margin": 0.12411399682362872,
+        "control_mean": 0.40439526240030926,
+        "controls": [
+          [
+            "https://example.org/ontologies/intel-ontology#train",
+            0.7571359872817993
+          ],
+          [
+            "http://purl.obolibrary.org/obo/BFO_0000015",
+            0.19390735030174255
+          ],
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000030",
+            0.26214244961738586
+          ]
+        ],
+        "cosine": 0.528509259223938,
+        "expected_parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+        "rank_among_four": 2
+      },
+      {
+        "child": "https://example.org/ontologies/intel-ontology#train",
+        "control_margin": 0.4687650303045908,
+        "control_mean": 0.12953673799832663,
+        "controls": [
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/passenger",
+            0.04205954074859619
+          ],
+          [
+            "http://purl.obolibrary.org/obo/IAO_0000030",
+            0.231765478849411
+          ],
+          [
+            "https://www.commoncoreontologies.org/AgentOntology/ticket",
+            0.11478519439697266
+          ]
+        ],
+        "cosine": 0.5983017683029175,
+        "expected_parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+        "rank_among_four": 1
+      }
+    ],
+    "top1_of_four": 1
+  }
+}

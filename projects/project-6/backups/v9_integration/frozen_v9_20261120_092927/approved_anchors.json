@@ -1,0 +1,81 @@
+{
+  "version": "project6-experimental-superclass-support-review-v1",
+  "human_review_status": "SEVEN_APPROVED_FOR_EXPERIMENT_2026_11_19",
+  "approval_context": "Project 6 ontology author approved all seven annotated Mermaid-style superclass proposals in the conversation on 2026-11-19; approval is for isolated experimental training only.",
+  "target_holdouts_must_remain_excluded": true,
+  "approval_does_not_prove_owl_semantic_non_entailment": true,
+  "owl_semantic_leakage_review_status": "NOT_YET_CHECKED_BY_REASONER",
+  "training_scope": "Isolated four-fold named subclass training graphs; never write to source or run_all.py",
+  "approved_anchors": [
+    {
+      "fold": 1,
+      "child": "https://example.org/ontologies/intel-ontology#rail_reservation_information",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000031",
+      "withheld_target_for_reference": "https://www.commoncoreontologies.org/AgentOntology/reservation",
+      "review_status": "HUMAN_APPROVED_FOR_EXPERIMENT_ONLY",
+      "rationale": "Definition explicitly calls this an information content entity; IAO information content entities are GDCs. Verify against imported BFO/IAO axioms, independently of withheld Reservation subclass.",
+      "independent_source": "Author-reviewed rail class definition and earlier physical/ICE design commitments; this is modeling justification, NOT an independent OWL entailment proof.",
+      "reviewer": "Project 6 ontology author (confirmed approval in ChatGPT conversation 2026-11-19)."
+    },
+    {
+      "fold": 2,
+      "child": "https://example.org/ontologies/intel-ontology#railway_station",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000004",
+      "withheld_target_for_reference": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "review_status": "HUMAN_APPROVED_FOR_EXPERIMENT_ONLY",
+      "rationale": "Definition describes physical railway facilities. Verify physical facility/aggregate classification; candidate is deliberately broader than withheld Material Entity.",
+      "independent_source": "Author-reviewed rail class definition and earlier physical/ICE design commitments; this is modeling justification, NOT an independent OWL entailment proof.",
+      "reviewer": "Project 6 ontology author (confirmed approval in ChatGPT conversation 2026-11-19)."
+    },
+    {
+      "fold": 2,
+      "child": "https://example.org/ontologies/intel-ontology#train",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000004",
+      "withheld_target_for_reference": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "review_status": "HUMAN_APPROVED_FOR_EXPERIMENT_ONLY",
+      "rationale": "Definition describes physical rail vehicles; validate that the modeled train entity is an independent continuant, not a service/process.",
+      "independent_source": "Author-reviewed rail class definition and earlier physical/ICE design commitments; this is modeling justification, NOT an independent OWL entailment proof.",
+      "reviewer": "Project 6 ontology author (confirmed approval in ChatGPT conversation 2026-11-19)."
+    },
+    {
+      "fold": 3,
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey_plan",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000031",
+      "withheld_target_for_reference": "http://purl.obolibrary.org/obo/IAO_0000030",
+      "review_status": "HUMAN_APPROVED_FOR_EXPERIMENT_ONLY",
+      "rationale": "Definition explicitly states information content entity; this broad type does not by itself infer withheld IAO Information Content Entity.",
+      "independent_source": "Author-reviewed rail class definition and earlier physical/ICE design commitments; this is modeling justification, NOT an independent OWL entailment proof.",
+      "reviewer": "Project 6 ontology author (confirmed approval in ChatGPT conversation 2026-11-19)."
+    },
+    {
+      "fold": 3,
+      "child": "https://example.org/ontologies/intel-ontology#rail_ticket",
+      "parent": "http://purl.obolibrary.org/obo/IAO_0000178",
+      "withheld_target_for_reference": "https://www.commoncoreontologies.org/AgentOntology/ticket",
+      "review_status": "HUMAN_APPROVED_FOR_EXPERIMENT_ONLY",
+      "rationale": "Definition and prior design decision classify the ticket as a physical bearer; do not simply copy this ancestor from the withheld Ticket assertion.",
+      "independent_source": "Author-reviewed rail class definition and earlier physical/ICE design commitments; this is modeling justification, NOT an independent OWL entailment proof.",
+      "reviewer": "Project 6 ontology author (confirmed approval in ChatGPT conversation 2026-11-19)."
+    },
+    {
+      "fold": 4,
+      "child": "https://example.org/ontologies/intel-ontology#passenger_train",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000040",
+      "withheld_target_for_reference": "https://example.org/ontologies/intel-ontology#train",
+      "review_status": "HUMAN_APPROVED_FOR_EXPERIMENT_ONLY",
+      "rationale": "Independently validate that passenger trains are physical material entities; must not infer or assert withheld PassengerTrain subclass Train through any retained training axioms.",
+      "independent_source": "Author-reviewed rail class definition and earlier physical/ICE design commitments; this is modeling justification, NOT an independent OWL entailment proof.",
+      "reviewer": "Project 6 ontology author (confirmed approval in ChatGPT conversation 2026-11-19)."
+    },
+    {
+      "fold": 4,
+      "child": "https://example.org/ontologies/intel-ontology#rail_journey",
+      "parent": "http://purl.obolibrary.org/obo/BFO_0000003",
+      "withheld_target_for_reference": "http://purl.obolibrary.org/obo/BFO_0000015",
+      "review_status": "HUMAN_APPROVED_FOR_EXPERIMENT_ONLY",
+      "rationale": "Definition describes a travel process, which is an occurrent; candidate is broader than withheld Process and only weakly discriminative.",
+      "independent_source": "Author-reviewed rail class definition and earlier physical/ICE design commitments; this is modeling justification, NOT an independent OWL entailment proof.",
+      "reviewer": "Project 6 ontology author (confirmed approval in ChatGPT conversation 2026-11-19)."
+    }
+  ]
+}

@@ -18,7 +18,7 @@
       "entity": "https://example.org/ontologies/intel-ontology#railway_station"
     }
   ],
-  "refined_sha256": "c89b5c9adce5ae4b0e2d82ec758c13f4dea1be410f5c33d56529d96904cce36e",
+  "refined_sha256": "3ecad31fff9c86592e0fcd4f4168dbc45f48a1c826fad4778022b8190ae0dc6b",
   "refined_triples": 63,
   "review_required_before_merge": true,
   "scope_note": "Explicit candidate TBox QC only, not OWL consistency or ontological approval",

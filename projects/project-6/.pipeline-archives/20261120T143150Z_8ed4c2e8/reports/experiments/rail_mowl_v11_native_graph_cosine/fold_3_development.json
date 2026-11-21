@@ -1,0 +1,151 @@
+{
+  "candidate_results": [
+    {
+      "auc": 0.44145833333333334,
+      "gap": -0.034015472140163185,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "v9_native_reference",
+      "positive_mean": -0.023411055328324437
+    },
+    {
+      "auc": 0.4425,
+      "gap": -0.03394467813583712,
+      "geometry_shift": 0.021215619519352913,
+      "mix": 0.15,
+      "name": "v9_native_reference",
+      "positive_mean": -0.025117249973118306
+    },
+    {
+      "auc": 0.44458333333333333,
+      "gap": -0.033939365685607,
+      "geometry_shift": 0.043642330914735794,
+      "mix": 0.3,
+      "name": "v9_native_reference",
+      "positive_mean": -0.026898825634270908
+    },
+    {
+      "auc": 0.494375,
+      "gap": 0.004523796184609338,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "compact_40",
+      "positive_mean": 0.04104789169505239
+    },
+    {
+      "auc": 0.49375,
+      "gap": 0.0033355209510773434,
+      "geometry_shift": 0.022613756358623505,
+      "mix": 0.15,
+      "name": "compact_40",
+      "positive_mean": 0.04127839128486812
+    },
+    {
+      "auc": 0.49395833333333333,
+      "gap": 0.002082445907096067,
+      "geometry_shift": 0.04695054888725281,
+      "mix": 0.3,
+      "name": "compact_40",
+      "positive_mean": 0.041289356630295516
+    },
+    {
+      "auc": 0.498125,
+      "gap": -0.004880163539201021,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "wide_75",
+      "positive_mean": -0.0030838942620903254
+    },
+    {
+      "auc": 0.49625,
+      "gap": -0.005377483111806214,
+      "geometry_shift": 0.019267138093709946,
+      "mix": 0.15,
+      "name": "wide_75",
+      "positive_mean": -0.0027029415359720588
+    },
+    {
+      "auc": 0.4947916666666667,
+      "gap": -0.005954038095660507,
+      "geometry_shift": 0.039624202996492386,
+      "mix": 0.3,
+      "name": "wide_75",
+      "positive_mean": -0.0023495193338021634
+    },
+    {
+      "auc": 0.44145833333333334,
+      "gap": -0.026595119774962466,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "wide_100",
+      "positive_mean": -0.030079119931906463
+    },
+    {
+      "auc": 0.44604166666666667,
+      "gap": -0.026830970069083075,
+      "geometry_shift": 0.019582347944378853,
+      "mix": 0.15,
+      "name": "wide_100",
+      "positive_mean": -0.03086979789659381
+    },
+    {
+      "auc": 0.44583333333333336,
+      "gap": -0.026836553433289133,
+      "geometry_shift": 0.03999653831124306,
+      "mix": 0.3,
+      "name": "wide_100",
+      "positive_mean": -0.03150135730393231
+    },
+    {
+      "auc": 0.44208333333333333,
+      "gap": -0.03413661940333744,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "small_margin_50",
+      "positive_mean": -0.02450426071882248
+    },
+    {
+      "auc": 0.444375,
+      "gap": -0.03365564829825113,
+      "geometry_shift": 0.021870316937565804,
+      "mix": 0.15,
+      "name": "small_margin_50",
+      "positive_mean": -0.025941931642591953
+    },
+    {
+      "auc": 0.44458333333333333,
+      "gap": -0.03313637246998648,
+      "geometry_shift": 0.044953376054763794,
+      "mix": 0.3,
+      "name": "small_margin_50",
+      "positive_mean": -0.027332093147560955
+    },
+    {
+      "auc": 0.5045833333333334,
+      "gap": -0.0028844976021597784,
+      "geometry_shift": 0.0,
+      "mix": 0.0,
+      "name": "small_margin_75",
+      "positive_mean": -0.001699444744735956
+    },
+    {
+      "auc": 0.5035416666666667,
+      "gap": -0.0032768971907595795,
+      "geometry_shift": 0.01878451742231846,
+      "mix": 0.15,
+      "name": "small_margin_75",
+      "positive_mean": -0.0011584099847823381
+    },
+    {
+      "auc": 0.49916666666666665,
+      "gap": -0.0037438626633957027,
+      "geometry_shift": 0.03845241665840149,
+      "mix": 0.3,
+      "name": "small_margin_75",
+      "positive_mean": -0.0006357762264087796
+    }
+  ],
+  "fold": 3,
+  "outer_rail_test_pairs_used_for_tuning": 0,
+  "source_import_dev_pairs": 40
+}
