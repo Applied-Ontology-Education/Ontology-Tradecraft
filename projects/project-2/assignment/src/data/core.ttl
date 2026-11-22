@@ -42,3 +42,121 @@ ex:hasLengthFt a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
 ex:hasTailHeightFt a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
     rdfs:label "has Tail Height Ft"@en ;
     skos:definition "Shortcut relating an aircraft to the value, in feet, of a measurement of its tail height at operating empty weight."@en .
+
+# ---------------- Task 1 (full): A320neo class with OWL restrictions ----------------
+
+ex:A320neoAircraft a owl:Class ;
+    rdfs:label "A320neo Aircraft"@en ;
+    skos:definition "An Aircraft that is manufactured in accordance with the Airbus A320neo Artifact Design."@en ;
+    rdfs:subClassOf cco:ont00001043 ,                               # Aircraft
+        [ a owl:Restriction ;                                       # EL: has some jet engine part
+          owl:onProperty obo:BFO_0000178 ; owl:someValuesFrom cco:ont00000533 ] ,
+        [ a owl:Restriction ;                                       # EL: has some fixed wing part
+          owl:onProperty obo:BFO_0000178 ; owl:someValuesFrom ex:FixedWing ] ,
+        [ a owl:Restriction ;                                       # DL only (HermiT); ignored by ELK
+          owl:onProperty obo:BFO_0000178 ;
+          owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ; owl:onClass cco:ont00000533 ] .
+
+ex:A320neoFleet a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000027 ;                                # object aggregate
+    rdfs:label "A320neo Fleet"@en ;
+    skos:definition "An object aggregate whose member parts are all and only the A320neo Aircraft registered with the FAA."@en .
+
+# ---------------- Task 1 (full): plane-level datatype properties ----------------
+# Physical makeup and per-plane classifications (true of each A320neo).
+
+ex:hasWingspanWithWingletsFt a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has Wingspan With Winglets Ft"@en ;
+    skos:definition "Shortcut relating an aircraft to the value, in feet, of its wingspan including winglets or sharklets."@en .
+ex:hasWheelbaseFt a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has Wheelbase Ft"@en ;
+    skos:definition "Shortcut relating an aircraft to the value, in feet, of the distance between its nose gear and main gear."@en .
+ex:hasCockpitToMainGearFt a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has Cockpit To Main Gear Ft"@en ;
+    skos:definition "Shortcut relating an aircraft to the value, in feet, of the distance from its cockpit to its main gear."@en .
+ex:hasMainGearWidthFt a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has Main Gear Width Ft"@en ;
+    skos:definition "Shortcut relating an aircraft to the value, in feet, of the outer width of its main gear."@en .
+ex:hasParkingAreaFt2 a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has Parking Area Ft2"@en ;
+    skos:definition "Shortcut relating an aircraft to the value, in square feet, of the ground area it occupies when parked."@en .
+ex:hasNumEngines a owl:DatatypeProperty ; rdfs:range xsd:integer ;
+    rdfs:label "has Num Engines"@en ;
+    skos:definition "Relates an aircraft to the count of engines that are continuant parts of it."@en .
+ex:hasMainGearConfig a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has Main Gear Config"@en ;
+    skos:definition "Relates an aircraft to the FAA code for its main landing gear configuration."@en .
+ex:hasPhysicalClassEngine a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has Physical Class Engine"@en ;
+    skos:definition "Relates an aircraft to the FAA physical class of its engines (e.g. Jet, Turboprop)."@en .
+ex:hasAircraftClass a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has Aircraft Class"@en ;
+    skos:definition "Relates an aircraft to its FAA class (e.g. Fixed-wing, Rotorcraft)."@en .
+ex:hasAAC a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has AAC"@en ;
+    skos:definition "Relates an aircraft to its Aircraft Approach Category, determined by its approach speed."@en .
+ex:hasADG a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has ADG"@en ;
+    skos:definition "Relates an aircraft to its Airplane Design Group, determined by its wingspan and tail height."@en .
+ex:hasTDG a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has TDG"@en ;
+    skos:definition "Relates an aircraft to its Taxiway Design Group, determined by its main gear width and cockpit-to-main-gear distance."@en .
+ex:hasICAOWTC a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has ICAO WTC"@en ;
+    skos:definition "Relates an aircraft to its ICAO Wake Turbulence Category."@en .
+ex:hasFAAWeightClass a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has FAA Weight Class"@en ;
+    skos:definition "Relates an aircraft to its FAA weight class."@en .
+ex:hasCWT a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has CWT"@en ;
+    skos:definition "Relates an aircraft to its FAA Consolidated Wake Turbulence category."@en .
+ex:hasOneHalfWakeCategory a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has One Half Wake Category"@en ;
+    skos:definition "Relates an aircraft to its 1.5 wake turbulence category."@en .
+ex:hasTwoWakeCategoryAppxA a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has Two Wake Category Appx A"@en ;
+    skos:definition "Relates an aircraft to its two-category wake turbulence classification under FAA Order Appendix A."@en .
+ex:hasTwoWakeCategoryAppxB a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has Two Wake Category Appx B"@en ;
+    skos:definition "Relates an aircraft to its two-category wake turbulence classification under FAA Order Appendix B."@en .
+ex:hasSRS a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has SRS"@en ;
+    skos:definition "Relates an aircraft to its FAA Same Runway Separation category."@en .
+ex:hasLAHSO a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has LAHSO"@en ;
+    skos:definition "Relates an aircraft to its Land And Hold Short Operations group."@en .
+
+# ---------------- Task 1 (full): design-level datatype properties ----------------
+# Limits and designators: directives and names that hold of the type.
+
+ex:prescribesMTOWLb a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "prescribes MTOW Lb"@en ;
+    skos:definition "Shortcut relating an Artifact Design to the maximum takeoff weight, in pounds, it prescribes for aircraft made to it."@en .
+ex:prescribesMALWLb a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "prescribes MALW Lb"@en ;
+    skos:definition "Shortcut relating an Artifact Design to the maximum allowable landing weight, in pounds, it prescribes for aircraft made to it."@en .
+ex:prescribesApproachSpeedKnot a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "prescribes Approach Speed Knot"@en ;
+    skos:definition "Shortcut relating an Artifact Design to the certified approach speed, in knots, it prescribes for aircraft made to it."@en .
+ex:hasICAOCode a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has ICAO Code"@en ;
+    skos:definition "Relates an Artifact Design to the ICAO aircraft type designator that names it."@en .
+ex:hasFAADesignator a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has FAA Designator"@en ;
+    skos:definition "Relates an Artifact Design to the FAA aircraft type designator that names it."@en .
+ex:hasRemarks a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has Remarks"@en ;
+    skos:definition "Relates an Artifact Design to the remarks recorded about it in the FAA aircraft characteristics data."@en .
+
+# ---------------- Task 1 (full): population-level datatype properties ----------------
+# Collective facts: true of the fleet, not of any one plane.
+
+ex:hasRegistrationCount a owl:DatatypeProperty ; rdfs:range xsd:integer ;
+    rdfs:label "has Registration Count"@en ;
+    skos:definition "Relates a fleet to the number of its member aircraft on the FAA registry."@en .
+ex:hasTMFSOperationsFY24 a owl:DatatypeProperty ; rdfs:range xsd:integer ;
+    rdfs:label "has TMFS Operations FY24"@en ;
+    skos:definition "Relates a fleet to the number of operations by its members recorded by the FAA Traffic Flow Management System in fiscal year 2024."@en .
+ex:isOnFAARegistry a owl:DatatypeProperty ; rdfs:range xsd:boolean ;
+    rdfs:label "is On FAA Registry"@en ;
+    skos:definition "Relates a fleet to whether aircraft of its type appear on the FAA registry."@en .

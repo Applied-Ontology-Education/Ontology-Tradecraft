@@ -62,3 +62,49 @@ ex:A320NEO_SpecPattern a cco:ont00000314 ;           # Information Quality Entit
     rdfs:label "A320 NEO specification pattern"@en ;
     skos:definition "The pattern of marks in the A320 NEO Specification Document that concretizes the A320 NEO Design."@en ;
     obo:BFO_0000059 ex:A320NEO_Design .              # concretizes
+
+# ================= Task 1 (full): remaining columns =================
+
+# --- Plane: class membership, physical makeup, per-plane classifications ---
+ex:A320NEO a ex:A320neoAircraft ;
+    ex:hasWingspanWithWingletsFt "117.5"^^xsd:decimal ;
+    ex:hasWheelbaseFt            "41.5"^^xsd:decimal ;
+    ex:hasCockpitToMainGearFt    "50.2"^^xsd:decimal ;
+    ex:hasMainGearWidthFt        "29.4"^^xsd:decimal ;
+    ex:hasParkingAreaFt2         "16358.3"^^xsd:decimal ;
+    ex:hasNumEngines             "2"^^xsd:integer ;
+    ex:hasMainGearConfig         "D"^^xsd:string ;
+    ex:hasPhysicalClassEngine    "Jet"^^xsd:string ;
+    ex:hasAircraftClass          "Fixed-wing"^^xsd:string ;
+    ex:hasAAC                    "C"^^xsd:string ;
+    ex:hasADG                    "III"^^xsd:string ;
+    ex:hasTDG                    "3"^^xsd:string ;
+    ex:hasICAOWTC                "Medium"^^xsd:string ;
+    ex:hasFAAWeightClass         "Large"^^xsd:string ;
+    ex:hasCWT                    "F"^^xsd:string ;
+    ex:hasOneHalfWakeCategory    "D"^^xsd:string ;
+    ex:hasTwoWakeCategoryAppxA   "D"^^xsd:string ;
+    ex:hasTwoWakeCategoryAppxB   "C"^^xsd:string ;
+    ex:hasSRS                    "III"^^xsd:string ;
+    ex:hasLAHSO                  "7"^^xsd:string .
+
+[] a owl:AllDifferent ;
+    owl:distinctMembers ( ex:A320NEO_Engine1 ex:A320NEO_Engine2 ) .
+
+# --- Design: limits it prescribes, designators, record remarks ---
+ex:A320NEO_Design
+    ex:prescribesMTOWLb           "174165"^^xsd:decimal ;
+    ex:prescribesMALWLb           "148591"^^xsd:decimal ;
+    ex:prescribesApproachSpeedKnot "137"^^xsd:decimal ;
+    ex:hasICAOCode                "A20N"^^xsd:string ;
+    ex:hasFAADesignator           "A20N"^^xsd:string ;
+    ex:hasRemarks                 "AAC validated by Flight Standardization Board (FSB) report."^^xsd:string .
+
+# --- Fleet: collective facts ---
+ex:A320NEO_Fleet a ex:A320neoFleet ;
+    rdfs:label "A320 NEO Fleet"@en ;
+    skos:definition "The aggregate of all A320neo aircraft on the FAA registry."@en ;
+    obo:BFO_0000115 ex:A320NEO ;                     # has member part
+    ex:hasRegistrationCount  "147"^^xsd:integer ;
+    ex:hasTMFSOperationsFY24 "540276"^^xsd:integer ;
+    ex:isOnFAARegistry       "true"^^xsd:boolean .
