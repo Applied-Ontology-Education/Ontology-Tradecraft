@@ -5425,3 +5425,7 @@ ies:Element rdfs:subClassOf [ a owl:Restriction ; owl:onProperty ies:inPeriod ; 
 # "An Event represents an activity or incident, involving one or more participating entities."
 ies:Event rdfs:subClassOf [ a owl:Restriction ;
     owl:onProperty [ owl:inverseOf ies:isParticipantIn ] ; owl:someValuesFrom ies:EventParticipant ] .
+
+# ===== Project 3 step 7 (Sean Tucker): axioms reflecting the matched ontology's definitions =====
+# BFO: a spatiotemporal region is temporal part of only spatiotemporal regions (BFO's axiom on BFO_0000011).
+<http://ies.data.gov.uk/ontology/ies4#PeriodOfTime> <http://www.w3.org/2000/01/rdf-schema#subClassOf> [ a <http://www.w3.org/2002/07/owl#Restriction> ; <http://www.w3.org/2002/07/owl#onProperty> <http://purl.obolibrary.org/obo/BFO_0000139> ; <http://www.w3.org/2002/07/owl#allValuesFrom> <http://purl.obolibrary.org/obo/BFO_0000011> ] .   # PeriodOfTime (matched to spatiotemporal region)
