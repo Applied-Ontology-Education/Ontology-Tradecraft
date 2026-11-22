@@ -1,0 +1,752 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+obo:BFO_0000055 a owl:ObjectProperty ;
+    rdfs:label "realizes"@en ;
+    dc:identifier "059-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000015 ;
+    rdfs:range obo:BFO_0000017 ;
+    skos:definition "(Elucidation) realizes is a relation between a process b and realizable entity c such that c inheres in some d & for all t, if b has participant d then c exists & the type instantiated by b is correlated with the type instantiated by c"@en ;
+    skos:example "A balding process realizes a disposition to go bald; a studying process realizes a student role; a process of pumping blood realizes the pumping function of a heart"@en .
+
+obo:BFO_0000058 a owl:ObjectProperty ;
+    rdfs:label "is concretized by"@en ;
+    dc:identifier "258-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000031 ;
+    owl:inverseOf obo:BFO_0000059 ;
+    skos:definition "c is concretized by b =Def b concretizes c"@en ;
+    skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+obo:BFO_0000115 a owl:ObjectProperty ;
+    rdfs:label "has member part"@en ;
+    dc:identifier "230-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000040 ;
+    rdfs:range obo:BFO_0000040 ;
+    rdfs:subPropertyOf obo:BFO_0000178 ;
+    owl:inverseOf obo:BFO_0000129 ;
+    skos:definition "b has member part c =Def c member part of b"@en ;
+    skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+obo:BFO_0000139 a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "temporal part of"@en ;
+    dc:identifier "078-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000003 ;
+    rdfs:range obo:BFO_0000003 ;
+    rdfs:subPropertyOf obo:BFO_0000132 ;
+    skos:definition "b temporal part of c =Def b occurrent part of c & (b and c are temporal regions) or (b and c are spatiotemporal regions & b temporally projects onto an occurrent part of the temporal region that c temporally projects onto) or (b and c are processes or process boundaries & b occupies a temporal region that is an occurrent part of the temporal region that c occupies)"@en ;
+    skos:example "Your heart beating from 4pm to 5pm today is a temporal part of the process of your heart beating; the 4th year of your life is a temporal part of your life, as is the process boundary which separates the 3rd and 4th years of your life; the first quarter of a game of football is a temporal part of the whole game"@en .
+
+obo:BFO_0000196 a owl:ObjectProperty ;
+    rdfs:label "bearer of"@en ;
+    dc:identifier "053-BFO"^^xsd:string ;
+    rdfs:range obo:BFO_0000020 ;
+    rdfs:subPropertyOf obo:BFO_0000194 ;
+    owl:inverseOf obo:BFO_0000197 ;
+    skos:definition "b bearer of c =Def c inheres in b"@en ;
+    skos:example "A patch of ink is the bearer of a colour quality; an organism is the bearer of a temperature quality"@en .
+
+cco:CommonCoreOntologiesMerged a owl:Ontology ;
+    rdfs:label "Common Core Ontologies Merged"@en ;
+    dcterms:license "BSD 3-Clause: https://github.com/CommonCoreOntology/CommonCoreOntologies/blob/master/LICENSE"@en ;
+    dcterms:rights "CUBRC Inc., see full license."@en ;
+    rdfs:comment "A stand-alone file containing the eleven mid-level Common Core Ontologies plus BFO. Provided for use-cases where one file representing a specific release of CCO and its imports is desirable."@en,
+        "Slim MIREOT-style extract of CCO/BFO terms used in Project 2."@en ;
+    owl:versionIRI <https://www.commoncoreontologies.org/2024-11-06/CommonCoreOntologiesMerged> ;
+    owl:versionInfo "Depends on http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl, obtained 11/03/2024."@en,
+        "Version 2.0"@en .
+
+cco:ont00000077 a owl:Class ;
+    rdfs:label "Code Identifier"@en ;
+    rdfs:subClassOf cco:ont00000649 ;
+    owl:disjointWith cco:ont00000923 ;
+    skos:altLabel "Code ID"@en,
+        "ID Code"@en,
+        "Identifier Code"@en ;
+    skos:definition "A Non-Name Identifier that consists of a string of characters that was created and assigned according to an encoding system such that metadata can be derived from the identifier."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000127 a owl:Class ;
+    rdfs:label "Performance Specification"@en ;
+    rdfs:subClassOf cco:ont00000965 ;
+    skos:definition "A Directive Information Content Entity that prescribes some aspect of the behavior of a participant in a Process given one or more operating conditions."@en ;
+    skos:example "Maximum Speed at high altitude; Rate of Ascent at 10 degrees celsius with nominal payload."^^xsd:string ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000139 a owl:Class ;
+    rdfs:label "Domain of a Country"@en ;
+    dcterms:bibliographicCitation "Convention on Rights and Duties of States (inter-American); December 26, 1933. https://avalon.law.yale.edu/20th_century/intam03.asp. Accessed 6 Apr. 2023."^^xsd:string ;
+    dcterms:creator "https://cubrc.org"^^xsd:anyURI ;
+    rdfs:subClassOf cco:ont00001152 ;
+    skos:definition "A Government Domain that is associated with certain distinct political, ethnic, or cultural characteristics, and which delimits a Government that has legitimate authority over a Populace."@en ;
+    skos:editorialNote "'Country' is an unclear term. Does it refer to the people, the government, the site, or the material in the site? Furthermore, what is properly referred to as a 'Country' is highly dependent on the classification practices of the international community. For example: The United Kingdom is a sovereign country that has Wales, a non-sovereign Country, as a member. Vatican City is a sovereign country that is landlocked by a city: Rome, Italy. Puerto Rico is not a country (it's a territory) but has a government, a distinct culture, and so on. Thus, here we do not define 'Country' but instead define 'Domain of a Country'."@en ;
+    skos:prefLabel "Domain of a Country"@en ;
+    cco:ont00001754 "https://avalon.law.yale.edu/20th_century/intam03.asp"^^xsd:string ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+cco:ont00000314 a owl:Class ;
+    rdfs:label "Information Quality Entity"@en ;
+    rdfs:comment "Typically, an IQE will be a complex pattern made up of multiple qualities joined together spatially."@en ;
+    rdfs:subClassOf obo:BFO_0000019 ;
+    skos:altLabel "IQE"@en ;
+    skos:definition "A Quality that concretizes some Information Content Entity."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000319 a owl:Class ;
+    rdfs:label "Artifact Design"@en ;
+    rdfs:subClassOf cco:ont00000965 ;
+    skos:definition "A Directive Information Content Entity that is a specification of an object, manifested by an agent, intended to accomplish goals, in a particular environment, using a set of primitive components, satisfying a set of requirements, subject to constraints."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Design&oldid=1063941625"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00000345 a owl:Class ;
+    rdfs:label "Act of Measuring"@en ;
+    rdfs:subClassOf cco:ont00000228 ;
+    skos:definition "A Planned Act that involves determining the extent, dimensions, quanity, or quality of an Entity relative to some standard."@en ;
+    skos:example "putting an object on a scale to measure its weight in kilograms"^^xsd:string,
+        "rating Hollywood movies on a 1 to 5 star scale"^^xsd:string,
+        "using a tape measure to determine the height and width of a doorway in inches"^^xsd:string ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+cco:ont00000533 a owl:Class ;
+    rdfs:label "Jet Engine"@en ;
+    rdfs:comment "Some (most) jet engines utilize turbines, but some do not. Most rocket engines do not utilize turbines, but some do."@en ;
+    rdfs:subClassOf cco:ont00000056 ;
+    skos:definition "A Reaction Engine that discharges a fast moving jet that generates Thrust by jet propulsion."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Jet_engine&oldid=1060157063"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00000539 a owl:Class ;
+    rdfs:label "Count Measurement Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00001022 ;
+    skos:definition "A Ratio Measurement Information Content Entity that is a measurement of the number of members of some aggregate."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000798 a owl:Class ;
+    rdfs:label "Information Bearing Artifact"@en ;
+    rdfs:subClassOf cco:ont00000995 ;
+    skos:definition "A Material Artifact that carries an Information Content Entity and is designed to do so using a particular format or structure."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00000896 a owl:Class ;
+    rdfs:label "Mean Point Estimate Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00000745 ;
+    skos:altLabel "Arithmetic Mean"@en,
+        "Average"@en,
+        "Mean"@en ;
+    skos:definition "A Point Estimate Information Content Entity that is a measurement of a set of values and is equal to the sum of all the values in the set divided by the total number of values in the set."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000908 a owl:Class ;
+    rdfs:label "Act of Artifact Processing"@en ;
+    rdfs:subClassOf cco:ont00000228 ;
+    skos:definition "A Planned Act of performing a series of mechanical or chemical operations on something in order to change or preserve it."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+cco:ont00000914 a owl:Class ;
+    rdfs:label "Group of Persons"@en ;
+    rdfs:subClassOf cco:ont00000300 ;
+    skos:definition "A Group of Agents that has only Persons as parts."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+cco:ont00000984 a owl:Class ;
+    rdfs:label "Occupation Role"@en ;
+    rdfs:subClassOf obo:BFO_0000023 ;
+    skos:definition "A Role that inheres in an Agent in virtue of the responsibilities that Agent is expected to fulfill within the context of some Act of Employment."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+cco:ont00001043 a owl:Class ;
+    rdfs:label "Aircraft"@en ;
+    rdfs:subClassOf cco:ont00000713 ;
+    skos:definition "A Vehicle that is designed to convey passengers, cargo, or equipment from one location to another by air travel."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Aircraft&oldid=1063924562"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00001180 a owl:Class ;
+    rdfs:label "Organization"@en ;
+    rdfs:comment "Members of organizations are either Organizations themselves or individual Persons. Members can bear specific Organization Member Roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the Organization by the organization members."@en ;
+    rdfs:subClassOf cco:ont00000300 ;
+    skos:definition "A Group of Agents which can be the bearer of roles, has members, and has a set of organization rules."@en ;
+    cco:ont00001754 "http://purl.obolibrary.org/obo/OBI_0000245"^^xsd:string ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+cco:ont00001252 a owl:Class ;
+    rdfs:label "Propulsion Artifact Function"@en ;
+    rdfs:subClassOf cco:ont00000448 ;
+    skos:definition "A Motion Artifact Function that is realized in a process in which the bearer of the function creates force leading to an entity's movement."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Propulsion&oldid=1022034059"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00001262 a owl:Class ;
+    rdfs:label "Person"@en ;
+    rdfs:subClassOf cco:ont00000562 ;
+    skos:altLabel "Human"@en ;
+    skos:definition "An Animal that is a member of the species Homo sapiens."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Human&oldid=1063145185"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+cco:ont00001365 a owl:Class ;
+    rdfs:label "Maximum Speed Artifact Function"@en ;
+    rdfs:subClassOf cco:ont00001353 ;
+    skos:definition "A Speed Artifact Function that is realized in some process in which the Artifact bearing the Artifact Function attains the highest speed at which that Artifact is designed to operate."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00001646 a owl:NamedIndividual,
+        cco:ont00000969 ;
+    rdfs:label "Knot Measurement Unit"@en ;
+    skos:altLabel "kn"@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/UnitsOfMeasureOntology"^^xsd:anyURI .
+
+cco:ont00001765 a owl:DatatypeProperty ;
+    rdfs:label "has text value"@en ;
+    rdfs:domain cco:ont00000253 ;
+    skos:definition "A data property that has as its range a string value."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001769 a owl:DatatypeProperty ;
+    rdfs:label "has decimal value"@en ;
+    rdfs:domain cco:ont00000253 ;
+    rdfs:range xsd:decimal ;
+    skos:definition "A data property that has as its range a decimal value."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001773 a owl:DatatypeProperty ;
+    rdfs:label "has integer value"@en ;
+    rdfs:domain cco:ont00000253 ;
+    rdfs:range xsd:integer ;
+    skos:definition "A data property that has as its range an integer value."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001816 a owl:ObjectProperty ;
+    rdfs:label "is output of"@en ;
+    rdfs:domain obo:BFO_0000002 ;
+    rdfs:range obo:BFO_0000015 ;
+    rdfs:subPropertyOf obo:BFO_0000056 ;
+    owl:inverseOf cco:ont00001986 ;
+    skos:definition "x is_output_of y iff x is an instance of Continuant and y is an instance of Process, such that the presence of x at the end of y is a necessary condition for the completion of y."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+cco:ont00001863 a owl:ObjectProperty ;
+    rdfs:label "uses measurement unit"@en ;
+    rdfs:domain cco:ont00000253 ;
+    rdfs:range cco:ont00000120 ;
+    rdfs:subPropertyOf obo:BFO_0000101 ;
+    owl:inverseOf cco:ont00001961 ;
+    skos:definition "y uses_measurement_unit x iff y is an instance of Information Bearing Entity and x is an instance of Measurement Unit, such that x describes the magnitude of measured physical quantity mentioned in y."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001904 a owl:ObjectProperty ;
+    rdfs:label "is measured by"@en ;
+    rdfs:range cco:ont00001163 ;
+    rdfs:subPropertyOf cco:ont00001917 ;
+    owl:inverseOf cco:ont00001966 ;
+    skos:definition "y is_measured_by x iff x is an instance of Information Content Entity and y is an instance of Entity, such that x describes some attribute of y relative to some scale or classification scheme."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001920 a owl:ObjectProperty ;
+    rdfs:label "prescribed by"@en ;
+    rdfs:range cco:ont00000965 ;
+    rdfs:subPropertyOf cco:ont00001801 ;
+    owl:inverseOf cco:ont00001942 ;
+    skos:definition "x prescribed_by y iff y is an instance of Information Content Entity and x is an instance of Entity, such that y serves as a rule or guide for x if x is an Occurrent, or y serves as a model for x if x is a Continuant."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+obo:BFO_0000016 a owl:Class ;
+    rdfs:label "disposition"@en ;
+    dc:identifier "062-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000017 ;
+    owl:disjointWith obo:BFO_0000023 ;
+    skos:altLabel "internally-grounded realizable entity"@en ;
+    skos:definition "(Elucidation) A disposition b is a realizable entity such that if b ceases to exist then its bearer is physically changed & b's realization occurs when and because this bearer is in some special physical circumstances & this realization occurs in virtue of the bearer's physical make-up"@en ;
+    skos:example "An atom of element X has the disposition to decay to an atom of element Y; the cell wall is disposed to transport cellular material through endocytosis and exocytosis; certain people have a predisposition to colon cancer; children are innately disposed to categorize objects in certain ways"@en .
+
+obo:BFO_0000027 a owl:Class ;
+    rdfs:label "object aggregate"@en ;
+    dc:identifier "025-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000040 ;
+    skos:definition "(Elucidation) An object aggregate is a material entity consisting exactly of a plurality (≥1) of objects as member parts which together form a unit"@en ;
+    skos:example "The aggregate of the musicians in a symphony orchestra and their instruments; the aggregate of bearings in a constant velocity axle joint; the nitrogen atoms in the atmosphere; a collection of cells in a blood biobank"@en ;
+    skos:scopeNote "'Exactly' means that there are no parts of the object aggregate other than its member parts."^^xsd:string,
+        "The unit can, at certain times, consist of exactly one object, for example, when a wolf litter loses all but one of its pups, but it must at some time have a plurality of member parts."^^xsd:string .
+
+obo:BFO_0000029 a owl:Class ;
+    rdfs:label "site"@en ;
+    dc:identifier "034-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000141 ;
+    skos:definition "(Elucidation) A site is a three-dimensional immaterial entity whose boundaries either (partially or wholly) coincide with the boundaries of one or more material entities or have locations determined in relation to some material entity"@en ;
+    skos:example "A hole in a portion of cheese; a rabbit hole; the Grand Canyon; the Piazza San Marco; the kangaroo-joey-containing hole of a kangaroo pouch; your left nostril (a fiat part - the opening - of your left nasal cavity); the lumen of your gut; the hold of a ship; the interior of the trunk of your car; hole in an engineered floor joist"@en .
+
+obo:BFO_0000030 a owl:Class ;
+    rdfs:label "object"@en ;
+    dc:identifier "024-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000040 ;
+    skos:definition "(Elucidation) An object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en ;
+    skos:example "An organism; a fish tank; a planet; a laptop; a valve; a block of marble; an ice cube"@en ;
+    skos:scopeNote "A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User Guide"@en .
+
+obo:BFO_0000034 a owl:Class ;
+    rdfs:label "function"@en ;
+    dc:identifier "064-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000016 ;
+    skos:definition "(Elucidation) A function is a disposition that exists in virtue of its bearer's physical make-up & this physical make-up is something the bearer possesses because it came into being either through evolution (in the case of natural biological entities) or through intentional design (in the case of artefacts) in order to realize processes of a certain sort"@en ;
+    skos:example "The function of a hammer to drive in nails; the function of a heart pacemaker to regulate the beating of a heart through electricity"@en .
+
+obo:BFO_0000056 a owl:ObjectProperty ;
+    rdfs:label "participates in"@en ;
+    dc:identifier "250-BFO"^^xsd:string ;
+    rdfs:range obo:BFO_0000015 ;
+    owl:inverseOf obo:BFO_0000057 ;
+    skos:definition "(Elucidation) participates in holds between some b that is either a specifically dependent continuant or generically dependent continuant or independent continuant that is not a spatial region & some process p such that b participates in p some way"@en ;
+    skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+obo:BFO_0000059 a owl:ObjectProperty ;
+    rdfs:label "concretizes"@en ;
+    dc:identifier "256-BFO"^^xsd:string ;
+    rdfs:range obo:BFO_0000031 ;
+    skos:definition "b concretizes c =Def b is a process or a specifically dependent continuant & c is a generically dependent continuant & there is some time t such that c is the pattern or content which b shares at t with actual or potential copies"@en ;
+    skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+obo:BFO_0000084 a owl:ObjectProperty ;
+    rdfs:label "generically depends on"@en ;
+    dc:identifier "252-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000031 ;
+    owl:inverseOf obo:BFO_0000101 ;
+    skos:altLabel "g-depends on"@en ;
+    skos:definition "b generically depends on c =Def b is a generically dependent continuant & c is an independent continuant that is not a spatial region & at some time t there inheres in c a specifically dependent continuant which concretizes b at t"@en ;
+    skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+obo:BFO_0000129 a owl:ObjectProperty ;
+    rdfs:label "member part of"@en ;
+    dc:identifier "228-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000040 ;
+    rdfs:range obo:BFO_0000040 ;
+    rdfs:subPropertyOf obo:BFO_0000176 ;
+    skos:definition "b member part of c =Def b is an object & c is a material entity & there is some time t such that b continuant part of c at t & there is a mutually exhaustive and pairwise disjoint partition of c into objects x1, ..., xn (for some n ≠ 1) with b = xi (for some 1 <= i <= n)"@en ;
+    skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+obo:BFO_0000132 a owl:ObjectProperty,
+        owl:TransitiveProperty ;
+    rdfs:label "occurrent part of"@en ;
+    dc:identifier "003-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000003 ;
+    rdfs:range obo:BFO_0000003 ;
+    skos:definition "(Elucidation) occurrent part of is a relation between occurrents b and c when b is part of c"@en ;
+    skos:example "Mary's 5th birthday is an occurrent part of Mary's life; the first set of the tennis match is an occurrent part of the tennis match"@en .
+
+obo:BFO_0000176 a owl:ObjectProperty ;
+    rdfs:label "continuant part of"@en ;
+    dc:identifier "221-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000002 ;
+    rdfs:range obo:BFO_0000002 ;
+    owl:inverseOf obo:BFO_0000178 ;
+    skos:definition "b continuant part of c =Def b and c are continuants & there is some time t such that b and c exist at t & b continuant part of c at t"@en ;
+    skos:example "Milk teeth continuant part of human; surgically removed tumour continuant part of organism"@en ;
+    skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+obo:BFO_0000194 a owl:ObjectProperty ;
+    rdfs:label "specifically depended on by"@en ;
+    dc:identifier "260-BFO"^^xsd:string ;
+    rdfs:range obo:BFO_0000020 ;
+    owl:inverseOf obo:BFO_0000195 ;
+    skos:altLabel "s-depended on by"@en ;
+    skos:definition "b specifically depended on by c =Def c specifically depends on b"@en ;
+    skos:example "Coloured object specifically depended on by colour"@en .
+
+obo:BFO_0000197 a owl:ObjectProperty ;
+    rdfs:label "inheres in"@en ;
+    dc:identifier "051-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000020 ;
+    rdfs:subPropertyOf obo:BFO_0000195 ;
+    skos:definition "b inheres in c =Def b is a specifically dependent continuant & c is an independent continuant that is not a spatial region & b specifically depends on c"@en ;
+    skos:example "A shape inheres in a shaped object; a mass inheres in a material entity"@en .
+
+cco:ont00000005 a owl:Class ;
+    rdfs:label "Act"@en ;
+    rdfs:subClassOf obo:BFO_0000015 ;
+    skos:definition "A Process in which at least one Agent plays a causative role."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+cco:ont00000056 a owl:Class ;
+    rdfs:label "Reaction Engine"@en ;
+    rdfs:subClassOf cco:ont00000210 ;
+    skos:altLabel "Reaction Motor"@en ;
+    skos:definition "An Engine that provides propulsion by expelling Reaction Mass."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Reaction_engine&oldid=1046981784"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00000210 a owl:Class ;
+    rdfs:label "Engine"@en ;
+    rdfs:subClassOf cco:ont00000995 ;
+    skos:altLabel "Motor"@en ;
+    skos:definition "A Material Artifact that is designed to convert one form of energy into mechanical energy."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Engine&oldid=1063879193"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00000323 a owl:Class ;
+    rdfs:label "Artifact Function"@en ;
+    rdfs:subClassOf obo:BFO_0000034 ;
+    skos:definition "A Function that inheres in some Artifact in virtue of that Artifact being designed to be used in processes that require that Function to be realized."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00000472 a owl:Class ;
+    rdfs:label "Geospatial Region"@en ;
+    rdfs:subClassOf obo:BFO_0000029 ;
+    skos:definition "A Site that is at or near the surface of the Earth."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/GeospatialOntology"^^xsd:anyURI .
+
+cco:ont00000551 a owl:Class ;
+    rdfs:label "Organism"@en ;
+    rdfs:subClassOf obo:BFO_0000030 ;
+    skos:definition "An Object that is an Animal or Plant."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+cco:ont00000562 a owl:Class ;
+    rdfs:label "Animal"@en ;
+    rdfs:subClassOf cco:ont00000551 ;
+    skos:definition "An Organism that is multicellular, eukaryotic, heterotrophic, and capable of motility for part of its life."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Animal&oldid=1063873549"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+cco:ont00000649 a owl:Class ;
+    rdfs:label "Non-Name Identifier"@en ;
+    rdfs:subClassOf cco:ont00000686 ;
+    skos:altLabel "ID"@en,
+        "Identifier"@en ;
+    skos:definition "A Designative Information Content Entity that consists of a string of characters that designates an entity within a specified namespace or context, is not a Designative Name, may be automatically or randomly generated, and typically has no preexisting cultural or social significance."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000686 a owl:Class ;
+    rdfs:label "Designative Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00000958 ;
+    owl:disjointWith cco:ont00000853,
+        cco:ont00000965 ;
+    skos:altLabel "Designative ICE"@en ;
+    skos:definition "An Information Content Entity that consists of a set of symbols that denote some Entity."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000713 a owl:Class ;
+    rdfs:label "Vehicle"@en ;
+    rdfs:subClassOf cco:ont00000995 ;
+    skos:definition "A Material Artifact that is designed to facilitate the movement of material entities from one location to another by conveying them there."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Vehicle&oldid=1063682179"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00000745 a owl:Class ;
+    rdfs:label "Point Estimate Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00001176 ;
+    skos:altLabel "Best Estimate"@en,
+        "Point Estimate"@en,
+        "Point Estimate Measurement Information Content Entity"@en ;
+    skos:definition "An Estimate Information Content Entity that consists of a single value for the measured entity."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000969 a owl:Class ;
+    rdfs:label "Measurement Unit of Speed"@en ;
+    rdfs:subClassOf cco:ont00000120 ;
+    skos:definition "A Measurement Unit that is used as a standard for measurement of the rates at which objects traverse distance."@en ;
+    skos:example "miles per hour, kilometers per hour, knot, mach"^^xsd:string ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/UnitsOfMeasureOntology"^^xsd:anyURI .
+
+cco:ont00001022 a owl:Class ;
+    rdfs:label "Ratio Measurement Information Content Entity"@en ;
+    rdfs:comment "Four of the subtypes of measurements used here (Interval, Nominal, Ordinal, and Ratio) were originally defined by S.S. Stevens in the article \"On the Theory of Scales of Measurement\" in Science, Vol. 103 No. 2684 on June 7, 1946. For an introductory article with links to additional content including criticisms and alternate classifications of measurements see https://en.wikipedia.org/wiki/Level_of_measurement"@en ;
+    rdfs:subClassOf cco:ont00001163 ;
+    owl:disjointWith cco:ont00001364 ;
+    skos:definition "A Measurement Information Content Entity that consists of a symbol that places a Quality of an Entity onto an interval scale having a true zero value."@en ;
+    skos:example "a measurement of the barometric pressure at 1,000 feet above sea level"^^xsd:string,
+        "a measurement of the measure of air temperature on the Kelvin scale"^^xsd:string,
+        "a measurement of the number of members in an Organization"^^xsd:string,
+        "The sentence \"The temperature reached 240.372 degrees Kelvin on January 20, 1985 in Chicago, IL.\" is the carrier of a ratio measurement as 0 degrees on the Kelvin scale does describe absolute zero."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001152 a owl:Class ;
+    rdfs:label "Government Domain"@en ;
+    rdfs:subClassOf cco:ont00001203 ;
+    skos:definition "A Delimiting Domain that delimits the authority of a Government to exercise its control within the bounded area."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+cco:ont00001176 a owl:Class ;
+    rdfs:label "Estimate Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00001163 ;
+    skos:altLabel "Estimate"@en,
+        "Estimate Measurement Information Content Entity"@en,
+        "Estimated Value"@en ;
+    skos:definition "A Measurement Information Content Entity that is a measurement of an entity based on partial information about that entity or an appropriately similar entity."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001203 a owl:Class ;
+    rdfs:label "Delimiting Domain"@en ;
+    dcterms:created "2022-12-30T21:32:27-05:00"^^xsd:dateTime ;
+    dcterms:creator "https://cubrc.org"^^xsd:anyURI ;
+    rdfs:subClassOf cco:ont00000472 ;
+    skos:definition "A Geospatial Region that delimits the authority of an Organization to exercise its control within the bounded area."@en ;
+    skos:prefLabel "Delimiting Domain"@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+cco:ont00001353 a owl:Class ;
+    rdfs:label "Speed Artifact Function"@en ;
+    rdfs:subClassOf cco:ont00000448 ;
+    skos:definition "A Motion Artifact Function that is realized in some process in which its bearer has some speed."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00001917 a owl:ObjectProperty ;
+    rdfs:label "described by"@en ;
+    rdfs:range cco:ont00000853 ;
+    rdfs:subPropertyOf cco:ont00001801 ;
+    owl:inverseOf cco:ont00001982 ;
+    skos:definition "x described_by y iff y is an instance of Information Content Entity, and x is an instance of Entity, such that y is about the characteristics by which y can be recognized or visualized."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001942 a owl:ObjectProperty ;
+    rdfs:label "prescribes"@en ;
+    rdfs:domain cco:ont00000965 ;
+    rdfs:subPropertyOf cco:ont00001808 ;
+    skos:definition "x prescribes y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x serves as a rule or guide for y if y an Occurrent, or x serves as a model for y if y is a Continuant."@en ;
+    skos:example "A blueprint prescribes some artifact or facility by being a model for it."^^xsd:string,
+        "A professional code of conduct prescribes some realizations of a profession (role) by giving rules for how the bearer should act in those realizations."^^xsd:string,
+        "An operations plan prescribes an operation by enumerating the tasks that need to be performed in order to achieve the objectives of the operation."^^xsd:string ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001961 a owl:ObjectProperty ;
+    rdfs:label "is measurement unit of"@en ;
+    rdfs:domain cco:ont00000120 ;
+    rdfs:range cco:ont00000253 ;
+    rdfs:subPropertyOf obo:BFO_0000084 ;
+    skos:definition "x is_measurement_unit_of y iff y is an instance of Information Bearing Entity and x is an instance of Measurement Unit, such that x describes the magnitude of measured physical quantity mentioned in y."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001966 a owl:ObjectProperty ;
+    rdfs:label "is a measurement of"@en ;
+    rdfs:comment "This object property, as well as all of its children are typified as functional properties. This means that for instances x, y, and z if x is a measurement of y and x is a measurement of z, then y = z."@en ;
+    rdfs:domain cco:ont00001163 ;
+    rdfs:subPropertyOf cco:ont00001982 ;
+    skos:definition "x is_a_measurement_of y iff x is an instance of Information Content Entity and y is an instance of Entity, such that x describes some attribute of y relative to some scale or classification scheme."@en ;
+    skos:scopeNote "Given a stronger temporal interpretation, this property may be functional. For more info please refer to https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/temporal%20extensions."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001986 a owl:ObjectProperty ;
+    rdfs:label "has output"@en ;
+    rdfs:domain obo:BFO_0000015 ;
+    rdfs:range obo:BFO_0000002 ;
+    rdfs:subPropertyOf obo:BFO_0000057 ;
+    skos:definition "y has_output x iff x is an instance of Continuant and y is an instance of Process, such that the presence of x at the end of y is a necessary condition for the completion of y."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=IPO_model&oldid=1024398398"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ExtendedRelationOntology"^^xsd:anyURI .
+
+obo:BFO_0000004 a owl:Class ;
+    rdfs:label "independent continuant"@en ;
+    dc:identifier "017-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000002 ;
+    skos:definition "b is an independent continuant =Def b is a continuant & there is no c such that b specifically depends on c or b generically depends on c"@en ;
+    skos:example "An atom; a molecule; an organism; a heart; a chair; the bottom right portion of a human torso; a leg; the interior of your mouth; a spatial region; an orchestra"@en .
+
+obo:BFO_0000019 a owl:Class ;
+    rdfs:label "quality"@en ;
+    dc:identifier "055-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000020 ;
+    skos:definition "(Elucidation) A quality is a specifically dependent continuant that, in contrast to roles and dispositions, does not require any further process in order to be realized"@en ;
+    skos:example "The colour of a tomato; the ambient temperature of this portion of air; the length of the circumference of your waist; the shape of your nose; the shape of your nostril; the mass of this piece of gold"@en .
+
+obo:BFO_0000023 a owl:Class ;
+    rdfs:label "role"@en ;
+    dc:identifier "061-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000017 ;
+    skos:altLabel "externally-grounded realizable entity"@en ;
+    skos:definition "(Elucidation) A role b is a realizable entity such that b exists because there is some single bearer that is in some special physical, social, or institutional set of circumstances in which this bearer does not have to be & b is not such that, if it ceases to exist, then the physical make-up of the bearer is thereby changed"@en ;
+    skos:example "The priest role; the student role; the role of subject in a clinical trial; the role of a stone in marking a property boundary; the role of a boundary to demarcate two neighbouring administrative territories; the role of a building in serving as a military target"@en .
+
+obo:BFO_0000057 a owl:ObjectProperty ;
+    rdfs:label "has participant"@en ;
+    dc:identifier "248-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000015 ;
+    skos:definition "p has participant c =Def c participates in p"@en ;
+    skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+obo:BFO_0000101 a owl:ObjectProperty ;
+    rdfs:label "is carrier of"@en ;
+    dc:identifier "254-BFO"^^xsd:string ;
+    rdfs:range obo:BFO_0000031 ;
+    skos:definition "b is carrier of c =Def there is some time t such that c generically depends on b at t"@en ;
+    skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+obo:BFO_0000141 a owl:Class ;
+    rdfs:label "immaterial entity"@en ;
+    dc:identifier "028-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000004 ;
+    skos:definition "b is an immaterial entity =Def b is an independent continuant which is such that there is no time t when it has a material entity as continuant part"@en ;
+    skos:example "As for fiat point, fiat line, fiat surface, site"@en .
+
+obo:BFO_0000178 a owl:ObjectProperty ;
+    rdfs:label "has continuant part"@en ;
+    dc:identifier "271-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000002 ;
+    rdfs:range obo:BFO_0000002 ;
+    skos:definition "b has continuant part c =Def c continuant part of b"@en ;
+    skos:scopeNote "Users that require more sophisticated representations of time are encouraged to import a temporal extension of BFO-Core provided by the BFO development team. See documentation for guidance: <https://github.com/BFO-ontology/BFO-2020/tree/master/src/owl/profiles/temporal%20extensions>"@en .
+
+obo:BFO_0000195 a owl:ObjectProperty ;
+    rdfs:label "specifically depends on"@en ;
+    dc:identifier "012-BFO"^^xsd:string ;
+    rdfs:domain obo:BFO_0000020 ;
+    skos:altLabel "s-depends on"@en ;
+    skos:definition "(Elucidation) specifically depends on is a relation between a specifically dependent continuant b and specifically dependent continuant or independent continuant that is not a spatial region c such that b and c share no parts in common & b is of a nature such that at all times t it cannot exist unless c exists & b is not a boundary of c"@en ;
+    skos:example "A shape specifically depends on the shaped object; hue, saturation and brightness of a colour sample specifically depends on each other"@en ;
+    skos:scopeNote "The analogue of specifically depends on for occurrents is has participant."@en .
+
+cco:ont00000228 a owl:Class ;
+    rdfs:label "Planned Act"@en ;
+    rdfs:subClassOf cco:ont00000005 ;
+    skos:altLabel "Intentional Act"@en ;
+    skos:definition "An Act in which at least one Agent plays a causative role and which is prescribed by some Directive Information Content Entity held by at least one of the Agents."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/EventOntology"^^xsd:anyURI .
+
+cco:ont00000300 a owl:Class ;
+    rdfs:label "Group of Agents"@en ;
+    rdfs:subClassOf obo:BFO_0000027 ;
+    skos:definition "An Object Aggregate that has only Agents as parts."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/AgentOntology"^^xsd:anyURI .
+
+cco:ont00000448 a owl:Class ;
+    rdfs:label "Motion Artifact Function"@en ;
+    rdfs:subClassOf cco:ont00000323 ;
+    skos:definition "An Artifact Function that is realized in a process in which an entity changes its position with respect to time."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/wiki/Motion_(physics)"^^xsd:string ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00001801 a owl:ObjectProperty ;
+    rdfs:label "is subject of"@en ;
+    rdfs:range cco:ont00000958 ;
+    owl:inverseOf cco:ont00001808 ;
+    skos:definition "A primitive relationship between an instance of an Entity and an instance of an Information Content Entity."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001982 a owl:ObjectProperty ;
+    rdfs:label "describes"@en ;
+    rdfs:comment "It is possible that this relation should be a functional property, that is for all x, y, z if x describes y and x describes z then y = z. For example, if a financial report x describes the quarterly results of a company y and that same financial report describes the quarterly results of a company z, then it should be inferred that companies y and z are the same. We refrained from classifying the relation as a functional property on the concern that descriptions are multifaceted and so consequently it may be that the same report would contain descriptions of multiple entities."@en ;
+    rdfs:domain cco:ont00000853 ;
+    rdfs:subPropertyOf cco:ont00001808 ;
+    skos:definition "x describes y iff x is an instance of Information Content Entity, and y is an instance of Entity, such that x is about the characteristics by which y can be recognized or visualized."@en ;
+    skos:example "the content of a newspaper article describes some current event"^^xsd:string,
+        "the content of a visitor's log describes some facility visit"^^xsd:string,
+        "the content of an accident report describes some accident"^^xsd:string ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+obo:BFO_0000001 a owl:Class ;
+    rdfs:label "entity"@en ;
+    dc:identifier "001-BFO"^^xsd:string ;
+    skos:definition "(Elucidation) An entity is anything that exists or has existed or will exist"@en ;
+    skos:example "Julius Caesar; the Second World War; your body mass index; Verdi's Requiem"@en .
+
+obo:BFO_0000017 a owl:Class ;
+    rdfs:label "realizable entity"@en ;
+    dc:identifier "058-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000020 ;
+    owl:disjointWith obo:BFO_0000019 ;
+    skos:definition "(Elucidation) A realizable entity is a specifically dependent continuant that inheres in some independent continuant which is not a spatial region & which is of a type some instances of which are realized in processes of a correlated type"@en ;
+    skos:example "The role of being a doctor; the role of this boundary to delineate where Utah and Colorado meet; the function of your reproductive organs; the disposition of your blood to coagulate; the disposition of this piece of metal to conduct electricity"@en .
+
+cco:ont00000120 a owl:Class ;
+    rdfs:label "Measurement Unit"@en ;
+    rdfs:subClassOf cco:ont00000853 ;
+    skos:definition "A Descriptive Information Content Entity that describes a definite magnitude of a physical quantity, defined and adopted by convention and/or by law, that is used as a standard for measurement of the same physical quantity."@en ;
+    cco:ont00001754 "https://en.wikipedia.org/w/index.php?title=Unit_of_measurement&oldid=1061038125"^^xsd:anyURI ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000995 a owl:Class ;
+    rdfs:label "Material Artifact"@en ;
+    rdfs:subClassOf obo:BFO_0000040 ;
+    skos:definition "A Material Entity that was designed by some Agent to realize a certain Function."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/ArtifactOntology"^^xsd:anyURI .
+
+cco:ont00001808 a owl:ObjectProperty ;
+    rdfs:label "is about"@en ;
+    rdfs:domain cco:ont00000958 ;
+    rdfs:range obo:BFO_0000001 ;
+    skos:definition "A primitive relationship between an Information Content Entity and some Entity."@en ;
+    cco:ont00001754 "http://purl.obolibrary.org/obo/IAO_0000136"^^xsd:string ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00001163 a owl:Class ;
+    rdfs:label "Measurement Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00000853 ;
+    skos:altLabel "Measurement ICE"@en ;
+    skos:definition "A Descriptive Information Content Entity that describes the extent, dimensions, quantity, or quality of an Entity relative to some standard."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+obo:BFO_0000031 a owl:Class ;
+    rdfs:label "generically dependent continuant"@en ;
+    dc:identifier "074-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000002 ;
+    skos:altLabel "g-dependent continuant"@en ;
+    skos:definition "(Elucidation) A generically dependent continuant is an entity that exists in virtue of the fact that there is at least one of what may be multiple copies which is the content or the pattern that multiple copies would share"@en ;
+    skos:example "The pdf file on your laptop; the pdf file that is a copy thereof on my laptop; the sequence of this protein molecule; the sequence that is a copy thereof in that protein molecule; the content that is shared by a string of dots and dashes written on a page and the transmitted Morse code signal; the content of a sentence; an engineering blueprint"@en .
+
+cco:ont00000853 a owl:Class ;
+    rdfs:label "Descriptive Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00000958 ;
+    owl:disjointWith cco:ont00000965 ;
+    skos:altLabel "Descriptive ICE"@en ;
+    skos:definition "An Information Content Entity that consists of a set of propositions that describe some Entity."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+cco:ont00000958 a owl:Class ;
+    rdfs:label "Information Content Entity"@en ;
+    rdfs:subClassOf obo:BFO_0000031 ;
+    skos:altLabel "ICE"@en ;
+    skos:definition "A Generically Dependent Continuant that generically depends on some Information Bearing Entity and stands in relation of aboutness to some Entity."@en ;
+    skos:scopeNote "Information Content Entity is here intended to be a class of Entities whose instances are the informational content of Information Bearing Entities. For example, three instances of information bearers -- such as a bar chart, color-coded map, and a written report -- each of which lists the GDP of Countries for the year 2010 are each different carriers of the same information content. It is this content that is generically dependent upon its carrier. This treatment of Informational Content Entity (cf. the Information Artifact Ontology) leads to a principle of subtyping based upon the relationship that ICE's have with the Entity they are about rather than characteristics such as format, language, measurement scale, or media. The latter are treated here as being Qualities of bearers."@en ;
+    cco:ont00001754 "http://purl.obolibrary.org/obo/IAO_0000030"^^xsd:string ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+obo:BFO_0000003 a owl:Class ;
+    rdfs:label "occurrent"@en ;
+    dc:identifier "077-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000001 ;
+    skos:definition "(Elucidation) An occurrent is an entity that unfolds itself in time or it is the start or end of such an entity or it is a temporal or spatiotemporal region"@en ;
+    skos:example "As for process, history, process boundary, spatiotemporal region, zero-dimensional temporal region, one-dimensional temporal region, temporal interval, temporal instant."@en .
+
+obo:BFO_0000015 a owl:Class ;
+    rdfs:label "process"@en ;
+    dc:identifier "083-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000003 ;
+    skos:altLabel "event"@en ;
+    skos:definition "(Elucidation) p is a process means p is an occurrent that has some temporal proper part and for some time t, p has some material entity as participant"@en ;
+    skos:example "An act of selling; the life of an organism; a process of sleeping; a process of cell-division; a beating of the heart; a process of meiosis; the taxiing of an aircraft; the programming of a computer"@en .
+
+obo:BFO_0000020 a owl:Class ;
+    rdfs:label "specifically dependent continuant"@en ;
+    dc:identifier "050-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000002 ;
+    skos:definition "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b specifically depends on c"@en ;
+    skos:example "(with multiple bearers) John's love for Mary; the ownership relation between John and this statue; the relation of authority between John and his subordinates"@en,
+        "(with one bearer) The mass of this tomato; the pink colour of a medium rare piece of grilled filet mignon at its centre; the smell of this portion of mozzarella; the disposition of this fish to decay; the role of being a doctor; the function of this heart to pump blood; the shape of this hole"@en .
+
+cco:ont00000965 a owl:Class ;
+    rdfs:label "Directive Information Content Entity"@en ;
+    rdfs:subClassOf cco:ont00000958 ;
+    skos:altLabel "Directive ICE"@en ;
+    skos:definition "An Information Content Entity that consists of a set of propositions or images (as in the case of a blueprint) that prescribe some Entity."@en ;
+    cco:ont00001760 "https://www.commoncoreontologies.org/InformationEntityOntology"^^xsd:anyURI .
+
+obo:BFO_0000040 a owl:Class ;
+    rdfs:label "material entity"@en ;
+    dc:identifier "019-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000004 ;
+    owl:disjointWith obo:BFO_0000141 ;
+    skos:definition "(Elucidation) A material entity is an independent continuant has some portion of matter as continuant part"@en ;
+    skos:example "A human being; the undetached arm of a human being; an aggregate of human beings"@en .
+
+obo:BFO_0000002 a owl:Class ;
+    rdfs:label "continuant"@en ;
+    dc:identifier "008-BFO"^^xsd:string ;
+    rdfs:subClassOf obo:BFO_0000001 ;
+    owl:disjointWith obo:BFO_0000003 ;
+    skos:definition "(Elucidation) A continuant is an entity that persists, endures, or continues to exist through time while maintaining its identity"@en ;
+    skos:example "A human being; a tennis ball; a cave; a region of space; someone's temperature"@en .
+

@@ -1,0 +1,356 @@
+@prefix ex:   <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p2/> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# ================= Task 1: Airbus A320 NEO =================
+
+# --- The plane (representative airframe) ---
+ex:A320NEO a cco:ont00001043 ;                       # Aircraft
+    rdfs:label "Airbus A320 NEO"@en ;
+    skos:definition "A representative Airbus A320neo airframe, standing in for the aircraft described in the FAA aircraft characteristics row for this model."@en ;
+    obo:BFO_0000178 ex:A320NEO_Engine1 , ex:A320NEO_Engine2 , ex:A320NEO_Wing ;   # has continuant part
+    ex:hasManufacturer ex:Airbus ;
+    ex:hasModelBADA "Airbus A320-271N"^^xsd:string ;
+    ex:hasModelFAA  "Airbus A320 Neo"^^xsd:string ;
+    ex:hasLengthFt  "123.3"^^xsd:decimal ;
+    ex:hasTailHeightFt "39.6"^^xsd:decimal .
+
+ex:A320NEO_Engine1 a cco:ont00000533 ;               # Jet Engine
+    rdfs:label "A320 NEO Engine 1"@en ;
+    skos:definition "The first of the two jet engines of the representative A320 NEO."@en ;
+    obo:BFO_0000196 ex:A320NEO_Engine1_Propulsion .  # bearer of
+
+ex:A320NEO_Engine2 a cco:ont00000533 ;
+    rdfs:label "A320 NEO Engine 2"@en ;
+    skos:definition "The second of the two jet engines of the representative A320 NEO."@en ;
+    obo:BFO_0000196 ex:A320NEO_Engine2_Propulsion .
+
+ex:A320NEO_Engine1_Propulsion a cco:ont00001252 ;    # Propulsion Artifact Function
+    rdfs:label "A320 NEO Engine 1 propulsion function"@en ;
+    skos:definition "The propulsion function borne by A320 NEO Engine 1."@en .
+
+ex:A320NEO_Engine2_Propulsion a cco:ont00001252 ;
+    rdfs:label "A320 NEO Engine 2 propulsion function"@en ;
+    skos:definition "The propulsion function borne by A320 NEO Engine 2."@en .
+
+ex:A320NEO_Wing a ex:FixedWing ;
+    rdfs:label "A320 NEO fixed wing"@en ;
+    skos:definition "The fixed wing of the representative A320 NEO."@en .
+
+ex:Airbus a cco:ont00001180 ;                        # Organization
+    rdfs:label "Airbus"@en ;
+    skos:definition "The aerospace company Airbus SE, recorded as manufacturer in the FAA aircraft data."@en .
+
+# --- The design (GDC), its carrier, and what it prescribes ---
+ex:A320NEO_Design a cco:ont00000319 ;                # Artifact Design
+    rdfs:label "A320 NEO Design"@en ;
+    skos:definition "The Artifact Design for the Airbus A320neo aircraft type."@en ;
+    cco:ont00001942 ex:A320NEO ,                     # prescribes
+                    ex:A320NEO_Engine1_Propulsion , ex:A320NEO_Engine2_Propulsion ;
+    obo:BFO_0000058 ex:A320NEO_SpecPattern .         # is concretized by
+
+ex:A320NEO_SpecDocument a cco:ont00000798 ;          # Information Bearing Artifact
+    rdfs:label "A320 NEO Specification Document"@en ;
+    skos:definition "The document (physical or digital) that carries the A320neo design."@en ;
+    obo:BFO_0000196 ex:A320NEO_SpecPattern .         # bearer of
+
+ex:A320NEO_SpecPattern a cco:ont00000314 ;           # Information Quality Entity
+    rdfs:label "A320 NEO specification pattern"@en ;
+    skos:definition "The pattern of marks in the A320 NEO Specification Document that concretizes the A320 NEO Design."@en ;
+    obo:BFO_0000059 ex:A320NEO_Design .              # concretizes
+
+# ================= Task 1 (full): remaining columns =================
+
+# --- Plane: class membership, physical makeup, per-plane classifications ---
+ex:A320NEO a ex:A320neoAircraft ;
+    ex:hasWingspanWithWingletsFt "117.5"^^xsd:decimal ;
+    ex:hasWheelbaseFt            "41.5"^^xsd:decimal ;
+    ex:hasCockpitToMainGearFt    "50.2"^^xsd:decimal ;
+    ex:hasMainGearWidthFt        "29.4"^^xsd:decimal ;
+    ex:hasParkingAreaFt2         "16358.3"^^xsd:decimal ;
+    ex:hasNumEngines             "2"^^xsd:integer ;
+    ex:hasMainGearConfig         "D"^^xsd:string ;
+    ex:hasPhysicalClassEngine    "Jet"^^xsd:string ;
+    ex:hasAircraftClass          "Fixed-wing"^^xsd:string ;
+    ex:hasAAC                    "C"^^xsd:string ;
+    ex:hasADG                    "III"^^xsd:string ;
+    ex:hasTDG                    "3"^^xsd:string ;
+    ex:hasICAOWTC                "Medium"^^xsd:string ;
+    ex:hasFAAWeightClass         "Large"^^xsd:string ;
+    ex:hasCWT                    "F"^^xsd:string ;
+    ex:hasOneHalfWakeCategory    "D"^^xsd:string ;
+    ex:hasTwoWakeCategoryAppxA   "D"^^xsd:string ;
+    ex:hasTwoWakeCategoryAppxB   "C"^^xsd:string ;
+    ex:hasSRS                    "III"^^xsd:string ;
+    ex:hasLAHSO                  "7"^^xsd:string .
+
+[] a owl:AllDifferent ;
+    owl:distinctMembers ( ex:A320NEO_Engine1 ex:A320NEO_Engine2 ) .
+
+# --- Design: limits it prescribes, designators, record remarks ---
+ex:A320NEO_Design
+    ex:prescribesMTOWLb           "174165"^^xsd:decimal ;
+    ex:prescribesMALWLb           "148591"^^xsd:decimal ;
+    ex:prescribesApproachSpeedKnot "137"^^xsd:decimal ;
+    ex:hasICAOCode                "A20N"^^xsd:string ;
+    ex:hasFAADesignator           "A20N"^^xsd:string ;
+    ex:hasRemarks                 "AAC validated by Flight Standardization Board (FSB) report."^^xsd:string .
+
+# --- Fleet: collective facts ---
+ex:A320NEO_Fleet a ex:A320neoFleet ;
+    rdfs:label "A320 NEO Fleet"@en ;
+    skos:definition "The aggregate of all A320neo aircraft on the FAA registry."@en ;
+    obo:BFO_0000115 ex:A320NEO ;                     # has member part
+    ex:hasRegistrationCount  "147"^^xsd:integer ;
+    ex:hasTMFSOperationsFY24 "540276"^^xsd:integer ;
+    ex:isOnFAARegistry       "true"^^xsd:boolean .
+
+# ======================= Task 2: Airbus A321-111 =======================
+
+# --- The design and its directive content (what SHOULD be) ---
+ex:A321_111_Design a cco:ont00000319 ;                     # Artifact Design
+    rdfs:label "Airbus A321-111"@en ;
+    skos:definition "The Artifact Design for the Airbus A321-111 aircraft type."@en ;
+    obo:BFO_0000178 ex:A321_111_MaxApproachSpeedSpec ;      # has continuant part
+    cco:ont00001942 ex:A321_111_MaxApproachSpeedFunction ,  # prescribes
+                    ex:A321_111_TestAircraft .
+
+ex:A321_111_MaxApproachSpeedSpec a cco:ont00000127 ;       # Performance Specification
+    rdfs:label "A321-111 maximum approach speed specification"@en ;
+    skos:definition "The part of the A321-111 design that prescribes a maximum approach speed of 142 knots at maximum allowable landing weight."@en ;
+    cco:ont00001769 "142"^^xsd:decimal ;                    # has decimal value
+    cco:ont00001863 cco:ont00001646 .                       # uses measurement unit -> Knot
+
+cco:ont00001646 cco:ont00001961 ex:A321_111_MaxApproachSpeedSpec ,   # Knot is measurement unit of
+                                ex:A321_111_ApproachSpeedMean .
+
+ex:A321_111_MaxApproachSpeedFunction a cco:ont00001365 ;   # Maximum Speed Artifact Function
+    rdfs:label "A321-111 test aircraft maximum approach speed function"@en ;
+    skos:definition "The function of the A321-111 test aircraft to attain, and not exceed, its prescribed maximum speed during approach."@en ;
+    cco:ont00001920 ex:A321_111_MaxApproachSpeedSpec .      # prescribed by
+
+# --- The tested instance and the test (what WAS) ---
+ex:A321_111_TestAircraft a cco:ont00001043 ;               # Aircraft
+    rdfs:label "A321-111 test aircraft"@en ;
+    skos:definition "An Airbus A321-111 aircraft that participated in the approach test."@en ;
+    obo:BFO_0000196 ex:A321_111_MaxApproachSpeedFunction .  # bearer of
+
+ex:A321_111_ApproachTest a ex:TestProcess ;
+    rdfs:label "A321-111 approach test"@en ;
+    skos:definition "The test in which the A321-111 test aircraft flew five approaches whose maximum speeds were measured."@en ;
+    obo:BFO_0000057 ex:A321_111_TestAircraft .              # has participant
+
+ex:A321_111_Approach1 a ex:ApproachProcess ; rdfs:label "A321-111 test approach 1"@en ;
+    skos:definition "The first approach flown in the A321-111 approach test."@en ;
+    ex:isTemporalPartOf ex:A321_111_ApproachTest ; obo:BFO_0000055 ex:A321_111_MaxApproachSpeedFunction ;
+    ex:hasMaxApproachSpeedKnot "137"^^xsd:decimal .
+ex:A321_111_Approach2 a ex:ApproachProcess ; rdfs:label "A321-111 test approach 2"@en ;
+    skos:definition "The second approach flown in the A321-111 approach test."@en ;
+    ex:isTemporalPartOf ex:A321_111_ApproachTest ; obo:BFO_0000055 ex:A321_111_MaxApproachSpeedFunction ;
+    ex:hasMaxApproachSpeedKnot "138"^^xsd:decimal .
+ex:A321_111_Approach3 a ex:ApproachProcess ; rdfs:label "A321-111 test approach 3"@en ;
+    skos:definition "The third approach flown in the A321-111 approach test."@en ;
+    ex:isTemporalPartOf ex:A321_111_ApproachTest ; obo:BFO_0000055 ex:A321_111_MaxApproachSpeedFunction ;
+    ex:hasMaxApproachSpeedKnot "139"^^xsd:decimal .
+ex:A321_111_Approach4 a ex:ApproachProcess ; rdfs:label "A321-111 test approach 4"@en ;
+    skos:definition "The fourth approach flown in the A321-111 approach test."@en ;
+    ex:isTemporalPartOf ex:A321_111_ApproachTest ; obo:BFO_0000055 ex:A321_111_MaxApproachSpeedFunction ;
+    ex:hasMaxApproachSpeedKnot "140"^^xsd:decimal .
+ex:A321_111_Approach5 a ex:ApproachProcess ; rdfs:label "A321-111 test approach 5"@en ;
+    skos:definition "The fifth approach flown in the A321-111 approach test."@en ;
+    ex:isTemporalPartOf ex:A321_111_ApproachTest ; obo:BFO_0000055 ex:A321_111_MaxApproachSpeedFunction ;
+    ex:hasMaxApproachSpeedKnot "141"^^xsd:decimal .
+
+ex:A321_111_ApproachSpeedMean a cco:ont00000896 ;          # Mean Point Estimate ICE
+    rdfs:label "A321-111 mean maximum approach speed"@en ;
+    skos:definition "The mean of the maximum speeds measured over the five approaches of the A321-111 approach test."@en ;
+    cco:ont00001808 ex:A321_111_ApproachTest ;              # is about
+    cco:ont00001769 "139"^^xsd:decimal ;                    # has decimal value
+    cco:ont00001863 cco:ont00001646 .                       # uses measurement unit -> Knot
+
+# ======================= Task 3: SOC Aerospace Engineer entries =======================
+
+ex:SOC_17_2010 a ex:SOCEntry ;
+    rdfs:label "SOC: 17-2010 Aerospace Engineers"@en ;
+    skos:definition "Broad occupation group in the 2018 SOC containing the detailed occupation 17-2011 Aerospace Engineers. (The SOC source provides no definition for this broad group; this one is supplied from the hierarchy.)"@en ;
+    ex:hasSOCCode "17-2010"^^xsd:string ;
+    ex:hasSOCLevel "Broad"^^xsd:string ;
+    cco:ont00001808 ex:AerospaceEngineerOccupationRole .         # is about
+
+ex:SOC_17_2011 a ex:SOCEntry ;
+    rdfs:label "SOC: 17-2011 Aerospace Engineers"@en ;
+    skos:definition "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques."@en ;
+    ex:hasSOCCode "17-2011"^^xsd:string ;
+    ex:hasSOCLevel "Detailed"^^xsd:string ;
+    skos:broader ex:SOC_17_2010 ;
+    cco:ont00001808 ex:AerospaceEngineerOccupationRole ,          # is about
+                    cco:ont00000319 .                             # Artifact Design (class; punned)
+
+ex:SOC_17_3021 a ex:SOCEntry ;
+    rdfs:label "SOC: 17-3021 Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    skos:definition "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data."@en ;
+    ex:hasSOCCode "17-3021"^^xsd:string ;
+    ex:hasSOCLevel "Detailed"^^xsd:string ;
+    cco:ont00001808 ex:AerospaceTechnicianOccupationRole .        # is about
+
+# --- An engineer doing what SOC 17-2011 describes ---
+ex:Engineer1 a cco:ont00001262 ;                                  # Person
+    rdfs:label "Aerospace Engineer 1"@en ;
+    skos:definition "An illustrative person employed as an aerospace engineer."@en ;
+    obo:BFO_0000196 ex:Engineer1_OccupationRole ,                 # bearer of
+                    ex:Engineer1_AdaptabilityEvaluationRole .
+
+ex:Engineer1_OccupationRole a ex:AerospaceEngineerOccupationRole ;
+    rdfs:label "Aerospace Engineer 1 occupation role"@en ;
+    skos:definition "The aerospace engineer occupation role borne by Aerospace Engineer 1."@en ;
+    obo:BFO_0000197 ex:Engineer1 .                                # inheres in
+
+ex:Engineer1_AdaptabilityEvaluationRole a ex:AdaptabilityEvaluation ;
+    rdfs:label "Aerospace Engineer 1 adaptability evaluation role"@en ;
+    skos:definition "The adaptability evaluation role borne by Aerospace Engineer 1."@en ;
+    obo:BFO_0000197 ex:Engineer1 .                                # inheres in
+
+ex:Engineer1_ProcessingAct a ex:ActOfAircraftProcessing ;
+    rdfs:label "Aerospace Engineer 1 materials test for A320 NEO"@en ;
+    skos:definition "An act in which Aerospace Engineer 1 tests materials and equipment for suitability to the A320 NEO design."@en ;
+    obo:BFO_0000057 ex:Engineer1 ;                                # has participant
+    obo:BFO_0000055 ex:Engineer1_AdaptabilityEvaluationRole .     # realizes
+
+ex:Engineer1_AdaptabilityAssessment a cco:ont00000853 ;           # Descriptive ICE
+    rdfs:label "A320 NEO materials adaptability assessment"@en ;
+    skos:definition "The assessment, produced by Aerospace Engineer 1, of whether tested materials and equipment suit the A320 NEO design."@en ;
+    cco:ont00001816 ex:Engineer1_ProcessingAct ;                  # is output of
+    cco:ont00001808 ex:A320NEO_Design .                           # is about (joins Task 1)
+
+# ======================= Task 4: OEWS May 2024 Aerospace Engineer rows =======================
+
+# --- The area, the survey, and the real populations measured ---
+ex:UnitedStates a cco:ont00000139 ;                               # Domain of a Country
+    rdfs:label "United States"@en ;
+    skos:altLabel "U.S."@en ;
+    skos:definition "The geospatial domain of the United States, used as the area of national OEWS estimates."@en ;
+    ex:hasAreaCode "99"^^xsd:string ;
+    ex:hasAreaType "1"^^xsd:string ;
+    ex:hasPrimaryState "US"^^xsd:string .
+
+ex:OEWS_May2024 a cco:ont00000345 ;                               # Act of Measuring
+    rdfs:label "OEWS May 2024 survey"@en ;
+    skos:definition "The BLS Occupational Employment and Wage Statistics survey producing estimates for May 2024."@en ;
+    cco:ont00001986 ex:TotEmp_17_2010 , ex:TotEmp_17_2011 , ex:TotEmp_17_3021 .   # has output
+
+ex:Pop_Eng a cco:ont00000914 ;                                    # Group of Persons
+    rdfs:label "U.S. aerospace engineers, May 2024"@en ;
+    skos:definition "The group of persons employed as aerospace engineers (SOC 17-2011) in the United States in May 2024. SOC 17-2010 contains only 17-2011, so both OEWS rows measure this same group."@en .
+
+ex:Pop_Tech a cco:ont00000914 ;                                   # Group of Persons
+    rdfs:label "U.S. aerospace engineering technologists and technicians, May 2024"@en ;
+    skos:definition "The group of persons employed as aerospace engineering and operations technologists and technicians (SOC 17-3021) in the United States in May 2024."@en .
+
+ex:TotEmp_17_2010 a ex:TotalEmploymentMeasurement ;
+    rdfs:label "Total Employment"@en ;
+    skos:altLabel "Total Employment, 17-2010, U.S., May 2024"@en ;
+    skos:definition "The OEWS May 2024 count of persons employed in occupation 17-2010 in the United States."@en ;
+    cco:ont00001966 ex:Pop_Eng ;                                  # is a measurement of
+    cco:ont00001773 "68440"^^xsd:integer ;                        # has integer value
+    ex:hasRelativeStandardErrorPct "2.3"^^xsd:decimal .
+
+ex:OCC_17_2010 a ex:OEWSEstimateRecord ;
+    rdfs:label "OCC: 17-2010 Aerospace Engineers"@en ;
+    skos:definition "The OEWS May 2024 national, cross-industry estimate record for occupation 17-2010 (Aerospace Engineers)."@en ;
+    cco:ont00001808 ex:AerospaceEngineerOccupationRole ;          # is about
+    ex:correspondsToSOCEntry ex:SOC_17_2010 ;
+    ex:hasArea ex:UnitedStates ;
+    ex:hasNAICSCode "0"^^xsd:string ;
+    ex:hasNAICSTitle "Cross-industry"^^xsd:string ;
+    ex:hasIndustryGroup "cross-industry"^^xsd:string ;
+    ex:ownCode "1235"^^xsd:string ;
+    ex:hasOCCCode "17-2010"^^xsd:string ;
+    ex:oGroup "broad"^^xsd:string ;
+    ex:hasTotalEmployment ex:TotEmp_17_2010 ;
+    ex:hasHourlyMeanWage "67.88"^^xsd:decimal ;
+    ex:hasAnnualMeanWage "141180"^^xsd:decimal ;
+    ex:hasMeanWageRSEPct "0.8"^^xsd:decimal ;
+    ex:hasHourlyWagePct10 "41.04"^^xsd:decimal ;
+    ex:hasHourlyWagePct25 "50.36"^^xsd:decimal ;
+    ex:hasHourlyWageMedian "64.82"^^xsd:decimal ;
+    ex:hasHourlyWagePct75 "83.88"^^xsd:decimal ;
+    ex:hasHourlyWagePct90 "98.97"^^xsd:decimal ;
+    ex:hasAnnualWagePct10 "85350"^^xsd:decimal ;
+    ex:hasAnnualWagePct25 "104740"^^xsd:decimal ;
+    ex:hasAnnualWageMedian "134830"^^xsd:decimal ;
+    ex:hasAnnualWagePct75 "174480"^^xsd:decimal ;
+    ex:hasAnnualWagePct90 "205850"^^xsd:decimal .
+
+ex:TotEmp_17_2011 a ex:TotalEmploymentMeasurement ;
+    rdfs:label "Total Employment"@en ;
+    skos:altLabel "Total Employment, 17-2011, U.S., May 2024"@en ;
+    skos:definition "The OEWS May 2024 count of persons employed in occupation 17-2011 in the United States."@en ;
+    cco:ont00001966 ex:Pop_Eng ;                                  # is a measurement of
+    cco:ont00001773 "68440"^^xsd:integer ;                        # has integer value
+    ex:hasRelativeStandardErrorPct "2.3"^^xsd:decimal .
+
+ex:OCC_17_2011 a ex:OEWSEstimateRecord ;
+    rdfs:label "OCC: 17-2011 Aerospace Engineers"@en ;
+    skos:definition "The OEWS May 2024 national, cross-industry estimate record for occupation 17-2011 (Aerospace Engineers)."@en ;
+    cco:ont00001808 ex:AerospaceEngineerOccupationRole ;          # is about
+    ex:correspondsToSOCEntry ex:SOC_17_2011 ;
+    ex:hasArea ex:UnitedStates ;
+    ex:hasNAICSCode "0"^^xsd:string ;
+    ex:hasNAICSTitle "Cross-industry"^^xsd:string ;
+    ex:hasIndustryGroup "cross-industry"^^xsd:string ;
+    ex:ownCode "1235"^^xsd:string ;
+    ex:hasOCCCode "17-2011"^^xsd:string ;
+    ex:oGroup "detailed"^^xsd:string ;
+    ex:hasTotalEmployment ex:TotEmp_17_2011 ;
+    ex:hasHourlyMeanWage "67.88"^^xsd:decimal ;
+    ex:hasAnnualMeanWage "141180"^^xsd:decimal ;
+    ex:hasMeanWageRSEPct "0.8"^^xsd:decimal ;
+    ex:hasHourlyWagePct10 "41.04"^^xsd:decimal ;
+    ex:hasHourlyWagePct25 "50.36"^^xsd:decimal ;
+    ex:hasHourlyWageMedian "64.82"^^xsd:decimal ;
+    ex:hasHourlyWagePct75 "83.88"^^xsd:decimal ;
+    ex:hasHourlyWagePct90 "98.97"^^xsd:decimal ;
+    ex:hasAnnualWagePct10 "85350"^^xsd:decimal ;
+    ex:hasAnnualWagePct25 "104740"^^xsd:decimal ;
+    ex:hasAnnualWageMedian "134830"^^xsd:decimal ;
+    ex:hasAnnualWagePct75 "174480"^^xsd:decimal ;
+    ex:hasAnnualWagePct90 "205850"^^xsd:decimal .
+
+ex:TotEmp_17_3021 a ex:TotalEmploymentMeasurement ;
+    rdfs:label "Total Employment"@en ;
+    skos:altLabel "Total Employment, 17-3021, U.S., May 2024"@en ;
+    skos:definition "The OEWS May 2024 count of persons employed in occupation 17-3021 in the United States."@en ;
+    cco:ont00001966 ex:Pop_Tech ;                                 # is a measurement of
+    cco:ont00001773 "9060"^^xsd:integer ;                         # has integer value
+    ex:hasRelativeStandardErrorPct "4.3"^^xsd:decimal .
+
+ex:OCC_17_3021 a ex:OEWSEstimateRecord ;
+    rdfs:label "OCC: 17-3021 Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    skos:definition "The OEWS May 2024 national, cross-industry estimate record for occupation 17-3021 (Aerospace Engineering and Operations Technologists and Technicians)."@en ;
+    cco:ont00001808 ex:AerospaceTechnicianOccupationRole ;        # is about
+    ex:correspondsToSOCEntry ex:SOC_17_3021 ;
+    ex:hasArea ex:UnitedStates ;
+    ex:hasNAICSCode "0"^^xsd:string ;
+    ex:hasNAICSTitle "Cross-industry"^^xsd:string ;
+    ex:hasIndustryGroup "cross-industry"^^xsd:string ;
+    ex:ownCode "1235"^^xsd:string ;
+    ex:hasOCCCode "17-3021"^^xsd:string ;
+    ex:oGroup "detailed"^^xsd:string ;
+    ex:hasTotalEmployment ex:TotEmp_17_3021 ;
+    ex:hasHourlyMeanWage "41.5"^^xsd:decimal ;
+    ex:hasAnnualMeanWage "86330"^^xsd:decimal ;
+    ex:hasMeanWageRSEPct "1.4"^^xsd:decimal ;
+    ex:hasHourlyWagePct10 "25.83"^^xsd:decimal ;
+    ex:hasHourlyWagePct25 "31.04"^^xsd:decimal ;
+    ex:hasHourlyWageMedian "38.38"^^xsd:decimal ;
+    ex:hasHourlyWagePct75 "49.14"^^xsd:decimal ;
+    ex:hasHourlyWagePct90 "57.91"^^xsd:decimal ;
+    ex:hasAnnualWagePct10 "53730"^^xsd:decimal ;
+    ex:hasAnnualWagePct25 "64570"^^xsd:decimal ;
+    ex:hasAnnualWageMedian "79830"^^xsd:decimal ;
+    ex:hasAnnualWagePct75 "102220"^^xsd:decimal ;
+    ex:hasAnnualWagePct90 "120440"^^xsd:decimal .
