@@ -4,3 +4,56 @@
 #    No annotation value may have leading or trailing whitespace.    
 # Severity:
 #    Error 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+# Query to find annotations with leading or trailing whitespace
+SELECT DISTINCT ?subject ?predicate ?value ?issue
+WHERE {
+  ?subject ?predicate ?value .
+  # Check only annotation properties (common ones listed here)
+  FILTER (
+    ?predicate = rdfs:label ||
+    ?predicate = rdfs:comment ||
+    ?predicate = skos:definition ||
+    ?predicate = skos:prefLabel ||
+    ?predicate = skos:altLabel ||
+    ?predicate = skos:hiddenLabel ||
+    ?predicate = skos:notation ||
+    ?predicate = skos:note ||
+    ?predicate = skos:scopeNote ||
+    ?predicate = skos:editorialNote ||
+    ?predicate = skos:example ||
+    ?predicate = dcterms:description ||
+    ?predicate = dcterms:title ||
+    ?predicate = dc:description ||
+    ?predicate = dc:title ||
+    # Add any custom annotation properties here
+    ?predicate = rdfs:isDefinedBy ||
+    ?predicate = rdfs:seeAlso
+  )
+  # Check if value is a string literal
+  FILTER (isLiteral(?value))
+  # Detect leading or trailing whitespace
+  FILTER (
+    # Has leading whitespace
+    REGEX(STR(?value), "^\\s+") ||
+    # Has trailing whitespace
+    REGEX(STR(?value), "\\s+$")
+  )
+  # Add descriptive issue type
+  BIND(
+    IF(REGEX(STR(?value), "^\\s+") && REGEX(STR(?value), "\\s+$"),
+       "Leading and trailing whitespace",
+       IF(REGEX(STR(?value), "^\\s+"),
+          "Leading whitespace",
+          "Trailing whitespace"))
+    AS ?issue
+  )
+}
+ORDER BY ?subject ?predicate
+
