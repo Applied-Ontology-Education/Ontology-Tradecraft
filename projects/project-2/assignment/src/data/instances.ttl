@@ -225,3 +225,132 @@ ex:Engineer1_AdaptabilityAssessment a cco:ont00000853 ;           # Descriptive 
     skos:definition "The assessment, produced by Aerospace Engineer 1, of whether tested materials and equipment suit the A320 NEO design."@en ;
     cco:ont00001816 ex:Engineer1_ProcessingAct ;                  # is output of
     cco:ont00001808 ex:A320NEO_Design .                           # is about (joins Task 1)
+
+# ======================= Task 4: OEWS May 2024 Aerospace Engineer rows =======================
+
+# --- The area, the survey, and the real populations measured ---
+ex:UnitedStates a cco:ont00000139 ;                               # Domain of a Country
+    rdfs:label "United States"@en ;
+    skos:altLabel "U.S."@en ;
+    skos:definition "The geospatial domain of the United States, used as the area of national OEWS estimates."@en ;
+    ex:hasAreaCode "99"^^xsd:string ;
+    ex:hasAreaType "1"^^xsd:string ;
+    ex:hasPrimaryState "US"^^xsd:string .
+
+ex:OEWS_May2024 a cco:ont00000345 ;                               # Act of Measuring
+    rdfs:label "OEWS May 2024 survey"@en ;
+    skos:definition "The BLS Occupational Employment and Wage Statistics survey producing estimates for May 2024."@en ;
+    cco:ont00001986 ex:TotEmp_17_2010 , ex:TotEmp_17_2011 , ex:TotEmp_17_3021 .   # has output
+
+ex:Pop_Eng a cco:ont00000914 ;                                    # Group of Persons
+    rdfs:label "U.S. aerospace engineers, May 2024"@en ;
+    skos:definition "The group of persons employed as aerospace engineers (SOC 17-2011) in the United States in May 2024. SOC 17-2010 contains only 17-2011, so both OEWS rows measure this same group."@en .
+
+ex:Pop_Tech a cco:ont00000914 ;                                   # Group of Persons
+    rdfs:label "U.S. aerospace engineering technologists and technicians, May 2024"@en ;
+    skos:definition "The group of persons employed as aerospace engineering and operations technologists and technicians (SOC 17-3021) in the United States in May 2024."@en .
+
+ex:TotEmp_17_2010 a ex:TotalEmploymentMeasurement ;
+    rdfs:label "Total Employment"@en ;
+    skos:altLabel "Total Employment, 17-2010, U.S., May 2024"@en ;
+    skos:definition "The OEWS May 2024 count of persons employed in occupation 17-2010 in the United States."@en ;
+    cco:ont00001966 ex:Pop_Eng ;                                  # is a measurement of
+    cco:ont00001773 "68440"^^xsd:integer ;                        # has integer value
+    ex:hasRelativeStandardErrorPct "2.3"^^xsd:decimal .
+
+ex:OCC_17_2010 a ex:OEWSEstimateRecord ;
+    rdfs:label "OCC: 17-2010 Aerospace Engineers"@en ;
+    skos:definition "The OEWS May 2024 national, cross-industry estimate record for occupation 17-2010 (Aerospace Engineers)."@en ;
+    cco:ont00001808 ex:AerospaceEngineerOccupationRole ;          # is about
+    ex:correspondsToSOCEntry ex:SOC_17_2010 ;
+    ex:hasArea ex:UnitedStates ;
+    ex:hasNAICSCode "0"^^xsd:string ;
+    ex:hasNAICSTitle "Cross-industry"^^xsd:string ;
+    ex:hasIndustryGroup "cross-industry"^^xsd:string ;
+    ex:ownCode "1235"^^xsd:string ;
+    ex:hasOCCCode "17-2010"^^xsd:string ;
+    ex:oGroup "broad"^^xsd:string ;
+    ex:hasTotalEmployment ex:TotEmp_17_2010 ;
+    ex:hasHourlyMeanWage "67.88"^^xsd:decimal ;
+    ex:hasAnnualMeanWage "141180"^^xsd:decimal ;
+    ex:hasMeanWageRSEPct "0.8"^^xsd:decimal ;
+    ex:hasHourlyWagePct10 "41.04"^^xsd:decimal ;
+    ex:hasHourlyWagePct25 "50.36"^^xsd:decimal ;
+    ex:hasHourlyWageMedian "64.82"^^xsd:decimal ;
+    ex:hasHourlyWagePct75 "83.88"^^xsd:decimal ;
+    ex:hasHourlyWagePct90 "98.97"^^xsd:decimal ;
+    ex:hasAnnualWagePct10 "85350"^^xsd:decimal ;
+    ex:hasAnnualWagePct25 "104740"^^xsd:decimal ;
+    ex:hasAnnualWageMedian "134830"^^xsd:decimal ;
+    ex:hasAnnualWagePct75 "174480"^^xsd:decimal ;
+    ex:hasAnnualWagePct90 "205850"^^xsd:decimal .
+
+ex:TotEmp_17_2011 a ex:TotalEmploymentMeasurement ;
+    rdfs:label "Total Employment"@en ;
+    skos:altLabel "Total Employment, 17-2011, U.S., May 2024"@en ;
+    skos:definition "The OEWS May 2024 count of persons employed in occupation 17-2011 in the United States."@en ;
+    cco:ont00001966 ex:Pop_Eng ;                                  # is a measurement of
+    cco:ont00001773 "68440"^^xsd:integer ;                        # has integer value
+    ex:hasRelativeStandardErrorPct "2.3"^^xsd:decimal .
+
+ex:OCC_17_2011 a ex:OEWSEstimateRecord ;
+    rdfs:label "OCC: 17-2011 Aerospace Engineers"@en ;
+    skos:definition "The OEWS May 2024 national, cross-industry estimate record for occupation 17-2011 (Aerospace Engineers)."@en ;
+    cco:ont00001808 ex:AerospaceEngineerOccupationRole ;          # is about
+    ex:correspondsToSOCEntry ex:SOC_17_2011 ;
+    ex:hasArea ex:UnitedStates ;
+    ex:hasNAICSCode "0"^^xsd:string ;
+    ex:hasNAICSTitle "Cross-industry"^^xsd:string ;
+    ex:hasIndustryGroup "cross-industry"^^xsd:string ;
+    ex:ownCode "1235"^^xsd:string ;
+    ex:hasOCCCode "17-2011"^^xsd:string ;
+    ex:oGroup "detailed"^^xsd:string ;
+    ex:hasTotalEmployment ex:TotEmp_17_2011 ;
+    ex:hasHourlyMeanWage "67.88"^^xsd:decimal ;
+    ex:hasAnnualMeanWage "141180"^^xsd:decimal ;
+    ex:hasMeanWageRSEPct "0.8"^^xsd:decimal ;
+    ex:hasHourlyWagePct10 "41.04"^^xsd:decimal ;
+    ex:hasHourlyWagePct25 "50.36"^^xsd:decimal ;
+    ex:hasHourlyWageMedian "64.82"^^xsd:decimal ;
+    ex:hasHourlyWagePct75 "83.88"^^xsd:decimal ;
+    ex:hasHourlyWagePct90 "98.97"^^xsd:decimal ;
+    ex:hasAnnualWagePct10 "85350"^^xsd:decimal ;
+    ex:hasAnnualWagePct25 "104740"^^xsd:decimal ;
+    ex:hasAnnualWageMedian "134830"^^xsd:decimal ;
+    ex:hasAnnualWagePct75 "174480"^^xsd:decimal ;
+    ex:hasAnnualWagePct90 "205850"^^xsd:decimal .
+
+ex:TotEmp_17_3021 a ex:TotalEmploymentMeasurement ;
+    rdfs:label "Total Employment"@en ;
+    skos:altLabel "Total Employment, 17-3021, U.S., May 2024"@en ;
+    skos:definition "The OEWS May 2024 count of persons employed in occupation 17-3021 in the United States."@en ;
+    cco:ont00001966 ex:Pop_Tech ;                                 # is a measurement of
+    cco:ont00001773 "9060"^^xsd:integer ;                         # has integer value
+    ex:hasRelativeStandardErrorPct "4.3"^^xsd:decimal .
+
+ex:OCC_17_3021 a ex:OEWSEstimateRecord ;
+    rdfs:label "OCC: 17-3021 Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    skos:definition "The OEWS May 2024 national, cross-industry estimate record for occupation 17-3021 (Aerospace Engineering and Operations Technologists and Technicians)."@en ;
+    cco:ont00001808 ex:AerospaceTechnicianOccupationRole ;        # is about
+    ex:correspondsToSOCEntry ex:SOC_17_3021 ;
+    ex:hasArea ex:UnitedStates ;
+    ex:hasNAICSCode "0"^^xsd:string ;
+    ex:hasNAICSTitle "Cross-industry"^^xsd:string ;
+    ex:hasIndustryGroup "cross-industry"^^xsd:string ;
+    ex:ownCode "1235"^^xsd:string ;
+    ex:hasOCCCode "17-3021"^^xsd:string ;
+    ex:oGroup "detailed"^^xsd:string ;
+    ex:hasTotalEmployment ex:TotEmp_17_3021 ;
+    ex:hasHourlyMeanWage "41.5"^^xsd:decimal ;
+    ex:hasAnnualMeanWage "86330"^^xsd:decimal ;
+    ex:hasMeanWageRSEPct "1.4"^^xsd:decimal ;
+    ex:hasHourlyWagePct10 "25.83"^^xsd:decimal ;
+    ex:hasHourlyWagePct25 "31.04"^^xsd:decimal ;
+    ex:hasHourlyWageMedian "38.38"^^xsd:decimal ;
+    ex:hasHourlyWagePct75 "49.14"^^xsd:decimal ;
+    ex:hasHourlyWagePct90 "57.91"^^xsd:decimal ;
+    ex:hasAnnualWagePct10 "53730"^^xsd:decimal ;
+    ex:hasAnnualWagePct25 "64570"^^xsd:decimal ;
+    ex:hasAnnualWageMedian "79830"^^xsd:decimal ;
+    ex:hasAnnualWagePct75 "102220"^^xsd:decimal ;
+    ex:hasAnnualWagePct90 "120440"^^xsd:decimal .

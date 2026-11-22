@@ -251,3 +251,103 @@ ex:AdaptabilityEvaluation a owl:Class ;
     rdfs:subClassOf obo:BFO_0000023 ;   # role
     rdfs:label "Adaptability Evaluation"@en ;
     skos:definition "A role borne by an agent, realized in acts that evaluate whether materials and equipment are suited to an aircraft design and its manufacture."@en .
+
+# ======================= Task 4 =======================
+
+ex:OEWSEstimateRecord a owl:Class ;
+    rdfs:subClassOf cco:ont00000853 ;   # Descriptive Information Content Entity
+    rdfs:label "OEWS Estimate Record"@en ;
+    skos:definition "A Descriptive Information Content Entity that is one row of the BLS Occupational Employment and Wage Statistics data, reporting employment and wage estimates for one occupation, area, industry, and ownership."@en .
+
+ex:TotalEmploymentMeasurement a owl:Class ;
+    rdfs:subClassOf cco:ont00000539 ;   # Count Measurement Information Content Entity
+    rdfs:label "Total Employment Measurement"@en ;
+    skos:definition "A Count Measurement Information Content Entity that measures the number of persons employed in some occupation, area, and period."@en .
+
+ex:hasArea a owl:ObjectProperty ;
+    rdfs:range cco:ont00000472 ;        # Geospatial Region
+    rdfs:label "has area"@en ;
+    skos:definition "Relates an OEWS Estimate Record to the geographic area its estimates cover."@en .
+
+ex:hasTotalEmployment a owl:ObjectProperty ;
+    rdfs:range ex:TotalEmploymentMeasurement ;
+    rdfs:label "has total employment"@en ;
+    skos:definition "Relates an OEWS Estimate Record to the Total Employment Measurement it reports."@en .
+
+ex:correspondsToSOCEntry a owl:ObjectProperty ;
+    rdfs:range ex:SOCEntry ;
+    rdfs:label "corresponds to SOC entry"@en ;
+    skos:definition "Relates an OEWS Estimate Record to the SOC Entry for the occupation it reports on."@en .
+
+ex:oGroup a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "o group"@en ;
+    skos:definition "Relates an OEWS Estimate Record to the SOC level of its occupation (major, minor, broad, or detailed)."@en .
+
+ex:ownCode a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "own code"@en ;
+    skos:definition "Relates an OEWS Estimate Record to the BLS ownership code of the employers it covers; 1235 means all ownerships combined (federal 1, state 2, local 3, private 5)."@en .
+
+ex:hasOCCCode a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has OCC code"@en ;
+    skos:definition "Relates an OEWS Estimate Record to the SOC code of the occupation it reports on."@en .
+ex:hasNAICSCode a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has NAICS code"@en ;
+    skos:definition "Relates an OEWS Estimate Record to the NAICS industry code it covers; 0 means cross-industry."@en .
+ex:hasNAICSTitle a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has NAICS title"@en ;
+    skos:definition "Relates an OEWS Estimate Record to the title of the NAICS industry it covers."@en .
+ex:hasIndustryGroup a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has industry group"@en ;
+    skos:definition "Relates an OEWS Estimate Record to its BLS industry grouping level."@en .
+ex:hasAreaCode a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has area code"@en ;
+    skos:definition "Relates a geographic area to its BLS OEWS area code."@en .
+ex:hasAreaType a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has area type"@en ;
+    skos:definition "Relates a geographic area to its BLS OEWS area type code; 1 means national."@en .
+ex:hasPrimaryState a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has primary state"@en ;
+    skos:definition "Relates a geographic area to the postal abbreviation of its primary state, or US for the nation."@en .
+ex:hasRelativeStandardErrorPct a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has relative standard error pct"@en ;
+    skos:definition "Relates an estimate to its percent relative standard error, a measure of its reliability."@en .
+
+ex:hasHourlyMeanWage a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has hourly mean wage"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to its estimated mean hourly wage in US dollars."@en .
+ex:hasAnnualMeanWage a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has annual mean wage"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to its estimated mean annual wage in US dollars."@en .
+ex:hasMeanWageRSEPct a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has mean wage relative standard error pct"@en ;
+    skos:definition "Relates an OEWS Estimate Record to the percent relative standard error of its mean wage estimate."@en .
+ex:hasHourlyWagePct10 a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has hourly wage 10th percentile"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to the 10th percentile of its hourly wages in US dollars."@en .
+ex:hasHourlyWagePct25 a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has hourly wage 25th percentile"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to the 25th percentile of its hourly wages in US dollars."@en .
+ex:hasHourlyWageMedian a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has hourly wage median"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to the median of its hourly wages in US dollars."@en .
+ex:hasHourlyWagePct75 a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has hourly wage 75th percentile"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to the 75th percentile of its hourly wages in US dollars."@en .
+ex:hasHourlyWagePct90 a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has hourly wage 90th percentile"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to the 90th percentile of its hourly wages in US dollars."@en .
+ex:hasAnnualWagePct10 a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has annual wage 10th percentile"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to the 10th percentile of its annual wages in US dollars."@en .
+ex:hasAnnualWagePct25 a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has annual wage 25th percentile"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to the 25th percentile of its annual wages in US dollars."@en .
+ex:hasAnnualWageMedian a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has annual wage median"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to the median of its annual wages in US dollars."@en .
+ex:hasAnnualWagePct75 a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has annual wage 75th percentile"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to the 75th percentile of its annual wages in US dollars."@en .
+ex:hasAnnualWagePct90 a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has annual wage 90th percentile"@en ;
+    skos:definition "Shortcut relating an OEWS Estimate Record to the 90th percentile of its annual wages in US dollars."@en .
