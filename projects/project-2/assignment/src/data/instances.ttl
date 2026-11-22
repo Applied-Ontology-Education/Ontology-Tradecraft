@@ -1,0 +1,64 @@
+@prefix ex:   <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p2/> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# ================= Task 1: Airbus A320 NEO =================
+
+# --- The plane (representative airframe) ---
+ex:A320NEO a cco:ont00001043 ;                       # Aircraft
+    rdfs:label "Airbus A320 NEO"@en ;
+    skos:definition "A representative Airbus A320neo airframe, standing in for the aircraft described in the FAA aircraft characteristics row for this model."@en ;
+    obo:BFO_0000178 ex:A320NEO_Engine1 , ex:A320NEO_Engine2 , ex:A320NEO_Wing ;   # has continuant part
+    ex:hasManufacturer ex:Airbus ;
+    ex:hasModelBADA "Airbus A320-271N"^^xsd:string ;
+    ex:hasModelFAA  "Airbus A320 Neo"^^xsd:string ;
+    ex:hasLengthFt  "123.3"^^xsd:decimal ;
+    ex:hasTailHeightFt "39.6"^^xsd:decimal .
+
+ex:A320NEO_Engine1 a cco:ont00000533 ;               # Jet Engine
+    rdfs:label "A320 NEO Engine 1"@en ;
+    skos:definition "The first of the two jet engines of the representative A320 NEO."@en ;
+    obo:BFO_0000196 ex:A320NEO_Engine1_Propulsion .  # bearer of
+
+ex:A320NEO_Engine2 a cco:ont00000533 ;
+    rdfs:label "A320 NEO Engine 2"@en ;
+    skos:definition "The second of the two jet engines of the representative A320 NEO."@en ;
+    obo:BFO_0000196 ex:A320NEO_Engine2_Propulsion .
+
+ex:A320NEO_Engine1_Propulsion a cco:ont00001252 ;    # Propulsion Artifact Function
+    rdfs:label "A320 NEO Engine 1 propulsion function"@en ;
+    skos:definition "The propulsion function borne by A320 NEO Engine 1."@en .
+
+ex:A320NEO_Engine2_Propulsion a cco:ont00001252 ;
+    rdfs:label "A320 NEO Engine 2 propulsion function"@en ;
+    skos:definition "The propulsion function borne by A320 NEO Engine 2."@en .
+
+ex:A320NEO_Wing a ex:FixedWing ;
+    rdfs:label "A320 NEO fixed wing"@en ;
+    skos:definition "The fixed wing of the representative A320 NEO."@en .
+
+ex:Airbus a cco:ont00001180 ;                        # Organization
+    rdfs:label "Airbus"@en ;
+    skos:definition "The aerospace company Airbus SE, recorded as manufacturer in the FAA aircraft data."@en .
+
+# --- The design (GDC), its carrier, and what it prescribes ---
+ex:A320NEO_Design a cco:ont00000319 ;                # Artifact Design
+    rdfs:label "A320 NEO Design"@en ;
+    skos:definition "The Artifact Design for the Airbus A320neo aircraft type."@en ;
+    cco:ont00001942 ex:A320NEO ,                     # prescribes
+                    ex:A320NEO_Engine1_Propulsion , ex:A320NEO_Engine2_Propulsion ;
+    obo:BFO_0000058 ex:A320NEO_SpecPattern .         # is concretized by
+
+ex:A320NEO_SpecDocument a cco:ont00000798 ;          # Information Bearing Artifact
+    rdfs:label "A320 NEO Specification Document"@en ;
+    skos:definition "The document (physical or digital) that carries the A320neo design."@en ;
+    obo:BFO_0000196 ex:A320NEO_SpecPattern .         # bearer of
+
+ex:A320NEO_SpecPattern a cco:ont00000314 ;           # Information Quality Entity
+    rdfs:label "A320 NEO specification pattern"@en ;
+    skos:definition "The pattern of marks in the A320 NEO Specification Document that concretizes the A320 NEO Design."@en ;
+    obo:BFO_0000059 ex:A320NEO_Design .              # concretizes

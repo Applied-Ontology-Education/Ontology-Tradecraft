@@ -1,0 +1,44 @@
+@prefix ex:   <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p2/> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p2/core> a owl:Ontology ;
+    rdfs:label "Project 2 Core"@en ;
+    skos:definition "Local classes and relations for Project 2, extending BFO and CCO."@en ;
+    owl:imports <https://www.commoncoreontologies.org/CommonCoreOntologiesMerged> .
+
+# ---------------- Task 1: classes ----------------
+
+ex:FixedWing a owl:Class ;
+    rdfs:subClassOf cco:ont00000995 ;   # Material Artifact
+    rdfs:label "Fixed Wing"@en ;
+    skos:definition "A Material Artifact that is a lift-generating wing rigidly attached to an aircraft's fuselage."@en .
+
+# ---------------- Task 1: object properties ----------------
+
+ex:hasManufacturer a owl:ObjectProperty ;
+    rdfs:range cco:ont00001180 ;        # Organization
+    rdfs:label "has manufacturer"@en ;
+    skos:definition "A shortcut relation between a Material Artifact and the Organization that is the agent of the Act of Manufacturing that has that artifact as output."@en .
+
+# ---------------- Task 1: datatype properties on the aircraft ----------------
+
+ex:hasModelBADA a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has Model BADA"@en ;
+    skos:definition "Relates an aircraft to the model name under which it is listed in the EUROCONTROL Base of Aircraft Data (BADA)."@en .
+
+ex:hasModelFAA a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has Model FAA"@en ;
+    skos:definition "Relates an aircraft to the model name under which it is listed by the FAA."@en .
+
+ex:hasLengthFt a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has Length Ft"@en ;
+    skos:definition "Shortcut relating an aircraft to the value, in feet, of a measurement of its length."@en .
+
+ex:hasTailHeightFt a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has Tail Height Ft"@en ;
+    skos:definition "Shortcut relating an aircraft to the value, in feet, of a measurement of its tail height at operating empty weight."@en .
