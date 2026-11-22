@@ -1,0 +1,14 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+# IES -> BFO
+ies:PeriodOfTime rdfs:subClassOf obo:BFO_0000011 .   # 'spatial extent everywhere, temporal extent limited' = a spacetime slab, not a BFO temporal region
+
+# Class declarations, so OWL tools type every IRI above
+ies:PeriodOfTime a owl:Class .
+obo:BFO_0000011 a owl:Class .

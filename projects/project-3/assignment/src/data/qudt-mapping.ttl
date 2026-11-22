@@ -1,0 +1,17 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+# QUDT -> CCOM
+qudt:PlaneAngleUnit rdfs:subClassOf cco:ont00000707 .   # CCOM angle is 'between two lines or planes'; QUDT Angle unit also covers solid angle
+qudt:LinearVelocityUnit rdfs:subClassOf cco:ont00000969 .   # Speed
+
+# Class declarations, so OWL tools type every IRI above
+cco:ont00000707 a owl:Class .
+cco:ont00000969 a owl:Class .
+qudt:LinearVelocityUnit a owl:Class .
+qudt:PlaneAngleUnit a owl:Class .
