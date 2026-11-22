@@ -1,0 +1,246 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix ex: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/125341c7ff97> a cco:ont00000345 ;
+    rdfs:label "measuring Chiller-4 temperature in F at 2024-03-18T12:01:00Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120100Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/125341c7ff97> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/27fa7e1bebe3> a cco:ont00000345 ;
+    rdfs:label "measuring Chiller-4 temperature in F at 2024-03-18T12:06:00Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120600Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/27fa7e1bebe3> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/2d6c0d4e8c2c> a cco:ont00000345 ;
+    rdfs:label "measuring Boiler-07 pressure in kPa at 2024-03-17T23:04:00Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-17T230400Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/2d6c0d4e8c2c> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/3bf17695f405> a cco:ont00000345 ;
+    rdfs:label "measuring Boiler-07 temperature in F at 2024-03-17T23:03:00Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-17T230300Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/3bf17695f405> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/53e01dc1fdcc> a cco:ont00000345 ;
+    rdfs:label "measuring Circuit-12 voltage in V at 2024-03-18T12:01:01Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120101Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/53e01dc1fdcc> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/76334850e402> a cco:ont00000345 ;
+    rdfs:label "measuring Chiller-3 temperature in F at 2024-03-18T12:01:00Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120100Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/76334850e402> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/82f62e0e64f1> a cco:ont00000345 ;
+    rdfs:label "measuring Boiler-07 temperature in C at 2024-03-17T23:03:00Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-17T230300Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/82f62e0e64f1> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/8abbd1cb88a2> a cco:ont00000345 ;
+    rdfs:label "measuring Boiler-07 pressure in psi at 2024-03-17T23:04:00Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-17T230400Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/8abbd1cb88a2> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/8cdadf082bf7> a cco:ont00000345 ;
+    rdfs:label "measuring Chiller-3 temperature in C at 2024-03-18T12:01:00Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120100Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/8cdadf082bf7> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/8d93d26c094c> a cco:ont00000345 ;
+    rdfs:label "measuring Circuit-12 resistance in ohm at 2024-03-18T12:06:00Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120600Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/8d93d26c094c> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/act/ea8b10e44062> a cco:ont00000345 ;
+    rdfs:label "measuring Pump-A1 pressure in kPa at 2024-03-18T12:07:00Z"@en ;
+    obo:BFO_0000199 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120700Z> ;
+    cco:ont00001986 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/ea8b10e44062> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/artifact/Boiler-07> a cco:ont00000995 ;
+    rdfs:label "Boiler-07"@en ;
+    obo:BFO_0000196 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Boiler-07_pressure>,
+        <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Boiler-07_temperature> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/artifact/Chiller-3> a cco:ont00000995 ;
+    rdfs:label "Chiller-3"@en ;
+    obo:BFO_0000196 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Chiller-3_temperature> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/artifact/Chiller-4> a cco:ont00000995 ;
+    rdfs:label "Chiller-4"@en ;
+    obo:BFO_0000196 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Chiller-4_temperature> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/artifact/Circuit-12> a cco:ont00000995 ;
+    rdfs:label "Circuit-12"@en ;
+    obo:BFO_0000196 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Circuit-12_resistance>,
+        <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Circuit-12_voltage> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/artifact/Pump-A1> a cco:ont00000995 ;
+    rdfs:label "Pump-A1"@en ;
+    obo:BFO_0000196 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Pump-A1_pressure> .
+
+ex:measure_cco a owl:Ontology ;
+    rdfs:label "Sensor Measurements (CCO measurement pattern)"@en ;
+    skos:definition "Readings from the site sensors, integrated as BFO/CCO measurements."@en .
+
+ex:ElectricalResistanceQuality a owl:Class ;
+    rdfs:label "Electrical Resistance Quality"@en ;
+    rdfs:subClassOf obo:BFO_0000019 ;
+    skos:definition "A quality of a conductor consisting in the degree to which it opposes the flow of electric current."@en .
+
+ex:VoltageQuality a owl:Class ;
+    rdfs:label "Voltage Quality"@en ;
+    rdfs:subClassOf obo:BFO_0000019 ;
+    skos:definition "A quality of an electrical circuit consisting in the difference in electric potential between two of its points."@en .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120101Z> a obo:BFO_0000203 ;
+    rdfs:label "2024-03-18T12:01:01Z"@en ;
+    cco:ont00001767 "2024-03-18T12:01:01+00:00"^^xsd:dateTime .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120700Z> a obo:BFO_0000203 ;
+    rdfs:label "2024-03-18T12:07:00Z"@en ;
+    cco:ont00001767 "2024-03-18T12:07:00+00:00"^^xsd:dateTime .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/125341c7ff97> a cco:ont00001163 ;
+    rdfs:label "Chiller-4 temperature 6.5 F at 2024-03-18T12:01:00Z"@en ;
+    cco:ont00001769 6.5 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Chiller-4_temperature> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/27fa7e1bebe3> a cco:ont00001163 ;
+    rdfs:label "Chiller-4 temperature 19.5 F at 2024-03-18T12:06:00Z"@en ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Chiller-4_temperature> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/2d6c0d4e8c2c> a cco:ont00001163 ;
+    rdfs:label "Boiler-07 pressure 101.325 kPa at 2024-03-17T23:04:00Z"@en ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/unit/Kilopascal> ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Boiler-07_pressure> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/3bf17695f405> a cco:ont00001163 ;
+    rdfs:label "Boiler-07 temperature 212 F at 2024-03-17T23:03:00Z"@en ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Boiler-07_temperature> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/53e01dc1fdcc> a cco:ont00001163 ;
+    rdfs:label "Circuit-12 voltage 2 V at 2024-03-18T12:01:01Z"@en ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 cco:ont00001450 ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Circuit-12_voltage> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/76334850e402> a cco:ont00001163 ;
+    rdfs:label "Chiller-3 temperature 68 F at 2024-03-18T12:01:00Z"@en ;
+    cco:ont00001769 68.0 ;
+    cco:ont00001863 cco:ont00001724 ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Chiller-3_temperature> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/82f62e0e64f1> a cco:ont00001163 ;
+    rdfs:label "Boiler-07 temperature 100 C at 2024-03-17T23:03:00Z"@en ;
+    cco:ont00001769 100.0 ;
+    cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Boiler-07_temperature> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/8abbd1cb88a2> a cco:ont00001163 ;
+    rdfs:label "Boiler-07 pressure 14.7 psi at 2024-03-17T23:04:00Z"@en ;
+    cco:ont00001769 14.7 ;
+    cco:ont00001863 cco:ont00001694 ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Boiler-07_pressure> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/8cdadf082bf7> a cco:ont00001163 ;
+    rdfs:label "Chiller-3 temperature 19.5 C at 2024-03-18T12:01:00Z"@en ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 cco:ont00001606 ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Chiller-3_temperature> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/8d93d26c094c> a cco:ont00001163 ;
+    rdfs:label "Circuit-12 resistance 1.3 ohm at 2024-03-18T12:06:00Z"@en ;
+    cco:ont00001769 1.3 ;
+    cco:ont00001863 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/unit/Ohm> ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Circuit-12_resistance> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/mice/ea8b10e44062> a cco:ont00001163 ;
+    rdfs:label "Pump-A1 pressure 101.325 kPa at 2024-03-18T12:07:00Z"@en ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/unit/Kilopascal> ;
+    cco:ont00001966 <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Pump-A1_pressure> .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/unit/Ohm> a owl:NamedIndividual,
+        cco:ont00000120 ;
+    rdfs:label "Ohm Measurement Unit"@en .
+
+cco:ont00001450 a owl:NamedIndividual,
+        cco:ont00000120 ;
+    rdfs:label "Volt Measurement Unit"@en .
+
+cco:ont00001694 a owl:NamedIndividual,
+        cco:ont00000120 ;
+    rdfs:label "Pounds Per Square Inch Measurement Unit"@en .
+
+ex:PressureQuality a owl:Class ;
+    rdfs:label "Pressure Quality"@en ;
+    rdfs:subClassOf obo:BFO_0000019 ;
+    skos:definition "A quality of a material entity consisting in the force per unit area that a contained fluid exerts on it."@en .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-17T230300Z> a obo:BFO_0000203 ;
+    rdfs:label "2024-03-17T23:03:00Z"@en ;
+    cco:ont00001767 "2024-03-17T23:03:00+00:00"^^xsd:dateTime .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-17T230400Z> a obo:BFO_0000203 ;
+    rdfs:label "2024-03-17T23:04:00Z"@en ;
+    cco:ont00001767 "2024-03-17T23:04:00+00:00"^^xsd:dateTime .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120600Z> a obo:BFO_0000203 ;
+    rdfs:label "2024-03-18T12:06:00Z"@en ;
+    cco:ont00001767 "2024-03-18T12:06:00+00:00"^^xsd:dateTime .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Circuit-12_resistance> a obo:BFO_0000020,
+        ex:ElectricalResistanceQuality ;
+    rdfs:label "Circuit-12 resistance"@en .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Circuit-12_voltage> a obo:BFO_0000020,
+        ex:VoltageQuality ;
+    rdfs:label "Circuit-12 voltage"@en .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Pump-A1_pressure> a obo:BFO_0000020,
+        ex:PressureQuality ;
+    rdfs:label "Pump-A1 pressure"@en .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/unit/Kilopascal> a owl:NamedIndividual,
+        cco:ont00000120 ;
+    rdfs:label "Kilopascal Measurement Unit"@en .
+
+cco:ont00001606 a owl:NamedIndividual,
+        cco:ont00000120 ;
+    rdfs:label "Degree Celsius Measurement Unit"@en .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/instant/2024-03-18T120100Z> a obo:BFO_0000203 ;
+    rdfs:label "2024-03-18T12:01:00Z"@en ;
+    cco:ont00001767 "2024-03-18T12:01:00+00:00"^^xsd:dateTime .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Boiler-07_pressure> a obo:BFO_0000020,
+        ex:PressureQuality ;
+    rdfs:label "Boiler-07 pressure"@en .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Boiler-07_temperature> a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "Boiler-07 temperature"@en .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Chiller-3_temperature> a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "Chiller-3 temperature"@en .
+
+<https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/sdc/Chiller-4_temperature> a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "Chiller-4 temperature"@en .
+
+cco:ont00001724 a owl:NamedIndividual,
+        cco:ont00000120 ;
+    rdfs:label "Degree Fahrenheit Measurement Unit"@en .
+

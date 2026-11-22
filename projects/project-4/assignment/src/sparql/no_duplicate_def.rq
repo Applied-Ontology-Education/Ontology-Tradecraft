@@ -1,6 +1,20 @@
-# Title: 
+# Title:
 #    No Duplicate Definitions
-# Constraint Description: 
-#    No two ontology elements may have the exact same definition.    
+# Constraint Description:
+#    No two ontology elements may have the exact same definition.
 # Severity:
-#     Error 
+#     Error
+# Valid: ZERO rows.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?element ?element2 ?definition ?error
+WHERE {
+  ?element skos:definition ?definition .
+  ?element2 skos:definition ?d2 .
+  FILTER(?element != ?element2 && STR(?definition) = STR(?d2))
+  FILTER(STR(?element) < STR(?element2))
+  BIND(CONCAT("ERROR: ", STR(?element), " and ", STR(?element2), " share a definition") AS ?error)
+}
