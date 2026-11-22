@@ -181,3 +181,73 @@ ex:isTemporalPartOf a owl:ObjectProperty ;
 ex:hasMaxApproachSpeedKnot a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
     rdfs:label "has Max Approach Speed Knot"@en ;
     skos:definition "Shortcut relating an Approach Process to the value, in knots, of the maximum speed the aircraft attained during it."@en .
+
+# ======================= Task 3 =======================
+
+ex:SOCEntry a owl:Class ;
+    rdfs:subClassOf cco:ont00000853 ;   # Descriptive Information Content Entity
+    rdfs:label "SOC Entry"@en ;
+    skos:definition "A Descriptive Information Content Entity that is an entry in the 2018 Standard Occupational Classification, describing a kind of occupation."@en .
+
+ex:hasSOCCode a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has SOC code"@en ;
+    skos:definition "Relates a SOC Entry to its Standard Occupational Classification code."@en .
+
+ex:hasSOCLevel a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has SOC level"@en ;
+    skos:definition "Relates a SOC Entry to its level in the SOC hierarchy (Major, Minor, Broad, or Detailed)."@en .
+
+ex:AerospaceEngineerOccupationRole a owl:Class ;
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    rdfs:label "Aerospace Engineer Occupation Role"@en ;
+    skos:definition "An Occupation Role whose bearer is responsible for designing, constructing, and testing aircraft, missiles, and spacecraft."@en .
+
+ex:AerospaceTechnicianOccupationRole a owl:Class ;
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    rdfs:label "Aerospace Engineering Technician Occupation Role"@en ;
+    skos:definition "An Occupation Role whose bearer is responsible for operating and maintaining the systems and instruments used to launch, track, and evaluate air and space vehicles."@en .
+
+ex:ActOfAircraftProcessing a owl:Class ;
+    rdfs:subClassOf cco:ont00000908 ;   # Act of Artifact Processing
+    rdfs:label "Act of Aircraft Processing"@en ;
+    skos:definition "An Act of Artifact Processing in which operations are performed on an aircraft, or on materials and equipment intended for one, during its construction or testing."@en .
+
+ex:AdaptabilityEvaluation a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000023 ;   # role
+    rdfs:label "Adaptability Evaluation"@en ;
+    skos:definition "A role borne by an agent, realized in acts that evaluate whether materials and equipment are suited to an aircraft design and its manufacture."@en .
+
+# ======================= Task 3 =======================
+
+ex:SOCEntry a owl:Class ;
+    rdfs:subClassOf cco:ont00000853 ;   # Descriptive Information Content Entity
+    rdfs:label "SOC Entry"@en ;
+    skos:definition "A Descriptive Information Content Entity that is an entry in the 2018 Standard Occupational Classification, describing a kind of occupation."@en .
+
+ex:hasSOCCode a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has SOC code"@en ;
+    skos:definition "Relates a SOC Entry to its Standard Occupational Classification code."@en .
+
+ex:hasSOCLevel a owl:DatatypeProperty ; rdfs:range xsd:string ;
+    rdfs:label "has SOC level"@en ;
+    skos:definition "Relates a SOC Entry to its level in the SOC hierarchy (Major, Minor, Broad, or Detailed)."@en .
+
+ex:AerospaceEngineerOccupationRole a owl:Class ;
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    rdfs:label "Aerospace Engineer Occupation Role"@en ;
+    skos:definition "An Occupation Role whose bearer is responsible for designing, constructing, and testing aircraft, missiles, and spacecraft."@en .
+
+ex:AerospaceTechnicianOccupationRole a owl:Class ;
+    rdfs:subClassOf cco:ont00000984 ;   # Occupation Role
+    rdfs:label "Aerospace Engineering Technician Occupation Role"@en ;
+    skos:definition "An Occupation Role whose bearer is responsible for operating and maintaining the systems and instruments used to launch, track, and evaluate air and space vehicles."@en .
+
+ex:ActOfAircraftProcessing a owl:Class ;
+    rdfs:subClassOf cco:ont00000908 ;   # Act of Artifact Processing
+    rdfs:label "Act of Aircraft Processing"@en ;
+    skos:definition "An Act of Artifact Processing in which operations are performed on an aircraft, or on materials and equipment intended for one, during its construction or testing."@en .
+
+ex:AdaptabilityEvaluation a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000023 ;   # role
+    rdfs:label "Adaptability Evaluation"@en ;
+    skos:definition "A role borne by an agent, realized in acts that evaluate whether materials and equipment are suited to an aircraft design and its manufacture."@en .

@@ -171,3 +171,57 @@ ex:A321_111_ApproachSpeedMean a cco:ont00000896 ;          # Mean Point Estimate
     cco:ont00001808 ex:A321_111_ApproachTest ;              # is about
     cco:ont00001769 "139"^^xsd:decimal ;                    # has decimal value
     cco:ont00001863 cco:ont00001646 .                       # uses measurement unit -> Knot
+
+# ======================= Task 3: SOC Aerospace Engineer entries =======================
+
+ex:SOC_17_2010 a ex:SOCEntry ;
+    rdfs:label "SOC: 17-2010 Aerospace Engineers"@en ;
+    skos:definition "Broad occupation group in the 2018 SOC containing the detailed occupation 17-2011 Aerospace Engineers. (The SOC source provides no definition for this broad group; this one is supplied from the hierarchy.)"@en ;
+    ex:hasSOCCode "17-2010"^^xsd:string ;
+    ex:hasSOCLevel "Broad"^^xsd:string ;
+    cco:ont00001808 ex:AerospaceEngineerOccupationRole .         # is about
+
+ex:SOC_17_2011 a ex:SOCEntry ;
+    rdfs:label "SOC: 17-2011 Aerospace Engineers"@en ;
+    skos:definition "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques."@en ;
+    ex:hasSOCCode "17-2011"^^xsd:string ;
+    ex:hasSOCLevel "Detailed"^^xsd:string ;
+    skos:broader ex:SOC_17_2010 ;
+    cco:ont00001808 ex:AerospaceEngineerOccupationRole ,          # is about
+                    cco:ont00000319 .                             # Artifact Design (class; punned)
+
+ex:SOC_17_3021 a ex:SOCEntry ;
+    rdfs:label "SOC: 17-3021 Aerospace Engineering and Operations Technologists and Technicians"@en ;
+    skos:definition "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data."@en ;
+    ex:hasSOCCode "17-3021"^^xsd:string ;
+    ex:hasSOCLevel "Detailed"^^xsd:string ;
+    cco:ont00001808 ex:AerospaceTechnicianOccupationRole .        # is about
+
+# --- An engineer doing what SOC 17-2011 describes ---
+ex:Engineer1 a cco:ont00001262 ;                                  # Person
+    rdfs:label "Aerospace Engineer 1"@en ;
+    skos:definition "An illustrative person employed as an aerospace engineer."@en ;
+    obo:BFO_0000196 ex:Engineer1_OccupationRole ,                 # bearer of
+                    ex:Engineer1_AdaptabilityEvaluationRole .
+
+ex:Engineer1_OccupationRole a ex:AerospaceEngineerOccupationRole ;
+    rdfs:label "Aerospace Engineer 1 occupation role"@en ;
+    skos:definition "The aerospace engineer occupation role borne by Aerospace Engineer 1."@en ;
+    obo:BFO_0000197 ex:Engineer1 .                                # inheres in
+
+ex:Engineer1_AdaptabilityEvaluationRole a ex:AdaptabilityEvaluation ;
+    rdfs:label "Aerospace Engineer 1 adaptability evaluation role"@en ;
+    skos:definition "The adaptability evaluation role borne by Aerospace Engineer 1."@en ;
+    obo:BFO_0000197 ex:Engineer1 .                                # inheres in
+
+ex:Engineer1_ProcessingAct a ex:ActOfAircraftProcessing ;
+    rdfs:label "Aerospace Engineer 1 materials test for A320 NEO"@en ;
+    skos:definition "An act in which Aerospace Engineer 1 tests materials and equipment for suitability to the A320 NEO design."@en ;
+    obo:BFO_0000057 ex:Engineer1 ;                                # has participant
+    obo:BFO_0000055 ex:Engineer1_AdaptabilityEvaluationRole .     # realizes
+
+ex:Engineer1_AdaptabilityAssessment a cco:ont00000853 ;           # Descriptive ICE
+    rdfs:label "A320 NEO materials adaptability assessment"@en ;
+    skos:definition "The assessment, produced by Aerospace Engineer 1, of whether tested materials and equipment suit the A320 NEO design."@en ;
+    cco:ont00001816 ex:Engineer1_ProcessingAct ;                  # is output of
+    cco:ont00001808 ex:A320NEO_Design .                           # is about (joins Task 1)
