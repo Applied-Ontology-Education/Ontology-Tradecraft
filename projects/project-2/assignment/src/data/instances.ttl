@@ -108,3 +108,66 @@ ex:A320NEO_Fleet a ex:A320neoFleet ;
     ex:hasRegistrationCount  "147"^^xsd:integer ;
     ex:hasTMFSOperationsFY24 "540276"^^xsd:integer ;
     ex:isOnFAARegistry       "true"^^xsd:boolean .
+
+# ======================= Task 2: Airbus A321-111 =======================
+
+# --- The design and its directive content (what SHOULD be) ---
+ex:A321_111_Design a cco:ont00000319 ;                     # Artifact Design
+    rdfs:label "Airbus A321-111"@en ;
+    skos:definition "The Artifact Design for the Airbus A321-111 aircraft type."@en ;
+    obo:BFO_0000178 ex:A321_111_MaxApproachSpeedSpec ;      # has continuant part
+    cco:ont00001942 ex:A321_111_MaxApproachSpeedFunction ,  # prescribes
+                    ex:A321_111_TestAircraft .
+
+ex:A321_111_MaxApproachSpeedSpec a cco:ont00000127 ;       # Performance Specification
+    rdfs:label "A321-111 maximum approach speed specification"@en ;
+    skos:definition "The part of the A321-111 design that prescribes a maximum approach speed of 142 knots at maximum allowable landing weight."@en ;
+    cco:ont00001769 "142"^^xsd:decimal ;                    # has decimal value
+    cco:ont00001863 cco:ont00001646 .                       # uses measurement unit -> Knot
+
+cco:ont00001646 cco:ont00001961 ex:A321_111_MaxApproachSpeedSpec ,   # Knot is measurement unit of
+                                ex:A321_111_ApproachSpeedMean .
+
+ex:A321_111_MaxApproachSpeedFunction a cco:ont00001365 ;   # Maximum Speed Artifact Function
+    rdfs:label "A321-111 test aircraft maximum approach speed function"@en ;
+    skos:definition "The function of the A321-111 test aircraft to attain, and not exceed, its prescribed maximum speed during approach."@en ;
+    cco:ont00001920 ex:A321_111_MaxApproachSpeedSpec .      # prescribed by
+
+# --- The tested instance and the test (what WAS) ---
+ex:A321_111_TestAircraft a cco:ont00001043 ;               # Aircraft
+    rdfs:label "A321-111 test aircraft"@en ;
+    skos:definition "An Airbus A321-111 aircraft that participated in the approach test."@en ;
+    obo:BFO_0000196 ex:A321_111_MaxApproachSpeedFunction .  # bearer of
+
+ex:A321_111_ApproachTest a ex:TestProcess ;
+    rdfs:label "A321-111 approach test"@en ;
+    skos:definition "The test in which the A321-111 test aircraft flew five approaches whose maximum speeds were measured."@en ;
+    obo:BFO_0000057 ex:A321_111_TestAircraft .              # has participant
+
+ex:A321_111_Approach1 a ex:ApproachProcess ; rdfs:label "A321-111 test approach 1"@en ;
+    skos:definition "The first approach flown in the A321-111 approach test."@en ;
+    ex:isTemporalPartOf ex:A321_111_ApproachTest ; obo:BFO_0000055 ex:A321_111_MaxApproachSpeedFunction ;
+    ex:hasMaxApproachSpeedKnot "137"^^xsd:decimal .
+ex:A321_111_Approach2 a ex:ApproachProcess ; rdfs:label "A321-111 test approach 2"@en ;
+    skos:definition "The second approach flown in the A321-111 approach test."@en ;
+    ex:isTemporalPartOf ex:A321_111_ApproachTest ; obo:BFO_0000055 ex:A321_111_MaxApproachSpeedFunction ;
+    ex:hasMaxApproachSpeedKnot "138"^^xsd:decimal .
+ex:A321_111_Approach3 a ex:ApproachProcess ; rdfs:label "A321-111 test approach 3"@en ;
+    skos:definition "The third approach flown in the A321-111 approach test."@en ;
+    ex:isTemporalPartOf ex:A321_111_ApproachTest ; obo:BFO_0000055 ex:A321_111_MaxApproachSpeedFunction ;
+    ex:hasMaxApproachSpeedKnot "139"^^xsd:decimal .
+ex:A321_111_Approach4 a ex:ApproachProcess ; rdfs:label "A321-111 test approach 4"@en ;
+    skos:definition "The fourth approach flown in the A321-111 approach test."@en ;
+    ex:isTemporalPartOf ex:A321_111_ApproachTest ; obo:BFO_0000055 ex:A321_111_MaxApproachSpeedFunction ;
+    ex:hasMaxApproachSpeedKnot "140"^^xsd:decimal .
+ex:A321_111_Approach5 a ex:ApproachProcess ; rdfs:label "A321-111 test approach 5"@en ;
+    skos:definition "The fifth approach flown in the A321-111 approach test."@en ;
+    ex:isTemporalPartOf ex:A321_111_ApproachTest ; obo:BFO_0000055 ex:A321_111_MaxApproachSpeedFunction ;
+    ex:hasMaxApproachSpeedKnot "141"^^xsd:decimal .
+
+ex:A321_111_ApproachSpeedMean a cco:ont00000896 ;          # Mean Point Estimate ICE
+    rdfs:label "A321-111 mean maximum approach speed"@en ;
+    skos:definition "The mean of the maximum speeds measured over the five approaches of the A321-111 approach test."@en ;
+    cco:ont00001808 ex:A321_111_ApproachTest ;              # is about
+    cco:ont00001769 "139"^^xsd:decimal ;                    # has decimal value
+    cco:ont00001863 cco:ont00001646 .                       # uses measurement unit -> Knot

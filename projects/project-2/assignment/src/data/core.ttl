@@ -160,3 +160,24 @@ ex:hasTMFSOperationsFY24 a owl:DatatypeProperty ; rdfs:range xsd:integer ;
 ex:isOnFAARegistry a owl:DatatypeProperty ; rdfs:range xsd:boolean ;
     rdfs:label "is On FAA Registry"@en ;
     skos:definition "Relates a fleet to whether aircraft of its type appear on the FAA registry."@en .
+
+# ======================= Task 2 =======================
+
+ex:TestProcess a owl:Class ;
+    rdfs:subClassOf cco:ont00000228 ;   # Planned Act
+    rdfs:label "Test Process"@en ;
+    skos:definition "A Planned Act in which one or more participants are put through a prescribed series of operations in order to measure how they perform."@en .
+
+ex:ApproachProcess a owl:Class ;
+    rdfs:subClassOf obo:BFO_0000015 ;   # process
+    rdfs:label "Approach Process"@en ;
+    skos:definition "A process in which an aircraft descends along a final approach path toward a runway, ending at touchdown or at the start of a go-around."@en .
+
+ex:isTemporalPartOf a owl:ObjectProperty ;
+    rdfs:subPropertyOf obo:BFO_0000139 ;   # temporal part of
+    rdfs:label "is temporal part of"@en ;
+    skos:definition "Relates an occurrent to a larger occurrent of which it is a temporal part, i.e. a part that occupies a sub-interval of the larger occurrent's time."@en .
+
+ex:hasMaxApproachSpeedKnot a owl:DatatypeProperty ; rdfs:range xsd:decimal ;
+    rdfs:label "has Max Approach Speed Knot"@en ;
+    skos:definition "Shortcut relating an Approach Process to the value, in knots, of the maximum speed the aircraft attained during it."@en .
