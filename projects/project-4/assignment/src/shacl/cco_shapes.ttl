@@ -104,8 +104,8 @@ ex:PressureUnitShape a sh:NodeShape ;
   sh:targetClass p4:PressureQuality ;
   sh:property [
     sh:path ( [ sh:inversePath cco:ont00001966 ] cco:ont00001863 ) ;
-    sh:in ( cco:ont00001694 p4:unit\/Kilopascal ) ;      # psi, kPa
-    sh:message "A pressure must be measured in a pressure unit (psi or kPa)." ;
+    sh:in ( cco:ont00001559 cco:ont00001694 p4:unit\/Kilopascal ) ;   # Pa, psi, kPa
+    sh:message "A pressure must be measured in a pressure unit (Pa, psi, or kPa)." ;
     sh:severity sh:Violation ] .
 
 ex:VoltageUnitShape a sh:NodeShape ;

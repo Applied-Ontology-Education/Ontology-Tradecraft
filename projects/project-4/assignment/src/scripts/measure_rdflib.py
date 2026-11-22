@@ -6,6 +6,7 @@
     Act of Measuring --has output--> MICE ; --occupies temporal region--> temporal instant (datetime)
 
 One SDC per (artifact, kind): Boiler-07's temperature is one quality, measured twice (in F and in C).
+Provenance: MICE converted by the ETL (pressures -> Pa) also record the value and unit the sensor reported.
 Exact BFO/CCO IRIs from cco_merged.ttl; local terms only where CCO has none.
 """
 import hashlib
@@ -17,6 +18,7 @@ from rdflib.namespace import OWL, RDF, RDFS, SKOS, XSD
 
 SRC = Path(__file__).resolve().parents[1]
 IN = SRC / "data" / "readings_normalized.csv"
+CONVERSIONS = SRC / "reports" / "unit_conversions.csv"
 OUT = SRC / "measure_cco.ttl"
 
 OBO = Namespace("http://purl.obolibrary.org/obo/")
@@ -44,10 +46,15 @@ KIND_CLASS = {"temperature": CCO.ont00000441, **{k: EX[v[0]] for k, v in LOCAL_Q
 # --- units: CCO individuals where they exist, local otherwise ---
 LOCAL_UNITS = {"kPa": ("Kilopascal", "Kilopascal Measurement Unit"), "ohm": ("Ohm", "Ohm Measurement Unit")}
 UNIT_IRI = {"F": CCO.ont00001724, "C": CCO.ont00001606, "psi": CCO.ont00001694, "V": CCO.ont00001450,
+            "Pa": CCO.ont00001559,
             **{k: EX["unit/" + v[0]] for k, v in LOCAL_UNITS.items()}}
 UNIT_LABEL = {"F": "Degree Fahrenheit Measurement Unit", "C": "Degree Celsius Measurement Unit",
               "psi": "Pounds Per Square Inch Measurement Unit", "V": "Volt Measurement Unit",
+              "Pa": "Pascal Measurement Unit",
               **{k: v[1] for k, v in LOCAL_UNITS.items()}}
+
+
+HAS_ORIG_VALUE, HAS_ORIG_UNIT = EX.hasReportedValue, EX.hasReportedUnit
 
 
 def en(text: str) -> Literal:
@@ -70,6 +77,18 @@ def main() -> None:
         g.add((c, RDF.type, OWL.Class)); g.add((c, RDFS.subClassOf, QUALITY))
         g.add((c, RDFS.label, en(label))); g.add((c, SKOS.definition, en(definition)))
 
+    g.add((HAS_ORIG_VALUE, RDF.type, OWL.DatatypeProperty))
+    g.add((HAS_ORIG_VALUE, RDFS.label, en("has reported value")))
+    g.add((HAS_ORIG_VALUE, SKOS.definition, en("Relates a converted measurement to the numeric value the sensor originally reported, before unit normalization.")))
+    g.add((HAS_ORIG_UNIT, RDF.type, OWL.ObjectProperty))
+    g.add((HAS_ORIG_UNIT, RDFS.label, en("has reported unit")))
+    g.add((HAS_ORIG_UNIT, SKOS.definition, en("Relates a converted measurement to the unit in which the sensor originally reported it.")))
+
+    conv = {}
+    if CONVERSIONS.exists():
+        for r in pd.read_csv(CONVERSIONS).itertuples(index=False):
+            conv[(r.artifact_id, r.sdc_kind, r.timestamp, float(r.value))] = (r.original_value, r.original_unit)
+
     for code, iri in UNIT_IRI.items():
         g.add((iri, RDF.type, OWL.NamedIndividual)); g.add((iri, RDF.type, MU))
         g.add((iri, RDFS.label, en(UNIT_LABEL[code])))
@@ -91,9 +110,15 @@ def main() -> None:
         g.add((mice, IS_MEASURE_OF, sdc))
         g.add((mice, USES_UNIT, UNIT_IRI[row.unit_label]))
         g.add((mice, HAS_DECIMAL, Literal(str(row.value), datatype=XSD.decimal)))
+        orig = conv.get((row.artifact_id, row.sdc_kind, row.timestamp, float(row.value)))
+        if orig:
+            g.add((mice, HAS_ORIG_VALUE, Literal(str(orig[0]), datatype=XSD.decimal)))
+            g.add((mice, HAS_ORIG_UNIT, UNIT_IRI[orig[1]]))
 
         g.add((act, RDF.type, ACT_OF_MEASURING)); g.add((act, HAS_OUTPUT, mice))
-        g.add((act, RDFS.label, en(f"measuring {row.artifact_id} {row.sdc_kind} in {row.unit_label} at {row.timestamp}")))
+        # The act measured in the unit the sensor used; conversion to Pa happened later, in the ETL.
+        act_unit = orig[1] if orig else row.unit_label
+        g.add((act, RDFS.label, en(f"measuring {row.artifact_id} {row.sdc_kind} in {act_unit} at {row.timestamp}")))
         g.add((act, OCCUPIES_TR, inst))
         g.add((inst, RDF.type, TEMPORAL_INSTANT)); g.add((inst, RDFS.label, en(row.timestamp)))
         g.add((inst, HAS_DATETIME, Literal(row.timestamp, datatype=XSD.dateTime)))
