@@ -1,215 +1,150 @@
-#!/usr/bin/env python3
-from __future__ import annotations
-from pathlib import Path
-from typing import Any, Dict, List
-import json
 import pandas as pd
+import json
 from dateutil import parser as dateparser
-import datetime as _dt
+from pathlib import Path
+import datetime
 
-# ---------- Paths resolved relative to this script ----------
-SCRIPT_DIR = Path(__file__).resolve().parent          # .../src/scripts
-SRC_DIR    = SCRIPT_DIR.parent                         # .../src
-DATA_DIR   = SRC_DIR / "data"                          # .../src/data
-IN_A       = DATA_DIR / "sensor_A.csv"
-IN_B       = DATA_DIR / "sensor_B.json"
-IN_C       = DATA_DIR / "sensor_C.csv"
-OUT        = DATA_DIR / "readings_normalized.csv"
+# Paths
+IN_A = Path("src/data/sensor_A.csv")
+IN_B = Path("src/data/sensor_B.json")
+IN_C = Path("src/data/sensor_C.csv")
+OUT = Path("src/data/readings_normalized.csv")
 
-CANON = ["artifact_id", "sdc_kind", "unit_label", "value", "timestamp"]
+# Read CSV A
+df_a = pd.read_csv(IN_A, dtype=str, keep_default_na=False, na_values=["", "NA", "NaN"])
+df_a = df_a.rename(columns={
+    "Device Name": "artifact_id",
+    "Reading Type": "sdc_kind",
+    "Units": "unit_label",
+    "Reading Value": "value",
+    "Time (Local)": "timestamp",
+})
+df_a = df_a[[c for c in ["artifact_id","sdc_kind","unit_label","value","timestamp"] if c in df_a.columns]]
 
-# ---------- Helpers ----------
-def _to_iso_utc(x: Any) -> str | None:
-    """Parse any timestamp to ISO-8601 in UTC with 'Z'. If naive, assume UTC."""
-    if x is None:
-        return None
-    s = str(x).strip()
-    if not s or s.lower() in {"nan", "none"}:
+# Read CSV C
+if IN_C.exists():
+    df_c = pd.read_csv(IN_C, dtype=str, keep_default_na=False, na_values=["", "NA", "NaN"])
+else:
+    print(f"[normalize_readings] {IN_C} not found; skipping.")
+    df_c = pd.DataFrame(columns=["Device Name", "Reading Type", "Units", "Reading Value", "Time (Local)"])
+df_c = df_c.rename(columns={
+    "Device Name": "artifact_id",
+    "Reading Type": "sdc_kind",
+    "Units": "unit_label",
+    "Reading Value": "value",
+    "Time (Local)": "timestamp",
+})
+df_c = df_c[[c for c in ["artifact_id","sdc_kind","unit_label","value","timestamp"] if c in df_c.columns]]
+
+# Read JSON B
+raw_txt = Path(IN_B).read_text(encoding="utf-8").strip()
+try:
+    obj = json.loads(raw_txt)
+
+    if "readings" in obj and isinstance(obj["readings"], list):
+        # Nested structure with readings array
+        records = []
+        for reading_entry in obj["readings"]:
+            entity_id = reading_entry.get("entity_id")
+            for data_point in reading_entry.get("data", []):
+                records.append({
+                    "artifact": entity_id,
+                    "kind": data_point.get("kind"),
+                    "uom": data_point.get("unit"),
+                    "val": data_point.get("value"),
+                    "ts": data_point.get("time"),
+                })
+    # Fallback: flat structure
+    elif "records" in obj and isinstance(obj, dict):
+        records = obj["records"]
+    elif isinstance(obj, list):
+        records = obj
+    else:
+        records = [obj]
+        
+except json.JSONDecodeError:
+    # NDJSON fallback
+    records = [json.loads(line) for line in raw_txt.splitlines() if line.strip()]
+
+df_b = pd.DataFrame([{
+    "artifact_id": r.get("artifact") or r.get("asset") or r.get("entity_id"),
+    "sdc_kind":    r.get("kind") or r.get("measure_type") or r.get("sdc_kind"),
+    "unit_label":  r.get("uom") or r.get("unit") or r.get("unit_label"),
+    "value":       r.get("val") or r.get("reading") or r.get("value"),
+    "timestamp":   r.get("ts") or r.get("time") or r.get("timestamp"),
+} for r in records])
+
+# PRINT STATEMENTS
+print(f"[normalize_readings] Input A rows: {len(df_a)}")
+print(f"[normalize_readings] Input B rows: {len(df_b)}")
+print(f"[normalize_readings] Input C rows: {len(df_c)}")
+
+# Combine
+df = pd.concat([df_a, df_b, df_c], ignore_index=True)
+
+# Clean strings
+for col in ["artifact_id","sdc_kind","unit_label"]:
+    df[col] = df[col].astype(str).str.strip()
+
+# Convert to numeric
+df["value"] = pd.to_numeric(df["value"], errors="coerce")
+
+# Timestamp conversion
+def to_iso8601(x):
+    if pd.isna(x) or str(x).strip() == "":
         return None
     try:
-        dt = dateparser.parse(s)
+        dt = dateparser.parse(str(x))
         if dt is None:
             return None
         if dt.tzinfo is None:
-            dt = dt.replace(tzinfo=_dt.timezone.utc)
-        return dt.astimezone(_dt.timezone.utc).isoformat().replace("+00:00", "Z")
+            dt = dt.replace(tzinfo=datetime.timezone.utc)
+        iso_str = dt.astimezone(datetime.timezone.utc).isoformat()
+        # Ensure it ends with Z
+        iso_str = iso_str.replace("+00:00", "Z")
+        if not iso_str.endswith("Z"):
+            iso_str += "Z"
+        return iso_str
     except Exception:
         return None
 
+df["timestamp"] = df["timestamp"].apply(to_iso8601)
 
-def _to_float(x: Any) -> float | None:
-    if x is None:
-        return None
-    s = str(x).strip()
-    if s == "" or s.lower() in {"nan", "none"}:
-        return None
-    try:
-        return float(s)
-    except Exception:
-        return None
+# Normalize units
+UNIT_MAP = {
+    "celsius": "degC", "°c": "degC", "c": "degC", "degc": "degC", "°C": "degC",
+    "fahrenheit": "degF", "f": "degF", "degf": "degF", "°f": "degF", "°F": "degF",
+    "pounds per square inch": "PSI_gauge", "psi": "PSI_gauge",
+    "kilopascal": "kPa_gauge", "kpa": "kPa_gauge", "KPA": "kPa_gauge", "kPa": "kPa_gauge",
+    "volt": "V", "volts": "V", "v": "V", "V": "V",
+    "ohm": "Ω", "ohms": "Ω", "Ω": "Ω",
+}
 
+# FIXED: Apply unit normalization properly
+df["unit_label"] = df["unit_label"].str.lower().map(UNIT_MAP).fillna(df["unit_label"])
 
-def _norm_kind(k: Any) -> str | None:
-    """Normalize reading type/kind labels (string only, no semantic conversion)."""
-    if k is None:
-        return None
-    s = str(k).strip()
-    if not s:
-        return None
-    low = s.lower()
-    if low in {"temp", "temperature"}:
-        return "temperature"
-    if low in {"pressure"}:
-        return "pressure"
-    if low in {"voltage"}:
-        return "voltage"
-    if low in {"resistance"}:
-        return "resistance"
-    # fallback: return trimmed as-is
-    return s
+# Normalize quantity kinds
+KIND_MAP = {
+    "temp": "temperature",
+    "temperature": "temperature",
+    "pressure": "pressure",
+    "voltage": "voltage",
+    "resistance": "resistance",
+}
 
+df["sdc_kind"] = df["sdc_kind"].str.lower().map(KIND_MAP).fillna(df["sdc_kind"])
 
-def _norm_unit(u: Any) -> str | None:
-    """Normalize unit spelling/abbrev only (no numeric conversions)."""
-    if u is None:
-        return None
-    s = str(u).strip()
-    if not s:
-        return None
-    low = s.lower()
-    # temperature
-    if low in {"celsius", "°c", "c"}:
-        return "C"
-    if low in {"fahrenheit", "°f", "f"}:
-        return "F"
-    # pressure
-    if low == "psi":
-        return "psi"
-    if low in {"kpa", "kilopascal", "kilopascals"}:
-        return "kPa"
-    # electrical
-    if low in {"v", "volt", "volts"}:
-        return "V"
-    if low in {"ohm", "ohms", "Ω", "ω"}:
-        return "ohm"
-    # pass through otherwise
-    return s
+# Standardize artifact IDs (spaces to hyphens)
+df["artifact_id"] = df["artifact_id"].str.replace(" ", "-")
 
+# Drop incomplete rows
+df = df.dropna(subset=["artifact_id","sdc_kind","unit_label","value","timestamp"])
 
-# ---------- Loaders for each source ----------
-def load_sensor_a(path: Path) -> pd.DataFrame:
-    """
-    CSV columns (exact): Device Name, Reading Type, Reading Value, Units, Time (Local)
-    Maps to canonical columns.
-    """
-    if not path.exists():
-        raise FileNotFoundError(f"Missing {path}")
-    df = pd.read_csv(path, dtype=str, keep_default_na=False)
-    # Rename using exact headers shown
-    rename_map = {
-        "Device Name": "artifact_id",
-        "Reading Type": "sdc_kind",
-        "Reading Value": "value",
-        "Units": "unit_label",
-        "Time (Local)": "timestamp",
-    }
-    # Be tolerant to stray whitespace/casing in headers
-    fixed_cols = {c: c.strip() for c in df.columns}
-    df = df.rename(columns=fixed_cols)
-    df = df.rename(columns={k: v for k, v in rename_map.items() if k in df.columns})
+# Sort
+df = df.sort_values(["artifact_id", "timestamp"]).reset_index(drop=True)
 
-    # Ensure canonical columns exist
-    for c in CANON:
-        if c not in df.columns:
-            df[c] = None
+# Save
+OUT.parent.mkdir(parents=True, exist_ok=True)
+df.to_csv(OUT, index=False)
+print(f"[normalize_readings] Wrote {OUT} with {len(df)} rows.")
 
-    df = df[CANON].copy()
-    return df
-
-
-def load_sensor_b(path: Path) -> pd.DataFrame:
-    """
-    JSON structure per the example in the prompt.
-    """
-    if not path.exists():
-        raise FileNotFoundError(f"Missing {path}")
-    obj = json.loads(path.read_text(encoding="utf-8"))
-    readings = obj.get("readings", []) if isinstance(obj, dict) else []
-
-    rows: List[Dict[str, Any]] = []
-    for entry in readings:
-        entity = entry.get("entity_id")
-        for d in entry.get("data", []) or []:
-            rows.append({
-                "artifact_id": entity,
-                "sdc_kind": d.get("kind"),
-                "unit_label": d.get("unit"),
-                "value": d.get("value"),
-                "timestamp": d.get("time"),
-            })
-
-    df = pd.DataFrame(rows, columns=CANON)
-    return df
-
-
-# ---------- Normalize + Diagnostics ----------
-def normalize_and_clean(df: pd.DataFrame) -> pd.DataFrame:
-    # Trim strings
-    for col in ["artifact_id", "sdc_kind", "unit_label", "timestamp"]:
-        df[col] = df[col].astype(str).str.strip()
-
-    # Normalize labels
-    df["sdc_kind"] = df["sdc_kind"].apply(_norm_kind)
-    df["unit_label"] = df["unit_label"].apply(_norm_unit)
-
-    # Coerce types
-    df["value"] = df["value"].apply(_to_float)
-    df["timestamp"] = df["timestamp"].apply(_to_iso_utc)
-
-    # Diagnostics
-    total = len(df)
-    missing_counts = {
-        "artifact_id": int(df["artifact_id"].isna().sum() + (df["artifact_id"] == "").sum()),
-        "sdc_kind":    int(df["sdc_kind"].isna().sum() + (df["sdc_kind"] == "").sum()),
-        "unit_label":  int(df["unit_label"].isna().sum() + (df["unit_label"] == "").sum()),
-        "value":       int(df["value"].isna().sum()),
-        "timestamp":   int(df["timestamp"].isna().sum()),
-    }
-    print("[diagnostics] total rows:", total, "| missing:", missing_counts)
-
-    # Drop rows with any missing criticals
-    df = df.replace({"": pd.NA})
-    df = df.dropna(subset=["artifact_id", "sdc_kind", "unit_label", "value", "timestamp"])
-
-    # Sort deterministically
-    df = df.sort_values(["artifact_id", "timestamp"]).reset_index(drop=True)
-
-    # Reorder columns
-    df = df[CANON]
-    return df
-
-
-def main():
-    print("[paths] A:", IN_A)
-    print("[paths] B:", IN_B)
-    print("[paths] C:", IN_C)
-    df_a = load_sensor_a(IN_A)
-    df_b = load_sensor_b(IN_B)
-    df_c = load_sensor_a(IN_C)
-
-    print(f"[normalize_readings] Input A rows: {len(df_a)}")
-    print(f"[normalize_readings] Input B rows: {len(df_b)}")
-    print(f"[normalize_readings] Input C rows: {len(df_c)}")
-
-    combined = pd.concat([df_a, df_b, df_c], ignore_index=True)
-    cleaned = normalize_and_clean(combined)
-
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    cleaned.to_csv(OUT, index=False)
-
-    print(f"[normalize_readings] Output rows : {len(cleaned)}")
-    print(f"[normalize_readings] Wrote       : {OUT}")
-
-
-if __name__ == "__main__":
-    main()

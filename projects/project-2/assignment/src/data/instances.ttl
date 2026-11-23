@@ -1,0 +1,327 @@
+@prefix eo: <https://test.org/eo/p2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix cco: <https://www.commoncoreontologies.org/> .
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  https://test.org/eo/p2#A320_Neo_Engine_1
+eo:A320_Neo_Engine_1 rdf:type owl:NamedIndividual ,
+                              eo:Jet_Engine ;
+                     rdfs:label "A320 Neo Engine 1" .
+
+###  https://test.org/eo/p2#A320_Neo_Engine_2
+eo:A320_Neo_Engine_2 rdf:type owl:NamedIndividual ,
+                              eo:Jet_Engine ;
+                     rdfs:label "A320 Neo Engine 2" .
+
+###  https://test.org/eo/p2#A321-111_Max_approach
+eo:A321-111_Max_approach rdf:type owl:NamedIndividual ,
+                                  obo:BFO_0000017 ;
+                         eo:has_measurement_value "142"^^xsd:integer ;
+                         rdfs:label "A321-111 max approach" .
+
+###  https://test.org/eo/p2#Adaptability_Evaluation_1
+eo:Adaptability_Evaluation_1 rdf:type owl:NamedIndividual ,
+                                      eo:Adaptability_Evaluation ;
+                             rdfs:label "Adaptability Evaluation 1" ;
+                             skos:definition "First adaptability evaluation process." .
+
+###  https://test.org/eo/p2#Adaptability_Evaluation_2
+eo:Adaptability_Evaluation_2 rdf:type owl:NamedIndividual ,
+                                      eo:Adaptability_Evaluation ;
+                             rdfs:label "Adaptability Evaluation 2" ;
+                             skos:definition "Second adaptability evaluation process." .
+
+###  https://test.org/eo/p2#Adaptability_Evaluation_3
+eo:Adaptability_Evaluation_3 rdf:type owl:NamedIndividual ,
+                                      eo:Adaptability_Evaluation ;
+                             rdfs:label "Adaptability Evaluation 3" ;
+                             skos:definition "Third adaptability evaluation process." .
+
+###  https://test.org/eo/p2#Artifact_Design_1
+eo:Artifact_Design_1 rdf:type owl:NamedIndividual ,
+                              eo:Artifact_Design ;
+                     rdfs:label "Aircraft Design 1" ;
+                     skos:definition "First aircraft design specification." .
+
+###  https://test.org/eo/p2#Something_About_Design
+eo:Something_About_Design rdf:type owl:NamedIndividual ;
+                          eo:is_about eo:ArtifactDesign ;
+                          rdfs:label "Something about design" .
+
+###  Add missing Artifact Design instance  
+eo:ArtifactDesign rdf:type owl:NamedIndividual ,
+                           eo:Artifact_Design ;
+                  rdfs:label "Artifact Design" ;
+                  skos:definition "A design specification for an artifact." .
+
+###  https://test.org/eo/p2#Quality_1
+eo:Quality_1 rdf:type owl:NamedIndividual ,
+                      eo:quality ;
+             obo:BFO_0000197 eo:A320_Neo_Engine_1 ;
+             rdfs:label "Engine Quality 1" .
+
+###  https://test.org/eo/p2#Output_1
+eo:Output_1 rdf:type owl:NamedIndividual ;
+            eo:is_output_of eo:Aircraft_Processing_1 ;
+            rdfs:label "Process Output 1" .
+
+###  https://test.org/eo/p2#Airbus_A320_Neo
+eo:Airbus_A320_Neo rdf:type owl:NamedIndividual ,
+                            cco:ont00000319 ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty eo:has_Length_Ft ;
+                              owl:someValuesFrom xsd:decimal
+                            ] ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty eo:Number_of_Jet_Engines ;
+                              owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                              owl:onDataRange owl:rational
+                            ] ;
+                   obo:BFO_0000178 eo:A320_Neo_Engine_1 ,
+                                   eo:A320_Neo_Engine_2 ;    
+                   eo:Number_of_Jet_Engines "2"^^xsd:integer ;
+                   eo:has_Length_Ft "123.3"^^xsd:decimal ;
+                   eo:has_Model_BADA "Airbus A320-271N"^^xsd:string ;
+                   eo:has_Model_FAA "Airbus A320 Neo"^^xsd:string ;
+                   eo:has_Tail_Height_Ft "39.6"^^xsd:decimal ;
+                   eo:has_manufacturer eo:Airbus_Manufacturer ;
+                   rdfs:label "Airbus A320 NEO" .
+
+###  https://test.org/eo/p2#Airbus_Manufacturer
+eo:Airbus_Manufacturer rdf:type owl:NamedIndividual ;
+                       rdfs:label "Airbus" .
+
+###  https://test.org/eo/p2#Airbus_A321-111
+eo:Airbus_A321-111 rdf:type owl:NamedIndividual ,
+                            cco:ont00000319 ;
+                   cco:ont00001942 eo:A321-111_Max_approach ;
+                   rdfs:label "Airbus A321-111" .
+
+###  https://test.org/eo/p2#Aircraft_Processing_1
+eo:Aircraft_Processing_1 rdf:type owl:NamedIndividual ,
+                                  eo:Act_of_Aircraft_Processing ;
+                         eo:realizes eo:Adaptability_Evaluation_1 ;
+                         rdfs:label "Aircraft process 1" ;
+                         skos:definition "First aerospace engineering activity" .
+
+###  https://test.org/eo/p2#Aircraft_Processing_2
+eo:Aircraft_Processing_2 rdf:type owl:NamedIndividual ,
+                                  eo:Act_of_Aircraft_Processing ;
+                         eo:realizes eo:Adaptability_Evaluation_2 ;
+                         rdfs:label "Aircraft process 2" ;
+                         skos:definition "Second aerospace engineering activity" .
+
+###  https://test.org/eo/p2#Aircraft_Processing_3
+eo:Aircraft_Processing_3 rdf:type owl:NamedIndividual ,
+                                  eo:Act_of_Aircraft_Processing ;
+                         eo:realizes eo:Adaptability_Evaluation_3 ;
+                         rdfs:label "Aircraft process 3" ;
+                         skos:definition "Third aerospace engineering activity" .
+
+###  https://test.org/eo/p2#Employment_Measurement_1
+eo:Employment_Measurement_1 rdf:type owl:NamedIndividual ,
+                                     cco:ont00000345 ;
+                            cco:ont00001808 eo:Population_1 ;
+                            rdfs:label "Employment Measurement 1" .
+
+###  https://test.org/eo/p2#Employment_Measurement_2
+eo:Employment_Measurement_2 rdf:type owl:NamedIndividual ,
+                                     cco:ont00000345 ;
+                            cco:ont00001808 eo:Population_2 ;
+                            rdfs:label "Employment Measurement 2" .
+
+###  https://test.org/eo/p2#Employment_Measurement_3
+eo:Employment_Measurement_3 rdf:type owl:NamedIndividual ,
+                                     cco:ont00000345 ;
+                            cco:ont00001808 eo:Population_3 ;
+                            rdfs:label "Employment Measurement 3" .
+
+###  https://test.org/eo/p2#OCC_Aerospace_Engineer_1
+eo:OCC_Aerospace_Engineer_1 rdf:type owl:NamedIndividual ,
+                                     eo:Job_Role ;
+                            eo:has_area "99"^^xsd:integer ;
+                            eo:o_group "broad"^^xsd:string ;
+                            eo:own_code "17-2010"^^xsd:string ;
+                            rdfs:label "OCC: Aerospace Engineer 1" ;
+                            skos:definition "Aerospace engineer occupation code 1" .
+
+###  https://test.org/eo/p2#OCC_Aerospace_Engineer_2
+eo:OCC_Aerospace_Engineer_2 rdf:type owl:NamedIndividual ,
+                                     eo:Job_Role ;
+                            eo:has_area "99"^^xsd:integer ;
+                            eo:o_group "detailed"^^xsd:string ;
+                            eo:own_code "17-2011"^^xsd:string ;
+                            rdfs:label "OCC: Aerospace Engineer 2" ;
+                            skos:definition "Aerospace engineer occupation code 2" .
+
+###  https://test.org/eo/p2#OCC_Aerospace_Engineer_3
+eo:OCC_Aerospace_Engineer_3 rdf:type owl:NamedIndividual ,
+                                     eo:Job_Role ;
+                            eo:has_area "99"^^xsd:integer ;
+                            eo:o_group "detailed"^^xsd:string ;
+                            eo:own_code "17-3021"^^xsd:string ;
+                            rdfs:label "OCC: Aerospace Engineer 3" ;
+                            skos:definition "Aerospace engineer occupation code 3" .
+
+###  https://test.org/eo/p2#Population_1
+eo:Population_1 rdf:type owl:NamedIndividual ,
+                         cco:ont00000300 ;
+                rdfs:label "Aerospace Engineer Population 1" .
+
+###  https://test.org/eo/p2#Population_2
+eo:Population_2 rdf:type owl:NamedIndividual ,
+                         cco:ont00000300 ;
+                rdfs:label "Aerospace Engineer Population 2" .
+
+###  https://test.org/eo/p2#Population_3
+eo:Population_3 rdf:type owl:NamedIndividual ,
+                         cco:ont00000300 ;
+                rdfs:label "Aerospace Engineer Population 3" .
+
+###  https://test.org/eo/p2#SOC_Aerospace_Engineer_1
+eo:SOC_Aerospace_Engineer_1 rdf:type owl:NamedIndividual ,
+                       eo:Soc_Code ;
+              obo:BFO_0000055 eo:Adaptability_Evaluation_1 ;
+              cco:ont00001808 eo:Aircraft_Processing_1 ;
+              eo:OCC_CODE "17-2011"^^xsd:string ;
+              eo:has_area "99"^^xsd:integer ;
+              eo:o_group "Broad"^^xsd:string ;
+              eo:own_code "1235"^^xsd:integer ;
+              rdfs:label "SOC: Aerospace Engineer 17-2010" ;
+              skos:definition "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques." .
+
+###  https://test.org/eo/p2#SOC_Aerospace_Engineer_2
+eo:SOC_Aerospace_Engineer_2 rdf:type owl:NamedIndividual ,
+                       eo:Soc_Code ;
+              obo:BFO_0000055 eo:Adaptability_Evaluation_2 ;
+              cco:ont00001808 eo:Aircraft_Processing_2 ;
+              eo:OCC_CODE "17-2011"^^xsd:string ;
+              eo:has_area "99"^^xsd:integer ;
+              eo:o_group "detailed"^^xsd:string ;
+              eo:own_code "1235"^^xsd:integer ;
+              rdfs:label "SOC: Aerospace Engineer 17-2011" ;
+              skos:definition "Perform engineering duties in designing, constructing, and testing aircraft, missiles, and spacecraft. May conduct basic and applied research to evaluate adaptability of materials and equipment to aircraft design and manufacture. May recommend improvements in testing equipment and techniques." .
+
+###  https://test.org/eo/p2#SOC_Aerospace_Engineer_3
+eo:SOC_Aerospace_Engineer_3 rdf:type owl:NamedIndividual ,
+                       eo:Soc_Code ;
+              obo:BFO_0000055 eo:Adaptability_Evaluation_3 ;
+              cco:ont00001808 eo:Aircraft_Processing_3 ;
+              eo:OCC_CODE "17-3021"^^xsd:string ;
+              eo:has_area "99"^^xsd:integer ;
+              eo:o_group "detailed"^^xsd:string ;
+              eo:own_code "1235"^^xsd:integer ;
+              rdfs:label "SOC: Aerospace Engineering and Operations Technologists and Technicians" ;
+              skos:definition "Operate, install, adjust, and maintain integrated computer/communications systems, consoles, simulators, and other data acquisition, test, and measurement instruments and equipment, which are used to launch, track, position, and evaluate air and space vehicles. May record and interpret test data." .
+
+###  https://test.org/eo/p2#Total_Employment_1
+eo:Total_Employment_1 rdf:type owl:NamedIndividual ,
+                               eo:Total_Employment ;
+                      obo:BFO_0000197 eo:Population_1 ;
+                      eo:has_measurement_value "68440"^^xsd:integer ;
+                      rdfs:label "Total Employment" .
+
+###  https://test.org/eo/p2#Total_Employment_2
+eo:Total_Employment_2 rdf:type owl:NamedIndividual ,
+                               eo:Total_Employment ;
+                      obo:BFO_0000197 eo:Population_2 ;
+                      eo:has_measurement_value "68440"^^xsd:integer ;
+                      rdfs:label "Total Employment" .
+
+###  https://test.org/eo/p2#Total_Employment_3
+eo:Total_Employment_3 rdf:type owl:NamedIndividual ,
+                               eo:Total_Employment ;
+                      obo:BFO_0000197 eo:Population_3 ;
+                      eo:has_measurement_value "9060"^^xsd:integer ;
+                      rdfs:label "Total Employment" .
+
+###  https://test.org/eo/p2#approach_1
+eo:approach_1 rdf:type owl:NamedIndividual ,
+                       obo:BFO_0000015 ;
+              eo:is_temporal_part_of eo:test_process ;
+              eo:has_measurement_value "138"^^xsd:integer .
+
+###  https://test.org/eo/p2#approach_2
+eo:approach_2 rdf:type owl:NamedIndividual ,
+                       obo:BFO_0000015 ;
+              eo:is_temporal_part_of eo:test_process ;
+              eo:has_measurement_value "139"^^xsd:integer .
+
+###  https://test.org/eo/p2#approach_3
+eo:approach_3 rdf:type owl:NamedIndividual ,
+                       obo:BFO_0000015 ;
+              eo:is_temporal_part_of eo:test_process ;
+              eo:has_measurement_value "139"^^xsd:integer .
+
+###  https://test.org/eo/p2#approach_4
+eo:approach_4 rdf:type owl:NamedIndividual ,
+                       obo:BFO_0000015 ;
+              eo:is_temporal_part_of eo:test_process ;
+              eo:has_measurement_value "140"^^xsd:integer .
+
+###  https://test.org/eo/p2#approach_5
+eo:approach_5 rdf:type owl:NamedIndividual ,
+                       obo:BFO_0000015 ;
+              eo:is_temporal_part_of eo:test_process ;
+              eo:has_measurement_value "139"^^xsd:integer .
+
+###  https://test.org/eo/p2#avg_1
+eo:avg_1 rdf:type owl:NamedIndividual ,
+                  cco:ont00000958 ;
+         eo:is_measurement_of eo:test_process ;
+         eo:has_measurement_value "139"^^xsd:integer ;
+         rdfs:label "average 1" .
+
+###  https://test.org/eo/p2#knots
+eo:knots rdf:type owl:NamedIndividual ,
+                  eo:Knots ;
+         cco:ont00001961 eo:A321-111_Max_approach ;
+         rdfs:label "Knots" .
+
+###  https://test.org/eo/p2#measurement_1
+eo:measurement_1 rdf:type owl:NamedIndividual ,
+                          cco:ont00000958 ;
+                 eo:is_measurement_of eo:approach_1 ;
+                 cco:ont00001863 eo:knots ;
+                 eo:has_measurement_value "138"^^xsd:integer .
+
+###  https://test.org/eo/p2#measurement_2
+eo:measurement_2 rdf:type owl:NamedIndividual ,
+                          cco:ont00000958 ;
+                 eo:is_measurement_of eo:approach_2 ;
+                 cco:ont00001863 eo:knots ;
+                 eo:has_measurement_value "139"^^xsd:integer .
+
+###  https://test.org/eo/p2#measurement_3
+eo:measurement_3 rdf:type owl:NamedIndividual ,
+                          cco:ont00000958 ;
+                 eo:is_measurement_of eo:approach_3 ;
+                 cco:ont00001863 eo:knots ;
+                 eo:has_measurement_value "139"^^xsd:integer .
+
+###  https://test.org/eo/p2#measurement_4
+eo:measurement_4 rdf:type owl:NamedIndividual ,
+                          cco:ont00000958 ;
+                 eo:is_measurement_of eo:approach_4 ;
+                 cco:ont00001863 eo:knots ;
+                 eo:has_measurement_value "140"^^xsd:integer .
+
+###  https://test.org/eo/p2#measurement_5
+eo:measurement_5 rdf:type owl:NamedIndividual ,
+                          cco:ont00000958 ;
+                 eo:is_measurement_of eo:approach_5 ;
+                 cco:ont00001863 eo:knots ;
+                 eo:has_measurement_value "139"^^xsd:integer .
+
+###  https://test.org/eo/p2#test_process
+eo:test_process rdf:type owl:NamedIndividual ,
+                         eo:Test_Process ;
+                rdfs:label "Test Process 1" .

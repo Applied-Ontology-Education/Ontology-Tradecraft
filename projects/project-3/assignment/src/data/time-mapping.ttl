@@ -1,0 +1,15 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<https://example.org/ontology-tradecraft/to-mapping> a owl:Ontology ;
+    rdfs:comment "OWL-Time -> CCOT/BFO mappings, the reverse view of ccot-mapping.ttl." .
+
+### OWL-Time Instant ("a temporal entity with zero extent or duration") and BFO temporal instant
+### (a zero-dimensional temporal region with no proper temporal part), which CCOT's Time of Day specializes,
+### describe the same thing.
+time:Instant owl:equivalentClass obo:BFO_0000203 .
+
+### Every OWL-Time temporal entity is a BFO temporal region (CCOT's temporal classes all sit under it).
+time:TemporalEntity rdfs:subClassOf obo:BFO_0000008 .

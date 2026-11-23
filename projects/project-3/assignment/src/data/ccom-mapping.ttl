@@ -1,0 +1,13 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+
+<https://example.org/ontology-tradecraft/ccom-mapping> a owl:Ontology ;
+    rdfs:comment "CCOM-side record of the CCOM/QUDT alignment from ccom-qudt-structural-matches.xlsx. Of the 645 candidate pairs, the only rows kept pair CCO Information Content Entity with the QUDT unit classes; everything else was dropped (temporal intervals are measured in units but are not units; measurement ICEs use units but are not units). The kept alignment is the same as in qudt-mapping.ttl." .
+
+### CCO Information Content Entity (cco:ont00000958) is the CCOM-side class in every kept row.
+### QUDT's top-level unit classes fall under it; the other 12 unit classes inherit through QUDT's own hierarchy.
+qudt:ScienceAndEngineeringUnit rdfs:subClassOf cco:ont00000958 .
+qudt:FinancialUnit             rdfs:subClassOf cco:ont00000958 .
+qudt:HumanUnit                 rdfs:subClassOf cco:ont00000958 .

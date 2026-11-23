@@ -1,0 +1,189 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix ex: <http://example.org/measurement/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://example.org/measurement> a owl:Ontology ;
+    rdfs:label "Sensor Measurement Graph"@en .
+
+ex:boiler-07 a cco:ont00000995 ;
+    rdfs:label "Boiler-07"@en ;
+    obo:BFO_0000196 ex:boiler-07-pressure-sdc,
+        ex:boiler-07-temperature-sdc .
+
+ex:boiler-09 a cco:ont00000995 ;
+    rdfs:label "Boiler-09"@en ;
+    obo:BFO_0000196 ex:boiler-09-pressure-sdc .
+
+ex:chiller-3 a cco:ont00000995 ;
+    rdfs:label "Chiller-3"@en ;
+    obo:BFO_0000196 ex:chiller-3-temperature-sdc .
+
+ex:chiller-4 a cco:ont00000995 ;
+    rdfs:label "Chiller-4"@en ;
+    obo:BFO_0000196 ex:chiller-4-temperature-sdc .
+
+ex:circuit-07 a cco:ont00000995 ;
+    rdfs:label "Circuit-07"@en ;
+    obo:BFO_0000196 ex:circuit-07-voltage-sdc .
+
+ex:circuit-12 a cco:ont00000995 ;
+    rdfs:label "Circuit-12"@en ;
+    obo:BFO_0000196 ex:circuit-12-resistance-sdc,
+        ex:circuit-12-voltage-sdc .
+
+ex:mice-000001 a cco:ont00001163 ;
+    rdfs:label "temperature measurement of Boiler-07 at 2024-03-17T19:03:00Z: 212.0 degF"@en ;
+    cco:ont00001769 212.0 ;
+    cco:ont00001863 ex:unit-degf ;
+    cco:ont00001966 ex:boiler-07-temperature-sdc .
+
+ex:mice-000002 a cco:ont00001163 ;
+    rdfs:label "pressure measurement of Boiler-07 at 2024-03-17T19:04:00Z: 14.7 PSI_gauge"@en ;
+    cco:ont00001769 14.7 ;
+    cco:ont00001863 ex:unit-psi-gauge ;
+    cco:ont00001966 ex:boiler-07-pressure-sdc .
+
+ex:mice-000003 a cco:ont00001163 ;
+    rdfs:label "temperature measurement of Boiler-07 at 2024-03-17T23:03:00Z: 100.0 degC"@en ;
+    cco:ont00001769 100.0 ;
+    cco:ont00001863 ex:unit-degc ;
+    cco:ont00001966 ex:boiler-07-temperature-sdc .
+
+ex:mice-000004 a cco:ont00001163 ;
+    rdfs:label "pressure measurement of Boiler-07 at 2024-03-17T23:04:00Z: 101.325 kPa_gauge"@en ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 ex:unit-kpa-gauge ;
+    cco:ont00001966 ex:boiler-07-pressure-sdc .
+
+ex:mice-000005 a cco:ont00001163 ;
+    rdfs:label "pressure measurement of Boiler-09 at 2024-03-18T19:06:00Z: 13.7 PSI_gauge"@en ;
+    cco:ont00001769 13.7 ;
+    cco:ont00001863 ex:unit-psi-gauge ;
+    cco:ont00001966 ex:boiler-09-pressure-sdc .
+
+ex:mice-000006 a cco:ont00001163 ;
+    rdfs:label "temperature measurement of Chiller-3 at 2024-03-18T08:01:00Z: 68.0 degF"@en ;
+    cco:ont00001769 68.0 ;
+    cco:ont00001863 ex:unit-degf ;
+    cco:ont00001966 ex:chiller-3-temperature-sdc .
+
+ex:mice-000007 a cco:ont00001163 ;
+    rdfs:label "temperature measurement of Chiller-3 at 2024-03-18T12:01:00Z: 19.5 degC"@en ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 ex:unit-degc ;
+    cco:ont00001966 ex:chiller-3-temperature-sdc .
+
+ex:mice-000008 a cco:ont00001163 ;
+    rdfs:label "temperature measurement of Chiller-3 at 2024-03-19T09:01:00Z: 70.0 degF"@en ;
+    cco:ont00001769 70.0 ;
+    cco:ont00001863 ex:unit-degf ;
+    cco:ont00001966 ex:chiller-3-temperature-sdc .
+
+ex:mice-000009 a cco:ont00001163 ;
+    rdfs:label "temperature measurement of Chiller-4 at 2024-03-18T12:01:00Z: 6.5 degF"@en ;
+    cco:ont00001769 6.5 ;
+    cco:ont00001863 ex:unit-degf ;
+    cco:ont00001966 ex:chiller-4-temperature-sdc .
+
+ex:mice-000010 a cco:ont00001163 ;
+    rdfs:label "temperature measurement of Chiller-4 at 2024-03-18T12:06:00Z: 19.5 degF"@en ;
+    cco:ont00001769 19.5 ;
+    cco:ont00001863 ex:unit-degf ;
+    cco:ont00001966 ex:chiller-4-temperature-sdc .
+
+ex:mice-000011 a cco:ont00001163 ;
+    rdfs:label "voltage measurement of Circuit-07 at 2024-03-18T19:05:00Z: 2.0 V"@en ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 ex:unit-v ;
+    cco:ont00001966 ex:circuit-07-voltage-sdc .
+
+ex:mice-000012 a cco:ont00001163 ;
+    rdfs:label "voltage measurement of Circuit-12 at 2024-03-18T12:01:01Z: 2.0 V"@en ;
+    cco:ont00001769 2.0 ;
+    cco:ont00001863 ex:unit-v ;
+    cco:ont00001966 ex:circuit-12-voltage-sdc .
+
+ex:mice-000013 a cco:ont00001163 ;
+    rdfs:label "resistance measurement of Circuit-12 at 2024-03-18T12:06:00Z: 1.3 Ω"@en ;
+    cco:ont00001769 1.3 ;
+    cco:ont00001863 ex:unit-ohm ;
+    cco:ont00001966 ex:circuit-12-resistance-sdc .
+
+ex:mice-000014 a cco:ont00001163 ;
+    rdfs:label "pressure measurement of Pump-A1 at 2024-03-18T08:07:00Z: 101.325 kPa_gauge"@en ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 ex:unit-kpa-gauge ;
+    cco:ont00001966 ex:pump-a1-pressure-sdc .
+
+ex:mice-000015 a cco:ont00001163 ;
+    rdfs:label "pressure measurement of Pump-A2 at 2024-03-19T09:07:00Z: 101.325 kPa_gauge"@en ;
+    cco:ont00001769 101.325 ;
+    cco:ont00001863 ex:unit-kpa-gauge ;
+    cco:ont00001966 ex:pump-a2-pressure-sdc .
+
+ex:pump-a1 a cco:ont00000995 ;
+    rdfs:label "Pump-A1"@en ;
+    obo:BFO_0000196 ex:pump-a1-pressure-sdc .
+
+ex:pump-a2 a cco:ont00000995 ;
+    rdfs:label "Pump-A2"@en ;
+    obo:BFO_0000196 ex:pump-a2-pressure-sdc .
+
+ex:unit-ohm a cco:ont00000120 ;
+    rdfs:label "ohm"@en .
+
+ex:boiler-09-pressure-sdc a obo:BFO_0000020,
+        cco:ont00000380 ;
+    rdfs:label "pressure of Boiler-09"@en .
+
+ex:circuit-07-voltage-sdc a obo:BFO_0000020 ;
+    rdfs:label "voltage of Circuit-07"@en .
+
+ex:circuit-12-resistance-sdc a obo:BFO_0000020 ;
+    rdfs:label "resistance of Circuit-12"@en .
+
+ex:circuit-12-voltage-sdc a obo:BFO_0000020 ;
+    rdfs:label "voltage of Circuit-12"@en .
+
+ex:pump-a1-pressure-sdc a obo:BFO_0000020,
+        cco:ont00000380 ;
+    rdfs:label "pressure of Pump-A1"@en .
+
+ex:pump-a2-pressure-sdc a obo:BFO_0000020,
+        cco:ont00000380 ;
+    rdfs:label "pressure of Pump-A2"@en .
+
+ex:unit-degc a cco:ont00000120 ;
+    rdfs:label "degree Celsius"@en .
+
+ex:unit-psi-gauge a cco:ont00000120 ;
+    rdfs:label "pound per square inch (gauge)"@en .
+
+ex:unit-v a cco:ont00000120 ;
+    rdfs:label "volt"@en .
+
+ex:boiler-07-pressure-sdc a obo:BFO_0000020,
+        cco:ont00000380 ;
+    rdfs:label "pressure of Boiler-07"@en .
+
+ex:boiler-07-temperature-sdc a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "temperature of Boiler-07"@en .
+
+ex:chiller-4-temperature-sdc a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "temperature of Chiller-4"@en .
+
+ex:unit-kpa-gauge a cco:ont00000120 ;
+    rdfs:label "kilopascal (gauge)"@en .
+
+ex:chiller-3-temperature-sdc a obo:BFO_0000020,
+        cco:ont00000441 ;
+    rdfs:label "temperature of Chiller-3"@en .
+
+ex:unit-degf a cco:ont00000120 ;
+    rdfs:label "degree Fahrenheit"@en .
+

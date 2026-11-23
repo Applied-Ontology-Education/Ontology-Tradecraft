@@ -1,0 +1,31 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+<https://example.org/ontology-tradecraft/ccot-mapping> a owl:Ontology ;
+    rdfs:comment "CCOT -> OWL-Time mappings from review of ccot-time-structural-matches-with-definitions.xlsx. The matched OWL-Time classes (Duration, MonthOfYear, Year, TemporalPosition, TimePosition, January) are descriptions, durations and positions, not intervals or instants, so each CCOT class is mapped to the OWL-Time class of the same kind." .
+
+### CCOT units that are each a single temporal interval (subclasses of BFO temporal interval, a continuous one-dimensional region)
+### OWL-Time ProperInterval: an interval whose beginning and end are distinct.
+cco:ont00000992 rdfs:subClassOf time:ProperInterval .   # Second
+cco:ont00000085 rdfs:subClassOf time:ProperInterval .   # Minute
+cco:ont00001058 rdfs:subClassOf time:ProperInterval .   # Hour
+cco:ont00000800 rdfs:subClassOf time:ProperInterval .   # Day
+cco:ont00000619 rdfs:subClassOf time:ProperInterval .   # Week
+cco:ont00000225 rdfs:subClassOf time:ProperInterval .   # Month
+cco:ont00000832 rdfs:subClassOf time:ProperInterval .   # Year
+
+### CCOT Multi-X Temporal Intervals are one-dimensional temporal regions, which may have gaps,
+### so they are only safely temporal entities, not necessarily proper intervals.
+cco:ont00001154 rdfs:subClassOf time:TemporalEntity .   # Multi-Second Temporal Interval
+cco:ont00001166 rdfs:subClassOf time:TemporalEntity .   # Multi-Minute Temporal Interval
+cco:ont00000063 rdfs:subClassOf time:TemporalEntity .   # Multi-Hour Temporal Interval
+cco:ont00000211 rdfs:subClassOf time:TemporalEntity .   # Multi-Day Temporal Interval
+cco:ont00000810 rdfs:subClassOf time:TemporalEntity .   # Multi-Week Temporal Interval
+cco:ont00000329 rdfs:subClassOf time:TemporalEntity .   # Multi-Month Temporal Interval
+cco:ont00001206 rdfs:subClassOf time:TemporalEntity .   # Multi-Year Temporal Interval
+
+### Time of Day is a BFO temporal instant ("A Temporal Instant that is part of a Day").
+### OWL-Time Instant: a temporal entity with zero extent. Julian Date inherits this via Time of Day.
+cco:ont00000223 rdfs:subClassOf time:Instant .          # Time of Day

@@ -1,0 +1,13 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+
+<https://example.org/ontology-tradecraft/ies-mapping> a owl:Ontology ;
+    rdfs:comment "IES -> BFO mappings, the IES-side view of bfo-mapping.ttl." .
+
+### The matched pair is BFO process <-> ies:Event (see bfo-mapping.ttl). The enrichment axioms on that
+### pair relate ies:Event to ies:ParticularPeriod, and BFO process to temporal regions. An IES
+### ParticularPeriod is a specific stretch of time (a year, a day, an instant encoded in UTC), which is
+### what BFO calls a temporal region (BFO_0000008: "an occurrent over which processes can unfold").
+ies:ParticularPeriod rdfs:subClassOf obo:BFO_0000008 .

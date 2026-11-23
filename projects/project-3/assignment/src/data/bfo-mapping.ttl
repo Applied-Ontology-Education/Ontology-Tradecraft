@@ -1,0 +1,14 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+
+<https://example.org/ontology-tradecraft/bfo-mapping> a owl:Ontology ;
+    rdfs:comment "BFO -> IES mappings from review of bfo-ies-structural-matches.xlsx (1 candidate pair, kept)." .
+
+### BFO process (skos:altLabel "event") <-> IES Event.
+### Every BFO process happens over time and so is something that happens in IES's sense, but BFO adds
+### conditions (temporal proper parts, a material participant) that IES Event does not require.
+### So this is subClassOf, not equivalentClass. Equivalence would also import BFO's occurrent/continuant
+### disjointness into IES's 4D Element hierarchy.
+obo:BFO_0000015 rdfs:subClassOf ies:Event .
