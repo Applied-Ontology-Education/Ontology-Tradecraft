@@ -1,0 +1,94 @@
+IRI,label,definition
+https://www.commoncoreontologies.org/ont00000339,Agricultural Facility,"A Facility that is designed as a building or campus for agricultural processes with the aim of cultivating animals, plants, or fungi for food, fiber, biofuel, medicinal plants, or other products to sustain and enhance human life."
+https://www.commoncoreontologies.org/ont00001311,Aircraft Manufacturing Facility,A Factory that is designed to manufacture Aircraft.
+https://www.commoncoreontologies.org/ont00001078,Airport,"A Transportation Facility that is designed for launching, receiving, and housing Aircraft."
+https://www.commoncoreontologies.org/ont00000220,Ammunition Depot,A Storage Facility that is designed to store Portions of Ammunition.
+https://www.commoncoreontologies.org/ont00000336,Apartment Building,A Residential Facility that is designed to contain multiple permanent residences comprised of a suite of rooms.
+https://www.commoncoreontologies.org/ont00000172,Base of Operations,"A Military Base with permanently stationed operating forces, robust Infrastructure, and strengthened force protection measures such that it is designed to launch and support large-scale operations, support smaller or less-permanent bases, and organize supply facilities."
+https://www.commoncoreontologies.org/ont00001344,Biological Depot,A Storage Facility that is designed to store biological agents.
+https://www.commoncoreontologies.org/ont00000778,Chemical Depot,A Storage Facility that is designed to store chemicals.
+https://www.commoncoreontologies.org/ont00000248,Chemical Manufacturing Facility,A Factory that is designed to manufacture or process chemicals.
+https://www.commoncoreontologies.org/ont00000032,Church,A Religious Facility that is designed for Christian worship and prayer.
+https://www.commoncoreontologies.org/ont00000667,Combat Outpost,A Military Facility that is designed to support the conduction of combat operations of limited scope or size.
+https://www.commoncoreontologies.org/ont00000710,Command Post Facility,A Military Facility that is designed to support the command and control of Military Operations or Forces.
+https://www.commoncoreontologies.org/ont00001102,Commercial Facility,"A Facility that is designed for buying and selling goods and services, especially on a large scale."
+https://www.commoncoreontologies.org/ont00000531,Communications Facility,A Facility that is designed to support processes of receiving or transmitting information.
+https://www.commoncoreontologies.org/ont00000901,Decontamination Facility,"A Washing Facility that is designed to wash personnel or equipment after (potential) contamination by radioactive, biological, or chemical material."
+https://www.commoncoreontologies.org/ont00000670,Distribution Port,A Port that is designed with the cargo handling equipment necessary for the loading and unloading of Watercraft
+https://www.commoncoreontologies.org/ont00000270,Educational Facility,"A Facility that is designed for facilitating learning, or the acquisition of knowledge, skills, values, beliefs, and habits."
+https://www.commoncoreontologies.org/ont00001076,Electric Power Station,A Facility that is designed to generate electrical power.
+https://www.commoncoreontologies.org/ont00000641,Entertainment Facility,"A Facility that is designed to host activities that are intended to hold the interest of, or give pleasure or delight to, an audience."
+https://www.commoncoreontologies.org/FacilityOntology,Facility Ontology,This ontology is designed to represent buildings and campuses that  are designed to serve some specific purpose and which are common to multiple domains.
+https://www.commoncoreontologies.org/ont00000782,Factory,A Facility that is designed for manufacturing or refining material products.
+https://www.commoncoreontologies.org/ont00001380,Farm,An Agricultural Facility that is designed to produce food and other crops.
+https://www.commoncoreontologies.org/ont00001295,Financial Facility,A Facility that is designed to support the management of money.
+https://www.commoncoreontologies.org/ont00001383,Fire Station,A Public Safety Facility that is designed for the storage of firefighting apparatus.
+https://www.commoncoreontologies.org/ont00001091,Fort,A Military Facility that is designed to support the defense of or solidification of rule over some Geospatial Region and its inhabitants.
+https://www.commoncoreontologies.org/ont00000737,Forward Operations Base,"A Military Base that is located relatively close to an offensive Area of Operations, is supported by the Base of Operations, and is designed to support local strategic objectives and tactical operations."
+https://www.commoncoreontologies.org/ont00000717,Fossil Fuel Power Plant,"An Electric Power Station that is designed to convert fossil fuels (e.g. coal, natural gas, or petroleum) into electrical energy."
+https://www.commoncoreontologies.org/ont00001362,Gas Processing Facility,A Refinery that is designed for refining natural gas into products of value.
+https://www.commoncoreontologies.org/ont00000946,Government Building,A Facility that is designed for the administration of a community.
+https://www.commoncoreontologies.org/ont00000040,Grocery Store,A Commercial Facility that is designed to sell food.
+https://www.commoncoreontologies.org/ont00000055,Healthcare Facility,"A Facility that is designed for the diagnosis, treatment, and prevention of disease."
+https://www.commoncoreontologies.org/ont00000195,Heliport,"An Airport that is designed for launching, receiving, and housing Rotorcraft."
+https://www.commoncoreontologies.org/ont00001098,Hospital,A Healthcare Facility that is designed to provide patient treatment with specialized staff and equipment.
+https://www.commoncoreontologies.org/ont00000041,Hostel,A Residential Facility that is designed to temporarily lodge guests in a sociable environment for relatively low costs.
+https://www.commoncoreontologies.org/ont00000180,Hotel,A Residential Facility that is designed to provide lodging that is paid for on a short-term basis.
+https://www.commoncoreontologies.org/ont00000331,House,"A Residential Facility that is designed to provide a self-standing, permanent residence for an individual, family, household, multiple families, or similar-sized group."
+https://www.commoncoreontologies.org/ont00000846,Hydroelectric Power Plant,An Electric Power Station that is designed to convert hydropower into electrical power.
+https://www.commoncoreontologies.org/ont00001107,Landfill,A Waste Management Facility that is designed for disposing of waste by burial.
+https://www.commoncoreontologies.org/ont00000655,Mailing Facility,A Facility that is designed for the systematic physical transportation of documents and packages.
+https://www.commoncoreontologies.org/ont00001287,Maintenance Facility,A Facility that is designed to be used to perform actions to maintain or improve the state of some property or equipment.
+https://www.commoncoreontologies.org/ont00000680,Medical Depot,A Storage Facility that is designed to store medical supplies.
+https://www.commoncoreontologies.org/ont00000483,Military Base,A Military Facility that is designed to shelter military equipment and personnel and to facilitate training and operations.
+https://www.commoncoreontologies.org/ont00001052,Military Facility,A Facility that is designed to support a Military Force.
+https://www.commoncoreontologies.org/ont00001297,Military Headquarters Facility,A Military Facility that is designed for military administration and coordination.
+https://www.commoncoreontologies.org/ont00000639,Mine,"A Facility that is designed to support the extraction of minerals or other geological materials from an orebody, lode, vein, seam, reef, or placer deposit within the earth."
+https://www.commoncoreontologies.org/ont00000432,Missile Launch Site,A Military Facility that is designed for storing and launching missiles.
+https://www.commoncoreontologies.org/ont00000510,Mosque,A Religious Facility that is designed for Islamic worship and prayer.
+https://www.commoncoreontologies.org/ont00000583,Motel,A Hotel that is designed to accommodate motor vehicles along with their occupants.
+https://www.commoncoreontologies.org/ont00000423,Motor Vehicle Manufacturing Facility,A Factory that is designed to manufacture automobiles.
+https://www.commoncoreontologies.org/ont00000421,Nuclear Power Plant,"A Thermal Power Plant that is designed to produce heat by means of a nuclear reactor, which is then converted to electrical energy."
+https://www.commoncoreontologies.org/ont00001257,Nuclear Storage Depot,A Storage Facility that is designed to store nuclear material.
+https://www.commoncoreontologies.org/ont00000468,Office Building,"A Commercial Facility that is designed as an environment for conducting commercial, professional, or bureaucratic work."
+https://www.commoncoreontologies.org/ont00000192,ont00000192,
+https://www.commoncoreontologies.org/ont00000060,Open Pit Mine,A Mine that is designed to support the extraction of materials from the ground directly without using tunnels.
+https://www.commoncoreontologies.org/ont00001089,Petrochemical Refinery,"A Refinery that is designed for refining crude oil, intermediate petroleum products, or synthetic petroleum into products of value."
+https://www.commoncoreontologies.org/ont00000045,Petroleum Depot,"A Storage Facility that is designed to store petroleum, oil, or lubricants."
+https://www.commoncoreontologies.org/ont00000245,Petroleum Manufacturing Facility,A Factory that is designed to manufacture petroleum-based products.
+https://www.commoncoreontologies.org/ont00000761,Pier,A Transportation Facility that is designed to partially enclose a harbor and form a landing place for Watercraft.
+https://www.commoncoreontologies.org/ont00000867,Pipeline,A Product Transport Facility that is designed to transport goods or materials through a pipe.
+https://www.commoncoreontologies.org/ont00000349,Police Station,A Public Safety Facility that is designed for the professional and clerical processes of a local police force.
+https://www.commoncoreontologies.org/ont00001258,Port,A Transportation Facility that is designed to contain harbors for docking Watercraft and for transfering people or cargo to and from land.
+https://www.commoncoreontologies.org/ont00000905,Post Office,A Mailing Facility that is designed for serving customers of the national postal system.
+https://www.commoncoreontologies.org/ont00000705,Power Transmission Line,A Product Transport Facility that is designed to transmit electricity over distance via a system of above ground wires including their supports.
+https://www.commoncoreontologies.org/ont00000677,Product Transport Facility,A Facility that is designed to transport some product.
+https://www.commoncoreontologies.org/ont00000479,Public Safety Facility,"A Facility that is designed for the prevention of and protection from events that could endanger, injure, or damage the general public."
+https://www.commoncoreontologies.org/ont00000232,Pumping Station,A Product Transport Facility that is designed to pump fluids from one place to another.
+https://www.commoncoreontologies.org/ont00000664,Radio Relay Station,A Communications Facility that is designed to support the receiving and re-transmitting of radio signals.
+https://www.commoncoreontologies.org/ont00000108,Rail Facility,A Transportation Facility that is designed for transferring people or cargo to and from Trains.
+https://www.commoncoreontologies.org/ont00001283,Refinery,A Factory that is designed for refining raw materials into products of value.
+https://www.commoncoreontologies.org/ont00000052,Religious Facility,A Facility that is designed for worship and prayer.
+https://www.commoncoreontologies.org/ont00000957,Reservoir,A Storage Facility that is designed to store water in a man-made open enclosure or area.
+https://www.commoncoreontologies.org/ont00000410,Residential Facility,A Facility that is designed to house one or more Persons.
+https://www.commoncoreontologies.org/ont00001358,School,An Education Facility that is designed to provide learning space and environments for teaching of students under the direction of teachers.
+https://www.commoncoreontologies.org/ont00000545,Seat of Local Government,A Government Building that is designed for the administration of a local community.
+https://www.commoncoreontologies.org/ont00000094,Seat of National Government,A Government Building that is designed for the administration of a sovereign nation.
+https://www.commoncoreontologies.org/ont00001308,Sewage Treatment Facility,"A Waste Management Facility that is designed for removing contaminants from wastewater, especially sewage."
+https://www.commoncoreontologies.org/ont00000262,Shop,A Commercial Facility designed to sell small lots of goods to consumers.
+https://www.commoncoreontologies.org/ont00000802,Stage,An Entertainment Facility that is designed to provide a space upon which entertaining performances or productions can occur.
+https://www.commoncoreontologies.org/ont00000881,Storage Facility,A Facility that is designed to store materials or goods.
+https://www.commoncoreontologies.org/ont00000757,Synagogue,A Religious Facility that is designed for Judaic worship and prayer.
+https://www.commoncoreontologies.org/ont00001165,Terrorist Training Camp,A Training Camp designed to teach students methods of terrorism.
+https://www.commoncoreontologies.org/ont00000330,Thermal Power Plant,An Electric Power Station that is designed to convert heat energy into electrical energy.
+https://www.commoncoreontologies.org/ont00000332,Training Camp,"A Facility that is designed for rigorous and focused training in order to learn or improve skills, usually involving physical actions."
+https://www.commoncoreontologies.org/ont00000226,Transportation Facility,"A Facility that is designed for commencing or concluding the transportation of transportation artifacts, or for housing transportation artifacts."
+https://www.commoncoreontologies.org/ont00000271,Underground Mine,A Mine that is designed to support the extraction of materials from the ground using underground tunnels and shafts.
+https://www.commoncoreontologies.org/ont00000104,Underwater Mine,A Mine that is designed to support the extraction of materials from the ocean floor.
+https://www.commoncoreontologies.org/ont00000375,Warehouse,A Storage Facility that is designed to store commercial goods.
+https://www.commoncoreontologies.org/ont00001375,Washing Facility,A Facility that is designed to wash personnel or equipment.
+https://www.commoncoreontologies.org/ont00001315,Waste Management Facility,A Facility that is designed for managing waste for some portion of the waste's existence.
+https://www.commoncoreontologies.org/ont00000708,Water Tower,A Facility that is the bearer of functions realized in processes of storing water in an elevated container.
+https://www.commoncoreontologies.org/ont00000814,Water Treatment Facility,A Facility that is designed for making water more acceptable for a specific end-use.
+https://www.commoncoreontologies.org/ont00000381,Weapon Manufacturing Facility,A Factory that is designed to produce or assemble weapons.
+https://www.commoncoreontologies.org/ont00000882,Wind Farm,An Electric Power Station that is designed to convert the wind's kinetic energy into electrical power by means of wind turbines.
