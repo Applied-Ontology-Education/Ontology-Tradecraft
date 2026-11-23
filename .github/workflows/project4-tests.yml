@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "projects/project-4/**"
+      - ".github/workflows/project4-tests.yml"
+  workflow_dispatch:
 
 jobs:
   grade-project:
