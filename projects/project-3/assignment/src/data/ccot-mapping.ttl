@@ -1,0 +1,38 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+# CCOT -> OWL-Time
+cco:ont00000223 rdfs:subClassOf time:Instant .   # Time of Day: 'A Temporal Instant that is part of a Day'
+cco:ont00000114 rdfs:subClassOf time:Instant .   # Unix Temporal Instant
+cco:ont00001116 rdfs:subClassOf time:Instant .   # Reference Time
+cco:ont00000359 rdfs:subClassOf time:Instant .   # Julian Date (a Time of Day)
+cco:ont00000992 rdfs:subClassOf time:ProperInterval .   # Second
+cco:ont00000085 rdfs:subClassOf time:ProperInterval .   # Minute
+cco:ont00001058 rdfs:subClassOf time:ProperInterval .   # Hour
+cco:ont00000800 rdfs:subClassOf time:ProperInterval .   # Day
+cco:ont00000619 rdfs:subClassOf time:ProperInterval .   # Week
+cco:ont00000225 rdfs:subClassOf time:ProperInterval .   # Month
+cco:ont00000832 rdfs:subClassOf time:ProperInterval .   # Year
+cco:ont00001088 rdfs:subClassOf time:ProperInterval .   # Decade
+# Rejected despite matching names: CCOT Year (interval) vs time:Year ('Year duration'); CCOT Month vs time:MonthOfYear (a named position).
+
+# Class declarations, so OWL tools type every IRI above
+cco:ont00000085 a owl:Class .
+cco:ont00000114 a owl:Class .
+cco:ont00000223 a owl:Class .
+cco:ont00000225 a owl:Class .
+cco:ont00000359 a owl:Class .
+cco:ont00000619 a owl:Class .
+cco:ont00000800 a owl:Class .
+cco:ont00000832 a owl:Class .
+cco:ont00000992 a owl:Class .
+cco:ont00001058 a owl:Class .
+cco:ont00001088 a owl:Class .
+cco:ont00001116 a owl:Class .
+time:Instant a owl:Class .
+time:ProperInterval a owl:Class .

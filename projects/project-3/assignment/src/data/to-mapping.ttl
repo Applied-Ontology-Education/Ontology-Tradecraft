@@ -1,0 +1,17 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+# OWL-Time -> BFO
+time:Instant rdfs:subClassOf obo:BFO_0000148 .   # zero extent = zero-dimensional temporal region
+time:ProperInterval rdfs:subClassOf obo:BFO_0000038 .   # non-zero extent = one-dimensional temporal region
+
+# Class declarations, so OWL tools type every IRI above
+obo:BFO_0000038 a owl:Class .
+obo:BFO_0000148 a owl:Class .
+time:Instant a owl:Class .
+time:ProperInterval a owl:Class .

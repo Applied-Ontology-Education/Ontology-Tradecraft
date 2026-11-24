@@ -1,0 +1,82 @@
+@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix ies:  <http://ies.data.gov.uk/ontology/ies4#> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix qudt: <http://qudt.org/schema/qudt#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+
+# CCOM -> QUDT (quantity-kind classes; the 405 discipline-class candidates were rejected)
+cco:ont00001290 owl:equivalentClass qudt:LengthUnit .   # Length
+cco:ont00000217 owl:equivalentClass qudt:AreaUnit .   # Area
+cco:ont00001317 owl:equivalentClass qudt:VolumeUnit .   # Volume
+cco:ont00001357 owl:equivalentClass qudt:TimeUnit .   # Time
+cco:ont00000239 owl:equivalentClass qudt:MassUnit .   # Mass
+cco:ont00000844 owl:equivalentClass qudt:TemperatureUnit .   # Temperature
+cco:ont00000497 owl:equivalentClass qudt:ForceUnit .   # Force
+cco:ont00000229 owl:equivalentClass qudt:PowerUnit .   # Power
+cco:ont00000959 owl:equivalentClass qudt:FrequencyUnit .   # Frequency
+cco:ont00000074 owl:equivalentClass qudt:AccelerationUnit .   # Acceleration
+cco:ont00000140 owl:equivalentClass qudt:AmountOfSubstanceUnit .   # Amount of Substance
+cco:ont00000940 owl:equivalentClass qudt:MomentumUnit .   # Momentum
+cco:ont00000770 owl:equivalentClass qudt:MassPerVolumeUnit .   # Density = mass per volume
+cco:ont00001307 owl:equivalentClass qudt:MassPerTimeUnit .   # Mass Flow Rate = mass per time
+cco:ont00000374 owl:equivalentClass qudt:VolumePerTimeUnit .   # Volumetric Flow Rate = volume per time
+cco:ont00000527 owl:equivalentClass qudt:AngularMassUnit .   # Rotational Inertia = moment of inertia
+cco:ont00001090 rdfs:subClassOf qudt:PressureOrStressUnit .   # Pressure (QUDT class also covers stress)
+cco:ont00000444 rdfs:subClassOf qudt:EnergyAndWorkUnit .   # Energy
+cco:ont00000852 rdfs:subClassOf qudt:EnergyAndWorkUnit .   # Work
+cco:ont00000659 rdfs:subClassOf qudt:BendingMomentOrTorqueUnit .   # Torque
+cco:ont00001004 rdfs:subClassOf qudt:ForceUnit .   # Electromagnetic Force is a force
+cco:ont00000969 rdfs:subClassOf qudt:VelocityUnit .   # Speed (scalar; same units as velocity)
+cco:ont00001345 rdfs:subClassOf qudt:LinearMomentumUnit .   # Impulse (N*s = momentum units)
+cco:ont00000198 rdfs:subClassOf qudt:LogarithmicUnit .   # Sound Level (decibels)
+# Unmatched: Area Moment of Inertia (no QUDT m^4 class); Flow (parent only).
+
+# Class declarations, so OWL tools type every IRI above
+cco:ont00000074 a owl:Class .
+cco:ont00000140 a owl:Class .
+cco:ont00000198 a owl:Class .
+cco:ont00000217 a owl:Class .
+cco:ont00000229 a owl:Class .
+cco:ont00000239 a owl:Class .
+cco:ont00000374 a owl:Class .
+cco:ont00000444 a owl:Class .
+cco:ont00000497 a owl:Class .
+cco:ont00000527 a owl:Class .
+cco:ont00000659 a owl:Class .
+cco:ont00000770 a owl:Class .
+cco:ont00000844 a owl:Class .
+cco:ont00000852 a owl:Class .
+cco:ont00000940 a owl:Class .
+cco:ont00000959 a owl:Class .
+cco:ont00000969 a owl:Class .
+cco:ont00001004 a owl:Class .
+cco:ont00001090 a owl:Class .
+cco:ont00001290 a owl:Class .
+cco:ont00001307 a owl:Class .
+cco:ont00001317 a owl:Class .
+cco:ont00001345 a owl:Class .
+cco:ont00001357 a owl:Class .
+qudt:AccelerationUnit a owl:Class .
+qudt:AmountOfSubstanceUnit a owl:Class .
+qudt:AngularMassUnit a owl:Class .
+qudt:AreaUnit a owl:Class .
+qudt:BendingMomentOrTorqueUnit a owl:Class .
+qudt:EnergyAndWorkUnit a owl:Class .
+qudt:ForceUnit a owl:Class .
+qudt:FrequencyUnit a owl:Class .
+qudt:LengthUnit a owl:Class .
+qudt:LinearMomentumUnit a owl:Class .
+qudt:LogarithmicUnit a owl:Class .
+qudt:MassPerTimeUnit a owl:Class .
+qudt:MassPerVolumeUnit a owl:Class .
+qudt:MassUnit a owl:Class .
+qudt:MomentumUnit a owl:Class .
+qudt:PowerUnit a owl:Class .
+qudt:PressureOrStressUnit a owl:Class .
+qudt:TemperatureUnit a owl:Class .
+qudt:TimeUnit a owl:Class .
+qudt:VelocityUnit a owl:Class .
+qudt:VolumePerTimeUnit a owl:Class .
+qudt:VolumeUnit a owl:Class .
