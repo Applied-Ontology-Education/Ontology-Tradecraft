@@ -349,11 +349,6 @@ def extract_json_response(response_text):
 
 
 def get_gemini_scores(scored_pairs, definitions):
-    if not os.environ.get("GEMINI_API_KEY"):
-        raise EnvironmentError(
-            "GEMINI_API_KEY is not configured in this terminal."
-        )
-
     cache = load_cache()
 
     cache_key = json.dumps(
@@ -372,6 +367,12 @@ def get_gemini_scores(scored_pairs, definitions):
     if cache_key in cache:
         print("\nUsing cached Gemini assessment.")
         return cache[cache_key]
+
+    # Only a cache miss needs the API key, so cached reruns work without one.
+    if not os.environ.get("GEMINI_API_KEY"):
+        raise EnvironmentError(
+            "GEMINI_API_KEY is not configured in this terminal."
+        )
 
     print("\nRequesting Gemini semantic assessment...")
     print(f"Candidates in request: {len(scored_pairs)}")
