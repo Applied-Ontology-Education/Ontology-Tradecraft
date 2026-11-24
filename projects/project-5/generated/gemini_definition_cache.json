@@ -1,0 +1,454 @@
+{
+  "{\"items\": [[\"https://www.commoncoreontologies.org/ont00000281\", \"Radiation Reflectivity\", \"A Radiation Reflectivity that inheres in a bearer in virtue of the capacity of its surface to reflect incident electromagnetic radiation of a particular wavelength.\"], [\"https://www.commoncoreontologies.org/ont00000787\", \"Height\", \"A Height that inheres in a Site that externally connects an Independent Continuant to either the surface of the Earth or the Earth's mean Sea Level.\"], [\"https://www.commoncoreontologies.org/ont00000768\", \"Quality\", \"A Quality that inheres in a bearer in virtue of the total, aggregate or sum of a number of discrete items or material the entity contains as parts.\"], [\"https://www.commoncoreontologies.org/ont00000991\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having one or more angles along its border.\"], [\"https://www.commoncoreontologies.org/ont00000439\", \"Color\", \"A Color that lacks any hues as parts.\"], [\"https://www.commoncoreontologies.org/ont00001079\", \"Color\", \"A Color that ranges from nearly white to a light greyish yellow.\"], [\"https://www.commoncoreontologies.org/ont00001189\", \"Color\", \"A Color that is between Cyan and Violet with a wavelength in the visible spectrum typically between 450 to 490 nanometers.\"], [\"https://www.commoncoreontologies.org/ont00000185\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer not having a sharp edge or point.\"], [\"https://www.commoncoreontologies.org/ont00000835\", \"Shape Quality\", \"A Shape Quality inhering in a Person's body by virtue of the body's general outline or figure.\"], [\"https://www.commoncoreontologies.org/ont00001055\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having subdivisions or offshoots.\"], [\"https://www.commoncoreontologies.org/ont00000872\", \"Color\", \"A Color that consists of dark orange and red, and of very low intensity.\"], [\"https://www.commoncoreontologies.org/ont00000446\", \"Perimeter\", \"A Perimeter that inheres in a circle or ellipse.\"], [\"https://www.commoncoreontologies.org/ont00000979\", \"Quality\", \"A Quality that inheres in a bearer in virtue of the degree to which that bearer affords passage or sightline through it via an opening, aperture, orifice, or vent.\"], [\"https://www.commoncoreontologies.org/ont00000805\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer being wound in concentric rings or spirals.\"], [\"https://www.commoncoreontologies.org/ont00000378\", \"Optical Property\", \"An Optical Property that inheres in a bearer in virtue of that bearer's Color Hue, Color Saturation and Color Brightness.\"], [\"https://www.commoncoreontologies.org/ont00000648\", \"Optical Property\", \"An Optical Property that inheres in a bearer in virtue of its capacity to reflect or radiate light.\"], [\"https://www.commoncoreontologies.org/ont00001186\", \"Optical Property\", \"An Optical Property that inheres in a bearer in virtue of its capacity to reflect a dominant wavelength of the visible light spectrum, which is typically divided up into 6 to 8 ranges.\"], [\"https://www.commoncoreontologies.org/ont00000759\", \"Optical Property\", \"An Optical Property that inheres in a bearer in virtue of its capacity to reflect high intensity light distributed across fewer wavelengths, typically considered on a continuum of purity.\"], [\"https://www.commoncoreontologies.org/ont00000484\", \"Shape Quality\", \"A Shape Quality that inheres in a bearer in virtue of the bearer having one or more cavities, such that at least one line connecting a pair of points on the surface of the bearer will lie outside.\"], [\"https://www.commoncoreontologies.org/ont00000560\", \"Three Dimensional Shape\", \"A Three Dimensional Shape that inheres in a bearer in virtue of it having a Round base that tapers smoothly to an apex.\"]], \"model\": \"gemini-3.5-flash-lite\", \"version\": \"normalize-v1\"}": {
+    "https://www.commoncoreontologies.org/ont00000281": {
+      "definition": "Albedo is a Radiation Reflectivity that inheres in a bearer in virtue of the capacity of the surface of the bearer to reflect incident electromagnetic radiation of a particular wavelength.",
+      "normalization_note": "Replaced 'its' with 'the surface of the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000787": {
+      "definition": "Altitude is a Height that inheres in a Site that externally connects an Independent Continuant to either the surface of the Earth or the Earth's mean Sea Level in virtue of the spatial separation between them.",
+      "normalization_note": "Added 'in virtue of the spatial separation between them' to conform to CCO style for Height/Quality definitions while preserving original meaning."
+    },
+    "https://www.commoncoreontologies.org/ont00000768": {
+      "definition": "Amount is a Quality that inheres in a bearer in virtue of the total, aggregate, or sum of a number of discrete items or material that the bearer contains as parts.",
+      "normalization_note": "Changed 'it' to 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000991": {
+      "definition": "Bent is a Shape Quality that inheres in a bearer in virtue of the bearer having one or more angles along its border.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; changed 'its' to 'the border of the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000439": {
+      "definition": "Black is a Color that inheres in a bearer in virtue of the bearer lacking any hues as parts.",
+      "normalization_note": "Added the standard 'that inheres in a bearer in virtue of' clause."
+    },
+    "https://www.commoncoreontologies.org/ont00001079": {
+      "definition": "Blond is a Color that inheres in a bearer in virtue of the bearer having a hue that ranges from nearly white to a light greyish yellow.",
+      "normalization_note": "Added the standard 'that inheres in a bearer in virtue of the bearer having' clause."
+    },
+    "https://www.commoncoreontologies.org/ont00001189": {
+      "definition": "Blue is a Color that inheres in a bearer in virtue of the bearer having a color that is between Cyan and Violet with a wavelength in the visible spectrum typically between 450 to 490 nanometers.",
+      "normalization_note": "Added the standard 'that inheres in a bearer in virtue of the bearer having' clause; capitalized Cyan and Violet."
+    },
+    "https://www.commoncoreontologies.org/ont00000185": {
+      "definition": "Blunt is a Shape Quality that inheres in a bearer in virtue of the bearer not having a sharp edge or point.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'."
+    },
+    "https://www.commoncoreontologies.org/ont00000835": {
+      "definition": "Body Shape is a Shape Quality that inheres in a Person's body in virtue of the body's general outline or figure.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'."
+    },
+    "https://www.commoncoreontologies.org/ont00001055": {
+      "definition": "Branched is a Shape Quality that inheres in a bearer in virtue of the bearer having subdivisions or offshoots.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'."
+    },
+    "https://www.commoncoreontologies.org/ont00000872": {
+      "definition": "Brown is a Color that inheres in a bearer in virtue of the bearer consisting of dark orange and red, and of very low intensity.",
+      "normalization_note": "Added the standard 'that inheres in a bearer in virtue of the bearer' clause."
+    },
+    "https://www.commoncoreontologies.org/ont00000446": {
+      "definition": "Circumference is a Perimeter that inheres in a circle or ellipse in virtue of the total length around the outer boundary of the circle or ellipse.",
+      "normalization_note": "Added 'in virtue of the total length around the outer boundary of the circle or ellipse' to conform to CCO style for Perimeter definitions."
+    },
+    "https://www.commoncoreontologies.org/ont00000979": {
+      "definition": "Closure is a Quality that inheres in a bearer in virtue of the degree to which that bearer affords passage or sightline through it via an opening, aperture, orifice, or vent.",
+      "normalization_note": "Replaced 'it' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000805": {
+      "definition": "Coiled is a Shape Quality that inheres in a bearer in virtue of the bearer being wound in concentric rings or spirals.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'."
+    },
+    "https://www.commoncoreontologies.org/ont00000378": {
+      "definition": "Color is an Optical Property that inheres in a bearer in virtue of that bearer's Color Hue, Color Saturation and Color Brightness.",
+      "normalization_note": "Capitalized existing class labels Color Hue, Color Saturation, and Color Brightness."
+    },
+    "https://www.commoncoreontologies.org/ont00000648": {
+      "definition": "Color Brightness is an Optical Property that inheres in a bearer in virtue of the capacity of the bearer to reflect or radiate light.",
+      "normalization_note": "Replaced 'its' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00001186": {
+      "definition": "Color Hue is an Optical Property that inheres in a bearer in virtue of the capacity of the bearer to reflect a dominant wavelength of the visible light spectrum, which is typically divided up into six to eight ranges.",
+      "normalization_note": "Replaced 'its' with 'the bearer'; spelled out '6' and '8'."
+    },
+    "https://www.commoncoreontologies.org/ont00000759": {
+      "definition": "Color Saturation is an Optical Property that inheres in a bearer in virtue of the capacity of the bearer to reflect high intensity light distributed across fewer wavelengths, typically considered on a continuum of purity.",
+      "normalization_note": "Replaced 'its' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000484": {
+      "definition": "Concave Shape is a Shape Quality that inheres in a bearer in virtue of the bearer having one or more cavities, such that at least one line connecting a pair of points on the surface of the bearer will lie outside the bearer.",
+      "normalization_note": "Added 'the bearer' at the end to replace the vague pronoun 'outside'."
+    },
+    "https://www.commoncoreontologies.org/ont00000560": {
+      "definition": "Cone Shape is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having a Round base that tapers smoothly to an apex.",
+      "normalization_note": "Replaced 'it' with 'the bearer'; capitalized Round."
+    }
+  },
+  "{\"items\": [[\"https://www.commoncoreontologies.org/ont00000590\", \"Shape Quality\", \"A Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line connecting a pair of points on the surface of the bearer will lie outside.\"], [\"https://www.commoncoreontologies.org/ont00000565\", \"Cuboidal\", \"A Cuboidal shape inhering in a bearer in virtue of it having six Square faces.\"], [\"https://www.commoncoreontologies.org/ont00000478\", \"Three Dimensional Shape\", \"A Three Dimensional Shape that inheres in a bearer in virtue of it having six Rectangular faces.\"], [\"https://www.commoncoreontologies.org/ont00000474\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having borders which are smoothly rounded.\"], [\"https://www.commoncoreontologies.org/ont00000975\", \"Color\", \"A Color that is between Green and Blue with a wavelength in the visible spectrum typically between 490 and 520 nanometers.\"], [\"https://www.commoncoreontologies.org/ont00000283\", \"Three Dimensional Shape\", \"A Three Dimensional Shape inhering in a bearer in virtue of the bearer having an elongated shape with round bases.\"], [\"https://www.commoncoreontologies.org/ont00000892\", \"One Dimensional Extent\", \"A One Dimensional Extent that inheres in a bearer in virtue of the bearer's extension in a downward, backward, or inward direction.\"], [\"https://www.commoncoreontologies.org/ont00000541\", \"One Dimensional Extent\", \"A One Dimensional Extent that inheres in a circle in virtue of the extent of a straight line that passes through the center of the circle and starts and ends on the circle's boundary.\"], [\"https://www.commoncoreontologies.org/ont00000628\", \"Disposition\", \"A Disposition that inheres in a bearer in virtue of how that bearer interacts with electromagnetic radiation.\"], [\"https://www.commoncoreontologies.org/ont00000997\", \"Disposition\", \"A disposition the realization of which would disrupt a process some entity has an interest in.\"], [\"https://www.commoncoreontologies.org/ont00001001\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having a border that hangs downwards.\"], [\"https://www.commoncoreontologies.org/ont00001193\", \"Realizable Entity\", \"A Realizable Entity that is realized when its bearer loses strength and tires quickly.\"], [\"https://www.commoncoreontologies.org/ont00001280\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having a horizontal border without a significant deviation.\"], [\"https://www.commoncoreontologies.org/ont00000459\", \"Luminescent Property\", \"A Luminescent Property that inheres in a bearer in virtue of that bearer's capacity to emit visible light while absorbing shorter wavelength radiation, but not after.\"], [\"https://www.commoncoreontologies.org/ont00000815\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of one part of the bearer being layered over another connected part.\"], [\"https://www.commoncoreontologies.org/ont00001377\", \"Color\", \"A Color that resembles a yellow-orange Hue with the added feature of having a metallic shine.\"], [\"https://www.commoncoreontologies.org/ont00000082\", \"Color\", \"A Color that is between Yellow and Cyan with a wavelength in the visible spectrum, typically between 520 to 560 nanometers.\"], [\"https://www.commoncoreontologies.org/ont00001349\", \"Color\", \"A Color between white and black colors.\"], [\"https://www.commoncoreontologies.org/ont00000766\", \"Quality\", \"A Quality that inheres in a bearer in virtue of the degree to which it can be turned, bowed, or twisted without breaking.\"], [\"https://www.commoncoreontologies.org/ont00000797\", \"Color\", \"A Color that is a combination of Brown and Green, typically associated with eye color.\"]], \"model\": \"gemini-3.5-flash-lite\", \"version\": \"normalize-v1\"}": {
+    "https://www.commoncoreontologies.org/ont00000590": {
+      "definition": "Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line connecting a pair of points on the surface of the bearer will lie outside the bearer.",
+      "normalization_note": "Expanded 'outside' to 'outside the bearer' to remove ambiguity."
+    },
+    "https://www.commoncoreontologies.org/ont00000565": {
+      "definition": "Cube Shape is a Cuboidal that inheres in a bearer in virtue of the bearer having six Square faces.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; 'it' -> 'the bearer'; capitalized existing class label Square."
+    },
+    "https://www.commoncoreontologies.org/ont00000478": {
+      "definition": "Cuboidal is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having six Rectangular faces.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; 'it' -> 'the bearer'; capitalized existing class label Rectangular."
+    },
+    "https://www.commoncoreontologies.org/ont00000474": {
+      "definition": "Curved is a Shape Quality that inheres in a bearer in virtue of the bearer having borders which are smoothly rounded.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'."
+    },
+    "https://www.commoncoreontologies.org/ont00000975": {
+      "definition": "Cyan is a Color that inheres in a bearer in virtue of the bearer being between Green and Blue with a wavelength in the visible spectrum typically between 490 and 520 nanometers.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of the bearer being'; capitalized Green and Blue."
+    },
+    "https://www.commoncoreontologies.org/ont00000283": {
+      "definition": "Cylindrical is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having an elongated shape with round bases.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; added 'the bearer' clause."
+    },
+    "https://www.commoncoreontologies.org/ont00000892": {
+      "definition": "Depth is a One Dimensional Extent that inheres in a bearer in virtue of the bearer's extension in a downward, backward, or inward direction.",
+      "normalization_note": "Kept original phrasing while ensuring compliance with required start."
+    },
+    "https://www.commoncoreontologies.org/ont00000541": {
+      "definition": "Diameter is a One Dimensional Extent that inheres in a circle in virtue of the extent of a straight line that passes through the center of the circle and starts and ends on the circle's boundary.",
+      "normalization_note": "Kept original phrasing while ensuring compliance with required start."
+    },
+    "https://www.commoncoreontologies.org/ont00000628": {
+      "definition": "Disposition to Interact with Electromagnetic Radiation is a Disposition that inheres in a bearer in virtue of how that bearer interacts with electromagnetic radiation.",
+      "normalization_note": "Kept original meaning with required start."
+    },
+    "https://www.commoncoreontologies.org/ont00000997": {
+      "definition": "Disrupting Disposition is a Disposition that inheres in a bearer in virtue of the realization of the disposition disrupting a process some entity has an interest in.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of' clause to conform to CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00001001": {
+      "definition": "Drooping is a Shape Quality that inheres in a bearer in virtue of the bearer having a border that hangs downwards.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; added 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00001193": {
+      "definition": "Fatigability is a Realizable Entity that inheres in a bearer in virtue of the realizable entity being realized when the bearer loses strength and tires quickly.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of' and replaced 'its' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00001280": {
+      "definition": "Flat is a Shape Quality that inheres in a bearer in virtue of the bearer having a horizontal border without a significant deviation.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; added 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000459": {
+      "definition": "Fluorescence is a Luminescent Property that inheres in a bearer in virtue of that bearer's capacity to emit visible light while absorbing shorter wavelength radiation, but not after.",
+      "normalization_note": "Kept original meaning while ensuring compliance with required start."
+    },
+    "https://www.commoncoreontologies.org/ont00000815": {
+      "definition": "Folded is a Shape Quality that inheres in a bearer in virtue of one part of the bearer being layered over another connected part.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'."
+    },
+    "https://www.commoncoreontologies.org/ont00001377": {
+      "definition": "Gold Color is a Color that inheres in a bearer in virtue of the bearer resembling a Color Hue of yellow-orange with the added feature of having a metallic shine.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of the bearer'; capitalized Color Hue."
+    },
+    "https://www.commoncoreontologies.org/ont00000082": {
+      "definition": "Green is a Color that inheres in a bearer in virtue of the bearer being between Yellow and Cyan with a wavelength in the visible spectrum, typically between 520 to 560 nanometers.",
+      "normalization_note": "Added bearer clause; capitalized Yellow and Cyan."
+    },
+    "https://www.commoncoreontologies.org/ont00001349": {
+      "definition": "Grey is a Color that inheres in a bearer in virtue of the bearer being between White and Black colors.",
+      "normalization_note": "Added bearer clause; capitalized White and Black."
+    },
+    "https://www.commoncoreontologies.org/ont00000766": {
+      "definition": "Hardness is a Quality that inheres in a bearer in virtue of the degree to which the bearer can be turned, bowed, or twisted without breaking.",
+      "normalization_note": "Replaced pronoun 'it' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000797": {
+      "definition": "Hazel is a Color that inheres in a bearer in virtue of the bearer being a combination of Brown and Green, typically associated with eye color.",
+      "normalization_note": "Added bearer clause; capitalized Brown and Green."
+    }
+  },
+  "{\"items\": [[\"https://www.commoncoreontologies.org/ont00000967\", \"One Dimensional Extent\", \"A One Dimensional Extent that inheres in a bearer in virtue of the bearer's extension in a vertical direction.\"], [\"https://www.commoncoreontologies.org/ont00000738\", \"One Dimensional Extent\", \"A One Dimensional Extent that inheres in a bearer in virtue of the bearer's greatest extent in one direction.\"], [\"https://www.commoncoreontologies.org/ont00001126\", \"Optical Property\", \"An Optical Property that inheres in a bearer in virtue of that bearer's capacity to emit visible light, but which isn't the result of the bearer being heated.\"], [\"https://www.commoncoreontologies.org/ont00001113\", \"Color\", \"A Color consisting of red and blue hues.\"], [\"https://www.commoncoreontologies.org/ont00000632\", \"Disposition\", \"A Disposition that is realized when its bearer exerts a magnetic force on another entity.\"], [\"https://www.commoncoreontologies.org/ont00000913\", \"Color\", \"A Color consisting of purple and brown hue.\"], [\"https://www.commoncoreontologies.org/ont00000614\", \"Quality\", \"A Quality that inheres in a bearer in virtue of the amount of matter in that bearer.\"], [\"https://www.commoncoreontologies.org/ont00000009\", \"Quality\", \"A Quality that inheres in a bearer in virtue of that bearer's mass per unit volume.\"], [\"https://www.commoncoreontologies.org/ont00000464\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having an long thin shape with approximately parallel sides.\"], [\"https://www.commoncoreontologies.org/ont00001367\", \"Size Quality\", \"A Size Quality that inheres in a bearer in virtue of the bearer's extension in one dimension.\"], [\"https://www.commoncoreontologies.org/ont00001384\", \"Disposition to Interact with Electromagnetic Radiation\", \"A Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of that bearer's capacity to transmit electromagnetic radiation of a given frequency through the bearer instead of reflecting, scattering, or absorbing electromangentic radiation of that frequency.\"], [\"https://www.commoncoreontologies.org/ont00001220\", \"Opacity\", \"An Opacity that inheres in a bearer in virtue of that bearer's incapacity to transmit electromagnetic radiation of a given frequency through the bearer such that the bearer reflects, scatters, or absorbs all electromagnetic radiation of that frequency.\"], [\"https://www.commoncoreontologies.org/ont00000784\", \"Disposition to Interact with Electromagnetic Radiation\", \"A Disposition to Interact with Electromagnetic Radiation that is realized when its bearer interacts with electromagnetic waves within the visible light spectrum.\"], [\"https://www.commoncoreontologies.org/ont00000818\", \"Color\", \"A Color that is between Red and Yellow with a wavelength in the visible spectrum typically between 590 to 635 nanometers.\"], [\"https://www.commoncoreontologies.org/ont00001293\", \"One Dimensional Extent\", \"A One Dimensional Extent that inheres in a bearer in virtue of the extent of a boundary which encloses the bearer.\"], [\"https://www.commoncoreontologies.org/ont00001182\", \"Relational Quality\", \"A Relational Quality that is the angle between the light incident onto an observed Object and the light reflected from the Object.\"], [\"https://www.commoncoreontologies.org/ont00000941\", \"Luminescent Property\", \"A Luminescent Property that inheres in a bearer in virtue of that bearer's capacity to emit visible light after absorbing shorter wavelength radiation, and to continue emitting after the absorbing process has ceased.\"], [\"https://www.commoncoreontologies.org/ont00001296\", \"Spatial Orientation\", \"A Spatial Orientation of an Object relative to its Pitch Axis.\"], [\"https://www.commoncoreontologies.org/ont00001026\", \"Spatial Orientation\", \"A Spatial Orientation of a Material Entity in which one or more of its designated components are oriented toward a specified direction.\"], [\"https://www.commoncoreontologies.org/ont00001199\", \"Shape Quality\", \"A Shape Quality inhering in a part of an object in virtue of the part extending out above or beyond the surface of the object.\"]], \"model\": \"gemini-3.5-flash-lite\", \"version\": \"normalize-v1\"}": {
+    "https://www.commoncoreontologies.org/ont00000967": {
+      "definition": "Height is a One Dimensional Extent that inheres in a bearer in virtue of the bearer's extension in a vertical direction.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of' clause to match required start and CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00000738": {
+      "definition": "Length is a One Dimensional Extent that inheres in a bearer in virtue of the bearer's greatest extent in one direction.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of' clause to match required start and CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00001126": {
+      "definition": "Luminescent Property is an Optical Property that inheres in a bearer in virtue of that bearer's capacity to emit visible light, but which is not the result of the bearer being heated.",
+      "normalization_note": "Expanded 'isn't' to 'is not'; replaced 'that bearer's' with appropriate phrasing conforming to style."
+    },
+    "https://www.commoncoreontologies.org/ont00001113": {
+      "definition": "Magenta is a Color that inheres in a bearer in virtue of the bearer reflecting or emitting light consisting of Red and Blue hues.",
+      "normalization_note": "Added inheres-in clause and capitalized Red and Blue class labels."
+    },
+    "https://www.commoncoreontologies.org/ont00000632": {
+      "definition": "Magnetism is a Disposition that inheres in a bearer in virtue of being realized when the bearer exerts a magnetic force on another entity.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of' clause and replaced 'its bearer' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000913": {
+      "definition": "Maroon is a Color that inheres in a bearer in virtue of the bearer reflecting or emitting light consisting of Purple and Brown hue.",
+      "normalization_note": "Added inheres-in clause and capitalized Purple and Brown class labels."
+    },
+    "https://www.commoncoreontologies.org/ont00000614": {
+      "definition": "Mass is a Quality that inheres in a bearer in virtue of the amount of matter in that bearer.",
+      "normalization_note": "Added 'that' to the required start to match the pattern."
+    },
+    "https://www.commoncoreontologies.org/ont00000009": {
+      "definition": "Mass Density is a Quality that inheres in a bearer in virtue of that bearer having mass per unit volume.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of' and adjusted wording to match style."
+    },
+    "https://www.commoncoreontologies.org/ont00000464": {
+      "definition": "Oblong is a Shape Quality that inheres in a bearer in virtue of the bearer having a long thin shape with approximately parallel sides.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; corrected 'an long' to 'a long'."
+    },
+    "https://www.commoncoreontologies.org/ont00001367": {
+      "definition": "One Dimensional Extent is a Size Quality that inheres in a bearer in virtue of the bearer's extension in one dimension.",
+      "normalization_note": "Added 'that' to the required start to match the pattern."
+    },
+    "https://www.commoncoreontologies.org/ont00001384": {
+      "definition": "Opacity is a Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of that bearer's capacity to transmit electromagnetic radiation of a given frequency through the bearer instead of reflecting, scattering, or absorbing electromagnetic radiation of that frequency.",
+      "normalization_note": "Corrected typo 'electromangentic' to 'electromagnetic'."
+    },
+    "https://www.commoncoreontologies.org/ont00001220": {
+      "definition": "Opaque is an Opacity that inheres in a bearer in virtue of that bearer's incapacity to transmit electromagnetic radiation of a given frequency through the bearer such that the bearer reflects, scatters, or absorbs all electromagnetic radiation of that frequency.",
+      "normalization_note": "Added 'that' to the required start to match the pattern."
+    },
+    "https://www.commoncoreontologies.org/ont00000784": {
+      "definition": "Optical Property is a Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of being realized when the bearer interacts with electromagnetic waves within the visible light spectrum.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of' clause and replaced 'its bearer' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000818": {
+      "definition": "Orange is a Color that inheres in a bearer in virtue of the bearer being between Red and Yellow with a wavelength in the visible spectrum typically between 590 to 635 nanometers.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of the bearer being'; capitalized Red and Yellow."
+    },
+    "https://www.commoncoreontologies.org/ont00001293": {
+      "definition": "Perimeter is a One Dimensional Extent that inheres in a bearer in virtue of the extent of a boundary which encloses the bearer.",
+      "normalization_note": "Added 'that' to the required start to match the pattern."
+    },
+    "https://www.commoncoreontologies.org/ont00001182": {
+      "definition": "Phase Angle is a Relational Quality that inheres in a bearer in virtue of being the angle between the light incident onto an observed object and the light reflected from the object.",
+      "normalization_note": "FLAG: Parent is Relational Quality, but original definition lacked inheres-in phrasing. Added inheres-in clause to match CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00000941": {
+      "definition": "Phosphorescence is a Luminescent Property that inheres in a bearer in virtue of that bearer's capacity to emit visible light after absorbing shorter wavelength radiation, and to continue emitting after the absorbing process has ceased.",
+      "normalization_note": "Added 'that' to the required start to match the pattern."
+    },
+    "https://www.commoncoreontologies.org/ont00001296": {
+      "definition": "Pitch Orientation is a Spatial Orientation that inheres in a bearer in virtue of the spatial orientation of an object relative to its pitch axis.",
+      "normalization_note": "FLAG: Parent is Spatial Orientation, but original was a phrase rather than a full definition. Expanded to include inheres-in clause."
+    },
+    "https://www.commoncoreontologies.org/ont00001026": {
+      "definition": "Pointing Orientation is a Spatial Orientation that inheres in a bearer in virtue of being a spatial orientation of a material entity in which one or more of its designated components are oriented toward a specified direction.",
+      "normalization_note": "FLAG: Parent is Spatial Orientation, but original was a phrase. Expanded to include inheres-in clause."
+    },
+    "https://www.commoncoreontologies.org/ont00001199": {
+      "definition": "Protruding is a Shape Quality that inheres in a part of an object in virtue of the part extending out above or beyond the surface of the object.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in' and adjusted start to match required format."
+    }
+  },
+  "{\"items\": [[\"https://www.commoncoreontologies.org/ont00000196\", \"Color\", \"A Color that is aproximately midway between Red and Blue.\"], [\"https://www.commoncoreontologies.org/ont00000912\", \"Three Dimensional Shape\", \"A Three Dimensional Shape that inheres in a bearer in virtue of it having a polygonal base with vertices that all connect to the same apex to form triangular faces.\"], [\"https://www.commoncoreontologies.org/ont00001291\", \"Disposition to Interact with Electromagnetic Radiation\", \"A Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of the capacity of that bearer to absorb electromagnetic radiation of a given frequency.\"], [\"https://www.commoncoreontologies.org/ont00000512\", \"Disposition to Interact with Electromagnetic Radiation\", \"A Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of the capacity of that bearer to emit electromagnetic radiation of a given frequency.\"], [\"https://www.commoncoreontologies.org/ont00001137\", \"Disposition to Interact with Electromagnetic Radiation\", \"A Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of the capacity of that bearer to scatter or reflect electromagnetic radiation of a given frequency.\"], [\"https://www.commoncoreontologies.org/ont00000442\", \"Quality\", \"A Quality that inheres in a bearer in virtue of that bearer exhibiting or being caused by radioactivity.\"], [\"https://www.commoncoreontologies.org/ont00000695\", \"Radiopacity\", \"A Radiopacity that inheres in a bearer in virtue of its capacity to permit most X-rays to pass through it.\"], [\"https://www.commoncoreontologies.org/ont00000620\", \"Opacity\", \"An Opacity that inheres in a bearer in virtue of its capacity to allow or prevent X-rays to pass through it.\"], [\"https://www.commoncoreontologies.org/ont00000257\", \"Radiopacity\", \"A Radiopacity that inheres in a bearer in virtue of its capacity to prevent most X-rays from passing through it.\"], [\"https://www.commoncoreontologies.org/ont00001369\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of having four sides and four 90 degree angles.\"], [\"https://www.commoncoreontologies.org/ont00001277\", \"Color\", \"A Color that is above Orange with a wavelength in the visible spectrum typically between 635 to 700 nanometers.\"], [\"https://www.commoncoreontologies.org/ont00000826\", \"Radiation Reflectivity\", \"A Radiation Reflectivity that inheres in a bearer in virtue of the capacity of that bearer to change the direction of a propagating wave when passing through it.\"], [\"https://www.commoncoreontologies.org/ont00001177\", \"Spatial Orientation\", \"A Spatial Orientation of an Object relative to its Roll Axis.\"], [\"https://www.commoncoreontologies.org/ont00001333\", \"Color\", \"A Color consisting of red hue and yellow hue and high brightness.\"], [\"https://www.commoncoreontologies.org/ont00000803\", \"Shape Quality\", \"A Shape Quality that inheres in a bearer in virtue of every point along its circumference being equidistant from the center.\"], [\"https://www.commoncoreontologies.org/ont00000042\", \"Shape Quality\", \"A Shape quality inhering in a bearer in virtue of the bearer having the shape of half a circle.\"], [\"https://www.commoncoreontologies.org/ont00000494\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having multiple sharp points along a edge.\"], [\"https://www.commoncoreontologies.org/ont00001059\", \"Quality\", \"A Quality that inheres in a bearer in virtue of the ratios between dimensions of external features of that bearer.\"], [\"https://www.commoncoreontologies.org/ont00000424\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having a fine point or thin edge.\"], [\"https://www.commoncoreontologies.org/ont00000450\", \"Color\", \"A Color that resembles Grey with the added feature of having a metallic shine.\"]], \"model\": \"gemini-3.5-flash-lite\", \"version\": \"normalize-v1\"}": {
+    "https://www.commoncoreontologies.org/ont00000196": {
+      "definition": "Purple is a Color that inheres in a bearer in virtue of the bearer reflecting or emitting light with a dominant wavelength approximately midway between Red and Blue in the visible light spectrum.",
+      "normalization_note": "Corrected typo 'aproximately' to 'approximately'; added 'that inheres in a bearer in virtue of the bearer reflecting or emitting light with a dominant wavelength'; capitalized existing class labels Red and Blue."
+    },
+    "https://www.commoncoreontologies.org/ont00000912": {
+      "definition": "Pyramidal is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having a polygonal base with vertices that all connect to the same apex to form triangular faces.",
+      "normalization_note": "Changed 'that inheres in a bearer in virtue of it having' to 'that inheres in a bearer in virtue of the bearer having'."
+    },
+    "https://www.commoncoreontologies.org/ont00001291": {
+      "definition": "Radiation Absorptivity is a Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of the capacity of that bearer to absorb electromagnetic radiation of a given frequency.",
+      "normalization_note": "Retained original wording conforming to CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00000512": {
+      "definition": "Radiation Emissivity is a Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of the capacity of that bearer to emit electromagnetic radiation of a given frequency.",
+      "normalization_note": "Retained original wording conforming to CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00001137": {
+      "definition": "Radiation Reflectivity is a Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of the capacity of that bearer to scatter or reflect electromagnetic radiation of a given frequency.",
+      "normalization_note": "Retained original wording conforming to CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00000442": {
+      "definition": "Radioactive is a Quality that inheres in a bearer in virtue of that bearer exhibiting or being caused by radioactivity.",
+      "normalization_note": "Retained original wording conforming to CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00000695": {
+      "definition": "Radiolucent is a Radiopacity that inheres in a bearer in virtue of the capacity of the bearer to permit most X-rays to pass through the bearer.",
+      "normalization_note": "Replaced pronouns 'its', 'it' with 'the bearer'; added 'that inheres in a bearer in virtue of'."
+    },
+    "https://www.commoncoreontologies.org/ont00000620": {
+      "definition": "Radiopacity is an Opacity that inheres in a bearer in virtue of the capacity of the bearer to allow or prevent X-rays to pass through the bearer.",
+      "normalization_note": "Replaced pronouns 'its' with 'the bearer'; added 'that inheres in a bearer in virtue of'."
+    },
+    "https://www.commoncoreontologies.org/ont00000257": {
+      "definition": "Radiopaque is a Radiopacity that inheres in a bearer in virtue of the capacity of the bearer to prevent most X-rays from passing through the bearer.",
+      "normalization_note": "Replaced pronouns 'its' with 'the bearer'; added 'that inheres in a bearer in virtue of'."
+    },
+    "https://www.commoncoreontologies.org/ont00001369": {
+      "definition": "Rectangular is a Shape Quality that inheres in a bearer in virtue of the bearer having four sides and four ninety-degree angles.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in a bearer in virtue of the bearer'; spelled out '90' as 'ninety'."
+    },
+    "https://www.commoncoreontologies.org/ont00001277": {
+      "definition": "Red is a Color that inheres in a bearer in virtue of the bearer reflecting or emitting light with a wavelength above Orange in the visible spectrum typically between 635 to 700 nanometers.",
+      "normalization_note": "Capitalized existing class label Orange; added 'that inheres in a bearer in virtue of the bearer reflecting or emitting light with a wavelength'."
+    },
+    "https://www.commoncoreontologies.org/ont00000826": {
+      "definition": "Refractivity is a Radiation Reflectivity that inheres in a bearer in virtue of the capacity of that bearer to change the direction of a propagating wave when passing through the bearer.",
+      "normalization_note": "Replaced pronoun 'it' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00001177": {
+      "definition": "Roll Orientation is a Spatial Orientation that inheres in a bearer in virtue of being an orientation of an Object relative to its Roll Axis.",
+      "normalization_note": "FLAG: Adjusted definition to fit the required CCO relational quality structure while preserving the meaning."
+    },
+    "https://www.commoncoreontologies.org/ont00001333": {
+      "definition": "Rosy is a Color that inheres in a bearer in virtue of the bearer exhibiting a Red hue, a Yellow hue, and high Color Brightness.",
+      "normalization_note": "Capitalized existing class labels Red, Yellow, and Color Brightness; added 'that inheres in a bearer in virtue of the bearer exhibiting'."
+    },
+    "https://www.commoncoreontologies.org/ont00000803": {
+      "definition": "Round is a Shape Quality that inheres in a bearer in virtue of every point along the circumference of the bearer being equidistant from the center.",
+      "normalization_note": "Replaced pronoun 'its' with 'the circumference of the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000042": {
+      "definition": "Semicircular is a Shape Quality that inheres in a bearer in virtue of the bearer having the shape of half a circle.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in a bearer in virtue of the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000494": {
+      "definition": "Serrated is a Shape Quality that inheres in a bearer in virtue of the bearer having multiple sharp points along an edge.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in a bearer in virtue of the bearer'; corrected 'a edge' to 'an edge'."
+    },
+    "https://www.commoncoreontologies.org/ont00001059": {
+      "definition": "Shape Quality is a Quality that inheres in a bearer in virtue of the ratios between dimensions of external features of that bearer.",
+      "normalization_note": "Retained original wording conforming to CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00000424": {
+      "definition": "Sharp is a Shape Quality that inheres in a bearer in virtue of the bearer having a fine point or thin edge.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in a bearer in virtue of the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000450": {
+      "definition": "Silver Color is a Color that inheres in a bearer in virtue of the bearer resembling Grey with the added feature of having a metallic shine.",
+      "normalization_note": "Capitalized existing class label Grey; added 'that inheres in a bearer in virtue of the bearer'."
+    }
+  },
+  "{\"items\": [[\"https://www.commoncoreontologies.org/ont00001202\", \"Quality\", \"A Quality that inheres in a bearer in virtue of the bearer's extension in one or more dimensions.\"], [\"https://www.commoncoreontologies.org/ont00000578\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having a horizontal border which is not level.\"], [\"https://www.commoncoreontologies.org/ont00000119\", \"Relational Quality\", \"A Relational Quality that is the angle of Rotation of an Object relative to one or more Plane of Reference or Axis of Rotation.\"], [\"https://www.commoncoreontologies.org/ont00000733\", \"Three Dimensional Shape\", \"A Three Dimensional Shape inhering in a bearer in virtue of all of its cross sections being round.\"], [\"https://www.commoncoreontologies.org/ont00000861\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having a linear opening, or having been divided into parts.\"], [\"https://www.commoncoreontologies.org/ont00000105\", \"Rectangular\", \"A Rectangular shape which has four equal length sides and four 90 degree angles.\"], [\"https://www.commoncoreontologies.org/ont00001063\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer not having curves, bends, or angles along its borders.\"], [\"https://www.commoncoreontologies.org/ont00000284\", \"Realizable Entity\", \"A Realizable Entity that is realized when its bearer exerts or resists some power, influence, or force.\"], [\"https://www.commoncoreontologies.org/ont00001118\", \"Disposition\", \"A Disposition that inheres in a liquid and is realized when the cohesive forces of the molecules in the bearer at the surface are greater than the adhesive forces of the molecules in the surrounding air.\"], [\"https://www.commoncoreontologies.org/ont00000441\", \"Quality\", \"A Quality that inheres in a bearer in virtue of its thermal energy.\"], [\"https://www.commoncoreontologies.org/ont00000327\", \"Quality\", \"A Quality that inheres in a bearer in virtue of the size, shape, and distribution of features on its surface, typically on a continuum from smooth to rough.\"], [\"https://www.commoncoreontologies.org/ont00000607\", \"Depth\", \"A Depth that inheres in a bearer in virtue of it extending inward through an object.\"], [\"https://www.commoncoreontologies.org/ont00000579\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having a width or depth which is significantly smaller in proportion to its length or height.\"], [\"https://www.commoncoreontologies.org/ont00001294\", \"Size Quality\", \"A Size Quality that inheres in a bearer in virtue of the bearer's extension in three dimensions.\"], [\"https://www.commoncoreontologies.org/ont00001360\", \"Shape Quality\", \"A Shape Quality that inheres only in a three dimensional entity.\"], [\"https://www.commoncoreontologies.org/ont00000112\", \"Opacity\", \"An Opacity that inheres in a bearer in virtue of that bearer's capacity to transmit some but not all electromagnetic radiation of a given frequency through the bearer such that the bearer reflects, scatters, or absorbs some but not all electromagnetic radiation of that frequency.\"], [\"https://www.commoncoreontologies.org/ont00000525\", \"Opacity\", \"An Opacity that inheres in a bearer in virtue of that bearer's capacity to transmit all or nearly all electromagnetic radiation of a given frequency through the bearer such that the bearer reflects, scatters, or absorbs little or no electromagnetic radiation of that frequency.\"], [\"https://www.commoncoreontologies.org/ont00000447\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of it having exactly three angles and exactly three sides.\"], [\"https://www.commoncoreontologies.org/ont00001065\", \"Size Quality\", \"A Size Quality that inheres in a bearer in virtue of the bearer's extension in two dimensions.\"], [\"https://www.commoncoreontologies.org/ont00001354\", \"Color\", \"A Color consisting of red and orange hue with a slight amount of gray.\"]], \"model\": \"gemini-3.5-flash-lite\", \"version\": \"normalize-v1\"}": {
+    "https://www.commoncoreontologies.org/ont00001202": {
+      "definition": "Size Quality is a Quality that inheres in a bearer in virtue of the bearer's extension in one or more dimensions.",
+      "normalization_note": "Changed 'A Quality' to 'Size Quality is a Quality that'."
+    },
+    "https://www.commoncoreontologies.org/ont00000578": {
+      "definition": "Sloped is a Shape Quality that inheres in a bearer in virtue of the bearer having a horizontal border which is not level.",
+      "normalization_note": "Changed 'A Shape Quality inhering in' to 'Sloped is a Shape Quality that inheres in'."
+    },
+    "https://www.commoncoreontologies.org/ont00000119": {
+      "definition": "Spatial Orientation is a Relational Quality that inheres in a bearer in virtue of the bearer being the angle of rotation of an object relative to one or more plane of reference or axis of rotation.",
+      "normalization_note": "Rephrased definition to use 'that inheres in a bearer in virtue of' and replaced 'its' / implicit relations with explicit phrasing."
+    },
+    "https://www.commoncoreontologies.org/ont00000733": {
+      "definition": "Spherical is a Three Dimensional Shape that inheres in a bearer in virtue of all of the bearer's cross sections being round.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; replaced 'its' with 'the bearer's'."
+    },
+    "https://www.commoncoreontologies.org/ont00000861": {
+      "definition": "Split is a Shape Quality that inheres in a bearer in virtue of the bearer having a linear opening or having been divided into parts.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; replaced 'the bearer' appropriately."
+    },
+    "https://www.commoncoreontologies.org/ont00000105": {
+      "definition": "Square is a Rectangular that inheres in a bearer in virtue of the bearer having four equal length sides and four 90 degree angles.",
+      "normalization_note": "Rephrased to follow the required start and standard in virtue formula."
+    },
+    "https://www.commoncoreontologies.org/ont00001063": {
+      "definition": "Straight is a Shape Quality that inheres in a bearer in virtue of the bearer not having curves, bends, or angles along the bearer's borders.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; replaced 'its' with 'the bearer's'."
+    },
+    "https://www.commoncoreontologies.org/ont00000284": {
+      "definition": "Strength is a Realizable Entity that inheres in a bearer in virtue of the realizable entity being realized when the bearer exerts or resists some power, influence, or force.",
+      "normalization_note": "Adjusted phrasing to match the required start and incorporated the bearer explicitly."
+    },
+    "https://www.commoncoreontologies.org/ont00001118": {
+      "definition": "Surface Tension is a Disposition that inheres in a liquid bearer in virtue of the disposition being realized when the cohesive forces of the molecules in the bearer at the surface are greater than the adhesive forces of the molecules in the surrounding air.",
+      "normalization_note": "Adjusted phrasing to use the required start and explicitly reference the bearer."
+    },
+    "https://www.commoncoreontologies.org/ont00000441": {
+      "definition": "Temperature is a Quality that inheres in a bearer in virtue of the bearer's thermal energy.",
+      "normalization_note": "Replaced 'its' with 'the bearer's'."
+    },
+    "https://www.commoncoreontologies.org/ont00000327": {
+      "definition": "Texture is a Quality that inheres in a bearer in virtue of the size, shape, and distribution of features on the bearer's surface, typically on a continuum from smooth to rough.",
+      "normalization_note": "Replaced 'its' with 'the bearer's'."
+    },
+    "https://www.commoncoreontologies.org/ont00000607": {
+      "definition": "Thickness is a Depth that inheres in a bearer in virtue of the bearer extending inward through an object.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; replaced 'it' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000579": {
+      "definition": "Thin is a Shape Quality that inheres in a bearer in virtue of the bearer having a width or depth which is significantly smaller in proportion to the bearer's length or height.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; replaced 'its' with 'the bearer's'."
+    },
+    "https://www.commoncoreontologies.org/ont00001294": {
+      "definition": "Three Dimensional Extent is a Size Quality that inheres in a bearer in virtue of the bearer's extension in three dimensions.",
+      "normalization_note": "Kept original meaning and applied standard CCO structure."
+    },
+    "https://www.commoncoreontologies.org/ont00001360": {
+      "definition": "Three Dimensional Shape is a Shape Quality that inheres in a bearer in virtue of the bearer being a three dimensional entity.",
+      "normalization_note": "Rewrote the conditional restriction into the standard 'in virtue of' format."
+    },
+    "https://www.commoncoreontologies.org/ont00000112": {
+      "definition": "Translucent is an Opacity that inheres in a bearer in virtue of that bearer's capacity to transmit some but not all electromagnetic radiation of a given frequency through the bearer such that the bearer reflects, scatters, or absorbs some but not all electromagnetic radiation of that frequency.",
+      "normalization_note": "Changed 'An Opacity that inheres' to the required start; retained all original conditions."
+    },
+    "https://www.commoncoreontologies.org/ont00000525": {
+      "definition": "Transparent is an Opacity that inheres in a bearer in virtue of that bearer's capacity to transmit all or nearly all electromagnetic radiation of a given frequency through the bearer such that the bearer reflects, scatters, or absorbs little or no electromagnetic radiation of that frequency.",
+      "normalization_note": "Changed 'An Opacity that inheres' to the required start; retained all original conditions."
+    },
+    "https://www.commoncoreontologies.org/ont00000447": {
+      "definition": "Triangular is a Shape Quality that inheres in a bearer in virtue of the bearer having exactly three angles and exactly three sides.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; replaced 'it' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00001065": {
+      "definition": "Two Dimensional Extent is a Size Quality that inheres in a bearer in virtue of the bearer's extension in two dimensions.",
+      "normalization_note": "Kept original meaning and applied standard CCO structure."
+    },
+    "https://www.commoncoreontologies.org/ont00001354": {
+      "definition": "Vermilion is a Color that inheres in a bearer in virtue of the bearer consisting of Red and Orange hue with a slight amount of Grey.",
+      "normalization_note": "FLAG: Original definition used nominal phrase 'consisting of'. Capitalized existing class labels Red, Orange, and Grey, and added the bearer clause."
+    }
+  },
+  "{\"items\": [[\"https://www.commoncoreontologies.org/ont00001142\", \"Color\", \"A Color that is lower than Blue with a wavelength in the visible spectrum typically between 400 and 450 nanometers.\"], [\"https://www.commoncoreontologies.org/ont00000548\", \"Disrupting Disposition\", \"A Disrupting Disposition the realization of which would disrupt a process that the bearer of the Disrupting Disposition has an interest in.\"], [\"https://www.commoncoreontologies.org/ont00000885\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of it having a sinuous or rippled border.\"], [\"https://www.commoncoreontologies.org/ont00000633\", \"Quality\", \"A Quality that inheres in some material entity with a mass in virtue of its location in some gravitational field.\"], [\"https://www.commoncoreontologies.org/ont00000295\", \"Quality\", \"A Quality that inheres in a bearer in virtue of the degree to which the bearer is covered by a liquid, typically on a continuum of dry to wet.\"], [\"https://www.commoncoreontologies.org/ont00000528\", \"Color\", \"A Color of maximum brightness, the color of objects that reflect nearly all wavelengths of the visible light spectrum, thus considered achromatic.\"], [\"https://www.commoncoreontologies.org/ont00000385\", \"Shape Quality\", \"A Shape Quality inhering in a bearer in virtue of the bearer having a width or depth which is significantly larger in proportion to its length or height.\"], [\"https://www.commoncoreontologies.org/ont00000324\", \"One Dimensional Extent\", \"A One Dimensional Extent that inheres in a bearer in virtue of the bearer's extension in a horizontal direction.\"], [\"https://www.commoncoreontologies.org/ont00001318\", \"Spatial Orientation\", \"A Spatial Orientation of an Object relative to its Yaw Axis.\"], [\"https://www.commoncoreontologies.org/ont00001225\", \"Color\", \"A Color that is between Orange and Green with a wavelength in the visible spectrum typically between 560 to 590 nanometers.\"]], \"model\": \"gemini-3.5-flash-lite\", \"version\": \"normalize-v1\"}": {
+    "https://www.commoncoreontologies.org/ont00001142": {
+      "definition": "Violet is a Color that inheres in a bearer in virtue of the bearer reflecting or emitting light with a shorter wavelength than Blue, typically between 400 and 450 nanometers in the visible spectrum.",
+      "normalization_note": "Replaced 'lower than' with explicit comparison 'with a shorter wavelength than'; capitalized Blue; added 'that inheres in a bearer in virtue of the bearer reflecting or emitting light' to follow CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00000548": {
+      "definition": "Vulnerability is a Disrupting Disposition that inheres in a bearer in virtue of the fact that the realization of the disposition would disrupt a process that the bearer has an interest in.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of the fact that' to follow CCO style; replaced 'it'/'its' implicitly with the bearer."
+    },
+    "https://www.commoncoreontologies.org/ont00000885": {
+      "definition": "Wavy is a Shape Quality that inheres in a bearer in virtue of the bearer having a sinuous or rippled border.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; replaced pronoun 'it' with 'the bearer'."
+    },
+    "https://www.commoncoreontologies.org/ont00000633": {
+      "definition": "Weight is a Quality that inheres in a material entity with a Mass in virtue of the material entity having mass and its location in some gravitational field.",
+      "normalization_note": "Capitalized Mass; expanded 'its' to 'the material entity's' or similar; structured with CCO phrasing while preserving original meaning."
+    },
+    "https://www.commoncoreontologies.org/ont00000295": {
+      "definition": "Wetness is a Quality that inheres in a bearer in virtue of the degree to which the bearer is covered by a liquid, typically on a continuum of dry to wet.",
+      "normalization_note": "Changed 'inheres in a bearer in virtue of' (kept original meaning structure); ensured single sentence."
+    },
+    "https://www.commoncoreontologies.org/ont00000528": {
+      "definition": "White is a Color that inheres in a bearer in virtue of having maximum Color Brightness and reflecting nearly all wavelengths of the visible light spectrum, thus being considered achromatic.",
+      "normalization_note": "Added 'that inheres in a bearer in virtue of'; incorporated Color Brightness; rewrote the relative clause to maintain a single sentence following CCO style."
+    },
+    "https://www.commoncoreontologies.org/ont00000385": {
+      "definition": "Wide is a Shape Quality that inheres in a bearer in virtue of the bearer having a Width or Depth that is significantly larger in proportion to the bearer's Length or Height.",
+      "normalization_note": "Changed 'inhering in' to 'that inheres in'; capitalized Width, Depth, Length, and Height; replaced vague pronouns 'its' with 'the bearer's'."
+    },
+    "https://www.commoncoreontologies.org/ont00000324": {
+      "definition": "Width is a One Dimensional Extent that inheres in a bearer in virtue of the bearer's extension in a horizontal direction.",
+      "normalization_note": "Replaced 'inheres in a bearer in virtue of' to match CCO style; replaced 'the bearer's' for clarity."
+    },
+    "https://www.commoncoreontologies.org/ont00001318": {
+      "definition": "Yaw Orientation is a Spatial Orientation that inheres in a bearer that is an Object in virtue of the Object's orientation relative to the Object's Yaw Axis.",
+      "normalization_note": "Added 'that inheres in a bearer that is an Object in virtue of' to conform to CCO property style; capitalized Object and Yaw Axis; replaced 'its' with 'the Object's'."
+    },
+    "https://www.commoncoreontologies.org/ont00001225": {
+      "definition": "Yellow is a Color that inheres in a bearer in virtue of the bearer reflecting or emitting light that is between Orange and Green with a wavelength in the visible spectrum typically between 560 to 590 nanometers.",
+      "normalization_note": "Capitalized Orange and Green; added 'that inheres in a bearer in virtue of the bearer reflecting or emitting light' to follow CCO style."
+    }
+  }
+}

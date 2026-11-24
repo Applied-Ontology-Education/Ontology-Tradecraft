@@ -1,0 +1,23 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<https://www.commoncoreontologies.org/QualityOntology/llm-candidates> a owl:Ontology ;
+    rdfs:comment "LLM-generated named subclass candidates (pairwise verification). To be scored by filter_candidates_hybrid.py before inclusion." .
+
+<https://www.commoncoreontologies.org/ont00000042> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000474> .
+
+<https://www.commoncoreontologies.org/ont00000283> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000474> .
+
+<https://www.commoncoreontologies.org/ont00000560> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000424>,
+        <https://www.commoncoreontologies.org/ont00000474>,
+        <https://www.commoncoreontologies.org/ont00000590> .
+
+<https://www.commoncoreontologies.org/ont00000565> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000590> .
+
+<https://www.commoncoreontologies.org/ont00000632> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000284> .
+
+<https://www.commoncoreontologies.org/ont00000733> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000474>,
+        <https://www.commoncoreontologies.org/ont00000590> .
+
+<https://www.commoncoreontologies.org/ont00001126> rdfs:subClassOf <https://www.commoncoreontologies.org/ont00000512> .
+

@@ -1,0 +1,10 @@
+{
+  "method": "deductive-closure split; every held-out subclass keeps >=1 training pair",
+  "asserted_subclass_axioms": 110,
+  "closure_subclass_pairs": 279,
+  "training_pairs": 223,
+  "validation_pairs": 56,
+  "validation_fraction": 0.201,
+  "validation_pairs_that_are_asserted": 20,
+  "random_seed": 42
+}
