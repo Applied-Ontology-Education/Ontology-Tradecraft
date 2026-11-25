@@ -1,0 +1,11 @@
+{
+  "module": "cco-module.ttl",
+  "accepted_axioms": 9,
+  "new_axioms_added": 9,
+  "inferred_subclass_axioms_added_by_elk": 0,
+  "original_axioms_removed": 0,
+  "consistent": true,
+  "reasoner": "ELK (via ROBOT)",
+  "consistency_check_included_bfo": true,
+  "output": "/Users/dinaspector/Ontology-Tradecraft/projects/project-5/src/module_augmented.ttl"
+}

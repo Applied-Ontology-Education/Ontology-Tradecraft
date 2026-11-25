@@ -1,0 +1,52 @@
+[
+  {
+    "subclass_iri": "https://www.commoncoreontologies.org/ont00001126",
+    "superclass_iri": "https://www.commoncoreontologies.org/ont00000512",
+    "rationale": "The focus class definition states that a Luminescent Property inheres in a bearer in virtue of its capacity to emit visible light (electromagnetic radiation), which entails the broader capacity to emit electromagnetic radiation of a given frequency as defined in Radiation Emissivity."
+  },
+  {
+    "subclass_iri": "https://www.commoncoreontologies.org/ont00000042",
+    "superclass_iri": "https://www.commoncoreontologies.org/ont00000474",
+    "rationale": "The focus class definition specifies that the bearer has the shape of half a circle, which entails that its borders are smoothly rounded."
+  },
+  {
+    "subclass_iri": "https://www.commoncoreontologies.org/ont00000283",
+    "superclass_iri": "https://www.commoncoreontologies.org/ont00000474",
+    "rationale": "The focus class's requirement of having round bases entails that the bearer has borders which are smoothly rounded."
+  },
+  {
+    "subclass_iri": "https://www.commoncoreontologies.org/ont00000560",
+    "superclass_iri": "https://www.commoncoreontologies.org/ont00000424",
+    "rationale": "The focus class definition states that a Cone Shape tapers smoothly to an apex, which entails having a fine point or thin edge as required by the definition of Sharp."
+  },
+  {
+    "subclass_iri": "https://www.commoncoreontologies.org/ont00000560",
+    "superclass_iri": "https://www.commoncoreontologies.org/ont00000474",
+    "rationale": "The focus class definition states that a Cone Shape tapers smoothly, which entails having borders that are smoothly rounded as required by the definition of Curved."
+  },
+  {
+    "subclass_iri": "https://www.commoncoreontologies.org/ont00000560",
+    "superclass_iri": "https://www.commoncoreontologies.org/ont00000590",
+    "rationale": "The focus class definition describes a shape tapering from a round base to an apex without cavities, which entails not having a cavity such that no line connecting a pair of points on the surface lies outside the bearer, as required by the definition of Convex Shape."
+  },
+  {
+    "subclass_iri": "https://www.commoncoreontologies.org/ont00000565",
+    "superclass_iri": "https://www.commoncoreontologies.org/ont00000590",
+    "rationale": "The focus class definition states that the bearer has six square faces, which forms a closed polyhedron without cavities, thereby entailing that no line connecting a pair of points on the surface of the bearer will lie outside the bearer."
+  },
+  {
+    "subclass_iri": "https://www.commoncoreontologies.org/ont00000733",
+    "superclass_iri": "https://www.commoncoreontologies.org/ont00000474",
+    "rationale": "The focus class definition states that all of the bearer's cross sections are round, which entails that the bearer has borders which are smoothly rounded."
+  },
+  {
+    "subclass_iri": "https://www.commoncoreontologies.org/ont00000733",
+    "superclass_iri": "https://www.commoncoreontologies.org/ont00000590",
+    "rationale": "The focus class definition specifies a spherical shape where all cross sections are round, which entails that the bearer does not have a cavity such that lines connecting points on the surface lie outside the bearer."
+  },
+  {
+    "subclass_iri": "https://www.commoncoreontologies.org/ont00000632",
+    "superclass_iri": "https://www.commoncoreontologies.org/ont00000284",
+    "rationale": "The focus definition states that Magnetism is a Disposition realized when a bearer exerts a magnetic force, which entails the candidate definition's condition of being realized when a bearer exerts a force."
+  }
+]

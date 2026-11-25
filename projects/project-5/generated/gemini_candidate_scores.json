@@ -1,0 +1,124 @@
+{
+  "[{\"subclass_definition\": \"Semicircular is a Shape Quality that inheres in a bearer in virtue of the bearer having the shape of half a circle.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000042\", \"superclass_definition\": \"Curved is a Shape Quality that inheres in a bearer in virtue of the bearer having borders that are smoothly rounded.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000474\"}, {\"subclass_definition\": \"Cylindrical is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having an elongated shape with two parallel bases that have a Round shape.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000283\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line segment connecting a pair of points on the surface of the bearer lies outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Triangular is a Shape Quality that inheres in a bearer in virtue of the bearer having exactly three sides and exactly three angles.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000447\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line segment connecting a pair of points on the surface of the bearer lies outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Triangular is a Shape Quality that inheres in a bearer in virtue of the bearer having exactly three sides and exactly three angles.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000447\", \"superclass_definition\": \"Bent is a Shape Quality that inheres in a bearer in virtue of the bearer having one or more angles along its border.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000991\"}, {\"subclass_definition\": \"Oblong is a Shape Quality that inheres in a bearer in virtue of the bearer having a long, thin shape with approximately parallel sides.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000464\", \"superclass_definition\": \"Thin is a Shape Quality that inheres in a bearer in virtue of the bearer having a width or depth that is significantly smaller in proportion to its length or height.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000579\"}, {\"subclass_definition\": \"Cuboidal is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having six faces, each of which has a Rectangular shape.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000478\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line segment connecting a pair of points on the surface of the bearer lies outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Serrated is a Shape Quality that inheres in a bearer in virtue of the bearer having multiple sharp points along an edge.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000494\", \"superclass_definition\": \"Sharp is a Shape Quality that inheres in a bearer in virtue of the bearer having a fine point or thin edge.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000424\"}, {\"subclass_definition\": \"Serrated is a Shape Quality that inheres in a bearer in virtue of the bearer having multiple sharp points along an edge.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000494\", \"superclass_definition\": \"Bent is a Shape Quality that inheres in a bearer in virtue of the bearer having one or more angles along its border.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000991\"}, {\"subclass_definition\": \"Cone Shape is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having a base with a Round shape that tapers smoothly to an apex.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000560\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line segment connecting a pair of points on the surface of the bearer lies outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Spherical is a Three Dimensional Shape that inheres in a bearer in virtue of every cross section of the bearer having a Round shape.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000733\", \"superclass_definition\": \"Curved is a Shape Quality that inheres in a bearer in virtue of the bearer having borders that are smoothly rounded.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000474\"}, {\"subclass_definition\": \"Spherical is a Three Dimensional Shape that inheres in a bearer in virtue of every cross section of the bearer having a Round shape.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000733\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line segment connecting a pair of points on the surface of the bearer lies outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Round is a Shape Quality that inheres in a bearer in virtue of every point along the bearer's circumference being equidistant from the bearer's center.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000803\", \"superclass_definition\": \"Curved is a Shape Quality that inheres in a bearer in virtue of the bearer having borders that are smoothly rounded.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000474\"}, {\"subclass_definition\": \"Round is a Shape Quality that inheres in a bearer in virtue of every point along the bearer's circumference being equidistant from the bearer's center.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000803\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line segment connecting a pair of points on the surface of the bearer lies outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Coiled is a Shape Quality that inheres in a bearer in virtue of the bearer being wound in concentric rings or spirals.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000805\", \"superclass_definition\": \"Curved is a Shape Quality that inheres in a bearer in virtue of the bearer having borders that are smoothly rounded.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000474\"}, {\"subclass_definition\": \"Wavy is a Shape Quality that inheres in a bearer in virtue of the bearer having a sinuous or rippled border.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000885\", \"superclass_definition\": \"Curved is a Shape Quality that inheres in a bearer in virtue of the bearer having borders that are smoothly rounded.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000474\"}, {\"subclass_definition\": \"Pyramidal is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having a polygonal base whose vertices all connect to a single apex, forming faces that have a Triangular shape.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000912\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line segment connecting a pair of points on the surface of the bearer lies outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Rectangular is a Shape Quality that inheres in a bearer in virtue of the bearer having four sides and four 90-degree angles.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00001369\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line segment connecting a pair of points on the surface of the bearer lies outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Rectangular is a Shape Quality that inheres in a bearer in virtue of the bearer having four sides and four 90-degree angles.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00001369\", \"superclass_definition\": \"Bent is a Shape Quality that inheres in a bearer in virtue of the bearer having one or more angles along its border.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000991\"}]": [
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A semicircular shape has borders that are smoothly rounded (half a circle), which strongly supports being a subclass of curved."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A cylindrical shape has parallel bases and an elongated shape that forms a convex three-dimensional volume without cavities, supporting convexity."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A triangle has three straight sides and angles, forming a polygon which geometrically has no internal cavities, meaning any line segment between surface points lies entirely within or on the boundary."
+    },
+    {
+      "gemini_plausibility": 0.5,
+      "gemini_rationale": "Triangular shapes have angles, but the definition of bent specifically refers to borders having angles in a way that typically contrasts with strict geometric polygons, making direct subsumption uncertain based strictly on definitions."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "An oblong shape is defined as having a long, thin shape, which entails having a width or depth significantly smaller in proportion to its length."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A cuboid consists of rectangular faces forming a closed three-dimensional polyhedron without cavities, satisfying the definition of a convex shape."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "Serrated shapes have multiple sharp points along an edge, which directly satisfies the requirement of having a fine point or thin edge."
+    },
+    {
+      "gemini_plausibility": 0.5,
+      "gemini_rationale": "While serrated edges feature sharp points, the definition of bent refers to having angles along its border, which is only weakly or indirectly supported by being serrated."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A cone tapers smoothly to an apex from a round base, forming a solid 3D shape without cavities, satisfying the definition of a convex shape."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "Spherical shapes have all cross sections round, meaning their borders are smoothly rounded, supporting the curved superclass."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A sphere is a perfectly round 3D shape that encloses a convex volume with no cavities."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A round shape where every point on the circumference is equidistant from the center describes a circle, whose border is smoothly rounded."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A round shape (like a circle or sphere) is strictly convex as it contains no cavities and any line connecting surface points remains inside or on the boundary."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "Coiled objects are wound in concentric rings or spirals, which inherently consist of smoothly rounded borders/curves."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A wavy shape has a sinuous or rippled border, which consists of smoothly rounded curves."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A pyramid is a polyhedron formed by a polygonal base and triangular faces connecting to an apex, creating a 3D shape without cavities."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A rectangle has four sides and 90-degree angles, forming a 2D polygon that is strictly convex with no cavities."
+    },
+    {
+      "gemini_plausibility": 0.5,
+      "gemini_rationale": "A rectangle has four 90-degree angles, but describing a geometric rectangle as 'bent' is semantically strained relative to the standard definition of bent."
+    }
+  ],
+  "[{\"subclass_definition\": \"Refractivity is a Radiation Reflectivity that inheres in a bearer in virtue of the capacity of that bearer to change the direction of a propagating wave when passing through the bearer.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000826\", \"superclass_definition\": \"Optical Property is a Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of being realized when the bearer interacts with electromagnetic waves within the visible light spectrum.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000784\"}]": [
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "The normalized definition of Refractivity explicitly states it is a type of 'Radiation Reflectivity', and the superclass 'Optical Property' is defined as a 'Disposition to Interact with Electromagnetic Radiation'. Since radiation reflectivity is a disposition to interact with electromagnetic radiation, and changing the direction of a propagating wave when passing through is a specific interaction with radiation, the subclass relationship is strongly supported."
+    }
+  ],
+  "[{\"subclass_definition\": \"Semicircular is a Shape Quality that inheres in a bearer in virtue of the bearer having the shape of half a circle.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000042\", \"superclass_definition\": \"Curved is a Shape Quality that inheres in a bearer in virtue of the bearer having borders which are smoothly rounded.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000474\"}, {\"subclass_definition\": \"Cylindrical is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having an elongated shape with round bases.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000283\", \"superclass_definition\": \"Curved is a Shape Quality that inheres in a bearer in virtue of the bearer having borders which are smoothly rounded.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000474\"}, {\"subclass_definition\": \"Cone Shape is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having a Round base that tapers smoothly to an apex.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000560\", \"superclass_definition\": \"Sharp is a Shape Quality that inheres in a bearer in virtue of the bearer having a fine point or thin edge.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000424\"}, {\"subclass_definition\": \"Cone Shape is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having a Round base that tapers smoothly to an apex.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000560\", \"superclass_definition\": \"Curved is a Shape Quality that inheres in a bearer in virtue of the bearer having borders which are smoothly rounded.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000474\"}, {\"subclass_definition\": \"Cone Shape is a Three Dimensional Shape that inheres in a bearer in virtue of the bearer having a Round base that tapers smoothly to an apex.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000560\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line connecting a pair of points on the surface of the bearer will lie outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Cube Shape is a Cuboidal that inheres in a bearer in virtue of the bearer having six Square faces.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000565\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line connecting a pair of points on the surface of the bearer will lie outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Magnetism is a Disposition that inheres in a bearer in virtue of being realized when the bearer exerts a magnetic force on another entity.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000632\", \"superclass_definition\": \"Strength is a Realizable Entity that inheres in a bearer in virtue of the realizable entity being realized when the bearer exerts or resists some power, influence, or force.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000284\"}, {\"subclass_definition\": \"Spherical is a Three Dimensional Shape that inheres in a bearer in virtue of all of the bearer's cross sections being round.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000733\", \"superclass_definition\": \"Curved is a Shape Quality that inheres in a bearer in virtue of the bearer having borders which are smoothly rounded.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000474\"}, {\"subclass_definition\": \"Spherical is a Three Dimensional Shape that inheres in a bearer in virtue of all of the bearer's cross sections being round.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00000733\", \"superclass_definition\": \"Convex Shape is a Shape Quality that inheres in a bearer in virtue of the bearer not having a cavity, such that no line connecting a pair of points on the surface of the bearer will lie outside the bearer.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000590\"}, {\"subclass_definition\": \"Luminescent Property is an Optical Property that inheres in a bearer in virtue of that bearer's capacity to emit visible light, but which is not the result of the bearer being heated.\", \"subclass_iri\": \"https://www.commoncoreontologies.org/ont00001126\", \"superclass_definition\": \"Radiation Emissivity is a Disposition to Interact with Electromagnetic Radiation that inheres in a bearer in virtue of the capacity of that bearer to emit electromagnetic radiation of a given frequency.\", \"superclass_iri\": \"https://www.commoncoreontologies.org/ont00000512\"}]": [
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A semicircular shape has borders that are smoothly rounded (half a circle), directly satisfying the definition of curved."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A cylindrical shape has round bases and an elongated shape with smoothly rounded borders, satisfying the curved definition."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A cone shape tapers smoothly to an apex (a fine point), directly matching the definition of sharp having a fine point."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A cone shape has a round base and tapers smoothly, meaning its borders are smoothly rounded, satisfying the curved definition."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A cone shape tapers smoothly from a round base to an apex without cavities, meaning no line connecting a pair of surface points lies outside, matching convex shape."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A cube shape has six square faces and forms a solid block without cavities, satisfying the definition of a convex shape."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "Magnetism is a disposition realized when exerting a magnetic force, which is a specific type of power, influence, or force exertion, satisfying strength."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A spherical shape has all cross sections round, meaning its borders are smoothly rounded, satisfying the curved definition."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "A sphere is a perfectly round three-dimensional shape with no cavities, satisfying the definition of a convex shape."
+    },
+    {
+      "gemini_plausibility": 1.0,
+      "gemini_rationale": "Luminescent property involves the capacity to emit visible light (which is electromagnetic radiation), making it a specific type of radiation emissivity disposition."
+    }
+  ]
+}
