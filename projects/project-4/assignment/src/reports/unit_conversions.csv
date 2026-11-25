@@ -1,0 +1,6 @@
+artifact_id,sdc_kind,timestamp,original_value,original_unit,factor,value,unit_label
+Boiler-07,pressure,2024-03-17T23:04:00Z,14.7,psi,6894.757293168,101352.932,Pa
+Pump-A1,pressure,2024-03-18T12:07:00Z,101.325,kPa,1000.0,101325.0,Pa
+Boiler-07,pressure,2024-03-17T23:04:00Z,101.325,kPa,1000.0,101325.0,Pa
+Boiler-09,pressure,2024-03-18T23:06:00Z,13.7,psi,6894.757293168,94458.175,Pa
+Pump-A2,pressure,2024-03-19T13:07:00Z,101.325,kPa,1000.0,101325.0,Pa

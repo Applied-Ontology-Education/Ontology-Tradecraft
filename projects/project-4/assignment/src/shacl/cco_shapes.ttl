@@ -2,49 +2,186 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix sh:   <http://www.w3.org/ns/shacl#> .
-@prefix bfo:  <http://purl.obolibrary.org/obo/bfo.owl#> .
-@prefix cco:  <http://www.ontologyrepository.com/CommonCoreOntologies/> .
+@prefix obo:  <http://purl.obolibrary.org/obo/> .
+@prefix cco:  <https://www.commoncoreontologies.org/> .
+@prefix p4:   <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p4/> .
 @prefix ex:   <http://example.org/shapes/> .
 
-#################################################################
-# 1) Artifact bears at least one SDC (cardinality); 
-#################################################################
-ex:ArtifactHasSDCShape
-  a sh:NodeShape ;
-  sh:targetClass cco:Artifact ;
-  sh:property [
-    sh:path bfo:bearer_of ;
-    sh:minCount 1 ;
-    sh:class bfo:SpecificallyDependentContinuant ;
-    sh:message "Every Artifact must bear at least one SDC (Specifically Dependent Continuant)." ;
-    sh:severity sh:Violation
-  ] .
+# IRIs (current BFO/CCO, from cco_merged.ttl):
+#   cco:ont00000995 Material Artifact      obo:BFO_0000020 specifically dependent continuant
+#   cco:ont00001163 MICE                   cco:ont00000120 Measurement Unit
+#   obo:BFO_0000196 bearer of              cco:ont00001966 is a measurement of
+#   cco:ont00001863 uses measurement unit  cco:ont00001769 has decimal value
+#   cco:ont00001986 has output             cco:ont00001767 has datetime value
+# The starter example used retired namespaces (bfo.owl#, ontologyrepository.com), so it matched nothing.
 
 #################################################################
-# 2) SDC is measured by at least one MICE (coverage via inverse) 
+# 1) Artifact bears at least one SDC (cardinality)
 #################################################################
+ex:ArtifactHasSDCShape a sh:NodeShape ;
+  sh:targetClass cco:ont00000995 ;
+  sh:property [
+    sh:path obo:BFO_0000196 ;
+    sh:minCount 1 ;
+    sh:class obo:BFO_0000020 ;
+    sh:message "Every Artifact must bear at least one SDC (Specifically Dependent Continuant)." ;
+    sh:severity sh:Violation ] .
+
+#################################################################
+# 2) SDC is measured by at least one MICE (coverage via inverse)
+#################################################################
+ex:SDCIsMeasuredShape a sh:NodeShape ;
+  sh:targetClass obo:BFO_0000020 ;
+  sh:property [
+    sh:path [ sh:inversePath cco:ont00001966 ] ;
+    sh:minCount 1 ;
+    sh:class cco:ont00001163 ;
+    sh:message "Every SDC must be measured by at least one MICE." ;
+    sh:severity sh:Violation ] .
 
 #################################################################
 # 3) MICE measures exactly one SDC (functional)
 #################################################################
+ex:MICEMeasuresOneSDCShape a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001966 ;
+    sh:minCount 1 ; sh:maxCount 1 ;
+    sh:class obo:BFO_0000020 ;
+    sh:message "Every MICE must be a measurement of exactly one SDC." ;
+    sh:severity sh:Violation ] .
 
 #################################################################
 # 4) MICE must have one unit and one numeric value (completeness)
 #################################################################
+ex:MICECompletenessShape a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:property [
+    sh:path cco:ont00001863 ;
+    sh:minCount 1 ; sh:maxCount 1 ;
+    sh:class cco:ont00000120 ;
+    sh:message "Every MICE must use exactly one Measurement Unit." ;
+    sh:severity sh:Violation ] ;
+  sh:property [
+    sh:path cco:ont00001769 ;
+    sh:minCount 1 ; sh:maxCount 1 ;
+    sh:datatype xsd:decimal ;
+    sh:message "Every MICE must have exactly one xsd:decimal value." ;
+    sh:severity sh:Violation ] .
 
 #################################################################
 # 5) No empty values in literals
 #################################################################
+ex:NonEmptyLabelShape a sh:NodeShape ;
+  sh:targetSubjectsOf rdfs:label ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:minLength 1 ;
+    sh:message "Labels must not be empty." ;
+    sh:severity sh:Violation ] .
+
+ex:InstantHasDatetimeShape a sh:NodeShape ;
+  sh:targetClass obo:BFO_0000203 ;
+  sh:property [
+    sh:path cco:ont00001767 ;
+    sh:minCount 1 ; sh:maxCount 1 ;
+    sh:datatype xsd:dateTime ;
+    sh:message "Every temporal instant must have exactly one non-empty xsd:dateTime value." ;
+    sh:severity sh:Violation ] .
 
 #################################################################
 # 6) Unit must match SDC being measured
 #################################################################
+ex:TemperatureUnitShape a sh:NodeShape ;
+  sh:targetClass cco:ont00000441 ;                       # Temperature
+  sh:property [
+    sh:path ( [ sh:inversePath cco:ont00001966 ] cco:ont00001863 ) ;
+    sh:in ( cco:ont00001724 cco:ont00001606 ) ;           # Degree Fahrenheit, Degree Celsius
+    sh:message "A temperature must be measured in a temperature unit (F or C)." ;
+    sh:severity sh:Violation ] .
+
+ex:PressureUnitShape a sh:NodeShape ;
+  sh:targetClass p4:PressureQuality ;
+  sh:property [
+    sh:path ( [ sh:inversePath cco:ont00001966 ] cco:ont00001863 ) ;
+    sh:in ( cco:ont00001559 cco:ont00001694 p4:unit\/Kilopascal ) ;   # Pa, psi, kPa
+    sh:message "A pressure must be measured in a pressure unit (Pa, psi, or kPa)." ;
+    sh:severity sh:Violation ] .
+
+ex:VoltageUnitShape a sh:NodeShape ;
+  sh:targetClass p4:VoltageQuality ;
+  sh:property [
+    sh:path ( [ sh:inversePath cco:ont00001966 ] cco:ont00001863 ) ;
+    sh:in ( cco:ont00001450 ) ;                           # Volt
+    sh:message "A voltage must be measured in volts." ;
+    sh:severity sh:Violation ] .
+
+ex:ResistanceUnitShape a sh:NodeShape ;
+  sh:targetClass p4:ElectricalResistanceQuality ;
+  sh:property [
+    sh:path ( [ sh:inversePath cco:ont00001966 ] cco:ont00001863 ) ;
+    sh:in ( p4:unit\/Ohm ) ;
+    sh:message "A resistance must be measured in ohms." ;
+    sh:severity sh:Violation ] .
 
 #################################################################
 # 7) No duplicate MICE
 #################################################################
+# Duplicate = same SDC, same unit, same value, produced by acts at the same instant.
+ex:NoDuplicateMICEShape a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Duplicate measurement: another MICE has the same SDC, unit, value, and time ({?other})." ;
+    sh:severity sh:Violation ;
+    sh:select """
+      PREFIX cco: <https://www.commoncoreontologies.org/>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+      SELECT $this ?other WHERE {
+        $this  cco:ont00001966 ?sdc ; cco:ont00001863 ?u ; cco:ont00001769 ?v .
+        ?other cco:ont00001966 ?sdc ; cco:ont00001863 ?u ; cco:ont00001769 ?v .
+        ?a1 cco:ont00001986 $this  ; obo:BFO_0000199 ?t .
+        ?a2 cco:ont00001986 ?other ; obo:BFO_0000199 ?t .
+        FILTER($this != ?other)
+      }""" ] .
 
 #################################################################
-# 8) No dangling/mistyped nodes 
+# 8) No dangling/mistyped nodes
 #################################################################
+ex:BearerObjectsAreSDCShape a sh:NodeShape ;
+  sh:targetObjectsOf obo:BFO_0000196 ;
+  sh:class obo:BFO_0000020 ;
+  sh:message "Whatever an artifact bears must be typed as an SDC." ;
+  sh:severity sh:Violation .
 
+ex:UnitObjectsAreMUShape a sh:NodeShape ;
+  sh:targetObjectsOf cco:ont00001863 ;
+  sh:class cco:ont00000120 ;
+  sh:message "Whatever a MICE uses as unit must be typed as a Measurement Unit." ;
+  sh:severity sh:Violation .
+
+ex:ActOutputsAreMICEShape a sh:NodeShape ;
+  sh:targetObjectsOf cco:ont00001986 ;
+  sh:class cco:ont00001163 ;
+  sh:message "Every output of an act of measuring must be typed as a MICE." ;
+  sh:severity sh:Violation .
+
+#################################################################
+# Plausibility (Warning, does not fail validation)
+#################################################################
+ex:ChillerFahrenheitPlausibilityShape a sh:NodeShape ;
+  sh:targetClass cco:ont00001163 ;
+  sh:severity sh:Warning ;                 # severity of a SPARQL-based constraint is set on its shape
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "Implausible reading: chiller temperature below freezing in Fahrenheit (Celsius mislabeled?)." ;
+    sh:select """
+      PREFIX cco: <https://www.commoncoreontologies.org/>
+      PREFIX obo: <http://purl.obolibrary.org/obo/>
+      PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+      SELECT $this WHERE {
+        $this cco:ont00001966 ?sdc ; cco:ont00001863 cco:ont00001724 ; cco:ont00001769 ?v .
+        ?sdc a cco:ont00000441 .
+        ?art obo:BFO_0000196 ?sdc ; rdfs:label ?name .
+        FILTER(STRSTARTS(STR(?name), "Chiller") && ?v < 32)
+      }""" ] .

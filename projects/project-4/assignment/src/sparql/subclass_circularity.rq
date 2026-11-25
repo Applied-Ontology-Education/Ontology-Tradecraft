@@ -1,6 +1,18 @@
-# Title:  
+# Title:
 #    Class SubClassOf Hierarchy Circularity
-# Constraint Description:  
-#    No class should appear in a circular `subClassOf` hierarchy.
-# Severity:  
+# Constraint Description:
+#    No class should appear in a circular subClassOf hierarchy.
+# Severity:
 #    Error
+# Valid: ZERO rows.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT DISTINCT ?class ?error
+WHERE {
+  ?class rdfs:subClassOf+ ?class .
+  FILTER(isIRI(?class))
+  BIND(CONCAT("ERROR: ", STR(?class), " is its own (indirect) superclass") AS ?error)
+}

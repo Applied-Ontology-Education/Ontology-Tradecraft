@@ -1,6 +1,20 @@
-# Title:  
+# Title:
 #    No cyclical definitions
-# Constraint Description:  
-#    No class definition should be self-referential. 
-# Severity:  
+# Constraint Description:
+#    No class definition should be self-referential.
+# Severity:
 #    Error
+# A definition is self-referential if it contains the term's own label. Valid: ZERO rows.
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX owl:  <http://www.w3.org/2002/07/owl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+SELECT ?class ?label ?definition ?error
+WHERE {
+  ?class a owl:Class ;
+         rdfs:label ?label ;
+         skos:definition ?definition .
+  FILTER(CONTAINS(LCASE(STR(?definition)), LCASE(STR(?label))))
+  BIND(CONCAT("ERROR: definition of ", STR(?class), " uses its own label '", STR(?label), "'") AS ?error)
+}
