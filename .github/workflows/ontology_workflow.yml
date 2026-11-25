@@ -87,6 +87,10 @@ jobs:
         if: steps.detect.outputs.added_count == '1'
         run: python src/scripts/run_sparql_qc.py
 
+      - name: Shapes file copies identical (src/cco_shapes.ttl == src/shacl/cco_shapes.ttl)
+        if: steps.detect.outputs.added_count == '1'
+        run: cmp src/shacl/cco_shapes.ttl src/cco_shapes.ttl
+
       - name: SHACL validation
         if: steps.detect.outputs.added_count == '1'
         run: python src/scripts/run_shacl_validate.py
