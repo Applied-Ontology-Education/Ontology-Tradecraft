@@ -40,8 +40,22 @@ jobs:
         run: pip install -r requirements.txt
       - name: Run pipeline (offline, cached LLM replies)
         run: python scripts/run_all.py
-      - name: Outputs match the committed versions
-        run: git diff --stat --exit-code -- data/instances.ttl shacl/ sparql/ ontology/p6_extension.ttl
+      - name: Outputs match the committed versions (RDF graph isomorphism; exact text for queries)
+        run: |
+          git diff --stat --exit-code -- sparql/
+          python - <<'EOF'
+          import subprocess, sys
+          from rdflib import Graph
+          from rdflib.compare import isomorphic
+          bad = []
+          for f in ["data/instances.ttl", "shacl/llm_shapes.ttl", "ontology/p6_extension.ttl"]:
+              old = Graph().parse(data=subprocess.check_output(["git", "show", f"HEAD:projects/project-6/{f}"]).decode(), format="turtle")
+              new = Graph().parse(f)
+              same = isomorphic(old, new)
+              print(f"{f}: {'same graph' if same else 'DIFFERENT'} ({len(new)} triples)")
+              bad += [] if same else [f]
+          sys.exit(1 if bad else 0)
+          EOF
       - uses: actions/upload-artifact@v4
         if: always()
         with:
