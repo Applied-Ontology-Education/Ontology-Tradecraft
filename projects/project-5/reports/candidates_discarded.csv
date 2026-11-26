@@ -1,0 +1,2 @@
+pattern,sub_iri,sub_label,target_iri,target_label,evidence,reason
+A,https://www.commoncoreontologies.org/ont00000670,Distribution Port,https://www.commoncoreontologies.org/ont00000226,Transportation Facility,A Port that is designed with the cargo handling equipment necessary for the loading and unloading of Watercraft,already asserted or entailed

@@ -1,0 +1,41 @@
+
+[1/8] extract_definitions.py -> data/definitions.csv
+extract_definitions: 91 definitions from module.ttl -> data/definitions.csv
+
+[2/8] preprocess_definitions_llm.py -> data/definitions_enriched.csv
+preprocess_definitions_llm: 91 definitions normalized -> data/definitions_enriched.csv
+
+[3/8] generate_candidates_llm.py -> generated/candidate_el.ttl
+generate_candidates_llm: 72 candidates (A subclass=5, B function=67); 1 discarded -> generated/candidate_el.ttl
+
+[4/8] split_module.py -> src/train.ttl + src/valid.ttl
+split_module: 91 SubClassOf edges -> train 73 (80%), valid 18 (20%); declarations kept in both
+
+[5/8] train_mowl.py -> reports/mowl_metrics.json
+train_mowl: seed 1: evaluation models on src/train.ttl (M1 module, M2 + direct imports) ...
+train_mowl: seed 1: scoring models refit on the full module (M1F, M2F) ...
+train_mowl: seed 2: evaluation models on src/train.ttl (M1 module, M2 + direct imports) ...
+train_mowl: seed 2: scoring models refit on the full module (M1F, M2F) ...
+train_mowl: seed 3: evaluation models on src/train.ttl (M1 module, M2 + direct imports) ...
+train_mowl: seed 3: scoring models refit on the full module (M1F, M2F) ...
+train_mowl: mean_cos=0.755 (per seed [0.755, 0.769, 0.741]), valid_direct=-0.016, random=0.081, tau=0.6 -> reports/mowl_metrics.json
+
+[6/8] filter_candidates_hybrid.py -> generated/accepted_el.ttl
+filter_candidates_hybrid: 2/72 accepted at tau=0.6 (A=2, B=0, ELK-dropped=0) -> generated/accepted_el.ttl
+
+[7/8] merge_and_reason.py -> src/module_augmented.ttl
+merge_and_reason: EL profile candidates OK, accepted OK; ELK consistent -> src/module_augmented.ttl
+
+[8/8] oops_check.py -> reports/oops_report.xml (optional QC, never fails)
+oops_check: skipped (HTTPError: HTTP Error 503: Service Unavailable)
+
+================ Project 5 summary ================
+mean_cos (held-out entailed pairs) : 0.755  (>= 0.70: True)
+  valid.ttl direct pairs           : -0.016   random baseline: 0.081
+chosen tau                         : 0.60
+accepted axioms                    : 2 of 72 candidates (subclass 2, function 0)
+LLM contribution rate              : 0% of accepted needed the LLM score
+weight sensitivity (diagnostic)    : {'0.7cos/0.3llm': 2, '0.6cos/0.4llm': 2, '0.5cos/0.5llm': 2, '0.4cos/0.6llm': 2, '0.3cos/0.7llm': 21, '0.0cos/1.0llm': 64} candidates >= tau, before ELK
+consistency (ELK)                  : CONSISTENT; accepted axioms OWL 2 EL: True
+OOPS! pitfall scan                 : skipped (HTTPError: HTTP Error 503: Service Unavailable)
+runtime                            : 19 s

@@ -1,0 +1,135 @@
+{
+  "module": "FacilityOntology (CommonCoreOntologies develop @ 662f3a6)",
+  "model": "mowl ELEmbeddings",
+  "embed_dim": 50,
+  "epochs": 300,
+  "learning_rate": 0.01,
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "split": {
+    "train_edges": 73,
+    "valid_edges": 18,
+    "method": "connectivity-preserving (instructor)"
+  },
+  "mean_cos": 0.755,
+  "mean_cos_definition": "mean cosine (M1, averaged over seeds) of held-out entailed subclass-superclass pairs: implied by train.ttl, never asserted (slides' test design)",
+  "mean_cos_per_seed": [
+    0.755,
+    0.769,
+    0.741
+  ],
+  "heldout_entailed": {
+    "mean": 0.755,
+    "n": 21,
+    "percentiles_0_25_50_60_75_90": [
+      0.699,
+      0.723,
+      0.742,
+      0.755,
+      0.781,
+      0.788
+    ]
+  },
+  "valid_direct": {
+    "mean": -0.016,
+    "n": 18,
+    "percentiles_0_25_50_60_75_90": [
+      -0.132,
+      -0.061,
+      -0.026,
+      -0.0,
+      0.033,
+      0.057
+    ]
+  },
+  "seen_train_direct": {
+    "mean": 0.907,
+    "n": 73,
+    "percentiles_0_25_50_60_75_90": [
+      0.743,
+      0.892,
+      0.919,
+      0.924,
+      0.931,
+      0.937
+    ]
+  },
+  "random_baseline": {
+    "mean": 0.081,
+    "n": 300,
+    "percentiles_0_25_50_60_75_90": [
+      -0.2,
+      -0.043,
+      0.007,
+      0.031,
+      0.068,
+      0.535
+    ]
+  },
+  "m2_heldout_entailed": {
+    "mean": 0.92,
+    "n": 21,
+    "percentiles_0_25_50_60_75_90": [
+      0.86,
+      0.909,
+      0.919,
+      0.926,
+      0.936,
+      0.959
+    ]
+  },
+  "tau": 0.6,
+  "tau_rule": "smallest tau in 0.60..0.80 where held-out pairs with cos >= tau have mean >= 0.70",
+  "tau_instructor_60th_percentile": 0.75,
+  "passes_mean_cos_0_70": true,
+  "scoring_models": "after evaluation, M1 and M2 are refit with the same settings on the full module (M1F, M2F); the hybrid filter scores candidates with these (standard train/validate, then refit)",
+  "hybrid": {
+    "weights": {
+      "cosine": 0.7,
+      "llm": 0.3
+    },
+    "tau": 0.6,
+    "llm_model": "claude-sonnet-5-5",
+    "candidates": 72,
+    "accepted": 2,
+    "accepted_by_pattern": {
+      "A_subclass": 2,
+      "B_function": 0
+    },
+    "candidates_by_pattern": {
+      "A_subclass": 5,
+      "B_function": 67
+    },
+    "dropped_by_elk": 0,
+    "llm_contribution_rate": 0.0,
+    "llm_contribution_definition": "share of accepted axioms whose cosine alone was below tau",
+    "mean_llm_share_of_score_accepted": 0.293,
+    "accepted_before_elk_at_tau_instructor_60th_percentile": 2,
+    "diagnostic_weight_sensitivity_not_applied": {
+      "0.7cos/0.3llm": 2,
+      "0.6cos/0.4llm": 2,
+      "0.5cos/0.5llm": 2,
+      "0.4cos/0.6llm": 2,
+      "0.3cos/0.7llm": 21,
+      "0.0cos/1.0llm": 64
+    },
+    "mean_cosine": {
+      "A": 0.653,
+      "B": 0.119
+    }
+  },
+  "merge": {
+    "el_profile_candidate_axioms": true,
+    "el_profile_accepted_axioms": true,
+    "consistent": true,
+    "reasoner": "ELK (ROBOT)",
+    "output": "src/module_augmented.ttl",
+    "robot_report": "reports/robot_report.tsv"
+  },
+  "oops": {
+    "status": "skipped (HTTPError: HTTP Error 503: Service Unavailable)"
+  }
+}

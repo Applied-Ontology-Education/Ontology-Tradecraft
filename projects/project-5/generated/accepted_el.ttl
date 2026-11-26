@@ -1,0 +1,17 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+obo:BFO_0000196 a owl:ObjectProperty .
+
+cco:ont00000717 a owl:Class ;
+    rdfs:subClassOf cco:ont00000330 .
+
+cco:ont00001089 a owl:Class ;
+    rdfs:subClassOf cco:ont00000245 .
+
+cco:ont00000245 a owl:Class .
+
+cco:ont00000330 a owl:Class .
+

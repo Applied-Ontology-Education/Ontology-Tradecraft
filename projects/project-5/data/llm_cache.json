@@ -1,0 +1,2944 @@
+{
+ "0049dcfaa7575c6fcdc37bf7f6672ad4fe760958f07f0da17efeb2b242874d68": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "01a553a23aa41814b084980ff2a828e7f4378a026d245097b29f3a2da62e545d": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for the storage of firefighting apparatus",
+     "pattern": "subclass",
+     "target": "Storage Facility"
+    },
+    {
+     "evidence": "designed for the storage of firefighting apparatus",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "01b7f6b1516890d1d557623081e7ce8dfffcd0db37a1b7c28e65b4ab56f4c2aa": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "storing water in an elevated container",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "020bdba7bbcbe0656bde1c8af136ef7a65b622231a8a7713daa230069bf01b4e": {
+  "json": {
+   "changes": "Restructured the definition into the canonical 'A(n) <genus> that <differentia>' form by replacing the repeated genus phrase 'designed to' clause with a 'that is designed to' clause.",
+   "differentia": "is designed to teach students methods of terrorism",
+   "expanded_abbreviations": [],
+   "genus": "Training Camp",
+   "normalized_definition": "A Training Camp that is designed to teach students methods of terrorism."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "021e9aae47c5d88959fd9b32c68dfa30eccdd56bbfd7bfcee3d356dbbb1f3f41": {
+  "json": {
+   "plausibility": 0.6,
+   "reason": "A Training Camp is a Facility designed for training, so it plausibly bears an education-related artifact function, though the 'generation to generation' definition and some non-educational camps (e.g., sports conditioning) weaken universality."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "023c93bacc2ba9ffc99aae3fa44709a751eed58b7eb3eceedc555f329016d98f": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to ... convert that heat to electrical energy",
+     "pattern": "function",
+     "target": "Electrical Power Production Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "030bcf6e70b68037a56e5335bf32b0f79235379aaaa254d02d8718fc38bc64d6": {
+  "json": {
+   "changes": "No substantive change; the original already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass Facility as genus and contains no abbreviations.",
+   "differentia": "is designed for commencing or concluding the transportation of transportation artifacts, or for housing transportation artifacts",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed for commencing or concluding the transportation of transportation artifacts, or for housing transportation artifacts."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "033975e0cebde35f17cd945956ff05a7a34cd89891d76f6404481f063870b960": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "037d9ab72b029bd7bb2f149c4022faa24879963f5a49f4b314ed891018c937de": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to make water more acceptable for a specific end-use",
+     "pattern": "function",
+     "target": "Enhancing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "04c456576140f3cd2c417a6225924b1cc2d915cb47cf84fe3c53826bd1afbb55": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Motel is a Hotel, a facility designed for accommodation, so each instance plausibly bears a Hospitality Artifact Function; the uncertainty is whether the ontology models functions this way."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "04cc1425fdb1ea3a4d0cb160f5be1c81b027f925a4deaff45bd118a899fbae97": {
+  "json": {
+   "plausibility": 0.9,
+   "reason": "Fossil fuel plants burn fuel to produce heat that drives turbines or engines, so they are thermal plants; rare exceptions like fuel cell plants are marginal."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "04ce1958626ab7eac28ed74ddc7aa2b85093a7b6d90625b4cd26436a697b3356": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "0519cc7d9978e8762aff5b823ddcea2c3c7ceaaff8f2f6f4ea797ae619c57d16": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "refine crude oil, intermediate petroleum products, or synthetic petroleum into products of value",
+     "pattern": "subclass",
+     "target": "Petroleum Manufacturing Facility"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "0647e3e761c410fc52ad4b699984d24f9f22a4e90f7540555e474c8d9911cc3b": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to produce or assemble weapons",
+   "expanded_abbreviations": [],
+   "genus": "Factory",
+   "normalized_definition": "A Factory that is designed to produce or assemble weapons."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "09de3272df15409f198282f84a2b4adf459b6847bc155e48d681f62de20e26dd": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Fossil Fuel Power Plant is a designed Material Artifact whose purpose is generating electrical power, so bearing an Electrical Power Production Artifact Function is plausible, though the function may be attributed at the Electric Power Station level."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "0cbc68c7224e7de826081619641d75ccaaab399db12c46d60a462d2d5686b0f0": {
+  "json": {
+   "plausibility": 0.45,
+   "reason": "Water treatment facilities plausibly bear a function of improving water quality, which fits Enhancing Artifact Function, but the CCO function taxonomy may instead classify it as a treatment/purification function, so it is not clearly universal."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "0cc7f9685cfec4f9206a63adf8af341a361c9712bcf1d1beaf40fc64d4ca6c5f": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A Fire Station is designed to store firefighting apparatus, so it plausibly bears a containing artifact function, though CCO may not formally assert this and the function could be classed differently."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "0dec998efc0e1ce97454125e3daeb5e8354e91f705c8d3fbff0c28fe5ecd6cc6": {
+  "json": {
+   "changes": "Expanded the abbreviation 'e.g.' to 'such as' and otherwise preserved the original wording, which already follows the canonical form.",
+   "differentia": "is designed to convert fossil fuels (such as coal, natural gas, or petroleum) into electrical energy",
+   "expanded_abbreviations": [
+    "e.g. -> such as"
+   ],
+   "genus": "Electric Power Station",
+   "normalized_definition": "An Electric Power Station that is designed to convert fossil fuels (such as coal, natural gas, or petroleum) into electrical energy."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "0f7c914f41cadcf39f5f528ded29bd06ce927126f726d19b69e9eaaf97d66492": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed for the administration of a sovereign nation",
+   "expanded_abbreviations": [],
+   "genus": "Government Building",
+   "normalized_definition": "A Government Building that is designed for the administration of a sovereign nation."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "0fdd958d1eb7d4e638a49939573ff1f8f29aeb63ed260493d39ad095030ee1a8": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "103f7469285719f074de77194b0352185d0e184114e22f0bb3f82b9b513f6a0e": {
+  "json": {
+   "changes": "The original definition already follows the canonical form, so it is kept unchanged.",
+   "differentia": "is designed to convert hydropower into electrical power",
+   "expanded_abbreviations": [],
+   "genus": "Electric Power Station",
+   "normalized_definition": "An Electric Power Station that is designed to convert hydropower into electrical power."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "114b1e12edeb6c9182d5e2f7801b8fac09dc8ee97173b33d80ca0002acad0fb1": {
+  "json": {
+   "changes": "No changes were needed; the original definition already follows the canonical form with the asserted superclass as genus.",
+   "differentia": "is designed for Christian worship and prayer",
+   "expanded_abbreviations": [],
+   "genus": "Religious Facility",
+   "normalized_definition": "A Religious Facility that is designed for Christian worship and prayer."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "11b014b7f651b57a17c8fb91d18c25f3ca70a3d203d32a81201b27d02de4d8e6": {
+  "json": {
+   "changes": "No substantive change; the original already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to temporarily lodge guests in a sociable environment for relatively low costs",
+   "expanded_abbreviations": [],
+   "genus": "Residential Facility",
+   "normalized_definition": "A Residential Facility that is designed to temporarily lodge guests in a sociable environment for relatively low costs."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "11d1470393fe035790cd7783a9096ed224ec5fc40dcadb7ec92567e238d12983": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1331f26a8fa328f7aa2a69a815d747a8e8e0487b016816644da36c9c02b4e2dc": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to provide a space upon which entertaining performances or productions can occur",
+   "expanded_abbreviations": [],
+   "genus": "Entertainment Facility",
+   "normalized_definition": "An Entertainment Facility that is designed to provide a space upon which entertaining performances or productions can occur."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "13933530ccc34b8564170bf81e30701207ffb5ebea233a65048cdcad4d6f0e37": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "149b78de575c1dc13829801d5187a6be17e439374278b241756c7dc3ec3bcce7": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A water tower's defining function is storing water in an elevated container, a process in which one entity contains another, so it plausibly bears a Containing Artifact Function."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "14d5604ef76fbe580d10378d7e1ec2fe6edc750432fec2c61b68412553c1b12e": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1504b114e0ba617bc7e7948dacdf4eba3332692708e6490f9bb556dc9b760dc9": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to support the command and control of Military Operations or Military Forces",
+     "pattern": "function",
+     "target": "Military Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "15800b1984c4234c09a0859d53bc99a09143f92c97fdb5e752f764b349cd85c1": {
+  "json": {
+   "changes": "No change; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to store water in a man-made open enclosure or area",
+   "expanded_abbreviations": [],
+   "genus": "Storage Facility",
+   "normalized_definition": "A Storage Facility that is designed to store water in a man-made open enclosure or area."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "161dd3da42327a61ea9e7f8055e4dc31d26e5979b7d0c498f31ace9ef30341a0": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "169eb7f5baf057f270ad3c57fb18ccc64100c5ff8bfeff0c080838c9ff5756ba": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A hostel is designed to temporarily lodge guests, which is accommodation, so every instance plausibly bears a Hospitality Artifact Function; the main uncertainty is whether CCO models function this way."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "16fc7ae492a15b53b5cd15eb2191c9e814acefa94c01937e9e476ed608e398a1": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "176076336db055b815133c503a2c48d7772c731c7fbe78b7d4b4d9e76ac2b3a0": {
+  "json": {
+   "plausibility": 0.85,
+   "reason": "A House is designed to provide a residence, so each instance plausibly bears a Residential Artifact Function. Artifact functions are borne by designed artifacts, and dereliction doesn't remove the function."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "17bf181efd85755631a0b8d64ef21c5d4e403c0a0ae2c003b7acad6c149a44c2": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for the administration of a local community",
+     "pattern": "function",
+     "target": "Government Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "19178b506cace6e6071de05febd774286482af4ef1c1943fdf0254a990714996": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "196231e583f6b71050ab258dbcedafcd682a4443746964457de9aad45cb2c18d": {
+  "json": {
+   "changes": "No substantive change; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to store petroleum, oil, or lubricants",
+   "expanded_abbreviations": [],
+   "genus": "Storage Facility",
+   "normalized_definition": "A Storage Facility that is designed to store petroleum, oil, or lubricants."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1ba195e517cea2d2d6178dcb08e8b9ee07bae8f21ba7a5f96e44e8c4635b5304": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1bb20282f2757d5ac326c8f3e6c08f8db312a07124cbeef17768e207c99d63b9": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to provide a self-standing, permanent residence for an individual, family, household",
+     "pattern": "function",
+     "target": "Residential Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1bb20e67f78467b456fd0c2fdad45e15ad2359b784f5a23271b082864afb64a2": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1bdce10ad17e87cd7a06b4a01d059580391a57fa0e2507e3501f394490850d93": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to support the receiving and re-transmitting of radio signals",
+   "expanded_abbreviations": [],
+   "genus": "Communications Facility",
+   "normalized_definition": "A Communications Facility that is designed to support the receiving and re-transmitting of radio signals."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1c77323373951e24413e7b27a44c00ad8d49354147224b8da183c4a18fe3d876": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1db14025bbc1919b3d80dcf6959d7a0ae8355082461173c3ef4a969577092127": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1e9e889b3b0d420bd894ad5a42d9327d28ef481627b018861d8e7c228d7d3917": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1f4427f82c4543cbcd971a64707eb7a4aa5fab671cbef467bb107864c389bde5": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "1f7e950dea87517415916769e7820f00a5d56f922fa8f82f924c56541b59e2b0": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "20bf4d9a6f72a3a596a6cf1d156583a289cf5e1a0c9e22eea3d944de52cd564d": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to transport goods or materials through a pipe",
+     "pattern": "function",
+     "target": "Conveyance Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "22b146f73ede617efedb86f08b0932f2ce93cbb42f49fd180a94c8ba545fe1c6": {
+  "json": {
+   "changes": "Replaced 'designed for launching, receiving, and housing' with the CCO-style 'designed to launch, receive, and house' while keeping the genus and meaning unchanged.",
+   "differentia": "is designed to launch, receive, and house Rotorcraft",
+   "expanded_abbreviations": [],
+   "genus": "Airport",
+   "normalized_definition": "An Airport that is designed to launch, receive, and house Rotorcraft."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "2324a999259e83bf2538396041f94eebbca59d98a0beb315ef55c815799659b7": {
+  "json": {
+   "plausibility": 0.85,
+   "reason": "A nuclear power plant is designed to produce electrical energy, so each instance plausibly bears an Electrical Power Production Artifact Function, though decommissioned or non-operational plants may be edge cases."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "233c805997ae654418c27bd82c5ba182481fb7d62b9c9b9903d8a87aa5d4fdae": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to store Portions of Ammunition",
+   "expanded_abbreviations": [],
+   "genus": "Storage Facility",
+   "normalized_definition": "A Storage Facility that is designed to store Portions of Ammunition."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "235f251fe491f347440fb2c51a5c8cbd475ea36a68bf19d24e27fab52870a4a5": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to convert fossil fuels (such as coal, natural gas, or petroleum) into electrical energy",
+     "pattern": "function",
+     "target": "Electrical Power Production Artifact Function"
+    },
+    {
+     "evidence": "convert fossil fuels (such as coal, natural gas, or petroleum) into electrical energy",
+     "pattern": "subclass",
+     "target": "Thermal Power Plant"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "23c24581a40b31642f47e736b58b029df338bbc8775f30ebd5a9b9a5bca6d615": {
+  "json": {
+   "changes": "Added the article 'the' before 'solidification' to make the parallel structure of the two supported purposes explicit; the meaning is unchanged.",
+   "differentia": "is designed to support the defense of or the solidification of rule over some Geospatial Region and its inhabitants",
+   "expanded_abbreviations": [],
+   "genus": "Military Facility",
+   "normalized_definition": "A Military Facility that is designed to support the defense of or the solidification of rule over some Geospatial Region and its inhabitants."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "24015d1d9224c86bb9684fe86a0b355adfa6e2fe13bbb7fcf2517f40a3597110": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to contain multiple permanent residences",
+     "pattern": "function",
+     "target": "Residential Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "268fc2465e8457d1eedf534475b6e8a18bc1523c7a5bff66a4295718cd62a8c3": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "290b5b258f1c035d3bc481751db96bc4b7e0c6e9356dfaa584010df399b212f0": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to store biological agents",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "2bca41b6985c7afe9b8b45493efe2b8d7e95c0b395532c5e3c3f3b17817e8286": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "2cbf86a01e1e2950fa56a8119bda447390c29c4098fffd9c44b8a2dd9ad1ae2f": {
+  "json": {
+   "changes": "Removed the parentheses around 'potential' to eliminate ambiguity and kept the genus 'Washing Facility' in canonical 'A ... that ...' form.",
+   "differentia": "is designed to wash personnel or equipment after potential contamination by radioactive, biological, or chemical material",
+   "expanded_abbreviations": [],
+   "genus": "Washing Facility",
+   "normalized_definition": "A Washing Facility that is designed to wash personnel or equipment after potential contamination by radioactive, biological, or chemical material."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "30432f7184693b7d004d7d5b8307c7186369c330b8e72208c6ba0b346b843161": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A building designed for community administration plausibly bears a government artifact function, which fits the definition and BFO's view that functions persist even when unrealized."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "31114c4058068a99eac4aaddcb1c3c6c957db2c1a0ffe51f67ffa0966eb0c13e": {
+  "json": {
+   "changes": "No change needed: the original already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to transport some product",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to transport some product."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "327211a09efc945f69ee3d1bfc9cc4bc6b55b266639e1718054c48f066ce3f29": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "343f9d3095f48ad70030911e306cfbbfd8567e352c3bf5b81f1c48a944954d74": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to support some Military Force",
+     "pattern": "function",
+     "target": "Military Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "36bc2a073863904971db0ca1d8d5028da9b71e321acafaa585007b2b1e52a456": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "In CCO, Education Facility is an Artifact designed for education, so each School plausibly bears an Education Artifact Function; the risk is whether the ontology actually axiomatizes this or defers it to the parent class."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "36c9390dad25885f34c178a236f28d129a3a5ea0f43dd4c9d50229aa0cd13081": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A synagogue is designed for Judaic worship and prayer, so it plausibly bears a Religious Artifact Function; but the CCO definition may not assert this and 'bearer of' modeling is uncertain."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "38534dcc53efae964504088f20dde260dcef10aa663f3c38f8a56bb903e23da3": {
+  "json": {
+   "plausibility": 0.6,
+   "reason": "A Product Transport Facility is designed to transport product, so it plausibly bears a conveyance function, though the function might instead be a Transportation or Facility function, and not every instance need convey entities itself."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "38b70cf38bbfb3d2d2136403fd62ed2144a39da21d9fe11d998b935cdbecdd3f": {
+  "json": {
+   "changes": "Replaced 'is designed for refining' with the CCO-preferred 'is designed to refine' and left the genus and meaning unchanged.",
+   "differentia": "is designed to refine natural gas into products of value",
+   "expanded_abbreviations": [],
+   "genus": "Refinery",
+   "normalized_definition": "A Refinery that is designed to refine natural gas into products of value."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "38f975b26705ef5bf921f572fc4ee0bbd6a7f7af6bdaae3310583f78377a44fa": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to store petroleum, oil, or lubricants",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "39fbaa10d53081763c4086126db036dc4b9203c0620385197b2bf05fecb1964a": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for military administration and coordination",
+     "pattern": "function",
+     "target": "Military Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "3a72457cf5b70108523f446694dbe9332bb5fb24ab99df66ce6db7c67b1e9ae8": {
+  "json": {
+   "changes": "Replaced the genus term 'Education Facility' with the asserted superclass label 'Educational Facility' and added 'the' before 'teaching' for fluency.",
+   "differentia": "is designed to provide learning space and environments for the teaching of students under the direction of teachers",
+   "expanded_abbreviations": [],
+   "genus": "Educational Facility",
+   "normalized_definition": "An Educational Facility that is designed to provide learning space and environments for the teaching of students under the direction of teachers."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "3d161ddc1695ac51b0277af812f57ba3588ddaa577bad85e546e4c2206903325": {
+  "json": {
+   "changes": "Rewrote the definition into the 'A(n) <genus> that <differentia>' form by replacing the participial phrase 'designed to' with 'that is designed to'.",
+   "differentia": "is designed to sell small lots of goods to consumers",
+   "expanded_abbreviations": [],
+   "genus": "Commercial Facility",
+   "normalized_definition": "A Commercial Facility that is designed to sell small lots of goods to consumers."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "3d636e2114a676903e376b1d173d4de0439855b821c9ec8542a161e93a029738": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "3e260b702873064dbafec7641fc1bdbb9bae0c23ef54eb87ab4f8f49ceda4539": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus.",
+   "differentia": "is designed to transport goods or materials through a pipe",
+   "expanded_abbreviations": [],
+   "genus": "Product Transport Facility",
+   "normalized_definition": "A Product Transport Facility that is designed to transport goods or materials through a pipe."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "3ec4eda7817dd02c6929e06a09182c9ce5298c1ed374a7822ebcd510d69fd3dc": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "3ed70f9b58c2a385c29a05dd1a2c4d961ba34e6803fb793f7bf0ca03a39b4829": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Public Safety Facility is defined as designed for public safety, so each instance plausibly bears a Public Safety Artifact Function, though the CCO ontology may not formally assert this."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "3ee9ff59135089b05da53b1d88c7705e1eee44f1fc03f5ab96c044b6dd77af98": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "406aa20f5b52da6b61a8b0be2bbac2d3ea7a0aeb539511d415dc9f85a36cec8f": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "40b009779b2d88ae28e48966fef12f8c7bdbe8f9b00ee481a96c215a6c11255e": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to house one or more Persons",
+     "pattern": "function",
+     "target": "Residential Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "41fee252a81373baf0917b79144a97e06931bb5c238ab4963a327a725dc5f5a7": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A Washing Facility is designed to wash, so it plausibly bears a cleaning-type artifact function; but Facility is not a Material Artifact in CCO's sense, and the function definition requires a Material Artifact."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4386f1334c1c400b1def186ef555d57b3493d516a985e09394056e15d53ea028": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4456a35d8eb4363eaef45f537b7bae4805bb589f568ade551db3a5a653be320b": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass 'Mine' as genus and contains no abbreviations.",
+   "differentia": "is designed to support the extraction of materials from the ground using underground tunnels and shafts",
+   "expanded_abbreviations": [],
+   "genus": "Mine",
+   "normalized_definition": "A Mine that is designed to support the extraction of materials from the ground using underground tunnels and shafts."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "46ae5176f88593d3734f4b5655fb28fafded42ee0232c075ea2cd1c3103c83e4": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "46b2a7d880cd2a309a48daae0a382c7d5c76b9e2677438551fa482c25169c1be": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to serve customers of the national postal system",
+     "pattern": "function",
+     "target": "Service Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "46dab0f91effb78b7559efa1dd27331a973ca035dc0903fe6be268103e624db7": {
+  "json": {
+   "changes": "The original definition already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass Facility, so it is kept unchanged.",
+   "differentia": "is designed for rigorous and focused training in order to learn or improve skills, usually involving physical actions",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed for rigorous and focused training in order to learn or improve skills, usually involving physical actions."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "47439fdb842f094de402aa309f9bc26706527e42d01d551bc869cdd6cf7b2495": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "Electric Power Station is designed to generate power, so it plausibly bears that artifact function. However, CCO's Facility is not a Material Artifact, and the function's definition mentions Material Artifact use, so the fit is uncertain."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "482166d808b2dc9219e69214e66c9af9fa44ca8992d60c56f2348a7b49c4a48e": {
+  "json": {
+   "changes": "No changes needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to provide lodging that is paid for on a short-term basis",
+   "expanded_abbreviations": [],
+   "genus": "Residential Facility",
+   "normalized_definition": "A Residential Facility that is designed to provide lodging that is paid for on a short-term basis."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4870e2238bb2e6bc1f903788b0e09d1a9bb2f2644ea69e11df64fef5b6b4cc6c": {
+  "json": {
+   "changes": "Recast the original into the canonical 'A Military Base that ...' form, replacing 'with' and 'such that it is' with 'has' and 'is designed to' while keeping all stated facts unchanged.",
+   "differentia": "has permanently stationed operating forces, robust Infrastructure, and strengthened force protection measures and is designed to launch and support large-scale operations, support smaller or less-permanent bases, and organize supply facilities",
+   "expanded_abbreviations": [],
+   "genus": "Military Base",
+   "normalized_definition": "A Military Base that has permanently stationed operating forces, robust Infrastructure, and strengthened force protection measures and that is designed to launch and support large-scale operations, support smaller or less-permanent bases, and organize supply facilities."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "48d2f1114215cbbe12ca228df77c1e94f35e4d36847b59df87a4648f2eb15a04": {
+  "json": {
+   "changes": "The original definition already follows the canonical form with the asserted superclass as genus, so no changes were needed.",
+   "differentia": "is designed to manufacture petroleum-based products",
+   "expanded_abbreviations": [],
+   "genus": "Factory",
+   "normalized_definition": "A Factory that is designed to manufacture petroleum-based products."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4936a58a33bc93662912433ab9e992fd6f5239825f6bf04cb6950a644df6edc6": {
+  "json": {
+   "changes": "No changes were needed because the original definition already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass 'Mine' as genus and contains no abbreviations.",
+   "differentia": "is designed to support the extraction of materials from the ocean floor",
+   "expanded_abbreviations": [],
+   "genus": "Mine",
+   "normalized_definition": "A Mine that is designed to support the extraction of materials from the ocean floor."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4959ee325d092c2c4e9bd730776e75968065a70df93a2f52c1917810aee5e5f2": {
+  "json": {
+   "changes": "Replaced 'designed for' with CCO-style 'designed to be used for' while keeping the genus and the original meaning.",
+   "differentia": "is designed to be used for the administration of a community",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to be used for the administration of a community."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "49f16a27beb58a0a3c295a3747cef91099aece9b082974d47373e287ed114a32": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to store nuclear material",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4bcdfe98f0ed83221297d25e7a5410139bb084ec478e3fcf101b05602d5f84e7": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Shop is a facility designed to sell small lots of goods, so each instance plausibly bears a Retail Artifact Function; some risk from defunct or non-operating shops and from facilities being treated as objects."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4c206b21d11ef454f041de2e377299bc1f0dadce01af4481a5f50e28d4796eed": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A petrochemical refinery refines crude oil into petroleum products, so it is plausibly a factory designed to manufacture petroleum-based products; slight doubt over whether Refinery falls under Factory in CCO."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4d173bf28b0ef801e52b0c92388c31ad17d863f1eb4f70506e9b524ca199f85b": {
+  "json": {
+   "changes": "No substantive change was needed because the original definition already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to provide a self-standing, permanent residence for an individual, family, household, multiple families, or similar-sized group",
+   "expanded_abbreviations": [],
+   "genus": "Residential Facility",
+   "normalized_definition": "A Residential Facility that is designed to provide a self-standing, permanent residence for an individual, family, household, multiple families, or similar-sized group."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4d76138ef4e8a622d87d665b266556033296aac4b0a27508ed10e2f8daa04078": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to be used for the administration of a community",
+     "pattern": "function",
+     "target": "Government Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4e09245a585c78e21435216c4994223ea2ac04821e79f2da98fd7840e557db0f": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A reservoir is designed to store water in an enclosure, so it plausibly bears a containing artifact function; but CCO may only assign storage-specific functions, and reservoirs may be natural-ish."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4e8bfd572a949653ab696c50f7cd0f23f80b8823c203973786dcc9da6e10f3bd": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to store biological agents",
+   "expanded_abbreviations": [],
+   "genus": "Storage Facility",
+   "normalized_definition": "A Storage Facility that is designed to store biological agents."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4ed083f0a2d52ce181b8979fe79725f39282c8b20a55021fed55e8bd925b73b0": {
+  "json": {
+   "changes": "Removed the redundant genus restatement and replaced 'designed for disposing of' with the CCO phrasing 'designed to dispose of'.",
+   "differentia": "is designed to dispose of waste by burial",
+   "expanded_abbreviations": [],
+   "genus": "Waste Management Facility",
+   "normalized_definition": "A Waste Management Facility that is designed to dispose of waste by burial."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "4fb6221bd4d038c9cef869f75356b5ed3cb11267518da67f31f37c598260e934": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for the diagnosis, treatment, and prevention of disease",
+     "pattern": "function",
+     "target": "Healthcare Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5043841813c68946e005907c94d324b1e0891e188c2052d2e7754cf83f238012": {
+  "json": {
+   "changes": "No change; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed for the storage of firefighting apparatus",
+   "expanded_abbreviations": [],
+   "genus": "Public Safety Facility",
+   "normalized_definition": "A Public Safety Facility that is designed for the storage of firefighting apparatus."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "510f350d21fe4a79264847dac8a6a57fbc7cde33ba735362628eec07d2d1dff7": {
+  "json": {
+   "changes": "Rephrased 'is designed for' to 'is designed to support' to use CCO's 'designed to' phrasing while keeping the original meaning.",
+   "differentia": "is designed to support the professional and clerical processes of a local police force",
+   "expanded_abbreviations": [],
+   "genus": "Public Safety Facility",
+   "normalized_definition": "A Public Safety Facility that is designed to support the professional and clerical processes of a local police force."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "51252e1f24b3ef69d9fd495fe8499d25ac2c2befd80b1eebb80a37aa874eaf90": {
+  "json": {
+   "changes": "Replaced the redundant leading genus phrase with the canonical 'that' clause, added the article 'a' before 'distance', hyphenated 'above-ground', and simplified 'including their supports' to 'and their supports'.",
+   "differentia": "is designed to transmit electricity over a distance via a system of above-ground wires and their supports",
+   "expanded_abbreviations": [],
+   "genus": "Product Transport Facility",
+   "normalized_definition": "A Product Transport Facility that is designed to transmit electricity over a distance via a system of above-ground wires and their supports."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "51282e7b1dc001febd13ec6f1de52022316638d02836ef4797684580cded4268": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to support processes of receiving or transmitting information",
+     "pattern": "function",
+     "target": "Communication Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5254af2b40345d5da52bb2989e7229789e2d421cc917c78b295b0c3df1b4c434": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "53684d930898cf0006034b8a8b7cb20b2b47ce508cedfb9e6baa2fff25046ddc": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "545e241ded0a7572e168280c11eaeda3f3593e19953eb7787edb9a1dae874f99": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for the systematic physical transportation of documents and packages",
+     "pattern": "subclass",
+     "target": "Transportation Facility"
+    },
+    {
+     "evidence": "designed for the systematic physical transportation of documents and packages",
+     "pattern": "function",
+     "target": "Conveyance Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "54f4db30ba9b04e64fa7ee3da4bd7cc2cfeebef09fedf7ab67c551c76269f9d3": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for Judaic worship and prayer",
+     "pattern": "function",
+     "target": "Religious Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "553448f0e0b2f3c45fb561ab56f32e0ba63665241baadfb67c79beb0b43950c5": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to provide learning space and environments for the teaching of students",
+     "pattern": "function",
+     "target": "Education Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "571bc4def2066172487186e1f7648e8a27b5d21b50d07dd4eff855b2c481bd53": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "580478a18288ea9c15e4ceb42cf8a5885e07232f04a12f75085889c69b9a07fb": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to store chemicals",
+   "expanded_abbreviations": [],
+   "genus": "Storage Facility",
+   "normalized_definition": "A Storage Facility that is designed to store chemicals."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5961f78ec4e8e84ac2aeb29932f7919203f33ac7adaa5081ef697a155b9b1a45": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5a1086d22334e5d3fa5073574e32fb32fc03ed45e074134e218fb713027f9d72": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5befb4dfee1e2d97c4dc2a4aeec43fc2f484a62a1c615c5cace6111d81c631e4": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to store water in a man-made open enclosure or area",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5c44b34e1947e82909225bbad6cb7557ebf584ac6f451e47ad587be6e9fd6c07": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5c79ab59eb2562b88261a4c4ba4497df3f17f9b678df13970968814ab4153fb8": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to support the professional and clerical processes of a local police force",
+     "pattern": "function",
+     "target": "Public Safety Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5caf5631b1c1195d482045a29a6749ffa0c8cc8e5b4d9d51d029059962a433f5": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for the buying and selling of goods and services",
+     "pattern": "function",
+     "target": "Retail Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5cd116efd88f99059f66ef7628a557eb939ff0c38f9b23da81634f035ef1a288": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5d7640fadc53c8b5f5b0f19d9d95b380a6257497c8a73f59fa2ececbea3ce5dd": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5e54546b8e7e052930e266bc6156bfe5d48e9aa2d9c1af34d84e16a4a66c354c": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "5fdb190acd57d37390009c70fd07fadbbb799ed6c36d95475a3d579c37756f8d": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to transmit electricity over a distance via a system of above-ground wires",
+     "pattern": "function",
+     "target": "Electrical Conduction Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "601f22e0f3053b15adaca4636b861ed63b4a2f79638ce2e225a25bbcb73d2fa8": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to shelter military equipment and military personnel and to facilitate military training and military operations",
+     "pattern": "function",
+     "target": "Military Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "606f8592be8e14f80920cbb182e658674ff32d5786c687a34adf8df6967b46cf": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form and contains no abbreviations.",
+   "differentia": "is designed to generate electrical power",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to generate electrical power."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "607049a62340b2d099f0ea30596a4efa718f796e21c979661016bebca3622fa0": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A pipeline is designed to transport materials through a pipe, so each instance plausibly bears a conveyance function; the main doubt is whether CCO models this as Conveyance Artifact Function."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "60e04080d76cd5f52ddd69d85069ec47e589c9e7eda04b3d03be2da540223b7c": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Decontamination Facility is a Washing Facility designed to wash away contaminants, so it plausibly bears a Cleaning Artifact Function; the main doubt is whether facilities count as Material Artifacts."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "615ef3e2b17247c49866c406e2700237a4998b6664f1b41893cd11cc75eb7d76": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "62dc100f3b40f4dc7263ece76dabb81d67cf1904fa0a85615f91607118808c72": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to store medical supplies",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "630157ad9eced17987bd6030f0f105c4e1f2f43c5afdd850ddd1d0ef54e858dc": {
+  "json": {
+   "changes": "Replaced the possessive \"the wind's kinetic energy\" with \"the kinetic energy of wind\" to remove the definite reference and keep the canonical form, with no new facts added.",
+   "differentia": "is designed to convert the kinetic energy of wind into electrical power by means of wind turbines",
+   "expanded_abbreviations": [],
+   "genus": "Electric Power Station",
+   "normalized_definition": "An Electric Power Station that is designed to convert the kinetic energy of wind into electrical power by means of wind turbines."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "630cdeaebddc3d61ad4ccd751d7a89c3479adcb2d0abe819c71031f2b2146fa8": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "631e53c4cffa578f77532f3e552250a791ace45aa6b08da91a2baf8ee7d20fbb": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to store chemicals",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "63fe51dfadb845949d745db30d15f8960ea998bdb5888d1163aa394d05f83662": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed for worship and prayer",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed for worship and prayer."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "64160f79d0bd4bd524ca4cbae004405e0ae1bb7a5bddff5877cb48d3a84ec765": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to store materials or goods",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6486020c61bc9b06eba74d9a6b6062b7310761655648f04b05e737447ecf145a": {
+  "json": {
+   "plausibility": 0.3,
+   "reason": "A mailing facility handles documents and packages, which are not clearly 'transportation artifacts' (vehicles); it may not house vehicles or start or end their transport, so subsumption is doubtful."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "64f8991ee192d9c356159bae24aa8c4d18b314285c28f78b17e467343cf6a51d": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to teach students methods of terrorism",
+     "pattern": "function",
+     "target": "Education Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6537ccb7900ed170e3043f8a205fe38b19fa173b2ef3679a9ca5287ed4cf9565": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A Religious Facility is designed for worship and prayer, so it plausibly bears a Religious Artifact Function; but the definition says 'designed' without requiring a bearer function, and CCO may model it differently."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "66a4a9cf01128bc48eacf2906c8abbaba455b940b95c4a8e1b187a8f324ac92f": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "66f4de5cd6d44201be08d553bb0673b2a7a182dd0bc0eac96a57ca8c5b620106": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for the prevention of and protection from events that could endanger, injure, or damage the general public",
+     "pattern": "function",
+     "target": "Public Safety Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "679e2762a462f354263b3d040e30f1f9e73ceb8281339f2851750e54e038fa8f": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to house one or more Persons",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to house one or more Persons."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "67d01c3f3306ffc9b502506942924340b5f8f1173aa912ea5274ef59386a6556": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A facility designed for military administration is an artifact whose function is realized in armed-service processes, so bearing a Military Artifact Function is plausible, though the function class may be defined more narrowly."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "685499eb82f1f3661673dbe01adbcb318cbb0a4e3388de3ccbff9ab3f57c3e8a": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "68a6fa64ba431fe26627f4138b5b38b9b7ea418949c612b6cb6b97a6b8ce0ed6": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "69094f29d7d2116eee053359c4a4b5f2746ce365bcaa3722be37137073fcffe2": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "69ab3e266c0b1374d249a715e036f41b23254fc1ff85942e2d1c4a810bd28269": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6a71aff2874cc82614e483b91fdb182f7e0e04441d283921a2b1a1e30879ce44": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to remove contaminants from wastewater, especially sewage",
+     "pattern": "function",
+     "target": "Waste Management Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6b13b38bdf674acb9d29cb15f9d7bfa28bbe1e7a4bb3f267b3b4ae543d7b638d": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6b51e031e6a854d2875ea74ae720c9579c533b78e89ccf59ac356a389ddedecb": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to pump fluids from one place to another",
+     "pattern": "function",
+     "target": "Fluid Control Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6bf6cae74d93989e1c5a4ddd6d05055e407b7623d134cad30c0b14b9666bb23c": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6c571c415abd00311f7aff8053b6fef8937bd2d6d39604d70cb50deb9c47c436": {
+  "json": {
+   "plausibility": 0.45,
+   "reason": "In CCO, Maintenance Facility is an artifact designed for maintenance, so it plausibly bears a function; but maintenance may be internal rather than a service to consumers, so Service Artifact Function is not guaranteed."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6cee2458b3131b8f4c2c52991b0a412c0784d9c52d6b807443c0e22b5c207397": {
+  "json": {
+   "plausibility": 0.82,
+   "reason": "A Radio Relay Station is designed to receive and re-transmit radio signals, so bearing a Radio Communication Relay Artifact Function fits; minor doubt as a facility versus an artifact bearer."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6cf2f16790fc5e082e1049801aafa22e12e03f57fc511bda50d0771e0e06927d": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6d608fcbf0bc18ab4debca73e666e84ff44c852142ebb9816d8a348be4041d65": {
+  "json": {
+   "changes": "Reworded for clarity by moving 'directly' next to 'from the ground' and replacing 'without using tunnels' with 'without the use of tunnels', keeping the genus 'Mine' and the CCO phrase 'designed to'.",
+   "differentia": "is designed to support the extraction of materials directly from the ground without the use of tunnels",
+   "expanded_abbreviations": [],
+   "genus": "Mine",
+   "normalized_definition": "A Mine that is designed to support the extraction of materials directly from the ground without the use of tunnels."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6ece6b50e5fb24544c2a8f0b9963ab74c788aa3d2f8f9c4d6f236e6e22d504e4": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass 'Hotel' as genus and contains no abbreviations.",
+   "differentia": "is designed to accommodate motor vehicles along with their occupants",
+   "expanded_abbreviations": [],
+   "genus": "Hotel",
+   "normalized_definition": "A Hotel that is designed to accommodate motor vehicles along with their occupants."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6eeed43755b3b3d0d78ef2ec74a7867f6fd6ce19771573cc902fe832995d9d3b": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "6f4d7ebe8fd31847fcb794974427d2d4fc5e050deded68cf63560f536b2190db": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Fort is a Military Facility designed to support defense, so every fort plausibly bears an artifact function realized in military processes; some uncertainty about the exact function class and abandoned forts."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "70b23c29d06b8ce2cc09ab728bf37dfa1e08ff132501decca2f0112d86bcb1b1": {
+  "json": {
+   "plausibility": 0.72,
+   "reason": "A grocery store is designed to sell food, so it plausibly bears a retail function realized in selling goods in small lots; the 'bearer of' modeling on a facility is slightly uncertain."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "70fb5aa52185a9cbbc2efd863f62db7179e987ea3718c5d75b6f1005d5884211": {
+  "json": {
+   "changes": "Replaced 'is designed for manufacturing or refining' with CCO-style 'is designed to manufacture or refine' and removed the redundant 'A Facility that is' phrasing in favor of the canonical form.",
+   "differentia": "is designed to manufacture or refine material products",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to manufacture or refine material products."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "74005b9a23ac852eedc7db5655ef11502347f390acd2a16767c7f7ab53bbde60": {
+  "json": {
+   "changes": "No change was needed because the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to produce food and other crops",
+   "expanded_abbreviations": [],
+   "genus": "Agricultural Facility",
+   "normalized_definition": "An Agricultural Facility that is designed to produce food and other crops."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "747e193210245863d471d679b2cbeb929dbab038563d42c82f4e4aff507a120d": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "75e366672b9d7fb1291921a4d51d2fce2ab37d78d2ebaf8618c3ca2b1a3b0613": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to generate electrical power",
+     "pattern": "function",
+     "target": "Electrical Power Production Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "7648086a77b2f02646575ef9e681e0341d75e164ad6a23c550b3c16860eeae5a": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Seat of National Government is a Government Building designed for administering a nation, so it plausibly bears a Government Artifact Function; the axiom is likely inherited from Government Building."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "7696c33a15ac1a989fcd1fe5c6e3da17376661b39520ae651441c2a45cb64a5d": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "77468970515a97260906949498c842bea0105b3da200dbb130af09845e816134": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus.",
+   "differentia": "is designed for the administration of a local community",
+   "expanded_abbreviations": [],
+   "genus": "Government Building",
+   "normalized_definition": "A Government Building that is designed for the administration of a local community."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "775de9fbac705e6caa2a5fe483e1846763bc8082843ffd051836fe7bb1ad86ae": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A depot designed to store ammunition plausibly has a containing function, but CCO may model storage with a distinct function, so this is not strictly entailed."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "77a3d3ab1836eb45efc08d4b17673140863eb9fd5a032017faa8a8b6a3caf362": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "791be56382d8daa2344397e2446f903beaabd1196df069fbc4d64b18c69e6978": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for Christian worship and prayer",
+     "pattern": "function",
+     "target": "Religious Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "7999cefeea2e61093bbe32766620492b4f286c131a24d4776fc235f2270d336e": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Church is defined as designed for Christian worship and prayer, so every instance plausibly bears a Religious Artifact Function; a deconsecrated or never-used building is an edge case, but the design-based function still holds."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "79e3f3cd6cd05deb32e8f58503256c1485af69b213ed2b2cb57cd3bc060965be": {
+  "json": {
+   "plausibility": 0.7,
+   "reason": "A Forward Operations Base is a military facility designed to support military operations, so it plausibly bears a Military Artifact Function, though the modeling may differ."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "7b9cebb4ae2aa467d78492663bd7a86efaafe666652c5d6c863dfbc0ee3c4556": {
+  "json": {
+   "changes": "The original definition already follows the canonical form with the asserted superclass as genus, so it is kept unchanged.",
+   "differentia": "is designed to manufacture automobiles",
+   "expanded_abbreviations": [],
+   "genus": "Factory",
+   "normalized_definition": "A Factory that is designed to manufacture automobiles."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "7c8405e6b81d431d9ad293a4c2bc507c3813966055ece9ed0b6d4cf3d8a29b17": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "7f200f272b22c3b9e31a38fecd24d41461b5b989e85181f05d95ad2cac4778e1": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "7f3f1e27d08b242b7b73a3451c84d6fab49a2ea1324e3355a6fe5c36a6f383fd": {
+  "json": {
+   "changes": "Replaced 'is designed for serving' with the CCO-style 'is designed to serve' and removed the redundant repetition of the genus.",
+   "differentia": "is designed to serve customers of the national postal system",
+   "expanded_abbreviations": [],
+   "genus": "Mailing Facility",
+   "normalized_definition": "A Mailing Facility that is designed to serve customers of the national postal system."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8185ae49f0db47fdb631a6df86d3a46f40b013fb459835f273adea9894b13090": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A facility designed for managing waste plausibly bears a waste management artifact function, since CCO defines artifacts via designed functions; some uncertainty because facilities are sometimes modeled as sites or via other functions."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8371aa721a396ecf21c8ffd0c9733a26617add7b67236b6f6c1d923e6b43096c": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "83e599094d3931788fef632c5391a1c447d20e96bb68ea7913888ac56d0c8f64": {
+  "json": {
+   "changes": "No change; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to host activities that are intended to hold the interest of, or give pleasure or delight to, an audience",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to host activities that are intended to hold the interest of, or give pleasure or delight to, an audience."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8485a5aff24872d567ad8800f0f3796d3de313318b11d3df3ed847f8ecc06e76": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A storage facility is designed to store materials, which plausibly entails a containing function, but CCO may not assert it and storage could instead be a distinct function."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "84ee5b3b7bf5c56ffef23c1b3090904aaa76b99643ec87d343b6c68dbd4ad10f": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to sell food",
+     "pattern": "function",
+     "target": "Retail Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8509c3b4257745124073cd1bbfbdbecaa184f6df8e13997d203f83a687ae4642": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8539f35e8fea0d560888daffb58de2654caca191b9d0537e76f1499e92c09653": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to support the conduction of combat operations of limited scope or size",
+   "expanded_abbreviations": [],
+   "genus": "Military Facility",
+   "normalized_definition": "A Military Facility that is designed to support the conduction of combat operations of limited scope or size."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "86a3360ac27ab84de89c0d67b8adfe270719a20b3c0d444c7674061f76fa3c5d": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8992ae3454bd96c0b3c3598df470d9e0ea55466eed2f4c817ed4333ce6836550": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to support the management of money",
+     "pattern": "function",
+     "target": "Financial Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8a509e0080c33175cb7651211e5bbe2001d6998438967b41c484ec2b72caf885": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8ae91c9c636f0b64dc199b9b8e13d45bb8ac88314b20705ca3c0a5d0b3ff1825": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A Missile Launch Site is designed for storing missiles, which plausibly gives it a containing function; but launching is a separate function and 'storing' may not map strictly to containing for every instance."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8b34cfb1fd91a287fe068c31f4e7dffe94855d0002e373d7c99d994794a60810": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A warehouse is designed to store goods, and storing plausibly involves containing them, so a containing function fits. However, CCO might model storage with a different function, and containing is not guaranteed."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8b5b7d1f5c06baeb57f86e0cc316aff8164ef5d92a68e461f4da69f72c0fe7d1": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8b7f60afc4898f9ca299e106a6b54fbee67bfd6be045da650d64663b94334247": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Wind Farm is an Electric Power Station designed to produce electrical power, so it plausibly bears an Electrical Power Production Artifact Function, though the function may be borne by its turbines instead."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8c5c38ffff7463cd40c49f0697eb9e7824dfa2a73ec326170dec9321d413f00b": {
+  "json": {
+   "changes": "No changes needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to provide patient treatment with specialized staff and equipment",
+   "expanded_abbreviations": [],
+   "genus": "Healthcare Facility",
+   "normalized_definition": "A Healthcare Facility that is designed to provide patient treatment with specialized staff and equipment."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8c63c9549b2b9a382b5c6d3efb0bbdfef334e0c50cb5db184bfa513416bbc8ff": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8d983dc7a799f11e6c8a0c990255cda35acce803cc3e02c4a5073f2fdbe03243": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A facility designed to support a military force plausibly bears a military-related artifact function, but CCO may not formally define this, and some instances might bear only generic facility functions."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8dc7028f4868e9761009ad05b1a78472ff65f79800287b1f2fd6fce84f48c6df": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8e2b9c890d4cb47c11278390dfc739dcf70dd667203af5908683d92e683b2888": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to convert hydropower into electrical power",
+     "pattern": "function",
+     "target": "Electrical Power Production Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8f4b640a4ea46f79a030e2e95cee9b7210b35501f0452d56fda0a14b3c0f304d": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8f99c3731821a53962dfd33bb3a2187b67ef638658d884b9aa1cd6383f1df1a5": {
+  "json": {
+   "changes": "Changed 'the Base of Operations' to 'a Base of Operations' to avoid an unsupported presupposition of a unique referent; no abbreviations required expansion.",
+   "differentia": "is located relatively close to an offensive Area of Operations, is supported by a Base of Operations, and is designed to support local strategic objectives and tactical operations",
+   "expanded_abbreviations": [],
+   "genus": "Military Base",
+   "normalized_definition": "A Military Base that is located relatively close to an offensive Area of Operations, is supported by a Base of Operations, and is designed to support local strategic objectives and tactical operations."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8fc0842b773dd919cdc8edf22e2736a579ef43c7188fdbec3c30508f3ee9c6f3": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "8ff8179a8b4a4b1aa4731a80e1ff7f8e0d71793832d3e23cb493910980d40323": {
+  "json": {
+   "plausibility": 0.72,
+   "reason": "A nuclear storage depot is designed to store nuclear material, and storing involves containing it, so bearing a Containing Artifact Function is plausible, though the CCO Storage Facility may only carry a storage function."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "90298853e81c2eba6bceced901df6a7072126d307be97d55f542615cfd07823d": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "904adef8aacc15932e25d7cbad0d237de61e9f780ed6bb919cd0b4e4ac6d0e85": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "912d96717ca276b3bffa0a49585588836a0c140c30894b88878c22898070b8c5": {
+  "json": {
+   "changes": "No changes were needed because the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to store commercial goods",
+   "expanded_abbreviations": [],
+   "genus": "Storage Facility",
+   "normalized_definition": "A Storage Facility that is designed to store commercial goods."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "91aa342ba3e1c58cb28f86698bf770ac7a45f615ac850f45d362c971a16df2dc": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "927281d6e56eaf12391062f15ed284d15ef3d8b8d92643cfa25bf35e08bf315a": {
+  "json": {
+   "changes": "No changes were needed because the original definition already follows the canonical form and contains no abbreviations.",
+   "differentia": "is designed to support the management of money",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to support the management of money."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9291749e4bc963644622991d5929cdbae02a22303993acfc21e69a259a29f05f": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to manage waste for some portion of the waste's existence",
+     "pattern": "function",
+     "target": "Waste Management Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "92a72d5e2a6b8b8241a588cf11a6a2a890ad2b230c4c99417c6d338c30574548": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to accommodate motor vehicles along with their occupants",
+     "pattern": "function",
+     "target": "Hospitality Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "934edadd9583a6020923a5ea937caada0dff8c45e13f7cde85f5fd44d979247b": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A petroleum depot is a storage facility designed to store petroleum, so every instance plausibly bears a containing artifact function, though CCO may model its function as a storage function instead."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9357dd21698a82955ff9e8d3570f966908c7ab656dd2ba784990168632654f42": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "93f4ba0741b43defd0ae0f73d8e565e7e2c677624de106501cf454b5b28a7ad8": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Residential Facility is designed to house persons, so each instance plausibly bears a Residential Artifact Function; the risk is that CCO may not formally assert this, and some instances may lack it."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "94a63c39bb877ccbda39c15ebfa26b65fadd29e604ac7d78533837b431b189b8": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "Police stations are designed facilities, so they plausibly bear artifact functions; Public Safety Artifact Function fits since the facility class is defined by public safety purpose, though CCO may not axiomatize it."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "974daf1e5d8ab22ccd8fbb36c862eef2ef44cbd8896dcbaea2bf307667f6879d": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to support the defense of or the solidification of rule over some Geospatial Region and its inhabitants",
+     "pattern": "function",
+     "target": "Military Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "97a21795c3694fda12ca359494fc27ad341befd96248cd08a59100b72a985937": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "97a61866191d7b8e1f4e385951cc2653a64af49e0b5336ecaf4c921218377fb0": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to transport some product",
+     "pattern": "function",
+     "target": "Conveyance Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "97e3cb1050466b433a81d945991b58e42fcacd8de9cbaf51b8052533c4d4ef52": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9a06e6ab9e3c8f3d8174af213d0723903da793479ddff34426c530085e18a473": {
+  "json": {
+   "plausibility": 0.72,
+   "reason": "A hotel is designed to provide lodging, an accommodation service, so it plausibly bears a Hospitality Artifact Function; but CCO may only assign a Residential Facility function, and 'bearer of' modeling is uncertain."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9a0913d22af507d0748f23b572245c1841b8de4e8a654673df20f2a72fa597d9": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to temporarily lodge guests in a sociable environment",
+     "pattern": "function",
+     "target": "Hospitality Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9a4bf7cb8f0b9d3b036301ec272fb6246e7a6c1b6ad6f3adab97a989535d9c21": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A power transmission line is designed to transmit electricity via wires, so it plausibly bears an electrical conduction function, though the function may be attributed to its wires rather than the whole facility."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9a8436fda674ab86953371c7e7f9d35836c209bf49e12597fbc81cf6c8b13111": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to wash personnel or equipment after potential contamination",
+     "pattern": "function",
+     "target": "Cleaning Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9b66e08405e4f4118ac5b6120cbe06affb57f55f0db09c34b923ea49601b709c": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9be0cf16a00c7177002222bab6bafa04cd9d2f1ae5366bbe3e534444be357592": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9de0ca37d5bf8761cded86925cd61bd2c80b5afd0c47085796d6b0aa34840f74": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9e9050bf3a69b59d4d8bc84973933de82bff684db37adc2bcb0c3ebe46283778": {
+  "json": {
+   "changes": "Replaced 'is designed for making' with CCO-style 'is designed to make' and removed the redundant capitalized genus repetition in the differentia.",
+   "differentia": "is designed to make water more acceptable for a specific end-use",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to make water more acceptable for a specific end-use."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "9fb25be09d671015121624b739e3013ea541bffa5eba22d92e5f1fe070242d55": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "a03d6d18f2d43a805288e3e0529c03de880bf6bb2f367a1a5fd543a8905cf74f": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Medical Depot is a Storage Facility designed to store medical supplies, so it plausibly bears a Containing Artifact Function realized in containing supplies; the main doubt is whether storing counts as containing."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "a0ffc4ebc8cefdec3e9c079778dbd9e3776d281a9512ae2b22cd10992eb4b9cc": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A building designed for local administration plausibly bears a Government Artifact Function, which fits the class definition, though modeling details and the more generic Artifact Function alternative add some risk."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "a14b70175fabee918907753c5fd07d2ff1c1dc44c9ff893a079095fad69e75f3": {
+  "json": {
+   "changes": "Replaced 'designed for facilitating' with the CCO phrasing 'designed to facilitate' and clarified that learning is the acquisition of the listed items rather than an alternative to it.",
+   "differentia": "is designed to facilitate learning, which is the acquisition of knowledge, skills, values, beliefs, and habits",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to facilitate learning, which is the acquisition of knowledge, skills, values, beliefs, and habits."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "a25969d877ba36270f9a1292fb1515c33bf02fdb82ec2e0338ec0bfbece68b06": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "a3ca57fb2f986ab14faab3d66fd2b28e1330495c967921abc55274fde9895f3e": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "a53ae439a7de3a7657af5dfc403655fcf8f7b2513c9d0af7d1a419545870064c": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "a726f432d525d95de0626f2b55184ef4285f6cc5941f76f33428f34e90d61696": {
+  "json": {
+   "changes": "Replaced 'with the aim of cultivating' with 'aimed at cultivating' for concision, keeping the genus 'Facility' and the original meaning unchanged.",
+   "differentia": "is designed as a building or campus for agricultural processes aimed at cultivating animals, plants, or fungi for food, fiber, biofuel, medicinal plants, or other products to sustain and enhance human life",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed as a building or campus for agricultural processes aimed at cultivating animals, plants, or fungi for food, fiber, biofuel, medicinal plants, or other products to sustain and enhance human life."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "a9167a00f3e7d4f94cc80ca8b05feee02f0369bf903489ebd59f7ee3d2dee5dd": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to be used to perform actions to maintain or improve the state of some property or equipment",
+     "pattern": "function",
+     "target": "Service Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "aa52776d1daa848fc6a9944fcb18872ec77d2d4b20f728f8961e5376af0c3bf5": {
+  "json": {
+   "changes": "No changes were needed; the original definition already follows the canonical form with the asserted superclass as genus.",
+   "differentia": "is designed to manufacture or process chemicals",
+   "expanded_abbreviations": [],
+   "genus": "Factory",
+   "normalized_definition": "A Factory that is designed to manufacture or process chemicals."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "aaaa468482bba8ec94d877eac621733d6b3327bfc129477f9b083800606470fb": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "aac52619e22983744868c28c1b7a539509eb7d3d389a3c49cd04be079969dbe3": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for worship and prayer",
+     "pattern": "function",
+     "target": "Religious Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "accac1352fc79445e7aa9505103a07cefa473f92f1e2f738a8f785bd43f7bb24": {
+  "json": {
+   "changes": "The original definition already follows the canonical form with the asserted superclass as genus, so no changes were needed.",
+   "differentia": "is designed for Judaic worship and prayer",
+   "expanded_abbreviations": [],
+   "genus": "Religious Facility",
+   "normalized_definition": "A Religious Facility that is designed for Judaic worship and prayer."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ad8596f73c3bcb45b75bd2220a1501eebf749732e5ed517d1fc07404f0cbe3ee": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ae01a1b840feb9a7194baa3e37a1a007dc364f5334b69fc7bf392d51488b7662": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A Post Office is a facility designed to serve postal customers, so it plausibly bears a Service Artifact Function; but CCO may not assert this, and 'designed' vs. bearing is uncertain."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ae7070c77af25c0ec3bbf029c55df1914d28bd16f75a158b5f9fabb4ae8a5184": {
+  "json": {
+   "changes": "Replaced 'is designed for refining' with CCO-style 'is designed to refine' and kept the genus 'Factory' in the canonical 'A Factory that...' form.",
+   "differentia": "is designed to refine raw materials into products of value",
+   "expanded_abbreviations": [],
+   "genus": "Factory",
+   "normalized_definition": "A Factory that is designed to refine raw materials into products of value."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "afa1518d150d9aed93bc45f73b005b349d0dd9f04e9a9b4e5c135a41a7be8d89": {
+  "json": {
+   "plausibility": 0.6,
+   "reason": "A Command Post Facility is designed to support command and control, so it plausibly bears an artifact function realized in military processes, though CCO may not model it with this specific function class."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b0cb9f250d874ae47dd9e34a7dfb69e29ca5a4586d3a4ae90625ea8e6f59b6d9": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A Biological Depot is a storage facility designed to store biological agents, and storing plausibly involves containing, so it likely bears a Containing Artifact Function, though CCO's Storage Facility may not formally assert it."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b1b83eab1b92d94247fd22e0383c4fccea8edf2a5abac2e618c4e6a8728997e5": {
+  "json": {
+   "plausibility": 0.5,
+   "reason": "The definition says a Missile Launch Site is designed for storing and launching missiles, and missiles are goods or materials, so it plausibly is a Storage Facility; the 'and' in the definition makes this uncertain."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b1f2b981e52ec2b2e8af4a2abf2287e686277cf4d9656b36d9f34f5c0a48d41f": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to support processes of receiving or transmitting information",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to support processes of receiving or transmitting information."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b22c7adf084cd96fb3ebd9ac39b97abe4f1fe5f5e33dd26438e5682c32aeb0b6": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b2506c0b1d7c6e58b76250d861638b626e3e412bea6a5f6303d08dcb25bde1f8": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to facilitate learning, which is the acquisition of knowledge, skills, values, beliefs, and habits",
+     "pattern": "function",
+     "target": "Education Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b392bea5047243cf5013ed679eb9ad4f503bafb7ecf1a65bb7d677e8f2e27700": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for rigorous and focused training in order to learn or improve skills",
+     "pattern": "function",
+     "target": "Education Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b3d8e5a6762530de710cb67961b8aaaedd38afb7a60daeac84630d7c8e794d7e": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b3d8ea418c93b198d509f2c76a26b509585b47d1ad128f88ff4b90118e4e2778": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b465d0ff8a03d0b1630e4976ac246c08de83cf2350064c957de53be2f409ffc5": {
+  "json": {
+   "plausibility": 0.45,
+   "reason": "A Fire Station is defined as designed for storing firefighting apparatus, which could count as storing goods or materials, but apparatus are equipment rather than goods, and a station has other primary functions."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b53d114d35c8e6a053090168489a32aa9c47a4f6e292954f7f1d99bf5591ab7c": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b555424d30a9b5238f926791a3ddf309f3dfbb1971999b7c50da5077ed3ee277": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to convert heat energy into electrical energy",
+   "expanded_abbreviations": [],
+   "genus": "Electric Power Station",
+   "normalized_definition": "An Electric Power Station that is designed to convert heat energy into electrical energy."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b55967b5789e62d5d7c0867644e62120f0863561c80b57d73e18609b23da7120": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Hospital is a designed Healthcare Facility, so each instance plausibly bears a Healthcare Artifact Function realized in treating illness; the function may be unrealized or defined at a different level."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b577c14c7f56fa5bee52d939f2ff1f97af2721c1884381f9bddc7dc33ae41eb1": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to store Portions of Ammunition",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b71629f648b7234fcccef8499f3a90ccead2373f84d3f32dd07586e7bbde203c": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "b9076c6c1c0693db572eaf46ac3cd6175b8c75256a3aafe2d66431f7a1cadfbb": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "bab08f1f7a51b28a0d897591da0a306fe4e146ed9122c2671ee81811cd6c2ba6": {
+  "json": {
+   "changes": "No changes were needed because the original definition already follows the canonical form with 'Facility' as the genus and contains no abbreviations.",
+   "differentia": "is designed for the diagnosis, treatment, and prevention of disease",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed for the diagnosis, treatment, and prevention of disease."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "bb3cefed4361f5686461a003761eeab9ea9584c57c2fce90ed9f92b6b0b6b957": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to convert heat energy into electrical energy",
+     "pattern": "function",
+     "target": "Electrical Power Production Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "bb7f845513305ba2846d610c33f9183878b41bae0ad5703be264b324f03c95cc": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed for Islamic worship and prayer",
+   "expanded_abbreviations": [],
+   "genus": "Religious Facility",
+   "normalized_definition": "A Religious Facility that is designed for Islamic worship and prayer."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "bc155c84ef85e713d855fa7f0f44af9e456b0a2ae5eb2943c60b1df56bd3dcba": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A Terrorist Training Camp is a Training Camp designed to teach, so it plausibly bears an Education Artifact Function. However, the 'generation to generation' definition and the facility-versus-artifact distinction weaken the fit."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "bc35d1e9f480f6cab9695fc10bccf0f835b6d414aa674ec8fed30ba01ce06888": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "bdaaff3dd34a7c2d7867d4a24cd10532e59770942f04f57748f2814ad2028c7a": {
+  "json": {
+   "changes": "Removed the ambiguous relative clause 'which is then converted' by making the plant the agent of both the heat production and the conversion to electrical energy, and removed the repeated genus from the differentia.",
+   "differentia": "is designed to produce heat by means of a nuclear reactor and to convert that heat to electrical energy",
+   "expanded_abbreviations": [],
+   "genus": "Thermal Power Plant",
+   "normalized_definition": "A Thermal Power Plant that is designed to produce heat by means of a nuclear reactor and to convert that heat to electrical energy."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "bf0d96a94cd2f2594001a6a1271a6e2112e1d69004b45df0f216e6d1174ac3e6": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A Communications Facility is designed to support receiving or transmitting information, so it plausibly bears a Communication Artifact Function; but the function may be 'support' rather than conveying, leaving some doubt."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "bf2a378d8f2cbb8256bbaa406a1a24ab0a96bda22f5b9b2fad9441d44d6cda8d": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "bf7bae91ec21ff1caa68c97faf75d5aa1286fddd70ce8ab36bfce810c333ad6d": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A mosque is designed for Islamic worship, so it plausibly bears a Religious Artifact Function. However, the CCO axiom may be missing or stated differently, and a disused mosque may lack a realized function."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "c00292a2dd2d9b122cf2e7fd9c077d211373cb9bca16f6fd84a563297a92972f": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to store nuclear material",
+   "expanded_abbreviations": [],
+   "genus": "Storage Facility",
+   "normalized_definition": "A Storage Facility that is designed to store nuclear material."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "c0cbfb2a6828afa8aa842beda5ec7941c2dca55f49733c710e42018dc6fdb35f": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "c1cd09bb5a42836bf37f1cb40522b95a558e737fde731ed359ca6ea1983caa65": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to provide patient treatment",
+     "pattern": "function",
+     "target": "Healthcare Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "c263ac965ff8870ce2db796330bea71d0b90fe4f5f7cd71c654b10e1eacdcd93": {
+  "json": {
+   "changes": "Removed the embedded genus restatement, 'A Transportation Facility that is designed', and added a repeated 'to' so both purposes parallel; otherwise preserved the original meaning.",
+   "differentia": "is designed to partially enclose a harbor and to form a landing place for Watercraft",
+   "expanded_abbreviations": [],
+   "genus": "Transportation Facility",
+   "normalized_definition": "A Transportation Facility that is designed to partially enclose a harbor and to form a landing place for Watercraft."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "c399af416f5501441721ccf607538b3ff2a76c3404e20ad32be3516b23e619a7": {
+  "json": {
+   "changes": "No substantive change; the original definition already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass Facility as genus.",
+   "differentia": "is designed for the systematic physical transportation of documents and packages",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed for the systematic physical transportation of documents and packages."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "c3a0827816b1aedd597af8916fd978e9f886b3c8d292a34fccd871d5a4923f43": {
+  "json": {
+   "changes": "No change needed: the original already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to support the extraction of minerals or other geological materials from an orebody, lode, vein, seam, reef, or placer deposit within the earth",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to support the extraction of minerals or other geological materials from an orebody, lode, vein, seam, reef, or placer deposit within the earth."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "c3ef8f8ab56196e6dc6adf3c8f7b29cd55c1fe11e214ca1bb308df3d3ac8d69b": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to wash personnel or equipment",
+     "pattern": "function",
+     "target": "Cleaning Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "c4247249c78098b5e22f0a2ca5538f1f94d127bd73d0a10fd629ab355aa63c22": {
+  "json": {
+   "changes": "The original already followed the canonical form, so I only made 'military' explicit for personnel, training, and operations to remove ambiguity.",
+   "differentia": "is designed to shelter military equipment and military personnel and to facilitate military training and military operations",
+   "expanded_abbreviations": [],
+   "genus": "Military Facility",
+   "normalized_definition": "A Military Facility that is designed to shelter military equipment and military personnel and to facilitate military training and military operations."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "c70ea5c4ae1bf1fb1e31c401f6b7343f84755b7854b6d8340490a4a7b298ae2b": {
+  "json": {
+   "plausibility": 0.82,
+   "reason": "A sewage treatment facility is designed to process wastewater, so it plausibly bears a waste management artifact function; minor doubt about whether the function is borne by the facility or by its components."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "c8613c6a72c4225d5e62fa9134644f4ac5586429a3f938d7aa680a51ab6e1dd8": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ca4a475a0b19617aaa2332387cdf554f8e82f425617d569e0a527b2ac91ea3a7": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to manufacture Aircraft",
+   "expanded_abbreviations": [],
+   "genus": "Factory",
+   "normalized_definition": "A Factory that is designed to manufacture Aircraft."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "cb0a1bd6e3d123d1b22b7c4ca1434a132942569255ce1fbd562fe069c23cc789": {
+  "json": {
+   "changes": "Rephrased to the canonical 'A Facility that is designed for...' form, changing 'buying and selling goods' to 'the buying and selling of goods' for clarity while keeping the original meaning.",
+   "differentia": "is designed for the buying and selling of goods and services, especially on a large scale",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed for the buying and selling of goods and services, especially on a large scale."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "cc55163a4820e721ac28d5d98afecc6f5d85b48f19200511e35e1dfddd43dcbb": {
+  "json": {
+   "plausibility": 0.55,
+   "reason": "A Mailing Facility is designed for transporting documents and packages, which suggests a conveyance function, but the bearer might be only a sorting or processing site rather than something that itself conveys entities."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "d21a17a21aae67bf4b08f4bd200017b640571eb7fd09ce08b07cafc7db66148b": {
+  "json": {
+   "changes": "No substantive change; the original already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to be used to perform actions to maintain or improve the state of some property or equipment",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to be used to perform actions to maintain or improve the state of some property or equipment."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "d2cbe0a10f22bb836a4ab6dba529f15a1693b00110c1b9bba0b471460ab7c76d": {
+  "json": {
+   "changes": "No substantive change; the original definition already follows the canonical 'A(n) <genus> that <differentia>' form and contains no abbreviations.",
+   "differentia": "is designed for transferring people or cargo to and from Trains",
+   "expanded_abbreviations": [],
+   "genus": "Transportation Facility",
+   "normalized_definition": "A Transportation Facility that is designed for transferring people or cargo to and from Trains."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "d363e474b6b34a1960ea5102ffc9c37a0596329293a0ed181cb5d12e38d6439b": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "d4496cbe4dde3b8b36534255b8ed114f9a1798ed3efcc6a0bf2178e6aadcd796": {
+  "json": {
+   "changes": "No changes were needed because the original definition already follows the canonical form with the asserted superclass as genus.",
+   "differentia": "is designed to sell food",
+   "expanded_abbreviations": [],
+   "genus": "Commercial Facility",
+   "normalized_definition": "A Commercial Facility that is designed to sell food."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "d6c26ce41c33de5393bfc0294aa97d62cf56f77b5d88a0192792e897d7a9e8e5": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to convert the kinetic energy of wind into electrical power",
+     "pattern": "function",
+     "target": "Electrical Power Production Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "d763e89ca35d32f9372113cd97f3b7ee9d0975ce47e1e43cccce75341bac2c04": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "d878610e3d9c613dc93bc3a92b9b92870dc126955f716a6787c32f98990989fc": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to wash personnel or equipment",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to wash personnel or equipment."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "d8b48685d0e11da0ede2787937ea28c0f21a2fe0c8cc0eb6ceb47ca63246d6e5": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "d941c404e408ac57c19819441d588c47aa6f63e67b664708df2115334bda09ff": {
+  "json": {
+   "plausibility": 0.7,
+   "reason": "A Base of Operations is a designed military facility, so bearing a function realized in military processes is plausible, though the CCO modeling of Facility functions is uncertain."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "da2384b720ee71ea99750f9970f86f1d58c8812fe9509de2a902f8700fd8ea4e": {
+  "json": {
+   "changes": "Replaced 'is designed for storing and launching' with the CCO-style 'is designed to store and launch' and removed the redundant genus restatement so the definition follows 'A(n) <genus> that <differentia>' form.",
+   "differentia": "is designed to store and launch missiles",
+   "expanded_abbreviations": [],
+   "genus": "Military Facility",
+   "normalized_definition": "A Military Facility that is designed to store and launch missiles."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "da44564b34d3a1dd929dc1dc57f4be2f87ebf0888c28c59d3aa7e2becab4c109": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "db658aac0a90dcaa583523c6ee8e95bb90a3af694d6932328f081ee7b4cffbce": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "db91b042a78816bdd71f9a7539506990fecf44668b946063926a890172b854e4": {
+  "json": {
+   "changes": "The original definition already follows the canonical form with the asserted superclass as genus, so it is kept unchanged.",
+   "differentia": "is designed for military administration and coordination",
+   "expanded_abbreviations": [],
+   "genus": "Military Facility",
+   "normalized_definition": "A Military Facility that is designed for military administration and coordination."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "dbc8a1a57eb767dddc2cb30d3bce87804b22653bbdfad76fe19e39c981585fe3": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "dc4addc7c8cc69441fbad5d6c09cd06c1a99d8f824d994e3dd69331d600060b8": {
+  "json": {
+   "changes": "The original definition already follows the canonical form with the asserted superclass as genus, so no edits were made.",
+   "differentia": "is designed for launching, receiving, and housing Aircraft",
+   "expanded_abbreviations": [],
+   "genus": "Transportation Facility",
+   "normalized_definition": "A Transportation Facility that is designed for launching, receiving, and housing Aircraft."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "dcc675c74d4bbe172c4264fb92956e3edd4a0a10e8fd22cf18fe263e1d75ac13": {
+  "json": {
+   "changes": "Rephrased 'is designed for removing' to the CCO-preferred 'is designed to remove' and kept the genus as the asserted superclass.",
+   "differentia": "is designed to remove contaminants from wastewater, especially sewage",
+   "expanded_abbreviations": [],
+   "genus": "Waste Management Facility",
+   "normalized_definition": "A Waste Management Facility that is designed to remove contaminants from wastewater, especially sewage."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "dd531dc7d1cb150affb4323f2c311ad23520180dedb6c2603e567dd341c543a0": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "dd99e595f9d83f0beea5b551d197c2a2594bf2e0f03857f57602e6c38878f8f1": {
+  "json": {
+   "changes": "Replaced the ambiguous 'Forces' with 'Military Forces' so that 'Military' clearly modifies both Operations and Forces; the genus and the rest of the wording are unchanged.",
+   "differentia": "is designed to support the command and control of Military Operations or Military Forces",
+   "expanded_abbreviations": [],
+   "genus": "Military Facility",
+   "normalized_definition": "A Military Facility that is designed to support the command and control of Military Operations or Military Forces."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "dedf1830b7d05b0856d3ef13cb3136d3c767e70fa4ee9c1d0feed88f32abe9d8": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to support the conduction of combat operations",
+     "pattern": "function",
+     "target": "Military Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "df2f7e885ac637793adf9523a222c063d00b09200d39a0b61d57e2f3dbb6c6fd": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to support local strategic objectives and tactical operations",
+     "pattern": "function",
+     "target": "Military Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "dfdedd43fcf9de60b077119f73040473165d180ff579c22c0d1a92e1a34c4790": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Financial Facility is defined as designed to support money management, so each instance plausibly bears a Financial Artifact Function; the risk is that the facility may only be designed, not bear that function."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e0d607cb8b6fd5f9941785919eb2e21794b956ed1e53261c7561cb64839846f0": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A thermal power plant is designed to convert heat into electricity, so it plausibly bears an Electrical Power Production Artifact Function; the risk is whether the plant counts as a Material Artifact bearing the function, or only its components do."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e180bbd0762138a2085bfa81260526cd06982a18b2b78a60f29718a62e3e795b": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e18e7c5c109dd057bb224dc12504a589aaf907a0b326e90d9119b292ea8ab892": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e22dc2e4fa4e4c68e468e7b6227436cdb987242bec3e170ca6a75aedd94070cb": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e37f3c9740e70275a600a39100b89881e90d5643a2bbd13895812142566dad51": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to dispose of waste by burial",
+     "pattern": "function",
+     "target": "Waste Management Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e4951ba13dfb9573154f88c1b39095ec05d777f9cf284f75d127125d213860cf": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to launch and support large-scale operations, support smaller or less-permanent bases",
+     "pattern": "function",
+     "target": "Military Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e49f24fe7793a10980f2d8fc0f5cfa076441d47b61d7512da83d1bf34afdffc3": {
+  "json": {
+   "changes": "No substantive change; the original definition already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed for the prevention of and protection from events that could endanger, injure, or damage the general public",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed for the prevention of and protection from events that could endanger, injure, or damage the general public."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e57fdfc2d582200eedfa62ffadbc0d1fe0e1f290d9c6ca18e73927c0c26a6928": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to sell small lots of goods to consumers",
+     "pattern": "function",
+     "target": "Retail Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e605aeb8fa9efaa8874660b7565ce05877f493a2605499fe9137bc65240709a2": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e60dc18673261f0554462badf11c48e4dd990c022000b6100680c153e9ca3582": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "An Educational Facility is defined as designed for facilitating learning, so it plausibly bears an Education Artifact Function, though CCO may not formalize this and the target definition is narrower (generational transmission)."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e66870056ff8bae6c124fe70d7636c4018cc0ba803b08013b6c8a76ee182a8b2": {
+  "json": {
+   "changes": "Removed the repeated genus from the original wording and clarified that each residence, not the building, is comprised of a suite of rooms, while keeping the CCO term 'designed to'.",
+   "differentia": "is designed to contain multiple permanent residences, each of which is comprised of a suite of rooms",
+   "expanded_abbreviations": [],
+   "genus": "Residential Facility",
+   "normalized_definition": "A Residential Facility that is designed to contain multiple permanent residences, each of which is comprised of a suite of rooms."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e6aec81c97419d626ce10680663f27fdd5a422231eeef81ccc4c171e11d691a0": {
+  "json": {
+   "changes": "No changes were needed because the original definition already follows the canonical form, uses the asserted superclass as genus, and contains no abbreviations.",
+   "differentia": "is designed to store materials or goods",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to store materials or goods."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e6b4a755ec0f5b9113159f8e12333613bb7941587388e0cba9aed2ef5d0928c3": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e6b9f52434b929bcd57dd3e1c965815774e17e4c6c74c7adf695a76bb4256f46": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Healthcare Facility is defined as designed for diagnosis, treatment, and prevention of disease, so each instance plausibly bears a Healthcare Artifact Function, though diagnosis-only facilities might not fit the 'treating and preventing' definition."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e720faa459e3b525ce332fd07c4e53f72d13216fe34547811acb5cbd1ae9e0c4": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e746aa6cf7b22bbc0f614df9624e58493481d7925ac1b8c46eeb60217448ae64": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "A Landfill is a Waste Management Facility designed for waste disposal, so every instance plausibly bears a waste management artifact function; some doubt arises over whether facilities, rather than artifacts, bear functions in CCO."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e8160a4d0a56ba666e43fd1c35945c799a8eda240670d69a661be15b3a7731b5": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e8279b68f1aa9f2a32e800ad2c438f8b97ede78e5547e92db092fa9e60deaa4b": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e856e6aa537b443109ef094fac5e6dff12ea781c041b80b44960337515f5b1fe": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "e8c63de6a13563696df941aa7d56de5e6227e61b233d09e09919c13749204caf": {
+  "json": {
+   "changes": "Replaced 'is designed for managing' with the CCO phrasing 'is designed to manage' and removed the redundant repetition of the genus in the differentia.",
+   "differentia": "is designed to manage waste for some portion of the waste's existence",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to manage waste for some portion of the waste's existence."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ea047e98b9e49eb8b10e85014d1f9e7c1dc56adc47c85a865d3bc14a4f124107": {
+  "json": {
+   "plausibility": 0.8,
+   "reason": "An apartment building is a Residential Facility designed for residences, so it plausibly bears a Residential Artifact Function; the main risk is whether CCO models the function as borne by the facility itself."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ea87d7f5a0fe7af67be7134d3df8a6187cdafba942c3279c0c64b4de440a410f": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ea93c6c7f9e0a4370e87ac60e7efdfe4d079528f61c0357d23b4a0c239ec926c": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ead16c0f3f4e61badb1581d2139d8a3ad712685b21e93a9d58eee875b3608f01": {
+  "json": {
+   "changes": "No changes were needed; the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed as an environment for conducting commercial, professional, or bureaucratic work",
+   "expanded_abbreviations": [],
+   "genus": "Commercial Facility",
+   "normalized_definition": "A Commercial Facility that is designed as an environment for conducting commercial, professional, or bureaucratic work."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ec0b0b2d41dbaae7bbac40f663074c647ab18107635562808c7825266c0ab1a9": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ece1492a1a874da156be81025e21660d99273ac4484c4009a76aabf0282cd779": {
+  "json": {
+   "plausibility": 0.62,
+   "reason": "A military base is a designed Military Facility, so it plausibly bears a Military Artifact Function realized in armed-service processes, though the CCO ontology may not assert this function explicitly for every base."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ecf7179beeab5a1dbb8f5d4c9fc1a0f645a2e68ea46becf01c0d599657e3735a": {
+  "json": {
+   "plausibility": 0.85,
+   "reason": "A hydroelectric power plant is designed to generate electrical power, so it plausibly bears an Electrical Power Production Artifact Function, though the function may be borne by component generators instead."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ed51ba9f750f7390159fe890d5f086d74972aa24724b6a72cf5e3cc345b25a34": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "A Port that is designed with the cargo handling equipment necessary for the loading and unloading of Watercraft",
+     "pattern": "subclass",
+     "target": "Transportation Facility"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f1c026164d9421eab937acb605a717ebc6ad64da32fe371d68994a2439af2179": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to provide lodging that is paid for on a short-term basis",
+     "pattern": "function",
+     "target": "Hospitality Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f2f5c14ab492a6bbe219d2315aa78bf1aeb5cb085758d6490dff2d204ece6e82": {
+  "json": {
+   "plausibility": 0.72,
+   "reason": "A combat outpost is designed to support combat operations, so it plausibly bears a function realized in military processes, though the ontology may not formally require this specific function class."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f3470f52acce92c137c925eb417391433a6e9cb748de38c2fcd5d9dc0199603d": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f3a39d9ac2e6fa6077b686a397145aba83c1a496b4923facc8eeda5aa516e46f": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for the administration of a sovereign nation",
+     "pattern": "function",
+     "target": "Government Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f4558320e55655ec65981f551ee2981436dc2d1e79dcf7a2bb0b78135744fa56": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to store and launch missiles",
+     "pattern": "subclass",
+     "target": "Storage Facility"
+    },
+    {
+     "evidence": "designed to store ... missiles",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f4a13390a2da838ad83156f100fcb41044a6310e46ef92b8c8e738406cb62143": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to contain harbors for docking Watercraft",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f53e8262334643c294aaee29128938bd98220f14a5f2e86e533dbc05de0a6108": {
+  "json": {
+   "changes": "Replaced 'designed for refining' with the CCO phrasing 'designed to refine' and removed the repeated genus wording so the definition follows the canonical 'A Refinery that ...' form.",
+   "differentia": "is designed to refine crude oil, intermediate petroleum products, or synthetic petroleum into products of value",
+   "expanded_abbreviations": [],
+   "genus": "Refinery",
+   "normalized_definition": "A Refinery that is designed to refine crude oil, intermediate petroleum products, or synthetic petroleum into products of value."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f6482286502fade7c19e8a734cc920ed97876cc37a6b733ce451829ecd1a76d9": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed for Islamic worship and prayer",
+     "pattern": "function",
+     "target": "Religious Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f6848eeeff5397faed1e9cf8cfba1af88432887c794421e8103a86434f85c231": {
+  "json": {
+   "changes": "Corrected the typo 'transfering' to 'transferring' and replaced the ambiguous 'to and from land' with 'between Watercraft and land'.",
+   "differentia": "is designed to contain harbors for docking Watercraft and for transferring people or cargo between Watercraft and land",
+   "expanded_abbreviations": [],
+   "genus": "Transportation Facility",
+   "normalized_definition": "A Transportation Facility that is designed to contain harbors for docking Watercraft and for transferring people or cargo between Watercraft and land."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f7fb7631c96b61f3e43b0aa2bc3f60056bc222f3128ea7ff2928ca9c42c205ed": {
+  "json": {
+   "changes": "No change needed; the original definition already follows the canonical form and contains no abbreviations.",
+   "differentia": "is designed to store medical supplies",
+   "expanded_abbreviations": [],
+   "genus": "Storage Facility",
+   "normalized_definition": "A Storage Facility that is designed to store medical supplies."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "f7fd53ab9c475ed02f718b50ee5a2228c3fa2c2e964a0752de04d56cc7f195ee": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to support the receiving and re-transmitting of radio signals",
+     "pattern": "function",
+     "target": "Radio Communication Relay Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fa004b0bbed8112c4a8cc0d35acede180e6d9fe68edb97a4b03ada33e9d7b6b7": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fa76a741eefccbcca524ee74ec03fb5f78860034b9b4b5e266e2e5ff978a1908": {
+  "json": {
+   "changes": "Replaced the genus 'Facility' with the asserted superclass 'Storage Facility' and kept the differentia unchanged.",
+   "differentia": "is the bearer of functions realized in processes of storing water in an elevated container",
+   "expanded_abbreviations": [],
+   "genus": "Storage Facility",
+   "normalized_definition": "A Storage Facility that is the bearer of functions realized in processes of storing water in an elevated container."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fa83aff9eceaf9525174b93a5e82a8f01ead4b31cf5e020c688162341703bb7a": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fab3942b359e7767fd44dafc74b0d748aed56b6ae90778853dddbbeb600ccacc": {
+  "json": {
+   "plausibility": 0.72,
+   "reason": "A Chemical Depot is a facility designed to store chemicals, and storing involves containing them, so it plausibly bears a Containing Artifact Function, though the function might instead be a storage function."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fae5910cd5f7db5869ae5c552c43c0dc196b240ffd4a1898e32c44e1d649b25b": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fb36b2a104cae602abde24abd2fd6c5c4d1e518567dfbdcec99c2b5027bb9ff0": {
+  "json": {
+   "plausibility": 0.6,
+   "reason": "A pumping station is designed to pump fluids, which plausibly bears a function of controlling fluid flow; however, the function may be borne by its pumps rather than the facility, and the class definition is somewhat loose."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fb5b0e69227ef1d15ecf1934f77903ae1ea090b78faad52018b24f29d23af020": {
+  "json": {
+   "changes": "No change was needed because the original definition already follows the canonical form with the asserted superclass as genus and contains no abbreviations.",
+   "differentia": "is designed to pump fluids from one place to another",
+   "expanded_abbreviations": [],
+   "genus": "Product Transport Facility",
+   "normalized_definition": "A Product Transport Facility that is designed to pump fluids from one place to another."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fc94b9a6ebcc9c2a16a93df277e375e355f5d67eff36af0160812b8d35cb3e52": {
+  "json": {
+   "axioms": [
+    {
+     "evidence": "designed to store commercial goods",
+     "pattern": "function",
+     "target": "Containing Artifact Function"
+    }
+   ]
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fcea5d80d17802216249dc76fc96728930b7052429947ce2e170a447a005baa5": {
+  "json": {
+   "changes": "The original definition already follows the canonical 'A(n) <genus> that <differentia>' form with the asserted superclass 'Port' as genus, so it is kept unchanged.",
+   "differentia": "is designed with the cargo handling equipment necessary for the loading and unloading of Watercraft",
+   "expanded_abbreviations": [],
+   "genus": "Port",
+   "normalized_definition": "A Port that is designed with the cargo handling equipment necessary for the loading and unloading of Watercraft."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fd18106bfdfe25ad4913ebaf063fda711e2a0df99ece8b6c6bcc0f9ab4a7f1d6": {
+  "json": {
+   "plausibility": 0.15,
+   "reason": "Commercial facilities include wholesale, offices, and warehouses, which need not bear a retail function; the definition stresses large-scale buying and selling, so retail is not universal."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fd8f5ea8aa7c0812e852becdb05eb76c60ffa78f6b10bc12e3faba8f3683fd8b": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fdc750f6913abdc650f567afba33e2725961394f41087d230a198ccee926d4f5": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fdd67606a7354d09a72e135cd7a9feedd3dab7093e6e6a4ed9387c93d3549ace": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fe7f41f0833e1db614556865309eacda1f5269b13d9ca6712fbeab433c89f077": {
+  "json": {
+   "plausibility": 0.3,
+   "reason": "A port is defined as designed to contain harbors, which loosely suggests a containing function, but its main functions are docking and transfer, so a Containing Artifact Function for every port is doubtful."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "fee14c9860cb9239cdc24bcf6f45cf2eb58b5ea1ab0f65f1bf68d9f2a1a3bf3f": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ff3c42e5d353bef04e9ddc92a0b40133a47046d7535983fdf47c89d3ac2517da": {
+  "json": {
+   "changes": "Rephrased the original so that it reads 'some Military Force' instead of 'a Military Force', matching CCO's existential phrasing; no abbreviations needed expansion.",
+   "differentia": "is designed to support some Military Force",
+   "expanded_abbreviations": [],
+   "genus": "Facility",
+   "normalized_definition": "A Facility that is designed to support some Military Force."
+  },
+  "model": "claude-sonnet-5-5"
+ },
+ "ffd8c04e12d9d41e7fdf10430559e03b4202768e36fecda4cc5bcaf8f804ff99": {
+  "json": {
+   "axioms": []
+  },
+  "model": "claude-sonnet-5-5"
+ }
+}
