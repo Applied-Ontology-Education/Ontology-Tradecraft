@@ -1,0 +1,19 @@
+# The normalized arrival datetime of a stop is later than its normalized departure datetime.
+# severity: error
+PREFIX p6: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/>
+PREFIX id: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/id/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+SELECT ?focus ?message WHERE {
+  ?focus a p6:ScheduledStopSpecification .
+  ?arr a cco:ont00000827 ; rdfs:label "arrival time" ; obo:BFO_0000176 ?focus .
+  ?dep a cco:ont00000827 ; rdfs:label "departure time" ; obo:BFO_0000176 ?focus .
+  ?ra obo:BFO_0000101 ?arr ; cco:ont00001767 ?adt .
+  ?rd obo:BFO_0000101 ?dep ; cco:ont00001767 ?ddt .
+  FILTER(?adt > ?ddt)
+  BIND(CONCAT("Arrival ", STR(?adt), " is after departure ", STR(?ddt)) AS ?message)
+}

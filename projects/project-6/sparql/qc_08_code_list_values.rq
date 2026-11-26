@@ -1,0 +1,29 @@
+# directionCode, wheelchairBoardingCode or routeTypeCode holds a value outside its GTFS code list or is not an integer.
+# severity: error
+PREFIX p6: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/>
+PREFIX id: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/id/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+SELECT ?focus ?message WHERE {
+  {
+    ?focus p6:directionCode ?v .
+    FILTER(datatype(?v) != xsd:integer || ?v NOT IN (0, 1))
+    BIND(CONCAT("directionCode must be 0 or 1, found ", STR(?v)) AS ?message)
+  }
+  UNION
+  {
+    ?focus p6:wheelchairBoardingCode ?v .
+    FILTER(datatype(?v) != xsd:integer || ?v NOT IN (0, 1, 2))
+    BIND(CONCAT("wheelchairBoardingCode must be 0, 1 or 2, found ", STR(?v)) AS ?message)
+  }
+  UNION
+  {
+    ?focus p6:routeTypeCode ?v .
+    FILTER(datatype(?v) != xsd:integer || !((?v >= 0 && ?v <= 12) || (?v >= 100 && ?v <= 1799)))
+    BIND(CONCAT("routeTypeCode is not a valid GTFS route_type, found ", STR(?v)) AS ?message)
+  }
+}

@@ -1,0 +1,30 @@
+
+[0/6] 0 ontology: approved extension + CCO slim module
+build_ontology: 6 local classes, 6 local properties -> ontology/p6_extension_base.ttl; CCO slim module 1845 triples -> ontology/cco_slim.ttl
+
+[1/6] 1 profile the raw GTFS schema
+profile_schema: 8 files, 1381 rows; non-standard columns: feed_info.txt:feed_timezone, trips.txt:peak_offpeak -> reports/schema_profile.json
+
+[2/6] 2 LLM: normalize schema, map columns to CCO patterns
+llm_normalize_schema: 42/47 columns agree with the approved spec (89%); 13 issues flagged (calendar_dates.txt:date, calendar_dates.txt:service_id, feed_info.txt:feed_publisher_url, feed_info.txt:feed_timezone, routes.txt, stop_times.txt, stops.txt, trips.txt:route_id, stop_id, trip_short_name, stop_times.txt:arrival_time, departure_time ...)
+
+[3/6] 3 ETL: GTFS -> CCO instance graph
+etl_gtfs: service day 20261201; 15 stations, 1 route, 103 trips, 1253 scheduled stops; 27494 triples -> data/instances.ttl
+
+[4/6] 4 LLM: generate SHACL + SPARQL QC, test by fault injection
+llm_generate_qc: kept 7/8 shapes, 9/9 queries; injected faults caught 9/10 -> shacl/llm_shapes.ttl, sparql/qc_*.rq
+llm_generate_qc: faults not caught by any kept check: invalid_agency_timezone
+
+[5/6] 5 LLM: propose OWL axioms, gate with ELK + HermiT + data
+llm_propose_axioms: 6/7 candidate axioms accepted (ELK + HermiT + data support) -> ontology/p6_extension.ttl
+
+[6/6] 6 verify: ELK, HermiT, SHACL, SPARQL QC
+validate: ELK OK, HermiT OK (4.1 s); SHACL 0 findings (0 unexpected); SPARQL 1 findings (0 unexpected) -> PASS
+
+================ Project 6 summary ================
+schema mapping   : 42/47 columns agree with approved spec (89%); 13 issues flagged by LLM
+QC generated     : SHACL 7/8 kept, SPARQL 9/9 kept; injected faults caught 9/10
+OWL axioms       : 6/7 accepted (ELK + HermiT + data support)
+reasoners        : ELK consistent, HermiT consistent
+SHACL / SPARQL   : 0 / 1 findings, 0 unexpected; known issues: feed-timezone-invalid
+overall          : PASS   (48 s)

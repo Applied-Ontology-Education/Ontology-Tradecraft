@@ -1,0 +1,9 @@
+{
+  "about": "Real defects found in the source feed by QC and acknowledged (kept raw, reported, not silently fixed). Checks that flag only these are not false positives.",
+  "issues": [
+    {"id": "feed-timezone-invalid", "file": "feed_info.txt", "column": "feed_timezone",
+     "value": "America/New York", "expected": "America/New_York (valid IANA zone; agency.txt uses it)",
+     "note": "feed_timezone is also not a GTFS Schedule field (LIRR extension)."}
+  ],
+  "focus_contains": ["/id/feed/"]
+}

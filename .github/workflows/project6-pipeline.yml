@@ -1,0 +1,63 @@
+name: Project 6 semantic pipeline
+
+on:
+  push:
+    paths:
+      - "projects/project-6/**"
+      - ".github/workflows/project6-pipeline.yml"
+  pull_request:
+    paths:
+      - "projects/project-6/**"
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: projects/project-6
+    env:
+      P6_OFFLINE: "1"          # CI never calls the LLM: every reply comes from data/llm_cache.json
+      ROBOT: ${{ github.workspace }}/robot/robot
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Install ROBOT
+        working-directory: ${{ github.workspace }}
+        run: |
+          mkdir -p robot
+          curl -sfL -o robot/robot.jar https://github.com/ontodev/robot/releases/download/v1.9.11/robot.jar
+          printf '#!/bin/sh\nexec java -Xmx4g -jar "$(dirname "$0")/robot.jar" "$@"\n' > robot/robot
+          chmod +x robot/robot && robot/robot --version
+      - name: Install Python dependencies
+        run: pip install -r requirements.txt
+      - name: Run pipeline (offline, cached LLM replies)
+        run: python scripts/run_all.py
+      - name: Outputs match the committed versions (RDF graph isomorphism; exact text for queries)
+        run: |
+          git diff --stat --exit-code -- sparql/
+          python - <<'EOF'
+          import subprocess, sys
+          from rdflib import Graph
+          from rdflib.compare import isomorphic
+          bad = []
+          for f in ["data/instances.ttl", "shacl/llm_shapes.ttl", "ontology/p6_extension.ttl"]:
+              old = Graph().parse(data=subprocess.check_output(["git", "show", f"HEAD:projects/project-6/{f}"]).decode(), format="turtle")
+              new = Graph().parse(f)
+              same = isomorphic(old, new)
+              print(f"{f}: {'same graph' if same else 'DIFFERENT'} ({len(new)} triples)")
+              bad += [] if same else [f]
+          sys.exit(1 if bad else 0)
+          EOF
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: project6-reports
+          path: projects/project-6/reports/

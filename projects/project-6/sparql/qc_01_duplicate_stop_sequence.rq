@@ -1,0 +1,18 @@
+# Two ScheduledStopSpecifications of the same trip carry the same stopSequence value.
+# severity: error
+PREFIX p6: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/>
+PREFIX id: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/id/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+SELECT ?focus ?message WHERE {
+  ?focus a p6:ScheduledStopSpecification ; obo:BFO_0000176 ?trip .
+  ?other a p6:ScheduledStopSpecification ; obo:BFO_0000176 ?trip .
+  ?r1 obo:BFO_0000101 ?focus ; p6:stopSequence ?s1 .
+  ?r2 obo:BFO_0000101 ?other ; p6:stopSequence ?s2 .
+  FILTER(?s1 = ?s2 && STR(?focus) < STR(?other))
+  BIND(CONCAT("Stop shares stopSequence ", STR(?s1), " with ", STR(?other), " in trip ", STR(?trip)) AS ?message)
+}

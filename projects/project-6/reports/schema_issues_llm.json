@@ -1,0 +1,80 @@
+[
+  {
+    "column": "feed_timezone",
+    "file": "feed_info.txt",
+    "issue": "Value 'America/New York' is not a valid IANA time zone ID (needs an underscore). The column itself is also not part of the GTFS Schedule reference, which defines agency_timezone for this purpose.",
+    "severity": "error"
+  },
+  {
+    "column": "peak_offpeak",
+    "file": "trips.txt",
+    "issue": "Non-standard column. The meaning of 0 and 1 is undocumented in the feed and must be confirmed before it is mapped to a boolean.",
+    "severity": "warning"
+  },
+  {
+    "column": "from_stop_id, to_stop_id, from_trip_id, to_trip_id, transfer_type, min_transfer_time",
+    "file": "transfers.txt",
+    "issue": "The single row is completely empty (all columns 100% null). It carries no information and would create a meaningless transfer record.",
+    "severity": "warning"
+  },
+  {
+    "column": "arrival_time, departure_time",
+    "file": "stop_times.txt",
+    "issue": "max_hour is 24, so some times are 24:00:00 or later. These are valid in GTFS but are not valid xsd:time. They must be interpreted relative to the service day and agency timezone, and rolled into the next calendar day when converting to dateTime.",
+    "severity": "warning"
+  },
+  {
+    "column": "service_id",
+    "file": "calendar_dates.txt",
+    "issue": "Six distinct service_ids exist but trips.txt references only 14C6A762. The other five have no trips in this feed. calendar.txt is also absent, so service is defined only by the added exception dates (all exception_type=1 on a single date, 20261201).",
+    "severity": "warning"
+  },
+  {
+    "column": "date",
+    "file": "calendar_dates.txt",
+    "issue": "Date is inferred as integer (20261201). It must be parsed as a YYYYMMDD string and converted to xsd:date. Avoid numeric handling.",
+    "severity": "info"
+  },
+  {
+    "column": "shape_id",
+    "file": "trips.txt",
+    "issue": "8 distinct shape_ids are referenced but shapes.txt is not in the feed, so they cannot be resolved. They are not modeled in the pattern.",
+    "severity": "info"
+  },
+  {
+    "column": "route_id, stop_id, trip_short_name",
+    "file": "routes.txt, stop_times.txt, stops.txt, trips.txt",
+    "issue": "Identifier columns were inferred as integer. They must be loaded as strings so they are not treated as numbers and leading zeros are not lost.",
+    "severity": "info"
+  },
+  {
+    "column": "stop_lat, stop_lon",
+    "file": "stops.txt",
+    "issue": "Coordinate precision is inconsistent (e.g. -73.687401 with 6 decimals vs -73.69521438 with 8). This is harmless, but keep the original decimal lexical form and do not round.",
+    "severity": "info"
+  },
+  {
+    "column": "wheelchair_boarding",
+    "file": "stops.txt",
+    "issue": "Only codes 1 and 2 are present, so some stations are explicitly not accessible. Both are valid codes, but 2 must not be confused with unknown (0).",
+    "severity": "info"
+  },
+  {
+    "column": "stop_sequence",
+    "file": "stop_times.txt",
+    "issue": "There are 14 distinct sequence values but 15 distinct stops. Trips use different stop patterns (branch, express/local), so a given stop does not have a fixed sequence number across trips.",
+    "severity": "info"
+  },
+  {
+    "column": "pickup_type, drop_off_type",
+    "file": "stop_times.txt",
+    "issue": "Both columns are constant 0 and add no information, so they are not modeled.",
+    "severity": "info"
+  },
+  {
+    "column": "feed_publisher_url",
+    "file": "feed_info.txt",
+    "issue": "Uses http while agency_url uses https. Also, feed_start_date and feed_end_date are missing, so the feed validity period is undeclared.",
+    "severity": "info"
+  }
+]

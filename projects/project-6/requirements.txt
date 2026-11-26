@@ -1,0 +1,4 @@
+rdflib>=7.0,<8
+pyshacl>=0.26
+pyoxigraph>=0.4
+anthropic>=0.40

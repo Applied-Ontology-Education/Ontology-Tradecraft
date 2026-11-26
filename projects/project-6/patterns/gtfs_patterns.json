@@ -1,0 +1,49 @@
+{
+  "about": "Approved (human-reviewed) design patterns for GTFS rail schedule data in CCO/BFO. The LLM proposes column mappings and axioms; this file is the reviewed contract the ETL implements and the QC enforces.",
+  "namespaces": {
+    "p6": "https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/",
+    "cco": "https://www.commoncoreontologies.org/",
+    "obo": "http://purl.obolibrary.org/obo/"
+  },
+  "local_classes": {
+    "p6:RailStation": {"label": "Rail Station", "parent": "cco:ont00000108", "parent_label": "Rail Facility",
+      "definition": "A Rail Facility at which scheduled passenger trains stop to let passengers board or alight."},
+    "p6:GTFSRecord": {"label": "GTFS Record", "parent": "cco:ont00000253", "parent_label": "Information Bearing Entity",
+      "definition": "An Information Bearing Entity that is one row or one field value of a GTFS feed file."},
+    "p6:StationCoordinateRecord": {"label": "Station Coordinate Record", "parent": "cco:ont00000853", "parent_label": "Descriptive Information Content Entity",
+      "definition": "A Descriptive Information Content Entity that is about the Geospatial Location of a Rail Station, expressed as WGS84 latitude and longitude."},
+    "p6:TransitRouteSpecification": {"label": "Transit Route Specification", "parent": "cco:ont00000965", "parent_label": "Prescriptive Information Content Entity",
+      "definition": "A Prescriptive Information Content Entity that groups train trip specifications offered to riders as one named service, such as a rail branch."},
+    "p6:TrainTripSpecification": {"label": "Train Trip Specification", "parent": "cco:ont00000965", "parent_label": "Prescriptive Information Content Entity",
+      "definition": "A Prescriptive Information Content Entity that prescribes one scheduled run of a train through an ordered sequence of stations on a service day."},
+    "p6:ScheduledStopSpecification": {"label": "Scheduled Stop Specification", "parent": "cco:ont00000965", "parent_label": "Prescriptive Information Content Entity",
+      "definition": "A Prescriptive Information Content Entity that is part of a Train Trip Specification and prescribes the arrival and departure times of the train at one Rail Station."}
+  },
+  "local_properties": {
+    "p6:stopSequence": {"parent": "cco:ont00001773", "parent_label": "has integer value", "domain": "p6:GTFSRecord", "range": "xsd:integer"},
+    "p6:directionCode": {"parent": "cco:ont00001773", "parent_label": "has integer value", "domain": "p6:GTFSRecord", "range": "xsd:integer"},
+    "p6:routeTypeCode": {"parent": "cco:ont00001773", "parent_label": "has integer value", "domain": "p6:GTFSRecord", "range": "xsd:integer"},
+    "p6:wheelchairBoardingCode": {"parent": "cco:ont00001773", "parent_label": "has integer value", "domain": "p6:GTFSRecord", "range": "xsd:integer"},
+    "p6:isPeakService": {"parent": "cco:ont00001772", "parent_label": "has boolean value", "domain": "p6:GTFSRecord", "range": "xsd:boolean"},
+    "p6:headsignText": {"parent": "cco:ont00001765", "parent_label": "has text value", "domain": "p6:GTFSRecord", "range": "xsd:string"}
+  },
+  "patterns": {
+    "station": "RailStation located in (BFO_0000171) Geospatial Location (ont00000487). Designative Name / Code Identifier / Arbitrary Identifier designate (ont00001916) the station; each is carried (BFO_0000101) by a GTFSRecord that has text value (ont00001765). A StationCoordinateRecord is about (ont00001808) the location and is carried by a GTFSRecord with has latitude value (ont00001766) and has longitude value (ont00001764).",
+    "agency": "Organization (ont00001180) designated by a Designative Name; the agency GTFSRecord uses time zone identifier (ont00001908) a Time Zone Identifier (ont00000829) whose carrier has text value = IANA zone.",
+    "feed": "The feed_info GTFSRecord uses time zone identifier a Time Zone Identifier (text = feed_timezone, kept raw).",
+    "route": "TransitRouteSpecification carried by a GTFSRecord (routeTypeCode); designated by a Designative Name (route_long_name).",
+    "trip": "TrainTripSpecification continuant part of (BFO_0000176) its TransitRouteSpecification; carried by a GTFSRecord (directionCode, isPeakService, headsignText); designated by a Code Identifier (trip_short_name = train number) and an Arbitrary Identifier (trip_id).",
+    "stop_time": "ScheduledStopSpecification continuant part of its TrainTripSpecification and is about its RailStation; carried by a GTFSRecord with stopSequence. Arrival and departure are Time of Day Identifiers (ont00000827), continuant parts of the stop specification, each carried by a GTFSRecord with has text value (raw GTFS time, may exceed 24:00:00) and has datetime value (normalized to service date + offset, America/New_York)."
+  },
+  "columns": {
+    "agency.txt": {"agency_id": "Arbitrary Identifier of Organization", "agency_name": "Designative Name of Organization", "agency_url": "not modeled", "agency_timezone": "Time Zone Identifier used by agency record", "agency_lang": "not modeled", "agency_phone": "not modeled"},
+    "feed_info.txt": {"feed_publisher_name": "not modeled", "feed_publisher_url": "not modeled", "feed_timezone": "Time Zone Identifier used by feed record (raw; QC-checked)", "feed_lang": "not modeled", "feed_version": "Arbitrary Identifier of feed record"},
+    "routes.txt": {"route_id": "Arbitrary Identifier of TransitRouteSpecification", "route_long_name": "Designative Name of TransitRouteSpecification", "route_type": "routeTypeCode on route record (2 = rail)", "route_color": "not modeled", "route_text_color": "not modeled"},
+    "stops.txt": {"stop_id": "Arbitrary Identifier of RailStation", "stop_code": "Code Identifier of RailStation", "stop_name": "Designative Name of RailStation", "stop_lat": "has latitude value on StationCoordinateRecord carrier", "stop_lon": "has longitude value on StationCoordinateRecord carrier", "stop_url": "not modeled", "wheelchair_boarding": "wheelchairBoardingCode on station record (0/1/2)"},
+    "trips.txt": {"route_id": "TrainTripSpecification continuant part of TransitRouteSpecification", "service_id": "used to select the service day; not modeled", "trip_id": "Arbitrary Identifier of TrainTripSpecification", "trip_headsign": "headsignText on trip record", "trip_short_name": "Code Identifier (train number) of TrainTripSpecification", "direction_id": "directionCode on trip record (0/1)", "shape_id": "not modeled", "peak_offpeak": "NON-STANDARD (LIRR extension): isPeakService boolean on trip record"},
+    "stop_times.txt": {"trip_id": "ScheduledStopSpecification continuant part of TrainTripSpecification", "arrival_time": "Time of Day Identifier (arrival), raw text + normalized datetime", "departure_time": "Time of Day Identifier (departure), raw text + normalized datetime", "stop_id": "ScheduledStopSpecification is about RailStation", "stop_sequence": "stopSequence on stop-time record", "pickup_type": "not modeled", "drop_off_type": "not modeled"},
+    "calendar_dates.txt": {"service_id": "selects trips for the service day", "date": "service day used to normalize times", "exception_type": "1 = service added on that date"},
+    "transfers.txt": {"from_stop_id": "not modeled", "to_stop_id": "not modeled", "from_trip_id": "not modeled", "to_trip_id": "not modeled", "transfer_type": "not modeled", "min_transfer_time": "not modeled"}
+  },
+  "service_timezone": "America/New_York"
+}

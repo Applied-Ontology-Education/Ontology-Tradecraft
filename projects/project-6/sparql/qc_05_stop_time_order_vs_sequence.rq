@@ -1,0 +1,22 @@
+# Within a trip, a stop with a higher stopSequence arrives before a lower-sequence stop departs.
+# severity: error
+PREFIX p6: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/>
+PREFIX id: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/id/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+SELECT ?focus ?message WHERE {
+  ?earlier a p6:ScheduledStopSpecification ; obo:BFO_0000176 ?trip .
+  ?focus a p6:ScheduledStopSpecification ; obo:BFO_0000176 ?trip .
+  ?r1 obo:BFO_0000101 ?earlier ; p6:stopSequence ?s1 .
+  ?r2 obo:BFO_0000101 ?focus ; p6:stopSequence ?s2 .
+  ?dep a cco:ont00000827 ; rdfs:label "departure time" ; obo:BFO_0000176 ?earlier .
+  ?arr a cco:ont00000827 ; rdfs:label "arrival time" ; obo:BFO_0000176 ?focus .
+  ?rd obo:BFO_0000101 ?dep ; cco:ont00001767 ?ddt .
+  ?ra obo:BFO_0000101 ?arr ; cco:ont00001767 ?adt .
+  FILTER(?s1 < ?s2 && ?adt < ?ddt)
+  BIND(CONCAT("Stop seq ", STR(?s2), " arrives at ", STR(?adt), " before stop seq ", STR(?s1), " (", STR(?earlier), ") departs at ", STR(?ddt)) AS ?message)
+}
