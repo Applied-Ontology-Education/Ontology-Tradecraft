@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Resolves owl:imports to pinned local copies (CommonCoreOntologies develop @ 662f3a6) so the pipeline runs offline and reproducibly. -->
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri name="https://www.commoncoreontologies.org/ArtifactOntology" uri="imports/ArtifactOntology.ttl"/>
+    <uri name="https://www.commoncoreontologies.org/InformationEntityOntology" uri="imports/InformationEntityOntology.ttl"/>
+    <uri name="https://www.commoncoreontologies.org/GeospatialOntology" uri="imports/GeospatialOntology.ttl"/>
+    <uri name="https://www.commoncoreontologies.org/TimeOntology" uri="imports/TimeOntology.ttl"/>
+    <uri name="https://www.commoncoreontologies.org/ExtendedRelationOntology" uri="imports/ExtendedRelationOntology.ttl"/>
+    <uri name="http://purl.obolibrary.org/obo/bfo/2020/bfo-core.ttl" uri="imports/bfo-core.ttl"/>
+</catalog>
