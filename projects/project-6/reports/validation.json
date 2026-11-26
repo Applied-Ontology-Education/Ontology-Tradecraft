@@ -1,0 +1,116 @@
+{
+  "triples": {
+    "ontology": 1919,
+    "instances": 27494
+  },
+  "elk": {
+    "ok": true,
+    "seconds": 1.5,
+    "message": ""
+  },
+  "hermit": {
+    "ok": true,
+    "seconds": 4.1,
+    "message": ""
+  },
+  "shacl": {
+    "shapes": 9,
+    "findings": 0,
+    "unexpected": 0,
+    "results": []
+  },
+  "sparql": {
+    "queries": 10,
+    "findings": 1,
+    "unexpected": 0,
+    "results": [
+      {
+        "query": "human_01_invalid_timezone.rq",
+        "origin": "human",
+        "findings": 1,
+        "unexpected": 0,
+        "examples": [
+          {
+            "focus": "https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/id/feed/GO203_26",
+            "message": "invalid IANA time zone name: 'America/New York'"
+          }
+        ]
+      },
+      {
+        "query": "qc_01_duplicate_stop_sequence.rq",
+        "origin": "llm",
+        "findings": 0,
+        "unexpected": 0,
+        "examples": []
+      },
+      {
+        "query": "qc_02_stop_station_missing.rq",
+        "origin": "llm",
+        "findings": 0,
+        "unexpected": 0,
+        "examples": []
+      },
+      {
+        "query": "qc_03_trip_route_missing.rq",
+        "origin": "llm",
+        "findings": 0,
+        "unexpected": 0,
+        "examples": []
+      },
+      {
+        "query": "qc_04_arrival_after_departure.rq",
+        "origin": "llm",
+        "findings": 0,
+        "unexpected": 0,
+        "examples": []
+      },
+      {
+        "query": "qc_05_stop_time_order_vs_sequence.rq",
+        "origin": "llm",
+        "findings": 0,
+        "unexpected": 0,
+        "examples": []
+      },
+      {
+        "query": "qc_06_time_text_format.rq",
+        "origin": "llm",
+        "findings": 0,
+        "unexpected": 0,
+        "examples": []
+      },
+      {
+        "query": "qc_07_time_datetime_mismatch.rq",
+        "origin": "llm",
+        "findings": 0,
+        "unexpected": 0,
+        "examples": []
+      },
+      {
+        "query": "qc_08_code_list_values.rq",
+        "origin": "llm",
+        "findings": 0,
+        "unexpected": 0,
+        "examples": []
+      },
+      {
+        "query": "qc_09_coordinate_range.rq",
+        "origin": "llm",
+        "findings": 0,
+        "unexpected": 0,
+        "examples": []
+      }
+    ]
+  },
+  "known_issues": [
+    {
+      "id": "feed-timezone-invalid",
+      "file": "feed_info.txt",
+      "column": "feed_timezone",
+      "value": "America/New York",
+      "expected": "America/New_York (valid IANA zone; agency.txt uses it)",
+      "note": "feed_timezone is also not a GTFS Schedule field (LIRR extension)."
+    }
+  ],
+  "checks_present": true,
+  "passed": true
+}

@@ -1,0 +1,71 @@
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix p6: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+p6:GTFSRecord a owl:Class ;
+    rdfs:label "GTFS Record"@en ;
+    rdfs:subClassOf cco:ont00000253 ;
+    skos:definition "An Information Bearing Entity that is one row or one field value of a GTFS feed file."@en .
+
+p6:RailStation a owl:Class ;
+    rdfs:label "Rail Station"@en ;
+    rdfs:subClassOf cco:ont00000108 ;
+    skos:definition "A Rail Facility at which scheduled passenger trains stop to let passengers board or alight."@en .
+
+p6:ScheduledStopSpecification a owl:Class ;
+    rdfs:label "Scheduled Stop Specification"@en ;
+    rdfs:subClassOf cco:ont00000965 ;
+    skos:definition "A Prescriptive Information Content Entity that is part of a Train Trip Specification and prescribes the arrival and departure times of the train at one Rail Station."@en .
+
+p6:StationCoordinateRecord a owl:Class ;
+    rdfs:label "Station Coordinate Record"@en ;
+    rdfs:subClassOf cco:ont00000853 ;
+    skos:definition "A Descriptive Information Content Entity that is about the Geospatial Location of a Rail Station, expressed as WGS84 latitude and longitude."@en .
+
+p6:TrainTripSpecification a owl:Class ;
+    rdfs:label "Train Trip Specification"@en ;
+    rdfs:subClassOf cco:ont00000965 ;
+    skos:definition "A Prescriptive Information Content Entity that prescribes one scheduled run of a train through an ordered sequence of stations on a service day."@en .
+
+p6:TransitRouteSpecification a owl:Class ;
+    rdfs:label "Transit Route Specification"@en ;
+    rdfs:subClassOf cco:ont00000965 ;
+    skos:definition "A Prescriptive Information Content Entity that groups train trip specifications offered to riders as one named service, such as a rail branch."@en .
+
+p6:directionCode a owl:DatatypeProperty ;
+    rdfs:label "directionCode"@en ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf cco:ont00001773 .
+
+p6:extension a owl:Ontology ;
+    rdfs:comment "Project 6 GTFS rail-schedule extension of CCO. Base = approved spec; see p6_extension.ttl for reasoner-accepted LLM axioms." ;
+    owl:imports p6:cco_slim .
+
+p6:headsignText a owl:DatatypeProperty ;
+    rdfs:label "headsignText"@en ;
+    rdfs:range xsd:string ;
+    rdfs:subPropertyOf cco:ont00001765 .
+
+p6:isPeakService a owl:DatatypeProperty ;
+    rdfs:label "isPeakService"@en ;
+    rdfs:range xsd:boolean ;
+    rdfs:subPropertyOf cco:ont00001772 .
+
+p6:routeTypeCode a owl:DatatypeProperty ;
+    rdfs:label "routeTypeCode"@en ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf cco:ont00001773 .
+
+p6:stopSequence a owl:DatatypeProperty ;
+    rdfs:label "stopSequence"@en ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf cco:ont00001773 .
+
+p6:wheelchairBoardingCode a owl:DatatypeProperty ;
+    rdfs:label "wheelchairBoardingCode"@en ;
+    rdfs:range xsd:integer ;
+    rdfs:subPropertyOf cco:ont00001773 .
+

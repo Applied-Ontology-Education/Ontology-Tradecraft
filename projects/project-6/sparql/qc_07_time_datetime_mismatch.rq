@@ -1,0 +1,21 @@
+# Normalized datetime disagrees with the raw time text (hour mod 24, minute, second) or does not use a New York UTC offset (-05:00 or -04:00).
+# severity: error
+PREFIX p6: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/>
+PREFIX id: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/id/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+SELECT ?focus ?message WHERE {
+  ?tod a cco:ont00000827 .
+  ?focus obo:BFO_0000101 ?tod ; cco:ont00001765 ?t ; cco:ont00001767 ?dt .
+  FILTER(REGEX(STR(?t), "^[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]$"))
+  BIND(xsd:integer(STRBEFORE(STR(?t), ":")) AS ?h)
+  BIND(xsd:integer(STRBEFORE(STRAFTER(STR(?t), ":"), ":")) AS ?m)
+  BIND(xsd:integer(STRAFTER(STRAFTER(STR(?t), ":"), ":")) AS ?s)
+  BIND(?h - 24 * FLOOR(?h / 24) AS ?eh)
+  FILTER(HOURS(?dt) != ?eh || MINUTES(?dt) != ?m || SECONDS(?dt) != ?s || !(TZ(?dt) IN ("-05:00", "-04:00")))
+  BIND(CONCAT("Raw time '", STR(?t), "' is inconsistent with datetime ", STR(?dt), " (expected time of day and offset -05:00/-04:00)") AS ?message)
+}

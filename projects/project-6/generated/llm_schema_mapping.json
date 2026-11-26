@@ -1,0 +1,429 @@
+{
+  "files": {
+    "agency.txt": {
+      "agency_id": {
+        "datatype": "xsd:string",
+        "maps_to": "Arbitrary Identifier",
+        "meaning": "Identifier of the transit agency within the feed",
+        "normalization": "none; trim whitespace",
+        "standard": true
+      },
+      "agency_lang": {
+        "datatype": "xsd:language",
+        "maps_to": "not modeled",
+        "meaning": "Primary language of the agency (ISO 639-1)",
+        "normalization": "lowercase",
+        "standard": true
+      },
+      "agency_name": {
+        "datatype": "xsd:string",
+        "maps_to": "Designative Name",
+        "meaning": "Full name of the agency (Long Island Rail Road)",
+        "normalization": "trim whitespace",
+        "standard": true
+      },
+      "agency_phone": {
+        "datatype": "xsd:string",
+        "maps_to": "not modeled",
+        "meaning": "Customer service phone number",
+        "normalization": "none; keep as string and do not cast to number",
+        "standard": true
+      },
+      "agency_timezone": {
+        "datatype": "xsd:string",
+        "maps_to": "Time Zone Identifier",
+        "meaning": "IANA time zone in which the agency operates; all feed local times are interpreted in it",
+        "normalization": "validate against the IANA tz database (America/New_York is valid)",
+        "standard": true
+      },
+      "agency_url": {
+        "datatype": "xsd:anyURI",
+        "maps_to": "not modeled",
+        "meaning": "Agency website URL",
+        "normalization": "validate as absolute URL",
+        "standard": true
+      }
+    },
+    "calendar_dates.txt": {
+      "date": {
+        "datatype": "xsd:date",
+        "maps_to": "service day selection",
+        "meaning": "Calendar date of the service exception, written YYYYMMDD",
+        "normalization": "parse the integer 20261201 as a string and convert to ISO 8601 (2026-12-01)",
+        "standard": true
+      },
+      "exception_type": {
+        "datatype": "xsd:integer",
+        "maps_to": "service day selection",
+        "meaning": "1 = service added on this date, 2 = service removed",
+        "normalization": "map the code to added/removed; all rows are 1 (added)",
+        "standard": true
+      },
+      "service_id": {
+        "datatype": "xsd:string",
+        "maps_to": "service day selection",
+        "meaning": "Identifier of the service pattern that the date exception applies to",
+        "normalization": "none; must match trips.service_id",
+        "standard": true
+      }
+    },
+    "feed_info.txt": {
+      "feed_lang": {
+        "datatype": "xsd:language",
+        "maps_to": "not modeled",
+        "meaning": "Default language of the feed",
+        "normalization": "lowercase",
+        "standard": true
+      },
+      "feed_publisher_name": {
+        "datatype": "xsd:string",
+        "maps_to": "Designative Name",
+        "meaning": "Name of the organization publishing the feed",
+        "normalization": "trim whitespace",
+        "standard": true
+      },
+      "feed_publisher_url": {
+        "datatype": "xsd:anyURI",
+        "maps_to": "not modeled",
+        "meaning": "Website of the feed publisher",
+        "normalization": "validate URL; http scheme could be upgraded to https",
+        "standard": true
+      },
+      "feed_timezone": {
+        "datatype": "xsd:string",
+        "maps_to": "not modeled",
+        "meaning": "Time zone of the feed. This is not a GTFS Schedule column and duplicates agency_timezone",
+        "normalization": "if retained, replace the space with an underscore to get a valid IANA ID (America/New_York); otherwise drop it and use agency_timezone",
+        "standard": false
+      },
+      "feed_version": {
+        "datatype": "xsd:string",
+        "maps_to": "GTFS Record (Information Bearing Entity)",
+        "meaning": "Version string of this feed publication (GO203_26)",
+        "normalization": "none",
+        "standard": true
+      }
+    },
+    "routes.txt": {
+      "route_color": {
+        "datatype": "xsd:hexBinary",
+        "maps_to": "not modeled",
+        "meaning": "Hex color for the route (presentation)",
+        "normalization": "uppercase hex without #",
+        "standard": true
+      },
+      "route_id": {
+        "datatype": "xsd:string",
+        "maps_to": "Arbitrary Identifier",
+        "meaning": "Identifier of the route",
+        "normalization": "cast the inferred integer back to a string; it is an identifier, not a number",
+        "standard": true
+      },
+      "route_long_name": {
+        "datatype": "xsd:string",
+        "maps_to": "Designative Name",
+        "meaning": "Full name of the route (Port Washington Branch)",
+        "normalization": "trim whitespace",
+        "standard": true
+      },
+      "route_text_color": {
+        "datatype": "xsd:hexBinary",
+        "maps_to": "not modeled",
+        "meaning": "Hex text color to display over route_color (presentation)",
+        "normalization": "uppercase hex without #",
+        "standard": true
+      },
+      "route_type": {
+        "datatype": "xsd:integer",
+        "maps_to": "routeTypeCode",
+        "meaning": "GTFS transport mode code; 2 = Rail",
+        "normalization": "validate against the GTFS enumeration (2 is valid); map to the code vocabulary",
+        "standard": true
+      }
+    },
+    "stop_times.txt": {
+      "arrival_time": {
+        "datatype": "xsd:string",
+        "maps_to": "Time of Day Identifier",
+        "meaning": "Scheduled arrival time at the stop, as local time of day relative to the service day",
+        "normalization": "keep HH:MM:SS as a string because hours can be 24 or more. To get an xsd:dateTime, add the offset to the service date at 12:00 minus 12h in agency_timezone. Do not use xsd:time",
+        "standard": true
+      },
+      "departure_time": {
+        "datatype": "xsd:string",
+        "maps_to": "Time of Day Identifier",
+        "meaning": "Scheduled departure time from the stop, as local time of day relative to the service day",
+        "normalization": "same rule as arrival_time; here arrival equals departure (no dwell)",
+        "standard": true
+      },
+      "drop_off_type": {
+        "datatype": "xsd:integer",
+        "maps_to": "not modeled",
+        "meaning": "Drop-off rule; 0 = regular drop-off",
+        "normalization": "none; constant 0 in this feed",
+        "standard": true
+      },
+      "pickup_type": {
+        "datatype": "xsd:integer",
+        "maps_to": "not modeled",
+        "meaning": "Pickup rule; 0 = regular pickup",
+        "normalization": "none; constant 0 in this feed",
+        "standard": true
+      },
+      "stop_id": {
+        "datatype": "xsd:string",
+        "maps_to": "is about",
+        "meaning": "Stop (station) served by this scheduled stop",
+        "normalization": "cast the integer back to a string; must match stops.stop_id",
+        "standard": true
+      },
+      "stop_sequence": {
+        "datatype": "xsd:nonNegativeInteger",
+        "maps_to": "stopSequence",
+        "meaning": "Order of the stop within the trip",
+        "normalization": "must increase along each trip; values need not be contiguous",
+        "standard": true
+      },
+      "trip_id": {
+        "datatype": "xsd:string",
+        "maps_to": "continuant part of",
+        "meaning": "Trip that this scheduled stop belongs to",
+        "normalization": "none; must match trips.trip_id",
+        "standard": true
+      }
+    },
+    "stops.txt": {
+      "stop_code": {
+        "datatype": "xsd:string",
+        "maps_to": "Code Identifier",
+        "meaning": "Short public station code (e.g. ADL, BDY)",
+        "normalization": "uppercase and trim",
+        "standard": true
+      },
+      "stop_id": {
+        "datatype": "xsd:string",
+        "maps_to": "Arbitrary Identifier",
+        "meaning": "Identifier of the stop/station",
+        "normalization": "cast the integer to a string",
+        "standard": true
+      },
+      "stop_lat": {
+        "datatype": "xsd:decimal",
+        "maps_to": "has latitude value",
+        "meaning": "WGS84 latitude of the station",
+        "normalization": "validate range -90..90; values have mixed precision, so keep the decimal as given",
+        "standard": true
+      },
+      "stop_lon": {
+        "datatype": "xsd:decimal",
+        "maps_to": "has longitude value",
+        "meaning": "WGS84 longitude of the station",
+        "normalization": "validate range -180..180; values have mixed precision, so keep the decimal as given",
+        "standard": true
+      },
+      "stop_name": {
+        "datatype": "xsd:string",
+        "maps_to": "Designative Name",
+        "meaning": "Station name",
+        "normalization": "trim whitespace",
+        "standard": true
+      },
+      "stop_url": {
+        "datatype": "xsd:anyURI",
+        "maps_to": "not modeled",
+        "meaning": "Web page for the station",
+        "normalization": "validate URL",
+        "standard": true
+      },
+      "wheelchair_boarding": {
+        "datatype": "xsd:integer",
+        "maps_to": "wheelchairBoardingCode",
+        "meaning": "Wheelchair boarding accessibility; 0 = unknown, 1 = accessible, 2 = not accessible",
+        "normalization": "validate code in {0,1,2} (values 1 and 2 found); map to the code vocabulary",
+        "standard": true
+      }
+    },
+    "transfers.txt": {
+      "from_stop_id": {
+        "datatype": "xsd:string",
+        "maps_to": "not modeled",
+        "meaning": "Stop where a transfer starts",
+        "normalization": "drop the row because the column is 100% empty",
+        "standard": true
+      },
+      "from_trip_id": {
+        "datatype": "xsd:string",
+        "maps_to": "not modeled",
+        "meaning": "Trip the transfer starts from",
+        "normalization": "drop the empty row",
+        "standard": true
+      },
+      "min_transfer_time": {
+        "datatype": "xsd:nonNegativeInteger",
+        "maps_to": "not modeled",
+        "meaning": "Minimum transfer time in seconds",
+        "normalization": "drop the empty row",
+        "standard": true
+      },
+      "to_stop_id": {
+        "datatype": "xsd:string",
+        "maps_to": "not modeled",
+        "meaning": "Stop where a transfer ends",
+        "normalization": "drop the empty row",
+        "standard": true
+      },
+      "to_trip_id": {
+        "datatype": "xsd:string",
+        "maps_to": "not modeled",
+        "meaning": "Trip the transfer goes to",
+        "normalization": "drop the empty row",
+        "standard": true
+      },
+      "transfer_type": {
+        "datatype": "xsd:integer",
+        "maps_to": "not modeled",
+        "meaning": "Type of transfer connection",
+        "normalization": "drop the empty row",
+        "standard": true
+      }
+    },
+    "trips.txt": {
+      "direction_id": {
+        "datatype": "xsd:integer",
+        "maps_to": "directionCode",
+        "meaning": "Travel direction; 0 or 1 (values are feed-defined)",
+        "normalization": "validate in {0,1}; map to the code vocabulary",
+        "standard": true
+      },
+      "peak_offpeak": {
+        "datatype": "xsd:boolean",
+        "maps_to": "isPeakService",
+        "meaning": "Local extension flag: 0/1 peak vs off-peak service",
+        "normalization": "confirm which value means peak (likely 1 = peak), then map 1 to true and 0 to false",
+        "standard": false
+      },
+      "route_id": {
+        "datatype": "xsd:string",
+        "maps_to": "continuant part of",
+        "meaning": "Route that the trip runs on",
+        "normalization": "cast the integer to a string; must match routes.route_id",
+        "standard": true
+      },
+      "service_id": {
+        "datatype": "xsd:string",
+        "maps_to": "service day selection",
+        "meaning": "Service pattern (calendar) under which the trip operates",
+        "normalization": "none; resolve through calendar_dates to get actual service dates",
+        "standard": true
+      },
+      "shape_id": {
+        "datatype": "xsd:string",
+        "maps_to": "not modeled",
+        "meaning": "Reference to the geometry (shape) of the trip path",
+        "normalization": "none; shapes.txt is absent from the feed so the reference is dangling",
+        "standard": true
+      },
+      "trip_headsign": {
+        "datatype": "xsd:string",
+        "maps_to": "headsignText",
+        "meaning": "Destination sign text shown to riders (Grand Central, Great Neck, Penn Station, ...)",
+        "normalization": "trim whitespace",
+        "standard": true
+      },
+      "trip_id": {
+        "datatype": "xsd:string",
+        "maps_to": "Arbitrary Identifier",
+        "meaning": "Unique identifier of the trip",
+        "normalization": "none",
+        "standard": true
+      },
+      "trip_short_name": {
+        "datatype": "xsd:string",
+        "maps_to": "Code Identifier",
+        "meaning": "Public train number (e.g. 1310)",
+        "normalization": "cast the integer to a string to keep it as an identifier",
+        "standard": true
+      }
+    }
+  },
+  "issues": [
+    {
+      "column": "feed_timezone",
+      "file": "feed_info.txt",
+      "issue": "Value 'America/New York' is not a valid IANA time zone ID (needs an underscore). The column itself is also not part of the GTFS Schedule reference, which defines agency_timezone for this purpose.",
+      "severity": "error"
+    },
+    {
+      "column": "peak_offpeak",
+      "file": "trips.txt",
+      "issue": "Non-standard column. The meaning of 0 and 1 is undocumented in the feed and must be confirmed before it is mapped to a boolean.",
+      "severity": "warning"
+    },
+    {
+      "column": "from_stop_id, to_stop_id, from_trip_id, to_trip_id, transfer_type, min_transfer_time",
+      "file": "transfers.txt",
+      "issue": "The single row is completely empty (all columns 100% null). It carries no information and would create a meaningless transfer record.",
+      "severity": "warning"
+    },
+    {
+      "column": "arrival_time, departure_time",
+      "file": "stop_times.txt",
+      "issue": "max_hour is 24, so some times are 24:00:00 or later. These are valid in GTFS but are not valid xsd:time. They must be interpreted relative to the service day and agency timezone, and rolled into the next calendar day when converting to dateTime.",
+      "severity": "warning"
+    },
+    {
+      "column": "service_id",
+      "file": "calendar_dates.txt",
+      "issue": "Six distinct service_ids exist but trips.txt references only 14C6A762. The other five have no trips in this feed. calendar.txt is also absent, so service is defined only by the added exception dates (all exception_type=1 on a single date, 20261201).",
+      "severity": "warning"
+    },
+    {
+      "column": "date",
+      "file": "calendar_dates.txt",
+      "issue": "Date is inferred as integer (20261201). It must be parsed as a YYYYMMDD string and converted to xsd:date. Avoid numeric handling.",
+      "severity": "info"
+    },
+    {
+      "column": "shape_id",
+      "file": "trips.txt",
+      "issue": "8 distinct shape_ids are referenced but shapes.txt is not in the feed, so they cannot be resolved. They are not modeled in the pattern.",
+      "severity": "info"
+    },
+    {
+      "column": "route_id, stop_id, trip_short_name",
+      "file": "routes.txt, stop_times.txt, stops.txt, trips.txt",
+      "issue": "Identifier columns were inferred as integer. They must be loaded as strings so they are not treated as numbers and leading zeros are not lost.",
+      "severity": "info"
+    },
+    {
+      "column": "stop_lat, stop_lon",
+      "file": "stops.txt",
+      "issue": "Coordinate precision is inconsistent (e.g. -73.687401 with 6 decimals vs -73.69521438 with 8). This is harmless, but keep the original decimal lexical form and do not round.",
+      "severity": "info"
+    },
+    {
+      "column": "wheelchair_boarding",
+      "file": "stops.txt",
+      "issue": "Only codes 1 and 2 are present, so some stations are explicitly not accessible. Both are valid codes, but 2 must not be confused with unknown (0).",
+      "severity": "info"
+    },
+    {
+      "column": "stop_sequence",
+      "file": "stop_times.txt",
+      "issue": "There are 14 distinct sequence values but 15 distinct stops. Trips use different stop patterns (branch, express/local), so a given stop does not have a fixed sequence number across trips.",
+      "severity": "info"
+    },
+    {
+      "column": "pickup_type, drop_off_type",
+      "file": "stop_times.txt",
+      "issue": "Both columns are constant 0 and add no information, so they are not modeled.",
+      "severity": "info"
+    },
+    {
+      "column": "feed_publisher_url",
+      "file": "feed_info.txt",
+      "issue": "Uses http while agency_url uses https. Also, feed_start_date and feed_end_date are missing, so the feed validity period is undeclared.",
+      "severity": "info"
+    }
+  ]
+}

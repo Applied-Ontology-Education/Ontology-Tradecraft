@@ -1,0 +1,15 @@
+# A TrainTripSpecification is a continuant part of an entity that is not a declared TransitRouteSpecification.
+# severity: error
+PREFIX p6: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/>
+PREFIX id: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/id/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+SELECT ?focus ?message WHERE {
+  ?focus a p6:TrainTripSpecification ; obo:BFO_0000176 ?route .
+  FILTER NOT EXISTS { ?route a p6:TransitRouteSpecification }
+  BIND(CONCAT("Trip is part of ", STR(?route), " which is not a declared p6:TransitRouteSpecification") AS ?message)
+}

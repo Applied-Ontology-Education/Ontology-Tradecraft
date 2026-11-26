@@ -1,0 +1,8 @@
+subject,pattern,property,filler,rationale,decision,reason
+p6:RailStation,some,obo:BFO_0000171,cco:ont00000487,Every rail station is located in some Geospatial Location (station pattern).,accepted,
+p6:StationCoordinateRecord,some,cco:ont00001808,cco:ont00000487,"By definition, a station coordinate record is about the Geospatial Location of a station.",accepted,
+p6:TrainTripSpecification,some,obo:BFO_0000176,p6:TransitRouteSpecification,"Per the trip pattern, every train trip specification is a continuant part of its transit route specification.",accepted,
+p6:TrainTripSpecification,some,cco:ont00001942,cco:ont00000890,"A train trip specification prescribes one scheduled run of a train, which is an Act of Travel.",rejected,not supported by the data: 103 instances of the subject lack this link
+p6:ScheduledStopSpecification,some,obo:BFO_0000176,p6:TrainTripSpecification,"By definition and the stop_time pattern, a scheduled stop specification is part of a train trip specification.",accepted,
+p6:ScheduledStopSpecification,some,cco:ont00001808,p6:RailStation,A scheduled stop specification is about the one rail station where the stop occurs.,accepted,
+p6:ScheduledStopSpecification,some,obo:BFO_0000178,cco:ont00000827,A stop specification has arrival and departure Time of Day Identifiers as continuant parts.,accepted,

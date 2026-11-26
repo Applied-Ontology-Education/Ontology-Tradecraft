@@ -1,0 +1,11 @@
+# HUMAN-AUTHORED check (added after fault-injection showed no LLM-generated check covers time-zone validity)
+# Every Time Zone Identifier used by a GTFS record must be a syntactically valid IANA zone name (Area/Location, no spaces).
+# severity: error
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+SELECT ?focus ?message WHERE {
+  ?focus cco:ont00001908 ?zone .
+  ?carrier obo:BFO_0000101 ?zone ; cco:ont00001765 ?value .
+  FILTER(!REGEX(STR(?value), "^[A-Za-z]+(/[A-Za-z0-9_+-]+)+$"))
+  BIND(CONCAT("invalid IANA time zone name: '", STR(?value), "'") AS ?message)
+}

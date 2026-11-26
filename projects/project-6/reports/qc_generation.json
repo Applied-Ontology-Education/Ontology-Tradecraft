@@ -1,0 +1,269 @@
+{
+  "generated": {
+    "shacl": 8,
+    "sparql": 9
+  },
+  "kept": {
+    "shacl": 7,
+    "sparql": 9
+  },
+  "faults_caught": 9,
+  "faults_total": 10,
+  "coverage": {
+    "missing_station_name": [
+      "RailStationShape"
+    ],
+    "departure_before_arrival": [
+      "arrival_after_departure",
+      "time_datetime_mismatch"
+    ],
+    "coordinate_out_of_range": [
+      "StationCoordinateShape",
+      "coordinate_range"
+    ],
+    "duplicate_stop_sequence": [
+      "duplicate_stop_sequence"
+    ],
+    "dangling_station_reference": [
+      "ScheduledStopShape",
+      "stop_station_missing"
+    ],
+    "malformed_time_text": [
+      "TimeOfDayShape",
+      "time_text_format"
+    ],
+    "non_monotonic_times": [
+      "stop_time_order_vs_sequence",
+      "time_datetime_mismatch"
+    ],
+    "invalid_agency_timezone": [],
+    "trip_without_stops": [
+      "ScheduledStopShape"
+    ],
+    "wrong_datatype": [
+      "ScheduledStopShape"
+    ]
+  },
+  "artifacts": [
+    {
+      "kind": "shacl",
+      "name": "RailStationShape",
+      "description": "A RailStation is located in exactly one Geospatial Location, has exactly one Designative Name and one Arbitrary Identifier, at most one Code Identifier, and any wheelchair boarding code is an integer 0-2.",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "missing_station_name"
+      ],
+      "status": "kept"
+    },
+    {
+      "kind": "shacl",
+      "name": "StationCoordinateShape",
+      "description": "A StationCoordinateRecord is about exactly one Geospatial Location and is carried by exactly one GTFSRecord with a single in-range decimal latitude and longitude.",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "coordinate_out_of_range"
+      ],
+      "status": "kept"
+    },
+    {
+      "kind": "shacl",
+      "name": "IdentifierShape",
+      "description": "Designative Names, Code Identifiers and Arbitrary Identifiers each designate exactly one entity and are carried by exactly one GTFSRecord with a single non-empty string text value.",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [],
+      "status": "kept"
+    },
+    {
+      "kind": "shacl",
+      "name": "AgencyTimeZoneShape",
+      "description": "An Organization is designated by a Designative Name; a GTFSRecord uses exactly one Time Zone Identifier, which is carried by a record with a single IANA-style text value.",
+      "clean_findings": 55,
+      "known_issue_findings": 1,
+      "false_positives": [
+        "https://www.commoncoreontologies.org/ont00001392",
+        "https://www.commoncoreontologies.org/ont00001395",
+        "https://www.commoncoreontologies.org/ont00001403",
+        "https://www.commoncoreontologies.org/ont00001405",
+        "https://www.commoncoreontologies.org/ont00001406"
+      ],
+      "catches": [],
+      "status": "rejected",
+      "reason": "flags 54 clean-data nodes (false positives)"
+    },
+    {
+      "kind": "shacl",
+      "name": "RouteShape",
+      "description": "A TransitRouteSpecification is carried by a GTFSRecord with one integer routeTypeCode and is designated by exactly one Designative Name.",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [],
+      "status": "kept"
+    },
+    {
+      "kind": "shacl",
+      "name": "TripShape",
+      "description": "A TrainTripSpecification is part of exactly one TransitRouteSpecification, has one Code Identifier and one Arbitrary Identifier, and is carried by a GTFSRecord with valid directionCode, isPeakService and headsignText.",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [],
+      "status": "kept"
+    },
+    {
+      "kind": "shacl",
+      "name": "ScheduledStopShape",
+      "description": "A ScheduledStopSpecification is part of exactly one trip, about exactly one RailStation, carried by a record with a non-negative integer stopSequence, and has exactly one arrival and one departure Time of Day Identifier as parts.",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "dangling_station_reference",
+        "trip_without_stops",
+        "wrong_datatype"
+      ],
+      "status": "kept"
+    },
+    {
+      "kind": "shacl",
+      "name": "TimeOfDayShape",
+      "description": "A Time of Day Identifier is labelled arrival/departure time, is part of exactly one stop, and is carried by exactly one GTFSRecord with a raw GTFS time string (may exceed 24h) and a New York offset xsd:dateTime.",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "malformed_time_text"
+      ],
+      "status": "kept"
+    },
+    {
+      "kind": "sparql",
+      "name": "duplicate_stop_sequence",
+      "description": "Two ScheduledStopSpecifications of the same trip carry the same stopSequence value.",
+      "severity": "error",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "duplicate_stop_sequence"
+      ],
+      "status": "kept",
+      "sparql": "SELECT ?focus ?message WHERE {\n  ?focus a p6:ScheduledStopSpecification ; obo:BFO_0000176 ?trip .\n  ?other a p6:ScheduledStopSpecification ; obo:BFO_0000176 ?trip .\n  ?r1 obo:BFO_0000101 ?focus ; p6:stopSequence ?s1 .\n  ?r2 obo:BFO_0000101 ?other ; p6:stopSequence ?s2 .\n  FILTER(?s1 = ?s2 && STR(?focus) < STR(?other))\n  BIND(CONCAT(\"Stop shares stopSequence \", STR(?s1), \" with \", STR(?other), \" in trip \", STR(?trip)) AS ?message)\n}"
+    },
+    {
+      "kind": "sparql",
+      "name": "stop_station_missing",
+      "description": "A ScheduledStopSpecification is about an entity that is not declared as a p6:RailStation.",
+      "severity": "error",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "dangling_station_reference"
+      ],
+      "status": "kept",
+      "sparql": "SELECT ?focus ?message WHERE {\n  ?focus a p6:ScheduledStopSpecification ; cco:ont00001808 ?station .\n  FILTER NOT EXISTS { ?station a p6:RailStation }\n  BIND(CONCAT(\"Stop is about \", STR(?station), \" which is not a declared p6:RailStation\") AS ?message)\n}"
+    },
+    {
+      "kind": "sparql",
+      "name": "trip_route_missing",
+      "description": "A TrainTripSpecification is a continuant part of an entity that is not a declared TransitRouteSpecification.",
+      "severity": "error",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [],
+      "status": "kept",
+      "sparql": "SELECT ?focus ?message WHERE {\n  ?focus a p6:TrainTripSpecification ; obo:BFO_0000176 ?route .\n  FILTER NOT EXISTS { ?route a p6:TransitRouteSpecification }\n  BIND(CONCAT(\"Trip is part of \", STR(?route), \" which is not a declared p6:TransitRouteSpecification\") AS ?message)\n}"
+    },
+    {
+      "kind": "sparql",
+      "name": "arrival_after_departure",
+      "description": "The normalized arrival datetime of a stop is later than its normalized departure datetime.",
+      "severity": "error",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "departure_before_arrival"
+      ],
+      "status": "kept",
+      "sparql": "SELECT ?focus ?message WHERE {\n  ?focus a p6:ScheduledStopSpecification .\n  ?arr a cco:ont00000827 ; rdfs:label \"arrival time\" ; obo:BFO_0000176 ?focus .\n  ?dep a cco:ont00000827 ; rdfs:label \"departure time\" ; obo:BFO_0000176 ?focus .\n  ?ra obo:BFO_0000101 ?arr ; cco:ont00001767 ?adt .\n  ?rd obo:BFO_0000101 ?dep ; cco:ont00001767 ?ddt .\n  FILTER(?adt > ?ddt)\n  BIND(CONCAT(\"Arrival \", STR(?adt), \" is after departure \", STR(?ddt)) AS ?message)\n}"
+    },
+    {
+      "kind": "sparql",
+      "name": "stop_time_order_vs_sequence",
+      "description": "Within a trip, a stop with a higher stopSequence arrives before a lower-sequence stop departs.",
+      "severity": "error",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "non_monotonic_times"
+      ],
+      "status": "kept",
+      "sparql": "SELECT ?focus ?message WHERE {\n  ?earlier a p6:ScheduledStopSpecification ; obo:BFO_0000176 ?trip .\n  ?focus a p6:ScheduledStopSpecification ; obo:BFO_0000176 ?trip .\n  ?r1 obo:BFO_0000101 ?earlier ; p6:stopSequence ?s1 .\n  ?r2 obo:BFO_0000101 ?focus ; p6:stopSequence ?s2 .\n  ?dep a cco:ont00000827 ; rdfs:label \"departure time\" ; obo:BFO_0000176 ?earlier .\n  ?arr a cco:ont00000827 ; rdfs:label \"arrival time\" ; obo:BFO_0000176 ?focus .\n  ?rd obo:BFO_0000101 ?dep ; cco:ont00001767 ?ddt .\n  ?ra obo:BFO_0000101 ?arr ; cco:ont00001767 ?adt .\n  FILTER(?s1 < ?s2 && ?adt < ?ddt)\n  BIND(CONCAT(\"Stop seq \", STR(?s2), \" arrives at \", STR(?adt), \" before stop seq \", STR(?s1), \" (\", STR(?earlier), \") departs at \", STR(?ddt)) AS ?message)\n}"
+    },
+    {
+      "kind": "sparql",
+      "name": "time_text_format",
+      "description": "Raw GTFS time text on a Time of Day Identifier carrier is not in H:MM:SS or HH:MM:SS format.",
+      "severity": "error",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "malformed_time_text"
+      ],
+      "status": "kept",
+      "sparql": "SELECT ?focus ?message WHERE {\n  ?tod a cco:ont00000827 .\n  ?focus obo:BFO_0000101 ?tod ; cco:ont00001765 ?t .\n  FILTER(!REGEX(STR(?t), \"^[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]$\"))\n  BIND(CONCAT(\"Invalid raw GTFS time text: '\", STR(?t), \"'\") AS ?message)\n}"
+    },
+    {
+      "kind": "sparql",
+      "name": "time_datetime_mismatch",
+      "description": "Normalized datetime disagrees with the raw time text (hour mod 24, minute, second) or does not use a New York UTC offset (-05:00 or -04:00).",
+      "severity": "error",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "departure_before_arrival",
+        "non_monotonic_times"
+      ],
+      "status": "kept",
+      "sparql": "SELECT ?focus ?message WHERE {\n  ?tod a cco:ont00000827 .\n  ?focus obo:BFO_0000101 ?tod ; cco:ont00001765 ?t ; cco:ont00001767 ?dt .\n  FILTER(REGEX(STR(?t), \"^[0-9]{1,2}:[0-5][0-9]:[0-5][0-9]$\"))\n  BIND(xsd:integer(STRBEFORE(STR(?t), \":\")) AS ?h)\n  BIND(xsd:integer(STRBEFORE(STRAFTER(STR(?t), \":\"), \":\")) AS ?m)\n  BIND(xsd:integer(STRAFTER(STRAFTER(STR(?t), \":\"), \":\")) AS ?s)\n  BIND(?h - 24 * FLOOR(?h / 24) AS ?eh)\n  FILTER(HOURS(?dt) != ?eh || MINUTES(?dt) != ?m || SECONDS(?dt) != ?s || !(TZ(?dt) IN (\"-05:00\", \"-04:00\")))\n  BIND(CONCAT(\"Raw time '\", STR(?t), \"' is inconsistent with datetime \", STR(?dt), \" (expected time of day and offset -05:00/-04:00)\") AS ?message)\n}"
+    },
+    {
+      "kind": "sparql",
+      "name": "code_list_values",
+      "description": "directionCode, wheelchairBoardingCode or routeTypeCode holds a value outside its GTFS code list or is not an integer.",
+      "severity": "error",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [],
+      "status": "kept",
+      "sparql": "SELECT ?focus ?message WHERE {\n  {\n    ?focus p6:directionCode ?v .\n    FILTER(datatype(?v) != xsd:integer || ?v NOT IN (0, 1))\n    BIND(CONCAT(\"directionCode must be 0 or 1, found \", STR(?v)) AS ?message)\n  }\n  UNION\n  {\n    ?focus p6:wheelchairBoardingCode ?v .\n    FILTER(datatype(?v) != xsd:integer || ?v NOT IN (0, 1, 2))\n    BIND(CONCAT(\"wheelchairBoardingCode must be 0, 1 or 2, found \", STR(?v)) AS ?message)\n  }\n  UNION\n  {\n    ?focus p6:routeTypeCode ?v .\n    FILTER(datatype(?v) != xsd:integer || !((?v >= 0 && ?v <= 12) || (?v >= 100 && ?v <= 1799)))\n    BIND(CONCAT(\"routeTypeCode is not a valid GTFS route_type, found \", STR(?v)) AS ?message)\n  }\n}"
+    },
+    {
+      "kind": "sparql",
+      "name": "coordinate_range",
+      "description": "Latitude is outside -90..90, longitude is outside -180..180, or a value is not an xsd:decimal.",
+      "severity": "error",
+      "clean_findings": 0,
+      "known_issue_findings": 0,
+      "false_positives": [],
+      "catches": [
+        "coordinate_out_of_range"
+      ],
+      "status": "kept",
+      "sparql": "SELECT ?focus ?message WHERE {\n  {\n    ?focus cco:ont00001766 ?v .\n    FILTER(datatype(?v) != xsd:decimal || ?v < -90 || ?v > 90)\n    BIND(CONCAT(\"Latitude invalid or out of range: \", STR(?v)) AS ?message)\n  }\n  UNION\n  {\n    ?focus cco:ont00001764 ?v .\n    FILTER(datatype(?v) != xsd:decimal || ?v < -180 || ?v > 180)\n    BIND(CONCAT(\"Longitude invalid or out of range: \", STR(?v)) AS ?message)\n  }\n}"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+file,column,approved,llm_maps_to,llm_standard,llm_normalization,agrees
+agency.txt,agency_id,Arbitrary Identifier of Organization,Arbitrary Identifier,True,none; trim whitespace,True
+agency.txt,agency_name,Designative Name of Organization,Designative Name,True,trim whitespace,True
+agency.txt,agency_url,not modeled,not modeled,True,validate as absolute URL,True
+agency.txt,agency_timezone,Time Zone Identifier used by agency record,Time Zone Identifier,True,validate against the IANA tz database (America/New_York is valid),True
+agency.txt,agency_lang,not modeled,not modeled,True,lowercase,True
+agency.txt,agency_phone,not modeled,not modeled,True,none; keep as string and do not cast to number,True
+feed_info.txt,feed_publisher_name,not modeled,Designative Name,True,trim whitespace,False
+feed_info.txt,feed_publisher_url,not modeled,not modeled,True,validate URL; http scheme could be upgraded to https,True
+feed_info.txt,feed_timezone,Time Zone Identifier used by feed record (raw; QC-checked),not modeled,False,"if retained, replace the space with an underscore to get a valid IANA ID (America/New_York); otherwise drop it and use agency_timezone",False
+feed_info.txt,feed_lang,not modeled,not modeled,True,lowercase,True
+feed_info.txt,feed_version,Arbitrary Identifier of feed record,GTFS Record (Information Bearing Entity),True,none,False
+routes.txt,route_id,Arbitrary Identifier of TransitRouteSpecification,Arbitrary Identifier,True,"cast the inferred integer back to a string; it is an identifier, not a number",True
+routes.txt,route_long_name,Designative Name of TransitRouteSpecification,Designative Name,True,trim whitespace,True
+routes.txt,route_type,routeTypeCode on route record (2 = rail),routeTypeCode,True,validate against the GTFS enumeration (2 is valid); map to the code vocabulary,True
+routes.txt,route_color,not modeled,not modeled,True,uppercase hex without #,True
+routes.txt,route_text_color,not modeled,not modeled,True,uppercase hex without #,True
+stops.txt,stop_id,Arbitrary Identifier of RailStation,Arbitrary Identifier,True,cast the integer to a string,True
+stops.txt,stop_code,Code Identifier of RailStation,Code Identifier,True,uppercase and trim,True
+stops.txt,stop_name,Designative Name of RailStation,Designative Name,True,trim whitespace,True
+stops.txt,stop_lat,has latitude value on StationCoordinateRecord carrier,has latitude value,True,"validate range -90..90; values have mixed precision, so keep the decimal as given",True
+stops.txt,stop_lon,has longitude value on StationCoordinateRecord carrier,has longitude value,True,"validate range -180..180; values have mixed precision, so keep the decimal as given",True
+stops.txt,stop_url,not modeled,not modeled,True,validate URL,True
+stops.txt,wheelchair_boarding,wheelchairBoardingCode on station record (0/1/2),wheelchairBoardingCode,True,"validate code in {0,1,2} (values 1 and 2 found); map to the code vocabulary",True
+trips.txt,route_id,TrainTripSpecification continuant part of TransitRouteSpecification,continuant part of,True,cast the integer to a string; must match routes.route_id,True
+trips.txt,service_id,used to select the service day; not modeled,service day selection,True,none; resolve through calendar_dates to get actual service dates,False
+trips.txt,trip_id,Arbitrary Identifier of TrainTripSpecification,Arbitrary Identifier,True,none,True
+trips.txt,trip_headsign,headsignText on trip record,headsignText,True,trim whitespace,True
+trips.txt,trip_short_name,Code Identifier (train number) of TrainTripSpecification,Code Identifier,True,cast the integer to a string to keep it as an identifier,True
+trips.txt,direction_id,directionCode on trip record (0/1),directionCode,True,"validate in {0,1}; map to the code vocabulary",True
+trips.txt,shape_id,not modeled,not modeled,True,none; shapes.txt is absent from the feed so the reference is dangling,True
+trips.txt,peak_offpeak,NON-STANDARD (LIRR extension): isPeakService boolean on trip record,isPeakService,False,"confirm which value means peak (likely 1 = peak), then map 1 to true and 0 to false",True
+stop_times.txt,trip_id,ScheduledStopSpecification continuant part of TrainTripSpecification,continuant part of,True,none; must match trips.trip_id,True
+stop_times.txt,arrival_time,"Time of Day Identifier (arrival), raw text + normalized datetime",Time of Day Identifier,True,"keep HH:MM:SS as a string because hours can be 24 or more. To get an xsd:dateTime, add the offset to the service date at 12:00 minus 12h in agency_timezone. Do not use xsd:time",True
+stop_times.txt,departure_time,"Time of Day Identifier (departure), raw text + normalized datetime",Time of Day Identifier,True,same rule as arrival_time; here arrival equals departure (no dwell),True
+stop_times.txt,stop_id,ScheduledStopSpecification is about RailStation,is about,True,cast the integer back to a string; must match stops.stop_id,True
+stop_times.txt,stop_sequence,stopSequence on stop-time record,stopSequence,True,must increase along each trip; values need not be contiguous,True
+stop_times.txt,pickup_type,not modeled,not modeled,True,none; constant 0 in this feed,True
+stop_times.txt,drop_off_type,not modeled,not modeled,True,none; constant 0 in this feed,True
+calendar_dates.txt,service_id,selects trips for the service day,service day selection,True,none; must match trips.service_id,True
+calendar_dates.txt,date,service day used to normalize times,service day selection,True,parse the integer 20261201 as a string and convert to ISO 8601 (2026-12-01),True
+calendar_dates.txt,exception_type,1 = service added on that date,service day selection,True,map the code to added/removed; all rows are 1 (added),False
+transfers.txt,from_stop_id,not modeled,not modeled,True,drop the row because the column is 100% empty,True
+transfers.txt,to_stop_id,not modeled,not modeled,True,drop the empty row,True
+transfers.txt,from_trip_id,not modeled,not modeled,True,drop the empty row,True
+transfers.txt,to_trip_id,not modeled,not modeled,True,drop the empty row,True
+transfers.txt,transfer_type,not modeled,not modeled,True,drop the empty row,True
+transfers.txt,min_transfer_time,not modeled,not modeled,True,drop the empty row,True

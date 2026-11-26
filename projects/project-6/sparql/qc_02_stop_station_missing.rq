@@ -1,0 +1,15 @@
+# A ScheduledStopSpecification is about an entity that is not declared as a p6:RailStation.
+# severity: error
+PREFIX p6: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/>
+PREFIX id: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/id/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+SELECT ?focus ?message WHERE {
+  ?focus a p6:ScheduledStopSpecification ; cco:ont00001808 ?station .
+  FILTER NOT EXISTS { ?station a p6:RailStation }
+  BIND(CONCAT("Stop is about ", STR(?station), " which is not a declared p6:RailStation") AS ?message)
+}

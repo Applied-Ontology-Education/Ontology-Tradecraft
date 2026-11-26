@@ -1,0 +1,490 @@
+{
+  "agency.txt": {
+    "rows": 1,
+    "columns": {
+      "agency_id": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "LI"
+        ],
+        "gtfs_standard": true
+      },
+      "agency_name": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "Long Island Rail Road"
+        ],
+        "gtfs_standard": true
+      },
+      "agency_url": {
+        "type": "url",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "https://new.mta.info/agency/long-island-rail-road"
+        ],
+        "gtfs_standard": true
+      },
+      "agency_timezone": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "America/New_York"
+        ],
+        "gtfs_standard": true
+      },
+      "agency_lang": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "en"
+        ],
+        "gtfs_standard": true
+      },
+      "agency_phone": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "718-217-5477"
+        ],
+        "gtfs_standard": true
+      }
+    }
+  },
+  "calendar_dates.txt": {
+    "rows": 6,
+    "columns": {
+      "service_id": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 6,
+        "examples": [
+          "121752AA",
+          "14C6A762",
+          "2781441E"
+        ],
+        "gtfs_standard": true
+      },
+      "date": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "20261201"
+        ],
+        "gtfs_standard": true
+      },
+      "exception_type": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "1"
+        ],
+        "gtfs_standard": true
+      }
+    }
+  },
+  "feed_info.txt": {
+    "rows": 1,
+    "columns": {
+      "feed_publisher_name": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "Long Island Rail Road"
+        ],
+        "gtfs_standard": true
+      },
+      "feed_publisher_url": {
+        "type": "url",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "http://web.mta.info/lirr"
+        ],
+        "gtfs_standard": true
+      },
+      "feed_timezone": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "America/New York"
+        ],
+        "gtfs_standard": false
+      },
+      "feed_lang": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "en"
+        ],
+        "gtfs_standard": true
+      },
+      "feed_version": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "GO203_26"
+        ],
+        "gtfs_standard": true
+      }
+    }
+  },
+  "routes.txt": {
+    "rows": 1,
+    "columns": {
+      "route_id": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "9"
+        ],
+        "gtfs_standard": true
+      },
+      "route_long_name": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "Port Washington Branch"
+        ],
+        "gtfs_standard": true
+      },
+      "route_type": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "2"
+        ],
+        "gtfs_standard": true
+      },
+      "route_color": {
+        "type": "hex_color",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "C60C30"
+        ],
+        "gtfs_standard": true
+      },
+      "route_text_color": {
+        "type": "hex_color",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "FFFFFF"
+        ],
+        "gtfs_standard": true
+      }
+    }
+  },
+  "stop_times.txt": {
+    "rows": 1253,
+    "columns": {
+      "trip_id": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 103,
+        "examples": [
+          "GO203_26_1310_2971_METS",
+          "GO203_26_1315_2971_METS",
+          "GO203_26_1319_2971_METS"
+        ],
+        "gtfs_standard": true
+      },
+      "arrival_time": {
+        "type": "gtfs_time",
+        "null_share": 0.0,
+        "distinct": 914,
+        "examples": [
+          "00:27:00",
+          "00:37:00",
+          "00:39:00"
+        ],
+        "gtfs_standard": true,
+        "max_hour": 24
+      },
+      "departure_time": {
+        "type": "gtfs_time",
+        "null_share": 0.0,
+        "distinct": 914,
+        "examples": [
+          "00:27:00",
+          "00:37:00",
+          "00:39:00"
+        ],
+        "gtfs_standard": true,
+        "max_hour": 24
+      },
+      "stop_id": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 15,
+        "examples": [
+          "11",
+          "120",
+          "130"
+        ],
+        "gtfs_standard": true
+      },
+      "stop_sequence": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 14,
+        "examples": [
+          "1",
+          "10",
+          "11"
+        ],
+        "gtfs_standard": true
+      },
+      "pickup_type": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "0"
+        ],
+        "gtfs_standard": true
+      },
+      "drop_off_type": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "0"
+        ],
+        "gtfs_standard": true
+      }
+    }
+  },
+  "stops.txt": {
+    "rows": 15,
+    "columns": {
+      "stop_id": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 15,
+        "examples": [
+          "11",
+          "120",
+          "130"
+        ],
+        "gtfs_standard": true
+      },
+      "stop_code": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 15,
+        "examples": [
+          "ADL",
+          "BDY",
+          "BSD"
+        ],
+        "gtfs_standard": true
+      },
+      "stop_name": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 15,
+        "examples": [
+          "Auburndale",
+          "Bayside",
+          "Broadway"
+        ],
+        "gtfs_standard": true
+      },
+      "stop_lat": {
+        "type": "decimal",
+        "null_share": 0.0,
+        "distinct": 15,
+        "examples": [
+          "40.74585067",
+          "40.75058844",
+          "40.75239835"
+        ],
+        "gtfs_standard": true
+      },
+      "stop_lon": {
+        "type": "decimal",
+        "null_share": 0.0,
+        "distinct": 15,
+        "examples": [
+          "-73.687401",
+          "-73.69521438",
+          "-73.69989909"
+        ],
+        "gtfs_standard": true
+      },
+      "stop_url": {
+        "type": "url",
+        "null_share": 0.0,
+        "distinct": 15,
+        "examples": [
+          "https://new.mta.info/mta-stations/auburndale",
+          "https://new.mta.info/mta-stations/bayside",
+          "https://new.mta.info/mta-stations/broadway"
+        ],
+        "gtfs_standard": true
+      },
+      "wheelchair_boarding": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 2,
+        "examples": [
+          "1",
+          "2"
+        ],
+        "gtfs_standard": true
+      }
+    }
+  },
+  "transfers.txt": {
+    "rows": 1,
+    "columns": {
+      "from_stop_id": {
+        "type": "empty",
+        "null_share": 1.0,
+        "distinct": 0,
+        "examples": [],
+        "gtfs_standard": true
+      },
+      "to_stop_id": {
+        "type": "empty",
+        "null_share": 1.0,
+        "distinct": 0,
+        "examples": [],
+        "gtfs_standard": true
+      },
+      "from_trip_id": {
+        "type": "empty",
+        "null_share": 1.0,
+        "distinct": 0,
+        "examples": [],
+        "gtfs_standard": true
+      },
+      "to_trip_id": {
+        "type": "empty",
+        "null_share": 1.0,
+        "distinct": 0,
+        "examples": [],
+        "gtfs_standard": true
+      },
+      "transfer_type": {
+        "type": "empty",
+        "null_share": 1.0,
+        "distinct": 0,
+        "examples": [],
+        "gtfs_standard": true
+      },
+      "min_transfer_time": {
+        "type": "empty",
+        "null_share": 1.0,
+        "distinct": 0,
+        "examples": [],
+        "gtfs_standard": true
+      }
+    }
+  },
+  "trips.txt": {
+    "rows": 103,
+    "columns": {
+      "route_id": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "9"
+        ],
+        "gtfs_standard": true
+      },
+      "service_id": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 1,
+        "examples": [
+          "14C6A762"
+        ],
+        "gtfs_standard": true
+      },
+      "trip_id": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 103,
+        "examples": [
+          "GO203_26_1310_2971_METS",
+          "GO203_26_1315_2971_METS",
+          "GO203_26_1319_2971_METS"
+        ],
+        "gtfs_standard": true
+      },
+      "trip_headsign": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 4,
+        "examples": [
+          "Grand Central",
+          "Great Neck",
+          "Penn Station"
+        ],
+        "gtfs_standard": true
+      },
+      "trip_short_name": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 103,
+        "examples": [
+          "1310",
+          "1315",
+          "1319"
+        ],
+        "gtfs_standard": true
+      },
+      "direction_id": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 2,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "gtfs_standard": true
+      },
+      "shape_id": {
+        "type": "string",
+        "null_share": 0.0,
+        "distinct": 8,
+        "examples": [
+          "09646F9B",
+          "09646F9BW",
+          "6663602C"
+        ],
+        "gtfs_standard": true
+      },
+      "peak_offpeak": {
+        "type": "integer",
+        "null_share": 0.0,
+        "distinct": 2,
+        "examples": [
+          "0",
+          "1"
+        ],
+        "gtfs_standard": false
+      }
+    }
+  }
+}

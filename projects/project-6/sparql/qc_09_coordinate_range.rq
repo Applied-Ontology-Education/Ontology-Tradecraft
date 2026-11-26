@@ -1,0 +1,23 @@
+# Latitude is outside -90..90, longitude is outside -180..180, or a value is not an xsd:decimal.
+# severity: error
+PREFIX p6: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/>
+PREFIX id: <https://stucker7-buffalo-edu.github.io/ontology-tradecraft/p6/id/>
+PREFIX cco: <https://www.commoncoreontologies.org/>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+SELECT ?focus ?message WHERE {
+  {
+    ?focus cco:ont00001766 ?v .
+    FILTER(datatype(?v) != xsd:decimal || ?v < -90 || ?v > 90)
+    BIND(CONCAT("Latitude invalid or out of range: ", STR(?v)) AS ?message)
+  }
+  UNION
+  {
+    ?focus cco:ont00001764 ?v .
+    FILTER(datatype(?v) != xsd:decimal || ?v < -180 || ?v > 180)
+    BIND(CONCAT("Longitude invalid or out of range: ", STR(?v)) AS ?message)
+  }
+}
